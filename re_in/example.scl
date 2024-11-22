@@ -1,0 +1,50 @@
+# example scl file
+# this is here because git doesn't allow for empty dirs XD
+library_item{
+    object{
+        name : 'tree'
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'treek'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : 0.0
+            x : 0.0
+            y : 0.0
+            z : 0.0
+        }
+        hidden : 0
+    }
+    u0 : 1.2000000476837158
+}
