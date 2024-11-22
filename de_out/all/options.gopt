@@ -1,0 +1,187 @@
+# rifted with FR v5.1
+
+music_definition{
+    name : 'menu'
+    file{
+        filename : '1-hero2'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'house'
+    file{
+        filename : '1-plaintest2'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'outdoors_light'
+    file{
+        filename : 'squire_new2'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'forest'
+    file{
+        filename : '2cave2'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'cave'
+    file{
+        filename : '2cave2'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'dungeon1'
+    file{
+        filename : '1-dung73'
+        u0 : 0.5
+    }
+}
+music_definition{
+    name : 'boss'
+    file{
+        filename : '1-boss23'
+        u0 : 0.75
+    }
+}
+music_definition{
+    name : 'bosskill'
+    file{
+        filename : 'momentofwonder'
+        u0 : 0.75
+    }
+}
+music_definition{
+    name : 'heartbeat'
+    file{
+        filename : 'heartbeat'
+        u0 : 1.0
+    }
+}
+button_positions{
+    button{
+        name : 'left'
+        position{
+            left : 20.0
+            bottom : 10.0
+        }
+    }
+    button{
+        name : 'right'
+        position{
+            left : 100.0
+            bottom : 10.0
+        }
+    }
+    button{
+        name : 'jump'
+        position{
+            right : 20.0
+            bottom : 20.0
+        }
+    }
+    button{
+        name : 'swing'
+        position{
+            right : 100.0
+            bottom : 10.0
+        }
+    }
+    button{
+        name : 'skill'
+        position{
+            right : 5.0
+            bottom : 90.0
+        }
+    }
+    button{
+        name : 'skillToggle'
+        position{
+            right : 10.0
+            top : 17.0
+        }
+    }
+    button{
+        name : 'menu'
+        position{
+            left : 10.0
+            top : 8.0
+        }
+    }
+    button{
+        name : 'consumables'
+        position{
+            left : 209.0
+            bottom : 10.0
+        }
+    }
+}
+buttons{
+    button{
+        name : 'left'
+        position{
+            left : 10.0
+            bottom : 30.0
+        }
+    }
+    button{
+        name : 'right'
+        position{
+            left : 68.0
+            bottom : 30.0
+        }
+    }
+    button{
+        name : 'jump'
+        position{
+            right : 10.0
+            bottom : 38.0
+        }
+    }
+    button{
+        name : 'swing'
+        position{
+            right : 68.0
+            bottom : 30.0
+        }
+    }
+    button{
+        name : 'skill'
+        position{
+            right : 5.0
+            bottom : 86.0
+        }
+    }
+    button{
+        name : 'skillToggle'
+        position{
+            right : 10.0
+            top : 17.0
+        }
+    }
+    button{
+        name : 'menu'
+        position{
+            left : 10.0
+            top : 8.0
+        }
+    }
+    button{
+        name : 'consumables'
+        position{
+            left : 225.0
+            bottom : 15.0
+        }
+    }
+    button{
+        name : 'exp'
+        position{
+            bottom : 80.0
+        }
+    }
+}

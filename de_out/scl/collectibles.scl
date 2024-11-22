@@ -1,0 +1,3647 @@
+# rifted with FR v5.1
+
+scl_file_name : 'collectibles'
+library_item{
+    object{
+        name : 'iselon_shard_1'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.75
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'iselon_shard_1'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_iselon_shard_1'
+                u0 : 0.3490658402442932
+                u1 : 5.0
+                u2 : 0.3490658402442932
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 10.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -17.0
+                    x : -15.0
+                    y : 34.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'iselon_shard_2'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.75
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'iselon_shard_2'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_iselon_shard_2'
+                u0 : 0.3490658402442932
+                u1 : 5.0
+                u2 : 0.3490658402442932
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 10.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -17.0
+                    x : -15.0
+                    y : 34.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'iselon_shard_3'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.75
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'iselon_shard_3'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_iselon_shard_3'
+                u0 : 0.3490658402442932
+                u1 : 5.0
+                u2 : 0.3490658402442932
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 10.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -17.0
+                    x : -15.0
+                    y : 34.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'iselon_shard_4'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.75
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'iselon_shard_4'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_iselon_shard_4'
+                u0 : 0.3490658402442932
+                u1 : 5.0
+                u2 : 0.3490658402442932
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 10.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -17.0
+                    x : -15.0
+                    y : 34.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_brasssword'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'brasssword'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_ironsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 15.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 0.644444465637207
+                    y : 0.42222222685813904
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.12263374030590057
+                    x : 0.18696410953998566
+                    y : 0.23292176425457
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_broadsword'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'broadsword'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_broadsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 10.0
+                    y : -7.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.12263374030590057
+                    x : 0.18696410953998566
+                    y : 0.23292176425457
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_firetrinket'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'firetrinket'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_firetrinket'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -15.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 1.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.4777778089046478
+                }
+                u1 : 20.0
+                u2 : 16
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 1.2000000476837158
+                u6{
+                    y : 0.0
+                    z : 14.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : 0.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -20.0
+            x : -20.0
+            y : 40.0
+            z : 50.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_healingpotion'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 2
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'TransformController'
+            number : 3
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'healthbottlebig'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -12.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.6222222447395325
+                    x : 0.0
+                    y : 2.8610230629055877e-07
+                    z : 0.20000000298023224
+                }
+                u1 : 20.0
+                u2 : 10
+                u3 : 5.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 9.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 104
+            collision_shape{
+                u0{
+                    w : -12.0
+                    x : 0.0
+                    y : 24.0
+                    z : 24.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 107
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'healingpotion'
+                u0 : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -20.0
+            x : -20.0
+            y : 40.0
+            z : 44.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_icetrinket'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'icetrinket'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_icetrinket'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -15.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3222222328186035
+                    x : 0.46666666865348816
+                    y : 1.0
+                    z : 0.6333333253860474
+                }
+                u1 : 25.0
+                u2 : 16
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 1.2000000476837158
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : 0.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_ironsword'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'ironsword'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_ironsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 15.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.12263374030590057
+                    x : 0.18696410953998566
+                    y : 0.23292176425457
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 0.800000011920929
+}
+library_item{
+    object{
+        name : 'item_key_yellow'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+local self = ...;
+
+SoundLibrary.PlayEffect("surprise2");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'key_yellow'
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.3161256313323975
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_key_yellow'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -15.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.8000001907348633
+                    x : 0.8000000715255737
+                    y : 0.0
+                    z : 0.5
+                }
+                u1 : 15.0
+                u2 : 8
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : 0.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -15.0
+            x : -15.0
+            y : 30.0
+            z : 45.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_key_yellow_shop'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+local self = ...;
+
+SoundLibrary.PlayEffect("surprise2");
+Game.IncCounter("takingtheshortcut");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'key_yellow'
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.3161256313323975
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_key_yellow'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -15.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.8000001907348633
+                    x : 0.8000000715255737
+                    y : 0.0
+                    z : 0.5
+                }
+                u1 : 15.0
+                u2 : 8
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : 0.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -15.0
+            x : -15.0
+            y : 30.0
+            z : 45.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_legendsword'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'legendsword'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_legendsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 15.0
+                    y : -5.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -15.0
+                    y : 30.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 0.800000011920929
+}
+library_item{
+    object{
+        name : 'item_magicarmor'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'magicarmor'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_magicplate'
+                u0 : 0.0
+                u1 : 1.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -16.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.37457817792892456
+                    x : 0.1365329623222351
+                    y : 0.20001177489757538
+                    z : 0.3333333432674408
+                }
+                u1 : 20.0
+                u2 : 15
+                u3 : 25.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -20.0
+            x : -20.0
+            y : 40.0
+            z : 50.0
+        }
+        hidden : 0
+    }
+    u0 : 1.5
+}
+library_item{
+    object{
+        name : 'item_magicsword'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+Game.IncCounter("lordoftheundead");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'magicsword'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_magicsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 15.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.3283950686454773
+                    x : 0.45822399854660034
+                    y : 0.5160493850708008
+                    z : 0.0
+                }
+                u1 : 40.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -15.0
+                    y : 30.0
+                    z : 45.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -40.0
+            x : -40.0
+            y : 80.0
+            z : 80.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_needle'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+Game.IncCounter("lostsword");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'needle'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_ironsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 15.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 0.9333333373069763
+                    x : 0.7111111283302307
+                    y : 0.8777777552604675
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.36707818508148193
+                    x : 0.12029745429754257
+                    y : 0.15514399111270905
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_platearmor'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.5
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'platearmor'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_platearmor'
+                u0 : 0.0
+                u1 : 1.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -12.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.12263374030590057
+                    x : 0.18696410953998566
+                    y : 0.23292176425457
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 25.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.5
+}
+library_item{
+    object{
+        name : 'item_shadowtrinket'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+Game.IncCounter("theundead");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'shadowtrinket'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'item_shadowtrinket'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : -15.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 1.0
+                    x : 0.3444444537162781
+                    y : 1.0
+                    z : 0.6333333253860474
+                }
+                u1 : 25.0
+                u2 : 16
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 1.2000000476837158
+                u6{
+                    y : 0.0
+                    z : 14.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : 0.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'item_thorn'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u2 : 0.800000011920929
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                    main_chunk : $
+Game.IncCounter("anotherentrance");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : 'thorn'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 3.1415927410125732
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'weapon_broadsword'
+                u0 : 0.7853981852531433
+                u1 : 1.0
+                u2 : 1.5707963705062866
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 10.0
+                    y : -7.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 0.6777777671813965
+                    x : 1.0
+                    y : 0.644444465637207
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.12263374030590057
+                    x : 0.18696410953998566
+                    y : 0.23292176425457
+                    z : 0.0
+                }
+                u1 : 25.0
+                u2 : 15
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -15.0
+                    x : -8.0
+                    y : 30.0
+                    z : 38.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -25.0
+            x : -25.0
+            y : 50.0
+            z : 55.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'manabottle'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'manabottle'
+                u0 : 0.0
+                u1 : 1.5
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.0
+                    x : 0.4000000059604645
+                    y : 0.800000011920929
+                    z : 0.0
+                }
+                u1 : 16.0
+                u2 : 10
+                u3 : 5.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 104
+            collision_shape{
+                u0{
+                    w : -10.0
+                    x : -10.0
+                    y : 20.0
+                    z : 20.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 107
+            collectable_item{
+                u0 : 2
+                u1 : 20
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -16.0
+            x : -16.0
+            y : 32.0
+            z : 32.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'manabottle_big'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'manabottlebig'
+                u0 : 0.0
+                u1 : 1.5
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.0
+                    x : 0.4000000059604645
+                    y : 0.800000011920929
+                    z : 0.0
+                }
+                u1 : 21.0
+                u2 : 10
+                u3 : 5.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 104
+            collision_shape{
+                u0{
+                    w : -12.0
+                    x : -12.0
+                    y : 24.0
+                    z : 24.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 107
+            collectable_item{
+                u0 : 2
+                u1 : 100
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -21.0
+            x : -21.0
+            y : 42.0
+            z : 42.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'nugget_health'
+        component{
+            component_type : 'ParticleEmitter'
+            number : 1
+            particle_emitter{
+                particle : 2
+                particle : 3
+                particle : 4
+                u1 : 0
+                u2 : 15
+                u3 : 0
+                u4 : 0
+                u5{
+                    u0 : 5
+                    u1{
+                        w : 0.3720988631248474
+                        x : 0.11679011583328247
+                        y : 0.11679020524024963
+                        z : 0.22222226858139038
+                    }
+                    u2 : 90.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 11.0
+                    u2 : 0.0
+                    u2 : 25.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 0.3499999940395355
+                    u2 : 1.0
+                    u2 : 0.0
+                    u2 : 0.05000000074505806
+                    u2 : 0.6000000238418579
+                    u2 : 0.0
+                    u2 : 0.0
+                    u3 : 0.0
+                    u4 : 0.0
+                    u5 : 0.0
+                    u6{
+                        u0 : 0.0
+                        u1 : -3.0
+                        u2 : 0.0
+                    }
+                }
+                u6 : 1
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 2
+            particle{
+                name : 'particle_fure_1'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 3
+            particle{
+                name : 'particle_fure_2'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 4
+            particle{
+                name : 'particle_fure_3'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'nugget_health'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 1.0
+                    x : 0.5
+                    y : 0.5
+                    z : 0.0
+                }
+                u1 : 12.0
+                u2 : 10
+                u3 : 0.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 104
+            collectable_item{
+                u0 : 1
+                u1 : 2
+                lua_chunk{
+                    main_chunk : $
+local self = ...;
+Scene.CreateObject("collect_health", "", self);
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -6.0
+                    x : -7.0
+                    y : 12.0
+                    z : 27.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'PhysicsObject'
+            number : 107
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -12.0
+            x : -12.0
+            y : 24.0
+            z : 32.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'nugget_mana'
+        component{
+            component_type : 'ParticleEmitter'
+            number : 1
+            particle_emitter{
+                particle : 2
+                particle : 3
+                particle : 4
+                u1 : 0
+                u2 : 15
+                u3 : 0
+                u4 : 0
+                u5{
+                    u0 : 5
+                    u1{
+                        w : 0.0
+                        x : 0.24000000953674316
+                        y : 0.6000000834465027
+                        z : 0.2777777910232544
+                    }
+                    u2 : 90.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 11.0
+                    u2 : 0.0
+                    u2 : 20.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 0.3499999940395355
+                    u2 : 1.0
+                    u2 : 0.0
+                    u2 : 0.05000000074505806
+                    u2 : 0.6000000238418579
+                    u2 : 0.0
+                    u2 : 0.0
+                    u3 : 0.0
+                    u4 : 0.0
+                    u5 : 0.0
+                    u6{
+                        u0 : 0.0
+                        u1 : -3.0
+                        u2 : 0.0
+                    }
+                }
+                u6 : 1
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 2
+            particle{
+                name : 'particle_fure_1'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 3
+            particle{
+                name : 'particle_fure_2'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 4
+            particle{
+                name : 'particle_fure_3'
+                u0 : 40.0
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'nugget_mana'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.5
+                    x : 0.5
+                    y : 1.0
+                    z : 0.0
+                }
+                u1 : 12.0
+                u2 : 10
+                u3 : 0.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 104
+            collectable_item{
+                u0 : 2
+                u1 : 20
+                lua_chunk{
+                    main_chunk : $
+local self = ...;
+Scene.CreateObject("collect_mana", "", self);
+SoundLibrary.PlayEffect("managet");
+
+$end$
+                    secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -6.0
+                    x : -7.0
+                    y : 12.0
+                    z : 27.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'PhysicsObject'
+            number : 107
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -12.0
+            x : -12.0
+            y : 24.0
+            z : 32.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'powershard'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u1{
+                    u0 : 0.009999500587582588
+                    u1 : 0.9999500513076782
+                }
+                u2 : 0.009999999776482582
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'powershard'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'AnimationController'
+            number : 103
+            animation_controller{
+                model_component : 101
+                u1 : 112
+                u2 : 1
+            }
+        }
+        component{
+            component_type : 'KeyframeAnimation'
+            number : 112
+            keyframe_animation{
+                linked_model_component_number : 101
+                name : 'powershard_sparkle'
+                u0 : 1
+                u1 : 1.0
+                u2 : 1
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 115
+            collectable_item{
+                u0 : 3
+                u1 : 100
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 118
+            collision_shape{
+                u0{
+                    w : -20.0
+                    x : -20.0
+                    y : 40.0
+                    z : 40.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -15.0
+                x : 15.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 120
+            simple_glow{
+                u0{
+                    w : 0.5000000596046448
+                    x : 1.0
+                    y : 0.3777778148651123
+                    z : 0.5111111402511597
+                }
+                u1 : 15.0
+                u2 : 10
+                u3 : 15.0
+                u4 : 0.25
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -20.0
+            x : -20.0
+            y : 40.0
+            z : 40.0
+        }
+        hidden : 0
+    }
+    u0 : 0.699999988079071
+}
+library_item{
+    object{
+        name : 'sshard_blue'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 4
+                u1 : 1
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 4.71238899230957
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'sshard_blue'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.5
+                    x : 0.5
+                    y : 1.0
+                    z : 0.5
+                }
+                u1 : 15.0
+                u2 : 8
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : -15.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -20.0
+            x : -20.0
+            y : 40.0
+            z : 40.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'sshard_red'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 4
+                u1 : 5
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 4.71238899230957
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'sshard_red'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 1.0
+                    x : 0.5222222208976746
+                    y : 0.5222222208976746
+                    z : 0.5111111402511597
+                }
+                u1 : 15.0
+                u2 : 8
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : -15.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -15.0
+            x : -15.0
+            y : 30.0
+            z : 30.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'sshard_yellow'
+        component{
+            component_type : 'PhysicsObject'
+            number : 1
+            physics_object{
+                u0 : 1
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 2
+            collectable_item{
+                u0 : 4
+                u1 : 20
+                lua_chunk{
+                }
+                name : ''
+                ?model : ''
+                u0 : 0
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 3
+            model_transform_controller{
+                u0 : 101
+                u2 : 4.71238899230957
+            }
+        }
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'sshard_yellow'
+                u0 : 0.0
+                u1 : 5.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 102
+            simple_glow{
+                u0{
+                    w : 0.7444446086883545
+                    x : 0.7444444894790649
+                    y : 0.0
+                    z : 0.18888893723487854
+                }
+                u1 : 15.0
+                u2 : 8
+                u3 : 15.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 105
+            collision_shape{
+                u0{
+                    w : -5.0
+                    x : -15.0
+                    y : 10.0
+                    z : 30.0
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -15.0
+            x : -15.0
+            y : 30.0
+            z : 30.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'xp_sack'
+        component{
+            component_type : 'Model'
+            number : 101
+            3D_model{
+                name : 'xp_sack'
+                u0 : 1.5707963705062866
+                u1 : 0.5
+                u2 : 0.0
+                u3{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'ParticleEmitter'
+            number : 102
+            particle_emitter{
+                particle : 103
+                particle : 106
+                u1 : 0
+                u2 : 80
+                u3 : 0
+                u4 : 0
+                u5{
+                    u0 : 5
+                    u1{
+                        w : 1.0
+                        x : 1.0
+                        y : 1.0
+                        z : 0.0
+                    }
+                    u2 : 90.0
+                    u2 : 45.0
+                    u2 : 0.0
+                    u2 : 15.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 0.0
+                    u2 : 1.0
+                    u2 : 0.0
+                    u2 : 1.0
+                    u2 : 0.05000000074505806
+                    u2 : 1.5
+                    u2 : 0.0
+                    u2 : 0.0
+                    u3 : 0.0
+                    u4 : 0.0
+                    u5 : 0.0
+                    u6{
+                        u0 : 0.0
+                        u1 : 80.0
+                        u2 : 0.0
+                    }
+                }
+                u6 : 0
+                u7{
+                    u0 : 0.0
+                    u1 : 20.0
+                    u2 : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 103
+            particle{
+                name : 'particle_fure_1'
+                u0 : 4.0
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 104
+            simple_glow{
+                u0{
+                    w : 0.5666666626930237
+                    x : 0.46666666865348816
+                    y : 0.0
+                    z : 0.5
+                }
+                u1 : 80.0
+                u2 : 20
+                u3 : 0.0
+                u4 : 0.15000000596046448
+                u5 : 0.800000011920929
+                u6{
+                    y : 0.0
+                    z : 50.0
+                }
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 106
+            particle{
+                name : 'particle_fure_2'
+                u0 : 8.0
+            }
+        }
+        component{
+            component_type : 'PhysicsObject'
+            number : 108
+            physics_object{
+                u0 : 1
+                u2 : 0.800000011920929
+                u3 : 1500.0
+                u4 : 0.0
+                u5 : 700.0
+                u6 : 0
+                u7 : 0.0
+            }
+        }
+        component{
+            component_type : 'CollectableItem'
+            number : 110
+            collectable_item{
+                u0 : 0
+                u1 : 0
+                lua_chunk{
+                }
+                name : ''
+                ?model : 'experiencesack'
+                u0 : 1
+            }
+        }
+        component{
+            component_type : 'CollisionShape'
+            number : 111
+            collision_shape{
+                u0{
+                    w : -50.0
+                    x : 0.0
+                    y : 100.0
+                    z : 106.42947387695312
+                }
+            }
+            collision_shape_2{
+                u1 : 1
+                w : -40.0
+                x : 40.0
+                interaction_type : 3
+                z : 1
+            }
+        }
+        component{
+            component_type : 'ModelTransformController'
+            number : 113
+            model_transform_controller{
+                u0 : 101
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -80.0
+            x : -80.0
+            y : 160.0
+            z : 186.42947387695312
+        }
+        hidden : 0
+    }
+    u0 : 0.4000000059604645
+}

@@ -1,0 +1,321 @@
+# rifted with FR v5.1
+
+scl_file_name : 'crypt'
+library_item{
+    object{
+        name : 'crypt_torch'
+        component{
+            component_type : 'Model'
+            number : 1
+            3D_model{
+                name : 'torch'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 2
+            simple_glow{
+                u0{
+                    w : 0.23333333432674408
+                    x : 0.35555556416511536
+                    y : 0.20000000298023224
+                    z : 0.5
+                }
+                u1 : 27.0
+                u2 : 10
+                u3 : 15.0
+                u4 : 0.07000000029802322
+                u5 : 0.800000011920929
+                u6{
+                    y : -1.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'TransformController'
+            number : 3
+        }
+        component{
+            component_type : 'Light'
+            number : 103
+            light{
+                u0 : 3
+                u1 : 1.5
+                u2{
+                    w : 0.6222222447395325
+                    x : 0.9355555176734924
+                    y : 0.0
+                    z : 1.0
+                }
+                u3 : 0.0
+                u4 : 0.00019999999494757503
+                u5{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u6 : 250.0
+            }
+        }
+        component{
+            component_type : 'FireEmitter'
+            number : 105
+            fire_emitter{
+                particle_emitter : 108
+                light : 103
+                u0{
+                    w : 0.3888888955116272
+                    x : 0.7888888716697693
+                    y : 0.0
+                    z : 0.0
+                }
+                u1 : 0.10000000149011612
+                u2 : 0.8999999761581421
+                u3{
+                    x : 2.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u4{
+                    x : 0.0
+                    y : 15.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'ParticleEmitter'
+            number : 108
+            particle_emitter{
+                particle : 109
+                particle : 111
+                particle : 112
+                u1 : 0
+                u2 : 30
+                u3 : 0
+                u4 : 0
+                u6 : 0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 109
+            particle{
+                name : 'particle_fure_1'
+                u0 : 20.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 111
+            particle{
+                name : 'particle_fure_2'
+                u0 : 22.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 112
+            particle{
+                name : 'particle_fure_3'
+                u0 : 20.0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -27.0
+            x : -27.0
+            y : 54.0
+            z : 54.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
+library_item{
+    object{
+        name : 'torch_red'
+        component{
+            component_type : 'Model'
+            number : 1
+            3D_model{
+                name : 'torch'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
+                u3{
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u4{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u5 : 0
+                u6{
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
+                }
+            }
+        }
+        component{
+            component_type : 'SimpleGlow'
+            number : 2
+            simple_glow{
+                u0{
+                    w : 0.4555555582046509
+                    x : 0.0
+                    y : 0.0
+                    z : 0.5
+                }
+                u1 : 27.0
+                u2 : 10
+                u3 : 15.0
+                u4 : 0.07000000029802322
+                u5 : 0.800000011920929
+                u6{
+                    y : -1.0
+                    z : 15.0
+                }
+            }
+        }
+        component{
+            component_type : 'TransformController'
+            number : 3
+        }
+        component{
+            component_type : 'Light'
+            number : 103
+            light{
+                u0 : 3
+                u1 : 2.0
+                u2{
+                    w : 1.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
+                }
+                u3 : 0.0
+                u4 : 0.00019999999494757503
+                u5{
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u6 : 500.0
+            }
+        }
+        component{
+            component_type : 'FireEmitter'
+            number : 105
+            fire_emitter{
+                particle_emitter : 108
+                light : 103
+                u0{
+                    w : 1.0
+                    x : 0.4444444477558136
+                    y : 0.0
+                    z : 0.0
+                }
+                u1 : 0.10000000149011612
+                u2 : 0.8999999761581421
+                u3{
+                    x : 2.0
+                    y : 0.0
+                    z : 0.0
+                }
+                u4{
+                    x : 0.0
+                    y : 15.0
+                    z : 0.0
+                }
+            }
+        }
+        component{
+            component_type : 'ParticleEmitter'
+            number : 108
+            particle_emitter{
+                particle : 109
+                particle : 111
+                particle : 112
+                u1 : 0
+                u2 : 30
+                u3 : 0
+                u4 : 0
+                u6 : 0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 109
+            particle{
+                name : 'particle_fure_1'
+                u0 : 20.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 111
+            particle{
+                name : 'particle_fure_2'
+                u0 : 22.0
+            }
+        }
+        component{
+            component_type : 'Particle'
+            number : 112
+            particle{
+                name : 'particle_fure_3'
+                u0 : 20.0
+            }
+        }
+        position{
+            x_position : 0.0
+            y_position : 0.0
+        }
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        u0{
+            w : -27.0
+            x : -27.0
+            y : 54.0
+            z : 54.0
+        }
+        hidden : 0
+    }
+    u0 : 1.0
+}
