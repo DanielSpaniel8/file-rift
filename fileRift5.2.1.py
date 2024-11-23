@@ -2,18 +2,19 @@ rift_mode = "recode"  # options: decode, recode, both, all
 
 import os
 from struct import pack, unpack
+import re
 
 from block_formats import (
-    bf_gdata,
-    bf_gopt,
-    bf_gplayer,
-    bf_gstate,
-    bf_scene,
-    bf_scl,
-    bf_scmap,
-    bf_sounds,
-    bf_atlas,
-    bf_fnt
+    gdata,
+    gopt,
+    gplayer,
+    gstate,
+    scene,
+    scl,
+    scmap,
+    sounds,
+    atlas,
+    fnt
 )
 
 
@@ -353,6 +354,18 @@ def lex_data():
     return lexList
 
 
+def import_file(match):
+    filename = match.group(1)
+    try:
+        with open(filename, "r") as file:
+            content = file.read()
+        content = content.strip()
+        return content
+    except FileNotFoundError:
+        print("import file not found: "+filename)
+        return ""
+
+
 def recode_lexList(lexList):
 
     global metalevel
@@ -527,27 +540,7 @@ if rift_mode == "decode" or rift_mode == "both":
         metalevel = 0  # how many layers of nested data deep we are
 
         filetype = game_file.rsplit(".")[-1]
-        match filetype:
-            case "scene":
-                formats[0] = bf_scene
-            case "scl":
-                formats[0] = bf_scl
-            case "scmap":
-                formats[0] = bf_scmap
-            case "gdata":
-                formats[0] = bf_gdata
-            case "gstate":
-                formats[0] = bf_gstate
-            case "gopt":
-                formats[0] = bf_gopt
-            case "sounds":
-                formats[0] = bf_sounds
-            case "gplayer":
-                formats[0] = bf_gplayer
-            case "fnt":
-                formats[0] = bf_fnt
-            case "atlas":
-                formats[0] = bf_atlas
+        formats[0] = eval(filetype)
 
         with open(game_file, "rb") as file:
             inbytes = file.read()
@@ -588,30 +581,13 @@ if rift_mode == "both" or rift_mode == "recode":
         outbytes = [b""] * 10
 
         filetype = game_file.rsplit(".")[-1]
-        match filetype:
-            case "scene":
-                formats[0] = bf_scene
-            case "scl":
-                formats[0] = bf_scl
-            case "scmap":
-                formats[0] = bf_scmap
-            case "gdata":
-                formats[0] = bf_gdata
-            case "gstate":
-                formats[0] = bf_gstate
-            case "gopt":
-                formats[0] = bf_gopt
-            case "sounds":
-                formats[0] = bf_sounds
-            case "gplayer":
-                formats[0] = bf_gplayer
-            case "fnt":
-                formats[0] = bf_fnt
-            case "atlas":
-                formats[0] = bf_atlas
+        formats[0] = eval(filetype)
 
         with open(game_file, "r") as file:
             intext = file.read()
+
+        intext = re.sub(r'\$\$\$\[(.*)\]', import_file, intext)
+        intext = re.sub(r'\$source[(.*)\]', import_file, intext)
 
         recode_lexList(lex_data())
 

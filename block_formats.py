@@ -1,5 +1,5 @@
 
-bf_scene = {
+scene = {
 
 'name' : 'root',
 
@@ -1834,7 +1834,7 @@ bf_scene = {
 }
 
 
-bf_scl = {
+scl = {
 
 'name' : 'root',
 
@@ -2894,7 +2894,7 @@ bf_scl = {
 }
 
 
-bf_gdata = {
+gdata = {
 
 'name' : 'root',
 
@@ -2969,7 +2969,7 @@ bf_gdata = {
 }
 
 
-bf_gopt = {
+gopt = {
 
 'name' : 'root',
 
@@ -3016,7 +3016,7 @@ bf_gopt = {
 }
 
 
-bf_gplayer = {
+gplayer = {
 
 'name' : 'root',
 '0a' : 'save_name',
@@ -3106,7 +3106,7 @@ bf_gplayer = {
 }
 
 
-bf_gstate = {
+gstate = {
 
 'name' : 'root',
 
@@ -3128,7 +3128,7 @@ bf_gstate = {
 }
 
 
-bf_scmap = {
+scmap = {
 
 'name' : 'root',
 
@@ -3168,7 +3168,7 @@ bf_scmap = {
 }
 
 
-bf_sounds = {
+sounds = {
 
 'name' : 'root',
 
@@ -3183,7 +3183,7 @@ bf_sounds = {
 }
 
 
-bf_fnt = {
+fnt = {
 
 'name' : 'root',
 
@@ -3225,7 +3225,7 @@ bf_fnt = {
 
 }
 
-bf_atlas = {
+atlas = {
 
 'name' : 'root',
 
