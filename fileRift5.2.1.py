@@ -3,6 +3,7 @@ rift_mode = "recode"  # options: decode, recode, both, all
 import os
 from struct import pack, unpack
 import re
+import hashlib
 
 from block_formats import (
     gdata,
@@ -357,7 +358,7 @@ def lex_data():
 def import_file(match):
     filename = match.group(1)
     try:
-        with open(filename, "r") as file:
+        with open("./source/"+filename, "r") as file:
             content = file.read()
         content = content.strip()
         return content
@@ -518,8 +519,10 @@ def recode_lexList(lexList):
                 else:
                     chunk_buffer += bytes(lexeme, "latin1")
 
-
-if rift_mode == "decode" or rift_mode == "both":
+no_decoded = 0
+no_recoded = 0
+no_skipped = 0
+if rift_mode in ["decode", "both"]:
     files_list = []
     for root, dirs, files in os.walk("./de_in"):
         for name in files:
@@ -555,14 +558,14 @@ if rift_mode == "decode" or rift_mode == "both":
                 file.write(line)
 
         print("decoded", game_file[8:])
+        no_decoded += 1
 
 
 if rift_mode == "both":
     print()
 
 
-if rift_mode == "both" or rift_mode == "recode":
-
+if rift_mode in ["recode", "both"]:
     files_list = []
     for root, dirs, files in os.walk("./re_in"):
         for name in files:
@@ -574,11 +577,11 @@ if rift_mode == "both" or rift_mode == "recode":
 
         offsets = [0] * 10
         pointers = [0] * 10
-        formats = [{"name": "-"}] * 10
+        formats = [{"name": "-"}] * 10  # stored block formats
 
         metalevel = 0  # how many layers of nested data deep we are
 
-        outbytes = [b""] * 10
+        outbytes = [b""] * 10  # output data
 
         filetype = game_file.rsplit(".")[-1]
         formats[0] = eval(filetype)
@@ -586,19 +589,60 @@ if rift_mode == "both" or rift_mode == "recode":
         with open(game_file, "r") as file:
             intext = file.read()
 
+        # --- import source file data ---
+
         intext = re.sub(r'\$\$\$\[(.*)\]', import_file, intext)
-        intext = re.sub(r'\$source[(.*)\]', import_file, intext)
+        intext = re.sub(r'\$source\[(.*)\]', import_file, intext)
 
-        recode_lexList(lex_data())
+        # --- generate hash and compare against older hash ---
 
-        out_path = "./re_out/" + game_file[8:]
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        with open(out_path, "wb") as file:
-            file.write(outbytes[0])
+        skip_recode = False
 
-        print("recoded", game_file[8:])
+        hash = hashlib.sha256(bytes(intext, "latin1")).hexdigest()
+        manifest_line = game_file+"*"+hash+"\n"
+        manifest = []
+        with open("./.manifest", "r") as file:
+            manifest = file.readlines()
+
+        file_found = False
+        for index, line in enumerate(manifest):  # scan the manifest file for a filename match
+            old_hash_file, old_hash = line.strip().split("*") # if found, compare hashes
+            if old_hash_file == game_file:
+                file_found = True
+                if old_hash == hash:
+                    skip_recode = True
+                    no_skipped += 1
+                else:
+                    manifest[index] = manifest_line
+
+        if not file_found:
+            manifest.append(manifest_line)
+
+        with open("./.manifest", "w") as file:
+            for line in manifest:
+                file.write(line)
+
+        # --- lex file contents and recode ---
+
+        if not skip_recode:
+            recode_lexList(lex_data())
+
+            out_path = "./re_out/" + game_file[8:]
+            os.makedirs(os.path.dirname(out_path), exist_ok=True)
+            with open(out_path, "wb") as file:
+                file.write(outbytes[0])
+
+            print("recoded", game_file[8:])
+            no_recoded += 1
 
 
+results = ""
+if no_decoded != 0:
+    results += ("decoded "+str(no_decoded)+"  ")
+if no_recoded != 0:
+    results += ("recoded "+str(no_recoded)+"  ")
+if no_skipped != 0:
+    results += ("skipped "+str(no_skipped)+"  ")
 
-print("all files rifted\n")
+print(results)
 print("File Rift v5.2.1")
