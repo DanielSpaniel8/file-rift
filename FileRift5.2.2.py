@@ -253,12 +253,11 @@ def lex_data():
 
     s_str_mode = False
     d_str_mode = False
-    b_lua_mode = False
-    s_lua_mode = False
+    lua_mode = False
 
     for offset, char in enumerate(intext):
 
-        if char != " " or d_str_mode or s_str_mode or b_lua_mode:
+        if char != " " or d_str_mode or s_str_mode or lua_mode:
             lexeme += char
 
         # --- handle quotes ---
@@ -269,7 +268,7 @@ def lex_data():
                     lexeme = lexeme[:-2] + lexeme[-1]  # remove the backslash
                 else:
                     s_str_mode = False
-            elif not d_str_mode and not b_lua_mode:
+            elif not d_str_mode and not lua_mode:
                 s_str_mode = True
                 continue
 
@@ -279,61 +278,21 @@ def lex_data():
                     lexeme = lexeme[:-2] + lexeme[-1]  # remove the backslash
                 else:
                     d_str_mode = False
-            elif not s_str_mode and not b_lua_mode:
+            elif not s_str_mode and not lua_mode:
                 d_str_mode = True
                 continue
 
         # --- handle chunks ---
 
-        if b_lua_mode:
+        if lua_mode:
             if intext[offset - 5 : offset] == "$end$":
-                b_lua_mode = False
-                s_lua_mode = False
+                lua_mode = False
                 lexList.append(lexeme[:-6])
-                lexList.append("@")
                 lexeme = ""
-            elif intext[offset - 8 : offset] == "$source$":
-                b_lua_mode = False
-                s_lua_mode = True
-                lexList.append(lexeme[:-9])
-                lexeme = ""
-            continue
-
-        if s_lua_mode:
-            if intext[offset - 5 : offset] == "$end$":
-                s_lua_mode = False
-                lexList.append("@")
-                lexeme = ""
-            elif char == "\n":
-                if lexeme.strip() == "":  # handle empty lines
-                    continue
-                source_file_path = lexeme.strip()
-                source_text = ""
-
-                def source_lua(path):
-                    try:
-                        with open("./lua/" + path, "r") as file:
-                            source_text = file.read()
-                    except FileNotFoundError:
-                        print(" file not found " + path)
-                    else:
-                        starter = "\n\n-- " + path + "\n"
-                        lexList.append(starter + source_text)
-
-                if source_file_path[-1] == "*":  # handle wildcards
-                    try:
-                        for file in os.scandir("./lua/" + source_file_path[:-1]):
-                            source_lua(source_file_path[:-1] + file.name)
-                        lexeme = ""
-                    except FileNotFoundError:
-                        print(" folder not found " + source_file_path)
-                else:
-                    source_lua(source_file_path)
-                    lexeme = ""
             continue
 
         if char == "$" and not s_str_mode and not d_str_mode:
-            b_lua_mode = True
+            lua_mode = True
             lexList.append(lexeme)
             lexeme = ""
             continue
@@ -365,6 +324,44 @@ def import_file(match):
     except FileNotFoundError:
         print("import file not found: "+filename)
         return ""
+
+
+def import_lua(match):
+    filename = match.group(1)
+    try:
+        with open("./source/"+filename, "r") as file:
+            content = file.read()
+        content = content.strip()
+        content = "\n-- "+filename+"\n\n"+content
+        return content
+    except FileNotFoundError:
+        print("   lua file not found: "+filename)
+        return ""
+
+
+def import_chunk(match):
+    input = match.group(1)
+    objname, filename = input.split(";")
+
+    try:
+        with open("./source/"+filename, "r") as file:
+            content = file.read()
+        content = content.strip()
+        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end$\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
+        return objstring
+    except FileNotFoundError:
+        print(" chunk file not found: "+filename)
+        return ""
+
+
+def import_obj(match):
+    input = match.group(1)
+    if len(input.split(";")) < 7:
+        print("not enough args for obj")
+        return ""
+    obj, ident, xpos, ypos, zpos, rot, scale = input.split(";")
+    obj_string = "object{name '"+obj+"' identifier '"+ident+"' position{ x_position "+xpos+" y_position "+ypos+" } z_position "+zpos+" rotation "+rot+" scale "+scale+" hidden 0 }"
+    return obj_string
 
 
 def recode_lexList(lexList):
@@ -448,11 +445,12 @@ def recode_lexList(lexList):
                 tag, found = matchTagname(lexeme)
 
                 if not found:
-                    print('tag not found: "', lexeme, '" line', line_num)
-                    print(formats[metalevel])
-                    print(outbytes[metalevel][-300:])
-                    print(metalevel)
-                    print(game_file)
+                    block_format_path = ""
+                    for i in formats[1:metalevel+1]:
+                        block_format_path += ("/"+i["name"])
+                    print('tag not found: "'+lexeme+'"')
+                    print('file: '+game_file[8:]+':'+str(line_num))
+                    print('block_formats path: '+block_format_path)
                     quit()
 
                 outbytes[metalevel] += re_varint(int(tag, base=16))
@@ -511,13 +509,9 @@ def recode_lexList(lexList):
                 mode = "tag"
 
             case "chunk":
-                if lexeme.strip() == "@":
-                    outbytes[metalevel] += re_varint(len(chunk_buffer))
-                    outbytes[metalevel] += chunk_buffer
-                    mode = "tag"
-                    chunk_buffer = b""
-                else:
-                    chunk_buffer += bytes(lexeme, "latin1")
+                outbytes[metalevel] += re_varint(len(lexeme))
+                outbytes[metalevel] += bytes(lexeme, "latin1")
+                mode = "tag"
 
 no_decoded = 0
 no_recoded = 0
@@ -591,8 +585,11 @@ if rift_mode in ["recode", "both"]:
 
         # --- import source file data ---
 
-        intext = re.sub(r'\$\$\$\[(.*)\]', import_file, intext)
-        intext = re.sub(r'\$source\[(.*)\]', import_file, intext)
+        intext = re.sub(r'\$\$\$\[(.*)\]',   import_file,  intext)
+        intext = re.sub(r'\$source\[(.*)\]', import_file,  intext)
+        intext = re.sub(r'\$lua\[(.*)\]',    import_lua ,  intext)
+        intext = re.sub(r'\$chunk\[(.*)\]',  import_chunk, intext)
+        intext = re.sub(r'\$obj\[(.*)\]',    import_obj,   intext)
 
         # --- generate hash and compare against older hash ---
 
