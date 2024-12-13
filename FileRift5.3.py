@@ -360,7 +360,7 @@ def import_obj(match):
         print("not enough args for obj")
         return ""
     obj, ident, xpos, ypos, zpos, rot, scale = input.split(";")
-    obj_string = "object{name '"+obj+"' identifier '"+ident+"' position{ x_position "+xpos+" y_position "+ypos+" } z_position "+zpos+" rotation "+rot+" scale "+scale+" hidden 0 }"
+    obj_string = "object{name '"+obj.strip()+"' identifier '"+ident.strip()+"' position{ x_position "+xpos+" y_position "+ypos+" } z_position "+zpos+" rotation "+rot+" scale "+scale+" hidden 0 }"
     return obj_string
 
 
@@ -528,7 +528,7 @@ if rift_mode in ["decode", "both"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.2.2\n\n"]
+        outLines = ["# rifted with FR v5.3\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -536,6 +536,10 @@ if rift_mode in ["decode", "both"]:
 
         metalevel = 0  # how many layers of nested data deep we are
 
+        if game_file.replace(".", "") == game_file[1:]:
+               print("no file type specified for "+game_file)
+               no_skipped += 1
+               continue
         filetype = game_file.rsplit(".")[-1]
         formats[0] = eval(filetype)
 
@@ -577,6 +581,10 @@ if rift_mode in ["recode", "both"]:
 
         outbytes = [b""] * 10  # output data
 
+        if game_file.replace(".", "") == game_file[1:]:
+            print("no file type specified for "+game_file)
+            no_skipped += 1
+            continue
         filetype = game_file.rsplit(".")[-1]
         formats[0] = eval(filetype)
 
@@ -642,4 +650,4 @@ if no_skipped != 0:
     results += ("skipped "+str(no_skipped)+"  ")
 
 print(results)
-print("File Rift v5.2.2")
+print("File Rift v5.3")
