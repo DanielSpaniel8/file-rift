@@ -79,7 +79,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
     # --- get the tag and detect wire type ---
 
     tagbyte = de_varint()
-    tagname = hex(tagbyte)[2:].zfill(2)
+    taghex = hex(tagbyte)[2:].zfill(2)
 
     typeVarInt, typeInt64, typeLen, typeInt32 = False, False, False, False
 
@@ -97,9 +97,9 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
     for i in formats:
         formNames += i[n] + "/"
 
-    if not tagname in form:
+    if not taghex in form:
         print(
-            f"\n{tagname} / off = {hex(sum(offsets)-1)} / met = {metalevel} / file = {game_file}\n{formNames}"
+            f"\n{taghex} / off = {hex(sum(offsets)-1)} / met = {metalevel} / file = {game_file}\n{formNames}"
         )
         print(outLines)
         quit()
@@ -113,14 +113,20 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
     # --- handle different wire types ---
 
     indent = " " * metalevel * 4  # prepare indentation
+    if isinstance(form[taghex], tuple):  # backwards compatibility
+        print("tuple tagname")
+        print(form[taghex][-1])
+        tagname = form[taghex][-1]
+    else:
+        tagname = form[taghex]
 
     if typeVarInt:
-        outLines.append(indent + str(form[tagname]) + " : " + str(de_varint()) + "\n")
+        outLines.append(indent + str(tagname) + " : " + str(de_varint()) + "\n")
 
     if typeInt64:
         outLines.append(
             indent
-            + form[tagname]
+            + tagname
             + " : "
             + str(inbytes[sum(offsets) : (sum(offsets) + 8)])
             + "\n"
@@ -132,10 +138,10 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
         pointer = de_varint()
         pointers[metalevel] = pointer  # store pointer
 
-        if isinstance(form[tagname], str):  # if there is a plain string:
+        if isinstance(tagname, str):  # if there is a plain string:
             outLines.append(
                 indent
-                + form[tagname]
+                + tagname
                 + " : '"
                 + str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1].replace(
                     "'", "\\'"
@@ -144,21 +150,9 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
             )
             offsets[metalevel] += pointer
 
-        if isinstance(form[tagname], tuple): # if there are backwards compatibility options
-            outLines.append(
-                indent
-                + form[tagname[-1]]
-                + " : '"
-                + str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1].replace(
-                    "'", "\\'"
-                )
-                + "'\n"
-            )
-            offsets[metalevel] += pointer
+        if isinstance(tagname, list):  # if there is an alternative action:
 
-        if isinstance(form[tagname], list):  # if there is an alternative action:
-
-            k = form[tagname]
+            k = tagname
 
             if k[0] == 0:  # link to another format
 
@@ -169,10 +163,10 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 for l in path:
                     thisForm = thisForm[l]
 
-                form[tagname] = thisForm
+                tagname = thisForm
 
             if k[0] == 1:  # lua chunk
-                outLines.append(indent + form[tagname][1] + " : $\n")
+                outLines.append(indent + tagname[1] + " : $\n")
                 chunk = (
                     str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1]
                     .replace("\\r", "")
@@ -186,7 +180,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
             if k[0] == 2:  # bytestring
                 outLines.append(
                     indent
-                    + form[tagname][1]
+                    + tagname[1]
                     + " : '"
                     + str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1].replace(
                         "'", "\\'"
@@ -195,16 +189,16 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 )
                 offsets[metalevel] += pointer
 
-        if isinstance(form[tagname], dict):  # if there are subblocks:
-            outLines.append(indent + form[tagname]["name"] + "{" + "\n")
+        if isinstance(tagname, dict):  # if there are subblocks:
+            outLines.append(indent + tagname["name"] + "{" + "\n")
 
             # push and get new format
             metalevel += 1
 
-            formats[metalevel] = form[tagname]
+            formats[metalevel] = tagname
 
     if typeInt32:
-        outLines.append((indent + form[tagname] + " : " + de_int32()) + "\n")
+        outLines.append((indent + tagname + " : " + de_int32()) + "\n")
         offsets[metalevel] += 4
 
     # --- pop if neccesary and recall handler function ---
@@ -371,31 +365,32 @@ def recode_lexList(lexList):
 
     tag = ""
 
-    def matchTagname(name):  # look through the format and find the tag for the entry
+    def matchTagname(name, is_block):  # look through the format and find the tag for the entry
         # this is neccesary because the formats are designed for getting the entry for the tag, not the other way around
 
         name = name.strip()
-
         thisFormat = formats[metalevel]
 
         if isinstance(thisFormat, str):
             return "00", False
 
         for key, value in thisFormat.items():
-
+            if not is_block and key == "name":  # make sure not to get a block tagname in a backwards compatibility tuple if it is not a block
+                continue
             if isinstance(value, str) and value == name:  # if it is an item
                 if key == "name":
                     continue
                 return key, True
-
-            if isinstance(value, tuple) and name in value:
+            if isinstance(value, tuple) and name in value:  # backwards compatibility
                 return key, True
-
             if isinstance(value, list) and value[1] == name:
                 return key, True
-
-            if isinstance(value, dict) and value["name"] == name:  # if it is a block
-                return key, True
+            if isinstance(value, dict):  # if it is a block
+                if isinstance(value["name"], tuple):
+                    if name in value["name"]:
+                        return key, True
+                elif value["name"] == name:
+                    return key, True
 
         return "00", False
 
@@ -407,7 +402,7 @@ def recode_lexList(lexList):
     comments_list = ["#", "--", "//"]
     chunk_buffer = b""
 
-    for lexeme in lexList:
+    for index, lexeme in enumerate(lexList):
 
         # --- catch comments ---
         if mode == "comment":
@@ -442,7 +437,8 @@ def recode_lexList(lexList):
                     mode = "tag"
                     continue
 
-                tag, found = matchTagname(lexeme)
+                is_block = lexList[index+1]=="{"
+                tag, found = matchTagname(lexeme, is_block)
 
                 if not found:
                     block_format_path = ""
@@ -453,7 +449,16 @@ def recode_lexList(lexList):
                     print('block_formats path: '+block_format_path)
                     quit()
 
-                outbytes[metalevel] += re_varint(int(tag, base=16))
+                try:
+                    outbytes[metalevel] += re_varint(int(tag, base=16))
+                except ValueError:
+                    block_format_path = ""
+                    for i in formats[1:metalevel+1]:
+                        block_format_path += ("/"+str(i["name"]))
+                    print(str(tag))
+                    print(block_format_path)
+                    print(game_file)
+                    print(line_num)
 
                 mode = "data"
 
@@ -528,7 +533,7 @@ if rift_mode in ["decode", "both"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.3\n\n"]
+        outLines = ["# rifted with FR v5.4\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -629,7 +634,7 @@ if rift_mode in ["recode", "both"]:
 
         # --- lex file contents and recode ---
 
-        if not skip_recode:
+        if True:
             recode_lexList(lex_data())
 
             out_path = "./re_out/" + game_file[8:]
@@ -650,4 +655,4 @@ if no_skipped != 0:
     results += ("skipped "+str(no_skipped)+"  ")
 
 print(results)
-print("File Rift v5.3")
+print("File Rift v5.4")

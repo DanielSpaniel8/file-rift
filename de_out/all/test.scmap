@@ -1,4 +1,4 @@
-# rifted with FR v5.2.2
+# rifted with FR v5.3
 
 zone{
     name : 'town'
@@ -26,7 +26,7 @@ zone{
             direction : 3
         }
         feature : 1
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
     }
     scene{
@@ -111,8 +111,8 @@ zone{
             name : 'plains_tower1'
         }
         feature : 2
-        ('u2', 'base_enemy_level') : 2
-        ('u3', 'portal') : 1
+        base_enemy_level : 2
+        portal : 1
         treasures : 2
     }
     scene{
@@ -124,7 +124,7 @@ zone{
     scene{
         name : 'plains_tower1'
         u1 : 1
-        ('u2', 'base_enemy_level') : 3
+        base_enemy_level : 3
         music : 'cave'
         treasures : 0
         title : 'Abandoned Guard Tower'
@@ -138,14 +138,14 @@ zone{
         connected_scene{
             name : 'plains_cave0'
         }
-        ('u2', 'base_enemy_level') : 3
-        ('u3', 'portal') : 1
+        base_enemy_level : 3
+        portal : 1
         treasures : 1
     }
     scene{
         name : 'plains_cave0'
         u1 : 1
-        ('u2', 'base_enemy_level') : 4
+        base_enemy_level : 4
         music : 'cave'
         treasures : 1
         title : 'Marblemist Cave'
@@ -160,8 +160,8 @@ zone{
             name : 'forest_cave0'
         }
         feature : 2
-        ('u2', 'base_enemy_level') : 4
-        ('u3', 'portal') : 1
+        base_enemy_level : 4
+        portal : 1
         treasures : 1
     }
     scene{
@@ -171,8 +171,8 @@ zone{
             direction : 1
         }
         feature : 2
-        ('u2', 'base_enemy_level') : 4
-        ('u3', 'portal') : 1
+        base_enemy_level : 4
+        portal : 1
         treasures : 0
     }
     sequence : 2
@@ -198,7 +198,7 @@ zone{
         connected_scene{
             name : 'plains_woodkeep_cellar'
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 1
     }
     scene{
@@ -210,8 +210,8 @@ zone{
     scene{
         name : 'plains_woodkeep3'
         feature : 3
-        ('u2', 'base_enemy_level') : 6
-        ('u3', 'portal') : 1
+        base_enemy_level : 6
+        portal : 1
         treasures : 2
         title : 'Chamber of The Mageblade'
     }
@@ -246,7 +246,7 @@ zone{
             name : 'forest_cave2'
         }
         feature : 2
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 2
     }
     scene{
@@ -282,7 +282,7 @@ zone{
             name : 'forest_cave4'
         }
         feature : 2
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 2
     }
     scene{
@@ -309,7 +309,7 @@ zone{
             direction : 7
         }
         feature : 2
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Wellcliff Campsite'
     }
@@ -328,14 +328,14 @@ zone{
         connected_scene{
             name : 'grove_crypt1'
         }
-        ('u2', 'base_enemy_level') : 8
+        base_enemy_level : 8
         treasures : 0
         title : 'Wellcliff Graveyard'
     }
     scene{
         name : 'grove_crypt1'
         u1 : 1
-        ('u2', 'base_enemy_level') : 8
+        base_enemy_level : 8
         music : 'dungeon1'
         treasures : 2
         title : 'Corrupted Crypt'
@@ -353,7 +353,7 @@ zone{
             direction : 1
         }
         feature : 2
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 2
         title : 'King\'s Road'
     }
@@ -365,7 +365,7 @@ zone{
         connected_scene{
             name : 'florennum_wall1'
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
     }
     scene{
@@ -384,7 +384,7 @@ zone{
             name : 'wasteland_part1'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 11
+        base_enemy_level : 11
         treasures : 1
     }
     sequence : 8
@@ -426,7 +426,7 @@ zone{
             name : 'florennum_healerhouse'
         }
         feature : 1
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 1
     }
     scene{
@@ -467,7 +467,7 @@ zone{
             direction : 3
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 10
+        base_enemy_level : 10
         music : 'dungeon1'
         treasures : 0
         title : 'Western Guard Tower'
@@ -484,8 +484,8 @@ zone{
             name : 'florennum_jail_part2'
             direction : 3
         }
-        ('u2', 'base_enemy_level') : 10
-        ('u3', 'portal') : 1
+        base_enemy_level : 10
+        portal : 1
         treasures : 0
     }
     scene{
@@ -499,7 +499,7 @@ zone{
     scene{
         name : 'florennum_jail_boss'
         feature : 3
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Overseer\'s Lair'
     }
@@ -548,7 +548,7 @@ zone{
             name : 'wasteland_town'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 2
     }
     scene{
@@ -567,7 +567,7 @@ zone{
             direction : 1
         }
         feature : 1
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Greyhedge Village'
     }
@@ -610,7 +610,7 @@ zone{
             name : 'thecave_part1'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 13
+        base_enemy_level : 13
         treasures : 0
     }
     scene{
@@ -619,7 +619,7 @@ zone{
             name : 'wasteland_cave_snowy'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 15
+        base_enemy_level : 15
         music : 'cave'
         treasures : 1
         title : 'Greyhedge Caves'
@@ -630,9 +630,9 @@ zone{
             name : 'snowy_part1'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 15
+        base_enemy_level : 15
         music : 'cave'
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Icy Cave'
     }
@@ -647,7 +647,7 @@ zone{
         connected_scene{
             name : 'thecave_part2'
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 1
     }
     scene{
@@ -697,7 +697,7 @@ zone{
         connected_scene{
             name : 'thecave_part22'
         }
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 0
     }
     scene{
@@ -706,7 +706,7 @@ zone{
             name : 'thecave_part23'
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 0
     }
     scene{
@@ -716,7 +716,7 @@ zone{
             direction : 1
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 0
     }
     scene{
@@ -725,8 +725,8 @@ zone{
             name : 'fire_part1'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 14
-        ('u3', 'portal') : 1
+        base_enemy_level : 14
+        portal : 1
         treasures : 0
     }
     scene{
@@ -782,7 +782,7 @@ zone{
             direction : 1
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 0
     }
     scene{
@@ -795,7 +795,7 @@ zone{
             u1 : 1
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 0
     }
     scene{
@@ -805,13 +805,13 @@ zone{
             base_enemy_level : 1
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 1
     }
     scene{
         name : 'thecave_part15'
-        ('u2', 'base_enemy_level') : 18
-        ('u3', 'portal') : 1
+        base_enemy_level : 18
+        portal : 1
         treasures : 0
         title : 'Chambers of Power'
     }
@@ -820,8 +820,8 @@ zone{
         connected_scene{
             name : 'thecave_crypt1'
         }
-        ('u2', 'base_enemy_level') : 14
-        ('u3', 'portal') : 1
+        base_enemy_level : 14
+        portal : 1
         treasures : 0
     }
     scene{
@@ -831,7 +831,7 @@ zone{
             direction : 1
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 14
+        base_enemy_level : 14
         treasures : 1
         title : 'Purplemoor Crypt'
     }
@@ -840,15 +840,15 @@ zone{
         connected_scene{
             name : 'beyond_graveyard'
         }
-        ('u2', 'base_enemy_level') : 15
-        ('u3', 'portal') : 1
+        base_enemy_level : 15
+        portal : 1
         treasures : 1
         title : 'Purplemoor Crypt'
     }
     scene{
         name : 'beyond_graveyard'
         u1 : 1
-        ('u2', 'base_enemy_level') : 15
+        base_enemy_level : 15
         treasures : 0
         title : 'Purplemoor Graveyard'
     }
@@ -883,7 +883,7 @@ zone{
             name : 'fire_part4'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 1
     }
     scene{
@@ -909,7 +909,7 @@ zone{
             name : 'fire_partBoss'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Chambers of The Flame'
     }
@@ -937,7 +937,7 @@ zone{
         connected_scene{
             name : 'snowy_cave2'
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
     }
     scene{
@@ -974,7 +974,7 @@ zone{
             name : 'icecastle_part1'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
         title : 'Snowy Summit'
     }
@@ -1014,7 +1014,7 @@ zone{
             name : 'icecastle_part4'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
     }
     scene{
@@ -1027,21 +1027,21 @@ zone{
             name : 'icecastle_partBoss'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 18
-        ('u3', 'portal') : 1
+        base_enemy_level : 18
+        portal : 1
         treasures : 0
     }
     scene{
         name : 'icecastle_part5'
-        ('u2', 'base_enemy_level') : 18
+        base_enemy_level : 18
         treasures : 0
         title : 'Hall of Trials'
     }
     scene{
         name : 'icecastle_partBoss'
         feature : 3
-        ('u2', 'base_enemy_level') : 18
-        ('u3', 'portal') : 1
+        base_enemy_level : 18
+        portal : 1
         treasures : 0
         title : 'Hall of The Dwarven Kings'
     }
@@ -1057,7 +1057,7 @@ zone{
             name : 'worldsend_part1'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 18
+        base_enemy_level : 18
         music : 'forest'
         treasures : 0
         title : 'Corrupted Grove'
@@ -1068,8 +1068,8 @@ zone{
             name : 'worldsend_part2'
             direction : 1
         }
-        ('u2', 'base_enemy_level') : 19
-        ('u3', 'portal') : 1
+        base_enemy_level : 19
+        portal : 1
         treasures : 1
     }
     scene{
@@ -1078,7 +1078,7 @@ zone{
             name : 'worldsend_part3'
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 19
+        base_enemy_level : 19
         treasures : 0
     }
     scene{
@@ -1087,7 +1087,7 @@ zone{
             name : 'worldsend_part4'
         }
         u1 : 1
-        ('u2', 'base_enemy_level') : 19
+        base_enemy_level : 19
         treasures : 1
     }
     scene{
@@ -1124,7 +1124,7 @@ zone{
             name : 'worldsend_part9'
             direction : 1
         }
-        ('u3', 'portal') : 1
+        portal : 1
         treasures : 0
     }
     scene{
