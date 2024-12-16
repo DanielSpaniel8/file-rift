@@ -1,4 +1,5 @@
 rift_mode = "recode"  # options: decode, recode, both
+allways_recode = False
 
 import os
 from struct import pack, unpack
@@ -18,7 +19,6 @@ from block_formats import (
     fnt
 )
 
-allways_recode = True
 
 
 def de_varint():  # decode varints   note: the offset is automatically moved by the length of the varint
@@ -625,8 +625,14 @@ if rift_mode in ["recode", "both"]:
         hash = hashlib.sha256(bytes(intext, "latin1")).hexdigest()
         manifest_line = game_file+"*"+hash+"\n"
         manifest = []
-        with open("./.manifest", "r") as file:
-            manifest = file.readlines()
+        try:
+            with open("./.manifest", "r") as file:
+                manifest = file.readlines()
+        except FileNotFoundError:
+            open("./.manifest", "w")
+            with open("./.manifest", "r") as file:
+                manifest = file.readlines()
+
 
         file_found = False
         for index, line in enumerate(manifest):  # scan the manifest file for a filename match
