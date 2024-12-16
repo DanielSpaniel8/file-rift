@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'crypt'
 library_item{
@@ -36,11 +36,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 2
             simple_glow{
-                u0{
-                    w : 0.23333333432674408
-                    x : 0.35555556416511536
-                    y : 0.20000000298023224
-                    z : 0.5
+                colour{
+                    red : 0.23333333432674408
+                    green : 0.35555556416511536
+                    blue : 0.20000000298023224
+                    brightness : 0.5
                 }
                 u1 : 27.0
                 u2 : 10
@@ -195,11 +195,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 2
             simple_glow{
-                u0{
-                    w : 0.4555555582046509
-                    x : 0.0
-                    y : 0.0
-                    z : 0.5
+                colour{
+                    red : 0.4555555582046509
+                    green : 0.0
+                    blue : 0.0
+                    brightness : 0.5
                 }
                 u1 : 27.0
                 u2 : 10

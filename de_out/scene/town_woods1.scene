@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -9265,11 +9265,11 @@ object{
         component_type : 'CollisionShape'
         number : 108
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 350.0
-                z : 800.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 350.0
+                top : 800.0
             }
         }
         collision_shape_2{
@@ -10067,11 +10067,11 @@ object{
         component_type : 'UtilityShape'
         number : 103
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 600.0
-                z : 800.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 600.0
+                top : 800.0
             }
         }
     }
@@ -10451,11 +10451,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{
@@ -10497,11 +10497,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{
@@ -10543,11 +10543,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{

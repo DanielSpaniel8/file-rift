@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'hiro'
 library_item{
@@ -36,11 +36,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -34.0
-                    y : 16.0
-                    z : 56.0
+                box_shape{
+                    left : -8.0
+                    bottom : -34.0
+                    right : 16.0
+                    top : 56.0
                 }
             }
             collision_shape_2{

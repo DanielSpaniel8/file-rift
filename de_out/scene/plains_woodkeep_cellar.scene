@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -109,11 +109,11 @@ object{
         component_type : 'UtilityShape'
         number : 101
         collision_shape{
-            u0{
-                w : -220.0
-                x : -80.0
-                y : 440.0
-                z : 160.0
+            box_shape{
+                left : -220.0
+                bottom : -80.0
+                right : 440.0
+                top : 160.0
             }
         }
     }
@@ -272,11 +272,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -500.0
-                x : -200.0
-                y : 544.5
-                z : 500.0
+            box_shape{
+                left : -500.0
+                bottom : -200.0
+                right : 544.5
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -3879,11 +3879,11 @@ object{
         component_type : 'UtilityShape'
         number : 105
         collision_shape{
-            u0{
-                w : -50.0
-                x : 0.0
-                y : 100.0
-                z : 500.0
+            box_shape{
+                left : -50.0
+                bottom : 0.0
+                right : 100.0
+                top : 500.0
             }
         }
     }
@@ -3975,11 +3975,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -50.0
-                x : -100.0
-                y : 100.0
-                z : 200.0
+            box_shape{
+                left : -50.0
+                bottom : -100.0
+                right : 100.0
+                top : 200.0
             }
         }
         collision_shape_2{
@@ -4114,11 +4114,11 @@ $end$
                 component_type : 'SimpleGlow'
                 number : 2
                 simple_glow{
-                    u0{
-                        w : 0.3876543343067169
-                        x : 0.21119344234466553
-                        y : 0.05679014325141907
-                        z : 0.0
+                    colour{
+                        red : 0.3876543343067169
+                        green : 0.21119344234466553
+                        blue : 0.05679014325141907
+                        brightness : 0.0
                     }
                     u1 : 40.0
                     u2 : 15

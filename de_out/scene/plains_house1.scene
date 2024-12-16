@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -91,11 +91,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -30.0
-                x : -100.0
-                y : 60.0
-                z : 250.0
+            box_shape{
+                left : -30.0
+                bottom : -100.0
+                right : 60.0
+                top : 250.0
             }
         }
         collision_shape_2{
@@ -194,7 +194,7 @@ $end$
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00_\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\n\r\nCharacter.AddQuest("vaseQuest");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\n\x00\x00\x00Character\x00\x04\t\x00\x00\x00AddQuest\x00\x04\n\x00\x00\x00vaseQuest\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
             name : ''
-            ?model : 'key_yellow'
+            item : 'key_yellow'
             u0 : 0
         }
     }
@@ -248,11 +248,11 @@ object{
         component_type : 'CollisionShape'
         number : 108
         collision_shape{
-            u0{
-                w : -60.0
-                x : -10.0
-                y : 120.0
-                z : 20.0
+            box_shape{
+                left : -60.0
+                bottom : -10.0
+                right : 120.0
+                top : 20.0
             }
         }
         collision_shape_2{
@@ -329,11 +329,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -3367,11 +3367,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -30.0
-                x : -100.0
-                y : 60.0
-                z : 250.0
+            box_shape{
+                left : -30.0
+                bottom : -100.0
+                right : 60.0
+                top : 250.0
             }
         }
         collision_shape_2{

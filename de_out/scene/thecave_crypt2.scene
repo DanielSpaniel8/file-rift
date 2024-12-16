@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -3464,11 +3464,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -400.0
-                x : -200.0
-                y : 800.0
-                z : 400.0
+            box_shape{
+                left : -400.0
+                bottom : -200.0
+                right : 800.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4339,11 +4339,11 @@ object{
         component_type : 'CollisionShape'
         number : 103
         collision_shape{
-            u0{
-                w : -89.97469329833984
-                x : -2.6872830390930176
-                y : 150.30165100097656
-                z : 28.65419578552246
+            box_shape{
+                left : -89.97469329833984
+                bottom : -2.6872830390930176
+                right : 150.30165100097656
+                top : 28.65419578552246
             }
         }
         collision_shape_2{
@@ -13606,11 +13606,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -40.0
-                x : -100.0
-                y : 80.0
-                z : 200.0
+            box_shape{
+                left : -40.0
+                bottom : -100.0
+                right : 80.0
+                top : 200.0
             }
         }
         collision_shape_2{
@@ -13651,11 +13651,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -40.0
-                x : -100.0
-                y : 80.0
-                z : 200.0
+            box_shape{
+                left : -40.0
+                bottom : -100.0
+                right : 80.0
+                top : 200.0
             }
         }
         collision_shape_2{

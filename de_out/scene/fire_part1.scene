@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'fireball_launcher'
@@ -370,7 +370,7 @@ $end$
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00v\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\n\r\nfor i = 1, 5 do\r\n\tScene.Find(i):setHidden(true);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01A\xc0\x00\x00\x81\x00\x01\x00\xc1\xc0\x00\x00`\x80\x01\x80EA\x01\x00F\x81\xc1\x02\x80\x01\x00\x02\\\x81\x00\x01K\xc1\xc1\x02\xc2\x01\x80\x00\\A\x80\x01_\xc0\xfd\x7f\x1e\x00\x80\x00\x08\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\x00\x00\x00\x00\x00\x00\x14@\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x0c\x00\x00\x00(for index)\x00\x08\x00\x00\x00\x11\x00\x00\x00\x0c\x00\x00\x00(for limit)\x00\x08\x00\x00\x00\x11\x00\x00\x00\x0b\x00\x00\x00(for step)\x00\x08\x00\x00\x00\x11\x00\x00\x00\x02\x00\x00\x00i\x00\t\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
             name : 'key1'
-            ?model : 'key_yellow'
+            item : 'key_yellow'
             u0 : 0
         }
     }
@@ -743,11 +743,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -789,11 +789,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -920,11 +920,11 @@ $end$
         component_type : 'UtilityShape'
         number : 120
         collision_shape{
-            u0{
-                w : -150.0
-                x : -50.0
-                y : 300.0
-                z : 100.0
+            box_shape{
+                left : -150.0
+                bottom : -50.0
+                right : 300.0
+                top : 100.0
             }
         }
     }
@@ -18400,11 +18400,11 @@ object{
         component_type : 'CollisionShape'
         number : 111
         collision_shape{
-            u0{
-                w : -700.0
-                x : -200.0
-                y : 1400.0
-                z : 800.0
+            box_shape{
+                left : -700.0
+                bottom : -200.0
+                right : 1400.0
+                top : 800.0
             }
         }
         collision_shape_2{

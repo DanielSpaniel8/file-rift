@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'collectibles'
 library_item{
@@ -8,13 +8,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.75
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -26,7 +26,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'iselon_shard_1'
+                item : 'iselon_shard_1'
                 u0 : 1
             }
         }
@@ -70,11 +70,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -91,11 +91,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -17.0
-                    x : -15.0
-                    y : 34.0
-                    z : 45.0
+                box_shape{
+                    left : -17.0
+                    bottom : -15.0
+                    right : 34.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -130,13 +130,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.75
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -148,7 +148,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'iselon_shard_2'
+                item : 'iselon_shard_2'
                 u0 : 1
             }
         }
@@ -192,11 +192,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -213,11 +213,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -17.0
-                    x : -15.0
-                    y : 34.0
-                    z : 45.0
+                box_shape{
+                    left : -17.0
+                    bottom : -15.0
+                    right : 34.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -252,13 +252,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.75
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -270,7 +270,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'iselon_shard_3'
+                item : 'iselon_shard_3'
                 u0 : 1
             }
         }
@@ -314,11 +314,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -335,11 +335,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -17.0
-                    x : -15.0
-                    y : 34.0
-                    z : 45.0
+                box_shape{
+                    left : -17.0
+                    bottom : -15.0
+                    right : 34.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -374,13 +374,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.75
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -392,7 +392,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'iselon_shard_4'
+                item : 'iselon_shard_4'
                 u0 : 1
             }
         }
@@ -436,11 +436,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -457,11 +457,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -17.0
-                    x : -15.0
-                    y : 34.0
-                    z : 45.0
+                box_shape{
+                    left : -17.0
+                    bottom : -15.0
+                    right : 34.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -496,13 +496,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -514,7 +514,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'brasssword'
+                item : 'brasssword'
                 u0 : 1
             }
         }
@@ -558,11 +558,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.12263374030590057
-                    x : 0.18696410953998566
-                    y : 0.23292176425457
-                    z : 0.0
+                colour{
+                    red : 0.12263374030590057
+                    green : 0.18696410953998566
+                    blue : 0.23292176425457
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -579,11 +579,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -618,13 +618,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -636,7 +636,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'broadsword'
+                item : 'broadsword'
                 u0 : 1
             }
         }
@@ -680,11 +680,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.12263374030590057
-                    x : 0.18696410953998566
-                    y : 0.23292176425457
-                    z : 0.0
+                colour{
+                    red : 0.12263374030590057
+                    green : 0.18696410953998566
+                    blue : 0.23292176425457
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -701,11 +701,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -740,12 +740,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -757,7 +757,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'firetrinket'
+                item : 'firetrinket'
                 u0 : 1
             }
         }
@@ -801,11 +801,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.0
-                    y : 0.0
-                    z : 0.4777778089046478
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 0.0
+                    brightness : 0.4777778089046478
                 }
                 u1 : 20.0
                 u2 : 16
@@ -822,11 +822,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : 0.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : 0.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -861,12 +861,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -913,11 +913,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.6222222447395325
-                    x : 0.0
-                    y : 2.8610230629055877e-07
-                    z : 0.20000000298023224
+                colour{
+                    red : 0.6222222447395325
+                    green : 0.0
+                    blue : 2.8610230629055877e-07
+                    brightness : 0.20000000298023224
                 }
                 u1 : 20.0
                 u2 : 10
@@ -934,11 +934,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -12.0
-                    x : 0.0
-                    y : 24.0
-                    z : 24.0
+                box_shape{
+                    left : -12.0
+                    bottom : 0.0
+                    right : 24.0
+                    top : 24.0
                 }
             }
             collision_shape_2{
@@ -958,7 +958,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'healingpotion'
+                item : 'healingpotion'
                 u0 : 1
             }
         }
@@ -986,12 +986,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1003,7 +1003,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'icetrinket'
+                item : 'icetrinket'
                 u0 : 1
             }
         }
@@ -1047,11 +1047,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3222222328186035
-                    x : 0.46666666865348816
-                    y : 1.0
-                    z : 0.6333333253860474
+                colour{
+                    red : 0.3222222328186035
+                    green : 0.46666666865348816
+                    blue : 1.0
+                    brightness : 0.6333333253860474
                 }
                 u1 : 25.0
                 u2 : 16
@@ -1068,11 +1068,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : 0.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : 0.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1107,13 +1107,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1125,7 +1125,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'ironsword'
+                item : 'ironsword'
                 u0 : 1
             }
         }
@@ -1169,11 +1169,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.12263374030590057
-                    x : 0.18696410953998566
-                    y : 0.23292176425457
-                    z : 0.0
+                colour{
+                    red : 0.12263374030590057
+                    green : 0.18696410953998566
+                    blue : 0.23292176425457
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -1190,11 +1190,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -1229,12 +1229,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1253,7 +1253,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'key_yellow'
+                item : 'key_yellow'
                 u0 : 0
             }
         }
@@ -1297,11 +1297,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.8000001907348633
-                    x : 0.8000000715255737
-                    y : 0.0
-                    z : 0.5
+                colour{
+                    red : 0.8000001907348633
+                    green : 0.8000000715255737
+                    blue : 0.0
+                    brightness : 0.5
                 }
                 u1 : 15.0
                 u2 : 8
@@ -1318,11 +1318,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : 0.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : 0.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1357,12 +1357,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1382,7 +1382,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'key_yellow'
+                item : 'key_yellow'
                 u0 : 0
             }
         }
@@ -1426,11 +1426,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.8000001907348633
-                    x : 0.8000000715255737
-                    y : 0.0
-                    z : 0.5
+                colour{
+                    red : 0.8000001907348633
+                    green : 0.8000000715255737
+                    blue : 0.0
+                    brightness : 0.5
                 }
                 u1 : 15.0
                 u2 : 8
@@ -1447,11 +1447,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : 0.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : 0.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1486,13 +1486,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1504,7 +1504,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'legendsword'
+                item : 'legendsword'
                 u0 : 1
             }
         }
@@ -1548,11 +1548,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -1569,11 +1569,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -15.0
-                    y : 30.0
-                    z : 45.0
+                box_shape{
+                    left : -15.0
+                    bottom : -15.0
+                    right : 30.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -1608,13 +1608,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1626,7 +1626,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'magicarmor'
+                item : 'magicarmor'
                 u0 : 1
             }
         }
@@ -1670,11 +1670,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.37457817792892456
-                    x : 0.1365329623222351
-                    y : 0.20001177489757538
-                    z : 0.3333333432674408
+                colour{
+                    red : 0.37457817792892456
+                    green : 0.1365329623222351
+                    blue : 0.20001177489757538
+                    brightness : 0.3333333432674408
                 }
                 u1 : 20.0
                 u2 : 15
@@ -1691,11 +1691,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -1730,13 +1730,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1753,7 +1753,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'magicsword'
+                item : 'magicsword'
                 u0 : 1
             }
         }
@@ -1797,11 +1797,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.3283950686454773
-                    x : 0.45822399854660034
-                    y : 0.5160493850708008
-                    z : 0.0
+                colour{
+                    red : 0.3283950686454773
+                    green : 0.45822399854660034
+                    blue : 0.5160493850708008
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15
@@ -1818,11 +1818,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -15.0
-                    y : 30.0
-                    z : 45.0
+                box_shape{
+                    left : -15.0
+                    bottom : -15.0
+                    right : 30.0
+                    top : 45.0
                 }
             }
             collision_shape_2{
@@ -1857,13 +1857,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1880,7 +1880,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'needle'
+                item : 'needle'
                 u0 : 1
             }
         }
@@ -1924,11 +1924,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.36707818508148193
-                    x : 0.12029745429754257
-                    y : 0.15514399111270905
-                    z : 0.0
+                colour{
+                    red : 0.36707818508148193
+                    green : 0.12029745429754257
+                    blue : 0.15514399111270905
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -1945,11 +1945,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -1984,13 +1984,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.5
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -2002,7 +2002,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'platearmor'
+                item : 'platearmor'
                 u0 : 1
             }
         }
@@ -2046,11 +2046,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.12263374030590057
-                    x : 0.18696410953998566
-                    y : 0.23292176425457
-                    z : 0.0
+                colour{
+                    red : 0.12263374030590057
+                    green : 0.18696410953998566
+                    blue : 0.23292176425457
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -2067,11 +2067,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -2106,12 +2106,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -2128,7 +2128,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'shadowtrinket'
+                item : 'shadowtrinket'
                 u0 : 1
             }
         }
@@ -2172,11 +2172,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.3444444537162781
-                    y : 1.0
-                    z : 0.6333333253860474
+                colour{
+                    red : 1.0
+                    green : 0.3444444537162781
+                    blue : 1.0
+                    brightness : 0.6333333253860474
                 }
                 u1 : 25.0
                 u2 : 16
@@ -2193,11 +2193,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : 0.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : 0.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -2232,13 +2232,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.800000011920929
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -2255,7 +2255,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : 'thorn'
+                item : 'thorn'
                 u0 : 1
             }
         }
@@ -2299,11 +2299,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.12263374030590057
-                    x : 0.18696410953998566
-                    y : 0.23292176425457
-                    z : 0.0
+                colour{
+                    red : 0.12263374030590057
+                    green : 0.18696410953998566
+                    blue : 0.23292176425457
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 15
@@ -2320,11 +2320,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : -8.0
-                    y : 30.0
-                    z : 38.0
+                box_shape{
+                    left : -15.0
+                    bottom : -8.0
+                    right : 30.0
+                    top : 38.0
                 }
             }
             collision_shape_2{
@@ -2359,12 +2359,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -2399,11 +2399,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.0
-                    x : 0.4000000059604645
-                    y : 0.800000011920929
-                    z : 0.0
+                colour{
+                    red : 0.0
+                    green : 0.4000000059604645
+                    blue : 0.800000011920929
+                    brightness : 0.0
                 }
                 u1 : 16.0
                 u2 : 10
@@ -2420,11 +2420,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -2444,7 +2444,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -2472,12 +2472,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -2512,11 +2512,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.0
-                    x : 0.4000000059604645
-                    y : 0.800000011920929
-                    z : 0.0
+                colour{
+                    red : 0.0
+                    green : 0.4000000059604645
+                    blue : 0.800000011920929
+                    brightness : 0.0
                 }
                 u1 : 21.0
                 u2 : 10
@@ -2533,11 +2533,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -12.0
-                    x : -12.0
-                    y : 24.0
-                    z : 24.0
+                box_shape{
+                    left : -12.0
+                    bottom : -12.0
+                    right : 24.0
+                    top : 24.0
                 }
             }
             collision_shape_2{
@@ -2557,7 +2557,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -2683,11 +2683,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.5
-                    y : 0.5
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.5
+                    blue : 0.5
+                    brightness : 0.0
                 }
                 u1 : 12.0
                 u2 : 10
@@ -2715,7 +2715,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -2723,11 +2723,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -6.0
-                    x : -7.0
-                    y : 12.0
-                    z : 27.0
+                box_shape{
+                    left : -6.0
+                    bottom : -7.0
+                    right : 12.0
+                    top : 27.0
                 }
             }
             collision_shape_2{
@@ -2742,12 +2742,12 @@ $end$
             component_type : 'PhysicsObject'
             number : 107
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -2872,11 +2872,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.5
-                    x : 0.5
-                    y : 1.0
-                    z : 0.0
+                colour{
+                    red : 0.5
+                    green : 0.5
+                    blue : 1.0
+                    brightness : 0.0
                 }
                 u1 : 12.0
                 u2 : 10
@@ -2905,7 +2905,7 @@ $end$
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -2913,11 +2913,11 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -6.0
-                    x : -7.0
-                    y : 12.0
-                    z : 27.0
+                box_shape{
+                    left : -6.0
+                    bottom : -7.0
+                    right : 12.0
+                    top : 27.0
                 }
             }
             collision_shape_2{
@@ -2932,12 +2932,12 @@ $end$
             component_type : 'PhysicsObject'
             number : 107
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -2964,17 +2964,17 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
+                enabled : 1
                 u1{
                     u0 : 0.009999500587582588
                     u1 : 0.9999500513076782
                 }
                 u2 : 0.009999999776482582
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -3034,7 +3034,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -3042,11 +3042,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 118
             collision_shape{
-                u0{
-                    w : -20.0
-                    x : -20.0
-                    y : 40.0
-                    z : 40.0
+                box_shape{
+                    left : -20.0
+                    bottom : -20.0
+                    right : 40.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -3061,11 +3061,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 120
             simple_glow{
-                u0{
-                    w : 0.5000000596046448
-                    x : 1.0
-                    y : 0.3777778148651123
-                    z : 0.5111111402511597
+                colour{
+                    red : 0.5000000596046448
+                    green : 1.0
+                    blue : 0.3777778148651123
+                    brightness : 0.5111111402511597
                 }
                 u1 : 15.0
                 u2 : 10
@@ -3102,12 +3102,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -3119,7 +3119,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -3163,11 +3163,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.5
-                    x : 0.5
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.5
+                    green : 0.5
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 15.0
                 u2 : 8
@@ -3184,11 +3184,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : -15.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : -15.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -3223,12 +3223,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -3240,7 +3240,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -3284,11 +3284,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.5222222208976746
-                    y : 0.5222222208976746
-                    z : 0.5111111402511597
+                colour{
+                    red : 1.0
+                    green : 0.5222222208976746
+                    blue : 0.5222222208976746
+                    brightness : 0.5111111402511597
                 }
                 u1 : 15.0
                 u2 : 8
@@ -3305,11 +3305,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : -15.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : -15.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -3344,12 +3344,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -3361,7 +3361,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : ''
+                item : ''
                 u0 : 0
             }
         }
@@ -3405,11 +3405,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 102
             simple_glow{
-                u0{
-                    w : 0.7444446086883545
-                    x : 0.7444444894790649
-                    y : 0.0
-                    z : 0.18888893723487854
+                colour{
+                    red : 0.7444446086883545
+                    green : 0.7444444894790649
+                    blue : 0.0
+                    brightness : 0.18888893723487854
                 }
                 u1 : 15.0
                 u2 : 8
@@ -3426,11 +3426,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : -15.0
-                    y : 10.0
-                    z : 30.0
+                box_shape{
+                    left : -5.0
+                    bottom : -15.0
+                    right : 10.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -3551,11 +3551,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 104
             simple_glow{
-                u0{
-                    w : 0.5666666626930237
-                    x : 0.46666666865348816
-                    y : 0.0
-                    z : 0.5
+                colour{
+                    red : 0.5666666626930237
+                    green : 0.46666666865348816
+                    blue : 0.0
+                    brightness : 0.5
                 }
                 u1 : 80.0
                 u2 : 20
@@ -3580,13 +3580,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 108
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.800000011920929
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -3598,7 +3598,7 @@ library_item{
                 lua_chunk{
                 }
                 name : ''
-                ?model : 'experiencesack'
+                item : 'experiencesack'
                 u0 : 1
             }
         }
@@ -3606,11 +3606,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 111
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : 0.0
-                    y : 100.0
-                    z : 106.42947387695312
+                box_shape{
+                    left : -50.0
+                    bottom : 0.0
+                    right : 100.0
+                    top : 106.42947387695312
                 }
             }
             collision_shape_2{

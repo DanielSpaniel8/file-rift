@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'woodkeep_bos'
 library_item{
@@ -8,11 +8,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -29,11 +29,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : -5.0
-                    y : 10.0
-                    z : 10.0
+                box_shape{
+                    left : -5.0
+                    bottom : -5.0
+                    right : 10.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -177,13 +177,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 110
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.6000000238418579
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -219,11 +219,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -240,11 +240,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -5.0
-                    x : -5.0
-                    y : 10.0
-                    z : 10.0
+                box_shape{
+                    left : -5.0
+                    bottom : -5.0
+                    right : 10.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -388,11 +388,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.16666662693023682
-                    y : 0.1666669249534607
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.16666662693023682
+                    blue : 0.1666669249534607
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -484,12 +484,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 200.0
+                    radius : 200.0
                 }
             }
             collision_shape_2{
@@ -772,11 +772,11 @@ $end$
             component_type : 'CollisionShape'
             number : 111
             collision_shape{
-                u0{
-                    w : -30.0
-                    x : -5.0
-                    y : 60.0
-                    z : 55.0
+                box_shape{
+                    left : -30.0
+                    bottom : -5.0
+                    right : 60.0
+                    top : 55.0
                 }
             }
             collision_shape_2{
@@ -793,11 +793,11 @@ $end$
             number : 113
             name : 'whirlwind'
             collision_shape{
-                u0{
-                    w : -140.0
-                    x : 0.0
-                    y : 280.0
-                    z : 20.0
+                box_shape{
+                    left : -140.0
+                    bottom : 0.0
+                    right : 280.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -877,11 +877,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 128
             simple_glow{
-                u0{
-                    w : 0.2888889014720917
-                    x : 0.1555555760860443
-                    y : 0.1555555760860443
-                    z : 0.0
+                colour{
+                    red : 0.2888889014720917
+                    green : 0.1555555760860443
+                    blue : 0.1555555760860443
+                    brightness : 0.0
                 }
                 u1 : 55.0
                 u2 : 10

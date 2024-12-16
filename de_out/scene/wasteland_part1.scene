@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -764,11 +764,11 @@ object{
         component_type : 'SimpleGlow'
         number : 101
         simple_glow{
-            u0{
-                w : 0.0
-                x : 0.0
-                y : 0.0
-                z : 1.0
+            colour{
+                red : 0.0
+                green : 0.0
+                blue : 0.0
+                brightness : 1.0
             }
             u1 : 100.0
             u2 : 10
@@ -973,11 +973,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1045,11 +1045,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1117,11 +1117,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -18387,11 +18387,11 @@ $end$
         number : 106
         name : 'main'
         collision_shape{
-            u0{
-                w : -26.0
-                x : -0.8095080256462097
-                y : 54.0
-                z : 70.80950927734375
+            box_shape{
+                left : -26.0
+                bottom : -0.8095080256462097
+                right : 54.0
+                top : 70.80950927734375
             }
         }
         collision_shape_2{
@@ -18428,11 +18428,11 @@ $end$
         number : 117
         name : 'roam'
         collision_shape{
-            u0{
-                w : -300.0
-                x : -50.0
-                y : 600.0
-                z : 100.0
+            box_shape{
+                left : -300.0
+                bottom : -50.0
+                right : 600.0
+                top : 100.0
             }
         }
     }

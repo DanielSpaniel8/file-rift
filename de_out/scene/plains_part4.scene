@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -302,11 +302,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -50.0
-                x : -150.0
-                y : 100.0
-                z : 300.0
+            box_shape{
+                left : -50.0
+                bottom : -150.0
+                right : 100.0
+                top : 300.0
             }
         }
         collision_shape_2{
@@ -347,11 +347,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -200.0
-                x : -300.0
-                y : 600.0
-                z : 450.0
+            box_shape{
+                left : -200.0
+                bottom : -300.0
+                right : 600.0
+                top : 450.0
             }
         }
         collision_shape_2{
@@ -392,11 +392,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -200.0
-                x : -300.0
-                y : 700.0
-                z : 450.0
+            box_shape{
+                left : -200.0
+                bottom : -300.0
+                right : 700.0
+                top : 450.0
             }
         }
         collision_shape_2{
@@ -437,11 +437,11 @@ object{
         component_type : 'UtilityShape'
         number : 101
         collision_shape{
-            u0{
-                w : -400.0
-                x : -300.0
-                y : 900.0
-                z : 550.0
+            box_shape{
+                left : -400.0
+                bottom : -300.0
+                right : 900.0
+                top : 550.0
             }
         }
     }
@@ -466,11 +466,11 @@ object{
         component_type : 'UtilityShape'
         number : 101
         collision_shape{
-            u0{
-                w : -200.0
-                x : -200.0
-                y : 500.0
-                z : 350.0
+            box_shape{
+                left : -200.0
+                bottom : -200.0
+                right : 500.0
+                top : 350.0
             }
         }
     }
@@ -954,11 +954,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1000,11 +1000,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1046,11 +1046,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -3993,11 +3993,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -1300.0
-                x : -700.0
-                y : 2900.0
-                z : 1400.0
+            box_shape{
+                left : -1300.0
+                bottom : -700.0
+                right : 2900.0
+                top : 1400.0
             }
         }
         collision_shape_2{
@@ -13461,11 +13461,11 @@ $end$
         component_type : 'UtilityShape'
         number : 5
         collision_shape{
-            u0{
-                w : -0.0
-                x : -30.0
-                y : 300.0
-                z : 80.0
+            box_shape{
+                left : -0.0
+                bottom : -30.0
+                right : 300.0
+                top : 80.0
             }
         }
     }

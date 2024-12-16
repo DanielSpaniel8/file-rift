@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'forest'
 library_item{
@@ -116,11 +116,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 127
             simple_glow{
-                u0{
-                    w : 0.6308642029762268
-                    x : 0.7913580536842346
-                    y : 0.780658483505249
-                    z : 0.5
+                colour{
+                    red : 0.6308642029762268
+                    green : 0.7913580536842346
+                    blue : 0.780658483505249
+                    brightness : 0.5
                 }
                 u1 : 15.0
                 u2 : 20

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'npc_new'
 library_item{
@@ -71,11 +71,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 107
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -33.81779098510742
-                    y : 16.0
-                    z : 61.80525588989258
+                box_shape{
+                    left : -8.0
+                    bottom : -33.81779098510742
+                    right : 16.0
+                    top : 61.80525588989258
                 }
             }
             collision_shape_2{
@@ -117,11 +117,11 @@ $end$
             component_type : 'UtilityShape'
             number : 112
             collision_shape{
-                u0{
-                    w : -200.0
-                    x : -100.0
-                    y : 400.0
-                    z : 200.0
+                box_shape{
+                    left : -200.0
+                    bottom : -100.0
+                    right : 400.0
+                    top : 200.0
                 }
             }
         }
@@ -312,11 +312,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 107
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -33.81779098510742
-                    y : 16.0
-                    z : 61.80525588989258
+                box_shape{
+                    left : -8.0
+                    bottom : -33.81779098510742
+                    right : 16.0
+                    top : 61.80525588989258
                 }
             }
             collision_shape_2{
@@ -356,11 +356,11 @@ $end$
             component_type : 'UtilityShape'
             number : 111
             collision_shape{
-                u0{
-                    w : -200.0
-                    x : -100.0
-                    y : 400.0
-                    z : 200.0
+                box_shape{
+                    left : -200.0
+                    bottom : -100.0
+                    right : 400.0
+                    top : 200.0
                 }
             }
         }
@@ -451,11 +451,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 107
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -40.0
-                    y : 16.0
-                    z : 67.98746490478516
+                box_shape{
+                    left : -8.0
+                    bottom : -40.0
+                    right : 16.0
+                    top : 67.98746490478516
                 }
             }
             collision_shape_2{
@@ -497,11 +497,11 @@ $end$
             component_type : 'UtilityShape'
             number : 112
             collision_shape{
-                u0{
-                    w : -200.0
-                    x : -100.0
-                    y : 400.0
-                    z : 200.0
+                box_shape{
+                    left : -200.0
+                    bottom : -100.0
+                    right : 400.0
+                    top : 200.0
                 }
             }
         }

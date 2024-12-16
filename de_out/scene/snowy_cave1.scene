@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -705,11 +705,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1453,11 +1453,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -50.0
-                x : -250.0
-                y : 100.0
-                z : 500.0
+            box_shape{
+                left : -50.0
+                bottom : -250.0
+                right : 100.0
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -1510,11 +1510,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -50.0
-                x : -250.0
-                y : 100.0
-                z : 500.0
+            box_shape{
+                left : -50.0
+                bottom : -250.0
+                right : 100.0
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -2012,11 +2012,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -300.0
-                x : -200.0
-                y : 600.0
-                z : 400.0
+            box_shape{
+                left : -300.0
+                bottom : -200.0
+                right : 600.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -5612,11 +5612,11 @@ $end$
         component_type : 'UtilityShape'
         number : 119
         collision_shape{
-            u0{
-                w : -150.0
-                x : -50.0
-                y : 300.0
-                z : 100.0
+            box_shape{
+                left : -150.0
+                bottom : -50.0
+                right : 300.0
+                top : 100.0
             }
         }
     }

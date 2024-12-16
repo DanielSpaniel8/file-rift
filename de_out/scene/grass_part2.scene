@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -6594,11 +6594,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -7061,11 +7061,11 @@ object{
         component_type : 'CollisionShape'
         number : 108
         collision_shape{
-            u0{
-                w : -500.0
-                x : -600.0
-                y : 1000.0
-                z : 1200.0
+            box_shape{
+                left : -500.0
+                bottom : -600.0
+                right : 1000.0
+                top : 1200.0
             }
         }
         collision_shape_2{
@@ -9810,11 +9810,11 @@ object{
         component_type : 'CollisionShape'
         number : 102
         collision_shape{
-            u0{
-                w : -41.5
-                x : -20.0
-                y : 83.0
-                z : 110.0
+            box_shape{
+                left : -41.5
+                bottom : -20.0
+                right : 83.0
+                top : 110.0
             }
         }
         collision_shape_2{
@@ -9856,11 +9856,11 @@ object{
         component_type : 'CollisionShape'
         number : 102
         collision_shape{
-            u0{
-                w : -41.5
-                x : -20.0
-                y : 83.0
-                z : 110.0
+            box_shape{
+                left : -41.5
+                bottom : -20.0
+                right : 83.0
+                top : 110.0
             }
         }
         collision_shape_2{

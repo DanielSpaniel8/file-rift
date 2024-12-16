@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     name : 'Template 1'
@@ -1854,11 +1854,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -500.0
-                y : 200.0
-                z : 1000.0
+            box_shape{
+                left : -100.0
+                bottom : -500.0
+                right : 200.0
+                top : 1000.0
             }
         }
         collision_shape_2{
@@ -5744,11 +5744,11 @@ object{
         component_type : 'CollisionShape'
         number : 103
         collision_shape{
-            u0{
-                w : -6.942930221557617
-                x : 0.0
-                y : 18.2935791015625
-                z : 47.564579010009766
+            box_shape{
+                left : -6.942930221557617
+                bottom : 0.0
+                right : 18.2935791015625
+                top : 47.564579010009766
             }
         }
         collision_shape_2{
@@ -5830,11 +5830,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -40.0
-                x : -100.0
-                y : 80.0
-                z : 200.0
+            box_shape{
+                left : -40.0
+                bottom : -100.0
+                right : 80.0
+                top : 200.0
             }
         }
         collision_shape_2{
@@ -6029,11 +6029,11 @@ object{
                 component_type : 'CollisionShape'
                 number : 106
                 collision_shape{
-                    u0{
-                        w : -10.0
-                        x : 0.0
-                        y : 20.0
-                        z : 50.0
+                    box_shape{
+                        left : -10.0
+                        bottom : 0.0
+                        right : 20.0
+                        top : 50.0
                     }
                 }
                 collision_shape_2{

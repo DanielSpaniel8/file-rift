@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -119,11 +119,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -500.0
-                x : -500.0
-                y : 1500.0
-                z : 1000.0
+            box_shape{
+                left : -500.0
+                bottom : -500.0
+                right : 1500.0
+                top : 1000.0
             }
         }
         collision_shape_2{
@@ -166,11 +166,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -50.0
-                x : -100.0
-                y : 100.0
-                z : 200.0
+            box_shape{
+                left : -50.0
+                bottom : -100.0
+                right : 100.0
+                top : 200.0
             }
         }
         collision_shape_2{
@@ -230,11 +230,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -300.0
-                x : -150.0
-                y : 600.0
-                z : 300.0
+            box_shape{
+                left : -300.0
+                bottom : -150.0
+                right : 600.0
+                top : 300.0
             }
         }
         collision_shape_2{
@@ -3423,11 +3423,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -100.0
-                y : 90.0
-                z : 150.0
+            box_shape{
+                left : -45.0
+                bottom : -100.0
+                right : 90.0
+                top : 150.0
             }
         }
         collision_shape_2{
@@ -3507,11 +3507,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -100.0
-                y : 90.0
-                z : 150.0
+            box_shape{
+                left : -45.0
+                bottom : -100.0
+                right : 90.0
+                top : 150.0
             }
         }
         collision_shape_2{
@@ -3670,11 +3670,11 @@ $end$
         component_type : 'CollisionShape'
         number : 112
         collision_shape{
-            u0{
-                w : -15.0
-                x : -12.0
-                y : 30.0
-                z : 24.0
+            box_shape{
+                left : -15.0
+                bottom : -12.0
+                right : 30.0
+                top : 24.0
             }
         }
         collision_shape_2{
@@ -3688,11 +3688,11 @@ $end$
         component_type : 'SimpleGlow'
         number : 115
         simple_glow{
-            u0{
-                w : 0.9555555582046509
-                x : 0.8999999761581421
-                y : 0.8666666746139526
-                z : 0.0
+            colour{
+                red : 0.9555555582046509
+                green : 0.8999999761581421
+                blue : 0.8666666746139526
+                brightness : 0.0
             }
             u1 : 20.0
             u2 : 10
@@ -4459,11 +4459,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4531,11 +4531,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4621,11 +4621,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4693,11 +4693,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4765,11 +4765,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4869,11 +4869,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -300.0
-                x : -170.0
-                y : 650.0
-                z : 340.0
+            box_shape{
+                left : -300.0
+                bottom : -170.0
+                right : 650.0
+                top : 340.0
             }
         }
         collision_shape_2{
@@ -4926,11 +4926,11 @@ object{
         component_type : 'CollisionShape'
         number : 106
         collision_shape{
-            u0{
-                w : -30.0
-                x : 0.0
-                y : 80.0
-                z : 100.0
+            box_shape{
+                left : -30.0
+                bottom : 0.0
+                right : 80.0
+                top : 100.0
             }
         }
         collision_shape_2{
@@ -4962,11 +4962,11 @@ object{
         component_type : 'CollisionShape'
         number : 106
         collision_shape{
-            u0{
-                w : -30.0
-                x : 0.0
-                y : 80.0
-                z : 100.0
+            box_shape{
+                left : -30.0
+                bottom : 0.0
+                right : 80.0
+                top : 100.0
             }
         }
         collision_shape_2{
@@ -5178,11 +5178,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -350.0
-                x : -220.0
-                y : 700.0
-                z : 440.0
+            box_shape{
+                left : -350.0
+                bottom : -220.0
+                right : 700.0
+                top : 440.0
             }
         }
         collision_shape_2{
@@ -5235,11 +5235,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -350.0
-                x : -220.0
-                y : 700.0
-                z : 440.0
+            box_shape{
+                left : -350.0
+                bottom : -220.0
+                right : 700.0
+                top : 440.0
             }
         }
         collision_shape_2{
@@ -45137,11 +45137,11 @@ object{
         number : 106
         name : 'main'
         collision_shape{
-            u0{
-                w : -26.0
-                x : -0.8095080256462097
-                y : 66.0
-                z : 65.80950927734375
+            box_shape{
+                left : -26.0
+                bottom : -0.8095080256462097
+                right : 66.0
+                top : 65.80950927734375
             }
         }
         collision_shape_2{
@@ -45178,11 +45178,11 @@ object{
         number : 115
         name : 'shield'
         collision_shape{
-            u0{
-                w : 0.0
-                x : -4.818707466125488
-                y : 55.0
-                z : 74.81871032714844
+            box_shape{
+                left : 0.0
+                bottom : -4.818707466125488
+                right : 55.0
+                top : 74.81871032714844
             }
         }
         collision_shape_2{
@@ -45198,11 +45198,11 @@ object{
         number : 117
         name : 'roam'
         collision_shape{
-            u0{
-                w : -100.0
-                x : -50.0
-                y : 200.0
-                z : 100.0
+            box_shape{
+                left : -100.0
+                bottom : -50.0
+                right : 200.0
+                top : 100.0
             }
         }
     }
@@ -45404,11 +45404,11 @@ $end$
                 component_type : 'CollisionShape'
                 number : 1
                 collision_shape{
-                    u0{
-                        w : -32.0
-                        x : -32.0
-                        y : 64.0
-                        z : 64.0
+                    box_shape{
+                        left : -32.0
+                        bottom : -32.0
+                        right : 64.0
+                        top : 64.0
                     }
                 }
                 collision_shape_2{
@@ -45425,12 +45425,12 @@ $end$
                 component_type : 'PhysicsObject'
                 number : 3
                 physics_object{
-                    u0 : 1
-                    u2 : 1500.0
-                    u3 : 300.0
-                    u4 : 700.0
-                    u5 : 0
-                    u6 : 0.0
+                    enabled : 1
+                    ground_friction : 1500.0
+                    air_friction : 300.0
+                    speed : 700.0
+                    can_roll : 0
+                    bounciness : 0.0
                 }
             }
             component{

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'icecastle'
 library_item{
@@ -22,11 +22,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 115
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : -20.0
-                    y : 100.0
-                    z : 40.0
+                box_shape{
+                    left : -50.0
+                    bottom : -20.0
+                    right : 100.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -109,24 +109,24 @@ $end$
             component_type : 'PhysicsObject'
             number : 125
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 1.2000000476837158
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
             component_type : 'SimpleGlow'
             number : 132
             simple_glow{
-                u0{
-                    w : 0.5
-                    x : 0.5
-                    y : 0.5
-                    z : 0.5
+                colour{
+                    red : 0.5
+                    green : 0.5
+                    blue : 0.5
+                    brightness : 0.5
                 }
                 u1 : 50.0
                 u2 : 10
@@ -526,11 +526,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 115
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : -20.0
-                    y : 100.0
-                    z : 40.0
+                box_shape{
+                    left : -50.0
+                    bottom : -20.0
+                    right : 100.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -610,24 +610,24 @@ $end$
             component_type : 'PhysicsObject'
             number : 125
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 1.2000000476837158
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
             component_type : 'SimpleGlow'
             number : 132
             simple_glow{
-                u0{
-                    w : 0.5
-                    x : 0.5
-                    y : 0.5
-                    z : 0.5
+                colour{
+                    red : 0.5
+                    green : 0.5
+                    blue : 0.5
+                    brightness : 0.5
                 }
                 u1 : 50.0
                 u2 : 10

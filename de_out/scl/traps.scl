@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'traps'
 library_item{
@@ -36,11 +36,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : 0.0
-                    y : 23.0
-                    z : 220.0
+                box_shape{
+                    left : -15.0
+                    bottom : 0.0
+                    right : 23.0
+                    top : 220.0
                 }
             }
             collision_shape_2{
@@ -114,11 +114,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.8333333134651184
-                    x : 0.29147660732269287
-                    y : 0.0
-                    z : 0.0
+                colour{
+                    red : 0.8333333134651184
+                    green : 0.29147660732269287
+                    blue : 0.0
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -135,11 +135,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -281,11 +281,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.8333333134651184
-                    x : 0.29147660732269287
-                    y : 0.0
-                    z : 0.0
+                colour{
+                    red : 0.8333333134651184
+                    green : 0.29147660732269287
+                    blue : 0.0
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -302,11 +302,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -372,13 +372,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 8
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.6000000238418579
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -461,11 +461,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.5555555820465088
-                    x : 0.29147660732269287
-                    y : 0.5111111402511597
-                    z : 0.0
+                colour{
+                    red : 0.5555555820465088
+                    green : 0.29147660732269287
+                    blue : 0.5111111402511597
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -482,11 +482,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -552,13 +552,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 8
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.6000000238418579
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -831,12 +831,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 55.0
+                    radius : 55.0
                 }
             }
             collision_shape_2{
@@ -1083,11 +1083,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1189,11 +1189,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 125
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : 0.0
-                    y : 100.0
-                    z : 40.0
+                box_shape{
+                    left : -50.0
+                    bottom : 0.0
+                    right : 100.0
+                    top : 40.0
                 }
             }
         }
@@ -1201,12 +1201,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1281,11 +1281,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1387,11 +1387,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 125
             collision_shape{
-                u0{
-                    w : -600.0
-                    x : 0.0
-                    y : 1200.0
-                    z : 300.0
+                box_shape{
+                    left : -600.0
+                    bottom : 0.0
+                    right : 1200.0
+                    top : 300.0
                 }
             }
         }
@@ -1399,12 +1399,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1479,11 +1479,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1585,12 +1585,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1656,11 +1656,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -70.0
-                    x : 30.0
-                    y : 140.0
-                    z : 60.0
+                box_shape{
+                    left : -70.0
+                    bottom : 30.0
+                    right : 140.0
+                    top : 60.0
                 }
             }
             collision_shape_2{
@@ -1829,12 +1829,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 6
             collision_shape{
-                u1{
-                    u0{
-                        y : 435.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 435.0
+                        y : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{
@@ -1852,12 +1852,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 9
             collision_shape{
-                u1{
-                    u0{
-                        y : 380.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 380.0
+                        y : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{

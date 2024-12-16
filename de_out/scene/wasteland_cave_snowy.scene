@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -597,11 +597,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -642,11 +642,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -733,11 +733,11 @@ object{
         component_type : 'SimpleGlow'
         number : 2
         simple_glow{
-            u0{
-                w : 0.3876543343067169
-                x : 0.21119344234466553
-                y : 0.05679014325141907
-                z : 0.0
+            colour{
+                red : 0.3876543343067169
+                green : 0.21119344234466553
+                blue : 0.05679014325141907
+                brightness : 0.0
             }
             u1 : 60.0
             u2 : 15
@@ -903,11 +903,11 @@ object{
         component_type : 'SimpleGlow'
         number : 2
         simple_glow{
-            u0{
-                w : 0.1209876611828804
-                x : 0.21119344234466553
-                y : 0.39012348651885986
-                z : 0.0
+            colour{
+                red : 0.1209876611828804
+                green : 0.21119344234466553
+                blue : 0.39012348651885986
+                brightness : 0.0
             }
             u1 : 60.0
             u2 : 15

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : '1'
@@ -231,11 +231,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -41.0
-                x : -200.0
-                y : 82.0
-                z : 400.0
+            box_shape{
+                left : -41.0
+                bottom : -200.0
+                right : 82.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -330,11 +330,11 @@ object{
         component_type : 'SimpleGlow'
         number : 128
         simple_glow{
-            u0{
-                w : 0.2888889014720917
-                x : 0.1555555760860443
-                y : 0.1555555760860443
-                z : 0.0
+            colour{
+                red : 0.2888889014720917
+                green : 0.1555555760860443
+                blue : 0.1555555760860443
+                brightness : 0.0
             }
             u1 : 55.0
             u2 : 10
@@ -648,11 +648,11 @@ $end$
         component_type : 'CollisionShape'
         number : 111
         collision_shape{
-            u0{
-                w : -40.0
-                x : 0.0
-                y : 90.0
-                z : 150.0
+            box_shape{
+                left : -40.0
+                bottom : 0.0
+                right : 90.0
+                top : 150.0
             }
         }
         collision_shape_2{
@@ -946,11 +946,11 @@ $end$
         component_type : 'CollisionShape'
         number : 111
         collision_shape{
-            u0{
-                w : -30.0
-                x : -5.0
-                y : 60.0
-                z : 55.0
+            box_shape{
+                left : -30.0
+                bottom : -5.0
+                right : 60.0
+                top : 55.0
             }
         }
         collision_shape_2{
@@ -967,11 +967,11 @@ $end$
         number : 113
         name : 'whirlwind'
         collision_shape{
-            u0{
-                w : -140.0
-                x : 0.0
-                y : 280.0
-                z : 20.0
+            box_shape{
+                left : -140.0
+                bottom : 0.0
+                right : 280.0
+                top : 20.0
             }
         }
         collision_shape_2{
@@ -1050,11 +1050,11 @@ $end$
         component_type : 'SimpleGlow'
         number : 128
         simple_glow{
-            u0{
-                w : 0.2888889014720917
-                x : 0.1555555760860443
-                y : 0.1555555760860443
-                z : 0.0
+            colour{
+                red : 0.2888889014720917
+                green : 0.1555555760860443
+                blue : 0.1555555760860443
+                brightness : 0.0
             }
             u1 : 55.0
             u2 : 10
@@ -1459,11 +1459,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -220.0
-                x : -150.0
-                y : 440.0
-                z : 300.0
+            box_shape{
+                left : -220.0
+                bottom : -150.0
+                right : 440.0
+                top : 300.0
             }
         }
         collision_shape_2{
@@ -1493,13 +1493,13 @@ object{
         component_type : 'PhysicsObject'
         number : 1
         physics_object{
-            u0 : 1
+            enabled : 1
             u1 : 0.75
-            u2 : 1500.0
-            u3 : 0.0
-            u4 : 700.0
-            u5 : 0
-            u6 : 0.0
+            ground_friction : 1500.0
+            air_friction : 0.0
+            speed : 700.0
+            can_roll : 0
+            bounciness : 0.0
         }
     }
     component{
@@ -1524,7 +1524,7 @@ $end$
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xcb\x00\x00\x00local self = ...;\r\n\r\nCharacter.SetQuestCompleted("quest03_woodkeep");\r\nCharacter.AddQuest("quest04_village_elder2");\r\n\r\nDoorController.Open(Scene.Find("endDoor"));\r\n\r\nGame.SetDefaultMusicName("menu");\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\xc0\xc0\x00\x81\x00\x01\x00\\@\x00\x01E@\x01\x00F\x80\xc1\x00\x85\xc0\x01\x00\x86\x00B\x01\xc1@\x02\x00\x9c\x00\x00\x01\\@\x00\x00E\x80\x02\x00F\xc0\xc2\x00\x81\x00\x03\x00\\@\x00\x01\x1e\x00\x80\x00\r\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x12\x00\x00\x00SetQuestCompleted\x00\x04\x11\x00\x00\x00quest03_woodkeep\x00\x04\t\x00\x00\x00AddQuest\x00\x04\x17\x00\x00\x00quest04_village_elder2\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x08\x00\x00\x00endDoor\x00\x04\x05\x00\x00\x00Game\x00\x04\x14\x00\x00\x00SetDefaultMusicName\x00\x04\x05\x00\x00\x00menu\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
             }
             name : 'iselon_shard_1'
-            ?model : 'iselon_shard_1'
+            item : 'iselon_shard_1'
             u0 : 1
         }
     }
@@ -1568,11 +1568,11 @@ $end$
         component_type : 'SimpleGlow'
         number : 102
         simple_glow{
-            u0{
-                w : 0.3283950686454773
-                x : 0.45822399854660034
-                y : 0.5160493850708008
-                z : 0.0
+            colour{
+                red : 0.3283950686454773
+                green : 0.45822399854660034
+                blue : 0.5160493850708008
+                brightness : 0.0
             }
             u1 : 40.0
             u2 : 15
@@ -1589,11 +1589,11 @@ $end$
         component_type : 'CollisionShape'
         number : 105
         collision_shape{
-            u0{
-                w : -17.0
-                x : -15.0
-                y : 34.0
-                z : 45.0
+            box_shape{
+                left : -17.0
+                bottom : -15.0
+                right : 34.0
+                top : 45.0
             }
         }
         collision_shape_2{
@@ -3263,11 +3263,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -100.0
-                y : 350.0
-                z : 250.0
+            box_shape{
+                left : -100.0
+                bottom : -100.0
+                right : 350.0
+                top : 250.0
             }
         }
         collision_shape_2{
@@ -3502,11 +3502,11 @@ object{
         component_type : 'CollisionShape'
         number : 111
         collision_shape{
-            u0{
-                w : -50.0
-                x : -20.0
-                y : 100.0
-                z : 70.0
+            box_shape{
+                left : -50.0
+                bottom : -20.0
+                right : 100.0
+                top : 70.0
             }
         }
         collision_shape_2{
@@ -3651,11 +3651,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -500.0
-                x : -200.0
-                y : 544.5
-                z : 500.0
+            box_shape{
+                left : -500.0
+                bottom : -200.0
+                right : 544.5
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -3696,11 +3696,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -500.0
-                x : -200.0
-                y : 544.5
-                z : 500.0
+            box_shape{
+                left : -500.0
+                bottom : -200.0
+                right : 544.5
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -17002,11 +17002,11 @@ object{
                 component_type : 'SimpleGlow'
                 number : 4
                 simple_glow{
-                    u0{
-                        w : 1.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.5
+                    colour{
+                        red : 1.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.5
                     }
                     u1 : 23.0
                     u2 : 10
@@ -17110,11 +17110,11 @@ $end$
                 component_type : 'CollisionShape'
                 number : 106
                 collision_shape{
-                    u0{
-                        w : -25.0
-                        x : 7.0
-                        y : 30.0
-                        z : 38.0
+                    box_shape{
+                        left : -25.0
+                        bottom : 7.0
+                        right : 30.0
+                        top : 38.0
                     }
                 }
                 collision_shape_2{
@@ -17306,11 +17306,11 @@ $end$
                 component_type : 'CollisionShape'
                 number : 7
                 collision_shape{
-                    u0{
-                        w : -10.0
-                        x : -10.0
-                        y : 20.0
-                        z : 20.0
+                    box_shape{
+                        left : -10.0
+                        bottom : -10.0
+                        right : 20.0
+                        top : 20.0
                     }
                 }
                 collision_shape_2{
@@ -17337,11 +17337,11 @@ $end$
                 component_type : 'SimpleGlow'
                 number : 101
                 simple_glow{
-                    u0{
-                        w : 0.644444465637207
-                        x : 0.0
-                        y : 0.0
-                        z : 0.5
+                    colour{
+                        red : 0.644444465637207
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.5
                     }
                     u1 : 20.0
                     u2 : 10

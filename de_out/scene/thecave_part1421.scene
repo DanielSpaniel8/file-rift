@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : '1'
@@ -361,11 +361,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -406,11 +406,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -452,11 +452,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -500.0
-                x : -250.0
-                y : 1000.0
-                z : 500.0
+            box_shape{
+                left : -500.0
+                bottom : -250.0
+                right : 1000.0
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -9552,11 +9552,11 @@ object{
                 component_type : 'SimpleGlow'
                 number : 7
                 simple_glow{
-                    u0{
-                        w : 0.4444444477558136
-                        x : 0.21111111342906952
-                        y : 0.1666666716337204
-                        z : 0.5
+                    colour{
+                        red : 0.4444444477558136
+                        green : 0.21111111342906952
+                        blue : 0.1666666716337204
+                        brightness : 0.5
                     }
                     u1 : 30.0
                     u2 : 10
@@ -9652,11 +9652,11 @@ $end$
                 component_type : 'CollisionShape'
                 number : 106
                 collision_shape{
-                    u0{
-                        w : -25.0
-                        x : 7.0
-                        y : 30.0
-                        z : 38.0
+                    box_shape{
+                        left : -25.0
+                        bottom : 7.0
+                        right : 30.0
+                        top : 38.0
                     }
                 }
                 collision_shape_2{
@@ -9823,11 +9823,11 @@ $end$
                 component_type : 'SimpleGlow'
                 number : 7
                 simple_glow{
-                    u0{
-                        w : 0.4444444477558136
-                        x : 0.21111111342906952
-                        y : 0.1666666716337204
-                        z : 0.5
+                    colour{
+                        red : 0.4444444477558136
+                        green : 0.21111111342906952
+                        blue : 0.1666666716337204
+                        brightness : 0.5
                     }
                     u1 : 30.0
                     u2 : 10
@@ -9923,11 +9923,11 @@ $end$
                 component_type : 'CollisionShape'
                 number : 106
                 collision_shape{
-                    u0{
-                        w : -25.0
-                        x : 7.0
-                        y : 30.0
-                        z : 38.0
+                    box_shape{
+                        left : -25.0
+                        bottom : 7.0
+                        right : 30.0
+                        top : 38.0
                     }
                 }
                 collision_shape_2{

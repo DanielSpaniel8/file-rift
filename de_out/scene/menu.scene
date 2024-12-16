@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 object{
     identifier : 'Background'
@@ -566,11 +566,11 @@ object{
         component_type : 'UtilityShape'
         number : 101
         collision_shape{
-            u0{
-                w : -220.0
-                x : -160.0
-                y : 440.0
-                z : 320.0
+            box_shape{
+                left : -220.0
+                bottom : -160.0
+                right : 440.0
+                top : 320.0
             }
         }
     }
@@ -620,13 +620,13 @@ $end$
         component_type : 'PhysicsObject'
         number : 106
         physics_object{
-            u0 : 1
+            enabled : 1
             u1 : 0.0
-            u2 : 1500.0
-            u3 : 0.0
-            u4 : 700.0
-            u5 : 0
-            u6 : 0.0
+            ground_friction : 1500.0
+            air_friction : 0.0
+            speed : 700.0
+            can_roll : 0
+            bounciness : 0.0
         }
     }
     position{
@@ -6273,11 +6273,11 @@ object{
         component_type : 'CollisionShape'
         number : 2
         collision_shape{
-            u0{
-                w : 0.0
-                x : 0.0
-                y : 0.0
-                z : 0.0
+            box_shape{
+                left : 0.0
+                bottom : 0.0
+                right : 0.0
+                top : 0.0
             }
         }
         collision_shape_2{

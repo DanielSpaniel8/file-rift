@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'fire'
 library_item{
@@ -328,11 +328,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 107
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.47851860523223877
-                    y : 0.022222280502319336
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.47851860523223877
+                    blue : 0.022222280502319336
+                    brightness : 0.0
                 }
                 u1 : 50.0
                 u2 : 10
@@ -458,11 +458,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 116
             collision_shape{
-                u0{
-                    w : -25.0
-                    x : 10.0
-                    y : 50.0
-                    z : 150.0
+                box_shape{
+                    left : -25.0
+                    bottom : 10.0
+                    right : 50.0
+                    top : 150.0
                 }
             }
             collision_shape_2{
@@ -642,11 +642,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 111
             collision_shape{
-                u0{
-                    w : -700.0
-                    x : -200.0
-                    y : 2100.0
-                    z : 800.0
+                box_shape{
+                    left : -700.0
+                    bottom : -200.0
+                    right : 2100.0
+                    top : 800.0
                 }
             }
             collision_shape_2{
@@ -706,12 +706,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 1
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 55.0
+                    radius : 55.0
                 }
             }
             collision_shape_2{
@@ -742,12 +742,12 @@ $end$
             component_type : 'PhysicsObject'
             number : 3
             physics_object{
-                u0 : 1
-                u3 : 0.0
-                u4 : 0.0
-                u5 : 400.0
-                u6 : 1
-                u7 : 0.800000011920929
+                enabled : 1
+                ground_friction : 0.0
+                air_friction : 0.0
+                speed : 400.0
+                can_roll : 1
+                bounciness : 0.800000011920929
             }
         }
         component{
@@ -846,11 +846,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 11
             simple_glow{
-                u0{
-                    w : 0.38333335518836975
-                    x : 0.12777778506278992
-                    y : 0.12777787446975708
-                    z : 0.0
+                colour{
+                    red : 0.38333335518836975
+                    green : 0.12777778506278992
+                    blue : 0.12777787446975708
+                    brightness : 0.0
                 }
                 u1 : 90.0
                 u2 : 10

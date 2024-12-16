@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'programs'
 library_item{
@@ -116,12 +116,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 200.0
+                    radius : 200.0
                 }
             }
             collision_shape_2{
@@ -209,12 +209,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 200.0
+                    radius : 200.0
                 }
             }
             collision_shape_2{

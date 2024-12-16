@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'platforms'
 library_item{
@@ -8,12 +8,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -85,11 +85,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 107
             collision_shape{
-                u0{
-                    w : -40.0
-                    x : 0.0
-                    y : 80.0
-                    z : 12.0
+                box_shape{
+                    left : -40.0
+                    bottom : 0.0
+                    right : 80.0
+                    top : 12.0
                 }
             }
             collision_shape_2{
@@ -207,12 +207,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 1
             physics_object{
-                u0 : 0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -322,11 +322,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 107
             collision_shape{
-                u0{
-                    w : -40.0
-                    x : 0.0
-                    y : 80.0
-                    z : 10.0
+                box_shape{
+                    left : -40.0
+                    bottom : 0.0
+                    right : 80.0
+                    top : 10.0
                 }
             }
             collision_shape_2{

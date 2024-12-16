@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4
 
 scl_file_name : 'traps_stuffs'
 library_item{
@@ -361,12 +361,12 @@ $end$
             component_type : 'PhysicsObject'
             number : 107
             physics_object{
-                u0 : 0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -525,11 +525,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 109
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : 0.0
-                    y : 100.0
-                    z : 860.0
+                box_shape{
+                    left : -50.0
+                    bottom : 0.0
+                    right : 100.0
+                    top : 860.0
                 }
             }
         }
