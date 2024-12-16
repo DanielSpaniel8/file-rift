@@ -634,7 +634,7 @@ if rift_mode in ["recode", "both"]:
 
         # --- lex file contents and recode ---
 
-        if True:
+        if not skip_recode:
             recode_lexList(lex_data())
 
             out_path = "./re_out/" + game_file[8:]
