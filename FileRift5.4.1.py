@@ -454,6 +454,7 @@ def recode_lexList(lexList):
                     print('tag not found: "'+lexeme+'"')
                     print('file: '+game_file[8:]+':'+str(line_num))
                     print('block_formats path: '+block_format_path)
+                    print('block_formats: '+str(formats[metalevel]))
                     print('mode: '+mode+' last mode: '+last_mode)
                     quit()
 
