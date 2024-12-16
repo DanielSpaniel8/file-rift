@@ -546,7 +546,7 @@ if rift_mode in ["decode", "both"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.4\n\n"]
+        outLines = ["# rifted with FR v5.4.1\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -665,7 +665,7 @@ if no_decoded != 0:
 if no_recoded != 0:
     results += ("recoded "+str(no_recoded)+"  ")
 if no_skipped != 0:
-    results += ("skipped "+str(no_skipped)+"  ")
+    results += ("skipped "+str(no_skipped))
 
 print(results)
-print("File Rift v5.4")
+print("File Rift v5.4.1")
