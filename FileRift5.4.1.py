@@ -1,5 +1,5 @@
 rift_mode = "recode"  # options: decode, recode, both
-allways_recode = False
+allways_recode = True
 
 import os
 from struct import pack, unpack
