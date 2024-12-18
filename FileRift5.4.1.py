@@ -1,9 +1,11 @@
-rift_mode = "recode"  # options: decode, recode, both, all
+rift_mode = "recode"  # options: decode, recode, both
+allways_recode = False
 
 import os
 from struct import pack, unpack
 import re
 import hashlib
+import subprocess
 
 from block_formats import (
     gdata,
@@ -17,6 +19,7 @@ from block_formats import (
     atlas,
     fnt
 )
+
 
 
 def de_varint():  # decode varints   note: the offset is automatically moved by the length of the varint
@@ -95,7 +98,10 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
     n = "name"
     formNames = ""
     for i in formats:
-        formNames += i[n] + "/"
+        if isinstance(i[n], tuple):
+            formNames += i[n][-1] + "/"
+        else:
+            formNames += i[n] + "/"
 
     if not taghex in form:
         print(
@@ -114,8 +120,6 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
 
     indent = " " * metalevel * 4  # prepare indentation
     if isinstance(form[taghex], tuple):  # backwards compatibility
-        print("tuple tagname")
-        print(form[taghex][-1])
         tagname = form[taghex][-1]
     else:
         tagname = form[taghex]
@@ -174,7 +178,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                     .replace("\\t", "    ")
                 )
                 outLines.append(chunk)
-                outLines.append(f"\n\n$end$\n")
+                outLines.append(f"\n\n$end\n")
                 offsets[metalevel] += pointer
 
             if k[0] == 2:  # bytestring
@@ -190,7 +194,10 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 offsets[metalevel] += pointer
 
         if isinstance(tagname, dict):  # if there are subblocks:
-            outLines.append(indent + tagname["name"] + "{" + "\n")
+            if isinstance(tagname["name"], tuple):
+                outLines.append(indent + tagname["name"][-1] + "{" + "\n")
+            else:
+                outLines.append(indent + tagname["name"] + "{" + "\n")
 
             # push and get new format
             metalevel += 1
@@ -279,7 +286,7 @@ def lex_data():
         # --- handle chunks ---
 
         if lua_mode:
-            if intext[offset - 5 : offset] == "$end$":
+            if intext[offset -5:offset]=="$end$" or intext[offset -4:offset]=="$end":
                 lua_mode = False
                 lexList.append(lexeme[:-6])
                 lexeme = ""
@@ -341,7 +348,7 @@ def import_chunk(match):
         with open("./source/"+filename, "r") as file:
             content = file.read()
         content = content.strip()
-        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end$\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
+        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
         return objstring
     except FileNotFoundError:
         print(" chunk file not found: "+filename)
@@ -398,6 +405,7 @@ def recode_lexList(lexList):
 
     mode = "tag"  # tag, data, comment, chunk, schunk
     last_mode = "tag"
+    last_chunk = b""
 
     comments_list = ["#", "--", "//"]
     chunk_buffer = b""
@@ -434,6 +442,7 @@ def recode_lexList(lexList):
 
                     metalevel -= 1
 
+                    last_mode = mode
                     mode = "tag"
                     continue
 
@@ -447,6 +456,8 @@ def recode_lexList(lexList):
                     print('tag not found: "'+lexeme+'"')
                     print('file: '+game_file[8:]+':'+str(line_num))
                     print('block_formats path: '+block_format_path)
+                    print('block_formats: '+str(formats[metalevel]))
+                    print('mode: '+mode+' last mode: '+last_mode)
                     quit()
 
                 try:
@@ -460,6 +471,7 @@ def recode_lexList(lexList):
                     print(game_file)
                     print(line_num)
 
+                last_mode = mode
                 mode = "data"
 
             case "data":
@@ -471,12 +483,38 @@ def recode_lexList(lexList):
 
                     formats[metalevel + 1] = formats[metalevel][tag]
                     metalevel += 1
+                    last_mode = mode
                     mode = "tag"
                     continue
 
                 elif lexeme == "$":  # lua chunk
+                    last_mode = mode
                     mode = "chunk"
                     continue
+
+                elif lexeme in ["@comp", "@compile"]:
+                    with open("./.luac.in", "wb") as file:
+                        file.write(last_chunk)
+
+                    try:
+                        args = ("./.luac", "-s", "-o", "./.luac.out", "./.luac.in")
+                        popen = subprocess.Popen(args, stdout=subprocess.PIPE)
+                        popen.wait()
+                    except:
+                        print("failed to compile secondary_chunk")
+                        print("this feature only works on linux")
+                        print("defaulting to empty string")
+                        lexeme = ''
+                    else:
+                        compiled_chunk = b""
+                        with open("./.luac.out", "rb") as file:
+                            compiled_chunk = file.read()
+                        compiled_chunk = str(compiled_chunk)
+                        lexeme = compiled_chunk[1:]
+
+
+
+
 
                 # --- get wire type ---
 
@@ -497,7 +535,7 @@ def recode_lexList(lexList):
                             print("missing quote for len type", tag, lexeme, line_num)
                             quit()
 
-                        # --- handle bytestrins
+                        # --- handle bytestrings
 
                         data = lexeme
                         data = bytes(data, "latin1").decode(
@@ -511,11 +549,14 @@ def recode_lexList(lexList):
                     case 5:  # i32
                         outbytes[metalevel] += re_int32(float(lexeme))
 
+                last_mode = mode
                 mode = "tag"
 
             case "chunk":
                 outbytes[metalevel] += re_varint(len(lexeme))
                 outbytes[metalevel] += bytes(lexeme, "latin1")
+                last_chunk = bytes(lexeme, "latin1")
+                last_mode = mode
                 mode = "tag"
 
 no_decoded = 0
@@ -533,7 +574,7 @@ if rift_mode in ["decode", "both"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.4\n\n"]
+        outLines = ["# rifted with FR v5.4.1\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -611,8 +652,14 @@ if rift_mode in ["recode", "both"]:
         hash = hashlib.sha256(bytes(intext, "latin1")).hexdigest()
         manifest_line = game_file+"*"+hash+"\n"
         manifest = []
-        with open("./.manifest", "r") as file:
-            manifest = file.readlines()
+        try:
+            with open("./.manifest", "r") as file:
+                manifest = file.readlines()
+        except FileNotFoundError:
+            open("./.manifest", "w")
+            with open("./.manifest", "r") as file:
+                manifest = file.readlines()
+
 
         file_found = False
         for index, line in enumerate(manifest):  # scan the manifest file for a filename match
@@ -634,7 +681,7 @@ if rift_mode in ["recode", "both"]:
 
         # --- lex file contents and recode ---
 
-        if True:
+        if not skip_recode or allways_recode:
             recode_lexList(lex_data())
 
             out_path = "./re_out/" + game_file[8:]
@@ -652,7 +699,7 @@ if no_decoded != 0:
 if no_recoded != 0:
     results += ("recoded "+str(no_recoded)+"  ")
 if no_skipped != 0:
-    results += ("skipped "+str(no_skipped)+"  ")
+    results += ("skipped "+str(no_skipped))
 
 print(results)
-print("File Rift v5.4")
+print("File Rift v5.4.1")

@@ -1,0 +1,1885 @@
+
+
+-- Powering, Rooting.
+function Math.Square(n)
+    return Math.Pow(n, 2)
+end
+
+function Math.Sqrt(n)
+    return Math.Pow(n, 0.5)
+end
+
+
+function Math.Pow(n, to)
+    lol = n^to
+    
+    lol = tostring(lol) .. " "
+    
+    local result = string.gsub(lol, "(%d+)%.0 ", function(a)
+        return a
+    end)
+    
+    return tonumber(result)
+end
+
+Math.Power = Math.Pow;
+
+-- Rounding
+
+function Math.Floor(x,y)
+    y=y or 1
+    return x - (x%y)
+end
+
+function Math.Ceil(x,y)
+    y=y or 1
+    if x%y==0 then
+        return x
+    else
+        return (x+1)-(x%y)
+    end
+end
+
+Thread = {}
+
+function Thread.Exists(name)
+    if Scene.Find("thr_"..tostring(name)) then
+        return true
+    else
+        return false
+    end
+end
+
+function Thread.New(name, func, arg)
+    name = "thr_" ..tostring(name)
+    while true do
+        Program.Wait(0.0001)
+        if Thread.Exists(name) then
+            if not n then
+                n = 0
+            end
+            n = n + 1
+            name = name..tostring(n)
+        else
+            break
+        end
+    end
+    
+    local thr = Scene.CreateObject("threadObj", name)
+    thr.args = arg
+    thr.nam = name
+    thr.fun = func
+    
+    thr:setAlwaysActive(true)
+    thr:setHidden(false)
+end
+
+Thread.Create = Thread.New
+
+
+function Thread.Terminate(name)
+    if Scene.Find(name) then
+        local thr = Scene.Find(name)
+        thr:setHidden(true)
+        thr:setAlwaysActive(false)
+        thr:destroy()
+        return true -- Successful termination
+    else
+        return nil -- Unsuccessful termination
+    end
+end
+
+
+
+
+
+function padNumber(number, width)
+    return string.format("%0" .. width .. "d", number)
+end
+
+hero = Scene.Find("hero")
+
+print = Game.ShowNotification
+wait = Program.Wait
+
+left_arrow = ""
+right_arrow = ""
+down_arrow = ""
+up_arrow = ""
+backward_arrow = ""
+forward_arrow = ""
+rot_cw = ""
+rot_acw = ""
+scale_up = ""
+scale_down = ""
+
+
+
+Button = {}
+
+
+function Button.New(name, text, func, args, pos, radius)
+
+    local function button_func(args)
+
+        local name, text, func, call_args, pos, radius =
+            args[1], args[2], args[3], args[4],
+            args[5] or Scene.Find("hero"):position()+Vector3.New(0,40),
+            args[6] or 60
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        if call_args ~= nil then
+            func(call_args)
+        else
+            func()
+        end
+
+        bubble:destroy()
+    end
+
+    Thread.New(button_func, {name, text, func, args, pos, radius})
+
+end
+
+function Button.Menu(buttons, pos, radius)
+
+    local function button_func(args)
+
+        local name, text, func, call_args, pos, radius =
+            args[1], args[2], args[3], args[4], args[5], args[6]
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+
+        if func == nil then
+            return
+        end
+
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        _bubble_refresh = true
+        while _bubble_refresh do Program.Wait(0.05) end
+
+        if call_args ~= nil then
+            func(call_args)
+        else
+            func()
+        end
+
+    end
+
+
+
+    _bubble_refresh = false
+    _bubble_list = {}
+
+    for name, details in pairs(buttons) do
+        local text = details[1]
+        if #text == 0 then text = " " end
+        Thread.New("_bb_thr"..name, button_func, {name, text, details[2], details[3], details[4]+pos, radius or 30})
+        _bubble_list [#_bubble_list +1] = name
+    end
+
+    while not _bubble_refresh do Program.Wait(0.05) end
+    _bubble_refresh = false
+
+    
+    for _, n in pairs(_bubble_list) do
+        if Scene.Find("_bb_"..n.."_bubble") ~= nil then
+            HideTextBubble("_bb_"..n)
+        end
+    end
+
+end
+-- library for working with itemvars
+
+IV = {}
+
+function IV.Check(var)
+    Character.AddItem(var)
+    if Character.HasItem(var) then
+        Character.RemoveItem(var)
+        return true
+    end
+    return false
+end
+
+function IV.Get(var)
+    if not Character.HasItem(var) then
+        return 0
+    end
+    return Character.ItemCount(var)
+end
+
+function IV.Set(var, num)
+    v = IV.Get(var)
+    num = Math.Floor(num)
+
+    if v == num then return end
+
+    if v > num then -- subtract
+        for i = 1,v-num do
+            if Character.HasItem(var) then
+                Character.RemoveItem(var)
+            end
+        end
+    end
+
+    if v < num then -- add
+        for i = 1,num-v do
+            Character.AddItem(var)
+        end
+    end
+end
+
+function IV.Inc(var)
+    Character.AddItem(var)
+end
+
+function IV.Dec(var)
+    if Character.HasItem(var) then
+        Character.RemoveItem(var)
+    end
+end
+
+function IV.Add(var, num)
+    IV.Set(var,IV.Get(var)+num)
+end
+
+function IV.Sub(var, num)
+    v=IV.Get(var)
+    if v-num < 0 then
+        IV.Set(var,0)
+    else
+        IV.Set(var,v-num)
+    end
+end
+
+function IV.GetS(var)
+    if not Character.HasItem(var) then
+        return 0
+    end
+    v = Character.ItemCount(var)
+    sign = v%2
+    v = (v-sign) / 2
+    if sign>0 then
+        return 0-v
+    end
+    return v
+end
+
+function IV.SetS(var, num)
+    num = Math.Floor(num)
+    if num==0 then
+        IV.Set(var, 0)
+    end
+    if num>0 then
+        IV.Set(var, num*2)
+    end
+    if num<0 then
+        IV.Set(var, (Math.Abs(num)*2)+1)
+    end
+end
+
+function IV.IncS(var)
+    v = IV.GetS(var)
+    IV.SetS(var, v+1)
+end
+
+function IV.DecS(var)
+    v = IV.GetS(var)
+    if not Character.HasItem(var) then
+        return
+    else
+        IV.SetS(var, v-1)
+    end
+end
+
+function IV.AddS(var, num)
+    IV.SetS(var,IV.GetS(var)+num)
+end
+
+function IV.SubS(var, num)
+    v=IV.GetS(var)
+    IV.SetS(var, v-num)
+end
+
+types = {
+-- items
+"tree",
+"tree2",
+"bush",
+"tree",
+"tree2",
+"deadtree1",
+"deadtree2",
+"grove_gate",
+"grove_hang1",
+"grove_hang2",
+"grove_hang3",
+"grove_hang4",
+"grove_hang5",
+"grove_tree1",
+"grove_tree2",
+"grove_tree3",
+"snowy_tree",
+"lowergrove_tree1",
+"deadtree1",
+"snowy_smalltree",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"crypt_torch",
+"torch_red",
+"torch",
+"shop_torch",
+"snowy_torch2",
+"torch_fire",
+"torchholder",
+"worldsend_torch",
+"woods_torch",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"board",
+"fence",
+"fountain",
+"pot",
+"pot_nocollision",
+"sign_left",
+"sign_right",
+"stonepile",
+"signpost",
+"signpost_blank",
+"gravetorch",
+"pillair",
+"tombstone",
+"tombstone_small",
+"hugerock1",
+"rock1",
+"rock2",
+"smallrock1",
+"icicles",
+"icicles1",
+"snowy_arc",
+"statue_holder",
+"pillair1",
+"pole1",
+"pole2",
+"polewall",
+"worldsend_pillair",
+"iapstoremodel",
+"iapstoretrigger",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"house_big",
+"house_small",
+"florennum_house1",
+"florennum_house2",
+"florennum_house3",
+"florennum_housedoor",
+"florennum_housedoor_open",
+"florennum_lock",
+"florennum_lockdoor",
+"florennum_tower",
+"door_bars",
+"castle_lock",
+"castle_lockdoor",
+"woodendoor",
+"woodendoor_frame",
+"stonepillairs",
+"stonepillairs2",
+"stonepillairs3",
+"stonepillairs4",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"iselon_shard_1",
+"iselon_shard_2",
+"iselon_shard_3",
+"iselon_shard_4",
+"item_brasssword",
+"item_broadsword",
+"item_firetrinket",
+"item_healingpotion",
+"item_icetrinket",
+"item_ironsword",
+"item_broadsword",
+"item_firetrinket",
+"item_healingpotion",
+"item_icetrinket",
+"item_ironsword",
+"item_key_yellow",
+"item_key_yellow_shop",
+"item_legendsword",
+"item_magicarmor",
+"item_magicsword",
+"item_needle",
+"item_platearmor",
+"item_shadowtrinket",
+"item_thorn",
+"manabottle",
+"manabottle_big",
+"nugget_health",
+"nugget_mana",
+"powershard",
+"sshard_blue",
+"sshard_red",
+"sshard_yellow",
+"xp_sack",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"coolbridge",
+"dropping_woodplatform",
+"laituri2",
+"laituri_mirror",
+"stonebridge",
+"stairs_left",
+"stairs_right",
+"web",
+"whiteplatform",
+"flying_platform",
+"following_platform",
+"dropping_plat0_d2return",
+"dropping_platform0",
+"platformwood0",
+"platformwood1",
+"swingplatform2",
+"swingplatform3",
+"swingplatform6",
+"wheel1",
+"dropping_iceblock",
+"flying_platform",
+"dropping_ground",
+"elevator1",
+"ground",
+"hangingplatofm",
+"laituri",
+"web_trampoline",
+"dropping_ground",
+"stomping_ground_damage",
+"stomping_ground",
+"grove_platform1",
+"grove_pole1",
+"grove_pole2",
+"grove_torch",
+"whiteblock",
+"whitepillair",
+"lowergrove_torch",
+"rotating ground",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"grabbable",
+"pressureplate",
+"pressureplate_frame",
+"spikes",
+"spikes_continuous",
+"spikes_manual",
+"spikes_up",
+"swingingaxe",
+"chest_left",
+"chest_right",
+"portal",
+"ballofsnow",
+"ballofsnow_10s",
+"ballofsnow_20s_1000_07",
+"ballofsnow_20s_1500",
+"ballofsnow_5s",
+"dropping_icicle",
+"pushingblock",
+"keybox",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"critter_konna_green",
+"bat",
+"bat_blue_strike",
+"bat_strike",
+"beetle_wasteland",
+"bladeblob",
+"carniplant",
+"cavelurker",
+"club_projectile",
+"corrupt_snort",
+"darkbandit",
+"darkbandit_thrower",
+"dire_cavelurker",
+"elemental_ice",
+"fire",
+"firebat",
+"firebeetle",
+"fireblock",
+"firegolem",
+"generic_shadowform",
+"grasswalker",
+"grasswalker_wasteland",
+"grover_spikes",
+"icedwarf",
+"knight_florennum",
+"lava_monster",
+"magmamonster",
+"monsterbush",
+"piikkipuska",
+"rolling_spirit",
+"shadowblob",
+"shadowblob_fire_little",
+"shadowblob_little",
+"shadowspinner",
+"skeleton_lord",
+"skeleton_mage",
+"skeleton_mage_frost",
+"skeleton_sword",
+"skelly_dw",
+"skelly_sword",
+"snart",
+"snart_projectile",
+"snort",
+"snowbat",
+"snowbug",
+"spikebouncy",
+"spikebouncy_follow",
+"spikebouncy_roam",
+"spikey_spikes",
+"sprit",
+"stonegolem",
+"tainted_knight",
+"woodblock",
+"woodknight",
+"woodknight_mace",
+"kakkapiikkipy",
+"dimension_monster",
+"corrupted_bat",
+"corrupted_bug",
+"corrupted_skeleton",
+"dragonkin_1seeker",
+"dragonkin_fireball",
+"dragonkin_melee",
+"dragonkin_spell_cast",
+"dragonkin_statue_scripted",
+"dragonkin_sword",
+"golden_knight",
+"charging_golem",
+"bandit",
+"piikkikonna",
+"piikkikonna_spike",
+"varibandit_dagger",
+"varibandit_thrower",
+"varibandit_weapon_dagger",
+"variknight_shield",
+"variknight_weapon_sword",
+"varimage",
+"varimage_magic_bolt",
+"varimage_magic_bolt_ballistic",
+"varimage_red",
+"varimage_spell_cast",
+"boss_dead",
+"boss_death_explosion",
+"boss_death_explosion_nodmg",
+"skeleton_bolt_ballistic",
+"skeleton_bolt_frost",
+"skeleton_lord_sword",
+"skeleton_spell_cast",
+"skeleton_spell_cast_frost",
+"skelly_weapon_sword",
+"summonBlast",
+"summon_skeleton",
+"summonedSkeleton",
+"woodkeep_boss2",
+"",
+"",
+"",
+"",
+"",
+"",
+"dwarf",
+"king",
+"npc_healer",
+"npc_healer_cast",
+"npc_male1_standing",
+"npc_oldman",
+"npc_shopkeeper",
+"walkingmonsteroldman",
+"npc_male_stopping_template",
+"npc_male_walking_template",
+"npc_sitting_template",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"gm_0",
+"gm_0",
+"gm_1",
+"gm_2",
+"gm_3",
+"gm_4",
+"gm_5",
+"gm_6",
+"gm_7",
+"gm_8",
+"gm_9",
+"gm_10",
+"",
+}
+
+
+
+
+area_codes = {
+["beyond_graveyard"] ="bg",
+["credits"] ="cr",
+["fire_part1"] ="Fa",
+["fire_part2"] ="Fb",
+["fire_part3"] ="Fc",
+["fire_part31"] ="Ff",
+["fire_part4"] ="Fd",
+["fire_part5"] ="Fe",
+["fire_partBoss"] ="FB",
+["florennum_cave1"] ="fC",
+["florennum_healerhouse"] ="fH",
+["florennum_jail_boss"] ="jB",
+["florennum_jail_part1"] ="ja",
+["florennum_jail_part2"] ="jb",
+["florennum_part1"] ="fa",
+["florennum_shop"] ="fS",
+["florennum_tower1"] ="fb",
+["florennum_tower2"] ="fc",
+["florennum_towertop"] ="fT",
+["florennum_wall1"] ="fW",
+["forest_cave0"] ="ec",
+["forest_cave1"] ="ed",
+["forest_cave2"] ="ee",
+["forest_cave3"] ="ef",
+["forest_cave4"] ="eg",
+["forest_cave5"] ="eh",
+["forest_part1"] ="ea",
+["forest_part2"] ="eb",
+["grass_house"] ="kH",
+["grass_part1"] ="ka",
+["grass_part2"] ="kb",
+["grass_part3"] ="kc",
+["grove_crypt1"] ="GC",
+["grove_graveyard"] ="GG",
+["grove_part1"] ="Ga",
+["grove_part2"] ="Gb",
+["grove_sacred"] ="GS",
+["hero"] ="he",
+["icecastle_part1"] ="ia",
+["icecastle_part11"] ="if",
+["icecastle_part2"] ="ib",
+["icecastle_part3"] ="ic",
+["icecastle_part4"] ="id",
+["icecastle_part5"] ="ie",
+["icecastle_partBoss"] ="iB",
+["lowergrove_part1"] ="GL",
+["menu"] ="me",
+["plains_cave0"] ="ph",
+["plains_caveFirst"] ="pi",
+["plains_house1"] ="pH",
+["plains_part1"] ="pa",
+["plains_part2"] ="pb",
+["plains_part3"] ="pc",
+["plains_part4"] ="pd",
+["plains_tower1"] ="pT",
+["plains_woodkeep"] ="pe",
+["plains_woodkeep2"] ="pf",
+["plains_woodkeep3"] ="pg",
+["plains_woodkeep_cellar"] ="pC",
+["plains_woodkeep_entrance"] ="pE",
+["snowy_cave1"] ="se",
+["snowy_cave2"] ="sf",
+["snowy_part1"] ="sa",
+["snowy_part2"] ="sb",
+["snowy_part3"] ="sc",
+["snowy_part4"] ="sd",
+["thecave_crypt1"] ="Cs",
+["thecave_crypt2"] ="Ct",
+["thecave_part1"] ="Ca",
+["thecave_part11"] ="Cb",
+["thecave_part12"] ="Cc",
+["thecave_part121"] ="Cd",
+["thecave_part13"] ="Ce",
+["thecave_part131"] ="Cf",
+["thecave_part132"] ="Cg",
+["thecave_part14"] ="Ch",
+["thecave_part141"] ="Ci",
+["thecave_part1411"] ="Cj",
+["thecave_part142"] ="Ck",
+["thecave_part1421"] ="Cl",
+["thecave_part15"] ="Cm",
+["thecave_part2"] ="Cn",
+["thecave_part21"] ="Co",
+["thecave_part22"] ="Cp",
+["thecave_part23"] ="Cq",
+["thecave_part24"] ="Cr",
+["theend"] ="te",
+["town_elderhouse"] ="ce",
+["town_healerhouse"] ="cH",
+["town_herohouse"] ="ch",
+["town_part1"] ="ca",
+["town_secrethouse"] ="cS",
+["town_shop"] ="cs",
+["town_woods1"] ="cF",
+["town_woods_end"] ="cE",
+["wasteland_cave"] ="wC",
+["wasteland_cave1"] ="we",
+["wasteland_cave_snowy"] ="wf",
+["wasteland_house1"] ="wh",
+["wasteland_part1"] ="wa",
+["wasteland_part2"] ="wb",
+["wasteland_part3"] ="wc",
+["wasteland_part4"] ="wd",
+["wasteland_town"] ="wT",
+["wasteland_town_healerhouse"] ="wH",
+["wasteland_town_secrethouse"] ="wS",
+["wasteland_town_shop"] ="ws",
+["worldsend_part1"] ="Wa",
+["worldsend_part2"] ="Wb",
+["worldsend_part3"] ="Wc",
+["worldsend_part4"] ="Wd",
+["worldsend_part5"] ="We",
+["worldsend_part6"] ="Wf",
+["worldsend_part7"] ="Wg",
+["worldsend_part8"] ="Wh",
+["worldsend_part9"] ="Wi",
+
+}
+function finder()
+
+    local function up()
+        finder_center = finder_center + Vector3.New(  0, 30)
+    end
+    local function dn()
+        finder_center = finder_center + Vector3.New(  0,-30)
+    end
+    local function lf()
+        finder_center = finder_center + Vector3.New(-30,  0)
+    end
+    local function rt()
+        finder_center = finder_center + Vector3.New( 30,  0)
+    end
+
+    local function delete(i)
+
+        local name = pad(i)
+        local obj = Scene.Find(name)
+
+        if obj ~= nil then
+
+            obj:destroy()
+
+            if i == load_count then
+                IV.Set(load_code..pad(i).."t", 0)
+                load_count = load_count -1
+            else
+                for j = i, load_count do
+                    suffixes = {"t", "x", "y", "z", "r", "s", "o"}
+                    for _,v in ipairs(suffixes) do
+                        IV.Set(
+                            load_code..pad(j)..v,
+                            IV.Get(load_code..pad(j+1)..v)
+                        )
+                    end
+                end
+            end
+
+            load()
+
+        end
+
+    end
+
+    local function back()
+        finder_exit = true
+        mason_menu()
+    end
+    local function exit()
+        finder_exit = true
+        Game.SetCinematicMode(false, true)
+        Camera.ResetFocus()
+        mason_busy = false
+    end
+
+    local function inrange(v1, v2, radius)
+        a=Math.Abs
+        return
+        a(v1:x() - v2:x()) < radius
+        and
+        a(v1:y() - v2:y()) < radius
+    end
+
+
+    finder_center = hero:position()+Vector3.New(0, 40)
+    finder_exit = false
+
+    if IV.Get(load_code.."001t") == 0 then
+        exit()
+        Game.ShowNotification("all objects deleted")
+    end
+
+    while not finder_exit do
+
+        if IV.Get(load_code.."001t") == 0 then
+            exit()
+            Game.ShowNotification("all objects deleted")
+        end
+
+        Camera.FocusAtPoint(finder_center)
+
+        local buttons = {
+
+            ["up"] = {up_arrow,       up,   nil, Vector3.New( 320,-200)},
+            ["dn"] = {down_arrow,     dn,   nil, Vector3.New( 400,-200)},
+            ["lf"] = {left_arrow,     lf,   nil, Vector3.New( 320,-130)},
+            ["rt"] = {right_arrow,    rt,   nil, Vector3.New( 400,-130)},
+
+            ["back"] = {"Back",       back, nil, Vector3.New( -300,  40)},
+            ["exit"] = {"X",          exit, nil, Vector3.New( -300, -40)},
+
+        }
+
+        for i = 1,load_count do
+            local name = pad(i)
+            local ivn = load_code..name
+            local type = types[IV.Get(ivn.."t")]
+            local obj = Scene.Find(name)
+            if obj ~= nil and inrange(obj:position(), finder_center+Vector3.New(0,-50), 200) then
+                buttons["del"..i] = {name.."\n"..type,delete,i,obj:position() - finder_center}
+            end
+        end
+
+        Program.Wait(0.01)
+        Button.Menu(buttons, finder_center, 30)
+        Program.Wait(0.05)
+
+    end
+
+end
+function type_select(category)
+
+    if category == 1 then
+        type_list_min = 0
+        type_list_max = 6
+    elseif category == 2 then
+        type_list_min = 7
+        type_list_max = 8
+    elseif category == 3 then
+        type_list_min = 9
+        type_list_max = 9
+    end
+
+    type_list = type_list_min
+    type_num = 1
+
+
+    local function next_list()
+        if type_list < type_list_max then
+            type_list = type_list +1
+        else
+            type_list = type_list_min
+        end
+    end
+    local function prev_list()
+        if type_list > type_list_min then
+            type_list = type_list -1
+        else
+            type_list = type_list_max
+        end
+    end
+
+
+    local function next_num()
+        if types[(type_list*100) + type_num] == "" then
+            type_num = 1
+        else
+            type_num = type_num +1
+        end
+    end
+    local function prev_num()
+        if type_num > 1 then
+            type_num = type_num -1
+        else
+            type_num = 99
+            while types[(type_list*100) + type_num] == "" do
+                type_num = type_num -1
+            end
+        end
+    end
+
+    local function select()
+        type_exit = true
+        add_menu((type_list*100) + type_num)
+    end
+    local function back()
+        type_exit = true
+        mason_menu()
+    end
+    local function exit()
+        type_exit = true
+        Game.SetCinematicMode(false, true)
+        Camera.ResetFocus()
+        mason_busy = false
+    end
+
+    menu_pos = hero:position()
+    type_exit = false
+
+    while not type_exit do
+
+        type_obj = (type_list*100) + type_num
+
+        local buttons = {
+
+            ["pl"] = {up_arrow,   prev_list, nil, Vector3.New(-100,  70)},
+            ["nl"] = {down_arrow, next_list, nil, Vector3.New( 100,  70)},
+            ["pn"] = {left_arrow, prev_num,  nil, Vector3.New(-100, -70)},
+            ["nn"] = {right_arrow,next_num,  nil, Vector3.New( 100, -70)},
+
+            ["sel" ] = {"Select", select,    nil, Vector3.New( 220,  60)},
+            ["back"] = {"Back",   back,      nil, Vector3.New( 220, -60)},
+            ["exit"] = {"X",      exit,      nil, Vector3.New(-240,   0)},
+
+
+            ["type"] = {types[type_obj], nil, nil, Vector3.New(0, -150)},
+
+        }
+
+        typeph = Scene.CreateObject(types[type_obj], "typeph")
+        CollisionShape.DisableAll(typeph)
+        Thread.New("phys_dis", disable_physics, typeph)
+        typeph:setPosition(menu_pos)
+
+        Button.Menu(buttons, menu_pos, 50)
+        typeph:destroy()
+        Program.Wait(0.1)
+    end
+
+
+
+end
+function add_menu(type)
+
+    addph = Scene.CreateObject(types[type], "addph")
+    addph:setPosition(menu_pos)
+    CollisionShape.DisableAll(addph)
+    PhysicsObject.SetEnabled(addph, false)
+
+
+    local function up()
+        addph:setPosition(addph:position()+Vector3.New(0, 5^step))
+    end
+    local function dn()
+        addph:setPosition(addph:position()+Vector3.New(0,-5^step))
+    end
+    local function lt()
+        addph:setPosition(addph:position()+Vector3.New(-5^step))
+    end
+    local function rt()
+        addph:setPosition(addph:position()+Vector3.New( 5^step))
+    end
+    local function fd()
+        addph:setPosition(addph:position()+Vector3.New(0,0, 5^step))
+    end
+    local function bd()
+        addph:setPosition(addph:position()+Vector3.New(0,0,-5^step))
+    end
+
+    local function cw()
+        addph:setRotation(addph:rotation()+ 5^step)
+    end
+    local function aw()
+        addph:setRotation(addph:rotation()+-5^step)
+    end
+
+    local function br()
+        addph:setScaling(addph:scaling()+( 5^step)/25)
+    end
+    local function sr()
+        addph:setScaling(addph:scaling()+(-5^step)/25)
+    end
+
+
+    local function jl()
+        if new_obj ~= nil then
+            addph:setPosition(new_obj:position())
+        end
+    end
+    local function rs()
+        addph:setScaling(1)
+        addph:setRotation(0)
+    end
+
+    local function stepup()
+        if step < 5 then
+            step = step +1
+        end
+    end
+    local function stepdn()
+        if step > 0 then
+            step = step -1
+        end
+    end
+    local function steprs()
+        step = 2
+    end
+
+    local function more()
+        add_screen = 2
+    end
+    local function main()
+        add_screen = 1
+    end
+
+    local function coll_toggle()
+        add_coll = not add_coll
+    end
+    local function phys_toggle()
+        add_phys = not add_phys
+    end
+    local function actv_toggle()
+        add_actv = not add_actv
+    end
+
+
+    local function place()
+        load_count = load_count +1
+        n = pad(load_count)
+        ivn = load_code..n
+
+        new_obj = Scene.CreateObject(types[type], ""..n)
+        new_obj:setPosition(addph:position())
+        new_obj:setRotation(addph:rotation())
+        new_obj:setScaling (addph:scaling ())
+
+        Thread.New("phys_dis", disable_physics, new_obj)
+        CollisionShape.DisableAll(new_obj)
+
+        IV.Set (ivn.."t", type)
+        IV.SetS(ivn.."x", new_obj:position():x())
+        IV.SetS(ivn.."y", new_obj:position():y())
+        IV.SetS(ivn.."z", new_obj:position():z())
+        IV.SetS(ivn.."r", new_obj:rotation())
+        IV.SetS(ivn.."s", new_obj:scaling ())
+        IV.Set (ivn.."o", 0)
+    end
+
+    local function back()
+        add_exit = true
+        addph:destroy()
+        mason_menu()
+    end
+
+    local function exit()
+        add_exit = true
+        addph:destroy()
+        Game.SetCinematicMode(false, true)
+        Camera.ResetFocus()
+        mason_busy = false
+    end
+
+    step = 2
+    add_exit = false
+    add_coll = true
+    add_phys = true
+    add_actv = false
+
+    while not add_exit do
+
+        coords_string = 
+            "x:"..Math.Floor(addph:position():x(), 0.1).."\n"..
+            "y:"..Math.Floor(addph:position():y(), 0.1).."\n"..
+            "z:"..Math.Floor(addph:position():z(), 0.1).."\n"
+
+        rotscale_string =
+            "r:"..Math.Floor(addph:rotation(), 0.1 ).."\n"..
+            "s:"..Math.Floor(addph:scaling (), 0.01).."\n"
+
+
+        if add_screen == 1 then
+            local buttons = {
+
+                ["up"] = {up_arrow,       up, nil, Vector3.New( 320,-200)},
+                ["dn"] = {down_arrow,     dn, nil, Vector3.New( 400,-200)},
+                ["lt"] = {left_arrow,     lt, nil, Vector3.New( 320,-130)},
+                ["rt"] = {right_arrow,    rt, nil, Vector3.New( 400,-130)},
+                ["fd"] = {forward_arrow,  fd, nil, Vector3.New( 320, -60)},
+                ["bd"] = {backward_arrow, bd, nil, Vector3.New( 400, -60)},
+
+                ["cw"] = {rot_cw,         cw, nil, Vector3.New( 400,  40)},
+                ["aw"] = {rot_acw,        aw, nil, Vector3.New( 320,  40)},
+                ["br"] = {scale_up,       br, nil, Vector3.New( 400, 100)},
+                ["sr"] = {scale_down,     sr, nil, Vector3.New( 320, 100)},
+
+                ["su"] = {"+",     stepup,    nil, Vector3.New( -40,  90)},
+                ["sd"] = {"-",     stepdn,    nil, Vector3.New(-120,  90)},
+                ["mo"] = {"more",  more,      nil, Vector3.New(  40,  90)},
+                ["pl"] = {"Place", place,     nil, Vector3.New(-400,-180)},
+                ["bk"] = {"Back",  back,      nil, Vector3.New(-400, -80)},
+                ["ex"] = {"Exit",  exit,      nil, Vector3.New(-400, -30)},
+
+                ["step"]   = {step.." Step", steprs, nil, Vector3.New(-200,  90)},
+                ["coords"] = {coords_string, jl,     nil, Vector3.New(-300,  50)},
+                ["locrot"] = {rotscale_string, rs,   nil, Vector3.New(-400,  75)},
+
+            }
+        elseif add_screen == 2 then
+            local buttons = {
+                ["disp"] = {
+                    "Collisions:\n"..tostring(add_coll).."\n"..
+                    "Physics:\n"..tostring(add_phys).."\n"..
+                    "Allways active:\n"..tostring(add_actv),
+                    nil, nil, Vector3.New(-400, 50)},
+                ["coll"] = {"Toggle Collisions",     coll_toggle, nil, Vector3.New(-300,  50)},
+                ["phys"] = {"Toggle Physics",        phys_toggle, nil, Vector3.New(-300, -20)},
+                ["actv"] = {"Toggle Allways Active", actv_toggle, nil, Vector3.New(-300, -90)},
+                ["back"] = {"Back",                  main,        nil, Vector3.New(-400, -50)},
+                ["exit"] = {"Exit",                  exit,        nil, Vector3.New(-400,-120)},
+            }
+        end
+
+
+        Program.Wait(0.01)
+        Camera.FocusAtPoint(addph:position(), Rectangle.New(350, 350, 350, 350))
+        Button.Menu(buttons, addph:position(), 30)
+        Program.Wait(0.01)
+
+    end
+
+
+end
+function mason_menu()
+
+    Camera.FocusAtPoint(hero:position())
+    Game.SetCinematicMode(true, false)
+
+    local function exit()
+        Game.SetCinematicMode(false, true)
+        Camera.ResetFocus()
+        mason_busy = false
+    end
+    local function finder_menu()
+        return
+    end
+
+    local buttons = {
+
+        ["obj"] = {"Objects",      type_select, 1, Vector3.New(200, 80)},
+        ["msh"] = {"Entities",     type_select, 2, Vector3.New(200,  0)},
+        ["ent"] = {"GroundMeshes", type_select, 3, Vector3.New(200,-80)},
+
+        ["set"] = {"Settings", settings,      nil, Vector3.New(-200, 40)},
+        ["fnd"] = {"Finder",   finder,        nil, Vector3.New(-200,-40)},
+        ["cls"] = {"Close",    exit,          nil, Vector3.New(0,  -100)},
+
+    }
+
+
+    Button.Menu(buttons, hero:position(), 50)
+
+
+
+end
+function trigger()
+
+    ShowTextBubble("test", Scene.Find("hero"):position(), "Hi")
+    local bubble = ShowTextBubble("trigger", hero:position(), "Mason")
+    TextBubble.SetTouchHandlingEnabled(bubble, true)
+    Touchable.SetTouchRadius(bubble, 40)
+
+    local offset = Vector3.New(0,45)
+
+    while not TextBubble.IsTextFinished(bubble) do
+        Program.Wait(0.008)
+        bubble:setPosition(hero:position() + offset)
+    end
+    HideTextBubble("trigger")
+
+    mason_menu()
+
+end
+function disable_physics(obj)
+    PhysicsObject.SetEnabled(obj, false)
+end
+
+
+function load()
+
+    load_busy = true
+
+    load_list = {}
+    load_count = 0
+
+    load_area = Game.CurrentLevelName()
+    load_code = area_codes[load_area]
+
+    deleted = 0
+    for i = 1,999 do
+        local n = pad(i)
+        if Scene.Find(""..n) ~= nil then
+            deleted = deleted +1
+            Scene.Find(""..n):destroy()
+        end
+    end
+    while Scene.Find(pad(deleted)) ~= nil do
+        Program.Wait(0.002)
+    end
+
+    for i = 1,999 do
+
+        local n = pad(i)
+        local ivn = load_code..n
+
+        if Character.HasItem(ivn.."t") then
+
+            local t = IV.Get (ivn.."t")
+            local x = IV.GetS(ivn.."x")
+            local y = IV.GetS(ivn.."y")
+            local z = IV.GetS(ivn.."z")
+            local r = IV.GetS(ivn.."r")
+            local s = IV.GetS(ivn.."s")
+            local o = IV.Get (ivn.."o")
+
+            load_list[#load_list +1] = {t,x,y,z,r,s,o}
+
+            load_count = load_count +1
+
+            new_type = types[t]
+            new_obj = Scene.CreateObject(new_type, ""..n)
+
+            new_obj:setPosition(Vector3.New(x,y,z))
+            new_obj:setRotation(r)
+            new_obj:setScaling(s)
+
+            Thread.New("phys_dis", disable_physics, new_obj)
+
+        end
+
+    end
+
+    load_busy = false
+
+end
+
+
+
+load()
+
+
+
+while true do
+
+    trigger()
+
+    mason_busy = true
+    load_busy = false
+
+    while mason_busy do Program.Wait(0.1) end
+
+end
+
