@@ -1,3 +1,5 @@
+![fr_logo](fileriftlogo0.png)
+
 ## Overview
 File Rift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These files include:
     -`*.scene`: level data
@@ -94,6 +96,7 @@ file >> /source/dragons/fire.txt:
 ```
 
 - `$lua`
+
 `$lua` is the same as the `$source`, but adds a comment with the sourced filename. I usually use it in Lua chunks, hence the name. It doesn't actually have to be used for Lua though.
 ```
 file >> /re_in/dash_mod.scl:
@@ -112,6 +115,7 @@ Scene.Find("hero"):setVelocity(v)
 
      >> recode output:
         main_chunk : $
+-- dash.scl
 Scene.Find("hero"):setVelocity(v)
 ...
         $end
@@ -152,4 +156,4 @@ object{
 
 Type is the type of object, or machine name.
 Ident is a custom identifier, every object's identifier should be unique.
-The positions, rotation and scale can be written as ints or floats. The rotation is not 0-360, it seems to be 0-6. It aslo works in the opposite direction from what you'd expect (positive values = anti-clockwise).
+The positions, rotation and scale can be written as ints or floats. The rotation is not 0-360, it seems to be 0-6. It also works in the opposite direction from what you'd expect (positive values = anti-clockwise).
