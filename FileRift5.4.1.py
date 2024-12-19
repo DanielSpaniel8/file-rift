@@ -1,10 +1,11 @@
-rift_mode = "recode"  # options: decode, recode, both
-allways_recode = True
+rift_mode = "decode"  # options: decode, recode, both
+allways_recode = False
 
 import os
 from struct import pack, unpack
 import re
 import hashlib
+import subprocess
 
 from block_formats import (
     gdata,
@@ -177,7 +178,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                     .replace("\\t", "    ")
                 )
                 outLines.append(chunk)
-                outLines.append(f"\n\n$end$\n")
+                outLines.append(f"\n\n$end\n")
                 offsets[metalevel] += pointer
 
             if k[0] == 2:  # bytestring
@@ -285,7 +286,7 @@ def lex_data():
         # --- handle chunks ---
 
         if lua_mode:
-            if intext[offset - 5 : offset] == "$end$":
+            if intext[offset -5:offset]=="$end$" or intext[offset -4:offset]=="$end":
                 lua_mode = False
                 lexList.append(lexeme[:-6])
                 lexeme = ""
@@ -347,7 +348,7 @@ def import_chunk(match):
         with open("./source/"+filename, "r") as file:
             content = file.read()
         content = content.strip()
-        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end$\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
+        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
         return objstring
     except FileNotFoundError:
         print(" chunk file not found: "+filename)
@@ -404,6 +405,7 @@ def recode_lexList(lexList):
 
     mode = "tag"  # tag, data, comment, chunk, schunk
     last_mode = "tag"
+    last_chunk = b""
 
     comments_list = ["#", "--", "//"]
     chunk_buffer = b""
@@ -490,6 +492,30 @@ def recode_lexList(lexList):
                     mode = "chunk"
                     continue
 
+                elif lexeme in ["@comp", "@compile"]:
+                    with open("./.luac.in", "wb") as file:
+                        file.write(last_chunk)
+
+                    try:
+                        args = ("./.luac", "-s", "-o", "./.luac.out", "./.luac.in")
+                        popen = subprocess.Popen(args, stdout=subprocess.PIPE)
+                        popen.wait()
+                    except:
+                        print("failed to compile secondary_chunk")
+                        print("this feature only works on linux")
+                        print("defaulting to empty string")
+                        lexeme = ''
+                    else:
+                        compiled_chunk = b""
+                        with open("./.luac.out", "rb") as file:
+                            compiled_chunk = file.read()
+                        compiled_chunk = str(compiled_chunk)
+                        lexeme = compiled_chunk[1:]
+
+
+
+
+
                 # --- get wire type ---
 
                 tagnumber = int(tag, base=16)
@@ -509,7 +535,7 @@ def recode_lexList(lexList):
                             print("missing quote for len type", tag, lexeme, line_num)
                             quit()
 
-                        # --- handle bytestrins
+                        # --- handle bytestrings
 
                         data = lexeme
                         data = bytes(data, "latin1").decode(
@@ -529,6 +555,7 @@ def recode_lexList(lexList):
             case "chunk":
                 outbytes[metalevel] += re_varint(len(lexeme))
                 outbytes[metalevel] += bytes(lexeme, "latin1")
+                last_chunk = bytes(lexeme, "latin1")
                 last_mode = mode
                 mode = "tag"
 
