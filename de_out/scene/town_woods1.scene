@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 object{
     name : 'Template 1'
@@ -9265,11 +9265,11 @@ object{
         component_type : 'CollisionShape'
         number : 108
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 350.0
-                z : 800.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 350.0
+                top : 800.0
             }
         }
         collision_shape_2{
@@ -9284,7 +9284,7 @@ if target:identifier() == "hero" then
     splash:setPosition(target:position() + Vector3.New(0,-50,0));
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xd0\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal splash = Scene.CreateObject("watersplash_townwoods", "splash");\r\n\tsplash:setPosition(target:position() + Vector3.New(0,-50,0));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\x16\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01A\x01\x00\x9c\x80\x80\x01\xcb\x80A\x01K\xc1\xc1\x00\\\x81\x00\x01\x85\x01\x02\x00\x86AB\x03\xc1\x81\x02\x00\x01\xc2\x02\x00A\x82\x02\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x16\x00\x00\x00watersplash_townwoods\x00\x04\x07\x00\x00\x00splash\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00I\xc0\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00splash\x00\n\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
             }
             z : 1
@@ -10067,11 +10067,11 @@ object{
         component_type : 'UtilityShape'
         number : 103
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 600.0
-                z : 800.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 600.0
+                top : 800.0
             }
         }
     }
@@ -10451,11 +10451,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{
@@ -10497,11 +10497,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{
@@ -10543,11 +10543,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -100.0
-                x : -200.0
-                y : 200.0
-                z : 350.0
+            box_shape{
+                left : -100.0
+                bottom : -200.0
+                right : 200.0
+                top : 350.0
             }
         }
         collision_shape_2{
@@ -10678,7 +10678,7 @@ local self = ...;
 
 self["texts"] ={"While in the air, press the jump button again to perform a double jump."}
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00p\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"While in the air, press the jump button again to perform a double jump."}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04H\x00\x00\x00While in the air, press the jump button again to perform a double jump.\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
             }
             u1 : 1
@@ -10742,7 +10742,7 @@ local self = ...;
 
 self["texts"] ={"Hold the jump button down longer to jump higher."}
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00Y\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"Hold the jump button down longer to jump higher."}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x041\x00\x00\x00Hold the jump button down longer to jump higher.\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
             }
             u1 : 1

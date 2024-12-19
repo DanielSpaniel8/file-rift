@@ -1,4 +1,4 @@
-rift_mode = "recode"  # options: decode, recode, both
+rift_mode = "decode"  # options: decode, recode, both
 allways_recode = False
 
 import os

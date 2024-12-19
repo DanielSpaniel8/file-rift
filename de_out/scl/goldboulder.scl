@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'goldboulder'
 library_item{
@@ -8,12 +8,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 1
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 27.0
+                    radius : 27.0
                 }
             }
             collision_shape_2{
@@ -27,7 +27,7 @@ library_item{
 
 
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x03\x00\x00\x00\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x01\x00\x00\x00\x1e\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 z : 1
@@ -41,12 +41,12 @@ $end$
             component_type : 'PhysicsObject'
             number : 3
             physics_object{
-                u0 : 1
-                u3 : 80.0
-                u4 : 0.0
-                u5 : 500.0
-                u6 : 1
-                u7 : 0.30000001192092896
+                enabled : 1
+                ground_friction : 80.0
+                air_friction : 0.0
+                speed : 500.0
+                can_roll : 1
+                bounciness : 0.30000001192092896
             }
         }
         component{
@@ -60,7 +60,7 @@ local self = ...;
 Game.Flash();
                                   
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x00\x00\x00local self = ...;\r\n\r\nProperties.SetProperty(self, "questitem", "true")\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00SetProperty\x00\x04\n\x00\x00\x00questitem\x00\x04\x05\x00\x00\x00true\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -155,11 +155,11 @@ $end$
             component_type : 'SimpleGlow'
             number : 11
             simple_glow{
-                u0{
-                    w : 0.6222222447395325
-                    x : 0.5555555820465088
-                    y : 0.23333337903022766
-                    z : 0.5
+                colour{
+                    red : 0.6222222447395325
+                    green : 0.5555555820465088
+                    blue : 0.23333337903022766
+                    brightness : 0.5
                 }
                 u1 : 50.0
                 u2 : 10
@@ -204,12 +204,12 @@ $end$
             component_type : 'CollisionShape'
             number : 105
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -253,7 +253,7 @@ while true do
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb8\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tProgram.Wait(0.2);\r\n\r\n\tif self:velocity():length() > 250 then\r\n\t\tDamage.SetActive(self, true);\r\n\telse\r\n\t\tDamage.SetActive(self, false);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x18\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\\x80\x00\x01K\x00\xc1\x00\\\x80\x00\x01\x18@\x80\x82\x16@\x01\x80E\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x80\x00\\@\x80\x01\x16\xc0\xfb\x7fE\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x00\x00\\@\x80\x01\x16@\xfa\x7f\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\t\x00\x00\x00velocity\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00@o@\x04\x07\x00\x00\x00Damage\x00\x04\n\x00\x00\x00SetActive\x00\x00\x00\x00\x00\x18\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
                 }
                 u1 : 1

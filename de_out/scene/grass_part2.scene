@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 object{
     identifier : 'Background'
@@ -6594,11 +6594,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -6609,7 +6609,7 @@ object{
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -7061,11 +7061,11 @@ object{
         component_type : 'CollisionShape'
         number : 108
         collision_shape{
-            u0{
-                w : -500.0
-                x : -600.0
-                y : 1000.0
-                z : 1200.0
+            box_shape{
+                left : -500.0
+                bottom : -600.0
+                right : 1000.0
+                top : 1200.0
             }
         }
         collision_shape_2{
@@ -7080,7 +7080,7 @@ if target:identifier() == "hero" then
     splash:setPosition(target:position() + Vector3.New(0,-50,0));
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc6\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal splash = Scene.CreateObject("watersplash", "splash");\r\n\tsplash:setPosition(target:position() + Vector3.New(0,-50,0));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\x16\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01A\x01\x00\x9c\x80\x80\x01\xcb\x80A\x01K\xc1\xc1\x00\\\x81\x00\x01\x85\x01\x02\x00\x86AB\x03\xc1\x81\x02\x00\x01\xc2\x02\x00A\x82\x02\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0c\x00\x00\x00watersplash\x00\x04\x07\x00\x00\x00splash\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00I\xc0\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00splash\x00\n\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
             }
             z : 1
@@ -8093,7 +8093,7 @@ object{
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8157,7 +8157,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8221,7 +8221,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8285,7 +8285,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8349,7 +8349,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8421,7 +8421,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -8864,7 +8864,7 @@ object{
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -9475,7 +9475,7 @@ object{
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -9539,7 +9539,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -9599,7 +9599,7 @@ $end$
                 main_chunk : $
 
 
-$end$
+$end
                 secondary_chunk : ''
             }
             z : 1
@@ -9810,11 +9810,11 @@ object{
         component_type : 'CollisionShape'
         number : 102
         collision_shape{
-            u0{
-                w : -41.5
-                x : -20.0
-                y : 83.0
-                z : 110.0
+            box_shape{
+                left : -41.5
+                bottom : -20.0
+                right : 83.0
+                top : 110.0
             }
         }
         collision_shape_2{
@@ -9856,11 +9856,11 @@ object{
         component_type : 'CollisionShape'
         number : 102
         collision_shape{
-            u0{
-                w : -41.5
-                x : -20.0
-                y : 83.0
-                z : 110.0
+            box_shape{
+                left : -41.5
+                bottom : -20.0
+                right : 83.0
+                top : 110.0
             }
         }
         collision_shape_2{

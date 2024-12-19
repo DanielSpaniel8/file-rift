@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'old'
 library_item{
@@ -71,11 +71,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 111
             collision_shape{
-                u0{
-                    w : -500.0
-                    x : 0.0
-                    y : 1000.0
-                    z : 150.0
+                box_shape{
+                    left : -500.0
+                    bottom : 0.0
+                    right : 1000.0
+                    top : 150.0
                 }
             }
         }
@@ -108,11 +108,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 120
             collision_shape{
-                u0{
-                    w : -30.0
-                    x : -0.8058220148086548
-                    y : 60.0
-                    z : 132.24581909179688
+                box_shape{
+                    left : -30.0
+                    bottom : -0.8058220148086548
+                    right : 60.0
+                    top : 132.24581909179688
                 }
             }
             collision_shape_2{
@@ -167,12 +167,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 136
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{
@@ -190,12 +190,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 141
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{

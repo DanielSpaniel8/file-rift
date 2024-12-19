@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 object{
     identifier : 'Background'
@@ -149,11 +149,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -400.0
-                x : -250.0
-                y : 800.0
-                z : 500.0
+            box_shape{
+                left : -400.0
+                bottom : -250.0
+                right : 800.0
+                top : 500.0
             }
         }
         collision_shape_2{
@@ -167,7 +167,7 @@ if target:identifier() == "hero" then
     Camera.FocusAtShape(Scene.Find("focusArea"),Rectangle.New(150,150,150,150));
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x96\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(Scene.Find("focusArea"),Rectangle.New(150,150,150,150));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x14\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc5\x00\x01\x00\xc6@\xc1\x01\x01\x81\x01\x00\xdc\x80\x00\x01\x05\xc1\x01\x00\x06\x01B\x02AA\x02\x00\x81A\x02\x00\xc1A\x02\x00\x01B\x02\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\n\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\n\x00\x00\x00focusArea\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\xc0b@\x00\x00\x00\x00\x14\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x13\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00'
             }
             lua_chunk_1{
@@ -178,7 +178,7 @@ if target:identifier() == "hero" then
     Camera.ResetFocus();
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00^\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.ResetFocus();\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\x9c@\x80\x00\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
             }
             z : 1
@@ -1020,11 +1020,11 @@ object{
         component_type : 'UtilityShape'
         number : 121
         collision_shape{
-            u0{
-                w : -20.0
-                x : -50.0
-                y : 40.0
-                z : 280.0
+            box_shape{
+                left : -20.0
+                bottom : -50.0
+                right : 40.0
+                top : 280.0
             }
         }
     }
@@ -1078,11 +1078,11 @@ object{
         component_type : 'UtilityShape'
         number : 121
         collision_shape{
-            u0{
-                w : -20.0
-                x : -50.0
-                y : 40.0
-                z : 280.0
+            box_shape{
+                left : -20.0
+                bottom : -50.0
+                right : 40.0
+                top : 280.0
             }
         }
     }
@@ -1136,11 +1136,11 @@ object{
         component_type : 'UtilityShape'
         number : 121
         collision_shape{
-            u0{
-                w : -20.0
-                x : -50.0
-                y : 40.0
-                z : 280.0
+            box_shape{
+                left : -20.0
+                bottom : -50.0
+                right : 40.0
+                top : 280.0
             }
         }
     }
@@ -1194,11 +1194,11 @@ object{
         component_type : 'UtilityShape'
         number : 121
         collision_shape{
-            u0{
-                w : -20.0
-                x : -50.0
-                y : 40.0
-                z : 280.0
+            box_shape{
+                left : -20.0
+                bottom : -50.0
+                right : 40.0
+                top : 280.0
             }
         }
     }
@@ -1250,11 +1250,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1322,11 +1322,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -1394,11 +1394,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -16866,11 +16866,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -41.0
-                x : -37.0
-                y : 82.0
-                z : 237.0
+            box_shape{
+                left : -41.0
+                bottom : -37.0
+                right : 82.0
+                top : 237.0
             }
         }
         collision_shape_2{
@@ -16885,7 +16885,7 @@ if target:identifier() == "hero" then
     CollisionShape.SetEnabled(Scene.Find("trigger"),101, false);
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xbc\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n       Scene.Find("groundstairs"):setHidden(false);\r\n\tCollisionShape.SetEnabled(Scene.Find("trigger"),101, false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06\x16\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x00\x00\x9c@\x80\x01\x85\x80\x01\x00\x86\xc0A\x01\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x01\x01\x02\x00\xdc\x80\x00\x01\x01A\x02\x00B\x01\x00\x00\x9c@\x00\x02\x1e\x00\x80\x00\n\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\r\x00\x00\x00groundstairs\x00\x04\n\x00\x00\x00setHidden\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\x08\x00\x00\x00trigger\x00\x03\x00\x00\x00\x00\x00@Y@\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
             }
             z : 1

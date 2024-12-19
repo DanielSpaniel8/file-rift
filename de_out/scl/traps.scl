@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'traps'
 library_item{
@@ -36,11 +36,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -15.0
-                    x : 0.0
-                    y : 23.0
-                    z : 220.0
+                box_shape{
+                    left : -15.0
+                    bottom : 0.0
+                    right : 23.0
+                    top : 220.0
                 }
             }
             collision_shape_2{
@@ -114,11 +114,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.8333333134651184
-                    x : 0.29147660732269287
-                    y : 0.0
-                    z : 0.0
+                colour{
+                    red : 0.8333333134651184
+                    green : 0.29147660732269287
+                    blue : 0.0
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -135,11 +135,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -281,11 +281,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.8333333134651184
-                    x : 0.29147660732269287
-                    y : 0.0
-                    z : 0.0
+                colour{
+                    red : 0.8333333134651184
+                    green : 0.29147660732269287
+                    blue : 0.0
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -302,11 +302,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -372,13 +372,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 8
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.6000000238418579
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -461,11 +461,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.5555555820465088
-                    x : 0.29147660732269287
-                    y : 0.5111111402511597
-                    z : 0.0
+                colour{
+                    red : 0.5555555820465088
+                    green : 0.29147660732269287
+                    blue : 0.5111111402511597
+                    brightness : 0.0
                 }
                 u1 : 25.0
                 u2 : 20
@@ -482,11 +482,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -10.0
-                    y : 20.0
-                    z : 20.0
+                box_shape{
+                    left : -10.0
+                    bottom : -10.0
+                    right : 20.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -552,13 +552,13 @@ library_item{
             component_type : 'PhysicsObject'
             number : 8
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.6000000238418579
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -654,7 +654,7 @@ SoundLibrary.PlayEffect("woosh1");
 end
 
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe0\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 300);\r\nSoundLibrary.PlayEffect("woosh1");\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x19\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x85\x00\x03\x00\x86@C\x01\xc1\x80\x03\x00\x9c@\x00\x01\x16\x00\xfa\x7f\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00\x19\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x18\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
                 }
                 u1 : 1
@@ -709,7 +709,7 @@ end
 end
 
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb6\x01\x00\x00local self = ...;\r\n\r\nlocal target = Scene.Find("hero");\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\n\r\nlocal direction = (target:position() - self:position()):normalized();\r\n\r\nlocal referenceDirection = Vector3.FromAngle(self:rotation())\r\n\r\n\r\nif direction:dot(referenceDirection) > 0.3 then\r\n\tlocal fireball = Scene.CreateObject("fireball", "f", self);\r\n\r\n\tfireball:setVelocity(direction * 300);\r\n\tSoundLibrary.PlayEffect("woosh1");\r\nend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08)\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x85\xc0\x00\x00\x86\x00A\x01\xc1@\x01\x00\x9c@\x00\x01\x8b\x80\xc1\x00\x9c\x80\x00\x01\xcb\x80A\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\x8b\xc0A\x01\x9c\x80\x00\x01\xc5\x00\x02\x00\xc6@\xc2\x01\x0b\x81B\x00\x1c\x01\x00\x01\xdc\x80\x00\x00\x0b\xc1B\x01\x80\x01\x80\x01\x1c\x81\x80\x01\x18\x00\x01\x86\x16\x80\xfa\x7f\x05\x01\x00\x00\x06AC\x02A\x81\x03\x00\x81\xc1\x03\x00\xc0\x01\x00\x00\x1c\x81\x00\x02K\x01D\x02\xceAD\x01\\A\x80\x01E\x81\x04\x00F\xc1\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x16\x00\xf7\x7f\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00normalized\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x04\x04\x00\x00\x00dot\x00\x03333333\xd3?\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00)\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00(\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00(\x00\x00\x00\n\x00\x00\x00direction\x00\x10\x00\x00\x00\\'\x00\x00\x00\x13\x00\x00\x00referenceDirection\x00\x15\x00\x00\x00\\'\x00\x00\x00\t\x00\x00\x00fireball\x00 \x00\x00\x00\\'\x00\x00\x00\x00\x00\x00\x00'
                 }
                 u1 : 1
@@ -752,7 +752,7 @@ fireball:setVelocity(Vector3.FromAngle(self:rotation()) * 600);
 end
 
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc6\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball_ballistic", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 600);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x16\x00\xfb\x7f\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x13\x00\x00\x00fireball_ballistic\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0\x82@\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00'
                 }
                 u1 : 1
@@ -831,12 +831,12 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u1{
-                    u0{
+                ball_shape{
+                    offsets{
+                        x : 0.0
                         y : 0.0
-                        z : 0.0
                     }
-                    u1 : 55.0
+                    radius : 55.0
                 }
             }
             collision_shape_2{
@@ -937,7 +937,7 @@ library_item{
 Program.Wait(0.2);
 SoundLibrary.PlayEffect("unlock");
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x007\x00\x00\x00Program.Wait(0.2);\r\nSoundLibrary.PlayEffect("unlock");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\t\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x05\xc0\x00\x00\x06\x00A\x00A@\x01\x00\x1c@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
                 u1 : ''
@@ -1083,11 +1083,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1189,11 +1189,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 125
             collision_shape{
-                u0{
-                    w : -50.0
-                    x : 0.0
-                    y : 100.0
-                    z : 40.0
+                box_shape{
+                    left : -50.0
+                    bottom : 0.0
+                    right : 100.0
+                    top : 40.0
                 }
             }
         }
@@ -1201,12 +1201,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1281,11 +1281,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1387,11 +1387,11 @@ library_item{
             component_type : 'UtilityShape'
             number : 125
             collision_shape{
-                u0{
-                    w : -600.0
-                    x : 0.0
-                    y : 1200.0
-                    z : 300.0
+                box_shape{
+                    left : -600.0
+                    bottom : 0.0
+                    right : 1200.0
+                    top : 300.0
                 }
             }
         }
@@ -1399,12 +1399,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1479,11 +1479,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -67.26329803466797
-                    x : 2.0
-                    y : 130.2633056640625
-                    z : 2.0
+                box_shape{
+                    left : -67.26329803466797
+                    bottom : 2.0
+                    right : 130.2633056640625
+                    top : 2.0
                 }
             }
             collision_shape_2{
@@ -1585,12 +1585,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 129
             collision_shape{
-                u1{
-                    u0{
-                        y : 40.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 40.0
+                        y : 0.0
                     }
-                    u1 : 40.0
+                    radius : 40.0
                 }
             }
             collision_shape_2{
@@ -1656,11 +1656,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 101
             collision_shape{
-                u0{
-                    w : -70.0
-                    x : 30.0
-                    y : 140.0
-                    z : 60.0
+                box_shape{
+                    left : -70.0
+                    bottom : 30.0
+                    right : 140.0
+                    top : 60.0
                 }
             }
             collision_shape_2{
@@ -1829,12 +1829,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 6
             collision_shape{
-                u1{
-                    u0{
-                        y : 435.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 435.0
+                        y : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{
@@ -1852,12 +1852,12 @@ library_item{
             component_type : 'BoneControlledCollisionShape'
             number : 9
             collision_shape{
-                u1{
-                    u0{
-                        y : 380.0
-                        z : 0.0
+                ball_shape{
+                    offsets{
+                        x : 380.0
+                        y : 0.0
                     }
-                    u1 : 30.0
+                    radius : 30.0
                 }
             }
             collision_shape_2{

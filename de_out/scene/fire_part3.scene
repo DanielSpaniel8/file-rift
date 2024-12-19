@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 object{
     name : 'Template 1'
@@ -127,11 +127,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -173,11 +173,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -219,11 +219,11 @@ object{
         component_type : 'CollisionShape'
         number : 101
         collision_shape{
-            u0{
-                w : -45.0
-                x : -200.0
-                y : 90.0
-                z : 400.0
+            box_shape{
+                left : -45.0
+                bottom : -200.0
+                right : 90.0
+                top : 400.0
             }
         }
         collision_shape_2{
@@ -4178,23 +4178,23 @@ object{
                 component_type : 'PhysicsObject'
                 number : 103
                 physics_object{
-                    u0 : 1
-                    u2 : 1500.0
-                    u3 : 0.0
-                    u4 : 700.0
-                    u5 : 0
-                    u6 : 0.0
+                    enabled : 1
+                    ground_friction : 1500.0
+                    air_friction : 0.0
+                    speed : 700.0
+                    can_roll : 0
+                    bounciness : 0.0
                 }
             }
             component{
                 component_type : 'CollisionShape'
                 number : 105
                 collision_shape{
-                    u0{
-                        w : -30.0
-                        x : -30.0
-                        y : 60.0
-                        z : 60.0
+                    box_shape{
+                        left : -30.0
+                        bottom : -30.0
+                        right : 60.0
+                        top : 60.0
                     }
                 }
                 collision_shape_2{
@@ -4226,7 +4226,7 @@ local self = ...;
 Program.Wait(5);
 self:destroy();
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x007\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(5);\r\nself:destroy();\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
             }
         }
@@ -4495,23 +4495,23 @@ $end$
                 component_type : 'PhysicsObject'
                 number : 103
                 physics_object{
-                    u0 : 1
-                    u2 : 1500.0
-                    u3 : 0.0
-                    u4 : 700.0
-                    u5 : 0
-                    u6 : 0.0
+                    enabled : 1
+                    ground_friction : 1500.0
+                    air_friction : 0.0
+                    speed : 700.0
+                    can_roll : 0
+                    bounciness : 0.0
                 }
             }
             component{
                 component_type : 'CollisionShape'
                 number : 105
                 collision_shape{
-                    u0{
-                        w : -40.0
-                        x : -40.0
-                        y : 80.0
-                        z : 80.0
+                    box_shape{
+                        left : -40.0
+                        bottom : -40.0
+                        right : 80.0
+                        top : 80.0
                     }
                 }
                 collision_shape_2{
@@ -4539,7 +4539,7 @@ while true do
 end
 
 
-$end$
+$end
                         secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb8\x00\x00\x00local self = ...;\r\n\r\nlocal time = 0.1;\r\n\r\nwhile true do\r\n\tProgram.Wait(time);\r\n\tTransformController.RotateBy(self, self:velocity():x()*(250/360) *time*-1*self:scaling(), time);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x17\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x85@\x00\x00\x86\x80@\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\xc0\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x0bAA\x00\x1c\x81\x00\x01\x0b\x81A\x02\x1c\x81\x00\x01\x0e\xc1A\x02\x0eA\x00\x02\x0e\x01B\x02KAB\x00\\\x81\x00\x01\x0eA\x01\x02@\x01\x80\x00\x9c@\x00\x02\x16\xc0\xfa\x7f\x1e\x00\x80\x00\n\x00\x00\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x04\t\x00\x00\x00velocity\x00\x04\x02\x00\x00\x00x\x00\x03\x8e\xe38\x8e\xe38\xe6?\x03\x00\x00\x00\x00\x00\x00\xf0\xbf\x04\x08\x00\x00\x00scaling\x00\x00\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x16\x00\x00\x00\x05\x00\x00\x00time\x00\x02\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00'
                     }
                     u1 : 1
@@ -4569,7 +4569,7 @@ self:destroy();
 
 Scene.CreateObject("blast", "bbb", self);
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(5);\r\nself:destroy();\r\n\r\nScene.CreateObject("blast", "bbb", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0e\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\@\x00\x01E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\xc1\xc0\x01\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x04\x08\x00\x00\x00destroy\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x06\x00\x00\x00blast\x00\x04\x04\x00\x00\x00bbb\x00\x00\x00\x00\x00\x0e\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\r\x00\x00\x00\x00\x00\x00\x00'
             }
         }
@@ -4976,7 +4976,7 @@ while true do
     Program.Wait(10.0);
 end
 
-$end$
+$end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tTransformController.RotateBy(self, 360, 10.0);\r\n\tProgram.Wait(10.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\xc0\x00\x00\\@\x00\x01\x16\x00\xfd\x7f\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x03\x00\x00\x00\x00\x00\x80v@\x03\x00\x00\x00\x00\x00\x00$@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00'
             }
         }

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'grovestuff'
 library_item{
@@ -531,11 +531,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 2
             simple_glow{
-                u0{
-                    w : 0.2666666805744171
-                    x : 0.1111111119389534
-                    y : 0.3888888955116272
-                    z : 0.5
+                colour{
+                    red : 0.2666666805744171
+                    green : 0.1111111119389534
+                    blue : 0.3888888955116272
+                    brightness : 0.5
                 }
                 u1 : 25.0
                 u2 : 10

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'graveyard'
 library_item{
@@ -36,11 +36,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 103
             collision_shape{
-                u0{
-                    w : -89.97469329833984
-                    x : -2.6872830390930176
-                    y : 150.30165100097656
-                    z : 28.65419578552246
+                box_shape{
+                    left : -89.97469329833984
+                    bottom : -2.6872830390930176
+                    right : 150.30165100097656
+                    top : 28.65419578552246
                 }
             }
             collision_shape_2{
@@ -84,7 +84,7 @@ if Character.HasSceneFlag("ff_destroyed") then
     self:setHidden(true);
 end
 
-$end$
+$end
             secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x87\x00\x00\x00local self = ...;\r\n\r\n\r\nif Character.HasSceneFlag("ff_destroyed") then\r\n\tScene.Find("ff"):setHidden(true);\r\n\tself:setHidden(true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16@\x02\x80E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\\x80\x00\x01K\x80\xc1\x00\xc2\x00\x80\x00\\@\x80\x01K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\r\x00\x00\x00ff_destroyed\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x03\x00\x00\x00ff\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00'
         }
     }
@@ -874,11 +874,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 2
             simple_glow{
-                u0{
-                    w : 0.23333333432674408
-                    x : 0.35555556416511536
-                    y : 0.20000000298023224
-                    z : 0.5
+                colour{
+                    red : 0.23333333432674408
+                    green : 0.35555556416511536
+                    blue : 0.20000000298023224
+                    brightness : 0.5
                 }
                 u1 : 27.0
                 u2 : 10

@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'towers_stuff'
 library_item{
@@ -56,11 +56,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.3876543343067169
-                    x : 0.21119342744350433
-                    y : 0.05679011344909668
-                    z : 0.0
+                colour{
+                    red : 0.3876543343067169
+                    green : 0.21119342744350433
+                    blue : 0.05679011344909668
+                    brightness : 0.0
                 }
                 u1 : 40.0
                 u2 : 15

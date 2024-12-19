@@ -1,4 +1,4 @@
-# rifted with FR v5.3
+# rifted with FR v5.4.1
 
 scl_file_name : 'magic'
 library_item{
@@ -52,11 +52,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 127
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.6219885945320129
-                    y : 0.28888893127441406
-                    z : 0.20000000298023224
+                colour{
+                    red : 1.0
+                    green : 0.6219885945320129
+                    blue : 0.28888893127441406
+                    brightness : 0.20000000298023224
                 }
                 u1 : 6.0
                 u2 : 20
@@ -186,11 +186,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 127
             simple_glow{
-                u0{
-                    w : 0.022222280502319336
-                    x : 0.41161781549453735
-                    y : 1.0
-                    z : 0.20000000298023224
+                colour{
+                    red : 0.022222280502319336
+                    green : 0.41161781549453735
+                    blue : 1.0
+                    brightness : 0.20000000298023224
                 }
                 u1 : 6.0
                 u2 : 20
@@ -276,11 +276,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888889253139496
-                    x : 0.5
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888889253139496
+                    green : 0.5
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -297,11 +297,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -20.0
-                    x : -20.0
-                    y : 40.0
-                    z : 40.0
+                box_shape{
+                    left : -20.0
+                    bottom : -20.0
+                    right : 40.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -368,11 +368,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 7
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -5.0
-                    y : 20.0
-                    z : 10.0
+                box_shape{
+                    left : -10.0
+                    bottom : -5.0
+                    right : 20.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -536,11 +536,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.4592592716217041
-                    y : 0.18888890743255615
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.4592592716217041
+                    blue : 0.18888890743255615
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -557,11 +557,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -20.0
-                    x : -20.0
-                    y : 40.0
-                    z : 40.0
+                box_shape{
+                    left : -20.0
+                    bottom : -20.0
+                    right : 40.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -628,11 +628,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 7
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -5.0
-                    y : 20.0
-                    z : 10.0
+                box_shape{
+                    left : -10.0
+                    bottom : -5.0
+                    right : 20.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -722,11 +722,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888890743255615
-                    x : 1.0000001192092896
-                    y : 0.9999999403953552
-                    z : 0.5
+                colour{
+                    red : 0.18888890743255615
+                    green : 1.0000001192092896
+                    blue : 0.9999999403953552
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -743,11 +743,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -20.0
-                    x : -20.0
-                    y : 40.0
-                    z : 40.0
+                box_shape{
+                    left : -20.0
+                    bottom : -20.0
+                    right : 40.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -814,11 +814,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 7
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -5.0
-                    y : 20.0
-                    z : 10.0
+                box_shape{
+                    left : -10.0
+                    bottom : -5.0
+                    right : 20.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -908,11 +908,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.35111096501350403
-                    x : 0.18888890743255615
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.35111096501350403
+                    green : 0.18888890743255615
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 30.0
                 u2 : 10
@@ -929,11 +929,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -20.0
-                    x : -20.0
-                    y : 40.0
-                    z : 40.0
+                box_shape{
+                    left : -20.0
+                    bottom : -20.0
+                    right : 40.0
+                    top : 40.0
                 }
             }
             collision_shape_2{
@@ -1000,11 +1000,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 7
             collision_shape{
-                u0{
-                    w : -10.0
-                    x : -5.0
-                    y : 20.0
-                    z : 10.0
+                box_shape{
+                    left : -10.0
+                    bottom : -5.0
+                    right : 20.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -1094,11 +1094,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888890743255615
-                    x : 0.4999999701976776
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888890743255615
+                    green : 0.4999999701976776
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 28.0
                 u2 : 10
@@ -1156,11 +1156,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 102
             collision_shape{
-                u0{
-                    w : -13.0
-                    x : -14.0
-                    y : 26.0
-                    z : 30.0
+                box_shape{
+                    left : -13.0
+                    bottom : -14.0
+                    right : 26.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1174,11 +1174,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -42.0
-                    x : -10.0
-                    y : 84.0
-                    z : 20.0
+                box_shape{
+                    left : -42.0
+                    bottom : -10.0
+                    right : 84.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -1192,12 +1192,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 108
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1238,11 +1238,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.4725927710533142
-                    y : 0.18888890743255615
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.4725927710533142
+                    blue : 0.18888890743255615
+                    brightness : 0.5
                 }
                 u1 : 28.0
                 u2 : 10
@@ -1300,11 +1300,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 102
             collision_shape{
-                u0{
-                    w : -13.0
-                    x : -14.0
-                    y : 26.0
-                    z : 30.0
+                box_shape{
+                    left : -13.0
+                    bottom : -14.0
+                    right : 26.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1318,11 +1318,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -42.0
-                    x : -10.0
-                    y : 84.0
-                    z : 20.0
+                box_shape{
+                    left : -42.0
+                    bottom : -10.0
+                    right : 84.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -1336,12 +1336,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 108
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1382,11 +1382,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888890743255615
-                    x : 0.9866664409637451
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888890743255615
+                    green : 0.9866664409637451
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 28.0
                 u2 : 10
@@ -1444,11 +1444,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 102
             collision_shape{
-                u0{
-                    w : -13.0
-                    x : -14.0
-                    y : 26.0
-                    z : 30.0
+                box_shape{
+                    left : -13.0
+                    bottom : -14.0
+                    right : 26.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1462,11 +1462,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -42.0
-                    x : -10.0
-                    y : 84.0
-                    z : 20.0
+                box_shape{
+                    left : -42.0
+                    bottom : -10.0
+                    right : 84.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -1480,12 +1480,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 108
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1526,11 +1526,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.3644446134567261
-                    x : 0.18888890743255615
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.3644446134567261
+                    green : 0.18888890743255615
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 28.0
                 u2 : 10
@@ -1588,11 +1588,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 102
             collision_shape{
-                u0{
-                    w : -13.0
-                    x : -14.0
-                    y : 26.0
-                    z : 30.0
+                box_shape{
+                    left : -13.0
+                    bottom : -14.0
+                    right : 26.0
+                    top : 30.0
                 }
             }
             collision_shape_2{
@@ -1606,11 +1606,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 104
             collision_shape{
-                u0{
-                    w : -42.0
-                    x : -10.0
-                    y : 84.0
-                    z : 20.0
+                box_shape{
+                    left : -42.0
+                    bottom : -10.0
+                    right : 84.0
+                    top : 20.0
                 }
             }
             collision_shape_2{
@@ -1624,12 +1624,12 @@ library_item{
             component_type : 'PhysicsObject'
             number : 108
             physics_object{
-                u0 : 1
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 700.0
-                u6 : 0
-                u7 : 0.0
+                enabled : 1
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 700.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         component{
@@ -1684,7 +1684,7 @@ else
 end
 
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x01\x01\x00\x00local self = ...;\r\n\r\nif inAnotherDimension then\r\n\tSetDimensionModeEnabled(false);\r\n\tSoundLibrary.PlayEffect("dimension");\r\nelse\r\n\tSoundLibrary.PlayEffect("testmorph");\r\n\tSetDimensionModeEnabled(true);\r\n\tGenerateDimensionMonsters(self:position(), 2);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x19\x00\x00\x00%\x00\x00\x01E\x00\x00\x00Z\x00\x00\x00\x16\xc0\x01\x80E@\x00\x00\x82\x00\x00\x00\\@\x00\x01E\x80\x00\x00F\xc0\xc0\x00\x81\x00\x01\x00\\@\x00\x01\x16\xc0\x02\x80E\x80\x00\x00F\xc0\xc0\x00\x81@\x01\x00\\@\x00\x01E@\x00\x00\x82\x00\x80\x00\\@\x00\x01E\x80\x01\x00\x8b\xc0A\x00\x9c\x80\x00\x01\xc1\x00\x02\x00\\@\x80\x01\x1e\x00\x80\x00\t\x00\x00\x00\x04\x13\x00\x00\x00inAnotherDimension\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00dimension\x00\x04\n\x00\x00\x00testmorph\x00\x04\x1a\x00\x00\x00GenerateDimensionMonsters\x00\x04\t\x00\x00\x00position\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x19\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x18\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -1790,7 +1790,7 @@ library_item{
             main_chunk : $
 Game.Flash();
 
-$end$
+$end
             secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x0e\x00\x00\x00Game.Flash();\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x04\x00\x00\x00\x05\x00\x00\x00\x06@@\x00\x1c@\x80\x00\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x06\x00\x00\x00Flash\x00\x00\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
         }
     }
@@ -1908,11 +1908,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888889253139496
-                    x : 0.5
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888889253139496
+                    green : 0.5
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 25.0
                 u2 : 10
@@ -1929,11 +1929,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -8.0
-                    y : 16.0
-                    z : 16.0
+                box_shape{
+                    left : -8.0
+                    bottom : -8.0
+                    right : 16.0
+                    top : 16.0
                 }
             }
             collision_shape_2{
@@ -1948,11 +1948,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 3
             collision_shape{
-                u0{
-                    w : -400.0
-                    x : -5.0
-                    y : 400.0
-                    z : 10.0
+                box_shape{
+                    left : -400.0
+                    bottom : -5.0
+                    right : 400.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -2163,7 +2163,7 @@ if false and caster ~= nil then
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self = ...;\r\n\r\nlocal caster = Spell.CasterObject(self);\r\n\r\nif false and caster ~= nil then\r\n\r\n\twhile self:isAlive() do \r\n\t\tlocal delta = self:position() - Spell.CastPoint(self);\r\n\t\tlocal distance = delta:length() - 50;\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 7, Vector3.New(-distance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 7, 2, distance);\r\n\r\n\t\tProgram.Wait(0.02);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b.\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x16\x80\t\x80W\x80\xc0\x00\x16\x00\t\x80\x8b\xc0@\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x08\x80\x8b\x00A\x00\x9c\x80\x00\x01\xc5\x00\x00\x00\xc6@\xc1\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\xcb\x80A\x01\xdc\x80\x00\x01\xcd\xc0\xc1\x01\x05\x01\x02\x00\x06AB\x02@\x01\x00\x00\x81\x81\x02\x00\xc5\xc1\x02\x00\xc6\x01\xc3\x03\x12\x02\x80\x01AB\x03\x00\x81B\x03\x00\xdc\x01\x00\x02\x1cA\x00\x00\x05\x01\x02\x00\x06\x81C\x02@\x01\x00\x00\x81\x81\x02\x00\xc1\xc1\x03\x00\x00\x02\x80\x01\x1cA\x80\x02\x05\x01\x04\x00\x06AD\x02A\x81\x04\x00\x1cA\x00\x01\x16\x80\xf6\x7f\x1e\x00\x80\x00\x13\x00\x00\x00\x04\x06\x00\x00\x00Spell\x00\x04\r\x00\x00\x00CasterObject\x00\x00\x04\x08\x00\x00\x00isAlive\x00\x04\t\x00\x00\x00position\x00\x04\n\x00\x00\x00CastPoint\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x10\x00\x00\x00ParticleEmitter\x00\x04\x10\x00\x00\x00SetOriginOffset\x00\x03\x00\x00\x00\x00\x00\x00\x1c@\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x14\x00\x00\x00SetParameterAtIndex\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x94?\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00caster\x00\x05\x00\x00\x00-\x00\x00\x00\x06\x00\x00\x00delta\x00\x13\x00\x00\x00,\x00\x00\x00\t\x00\x00\x00distance\x00\x16\x00\x00\x00,\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -2172,13 +2172,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 113
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 2000.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 2000.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -2205,11 +2205,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.4725927710533142
-                    y : 0.18888890743255615
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.4725927710533142
+                    blue : 0.18888890743255615
+                    brightness : 0.5
                 }
                 u1 : 25.0
                 u2 : 20
@@ -2226,11 +2226,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -8.0
-                    y : 16.0
-                    z : 16.0
+                box_shape{
+                    left : -8.0
+                    bottom : -8.0
+                    right : 16.0
+                    top : 16.0
                 }
             }
             collision_shape_2{
@@ -2245,11 +2245,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 3
             collision_shape{
-                u0{
-                    w : -400.0
-                    x : -5.0
-                    y : 400.0
-                    z : 10.0
+                box_shape{
+                    left : -400.0
+                    bottom : -5.0
+                    right : 400.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -2448,7 +2448,7 @@ if false and caster ~= nil then
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self = ...;\r\n\r\nlocal caster = Spell.CasterObject(self);\r\n\r\nif false and caster ~= nil then\r\n\r\n\twhile self:isAlive() do \r\n\t\tlocal delta = self:position() - Spell.CastPoint(self);\r\n\t\tlocal distance = delta:length() - 50;\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 7, Vector3.New(-distance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 7, 2, distance);\r\n\r\n\t\tProgram.Wait(0.02);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b.\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x16\x80\t\x80W\x80\xc0\x00\x16\x00\t\x80\x8b\xc0@\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x08\x80\x8b\x00A\x00\x9c\x80\x00\x01\xc5\x00\x00\x00\xc6@\xc1\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\xcb\x80A\x01\xdc\x80\x00\x01\xcd\xc0\xc1\x01\x05\x01\x02\x00\x06AB\x02@\x01\x00\x00\x81\x81\x02\x00\xc5\xc1\x02\x00\xc6\x01\xc3\x03\x12\x02\x80\x01AB\x03\x00\x81B\x03\x00\xdc\x01\x00\x02\x1cA\x00\x00\x05\x01\x02\x00\x06\x81C\x02@\x01\x00\x00\x81\x81\x02\x00\xc1\xc1\x03\x00\x00\x02\x80\x01\x1cA\x80\x02\x05\x01\x04\x00\x06AD\x02A\x81\x04\x00\x1cA\x00\x01\x16\x80\xf6\x7f\x1e\x00\x80\x00\x13\x00\x00\x00\x04\x06\x00\x00\x00Spell\x00\x04\r\x00\x00\x00CasterObject\x00\x00\x04\x08\x00\x00\x00isAlive\x00\x04\t\x00\x00\x00position\x00\x04\n\x00\x00\x00CastPoint\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x10\x00\x00\x00ParticleEmitter\x00\x04\x10\x00\x00\x00SetOriginOffset\x00\x03\x00\x00\x00\x00\x00\x00\x1c@\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x14\x00\x00\x00SetParameterAtIndex\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x94?\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00caster\x00\x05\x00\x00\x00-\x00\x00\x00\x06\x00\x00\x00delta\x00\x13\x00\x00\x00,\x00\x00\x00\t\x00\x00\x00distance\x00\x16\x00\x00\x00,\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -2457,13 +2457,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 113
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 2000.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 2000.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -2490,11 +2490,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888890743255615
-                    x : 0.9866664409637451
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888890743255615
+                    green : 0.9866664409637451
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 25.0
                 u2 : 20
@@ -2511,11 +2511,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -8.0
-                    y : 16.0
-                    z : 16.0
+                box_shape{
+                    left : -8.0
+                    bottom : -8.0
+                    right : 16.0
+                    top : 16.0
                 }
             }
             collision_shape_2{
@@ -2530,11 +2530,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 3
             collision_shape{
-                u0{
-                    w : -400.0
-                    x : -5.0
-                    y : 400.0
-                    z : 10.0
+                box_shape{
+                    left : -400.0
+                    bottom : -5.0
+                    right : 400.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -2733,7 +2733,7 @@ if false and caster ~= nil then
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self = ...;\r\n\r\nlocal caster = Spell.CasterObject(self);\r\n\r\nif false and caster ~= nil then\r\n\r\n\twhile self:isAlive() do \r\n\t\tlocal delta = self:position() - Spell.CastPoint(self);\r\n\t\tlocal distance = delta:length() - 50;\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 7, Vector3.New(-distance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 7, 2, distance);\r\n\r\n\t\tProgram.Wait(0.02);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b.\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x16\x80\t\x80W\x80\xc0\x00\x16\x00\t\x80\x8b\xc0@\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x08\x80\x8b\x00A\x00\x9c\x80\x00\x01\xc5\x00\x00\x00\xc6@\xc1\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\xcb\x80A\x01\xdc\x80\x00\x01\xcd\xc0\xc1\x01\x05\x01\x02\x00\x06AB\x02@\x01\x00\x00\x81\x81\x02\x00\xc5\xc1\x02\x00\xc6\x01\xc3\x03\x12\x02\x80\x01AB\x03\x00\x81B\x03\x00\xdc\x01\x00\x02\x1cA\x00\x00\x05\x01\x02\x00\x06\x81C\x02@\x01\x00\x00\x81\x81\x02\x00\xc1\xc1\x03\x00\x00\x02\x80\x01\x1cA\x80\x02\x05\x01\x04\x00\x06AD\x02A\x81\x04\x00\x1cA\x00\x01\x16\x80\xf6\x7f\x1e\x00\x80\x00\x13\x00\x00\x00\x04\x06\x00\x00\x00Spell\x00\x04\r\x00\x00\x00CasterObject\x00\x00\x04\x08\x00\x00\x00isAlive\x00\x04\t\x00\x00\x00position\x00\x04\n\x00\x00\x00CastPoint\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x10\x00\x00\x00ParticleEmitter\x00\x04\x10\x00\x00\x00SetOriginOffset\x00\x03\x00\x00\x00\x00\x00\x00\x1c@\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x14\x00\x00\x00SetParameterAtIndex\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x94?\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00caster\x00\x05\x00\x00\x00-\x00\x00\x00\x06\x00\x00\x00delta\x00\x13\x00\x00\x00,\x00\x00\x00\t\x00\x00\x00distance\x00\x16\x00\x00\x00,\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -2742,13 +2742,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 113
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 2000.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 2000.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -2775,11 +2775,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.18888889253139496
-                    x : 0.5
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.18888889253139496
+                    green : 0.5
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -2796,11 +2796,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -8.0
-                    y : 16.0
-                    z : 16.0
+                box_shape{
+                    left : -8.0
+                    bottom : -8.0
+                    right : 16.0
+                    top : 16.0
                 }
             }
             collision_shape_2{
@@ -2814,11 +2814,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 3
             collision_shape{
-                u0{
-                    w : -400.0
-                    x : -5.0
-                    y : 400.0
-                    z : 10.0
+                box_shape{
+                    left : -400.0
+                    bottom : -5.0
+                    right : 400.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -3110,7 +3110,7 @@ if caster ~= nil then
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00|\x02\x00\x00local self = ...;\r\n\r\nlocal caster = Spell.CasterObject(self);\r\n\r\nif caster ~= nil then\r\n\r\n\twhile self:isAlive() do \r\n\t\tlocal delta = self:position() - caster:position();\r\n\t\tlocal distance = delta:length();\r\n\r\n\t\tlocal shortDistance = distance;\r\n\t\tif shortDistance > 50 then shortDistance = 50; end\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 7, Vector3.New(-distance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 7, 2, distance - 40);\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 8, Vector3.New(-shortDistance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 8, 2, shortDistance - 30);\r\n\r\n\t\r\n\r\n\t\tProgram.Wait(0.02);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0c@\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01W\x80\xc0\x00\x16\xc0\r\x80\x8b\xc0@\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\xc0\x0c\x80\x8b\x00A\x00\x9c\x80\x00\x01\xcb\x00\xc1\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\xcb@A\x01\xdc\x80\x00\x01\x00\x01\x80\x01\x18\x00\x01\x83\x16\x00\x00\x80\x01\x81\x01\x00E\xc1\x01\x00F\x01\xc2\x02\x80\x01\x00\x00\xc1A\x02\x00\x05\x82\x02\x00\x06\xc2B\x04R\x02\x80\x01\x81\x02\x03\x00\xc1\x02\x03\x00\x1c\x02\x00\x02\\A\x00\x00E\xc1\x01\x00FA\xc3\x02\x80\x01\x00\x00\xc1A\x02\x00\x01\x82\x03\x00M\xc2\xc3\x01\\A\x80\x02E\xc1\x01\x00F\x01\xc2\x02\x80\x01\x00\x00\xc1\x01\x04\x00\x05\x82\x02\x00\x06\xc2B\x04R\x02\x00\x02\x81\x02\x03\x00\xc1\x02\x03\x00\x1c\x02\x00\x02\\A\x00\x00E\xc1\x01\x00FA\xc3\x02\x80\x01\x00\x00\xc1\x01\x04\x00\x01\x82\x03\x00MBD\x02\\A\x80\x02E\x81\x04\x00F\xc1\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x16\xc0\xf1\x7f\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00Spell\x00\x04\r\x00\x00\x00CasterObject\x00\x00\x04\x08\x00\x00\x00isAlive\x00\x04\t\x00\x00\x00position\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x10\x00\x00\x00ParticleEmitter\x00\x04\x10\x00\x00\x00SetOriginOffset\x00\x03\x00\x00\x00\x00\x00\x00\x1c@\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x14\x00\x00\x00SetParameterAtIndex\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x03\x00\x00\x00\x00\x00\x00D@\x03\x00\x00\x00\x00\x00\x00 @\x03\x00\x00\x00\x00\x00\x00>@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x94?\x00\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x18\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00?\x00\x00\x00\x07\x00\x00\x00caster\x00\x05\x00\x00\x00?\x00\x00\x00\x06\x00\x00\x00delta\x00\x10\x00\x00\x00>\x00\x00\x00\t\x00\x00\x00distance\x00\x12\x00\x00\x00>\x00\x00\x00\x0e\x00\x00\x00shortDistance\x00\x13\x00\x00\x00>\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -3119,13 +3119,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 113
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 2000.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 2000.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -3152,11 +3152,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.3644446134567261
-                    x : 0.18888890743255615
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.3644446134567261
+                    green : 0.18888890743255615
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 25.0
                 u2 : 20
@@ -3173,11 +3173,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 2
             collision_shape{
-                u0{
-                    w : -8.0
-                    x : -8.0
-                    y : 16.0
-                    z : 16.0
+                box_shape{
+                    left : -8.0
+                    bottom : -8.0
+                    right : 16.0
+                    top : 16.0
                 }
             }
             collision_shape_2{
@@ -3192,11 +3192,11 @@ library_item{
             component_type : 'CollisionShape'
             number : 3
             collision_shape{
-                u0{
-                    w : -400.0
-                    x : -5.0
-                    y : 400.0
-                    z : 10.0
+                box_shape{
+                    left : -400.0
+                    bottom : -5.0
+                    right : 400.0
+                    top : 10.0
                 }
             }
             collision_shape_2{
@@ -3395,7 +3395,7 @@ if false and caster ~= nil then
     end
 end
 
-$end$
+$end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self = ...;\r\n\r\nlocal caster = Spell.CasterObject(self);\r\n\r\nif false and caster ~= nil then\r\n\r\n\twhile self:isAlive() do \r\n\t\tlocal delta = self:position() - Spell.CastPoint(self);\r\n\t\tlocal distance = delta:length() - 50;\r\n\r\n\t\tParticleEmitter.SetOriginOffset(self, 7, Vector3.New(-distance, 0, 0));\r\n\t\tParticleEmitter.SetParameterAtIndex(self, 7, 2, distance);\r\n\r\n\t\tProgram.Wait(0.02);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b.\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x16\x80\t\x80W\x80\xc0\x00\x16\x00\t\x80\x8b\xc0@\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x08\x80\x8b\x00A\x00\x9c\x80\x00\x01\xc5\x00\x00\x00\xc6@\xc1\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\xcb\x80A\x01\xdc\x80\x00\x01\xcd\xc0\xc1\x01\x05\x01\x02\x00\x06AB\x02@\x01\x00\x00\x81\x81\x02\x00\xc5\xc1\x02\x00\xc6\x01\xc3\x03\x12\x02\x80\x01AB\x03\x00\x81B\x03\x00\xdc\x01\x00\x02\x1cA\x00\x00\x05\x01\x02\x00\x06\x81C\x02@\x01\x00\x00\x81\x81\x02\x00\xc1\xc1\x03\x00\x00\x02\x80\x01\x1cA\x80\x02\x05\x01\x04\x00\x06AD\x02A\x81\x04\x00\x1cA\x00\x01\x16\x80\xf6\x7f\x1e\x00\x80\x00\x13\x00\x00\x00\x04\x06\x00\x00\x00Spell\x00\x04\r\x00\x00\x00CasterObject\x00\x00\x04\x08\x00\x00\x00isAlive\x00\x04\t\x00\x00\x00position\x00\x04\n\x00\x00\x00CastPoint\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x10\x00\x00\x00ParticleEmitter\x00\x04\x10\x00\x00\x00SetOriginOffset\x00\x03\x00\x00\x00\x00\x00\x00\x1c@\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x14\x00\x00\x00SetParameterAtIndex\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x94?\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00caster\x00\x05\x00\x00\x00-\x00\x00\x00\x06\x00\x00\x00delta\x00\x13\x00\x00\x00,\x00\x00\x00\t\x00\x00\x00distance\x00\x16\x00\x00\x00,\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
@@ -3404,13 +3404,13 @@ $end$
             component_type : 'PhysicsObject'
             number : 113
             physics_object{
-                u0 : 1
+                enabled : 1
                 u2 : 0.0
-                u3 : 1500.0
-                u4 : 0.0
-                u5 : 2000.0
-                u6 : 0
-                u7 : 0.0
+                ground_friction : 1500.0
+                air_friction : 0.0
+                speed : 2000.0
+                can_roll : 0
+                bounciness : 0.0
             }
         }
         position{
@@ -3437,11 +3437,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.16666662693023682
-                    x : 0.4999999701976776
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.16666662693023682
+                    green : 0.4999999701976776
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -3524,11 +3524,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 1.0
-                    x : 0.4444446265697479
-                    y : 0.16666662693023682
-                    z : 0.5
+                colour{
+                    red : 1.0
+                    green : 0.4444446265697479
+                    blue : 0.16666662693023682
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -3611,11 +3611,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.16666662693023682
-                    x : 1.0
-                    y : 0.9999995231628418
-                    z : 0.5
+                colour{
+                    red : 0.16666662693023682
+                    green : 1.0
+                    blue : 0.9999995231628418
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -3698,11 +3698,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 1
             simple_glow{
-                u0{
-                    w : 0.3333331346511841
-                    x : 0.16666662693023682
-                    y : 1.0
-                    z : 0.5
+                colour{
+                    red : 0.3333331346511841
+                    green : 0.16666662693023682
+                    blue : 1.0
+                    brightness : 0.5
                 }
                 u1 : 20.0
                 u2 : 10
@@ -3829,11 +3829,11 @@ library_item{
             component_type : 'SimpleGlow'
             number : 127
             simple_glow{
-                u0{
-                    w : 0.43111100792884827
-                    x : 0.28888893127441406
-                    y : 1.0
-                    z : 0.20000000298023224
+                colour{
+                    red : 0.43111100792884827
+                    green : 0.28888893127441406
+                    blue : 1.0
+                    brightness : 0.20000000298023224
                 }
                 u1 : 6.0
                 u2 : 20
