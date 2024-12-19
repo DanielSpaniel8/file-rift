@@ -1,4 +1,4 @@
-rift_mode = "decode"  # options: decode, recode, both
+rift_mode = "recode"  # options: decode, recode, both
 allways_recode = False
 
 import os
@@ -146,28 +146,15 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
             outLines.append(
                 indent
                 + tagname
-                + " : '"
-                + str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1].replace(
-                    "'", "\\'"
-                )
-                + "'\n"
+                + " : "
+                + str(inbytes[sum(offsets) : sum(offsets) + pointer])[1:]
+                + "\n"
             )
             offsets[metalevel] += pointer
 
         if isinstance(tagname, list):  # if there is an alternative action:
 
             k = tagname
-
-            if k[0] == 0:  # link to another format
-
-                path = []
-                path = k[1].rsplit("/")
-
-                thisForm = formats[0]
-                for l in path:
-                    thisForm = thisForm[l]
-
-                tagname = thisForm
 
             if k[0] == 1:  # lua chunk
                 outLines.append(indent + tagname[1] + " : $\n")
@@ -185,11 +172,9 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 outLines.append(
                     indent
                     + tagname[1]
-                    + " : '"
-                    + str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1].replace(
-                        "'", "\\'"
-                    )
-                    + "'\n"
+                    + " : "
+                    + str(inbytes[sum(offsets) : sum(offsets) + pointer])[1:]
+                    + "\n"
                 )
                 offsets[metalevel] += pointer
 
@@ -533,6 +518,7 @@ def recode_lexList(lexList):
                             lexeme = lexeme[1:-1]
                         else:
                             print("missing quote for len type", tag, lexeme, line_num)
+                            print(game_file[8:])
                             quit()
 
                         # --- handle bytestrings
