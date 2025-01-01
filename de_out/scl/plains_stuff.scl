@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'plains_stuff'
 library_item{
@@ -891,7 +891,7 @@ $end
                     blue : 0.6888889074325562
                     brightness : 0.0
                 }
-                u1 : 24.0
+                radius : 24.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.15000000596046448
@@ -1087,7 +1087,7 @@ $end
                     blue : 0.6888889074325562
                     brightness : 0.0
                 }
-                u1 : 24.0
+                radius : 24.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.15000000596046448
@@ -2053,7 +2053,7 @@ $end
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target, normal = ...;
 
@@ -2196,11 +2196,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.3222222328186035
-                        x : 0.4333333671092987
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 0.3222222328186035
+                        green : 0.4333333671092987
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 30.0
@@ -2747,7 +2747,7 @@ library_item{
                     blue : 0.9555555582046509
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -5737,7 +5737,7 @@ library_item{
                     blue : 0.048271626234054565
                     brightness : 0.0
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 15
                 u3 : 5.0
                 u4 : 0.11999999731779099
@@ -5758,7 +5758,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.0
                 }
-                u1 : 8.0
+                radius : 8.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.05000000074505806
@@ -5782,11 +5782,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.12222222238779068
-                        x : 0.12222222238779068
-                        y : 0.12222222238779068
-                        z : 0.12222222238779068
+                    colour{
+                        red : 0.12222222238779068
+                        green : 0.12222222238779068
+                        blue : 0.12222222238779068
+                        brightness : 0.12222222238779068
                     }
                     u2 : 90.0
                     u2 : 0.0
@@ -6151,7 +6151,7 @@ library_item{
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -6219,11 +6219,11 @@ $end
                 u4 : 1
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.25555551052093506
-                        x : 0.3444444239139557
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 0.25555551052093506
+                        green : 0.3444444239139557
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 45.0
@@ -6334,11 +6334,11 @@ $end
                 u4 : 1
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.24444440007209778
-                        y : 0.4777778089046478
-                        z : 0.0
+                    colour{
+                        red : 0.0
+                        green : 0.24444440007209778
+                        blue : 0.4777778089046478
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 45.0
@@ -6459,7 +6459,7 @@ library_item{
                 u1 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target, normal = ...;
 
@@ -6558,7 +6558,7 @@ library_item{
                     blue : 0.13962960243225098
                     brightness : 0.0
                 }
-                u1 : 40.0
+                radius : 40.0
                 u2 : 15
                 u3 : 15.0
                 u4 : 0.07999999821186066

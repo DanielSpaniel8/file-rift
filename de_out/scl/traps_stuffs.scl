@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'traps_stuffs'
 library_item{
@@ -64,7 +64,7 @@ $end
                 u0 : 1
                 w : -30.0
                 x : 30.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 

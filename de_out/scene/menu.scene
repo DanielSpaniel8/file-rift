@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -145,7 +145,7 @@ object{
         entity_controller{
             entity_component : 105
             animation_controller_component : 107
-            u2 : 102
+            walk_animation : 102
             collision_shape : 0
             u4 : 0.0
             u5 : 800.0
@@ -6400,11 +6400,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.0
-                            x : 0.0
-                            y : 0.0
-                            z : 1.0
+                        colour{
+                            red : 0.0
+                            green : 0.0
+                            blue : 0.0
+                            brightness : 1.0
                         }
                         u2 : 0.0
                         u2 : 0.0
@@ -6520,11 +6520,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.8705882430076599
-                            x : 0.458823561668396
-                            y : 0.2509804368019104
-                            z : 0.0
+                        colour{
+                            red : 0.8705882430076599
+                            green : 0.458823561668396
+                            blue : 0.2509804368019104
+                            brightness : 0.0
                         }
                         u2 : 0.0
                         u2 : 120.0

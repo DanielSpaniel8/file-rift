@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'fireball_launcher'
@@ -303,7 +303,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : ''
                 u0 : 1.0
                 u1 : 5
@@ -837,7 +837,7 @@ object{
         entity_controller{
             entity_component : 104
             animation_controller_component : 103
-            u2 : 109
+            walk_animation : 109
             collision_shape : 120
             u4 : 100.0
             u5 : 800.0
@@ -18411,7 +18411,7 @@ object{
             u3 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -19192,11 +19192,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 1
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0
@@ -19223,11 +19223,11 @@ object{
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.7444444894790649
-                            y : 0.4555555582046509
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.7444444894790649
+                            blue : 0.4555555582046509
+                            brightness : 0.0
                         }
                         u2 : 100.0
                         u2 : 0.30000001192092896
@@ -19302,11 +19302,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.6555556058883667
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.6555556058883667
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 30.0
                         u2 : 0.30000001192092896
@@ -19337,11 +19337,11 @@ object{
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.855555534362793
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.855555534362793
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 40.0
                         u2 : 0.30000001192092896

@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'firesprayer'
@@ -2310,7 +2310,7 @@ object{
             u3 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -18503,11 +18503,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 1
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0
@@ -18534,11 +18534,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.7444444298744202
-                            y : 0.4555555582046509
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.7444444298744202
+                            blue : 0.4555555582046509
+                            brightness : 0.0
                         }
                         u2 : 100.0
                         u2 : 0.30000001192092896
@@ -18716,7 +18716,7 @@ $end
                     u3 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -18750,7 +18750,7 @@ $end
                 entity_controller{
                     entity_component : 107
                     animation_controller_component : 105
-                    u2 : 103
+                    walk_animation : 103
                     collision_shape : 115
                     u4 : 100.0
                     u5 : 800.0
@@ -18866,7 +18866,7 @@ $end
                         blue : 0.0
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -18890,11 +18890,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.4000000059604645
-                            x : 0.2666666805744171
-                            y : 0.18888887763023376
-                            z : 0.0
+                        colour{
+                            red : 0.4000000059604645
+                            green : 0.2666666805744171
+                            blue : 0.18888887763023376
+                            brightness : 0.0
                         }
                         u2 : 90.0
                         u2 : 360.0
@@ -18985,11 +18985,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.6555556058883667
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.6555556058883667
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 30.0
                         u2 : 0.30000001192092896
@@ -19020,11 +19020,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.855555534362793
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.855555534362793
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 40.0
                         u2 : 0.30000001192092896

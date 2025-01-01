@@ -1,16 +1,24 @@
 
-local self = ...;
 
-if Character.HasItem("key_yellow") then
-    Character.RemoveItem("key_yellow");
-    Character.AddFlag(self:identifier()); -- Remember that the door is open
 
-    self:setHidden(true);
-    Program.Execute(Scene.Find(self:identifier() .. "_door"));
 
-    SoundLibrary.PlayEffect("unlock");
-else
-    Game.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));
+CollisionShape.SetEnabled(Scene.Find("portal"), 106, false);
+
+if Character.IsQuestCompleted("quest02_village_elder") then
+    Scene.SetGroupHidden("block_group", true);
+    Scene.SetGroupHidden("pass_group", false);
 end
 
-local test_str = '\''
+if Character.IsQuestCompleted("quest01_find_master") then
+    Scene.SetGroupHidden("day", false);
+    Scene.SetGroupHidden("night", true);
+    CollisionShape.SetEnabled(Scene.Find("portal"), 106, true);
+    Program.Wait(0.01);
+else
+    Scene.SetGroupHidden("day", true);
+    Scene.SetGroupHidden("night", false);
+    Program.Wait(0.01);
+end
+
+
+

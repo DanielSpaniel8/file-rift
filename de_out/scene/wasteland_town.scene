@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -878,7 +878,7 @@ object{
             u1 : 1
             w : -80.0
             x : 80.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 

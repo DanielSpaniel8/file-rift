@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -184,7 +184,7 @@ object{
         entity_controller{
             entity_component : 106
             animation_controller_component : 105
-            u2 : 103
+            walk_animation : 103
             collision_shape : 0
             u4 : 100.0
             u5 : 800.0
@@ -274,11 +274,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.644444465637207
-                    x : 0.0
-                    y : 2.3047130071063293e-07
-                    z : 0.5666666626930237
+                colour{
+                    red : 0.644444465637207
+                    green : 0.0
+                    blue : 2.3047130071063293e-07
+                    brightness : 0.5666666626930237
                 }
                 u2 : -105.0
                 u2 : 30.0
@@ -475,7 +475,7 @@ $end
             name : 'item_key_yellow'
             identifier : 'icecastle_bosskey'
             item{
-                item_type : 'item_key_yellow'
+                object : 'item_key_yellow'
                 identifier : 'icecastle_bosskey'
                 u0 : 1.0
                 u1 : 1
@@ -495,7 +495,7 @@ $end
                 blue : 0.0
                 brightness : 0.5
             }
-            u1 : 60.0
+            radius : 60.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -698,7 +698,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -709,7 +709,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x87\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(self, Rectangle.New(100, 100, 100, 100));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x05\x01\x01\x00\x06AA\x02A\x81\x01\x00\x81\x81\x01\x00\xc1\x81\x01\x00\x01\x82\x01\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -56026,11 +56026,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.6000000238418579
-                            x : 0.8666666746139526
-                            y : 1.0
-                            z : 0.24444448947906494
+                        colour{
+                            red : 0.6000000238418579
+                            green : 0.8666666746139526
+                            blue : 1.0
+                            brightness : 0.24444448947906494
                         }
                         u2 : 90.0
                         u2 : 0.0
@@ -56101,11 +56101,11 @@ object{
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.6000000238418579
-                            x : 0.8555555939674377
-                            y : 1.0
-                            z : 0.24444444477558136
+                        colour{
+                            red : 0.6000000238418579
+                            green : 0.8555555939674377
+                            blue : 1.0
+                            brightness : 0.24444444477558136
                         }
                         u2 : 90.0
                         u2 : 90.0
@@ -56532,7 +56532,7 @@ object{
                     u1 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -56590,7 +56590,7 @@ $end
                     u1 : 1
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -56660,7 +56660,7 @@ $end
                 collision_shape_2{
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target = ...;
 
@@ -56709,7 +56709,7 @@ $end
                         blue : 1.0
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -56929,7 +56929,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 104
-                    u2 : 105
+                    walk_animation : 105
                     collision_shape : 0
                     u4 : 0.0
                     u5 : 30000.0
@@ -58323,11 +58323,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 3
-                        u1{
-                            w : 0.6222221851348877
-                            x : 0.8111110329627991
-                            y : 1.0
-                            z : 0.5888888835906982
+                        colour{
+                            red : 0.6222221851348877
+                            green : 0.8111110329627991
+                            blue : 1.0
+                            brightness : 0.5888888835906982
                         }
                         u2 : 0.00800000037997961
                         u2 : 0.3499999940395355
@@ -58450,7 +58450,7 @@ $end
                         blue : 0.9222221970558167
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448

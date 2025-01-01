@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'skeleton'
 library_item{
@@ -14,7 +14,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -230,7 +230,7 @@ library_item{
                     blue : 1.0
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -597,7 +597,7 @@ library_item{
                     blue : 0.1666669249534607
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -684,7 +684,7 @@ library_item{
                     blue : 1.0
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -983,11 +983,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 2
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u2 : 100.0
                     u2 : 0.30000001192092896
@@ -1018,11 +1018,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 1.0
-                        x : 0.855555534362793
-                        y : 0.888888955116272
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.855555534362793
+                        blue : 0.888888955116272
+                        brightness : 0.0
                     }
                     u2 : 150.0
                     u2 : 1.5
@@ -1097,11 +1097,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 1
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u2 : 70.0
                     u2 : 0.6000000238418579
@@ -1221,7 +1221,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -1436,11 +1436,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.3111111521720886
-                        x : 0.477777898311615
-                        y : 0.9999999403953552
-                        z : 0.0
+                    colour{
+                        red : 0.3111111521720886
+                        green : 0.477777898311615
+                        blue : 0.9999999403953552
+                        brightness : 0.0
                     }
                     u2 : 0.019999999552965164
                     u2 : 0.4000000059604645
@@ -1500,7 +1500,7 @@ library_item{
                     blue : 0.6333333253860474
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -1568,11 +1568,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.6666666865348816
-                        x : 0.20000001788139343
-                        y : 0.18888890743255615
-                        z : 0.0
+                    colour{
+                        red : 0.6666666865348816
+                        green : 0.20000001788139343
+                        blue : 0.18888890743255615
+                        brightness : 0.0
                     }
                     u2 : 0.019999999552965164
                     u2 : 0.4000000059604645
@@ -1632,7 +1632,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448

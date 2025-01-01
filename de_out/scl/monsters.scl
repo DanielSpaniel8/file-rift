@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'monsters'
 library_item{
@@ -136,7 +136,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -314,7 +314,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 104
-                u2 : 105
+                walk_animation : 105
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 3000.0
@@ -875,7 +875,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -1131,7 +1131,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -1309,7 +1309,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 104
-                u2 : 105
+                walk_animation : 105
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 5000.0
@@ -2023,7 +2023,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.12222222238779068
                 }
-                u1 : 38.0
+                radius : 38.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -2165,7 +2165,7 @@ $end
             entity_controller{
                 entity_component : 104
                 animation_controller_component : 107
-                u2 : 128
+                walk_animation : 128
                 collision_shape : 108
                 u4 : 100.0
                 u5 : 800.0
@@ -2220,7 +2220,7 @@ $end
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -2732,7 +2732,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 105
-                u2 : 112
+                walk_animation : 112
                 collision_shape : 117
                 u4 : 100.0
                 u5 : 1000.0
@@ -2968,7 +2968,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 105
-                u2 : 112
+                walk_animation : 112
                 collision_shape : 117
                 u4 : 100.0
                 u5 : 1000.0
@@ -3152,7 +3152,7 @@ library_item{
                     blue : 0.1111111119389534
                     brightness : 0.5
                 }
-                u1 : 38.0
+                radius : 38.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -3294,7 +3294,7 @@ $end
             entity_controller{
                 entity_component : 104
                 animation_controller_component : 107
-                u2 : 128
+                walk_animation : 128
                 collision_shape : 108
                 u4 : 140.0
                 u5 : 800.0
@@ -3349,7 +3349,7 @@ $end
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -3948,11 +3948,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.40000003576278687
-                        x : 0.19111111760139465
-                        y : 0.0
-                        z : 0.0
+                    colour{
+                        red : 0.40000003576278687
+                        green : 0.19111111760139465
+                        blue : 0.0
+                        brightness : 0.0
                     }
                     u2 : 0.009999999776482582
                     u2 : 0.3499999940395355
@@ -4071,7 +4071,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 104
-                u2 : 105
+                walk_animation : 105
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 800.0
@@ -4511,7 +4511,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 108
-                u2 : 104
+                walk_animation : 104
                 collision_shape : 0
                 u4 : 400.0
                 u5 : 800.0
@@ -4621,11 +4621,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.4888888895511627
-                        x : 0.26324790716171265
-                        y : 0.0
-                        z : 0.0
+                    colour{
+                        red : 0.4888888895511627
+                        green : 0.26324790716171265
+                        blue : 0.0
+                        brightness : 0.0
                     }
                     u2 : 0.009999999776482582
                     u2 : 0.6000000238418579
@@ -4685,7 +4685,7 @@ $end
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 80.0
+                radius : 80.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -4909,7 +4909,7 @@ library_item{
             entity_controller{
                 entity_component : 109
                 animation_controller_component : 107
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 111
                 u4 : 70.0
                 u5 : 800.0
@@ -5003,7 +5003,7 @@ $end
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 60.0
+                radius : 60.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -5499,7 +5499,7 @@ library_item{
             entity_controller{
                 entity_component : 106
                 animation_controller_component : 104
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 60.0
                 u5 : 1000.0
@@ -5629,7 +5629,7 @@ $end
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self = ...;
 
@@ -6244,7 +6244,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 105
-                u2 : 112
+                walk_animation : 112
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 1000.0
@@ -6647,7 +6647,7 @@ library_item{
             entity_controller{
                 entity_component : 104
                 animation_controller_component : 103
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -7062,7 +7062,7 @@ library_item{
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -7255,7 +7255,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 106
-                u2 : 122
+                walk_animation : 122
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 10000.0
@@ -7844,7 +7844,7 @@ library_item{
                     blue : 0.1666666716337204
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -8076,7 +8076,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 23.0
+                radius : 23.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -8575,7 +8575,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -8849,7 +8849,7 @@ $end
                 name : 'item_key_yellow'
                 identifier : 'magicsword_key'
                 item{
-                    item_type : 'item_key_yellow'
+                    object : 'item_key_yellow'
                     identifier : 'magicsword_key'
                     u0 : 1.0
                     u1 : 1
@@ -8876,7 +8876,7 @@ $end
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -8900,11 +8900,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.15555556118488312
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.15555556118488312
                     }
                     u2 : 90.0
                     u2 : 360.0
@@ -9051,7 +9051,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -9336,7 +9336,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 2500.0
@@ -9616,7 +9616,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 2500.0
@@ -10447,11 +10447,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.5888888835906982
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.5888888835906982
                     }
                     u2 : 0.009999999776482582
                     u2 : 0.25
@@ -10483,11 +10483,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 2
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.6000000238418579
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.6000000238418579
                     }
                     u2 : 50.0
                     u2 : 0.5
@@ -10530,7 +10530,7 @@ library_item{
                     blue : 0.47777777910232544
                     brightness : 1.0
                 }
-                u1 : 22.0
+                radius : 22.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.10000000149011612
@@ -10934,7 +10934,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -10968,7 +10968,7 @@ $end
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -11084,7 +11084,7 @@ $end
                     blue : 0.5
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -11108,11 +11108,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.17777779698371887
-                        x : 0.17777779698371887
-                        y : 0.46666666865348816
-                        z : 0.0
+                    colour{
+                        red : 0.17777779698371887
+                        green : 0.17777779698371887
+                        blue : 0.46666666865348816
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 360.0
@@ -11443,7 +11443,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 108
+                walk_animation : 108
                 collision_shape : 0
                 u4 : 400.0
                 u5 : 800.0
@@ -12445,7 +12445,7 @@ library_item{
             entity_controller{
                 entity_component : 109
                 animation_controller_component : 107
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 111
                 u4 : 70.0
                 u5 : 800.0
@@ -12629,7 +12629,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 105
-                u2 : 112
+                walk_animation : 112
                 collision_shape : 117
                 u4 : 150.0
                 u5 : 1000.0
@@ -13022,7 +13022,7 @@ library_item{
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 108
-                u2 : 104
+                walk_animation : 104
                 collision_shape : 0
                 u4 : 400.0
                 u5 : 800.0

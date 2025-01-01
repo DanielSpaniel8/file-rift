@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -1719,7 +1719,7 @@ $end
         entity_controller{
             entity_component : 103
             animation_controller_component : 105
-            u2 : 112
+            walk_animation : 112
             collision_shape : 117
             u4 : 100.0
             u5 : 1000.0
@@ -1882,14 +1882,14 @@ $end
         number : 141
         item_drop{
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'sshardie'
                 u0 : 1.0
                 u1 : 1
                 amount : 1
             }
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'sshardie_red'
                 u0 : 1.0
                 u1 : 2

@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'master'
 library_item{
@@ -49,7 +49,7 @@ $end
             entity_controller{
                 entity_component : 1
                 animation_controller_component : 109
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 800.0
@@ -147,7 +147,7 @@ $end
                 u1 : 1
                 w : -15.0
                 x : 100.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -186,11 +186,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.09333334863185883
-                        x : 0.1733333319425583
-                        y : 0.1733333021402359
-                        z : 0.0
+                    colour{
+                        red : 0.09333334863185883
+                        green : 0.1733333319425583
+                        blue : 0.1733333021402359
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 180.0
@@ -258,7 +258,7 @@ $end
                     blue : 0.2716049551963806
                     brightness : 0.0
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : -20.0
                 u4 : 0.15000000596046448
@@ -303,7 +303,7 @@ library_item{
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self = ...;
 
@@ -390,7 +390,7 @@ library_item{
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 

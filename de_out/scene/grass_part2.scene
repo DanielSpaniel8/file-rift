@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -6605,7 +6605,7 @@ object{
             w : -15.0
             x : 15.0
             interaction_type : 2
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -7071,7 +7071,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -8089,7 +8089,7 @@ object{
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8153,7 +8153,7 @@ $end
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8217,7 +8217,7 @@ $end
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8281,7 +8281,7 @@ $end
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8345,7 +8345,7 @@ $end
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8417,7 +8417,7 @@ $end
             u0 : 1
             w : -105.0
             x : 105.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -8860,7 +8860,7 @@ object{
             u0 : 1
             w : -80.0
             x : 80.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -9471,7 +9471,7 @@ object{
             u0 : 1
             w : -80.0
             x : 80.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -9535,7 +9535,7 @@ $end
             u0 : 1
             w : -80.0
             x : 80.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -9595,7 +9595,7 @@ $end
             u0 : 1
             w : -80.0
             x : 80.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 

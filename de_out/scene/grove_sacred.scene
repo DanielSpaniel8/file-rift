@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -1646,7 +1646,7 @@ object{
         entity_controller{
             entity_component : 103
             animation_controller_component : 106
-            u2 : 107
+            walk_animation : 107
             collision_shape : 0
             u4 : 250.0
             u5 : 800.0
@@ -1716,11 +1716,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.13333332538604736
-                    x : 0.1666666865348816
-                    y : 0.30000001192092896
-                    z : 0.0
+                colour{
+                    red : 0.13333332538604736
+                    green : 0.1666666865348816
+                    blue : 0.30000001192092896
+                    brightness : 0.0
                 }
                 u2 : -90.0
                 u2 : 0.0
@@ -5266,7 +5266,7 @@ object{
         entity_controller{
             entity_component : 107
             animation_controller_component : 104
-            u2 : 110
+            walk_animation : 110
             collision_shape : 0
             u4 : 0.0
             u5 : 16000.0
@@ -5306,7 +5306,7 @@ object{
                 main_chunk : $
 local self = ...;
 
-self["texts"] ={"\\"Here lies Selma, the non-human developer.\\""}
+self["texts"] ={"\"Here lies Selma, the non-human developer.\""}
 
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00V\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"\\"Here lies Selma, the non-human developer.\\""}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04,\x00\x00\x00"Here lies Selma, the non-human developer."\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
@@ -5355,7 +5355,7 @@ $end
         collision_shape_2{
             w : -150.0
             x : 150.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -5369,7 +5369,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 

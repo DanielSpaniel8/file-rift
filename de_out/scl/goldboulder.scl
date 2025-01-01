@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'goldboulder'
 library_item{
@@ -22,7 +22,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 
 
@@ -161,7 +161,7 @@ $end
                     blue : 0.23333337903022766
                     brightness : 0.5
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.0

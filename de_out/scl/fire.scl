@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'fire'
 library_item{
@@ -17,11 +17,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 1
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u3 : 0.0
                     u4 : 0.0
@@ -48,11 +48,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 0.9999999403953552
-                        x : 0.7444444298744202
-                        y : 0.45555561780929565
-                        z : 0.0
+                    colour{
+                        red : 0.9999999403953552
+                        green : 0.7444444298744202
+                        blue : 0.45555561780929565
+                        brightness : 0.0
                     }
                     u2 : 100.0
                     u2 : 0.30000001192092896
@@ -127,11 +127,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 2
-                    u1{
-                        w : 1.0
-                        x : 0.6555556058883667
-                        y : 0.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.6555556058883667
+                        blue : 0.0
+                        brightness : 0.0
                     }
                     u2 : 30.0
                     u2 : 0.30000001192092896
@@ -162,11 +162,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 1.0
-                        x : 0.855555534362793
-                        y : 0.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.855555534362793
+                        blue : 0.0
+                        brightness : 0.0
                     }
                     u2 : 40.0
                     u2 : 0.30000001192092896
@@ -267,11 +267,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 1.0
-                        x : 0.49037057161331177
-                        y : 0.04444456100463867
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.49037057161331177
+                        blue : 0.04444456100463867
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 10.0
@@ -334,7 +334,7 @@ library_item{
                     blue : 0.022222280502319336
                     brightness : 0.0
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.15000000596046448
@@ -356,11 +356,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.20000000298023224
-                        x : 0.1066666841506958
-                        y : 0.0
-                        z : 0.0
+                    colour{
+                        red : 0.20000000298023224
+                        green : 0.1066666841506958
+                        blue : 0.0
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 0.0
@@ -408,11 +408,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 1.0
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 1.0
                     }
                     u2 : 90.0
                     u2 : 60.0
@@ -653,7 +653,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -719,7 +719,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -793,11 +793,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.8587653636932373
-                        x : 0.3952264189720154
-                        y : 0.16345691680908203
-                        z : 0.0
+                    colour{
+                        red : 0.8587653636932373
+                        green : 0.3952264189720154
+                        blue : 0.16345691680908203
+                        brightness : 0.0
                     }
                     u2 : 0.009999999776482582
                     u2 : 0.4000000059604645
@@ -852,7 +852,7 @@ $end
                     blue : 0.12777787446975708
                     brightness : 0.0
                 }
-                u1 : 90.0
+                radius : 90.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.15000000596046448

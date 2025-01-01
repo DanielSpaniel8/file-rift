@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -3212,7 +3212,7 @@ object{
             name : 'sshard_yellow'
             identifier : 'shardy1'
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'shardy1'
                 u0 : 1.0
                 u1 : 3
@@ -6033,7 +6033,7 @@ object{
             name : 'sshard_yellow'
             identifier : 'sshardy2'
             item{
-                item_type : 'item_shadowtrinket'
+                object : 'item_shadowtrinket'
                 identifier : 'shadowtrinket'
                 u0 : 1.0
                 u1 : 1
@@ -6232,7 +6232,7 @@ $end
         entity_controller{
             entity_component : 103
             animation_controller_component : 102
-            u2 : 109
+            walk_animation : 109
             collision_shape : 0
             u4 : 100.0
             u5 : 800.0
@@ -6459,7 +6459,7 @@ $end
         entity_controller{
             entity_component : 103
             animation_controller_component : 102
-            u2 : 109
+            walk_animation : 109
             collision_shape : 0
             u4 : 100.0
             u5 : 800.0
@@ -6866,7 +6866,7 @@ object{
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 102
-                    u2 : 109
+                    walk_animation : 109
                     collision_shape : 0
                     u4 : 100.0
                     u5 : 800.0

@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -632,7 +632,7 @@ object{
                 blue : 0.17777778208255768
                 brightness : 0.3333333432674408
             }
-            u1 : 50.0
+            radius : 50.0
             u2 : 10
             u3 : 15.0
             u4 : 0.0
@@ -649,7 +649,7 @@ object{
         entity_controller{
             entity_component : 108
             animation_controller_component : 111
-            u2 : 102
+            walk_animation : 102
             collision_shape : 109
             u4 : 100.0
             u5 : 16000.0
@@ -719,11 +719,11 @@ $end
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                colour{
+                    red : 0.0
+                    green : 0.0
+                    blue : 0.0
+                    brightness : 1.0
                 }
                 u2 : 260.0
                 u2 : 45.0
@@ -1175,7 +1175,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -1552,7 +1552,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 
 
@@ -1646,7 +1646,7 @@ $end
         entity_controller{
             entity_component : 1
             animation_controller_component : 109
-            u2 : 103
+            walk_animation : 103
             collision_shape : 0
             u4 : 0.0
             u5 : 800.0
@@ -1719,7 +1719,7 @@ $end
             u2 : 1
             w : -15.0
             x : 100.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -1758,11 +1758,11 @@ $end
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.09333334863185883
-                    x : 0.1733333319425583
-                    y : 0.1733333021402359
-                    z : 0.0
+                colour{
+                    red : 0.09333334863185883
+                    green : 0.1733333319425583
+                    blue : 0.1733333021402359
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 180.0
@@ -1830,7 +1830,7 @@ $end
                 blue : 0.2716049551963806
                 brightness : 0.0
             }
-            u1 : 50.0
+            radius : 50.0
             u2 : 10
             u3 : -20.0
             u4 : 0.15000000596046448
@@ -4332,11 +4332,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.3222222328186035
-                    x : 0.4333333671092987
-                    y : 1.0
-                    z : 0.0
+                colour{
+                    red : 0.3222222328186035
+                    green : 0.4333333671092987
+                    blue : 1.0
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 30.0
@@ -5581,7 +5581,7 @@ object{
         item_drop{
             name : 'sshard_red'
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -7236,7 +7236,7 @@ object{
         item_drop{
             name : 'healthbottle_big'
             item{
-                item_type : 'item_healingpotion'
+                object : 'item_healingpotion'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -35509,7 +35509,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -35530,7 +35530,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -35554,11 +35554,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -35752,7 +35752,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -35773,7 +35773,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -35797,11 +35797,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -36049,7 +36049,7 @@ object{
                 entity_controller{
                     entity_component : 104
                     animation_controller_component : 102
-                    u2 : 103
+                    walk_animation : 103
                     collision_shape : 113
                     u4 : 35.0
                     u5 : 800.0

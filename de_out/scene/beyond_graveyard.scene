@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -1778,7 +1778,7 @@ object{
                 blue : 0.21111111342906952
                 brightness : 0.5
             }
-            u1 : 27.0
+            radius : 27.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07000000029802322
@@ -1930,7 +1930,7 @@ object{
                 blue : 0.21111111342906952
                 brightness : 0.5
             }
-            u1 : 27.0
+            radius : 27.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07000000029802322
@@ -2136,7 +2136,7 @@ object{
                 blue : 0.21111111342906952
                 brightness : 0.5
             }
-            u1 : 27.0
+            radius : 27.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07000000029802322
@@ -2264,7 +2264,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -2276,7 +2276,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9c\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FollowShape(self, Rectangle.New(0,0,0,0));\r\n\tMusicPlayer.PlayMusic("boss");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x15\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x05\x01\x01\x00\x06AA\x02A\x81\x01\x00\x81\x81\x01\x00\xc1\x81\x01\x00\x01\x82\x01\x00\x1c\x01\x80\x02\x9c@\x00\x00\x85\xc0\x01\x00\x86\x00B\x01\xc1@\x02\x00\x9c@\x00\x01\x1e\x00\x80\x00\n\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0c\x00\x00\x00FollowShape\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0c\x00\x00\x00MusicPlayer\x00\x04\n\x00\x00\x00PlayMusic\x00\x04\x05\x00\x00\x00boss\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -5880,7 +5880,7 @@ object{
                         blue : 0.21111111342906952
                         brightness : 0.5
                     }
-                    u1 : 27.0
+                    radius : 27.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.07000000029802322
@@ -6055,7 +6055,7 @@ object{
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 102
-                    u2 : 109
+                    walk_animation : 109
                     collision_shape : 0
                     u4 : 100.0
                     u5 : 800.0

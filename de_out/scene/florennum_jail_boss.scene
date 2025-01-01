@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -91,14 +91,14 @@ object{
         number : 155
         item_drop{
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'yellowshards'
                 u0 : 1.0
                 u1 : 2
                 amount : 2
             }
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'redsharddos'
                 u0 : 1.0
                 u1 : 3
@@ -157,7 +157,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -359,7 +359,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -374,7 +374,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x92\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.FocusAtShape(self);\r\n\r\n\tMusicPlayer.PlayMusic("boss", true);\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0f\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x00\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x02\x01\x80\x00\x9c@\x80\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\x0c\x00\x00\x00MusicPlayer\x00\x04\n\x00\x00\x00PlayMusic\x00\x04\x05\x00\x00\x00boss\x00\x00\x00\x00\x00\x0f\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0e\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0e\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -431,7 +431,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -443,7 +443,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00g\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.FocusAtShape(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -500,7 +500,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -512,7 +512,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00g\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.FocusAtShape(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -569,7 +569,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -581,7 +581,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00g\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.FocusAtShape(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -638,7 +638,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -650,7 +650,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00g\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.FocusAtShape(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11753,14 +11753,14 @@ $end
         number : 155
         item_drop{
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'yellowshards'
                 u0 : 1.0
                 u1 : 3
                 amount : 3
             }
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'redsharddos'
                 u0 : 1.0
                 u1 : 4
@@ -11831,7 +11831,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11843,7 +11843,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00a\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.ResetFocus();\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\x9c@\x80\x00\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11888,7 +11888,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11900,7 +11900,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00a\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.ResetFocus();\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\x9c@\x80\x00\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11945,7 +11945,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -11957,7 +11957,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00a\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tCamera.ResetFocus();\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\x9c@\x80\x00\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -12002,7 +12002,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -12013,7 +12013,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -12485,7 +12485,7 @@ $end
                         blue : 0.05555577948689461
                         brightness : 0.23333333432674408
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -12502,7 +12502,7 @@ $end
                 item_drop{
                     name : 'nugget_mana'
                     item{
-                        item_type : 'nugget_mana'
+                        object : 'nugget_mana'
                         identifier : ''
                         u0 : 1.0
                         u1 : 1
@@ -12542,7 +12542,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -12737,7 +12737,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -13144,7 +13144,7 @@ $end
                 collision_shape_2{
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal = ...;
 
@@ -13215,7 +13215,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -13701,7 +13701,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 105
-                    u2 : 112
+                    walk_animation : 112
                     collision_shape : 0
                     u4 : 0.0
                     u5 : 50000.0
@@ -14488,7 +14488,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 105
-                    u2 : 112
+                    walk_animation : 112
                     collision_shape : 117
                     u4 : 0.0
                     u5 : 1000.0

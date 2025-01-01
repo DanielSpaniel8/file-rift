@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -2951,7 +2951,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'sshardie'
                 u0 : 1.0
                 u1 : 3
@@ -5067,7 +5067,7 @@ object{
                 collision_shape_2{
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal = ...;
 
@@ -5138,7 +5138,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448

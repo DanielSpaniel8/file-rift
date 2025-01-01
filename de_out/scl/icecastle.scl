@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'icecastle'
 library_item{
@@ -34,7 +34,7 @@ library_item{
                 u1 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -57,7 +57,7 @@ $end
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -128,7 +128,7 @@ $end
                     blue : 0.5
                     brightness : 0.5
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -152,11 +152,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.17777779698371887
-                        x : 0.17777779698371887
-                        y : 0.46666666865348816
-                        z : 0.0
+                    colour{
+                        red : 0.17777779698371887
+                        green : 0.17777779698371887
+                        blue : 0.46666666865348816
+                        brightness : 0.0
                     }
                     u2 : 270.0
                     u2 : 90.0
@@ -538,7 +538,7 @@ library_item{
                 u1 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -561,7 +561,7 @@ $end
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -629,7 +629,7 @@ $end
                     blue : 0.5
                     brightness : 0.5
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -653,11 +653,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.17777779698371887
-                        x : 0.17777779698371887
-                        y : 0.46666666865348816
-                        z : 0.0
+                    colour{
+                        red : 0.17777779698371887
+                        green : 0.17777779698371887
+                        blue : 0.46666666865348816
+                        brightness : 0.0
                     }
                     u2 : 270.0
                     u2 : 90.0

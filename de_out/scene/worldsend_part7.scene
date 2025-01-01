@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -21508,7 +21508,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 102
-                    u2 : 108
+                    walk_animation : 108
                     collision_shape : 0
                     u4 : 600.0
                     u5 : 800.0
@@ -21604,11 +21604,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.8444445729255676
-                            x : 0.6222221255302429
-                            y : 0.9777777791023254
-                            z : 0.0
+                        colour{
+                            red : 0.8444445729255676
+                            green : 0.6222221255302429
+                            blue : 0.9777777791023254
+                            brightness : 0.0
                         }
                         u2 : 90.0
                         u2 : 360.0
@@ -21676,7 +21676,7 @@ $end
                         blue : 0.5777778029441833
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -21717,7 +21717,7 @@ $end
                         blue : 0.47777777910232544
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -21743,7 +21743,7 @@ $end
                     u3 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target =...;
 

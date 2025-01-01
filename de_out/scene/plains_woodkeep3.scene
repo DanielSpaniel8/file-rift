@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : '1'
@@ -241,7 +241,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -336,7 +336,7 @@ object{
                 blue : 0.1555555760860443
                 brightness : 0.0
             }
-            u1 : 55.0
+            radius : 55.0
             u2 : 10
             u3 : 15.0
             u4 : 0.0
@@ -561,7 +561,7 @@ $end
         entity_controller{
             entity_component : 105
             animation_controller_component : 107
-            u2 : 103
+            walk_animation : 103
             collision_shape : 0
             u4 : 100.0
             u5 : 800.0
@@ -836,7 +836,7 @@ $end
         entity_controller{
             entity_component : 105
             animation_controller_component : 107
-            u2 : 103
+            walk_animation : 103
             collision_shape : 0
             u4 : 100.0
             u5 : 800.0
@@ -1056,7 +1056,7 @@ $end
                 blue : 0.1555555760860443
                 brightness : 0.0
             }
-            u1 : 55.0
+            radius : 55.0
             u2 : 10
             u3 : 15.0
             u4 : 0.0
@@ -1219,11 +1219,11 @@ $end
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                colour{
+                    red : 0.0
+                    green : 0.0
+                    blue : 0.0
+                    brightness : 1.0
                 }
                 u2 : 270.0
                 u2 : 45.0
@@ -1293,14 +1293,14 @@ $end
         number : 156
         item_drop{
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'redshards'
                 u0 : 1.0
                 u1 : 2
                 amount : 3
             }
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'yellowshard'
                 u0 : 1.0
                 u1 : 1
@@ -1574,7 +1574,7 @@ $end
                 blue : 0.5160493850708008
                 brightness : 0.0
             }
-            u1 : 40.0
+            radius : 40.0
             u2 : 15
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -3273,7 +3273,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -3286,7 +3286,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x87\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(self, Rectangle.New(300, 0, 300, 0));\r\nend\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x05\x01\x01\x00\x06AA\x02A\x81\x01\x00\x81\xc1\x01\x00\xc1\x81\x01\x00\x01\xc2\x01\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\xc0r@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -3383,7 +3383,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : ''
                 u0 : 1.0
                 u1 : 3
@@ -3470,7 +3470,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'item_key_yellow'
+                object : 'item_key_yellow'
                 identifier : 'd1_key4'
                 u0 : 1.0
                 u1 : 1
@@ -3512,7 +3512,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 100.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -3526,7 +3526,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc0\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tShowTextBubble(self:identifier() .. "_bubble", self:position() + Vector3.New(0, 40, 0), "Just hangin\' here..");\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x16\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x03\x80\x85\x80\x00\x00\xcb\x00@\x00\xdc\x80\x00\x01\x01\xc1\x00\x00\xd5\x00\x81\x01\x0b\x01A\x00\x1c\x81\x00\x01EA\x01\x00F\x81\xc1\x02\x81\xc1\x01\x00\xc1\x01\x02\x00\x01\xc2\x01\x00\\\x81\x00\x02\x0cA\x01\x02AA\x02\x00\x9c@\x00\x02\x1e\x00\x80\x00\n\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x14\x00\x00\x00Just hangin\' here..\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -17008,7 +17008,7 @@ object{
                         blue : 0.0
                         brightness : 0.5
                     }
-                    u1 : 23.0
+                    radius : 23.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -17181,7 +17181,7 @@ $end
                 number : 119
                 item_drop{
                     item{
-                        item_type : 'nugget_mana'
+                        object : 'nugget_mana'
                         identifier : ''
                         u0 : 0.800000011920929
                         u1 : 1
@@ -17248,11 +17248,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 3
-                        u1{
-                            w : 0.6666666865348816
-                            x : 0.20000001788139343
-                            y : 0.18888890743255615
-                            z : 0.0
+                        colour{
+                            red : 0.6666666865348816
+                            green : 0.20000001788139343
+                            blue : 0.18888890743255615
+                            brightness : 0.0
                         }
                         u2 : 0.019999999552965164
                         u2 : 0.4000000059604645
@@ -17343,7 +17343,7 @@ $end
                         blue : 0.0
                         brightness : 0.5
                     }
-                    u1 : 20.0
+                    radius : 20.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448

@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -370,7 +370,7 @@ object{
         entity_controller{
             entity_component : 104
             animation_controller_component : 102
-            u2 : 103
+            walk_animation : 103
             collision_shape : 113
             u4 : 35.0
             u5 : 800.0
@@ -605,7 +605,7 @@ object{
         entity_controller{
             entity_component : 103
             animation_controller_component : 104
-            u2 : 105
+            walk_animation : 105
             collision_shape : 0
             u4 : 0.0
             u5 : 800.0
@@ -901,7 +901,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 
 
@@ -943,7 +943,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 
 
@@ -1008,11 +1008,11 @@ object{
             u4 : 0
             u5{
                 u0 : 3
-                u1{
-                    w : 0.12839506566524506
-                    x : 0.22716055810451508
-                    y : 0.22716058790683746
-                    z : 0.0
+                colour{
+                    red : 0.12839506566524506
+                    green : 0.22716055810451508
+                    blue : 0.22716058790683746
+                    brightness : 0.0
                 }
                 u2 : 0.00800000037997961
                 u2 : 0.20000000298023224
@@ -1051,7 +1051,7 @@ object{
                 blue : 0.780658483505249
                 brightness : 0.5
             }
-            u1 : 15.0
+            radius : 15.0
             u2 : 20
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -1073,11 +1073,11 @@ object{
             u4 : 0
             u5{
                 u0 : 3
-                u1{
-                    w : 0.5333333611488342
-                    x : 0.5333333611488342
-                    y : 0.5333333611488342
-                    z : 0.0
+                colour{
+                    red : 0.5333333611488342
+                    green : 0.5333333611488342
+                    blue : 0.5333333611488342
+                    brightness : 0.0
                 }
                 u2 : 0.009999999776482582
                 u2 : 0.20000000298023224
@@ -1183,7 +1183,7 @@ object{
         entity_controller{
             entity_component : 103
             animation_controller_component : 105
-            u2 : 112
+            walk_animation : 112
             collision_shape : 106
             u4 : 100.0
             u5 : 1000.0
@@ -5635,7 +5635,7 @@ object{
             u1 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -5756,7 +5756,7 @@ object{
             u1 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -5877,7 +5877,7 @@ object{
             u1 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -5998,7 +5998,7 @@ object{
             u1 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -6171,7 +6171,7 @@ object{
                     u1 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -6269,7 +6269,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -6533,11 +6533,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0
@@ -6564,11 +6564,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 1
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0

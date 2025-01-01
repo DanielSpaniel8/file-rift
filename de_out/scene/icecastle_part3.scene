@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -40525,7 +40525,7 @@ $end
                     u0 : 1
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target = ...;
 
@@ -40878,7 +40878,7 @@ $end
                     u1 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -40936,7 +40936,7 @@ $end
                     u1 : 1
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -41006,7 +41006,7 @@ $end
                 collision_shape_2{
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target = ...;
 
@@ -41055,7 +41055,7 @@ $end
                         blue : 1.0
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448

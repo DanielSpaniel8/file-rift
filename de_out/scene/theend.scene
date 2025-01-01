@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -3663,7 +3663,7 @@ object{
                     u1 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -3761,7 +3761,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -4025,11 +4025,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0
@@ -4056,11 +4056,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 1
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0

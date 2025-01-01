@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'game_common'
 library_item{
@@ -17,11 +17,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 1
-                    u1{
-                        w : 0.4000000059604645
-                        x : 0.0
-                        y : 1.4305115314527939e-07
-                        z : 0.0
+                    colour{
+                        red : 0.4000000059604645
+                        green : 0.0
+                        blue : 1.4305115314527939e-07
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 0.3499999940395355
@@ -87,11 +87,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 1
-                    u1{
-                        w : 0.14444446563720703
-                        x : 0.14444446563720703
-                        y : 0.14444446563720703
-                        z : 0.0
+                    colour{
+                        red : 0.14444446563720703
+                        green : 0.14444446563720703
+                        blue : 0.14444446563720703
+                        brightness : 0.0
                     }
                     u2 : 20.0
                     u2 : 0.3499999940395355
@@ -130,11 +130,11 @@ $end
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 0.7061728239059448
-                        x : 0.18271607160568237
-                        y : 0.1827162653207779
-                        z : 0.0
+                    colour{
+                        red : 0.7061728239059448
+                        green : 0.18271607160568237
+                        blue : 0.1827162653207779
+                        brightness : 0.0
                     }
                     u2 : 35.0
                     u2 : 0.3499999940395355
@@ -197,11 +197,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 1
-                    u1{
-                        w : 0.0
-                        x : 0.1195068359375
-                        y : 0.9777777791023254
-                        z : 0.0
+                    colour{
+                        red : 0.0
+                        green : 0.1195068359375
+                        blue : 0.9777777791023254
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 0.3499999940395355
@@ -267,11 +267,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 1
-                    u1{
-                        w : 0.2666666805744171
-                        x : 0.2666666805744171
-                        y : 0.2666666805744171
-                        z : 0.0
+                    colour{
+                        red : 0.2666666805744171
+                        green : 0.2666666805744171
+                        blue : 0.2666666805744171
+                        brightness : 0.0
                     }
                     u2 : 20.0
                     u2 : 0.3499999940395355
@@ -310,11 +310,11 @@ $end
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 0.19185185432434082
-                        x : 0.265135794878006
-                        y : 0.7414814829826355
-                        z : 0.0
+                    colour{
+                        red : 0.19185185432434082
+                        green : 0.265135794878006
+                        blue : 0.7414814829826355
+                        brightness : 0.0
                     }
                     u2 : 35.0
                     u2 : 0.3499999940395355
@@ -462,7 +462,7 @@ library_item{
                     blue : 0.21111111342906952
                     brightness : 0.18888893723487854
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 15
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -518,7 +518,7 @@ library_item{
                 w : -15.0
                 x : 150.0
                 interaction_type : 2
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local coinObject = Scene.Find("iapstoremodel");
 TransformController.ScaleTo(coinObject, 1.2, 0.2);
@@ -526,7 +526,7 @@ TransformController.ScaleTo(coinObject, 1.2, 0.2);
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local coinObject = Scene.Find("iapstoremodel");\r\nTransformController.ScaleTo(coinObject, 1.2, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0b\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c\x80\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x80\x00\x00\x00\xc1@\x01\x00\x01\x81\x01\x00\\@\x00\x02\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0e\x00\x00\x00iapstoremodel\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03333333\xf3?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00coinObject\x00\x04\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local coinObject = Scene.Find("iapstoremodel");
 TransformController.ScaleTo(coinObject, 1.0, 0.2);
@@ -586,11 +586,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 2
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u3 : 0.0
                     u4 : 0.0
@@ -617,11 +617,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 1
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.0
                     }
                     u3 : 0.0
                     u4 : 0.0
@@ -848,7 +848,7 @@ $end
             collision_shape_2{
                 w : -70.0
                 x : 50.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -876,7 +876,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x02\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tPortal.Activate(self);\r\n\r\n\tlocal effect = Scene.CreateObject("portal_effect", "portal_effect_" .. self:identifier(), self);\r\n\teffect:setPosition(self:position() + Vector3.New(0, 68, -95));\r\n\tTransformController.ScaleTo(effect, 0.001, 0);\r\n\tself.effect = effect;\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tif not Character.HasSceneFlag("portal_found") then\r\n\t\tCharacter.AddSceneFlag("portal_found")\r\n\t\tProgram.Execute(self, 3); -- create fires\r\n\t\tProgram.Wait(0.2);\r\n\tend\r\n\r\n\tTransformController.ScaleTo(effect, 1, 0.2);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\nB\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x0e\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00K\x01@\x00\\\x81\x00\x01\x15A\x01\x02@\x01\x00\x00\x9c\x80\x00\x02\xcb\x00B\x01KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x04\x00\x81\x01\x03\x00\xdc@\x00\x02\t\x80\x00\x89\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01A\x05\x00\xdc@\x00\x01\xc5\x80\x05\x00\xc6\xc0\xc5\x01\x01\x01\x06\x00\xdc\x80\x00\x01\xda@\x00\x00\x16\x00\x03\x80\xc5\x80\x05\x00\xc6@\xc6\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\xc0\x04\x00\xc6\x80\xc6\x01\x00\x01\x00\x00A\xc1\x06\x00\xdc@\x80\x01\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01\x01\x07\x00\xdc@\x00\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x07\x00\x81\x01\x07\x00\xdc@\x00\x02\x1e\x00\x80\x00\x1e\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Portal\x00\x04\t\x00\x00\x00Activate\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00portal_effect\x00\x04\x0f\x00\x00\x00portal_effect_\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00Q@\x03\x00\x00\x00\x00\x00\xc0W\xc0\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\xfc\xa9\xf1\xd2MbP?\x04\x07\x00\x00\x00effect\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\r\x00\x00\x00portal_found\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\x08\x00\x00\x00Execute\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x03\x9a\x99\x99\x99\x99\x99\xc9?\x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00B\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x15\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00effect\x00\x12\x00\x00\x00A\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -933,11 +933,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 2
-                    u1{
-                        w : 0.4333333373069763
-                        x : 0.5133333206176758
-                        y : 0.5666666626930237
-                        z : 0.0
+                    colour{
+                        red : 0.4333333373069763
+                        green : 0.5133333206176758
+                        blue : 0.5666666626930237
+                        brightness : 0.0
                     }
                     u2 : 50.0
                     u2 : 0.30000001192092896
@@ -1029,11 +1029,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.12222222238779068
-                        x : 0.12222222238779068
-                        y : 0.12222222238779068
-                        z : 0.0
+                    colour{
+                        red : 0.12222222238779068
+                        green : 0.12222222238779068
+                        blue : 0.12222222238779068
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 360.0
@@ -1200,7 +1200,7 @@ library_item{
                     blue : 0.7171604633331299
                     brightness : 0.0
                 }
-                u1 : 10.0
+                radius : 10.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.05000000074505806
@@ -1221,7 +1221,7 @@ library_item{
                     blue : 0.3229629695415497
                     brightness : 0.0
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 15
                 u3 : 0.0
                 u4 : 0.07999999821186066
@@ -1271,11 +1271,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.38296306133270264
-                        x : 0.5433580279350281
-                        y : 0.6837036609649658
-                        z : 0.24444444477558136
+                    colour{
+                        red : 0.38296306133270264
+                        green : 0.5433580279350281
+                        blue : 0.6837036609649658
+                        brightness : 0.24444444477558136
                     }
                     u2 : 90.0
                     u2 : 0.0
@@ -1478,7 +1478,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 104
-                u2 : 110
+                walk_animation : 110
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 16000.0
@@ -1599,7 +1599,7 @@ $end
             collision_shape_2{
                 w : -150.0
                 x : 150.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1613,7 +1613,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1681,7 +1681,7 @@ library_item{
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 104
-                u2 : 110
+                walk_animation : 110
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 16000.0
@@ -1802,7 +1802,7 @@ $end
             collision_shape_2{
                 w : -150.0
                 x : 150.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1816,7 +1816,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1865,11 +1865,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 1.0
-                        x : 1.0
-                        y : 1.0
-                        z : 0.7333333492279053
+                    colour{
+                        red : 1.0
+                        green : 1.0
+                        blue : 1.0
+                        brightness : 0.7333333492279053
                     }
                     u2 : 270.0
                     u2 : 0.0
@@ -1991,11 +1991,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.4770370423793793
-                        x : 0.2558025121688843
-                        y : 0.1451852023601532
-                        z : 0.0
+                    colour{
+                        red : 0.4770370423793793
+                        green : 0.2558025121688843
+                        blue : 0.1451852023601532
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 120.0
@@ -2164,11 +2164,11 @@ library_item{
                 u4 : 1
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.3444444537162781
-                        x : 0.3444444537162781
-                        y : 0.3444444537162781
-                        z : 0.0
+                    colour{
+                        red : 0.3444444537162781
+                        green : 0.3444444537162781
+                        blue : 0.3444444537162781
+                        brightness : 0.0
                     }
                     u2 : 165.0
                     u2 : 30.0

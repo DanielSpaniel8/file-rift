@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'woodkeep_bos'
 library_item{
@@ -14,7 +14,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -225,7 +225,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -394,7 +394,7 @@ library_item{
                     blue : 0.1666669249534607
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -662,7 +662,7 @@ $end
             entity_controller{
                 entity_component : 105
                 animation_controller_component : 107
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -883,7 +883,7 @@ $end
                     blue : 0.1555555760860443
                     brightness : 0.0
                 }
-                u1 : 55.0
+                radius : 55.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.0

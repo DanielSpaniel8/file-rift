@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'dragonkin'
 library_item{
@@ -116,7 +116,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -150,7 +150,7 @@ $end
             entity_controller{
                 entity_component : 107
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 115
                 u4 : 100.0
                 u5 : 800.0
@@ -266,7 +266,7 @@ $end
                     blue : 0.5
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -290,11 +290,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.17777779698371887
-                        x : 0.17777779698371887
-                        y : 0.46666666865348816
-                        z : 0.0
+                    colour{
+                        red : 0.17777779698371887
+                        green : 0.17777779698371887
+                        blue : 0.46666666865348816
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 360.0
@@ -625,7 +625,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 108
+                walk_animation : 108
                 collision_shape : 0
                 u4 : 600.0
                 u5 : 800.0
@@ -721,11 +721,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.8444445729255676
-                        x : 0.6222220659255981
-                        y : 0.9777778387069702
-                        z : 0.0
+                    colour{
+                        red : 0.8444445729255676
+                        green : 0.6222220659255981
+                        blue : 0.9777778387069702
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 360.0
@@ -793,7 +793,7 @@ $end
                     blue : 0.5777778029441833
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -961,7 +961,7 @@ $end
             entity_controller{
                 entity_component : 103
                 animation_controller_component : 102
-                u2 : 109
+                walk_animation : 109
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -1245,7 +1245,7 @@ $end
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -1269,11 +1269,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.15555556118488312
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.15555556118488312
                     }
                     u2 : 90.0
                     u2 : 360.0
@@ -1425,7 +1425,7 @@ library_item{
             entity_controller{
                 entity_component : 106
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -1515,11 +1515,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.5666666626930237
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.5666666626930237
                     }
                     u2 : -105.0
                     u2 : 30.0
@@ -1784,7 +1784,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.0
                 }
-                u1 : 25.0
+                radius : 25.0
                 u2 : 20
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -2004,7 +2004,7 @@ library_item{
             entity_controller{
                 entity_component : 106
                 animation_controller_component : 105
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -2094,11 +2094,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 0.5666666626930237
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 0.5666666626930237
                     }
                     u2 : -105.0
                     u2 : 30.0
@@ -2327,7 +2327,7 @@ library_item{
                     blue : 0.1666669249534607
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -2507,7 +2507,7 @@ library_item{
                     blue : 1.0
                     brightness : 0.36666667461395264
                 }
-                u1 : 17.0
+                radius : 17.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -2531,11 +2531,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.13333332538604736
-                        x : 0.1555556058883667
-                        y : 0.5333333611488342
-                        z : 0.0
+                    colour{
+                        red : 0.13333332538604736
+                        green : 0.1555556058883667
+                        blue : 0.5333333611488342
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 0.0
@@ -2890,11 +2890,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 1.0
-                        x : 0.0
-                        y : 3.5762786865234375e-07
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.0
+                        blue : 3.5762786865234375e-07
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 360.0
@@ -2984,7 +2984,7 @@ $end
                 u1 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -3022,11 +3022,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 1.0
-                        x : 0.0
-                        y : 3.5762786865234375e-07
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.0
+                        blue : 3.5762786865234375e-07
+                        brightness : 0.0
                     }
                     u2 : 0.0
                     u2 : 360.0
@@ -3164,7 +3164,7 @@ $end
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 5.0
+                radius : 5.0
                 u2 : 6
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -3181,7 +3181,7 @@ $end
             entity_controller{
                 entity_component : 106
                 animation_controller_component : 0
-                u2 : 0
+                walk_animation : 0
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0

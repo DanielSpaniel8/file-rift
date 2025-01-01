@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -1654,7 +1654,7 @@ object{
         item_drop{
             name : 'healthbottle_big'
             item{
-                item_type : 'healthbottle_big'
+                object : 'healthbottle_big'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -1713,7 +1713,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -2051,7 +2051,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -2062,7 +2062,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x88\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(self, Rectangle.New(-150, 250, 100, 100));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x05\x01\x01\x00\x06AA\x02A\x81\x01\x00\x81\xc1\x01\x00\xc1\x01\x02\x00\x01\x02\x02\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\xc0b\xc0\x03\x00\x00\x00\x00\x00@o@\x03\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -2790,7 +2790,7 @@ object{
         item_drop{
             name : 'nugget_health'
             item{
-                item_type : 'nugget_health'
+                object : 'nugget_health'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -2842,7 +2842,7 @@ object{
         item_drop{
             name : 'nugget_health'
             item{
-                item_type : 'nugget_health'
+                object : 'nugget_health'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -2912,7 +2912,7 @@ object{
         item_drop{
             name : 'nugget_health'
             item{
-                item_type : 'nugget_health'
+                object : 'nugget_health'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -2982,7 +2982,7 @@ object{
         item_drop{
             name : 'nugget_health'
             item{
-                item_type : 'nugget_health'
+                object : 'nugget_health'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -10665,7 +10665,7 @@ $end
                         blue : 0.05555577948689461
                         brightness : 0.23333333432674408
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -10682,7 +10682,7 @@ $end
                 item_drop{
                     name : 'nugget_mana'
                     item{
-                        item_type : 'nugget_mana'
+                        object : 'nugget_mana'
                         identifier : ''
                         u0 : 1.0
                         u1 : 1
@@ -10722,7 +10722,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -10926,7 +10926,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -11342,7 +11342,7 @@ $end
                 collision_shape_2{
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal = ...;
 
@@ -11413,7 +11413,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -11595,7 +11595,7 @@ $end
                         blue : 0.0
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -12282,7 +12282,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 105
-                    u2 : 112
+                    walk_animation : 112
                     collision_shape : 117
                     u4 : 0.0
                     u5 : 1000.0

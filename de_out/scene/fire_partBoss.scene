@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     name : 'Template 1'
@@ -214,7 +214,7 @@ object{
         entity_controller{
             entity_component : 108
             animation_controller_component : 103
-            u2 : 104
+            walk_animation : 104
             collision_shape : 0
             u4 : 0.0
             u5 : 800.0
@@ -502,7 +502,7 @@ $end
                 blue : 0.0
                 brightness : 0.5
             }
-            u1 : 60.0
+            radius : 60.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -811,14 +811,14 @@ $end
         number : 161
         item_drop{
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 'yellowshards'
                 u0 : 1.0
                 u1 : 2
                 amount : 2
             }
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'redshards'
                 u0 : 1.0
                 u1 : 3
@@ -2771,7 +2771,7 @@ $end
                 blue : 0.5160493850708008
                 brightness : 0.0
             }
-            u1 : 40.0
+            radius : 40.0
             u2 : 15
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -2873,11 +2873,11 @@ object{
             u4 : 0
             u5{
                 u0 : 3
-                u1{
-                    w : 0.6666666865348816
-                    x : 0.20000001788139343
-                    y : 0.18888890743255615
-                    z : 0.0
+                colour{
+                    red : 0.6666666865348816
+                    green : 0.20000001788139343
+                    blue : 0.18888890743255615
+                    brightness : 0.0
                 }
                 u2 : 0.019999999552965164
                 u2 : 0.4000000059604645
@@ -2937,7 +2937,7 @@ object{
                 blue : 0.0
                 brightness : 0.5
             }
-            u1 : 20.0
+            radius : 20.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -3233,7 +3233,7 @@ object{
             u3 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -3385,7 +3385,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -3396,7 +3396,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x87\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FocusAtShape(self, Rectangle.New(100, 100, 100, 100));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x05\x01\x01\x00\x06AA\x02A\x81\x01\x00\x81\x81\x01\x00\xc1\x81\x01\x00\x01\x82\x01\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtShape\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -3552,7 +3552,7 @@ object{
         entity_controller{
             entity_component : 107
             animation_controller_component : 105
-            u2 : 103
+            walk_animation : 103
             collision_shape : 115
             u4 : 100.0
             u5 : 800.0
@@ -8936,7 +8936,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -9156,7 +9156,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -9321,11 +9321,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 1
-                        u1{
-                            w : 1.0
-                            x : 1.0
-                            y : 1.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 1.0
+                            blue : 1.0
+                            brightness : 0.0
                         }
                         u3 : 0.0
                         u4 : 0.0
@@ -9352,11 +9352,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.7444444894790649
-                            y : 0.4555555582046509
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.7444444894790649
+                            blue : 0.4555555582046509
+                            brightness : 0.0
                         }
                         u2 : 100.0
                         u2 : 0.30000001192092896
@@ -9431,11 +9431,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.6555556058883667
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.6555556058883667
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 30.0
                         u2 : 0.30000001192092896
@@ -9466,11 +9466,11 @@ $end
                     u4 : 1
                     u5{
                         u0 : 2
-                        u1{
-                            w : 1.0
-                            x : 0.855555534362793
-                            y : 0.0
-                            z : 0.0
+                        colour{
+                            red : 1.0
+                            green : 0.855555534362793
+                            blue : 0.0
+                            brightness : 0.0
                         }
                         u2 : 40.0
                         u2 : 0.30000001192092896
@@ -9661,7 +9661,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -9848,7 +9848,7 @@ $end
                         blue : 3.5762786865234375e-07
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -10048,7 +10048,7 @@ $end
                         blue : 0.1666669249534607
                         brightness : 0.5
                     }
-                    u1 : 20.0
+                    radius : 20.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448

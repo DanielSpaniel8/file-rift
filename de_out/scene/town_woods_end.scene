@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -187,7 +187,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -266,7 +266,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -277,7 +277,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x99\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tCamera.FollowShape(Scene.Find("followherofocus1"), Rectangle.New(50,50,50,50));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x14\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc5\x00\x01\x00\xc6@\xc1\x01\x01\x81\x01\x00\xdc\x80\x00\x01\x05\xc1\x01\x00\x06\x01B\x02AA\x02\x00\x81A\x02\x00\xc1A\x02\x00\x01B\x02\x00\x1c\x01\x80\x02\x9c@\x00\x00\x1e\x00\x80\x00\n\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Camera\x00\x04\x0c\x00\x00\x00FollowShape\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x11\x00\x00\x00followherofocus1\x00\x04\n\x00\x00\x00Rectangle\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00I@\x00\x00\x00\x00\x14\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x13\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -316,7 +316,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -6086,7 +6086,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -6159,7 +6159,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -6173,17 +6173,17 @@ if target:identifier() == "hero" then
     ShowQuestBubbles("quest01_find_master", self:identifier(), target:position() + Vector3.New(0, 40, 0), true, {
         "He is not breathing... Something must have attacked him.", 
         "He seems to be carrying a note...",
-        "\\"If you are reading this, I must already be dead.\\"",
-        "\\"It was the Corruptors, they have returned.\\"",
-        "\\"They followed me here and there was nothing I could do.\\"",
-        "\\"You are the only one who can defeat them now.\\"",
-        "\\"Go back to the village and find the village elder. He can tell you what to do.\\"",
+        "\"If you are reading this, I must already be dead.\"",
+        "\"It was the Corruptors, they have returned.\"",
+        "\"They followed me here and there was nothing I could do.\"",
+        "\"You are the only one who can defeat them now.\"",
+        "\"Go back to the village and find the village elder. He can tell you what to do.\"",
     });
 
     HideTextBubble(self:identifier());
 
     ShowTextBubbles("heroBubble", target:position() + Vector3.New(0, 40, 0), true, {
-        "\\"Use this magic, it will help you on your way.\\"",
+        "\"Use this magic, it will help you on your way.\"",
     });
     HideTextBubble("heroBubble");
 
@@ -6192,7 +6192,7 @@ if target:identifier() == "hero" then
     Program.Wait(2.5);
 
     ShowTextBubbles("heroBubble", target:position() + Vector3.New(0, 40, 0), true, {
-        "\\"Now hurry before they find you.\\""
+        "\"Now hurry before they find you.\""
     });
     HideTextBubble("heroBubble");
 
@@ -6254,7 +6254,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 

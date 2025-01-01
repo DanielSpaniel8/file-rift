@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'cinematic_beginning'
 library_item{
@@ -14,7 +14,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -41,7 +41,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -194,7 +194,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -221,7 +221,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -374,7 +374,7 @@ library_item{
                     blue : 3.5762786865234375e-07
                     brightness : 0.5
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -401,7 +401,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -697,7 +697,7 @@ library_item{
                     blue : 0.17777778208255768
                     brightness : 0.3333333432674408
                 }
-                u1 : 50.0
+                radius : 50.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.0
@@ -714,7 +714,7 @@ library_item{
             entity_controller{
                 entity_component : 108
                 animation_controller_component : 111
-                u2 : 102
+                walk_animation : 102
                 collision_shape : 109
                 u4 : 100.0
                 u5 : 16000.0
@@ -784,11 +784,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.0
-                        x : 0.0
-                        y : 0.0
-                        z : 1.0
+                    colour{
+                        red : 0.0
+                        green : 0.0
+                        blue : 0.0
+                        brightness : 1.0
                     }
                     u2 : 260.0
                     u2 : 45.0
@@ -1028,7 +1028,7 @@ library_item{
                     blue : 0.1666669249534607
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448

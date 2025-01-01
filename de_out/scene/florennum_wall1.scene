@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -7229,7 +7229,7 @@ object{
             u1 : 1
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -7449,7 +7449,7 @@ object{
         item_drop{
             name : 'healthbottle_big'
             item{
-                item_type : 'xp_sack'
+                object : 'xp_sack'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1

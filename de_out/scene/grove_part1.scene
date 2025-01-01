@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -1072,7 +1072,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -1450,7 +1450,7 @@ $end
         item_drop{
             name : 'healthbottle_big'
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'sshardie'
                 u0 : 1.0
                 u1 : 3
@@ -2873,7 +2873,7 @@ object{
             name : 'sshard_red'
             identifier : 's1'
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : 'sack1'
                 u0 : 1.0
                 u1 : 2
@@ -2908,7 +2908,7 @@ object{
             name : 'sshard_yellow'
             identifier : 's2'
             item{
-                item_type : 'sshard_yellow'
+                object : 'sshard_yellow'
                 identifier : 's2'
                 u0 : 1.0
                 u1 : 1
@@ -15353,7 +15353,7 @@ object{
                 blue : 0.1111111119389534
                 brightness : 0.5
             }
-            u1 : 25.0
+            radius : 25.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07999999821186066
@@ -15505,7 +15505,7 @@ object{
                 blue : 0.10000000149011612
                 brightness : 0.5
             }
-            u1 : 25.0
+            radius : 25.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07999999821186066
@@ -15657,7 +15657,7 @@ object{
                 blue : 0.14444445073604584
                 brightness : 0.5
             }
-            u1 : 25.0
+            radius : 25.0
             u2 : 10
             u3 : 15.0
             u4 : 0.07999999821186066
@@ -15909,7 +15909,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 

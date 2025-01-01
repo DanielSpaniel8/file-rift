@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -1196,7 +1196,7 @@ object{
         item_drop{
             name : 'healthbottle_big'
             item{
-                item_type : 'sshard_red'
+                object : 'sshard_red'
                 identifier : ''
                 u0 : 1.0
                 u1 : 2
@@ -2200,7 +2200,7 @@ object{
         entity_controller{
             entity_component : 103
             animation_controller_component : 105
-            u2 : 112
+            walk_animation : 112
             collision_shape : 0
             u4 : 100.0
             u5 : 1000.0
@@ -2290,7 +2290,7 @@ object{
         entity_controller{
             entity_component : 103
             animation_controller_component : 105
-            u2 : 112
+            walk_animation : 112
             collision_shape : 117
             u4 : 100.0
             u5 : 1000.0
@@ -14196,7 +14196,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'xp_sack'
+                object : 'xp_sack'
                 identifier : ''
                 u0 : 1.0
                 u1 : 1
@@ -14256,7 +14256,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -14303,7 +14303,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -14514,7 +14514,7 @@ object{
                 blue : 0.05679014325141907
                 brightness : 0.0
             }
-            u1 : 40.0
+            radius : 40.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099

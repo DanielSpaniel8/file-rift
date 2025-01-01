@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'dimensional'
 library_item{
@@ -18,7 +18,7 @@ library_item{
             collision_shape_2{
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target= ...;
 
@@ -31,7 +31,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\t\tSetDimensionModeEnabled(true);\r\n\t\tGenerateDimensionMonsters(target:position(), 2);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0e\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x01\x80\x85\x80\x00\x00\xc2\x00\x80\x00\x9c@\x00\x01\x85\xc0\x00\x00\xcb\x00\xc1\x00\xdc\x80\x00\x01\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x04\x1a\x00\x00\x00GenerateDimensionMonsters\x00\x04\t\x00\x00\x00position\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x0e\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\r\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\r\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -129,11 +129,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.7888888716697693
-                        x : 0.7888888716697693
-                        y : 0.7888888716697693
-                        z : 0.45555558800697327
+                    colour{
+                        red : 0.7888888716697693
+                        green : 0.7888888716697693
+                        blue : 0.7888888716697693
+                        brightness : 0.45555558800697327
                     }
                     u2 : 0.00800000037997961
                     u2 : 0.20000000298023224
@@ -172,7 +172,7 @@ $end
                     blue : 0.511111319065094
                     brightness : 0.5000000596046448
                 }
-                u1 : 25.0
+                radius : 25.0
                 u2 : 20
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -194,11 +194,11 @@ $end
                 u4 : 0
                 u5{
                     u0 : 3
-                    u1{
-                        w : 0.27259260416030884
-                        x : 0.08296296000480652
-                        y : 0.08296302706003189
-                        z : 0.0
+                    colour{
+                        red : 0.27259260416030884
+                        green : 0.08296296000480652
+                        blue : 0.08296302706003189
+                        brightness : 0.0
                     }
                     u2 : 0.004999999888241291
                     u2 : 0.20000000298023224
@@ -225,7 +225,7 @@ $end
             entity_controller{
                 entity_component : 134
                 animation_controller_component : 0
-                u2 : 0
+                walk_animation : 0
                 collision_shape : 0
                 u4 : 100.0
                 u5 : 800.0
@@ -428,11 +428,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 1.0
-                        x : 0.0
-                        y : 3.5762786865234375e-07
-                        z : 0.0
+                    colour{
+                        red : 1.0
+                        green : 0.0
+                        blue : 3.5762786865234375e-07
+                        brightness : 0.0
                     }
                     u2 : 90.0
                     u2 : 25.0
@@ -500,7 +500,7 @@ library_item{
                     blue : 0.0555555559694767
                     brightness : 0.5
                 }
-                u1 : 75.0
+                radius : 75.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -760,7 +760,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448

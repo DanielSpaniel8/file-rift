@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'worldsen'
 library_item{
@@ -64,7 +64,7 @@ $end
                 u0 : 1
                 w : -30.0
                 x : 30.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target, collisionNormal = ...;
 
@@ -605,7 +605,7 @@ library_item{
                     blue : 0.5111111402511597
                     brightness : 0.0
                 }
-                u1 : 25.0
+                radius : 25.0
                 u2 : 20
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -1321,7 +1321,7 @@ library_item{
                 u3 : 1
                 w : -15.0
                 x : 15.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1332,7 +1332,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00j\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tGame.IncCounter("pancaketime");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\n\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x00\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c@\x00\x01\x1e\x00\x80\x00\x05\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x0c\x00\x00\x00pancaketime\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -2070,7 +2070,7 @@ library_item{
                     blue : 0.048271626234054565
                     brightness : 0.0
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 15
                 u3 : 5.0
                 u4 : 0.11999999731779099
@@ -2091,7 +2091,7 @@ library_item{
                     blue : 0.0
                     brightness : 0.0
                 }
-                u1 : 8.0
+                radius : 8.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.05000000074505806
@@ -2115,11 +2115,11 @@ library_item{
                 u4 : 0
                 u5{
                     u0 : 5
-                    u1{
-                        w : 0.12222222238779068
-                        x : 0.12222222238779068
-                        y : 0.12222222238779068
-                        z : 0.12222222238779068
+                    colour{
+                        red : 0.12222222238779068
+                        green : 0.12222222238779068
+                        blue : 0.12222222238779068
+                        brightness : 0.12222222238779068
                     }
                     u2 : 90.0
                     u2 : 0.0

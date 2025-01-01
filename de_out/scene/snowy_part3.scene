@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -261,7 +261,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -272,7 +272,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00y\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tScene.Find("snowballs2"):setAlwaysActive(true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x01\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x80\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0b\x00\x00\x00snowballs2\x00\x04\x10\x00\x00\x00setAlwaysActive\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -18556,7 +18556,7 @@ object{
                     u1 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -18614,7 +18614,7 @@ $end
                     u1 : 1
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target, normal, groundCollision = ...;
 
@@ -18684,7 +18684,7 @@ $end
                 collision_shape_2{
                     w : -30.0
                     x : 30.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target = ...;
 

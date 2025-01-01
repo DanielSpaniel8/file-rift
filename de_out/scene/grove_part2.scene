@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -136,11 +136,11 @@ object{
             u4 : 0
             u5{
                 u0 : 3
-                u1{
-                    w : 0.20617283880710602
-                    x : 0.22716055810451508
-                    y : 0.22716058790683746
-                    z : 0.0
+                colour{
+                    red : 0.20617283880710602
+                    green : 0.22716055810451508
+                    blue : 0.22716058790683746
+                    brightness : 0.0
                 }
                 u2 : 0.004000000189989805
                 u2 : 0.10000000149011612
@@ -179,7 +179,7 @@ object{
                 blue : 1.0
                 brightness : 0.5
             }
-            u1 : 15.0
+            radius : 15.0
             u2 : 20
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -201,11 +201,11 @@ object{
             u4 : 0
             u5{
                 u0 : 3
-                u1{
-                    w : 0.5333333611488342
-                    x : 0.5333333611488342
-                    y : 0.5333333611488342
-                    z : 0.0
+                colour{
+                    red : 0.5333333611488342
+                    green : 0.5333333611488342
+                    blue : 0.5333333611488342
+                    brightness : 0.0
                 }
                 u2 : 0.009999999776482582
                 u2 : 0.20000000298023224
@@ -3582,7 +3582,7 @@ object{
                 blue : 0.0
                 brightness : 1.0
             }
-            u1 : 250.0
+            radius : 250.0
             u2 : 10
             u3 : 15.0
             u4 : 0.09000000357627869
@@ -3822,7 +3822,7 @@ object{
         collision_shape_2{
             w : -100.0
             x : 100.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target = ...;
 
@@ -3890,7 +3890,7 @@ $end
         entity_controller{
             entity_component : 107
             animation_controller_component : 122
-            u2 : 121
+            walk_animation : 121
             collision_shape : 111
             u4 : 100.0
             u5 : 800.0

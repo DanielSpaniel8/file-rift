@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 object{
     identifier : 'Background'
@@ -99,7 +99,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -110,7 +110,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tScene.Find(self:identifier().."#2"):setHidden(false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x10\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xcb\x00@\x00\xdc\x80\x00\x01\x01\x01\x01\x00\xd5\x00\x81\x01\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x00\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x03\x00\x00\x00#2\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -173,7 +173,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -218,7 +218,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -264,7 +264,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -275,7 +275,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tScene.Find(self:identifier().."#2"):setHidden(false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x10\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xcb\x00@\x00\xdc\x80\x00\x01\x01\x01\x01\x00\xd5\x00\x81\x01\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x00\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x03\x00\x00\x00#2\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -422,7 +422,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -433,7 +433,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tScene.Find(self:identifier().."#2"):setHidden(false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x10\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xcb\x00@\x00\xdc\x80\x00\x01\x01\x01\x01\x00\xd5\x00\x81\x01\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x00\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x03\x00\x00\x00#2\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -518,7 +518,7 @@ object{
         number : 112
         item_drop{
             item{
-                item_type : 'xp_sack'
+                object : 'xp_sack'
                 identifier : 'sackiehere'
                 u0 : 1.0
                 u1 : 1
@@ -649,7 +649,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -660,7 +660,7 @@ end
 $end
                 secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tScene.Find(self:identifier().."#2"):setHidden(false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x10\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xcb\x00@\x00\xdc\x80\x00\x01\x01\x01\x01\x00\xd5\x00\x81\x01\x9c\x80\x00\x01\x8b@A\x01\x02\x01\x00\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x03\x00\x00\x00#2\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0f\x00\x00\x00\x00\x00\x00\x00'
             }
-            lua_chunk_1{
+            off_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -752,11 +752,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 25.0
@@ -824,7 +824,7 @@ object{
                 blue : 0.0555555559694767
                 brightness : 0.5
             }
-            u1 : 75.0
+            radius : 75.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -893,11 +893,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 25.0
@@ -965,7 +965,7 @@ object{
                 blue : 0.0555555559694767
                 brightness : 0.5
             }
-            u1 : 75.0
+            radius : 75.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -1056,11 +1056,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 25.0
@@ -1128,7 +1128,7 @@ object{
                 blue : 0.0555555559694767
                 brightness : 0.5
             }
-            u1 : 75.0
+            radius : 75.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -1197,11 +1197,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 1.0
-                    x : 0.0
-                    y : 3.5762786865234375e-07
-                    z : 0.0
+                colour{
+                    red : 1.0
+                    green : 0.0
+                    blue : 3.5762786865234375e-07
+                    brightness : 0.0
                 }
                 u2 : 90.0
                 u2 : 25.0
@@ -1269,7 +1269,7 @@ object{
                 blue : 0.0555555559694767
                 brightness : 0.5
             }
-            u1 : 75.0
+            radius : 75.0
             u2 : 10
             u3 : 15.0
             u4 : 0.15000000596046448
@@ -16870,7 +16870,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -16918,7 +16918,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -16966,7 +16966,7 @@ object{
         collision_shape_2{
             w : -15.0
             x : 15.0
-            lua_chunk_0{
+            on_collision_chunk{
                 main_chunk : $
 local self, target= ...;
 
@@ -17038,7 +17038,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -17059,7 +17059,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -17083,11 +17083,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -17281,7 +17281,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -17302,7 +17302,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -17326,11 +17326,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -17524,7 +17524,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -17545,7 +17545,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -17569,11 +17569,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -17767,7 +17767,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -17788,7 +17788,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -17812,11 +17812,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -18010,7 +18010,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -18031,7 +18031,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -18055,11 +18055,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -18253,7 +18253,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -18274,7 +18274,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -18298,11 +18298,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -18496,7 +18496,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -18517,7 +18517,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -18541,11 +18541,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -18739,7 +18739,7 @@ object{
                 blue : 0.048271626234054565
                 brightness : 0.0
             }
-            u1 : 30.0
+            radius : 30.0
             u2 : 15
             u3 : 5.0
             u4 : 0.11999999731779099
@@ -18760,7 +18760,7 @@ object{
                 blue : 0.0
                 brightness : 0.0
             }
-            u1 : 8.0
+            radius : 8.0
             u2 : 10
             u3 : 0.0
             u4 : 0.05000000074505806
@@ -18784,11 +18784,11 @@ object{
             u4 : 0
             u5{
                 u0 : 5
-                u1{
-                    w : 0.12222222238779068
-                    x : 0.12222222238779068
-                    y : 0.12222222238779068
-                    z : 0.12222222238779068
+                colour{
+                    red : 0.12222222238779068
+                    green : 0.12222222238779068
+                    blue : 0.12222222238779068
+                    brightness : 0.12222222238779068
                 }
                 u2 : 90.0
                 u2 : 0.0
@@ -19278,7 +19278,7 @@ $end
                 entity_controller{
                     entity_component : 103
                     animation_controller_component : 102
-                    u2 : 108
+                    walk_animation : 108
                     collision_shape : 0
                     u4 : 600.0
                     u5 : 800.0
@@ -19374,11 +19374,11 @@ $end
                     u4 : 0
                     u5{
                         u0 : 5
-                        u1{
-                            w : 0.8444445729255676
-                            x : 0.6222221255302429
-                            y : 0.9777777791023254
-                            z : 0.0
+                        colour{
+                            red : 0.8444445729255676
+                            green : 0.6222221255302429
+                            blue : 0.9777777791023254
+                            brightness : 0.0
                         }
                         u2 : 90.0
                         u2 : 360.0
@@ -19446,7 +19446,7 @@ $end
                         blue : 0.5777778029441833
                         brightness : 0.5
                     }
-                    u1 : 30.0
+                    radius : 30.0
                     u2 : 10
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -19487,7 +19487,7 @@ $end
                         blue : 0.47777777910232544
                         brightness : 0.0
                     }
-                    u1 : 25.0
+                    radius : 25.0
                     u2 : 20
                     u3 : 15.0
                     u4 : 0.15000000596046448
@@ -19513,7 +19513,7 @@ $end
                     u3 : 1
                     w : -15.0
                     x : 15.0
-                    lua_chunk_0{
+                    on_collision_chunk{
                         main_chunk : $
 local self, target =...;
 

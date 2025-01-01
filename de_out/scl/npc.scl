@@ -1,4 +1,4 @@
-# rifted with FR v5.4.1
+# rifted with FR v5.4.2
 
 scl_file_name : 'npc'
 library_item{
@@ -73,7 +73,7 @@ library_item{
             entity_controller{
                 entity_component : 104
                 animation_controller_component : 102
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 113
                 u4 : 35.0
                 u5 : 800.0
@@ -425,7 +425,7 @@ library_item{
             entity_controller{
                 entity_component : 111
                 animation_controller_component : 106
-                u2 : 105
+                walk_animation : 105
                 collision_shape : 109
                 u4 : 0.0
                 u5 : 800.0
@@ -509,7 +509,7 @@ library_item{
                     blue : 0.16666662693023682
                     brightness : 0.5
                 }
-                u1 : 20.0
+                radius : 20.0
                 u2 : 20
                 u3 : 15.0
                 u4 : 0.15000000596046448
@@ -727,7 +727,7 @@ $end
             entity_controller{
                 entity_component : 1
                 animation_controller_component : 109
-                u2 : 103
+                walk_animation : 103
                 collision_shape : 0
                 u4 : 0.0
                 u5 : 800.0
@@ -824,7 +824,7 @@ $end
                 u1 : 1
                 w : -15.0
                 x : 100.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -960,7 +960,7 @@ library_item{
             collision_shape_2{
                 w : -50.0
                 x : 50.0
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -979,7 +979,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00_\x01\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal text;\r\n\r\n\tif Entity.GetFacingDirection(target) == 1 then\r\n\t\ttext = "Hello, I sell everything.";\r\n\telse\r\n\t\ttext = "Come back later to see if there is anything new!";\r\n\tend\r\n\r\n\tShowTextBubble(self:identifier() .. "_bubble", self:position() + Vector3.New(13, 27, 0), text);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n \x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x06\x80\x83\x00\x00\x01\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x80\x00\xdc\x80\x00\x01\x17\x00\xc1\x01\x16@\x00\x80\x81@\x01\x00\x16\x00\x00\x80\x81\x80\x01\x00\xc5\xc0\x01\x00\x0b\x01@\x00\x1c\x81\x00\x01A\x01\x02\x00\x15A\x01\x02KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\x80\x01\x00\x01\xdc@\x00\x02\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Entity\x00\x04\x13\x00\x00\x00GetFacingDirection\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x1a\x00\x00\x00Hello, I sell everything.\x00\x041\x00\x00\x00Come back later to see if there is anything new!\x00\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00*@\x03\x00\x00\x00\x00\x00\x00;@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x05\x00\x00\x00text\x00\x06\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1136,7 +1136,7 @@ $end
                 w : -200.0
                 x : 200.0
                 interaction_type : 4
-                lua_chunk_0{
+                on_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1147,7 +1147,7 @@ end
 $end
                     secondary_chunk : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tShowShopItemInfo(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00ShowShopItemInfo\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
                 }
-                lua_chunk_1{
+                off_collision_chunk{
                     main_chunk : $
 local self, target = ...;
 
@@ -1219,7 +1219,7 @@ library_item{
                     blue : 0.17777776718139648
                     brightness : 0.0
                 }
-                u1 : 11.0
+                radius : 11.0
                 u2 : 10
                 u3 : 0.0
                 u4 : 0.05000000074505806
@@ -1240,7 +1240,7 @@ library_item{
                     blue : 0.10370369255542755
                     brightness : 0.0
                 }
-                u1 : 30.0
+                radius : 30.0
                 u2 : 10
                 u3 : 15.0
                 u4 : 0.15000000596046448
