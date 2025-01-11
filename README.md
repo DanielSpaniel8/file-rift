@@ -122,10 +122,6 @@ Scene.Find("hero"):setVelocity(v)
 ...
 ```
 
-- `$chunk`
-
-`$chunk` will add an entire scl library item, with the code included. What this does, is allow you to write a lua script in /source, and have it automatically loaded in-game. The object that is generated will be invisible, and it will run the provided lua code as soon the object is added to the scene using `Scene.CreateObject`. Note: only works in `.scl` files.
-
 - `$obj`
 
 `$obj` will construct a simple object definition from the provided details. Note: only works in `.scene` files.

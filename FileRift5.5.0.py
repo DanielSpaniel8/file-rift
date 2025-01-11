@@ -1,14 +1,14 @@
-rift_mode = "recode"  # options: decode, recode, both
+rift_mode = "decode"  # options: decode, recode, both
 allways_recode = False
 
 
 # must use the following chars (=|:|;|,)
-style_after_tag = ":" # default : " : "
-style_after_record = "" # default : ","
+style_after_tag = " : " # default : " : "
+style_after_record = "," # default : ","
 style_before_block = "" # default : ""
-style_after_block = "" # default : ","
+style_after_block = "" # default : ""
 # must use the following chars (=|:|;|,) and must end with "$"
-style_before_chunk = " :\n$" # default : " : $"
+style_before_chunk = " : $" # default : " : $"
 
 import os
 from struct import pack, unpack
@@ -594,7 +594,7 @@ if rift_mode in ["decode", "both"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.4.2\n\n"]
+        outLines = ["# rifted with FR v5.5.0\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -731,4 +731,4 @@ if no_skipped != 0:
     results += ("skipped "+str(no_skipped))
 
 print(results)
-print("File Rift v5.4.2")
+print("File Rift v5.5.0")

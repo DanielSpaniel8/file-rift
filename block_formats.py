@@ -899,7 +899,7 @@ scene = {
 
 
 '12' : {
-    'name' : '?scene_info',
+    'name' : ('?scene_info','library'),
     '0a' : 'name',
     '12' : {
         'name' : 'library_item',
