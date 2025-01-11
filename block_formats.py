@@ -458,7 +458,7 @@ scene = {
             '12' : {
                 'name' : 'lua_chunk',
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secrndary_chunk'],
+                '12' : ('secrndary_chunk','secondary_chunk'),
             },
             '1a' : 'u1',
             '20' : 'u2',
@@ -1356,7 +1356,7 @@ scene = {
                     '12' : {
                         'name' : 'lua_chunk',
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secrndary_chunk'],
+                        '12' : ('secrndary_chunk','secondary_chunk'),
                     },
                     '1a' : 'u1',
                     '20' : 'u2',
@@ -1366,7 +1366,7 @@ scene = {
                     '0a' : {
                         'name' : 'lua_chunk',
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : ('secrndary_chunk','secondary_chunk'),
                     },
                     '12' : 'u0',
                     '18' : 'u2',

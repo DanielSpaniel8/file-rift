@@ -1,226 +1,226 @@
 # rifted with FR v5.4.2
 
-scl_file_name : 'towers_stuff'
+scl_file_name:'towers_stuff'
 library_item{
     object{
-        name : 'pillair1'
+        name:'pillair1'
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'pillair1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
+                name:'pillair1'
+                u0:0.0
+                u1:0.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'torch_fire'
+        name:'torch_fire'
         component{
-            component_type : 'SimpleGlow'
-            number : 1
+            component_type:'SimpleGlow'
+            number:1
             simple_glow{
                 colour{
-                    red : 0.3876543343067169
-                    green : 0.21119342744350433
-                    blue : 0.05679011344909668
-                    brightness : 0.0
+                    red:0.3876543343067169
+                    green:0.21119342744350433
+                    blue:0.05679011344909668
+                    brightness:0.0
                 }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.11999999731779099
-                u5 : 1.5
+                radius:40.0
+                u2:15
+                u3:15.0
+                u4:0.11999999731779099
+                u5:1.5
                 u6{
-                    y : 0.0
-                    z : 30.0
+                    y:0.0
+                    z:30.0
                 }
             }
         }
         component{
-            component_type : 'Light'
-            number : 103
+            component_type:'Light'
+            number:103
             light{
-                u0 : 3
-                u1 : 2.0
+                u0:3
+                u1:2.0
                 u2{
-                    w : 1.0
-                    x : 0.25777778029441833
-                    y : 0.0
-                    z : 0.0
+                    w:1.0
+                    x:0.25777778029441833
+                    y:0.0
+                    z:0.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
+                u3:0.0
+                u4:0.00019999999494757503
                 u5{
-                    x : 0.0
-                    y : 30.0
-                    z : 0.0
+                    x:0.0
+                    y:30.0
+                    z:0.0
                 }
-                u6 : 250.0
+                u6:250.0
             }
         }
         component{
-            component_type : 'FireEmitter'
-            number : 105
+            component_type:'FireEmitter'
+            number:105
             fire_emitter{
-                particle_emitter : 108
-                light : 103
+                particle_emitter:108
+                light:103
                 u0{
-                    w : 1.0
-                    x : 0.25777778029441833
-                    y : 0.0
-                    z : 0.0
+                    w:1.0
+                    x:0.25777778029441833
+                    y:0.0
+                    z:0.0
                 }
-                u1 : 0.10000000149011612
-                u2 : 0.8999999761581421
+                u1:0.10000000149011612
+                u2:0.8999999761581421
                 u3{
-                    x : 2.0
-                    y : 0.0
-                    z : 0.0
+                    x:2.0
+                    y:0.0
+                    z:0.0
                 }
                 u4{
-                    x : 0.0
-                    y : 15.0
-                    z : 0.0
+                    x:0.0
+                    y:15.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'ParticleEmitter'
-            number : 108
+            component_type:'ParticleEmitter'
+            number:108
             particle_emitter{
-                particle : 109
-                particle : 111
-                particle : 112
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u6 : 0
+                particle:109
+                particle:111
+                particle:112
+                u1:0
+                u2:30
+                u3:0
+                u4:0
+                u6:0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 109
+            component_type:'Particle'
+            number:109
             particle{
-                name : 'particle_fure_1'
-                u0 : 30.0
+                name:'particle_fure_1'
+                u0:30.0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 111
+            component_type:'Particle'
+            number:111
             particle{
-                name : 'particle_fure_2'
-                u0 : 34.0
+                name:'particle_fure_2'
+                u0:34.0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 112
+            component_type:'Particle'
+            number:112
             particle{
-                name : 'particle_fure_3'
-                u0 : 30.0
+                name:'particle_fure_3'
+                u0:30.0
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : -20.0
-            x : -20.0
-            y : 40.0
-            z : 40.0
+            w:-20.0
+            x:-20.0
+            y:40.0
+            z:40.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'torchholder'
+        name:'torchholder'
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'torchholder'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
+                name:'torchholder'
+                u0:0.0
+                u1:0.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }

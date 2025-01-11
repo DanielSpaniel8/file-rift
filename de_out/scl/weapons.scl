@@ -1,1450 +1,1450 @@
 # rifted with FR v5.4.2
 
-scl_file_name : 'weapons'
+scl_file_name:'weapons'
 library_item{
     object{
-        name : 'brass_sword'
+        name:'brass_sword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                z : 1
+                u3:1
+                w:-15.0
+                x:15.0
+                z:1
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'ParticleEmitter'
-            number : 4
-            name : 'impact'
+            component_type:'ParticleEmitter'
+            number:4
+            name:'impact'
             particle_emitter{
-                particle : 5
-                particle : 6
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u6 : 0
+                particle:5
+                particle:6
+                u1:0
+                u2:30
+                u3:0
+                u4:0
+                u6:0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 5
+            component_type:'Particle'
+            number:5
             particle{
-                name : 'flash_particle'
-                u0 : 50.0
+                name:'flash_particle'
+                u0:50.0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 6
+            component_type:'Particle'
+            number:6
             particle{
-                name : 'spark_particle'
-                u0 : 10.0
+                name:'spark_particle'
+                u0:10.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponGlow'
-            number : 10
+            component_type:'WeaponGlow'
+            number:10
             weapon_glow{
-                u0 : 12
+                u0:12
                 u1{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
                 u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
-                u3 : 15.0
+                u3:15.0
             }
         }
         component{
-            component_type : 'ParticleEmitter'
-            number : 12
-            name : 'glow'
+            component_type:'ParticleEmitter'
+            number:12
+            name:'glow'
             particle_emitter{
-                particle : 13
-                particle : 14
-                particle : 15
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u6 : 0
+                particle:13
+                particle:14
+                particle:15
+                u1:0
+                u2:30
+                u3:0
+                u4:0
+                u6:0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 13
-            name : 'glow'
+            component_type:'Particle'
+            number:13
+            name:'glow'
             particle{
-                name : 'particle_fure_1'
-                u0 : 14.0
+                name:'particle_fure_1'
+                u0:14.0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 14
-            name : 'glow'
+            component_type:'Particle'
+            number:14
+            name:'glow'
             particle{
-                name : 'particle_fure_2'
-                u0 : 16.0
+                name:'particle_fure_2'
+                u0:16.0
             }
         }
         component{
-            component_type : 'Particle'
-            number : 15
-            name : 'glow'
+            component_type:'Particle'
+            number:15
+            name:'glow'
             particle{
-                name : 'particle_fure_3'
-                u0 : 14.0
+                name:'particle_fure_3'
+                u0:14.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_ironsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 4
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 10
-                w : 50.0
-                x : 65.0
-                y : 0.0
-                z : 10.0
+                linked_model_component_number:101
+                u1:1
+                u2:4
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:10
+                w:50.0
+                x:65.0
+                y:0.0
+                z:10.0
                 u8{
-                    u0 : 0.5
-                    u1 : 0.5
-                    u2 : 0.5
-                    u3 : 0.0
+                    u0:0.5
+                    u1:0.5
+                    u2:0.5
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_brasssword'
+        name:'weapon_brasssword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 0
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:0
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.5882353186607361
-                    x : 0.27450981736183167
-                    y : 0.16078431904315948
-                    z : 0.0
+                    w:0.5882353186607361
+                    x:0.27450981736183167
+                    y:0.16078431904315948
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_ironsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 0.644444465637207
-                    y : 0.4333333373069763
-                    z : 1.0
+                    w:1.0
+                    x:0.644444465637207
+                    y:0.4333333373069763
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 55.0
-                x : 55.0
-                y : 1.0
-                z : 6.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:55.0
+                x:55.0
+                y:1.0
+                z:6.0
                 u8{
-                    u0 : 0.5918518900871277
-                    u1 : 0.27787652611732483
-                    u2 : 0.16370368003845215
-                    u3 : 0.0
+                    u0:0.5918518900871277
+                    u1:0.27787652611732483
+                    u2:0.16370368003845215
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 0.8500000238418579
+    u0:0.8500000238418579
 }
 library_item{
     object{
-        name : 'weapon_broadsword'
+        name:'weapon_broadsword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 1
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:1
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.7607843279838562
-                    x : 0.3490196168422699
-                    y : 0.14509804546833038
-                    z : 0.0
+                    w:0.7607843279838562
+                    x:0.3490196168422699
+                    y:0.14509804546833038
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_broadsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_broadsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 58.0
-                x : 58.0
-                y : 1.0
-                z : 8.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:58.0
+                x:58.0
+                y:1.0
+                z:8.0
                 u8{
-                    u0 : 0.764320969581604
-                    u1 : 0.3526337444782257
-                    u2 : 0.14679014682769775
-                    u3 : 0.0
+                    u0:0.764320969581604
+                    u1:0.3526337444782257
+                    u2:0.14679014682769775
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_ironsword'
+        name:'weapon_ironsword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 1
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:1
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.5568627715110779
-                    x : 0.29019609093666077
-                    y : 0.19607843458652496
-                    z : 0.0
+                    w:0.5568627715110779
+                    x:0.29019609093666077
+                    y:0.19607843458652496
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_ironsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 55.0
-                x : 55.0
-                y : 1.0
-                z : 6.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:55.0
+                x:55.0
+                y:1.0
+                z:6.0
                 u8{
-                    u0 : 0.558271586894989
-                    u1 : 0.2935473322868347
-                    u2 : 0.19728398323059082
-                    u3 : 0.0
+                    u0:0.558271586894989
+                    u1:0.2935473322868347
+                    u2:0.19728398323059082
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_legendsword'
+        name:'weapon_legendsword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 1
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:1
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 1.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:1.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.7098039388656616
-                    x : 0.3176470696926117
-                    y : 0.1764705926179886
-                    z : 0.0
+                    w:0.7098039388656616
+                    x:0.3176470696926117
+                    y:0.1764705926179886
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_legendsword'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
+                name:'weapon_legendsword'
+                u0:0.0
+                u1:5.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 65.0
-                x : 65.0
-                y : 1.0
-                z : 14.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:65.0
+                x:65.0
+                y:1.0
+                z:14.0
                 u8{
-                    u0 : 0.7111111283302307
-                    u1 : 0.3199999928474426
-                    u2 : 0.17777776718139648
-                    u3 : 0.0
+                    u0:0.7111111283302307
+                    u1:0.3199999928474426
+                    u2:0.17777776718139648
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_magicsword'
+        name:'weapon_magicsword'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 1
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:1
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.7647058963775635
-                    x : 0.32549020648002625
-                    y : 0.16470588743686676
-                    z : 0.0
+                    w:0.7647058963775635
+                    x:0.32549020648002625
+                    y:0.16470588743686676
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_magicsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_magicsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 65.0
-                x : 65.0
-                y : 1.0
-                z : 6.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:65.0
+                x:65.0
+                y:1.0
+                z:6.0
                 u8{
-                    u0 : 0.7674074172973633
-                    u1 : 0.32632097601890564
-                    u2 : 0.16592592000961304
-                    u3 : 0.0
+                    u0:0.7674074172973633
+                    u1:0.32632097601890564
+                    u2:0.16592592000961304
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_needle'
+        name:'weapon_needle'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 0
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:0
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.5568627715110779
-                    x : 0.29019609093666077
-                    y : 0.19607843458652496
-                    z : 0.0
+                    w:0.5568627715110779
+                    x:0.29019609093666077
+                    y:0.19607843458652496
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_ironsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 0.7222222089767456
-                    y : 0.8222222328186035
-                    z : 1.0
+                    w:1.0
+                    x:0.7222222089767456
+                    y:0.8222222328186035
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 55.0
-                x : 55.0
-                y : 0.0
-                z : 6.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:55.0
+                x:55.0
+                y:0.0
+                z:6.0
                 u8{
-                    u0 : 0.558271586894989
-                    u1 : 0.2935473322868347
-                    u2 : 0.19728398323059082
-                    u3 : 0.0
+                    u0:0.558271586894989
+                    u1:0.2935473322868347
+                    u2:0.19728398323059082
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_stoneclub'
+        name:'weapon_stoneclub'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 0
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:0
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 1
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:1
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_club'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_club'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 0
-                u6 : 2
-                u7 : 10
-                w : 50.0
-                x : 65.0
-                y : 0.0
-                z : 10.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:0
+                u6:2
+                u7:10
+                w:50.0
+                x:65.0
+                y:0.0
+                z:10.0
                 u8{
-                    u0 : 0.5
-                    u1 : 0.5
-                    u2 : 0.5
-                    u3 : 0.0
+                    u0:0.5
+                    u1:0.5
+                    u2:0.5
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }
 library_item{
     object{
-        name : 'weapon_thorn'
+        name:'weapon_thorn'
         component{
-            component_type : 'WeaponTrail'
-            number : 1
+            component_type:'WeaponTrail'
+            number:1
             weapon_trail{
                 u0{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 0.0
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'CollisionShape'
-            number : 2
+            component_type:'CollisionShape'
+            number:2
             collision_shape{
                 box_shape{
-                    left : 0.0
-                    bottom : 0.0
-                    right : 0.0
-                    top : 0.0
+                    left:0.0
+                    bottom:0.0
+                    right:0.0
+                    top:0.0
                 }
             }
             collision_shape_2{
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 5
-                z : 0
+                u3:1
+                w:-15.0
+                x:15.0
+                interaction_type:5
+                z:0
             }
         }
         component{
-            component_type : 'Damage'
-            number : 3
+            component_type:'Damage'
+            number:3
             damage{
-                damage : 1
-                u1 : 1
-                u2 : 0
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+                damage:1
+                u1:1
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            component_type : 'Transform'
-            number : 4
+            component_type:'Transform'
+            number:4
         }
         component{
-            component_type : 'SoundEffect'
-            number : 7
-            name : 'swing1'
+            component_type:'SoundEffect'
+            number:7
+            name:'swing1'
             sound_effect{
-                sound : 'sword_swing2'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_swing2'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'SoundEffect'
-            number : 8
-            name : 'impact1'
+            component_type:'SoundEffect'
+            number:8
+            name:'impact1'
             sound_effect{
-                sound : 'sword_impact3'
-                u0 : 0.0
-                u1 : 1.0
+                sound:'sword_impact3'
+                u0:0.0
+                u1:1.0
             }
         }
         component{
-            component_type : 'WeaponTrail'
-            number : 16
-            name : 'glow'
+            component_type:'WeaponTrail'
+            number:16
+            name:'glow'
             weapon_trail{
                 u0{
-                    w : 0.7607843279838562
-                    x : 0.3490196168422699
-                    y : 0.14509804546833038
-                    z : 0.0
+                    w:0.7607843279838562
+                    x:0.3490196168422699
+                    y:0.14509804546833038
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'Model'
-            number : 101
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'weapon_broadsword'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
+                name:'weapon_broadsword'
+                u0:0.0
+                u1:1.0
+                u2:0.0
                 u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0
+                u5:0
                 u6{
-                    w : 0.6777777671813965
-                    x : 1.0
-                    y : 0.644444465637207
-                    z : 1.0
+                    w:0.6777777671813965
+                    x:1.0
+                    y:0.644444465637207
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'SwingableWeapon'
-            number : 103
+            component_type:'SwingableWeapon'
+            number:103
             swingable_weapon{
-                linked_model_component_number : 101
-                u1 : 1
-                u2 : 0
-                u3 : 7
-                u4 : 8
-                u5 : 16
-                u6 : 2
-                u7 : 0
-                w : 58.0
-                x : 58.0
-                y : 0.0
-                z : 8.0
+                linked_model_component_number:101
+                u1:1
+                u2:0
+                u3:7
+                u4:8
+                u5:16
+                u6:2
+                u7:0
+                w:58.0
+                x:58.0
+                y:0.0
+                z:8.0
                 u8{
-                    u0 : 0.764320969581604
-                    u1 : 0.3526337444782257
-                    u2 : 0.14679014682769775
-                    u3 : 0.0
+                    u0:0.764320969581604
+                    u1:0.3526337444782257
+                    u2:0.14679014682769775
+                    u3:0.0
                 }
             }
         }
         position{
-            x_position : 0.0
-            y_position : 0.0
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0
-            x : 0.0
-            y : 0.0
-            z : 0.0
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0
+        hidden:0
     }
-    u0 : 1.0
+    u0:1.0
 }

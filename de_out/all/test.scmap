@@ -1,1143 +1,1143 @@
 # rifted with FR v5.4.2
 
 zone{
-    name : 'town'
-    title : 'Cairnwood Village'
+    name:'town'
+    title:'Cairnwood Village'
     scene{
-        name : 'town_part1'
+        name:'town_part1'
         connected_scene{
-            name : 'town_shop'
+            name:'town_shop'
         }
         connected_scene{
-            name : 'town_healerhouse'
+            name:'town_healerhouse'
         }
         connected_scene{
-            name : 'town_elderhouse'
+            name:'town_elderhouse'
         }
         connected_scene{
-            name : 'town_secrethouse'
+            name:'town_secrethouse'
         }
         connected_scene{
-            name : 'plains_part1'
-            direction : 1
+            name:'plains_part1'
+            direction:1
         }
         connected_scene{
-            name : 'town_woods1'
-            direction : 3
+            name:'town_woods1'
+            direction:3
         }
-        feature : 1
-        portal : 1
-        treasures : 0
+        feature:1
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'town_shop'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : 'Cairnwood Shop'
+        name:'town_shop'
+        u1:1
+        music:'house'
+        treasures:0
+        title:'Cairnwood Shop'
     }
     scene{
-        name : 'town_healerhouse'
-        u1 : 1
-        treasures : 0
-        title : "Healer's House"
+        name:'town_healerhouse'
+        u1:1
+        treasures:0
+        title:"Healer's House"
     }
     scene{
-        name : 'town_elderhouse'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : "Elder's House"
+        name:'town_elderhouse'
+        u1:1
+        music:'house'
+        treasures:0
+        title:"Elder's House"
     }
     scene{
-        name : 'town_secrethouse'
-        u1 : 1
-        music : 'house'
-        treasures : 1
-        title : 'Dusty Hut'
+        name:'town_secrethouse'
+        u1:1
+        music:'house'
+        treasures:1
+        title:'Dusty Hut'
     }
-    sequence : 1
-    default_music : 'outdoors_light'
+    sequence:1
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'woods'
-    title : 'Cairnwood Forest'
+    name:'woods'
+    title:'Cairnwood Forest'
     scene{
-        name : 'town_woods1'
+        name:'town_woods1'
         connected_scene{
-            name : 'town_woods_end'
-            direction : 5
+            name:'town_woods_end'
+            direction:5
         }
-        treasures : 1
+        treasures:1
     }
     scene{
-        name : 'town_woods_end'
-        treasures : 0
+        name:'town_woods_end'
+        treasures:0
     }
-    sequence : 1
-    default_music : 'forest'
+    sequence:1
+    default_music:'forest'
 }
 zone{
-    name : 'plains'
-    title : 'The Plains'
+    name:'plains'
+    title:'The Plains'
     scene{
-        name : 'plains_part1'
+        name:'plains_part1'
         connected_scene{
-            name : 'plains_part2'
-            direction : 1
+            name:'plains_part2'
+            direction:1
         }
         connected_scene{
-            name : 'plains_caveFirst'
+            name:'plains_caveFirst'
         }
-        treasures : 2
+        treasures:2
     }
     scene{
-        name : 'plains_caveFirst'
-        u1 : 1
-        music : 'cave'
-        treasures : 1
-        title : 'Murky Small Cave'
+        name:'plains_caveFirst'
+        u1:1
+        music:'cave'
+        treasures:1
+        title:'Murky Small Cave'
     }
     scene{
-        name : 'plains_part2'
+        name:'plains_part2'
         connected_scene{
-            name : 'plains_part3'
-            direction : 3
+            name:'plains_part3'
+            direction:3
         }
         connected_scene{
-            name : 'plains_house1'
+            name:'plains_house1'
         }
         connected_scene{
-            name : 'plains_tower1'
+            name:'plains_tower1'
         }
-        feature : 2
-        base_enemy_level : 2
-        portal : 1
-        treasures : 2
+        feature:2
+        base_enemy_level:2
+        portal:1
+        treasures:2
     }
     scene{
-        name : 'plains_house1'
-        u1 : 1
-        treasures : 0
-        title : "Ferryman's House"
+        name:'plains_house1'
+        u1:1
+        treasures:0
+        title:"Ferryman's House"
     }
     scene{
-        name : 'plains_tower1'
-        u1 : 1
-        base_enemy_level : 3
-        music : 'cave'
-        treasures : 0
-        title : 'Abandoned Guard Tower'
+        name:'plains_tower1'
+        u1:1
+        base_enemy_level:3
+        music:'cave'
+        treasures:0
+        title:'Abandoned Guard Tower'
     }
     scene{
-        name : 'plains_part3'
+        name:'plains_part3'
         connected_scene{
-            name : 'plains_part4'
-            direction : 1
+            name:'plains_part4'
+            direction:1
         }
         connected_scene{
-            name : 'plains_cave0'
+            name:'plains_cave0'
         }
-        base_enemy_level : 3
-        portal : 1
-        treasures : 1
+        base_enemy_level:3
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'plains_cave0'
-        u1 : 1
-        base_enemy_level : 4
-        music : 'cave'
-        treasures : 1
-        title : 'Marblemist Cave'
+        name:'plains_cave0'
+        u1:1
+        base_enemy_level:4
+        music:'cave'
+        treasures:1
+        title:'Marblemist Cave'
     }
     scene{
-        name : 'plains_part4'
+        name:'plains_part4'
         connected_scene{
-            name : 'plains_woodkeep_entrance'
-            direction : 3
+            name:'plains_woodkeep_entrance'
+            direction:3
         }
         connected_scene{
-            name : 'forest_cave0'
+            name:'forest_cave0'
         }
-        feature : 2
-        base_enemy_level : 4
-        portal : 1
-        treasures : 1
+        feature:2
+        base_enemy_level:4
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'plains_woodkeep_entrance'
+        name:'plains_woodkeep_entrance'
         connected_scene{
-            name : 'plains_woodkeep'
-            direction : 1
+            name:'plains_woodkeep'
+            direction:1
         }
-        feature : 2
-        base_enemy_level : 4
-        portal : 1
-        treasures : 0
+        feature:2
+        base_enemy_level:4
+        portal:1
+        treasures:0
     }
-    sequence : 2
-    default_music : 'outdoors_light'
+    sequence:2
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'woodkeep'
-    title : 'Forgotten Keep'
+    name:'woodkeep'
+    title:'Forgotten Keep'
     scene{
-        name : 'plains_woodkeep'
+        name:'plains_woodkeep'
         connected_scene{
-            name : 'plains_woodkeep2'
-            direction : 1
+            name:'plains_woodkeep2'
+            direction:1
         }
-        treasures : 3
+        treasures:3
     }
     scene{
-        name : 'plains_woodkeep2'
+        name:'plains_woodkeep2'
         connected_scene{
-            name : 'plains_woodkeep3'
-            direction : 1
+            name:'plains_woodkeep3'
+            direction:1
         }
         connected_scene{
-            name : 'plains_woodkeep_cellar'
+            name:'plains_woodkeep_cellar'
         }
-        portal : 1
-        treasures : 1
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'plains_woodkeep_cellar'
-        u1 : 1
-        treasures : 0
-        title : 'Forgotten Keep Cellar'
+        name:'plains_woodkeep_cellar'
+        u1:1
+        treasures:0
+        title:'Forgotten Keep Cellar'
     }
     scene{
-        name : 'plains_woodkeep3'
-        feature : 3
-        base_enemy_level : 6
-        portal : 1
-        treasures : 2
-        title : 'Chamber of The Mageblade'
+        name:'plains_woodkeep3'
+        feature:3
+        base_enemy_level:6
+        portal:1
+        treasures:2
+        title:'Chamber of The Mageblade'
     }
-    sequence : 5
-    default_music : 'dungeon1'
+    sequence:5
+    default_music:'dungeon1'
 }
 zone{
-    name : 'grove'
-    title : 'Evernight Forest'
+    name:'grove'
+    title:'Evernight Forest'
     scene{
-        name : 'forest_cave0'
+        name:'forest_cave0'
         connected_scene{
-            name : 'forest_cave1'
+            name:'forest_cave1'
         }
         connected_scene{
-            name : 'forest_part1'
-            direction : 1
+            name:'forest_part1'
+            direction:1
         }
-        u1 : 1
-        treasures : 0
-        title : 'Cairnwood Valley Caves'
+        u1:1
+        treasures:0
+        title:'Cairnwood Valley Caves'
     }
     scene{
-        name : 'forest_cave1'
-        u1 : 1
-        treasures : 1
-        title : 'Sinister Cave'
+        name:'forest_cave1'
+        u1:1
+        treasures:1
+        title:'Sinister Cave'
     }
     scene{
-        name : 'forest_part1'
+        name:'forest_part1'
         connected_scene{
-            name : 'forest_cave2'
+            name:'forest_cave2'
         }
-        feature : 2
-        portal : 1
-        treasures : 2
+        feature:2
+        portal:1
+        treasures:2
     }
     scene{
-        name : 'forest_cave2'
+        name:'forest_cave2'
         connected_scene{
-            name : 'forest_part2'
-            direction : 7
+            name:'forest_part2'
+            direction:7
         }
-        u1 : 1
-        treasures : 0
-        title : 'Evernight Caves'
+        u1:1
+        treasures:0
+        title:'Evernight Caves'
     }
     scene{
-        name : 'forest_part2'
+        name:'forest_part2'
         connected_scene{
-            name : 'forest_cave3'
+            name:'forest_cave3'
         }
-        treasures : 1
+        treasures:1
     }
     scene{
-        name : 'forest_cave3'
+        name:'forest_cave3'
         connected_scene{
-            name : 'grove_part1'
-            direction : 1
+            name:'grove_part1'
+            direction:1
         }
-        u1 : 1
-        treasures : 0
-        title : 'Evernight Caves'
+        u1:1
+        treasures:0
+        title:'Evernight Caves'
     }
     scene{
-        name : 'grove_part1'
+        name:'grove_part1'
         connected_scene{
-            name : 'forest_cave4'
+            name:'forest_cave4'
         }
-        feature : 2
-        portal : 1
-        treasures : 2
+        feature:2
+        portal:1
+        treasures:2
     }
     scene{
-        name : 'forest_cave4'
+        name:'forest_cave4'
         connected_scene{
-            name : 'grove_part2'
-            direction : 1
+            name:'grove_part2'
+            direction:1
         }
-        u1 : 1
-        treasures : 0
-        title : 'Evernight Caves'
+        u1:1
+        treasures:0
+        title:'Evernight Caves'
     }
     scene{
-        name : 'grove_part2'
+        name:'grove_part2'
         connected_scene{
-            name : 'forest_cave5'
+            name:'forest_cave5'
         }
         connected_scene{
-            name : 'grove_graveyard'
-            direction : 3
+            name:'grove_graveyard'
+            direction:3
         }
         connected_scene{
-            name : 'lowergrove_part1'
-            direction : 7
+            name:'lowergrove_part1'
+            direction:7
         }
-        feature : 2
-        portal : 1
-        treasures : 0
-        title : 'Wellcliff Campsite'
+        feature:2
+        portal:1
+        treasures:0
+        title:'Wellcliff Campsite'
     }
     scene{
-        name : 'forest_cave5'
+        name:'forest_cave5'
         connected_scene{
-            name : 'grass_part1'
-            direction : 1
+            name:'grass_part1'
+            direction:1
         }
-        u1 : 1
-        treasures : 1
-        title : 'Evernight Caves'
+        u1:1
+        treasures:1
+        title:'Evernight Caves'
     }
     scene{
-        name : 'grove_graveyard'
+        name:'grove_graveyard'
         connected_scene{
-            name : 'grove_crypt1'
+            name:'grove_crypt1'
         }
-        base_enemy_level : 8
-        treasures : 0
-        title : 'Wellcliff Graveyard'
+        base_enemy_level:8
+        treasures:0
+        title:'Wellcliff Graveyard'
     }
     scene{
-        name : 'grove_crypt1'
-        u1 : 1
-        base_enemy_level : 8
-        music : 'dungeon1'
-        treasures : 2
-        title : 'Corrupted Crypt'
+        name:'grove_crypt1'
+        u1:1
+        base_enemy_level:8
+        music:'dungeon1'
+        treasures:2
+        title:'Corrupted Crypt'
     }
-    sequence : 7
-    default_music : 'forest'
+    sequence:7
+    default_music:'forest'
 }
 zone{
-    name : 'grass'
-    title : 'Outskirts of Florennum'
+    name:'grass'
+    title:'Outskirts of Florennum'
     scene{
-        name : 'grass_part1'
+        name:'grass_part1'
         connected_scene{
-            name : 'grass_part2'
-            direction : 1
+            name:'grass_part2'
+            direction:1
         }
-        feature : 2
-        portal : 1
-        treasures : 2
-        title : "King's Road"
+        feature:2
+        portal:1
+        treasures:2
+        title:"King's Road"
     }
     scene{
-        name : 'grass_part2'
+        name:'grass_part2'
         connected_scene{
-            name : 'grass_house'
+            name:'grass_house'
         }
         connected_scene{
-            name : 'florennum_wall1'
+            name:'florennum_wall1'
         }
-        portal : 1
-        treasures : 0
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'grass_house'
+        name:'grass_house'
         connected_scene{
-            name : 'florennum_cave1'
+            name:'florennum_cave1'
         }
-        u1 : 1
-        treasures : 0
-        title : '...'
-        u5 : 1
+        u1:1
+        treasures:0
+        title:'...'
+        u5:1
     }
     scene{
-        name : 'grass_part3'
+        name:'grass_part3'
         connected_scene{
-            name : 'wasteland_part1'
-            direction : 1
+            name:'wasteland_part1'
+            direction:1
         }
-        base_enemy_level : 11
-        treasures : 1
+        base_enemy_level:11
+        treasures:1
     }
-    sequence : 8
-    default_music : 'outdoors_light'
+    sequence:8
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'florennum'
-    title : 'City of Florennum'
+    name:'florennum'
+    title:'City of Florennum'
     scene{
-        name : 'florennum_wall1'
-        u1 : 1
-        treasures : 1
-        title : 'Walls of Florennum'
+        name:'florennum_wall1'
+        u1:1
+        treasures:1
+        title:'Walls of Florennum'
     }
     scene{
-        name : 'florennum_cave1'
+        name:'florennum_cave1'
         connected_scene{
-            name : 'florennum_part1'
-            direction : 1
+            name:'florennum_part1'
+            direction:1
         }
-        u1 : 1
-        music : 'forest'
-        treasures : 1
-        title : 'City Sewers'
+        u1:1
+        music:'forest'
+        treasures:1
+        title:'City Sewers'
     }
     scene{
-        name : 'florennum_part1'
+        name:'florennum_part1'
         connected_scene{
-            name : 'florennum_tower1'
+            name:'florennum_tower1'
         }
         connected_scene{
-            name : 'grass_part3'
-            direction : 1
+            name:'grass_part3'
+            direction:1
         }
         connected_scene{
-            name : 'florennum_shop'
+            name:'florennum_shop'
         }
         connected_scene{
-            name : 'florennum_healerhouse'
+            name:'florennum_healerhouse'
         }
-        feature : 1
-        portal : 1
-        treasures : 1
+        feature:1
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'florennum_shop'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : 'Marketplace of Florennum'
+        name:'florennum_shop'
+        u1:1
+        music:'house'
+        treasures:0
+        title:'Marketplace of Florennum'
     }
     scene{
-        name : 'florennum_healerhouse'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : 'Healer of Florennum'
+        name:'florennum_healerhouse'
+        u1:1
+        music:'house'
+        treasures:0
+        title:'Healer of Florennum'
     }
     scene{
-        name : 'florennum_tower1'
+        name:'florennum_tower1'
         connected_scene{
-            name : 'florennum_towertop'
+            name:'florennum_towertop'
         }
-        u1 : 1
-        treasures : 0
-        title : 'Eastern Guard Tower'
+        u1:1
+        treasures:0
+        title:'Eastern Guard Tower'
     }
     scene{
-        name : 'florennum_towertop'
+        name:'florennum_towertop'
         connected_scene{
-            name : 'florennum_tower2'
+            name:'florennum_tower2'
         }
-        u1 : 1
-        treasures : 1
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'florennum_tower2'
+        name:'florennum_tower2'
         connected_scene{
-            name : 'florennum_jail_part1'
-            direction : 3
+            name:'florennum_jail_part1'
+            direction:3
         }
-        u1 : 1
-        base_enemy_level : 10
-        music : 'dungeon1'
-        treasures : 0
-        title : 'Western Guard Tower'
+        u1:1
+        base_enemy_level:10
+        music:'dungeon1'
+        treasures:0
+        title:'Western Guard Tower'
     }
-    sequence : 9
-    default_music : 'outdoors_light'
+    sequence:9
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'florennum_jail'
-    title : 'Dungeon of Florennum'
+    name:'florennum_jail'
+    title:'Dungeon of Florennum'
     scene{
-        name : 'florennum_jail_part1'
+        name:'florennum_jail_part1'
         connected_scene{
-            name : 'florennum_jail_part2'
-            direction : 3
+            name:'florennum_jail_part2'
+            direction:3
         }
-        base_enemy_level : 10
-        portal : 1
-        treasures : 0
+        base_enemy_level:10
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'florennum_jail_part2'
+        name:'florennum_jail_part2'
         connected_scene{
-            name : 'florennum_jail_boss'
-            direction : 1
+            name:'florennum_jail_boss'
+            direction:1
         }
-        treasures : 0
+        treasures:0
     }
     scene{
-        name : 'florennum_jail_boss'
-        feature : 3
-        portal : 1
-        treasures : 0
-        title : "Overseer's Lair"
+        name:'florennum_jail_boss'
+        feature:3
+        portal:1
+        treasures:0
+        title:"Overseer's Lair"
     }
-    sequence : 11
-    default_music : 'dungeon1'
+    sequence:11
+    default_music:'dungeon1'
 }
 zone{
-    name : 'wasteland'
-    title : 'Wastelands'
+    name:'wasteland'
+    title:'Wastelands'
     scene{
-        name : 'wasteland_part1'
+        name:'wasteland_part1'
         connected_scene{
-            name : 'wasteland_cave1'
+            name:'wasteland_cave1'
         }
         connected_scene{
-            name : 'wasteland_part2'
-            direction : 3
+            name:'wasteland_part2'
+            direction:3
         }
-        treasures : 1
+        treasures:1
     }
     scene{
-        name : 'wasteland_cave1'
+        name:'wasteland_cave1'
         connected_scene{
-            name : 'wasteland_house1'
-            u1 : 1
+            name:'wasteland_house1'
+            u1:1
         }
-        u1 : 1
-        music : 'cave'
-        treasures : 1
-        title : 'Huge Cavern'
+        u1:1
+        music:'cave'
+        treasures:1
+        title:'Huge Cavern'
     }
     scene{
-        name : 'wasteland_house1'
+        name:'wasteland_house1'
         connected_scene{
-            name : 'wasteland_part1'
-            u1 : 1
+            name:'wasteland_part1'
+            u1:1
         }
-        u1 : 1
-        music : 'cave'
-        treasures : 1
-        title : "Thieves' Hideout"
+        u1:1
+        music:'cave'
+        treasures:1
+        title:"Thieves' Hideout"
     }
     scene{
-        name : 'wasteland_part2'
+        name:'wasteland_part2'
         connected_scene{
-            name : 'wasteland_town'
-            direction : 1
+            name:'wasteland_town'
+            direction:1
         }
-        portal : 1
-        treasures : 2
+        portal:1
+        treasures:2
     }
     scene{
-        name : 'wasteland_town'
+        name:'wasteland_town'
         connected_scene{
-            name : 'wasteland_town_shop'
+            name:'wasteland_town_shop'
         }
         connected_scene{
-            name : 'wasteland_town_healerhouse'
+            name:'wasteland_town_healerhouse'
         }
         connected_scene{
-            name : 'wasteland_town_secrethouse'
+            name:'wasteland_town_secrethouse'
         }
         connected_scene{
-            name : 'wasteland_part3'
-            direction : 1
+            name:'wasteland_part3'
+            direction:1
         }
-        feature : 1
-        portal : 1
-        treasures : 0
-        title : 'Greyhedge Village'
+        feature:1
+        portal:1
+        treasures:0
+        title:'Greyhedge Village'
     }
     scene{
-        name : 'wasteland_town_shop'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : "Shopkeeper's House"
+        name:'wasteland_town_shop'
+        u1:1
+        music:'house'
+        treasures:0
+        title:"Shopkeeper's House"
     }
     scene{
-        name : 'wasteland_town_healerhouse'
-        u1 : 1
-        music : 'house'
-        treasures : 0
-        title : "Healer's House"
+        name:'wasteland_town_healerhouse'
+        u1:1
+        music:'house'
+        treasures:0
+        title:"Healer's House"
     }
     scene{
-        name : 'wasteland_town_secrethouse'
-        u1 : 1
-        treasures : 1
-        title : 'A Mysterious House'
+        name:'wasteland_town_secrethouse'
+        u1:1
+        treasures:1
+        title:'A Mysterious House'
     }
     scene{
-        name : 'wasteland_part3'
+        name:'wasteland_part3'
         connected_scene{
-            name : 'wasteland_part4'
-            direction : 7
+            name:'wasteland_part4'
+            direction:7
         }
         connected_scene{
-            name : 'wasteland_cave'
-            direction : 3
+            name:'wasteland_cave'
+            direction:3
         }
-        treasures : 2
-        title : 'Greyhedge Crossing'
+        treasures:2
+        title:'Greyhedge Crossing'
     }
     scene{
-        name : 'wasteland_part4'
+        name:'wasteland_part4'
         connected_scene{
-            name : 'thecave_part1'
-            direction : 1
+            name:'thecave_part1'
+            direction:1
         }
-        base_enemy_level : 13
-        treasures : 0
+        base_enemy_level:13
+        treasures:0
     }
     scene{
-        name : 'wasteland_cave'
+        name:'wasteland_cave'
         connected_scene{
-            name : 'wasteland_cave_snowy'
-            direction : 1
+            name:'wasteland_cave_snowy'
+            direction:1
         }
-        base_enemy_level : 15
-        music : 'cave'
-        treasures : 1
-        title : 'Greyhedge Caves'
+        base_enemy_level:15
+        music:'cave'
+        treasures:1
+        title:'Greyhedge Caves'
     }
     scene{
-        name : 'wasteland_cave_snowy'
+        name:'wasteland_cave_snowy'
         connected_scene{
-            name : 'snowy_part1'
-            direction : 1
+            name:'snowy_part1'
+            direction:1
         }
-        base_enemy_level : 15
-        music : 'cave'
-        portal : 1
-        treasures : 0
-        title : 'Icy Cave'
+        base_enemy_level:15
+        music:'cave'
+        portal:1
+        treasures:0
+        title:'Icy Cave'
     }
-    sequence : 12
-    default_music : 'outdoors_light'
+    sequence:12
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'thecave'
-    title : 'Great Caves'
+    name:'thecave'
+    title:'Great Caves'
     scene{
-        name : 'thecave_part1'
+        name:'thecave_part1'
         connected_scene{
-            name : 'thecave_part2'
+            name:'thecave_part2'
         }
-        portal : 1
-        treasures : 1
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'thecave_part2'
+        name:'thecave_part2'
         connected_scene{
-            name : 'thecave_part11'
+            name:'thecave_part11'
         }
         connected_scene{
-            name : 'thecave_part21'
-            direction : 7
+            name:'thecave_part21'
+            direction:7
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'thecave_part11'
+        name:'thecave_part11'
         connected_scene{
-            name : 'thecave_part12'
+            name:'thecave_part12'
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'thecave_part12'
+        name:'thecave_part12'
         connected_scene{
-            name : 'thecave_part121'
+            name:'thecave_part121'
         }
         connected_scene{
-            name : 'thecave_part13'
-            direction : 1
+            name:'thecave_part13'
+            direction:1
         }
         connected_scene{
-            name : 'thecave_part21'
-            u1 : 1
-            base_enemy_level : 1
+            name:'thecave_part21'
+            u1:1
+            base_enemy_level:1
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'thecave_part121'
-        u1 : 1
-        treasures : 1
+        name:'thecave_part121'
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'thecave_part21'
+        name:'thecave_part21'
         connected_scene{
-            name : 'thecave_part22'
+            name:'thecave_part22'
         }
-        base_enemy_level : 14
-        treasures : 0
+        base_enemy_level:14
+        treasures:0
     }
     scene{
-        name : 'thecave_part22'
+        name:'thecave_part22'
         connected_scene{
-            name : 'thecave_part23'
+            name:'thecave_part23'
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 0
+        u1:1
+        base_enemy_level:14
+        treasures:0
     }
     scene{
-        name : 'thecave_part23'
+        name:'thecave_part23'
         connected_scene{
-            name : 'thecave_part24'
-            direction : 1
+            name:'thecave_part24'
+            direction:1
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 0
+        u1:1
+        base_enemy_level:14
+        treasures:0
     }
     scene{
-        name : 'thecave_part24'
+        name:'thecave_part24'
         connected_scene{
-            name : 'fire_part1'
-            direction : 1
+            name:'fire_part1'
+            direction:1
         }
-        base_enemy_level : 14
-        portal : 1
-        treasures : 0
+        base_enemy_level:14
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'thecave_part13'
+        name:'thecave_part13'
         connected_scene{
-            name : 'thecave_part131'
+            name:'thecave_part131'
         }
         connected_scene{
-            name : 'thecave_part14'
+            name:'thecave_part14'
         }
-        treasures : 0
+        treasures:0
     }
     scene{
-        name : 'thecave_part131'
+        name:'thecave_part131'
         connected_scene{
-            name : 'thecave_part132'
+            name:'thecave_part132'
         }
         connected_scene{
-            name : 'thecave_part141'
+            name:'thecave_part141'
         }
-        u1 : 1
-        treasures : 1
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'thecave_part132'
+        name:'thecave_part132'
         connected_scene{
-            name : 'thecave_part142'
+            name:'thecave_part142'
         }
-        u1 : 1
-        treasures : 1
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'thecave_part14'
+        name:'thecave_part14'
         connected_scene{
-            name : 'thecave_part141'
-            u1 : 1
+            name:'thecave_part141'
+            u1:1
         }
         connected_scene{
-            name : 'thecave_part15'
-            direction : 3
+            name:'thecave_part15'
+            direction:3
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'thecave_part141'
+        name:'thecave_part141'
         connected_scene{
-            name : 'thecave_part142'
-            u1 : 1
+            name:'thecave_part142'
+            u1:1
         }
         connected_scene{
-            name : 'thecave_part1411'
-            direction : 1
+            name:'thecave_part1411'
+            direction:1
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 0
+        u1:1
+        base_enemy_level:14
+        treasures:0
     }
     scene{
-        name : 'thecave_part142'
+        name:'thecave_part142'
         connected_scene{
-            name : 'thecave_part1421'
+            name:'thecave_part1421'
         }
         connected_scene{
-            name : 'thecave_part14'
-            u1 : 1
+            name:'thecave_part14'
+            u1:1
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 0
+        u1:1
+        base_enemy_level:14
+        treasures:0
     }
     scene{
-        name : 'thecave_part1421'
+        name:'thecave_part1421'
         connected_scene{
-            name : 'thecave_part23'
-            base_enemy_level : 1
+            name:'thecave_part23'
+            base_enemy_level:1
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 1
+        u1:1
+        base_enemy_level:14
+        treasures:1
     }
     scene{
-        name : 'thecave_part15'
-        base_enemy_level : 18
-        portal : 1
-        treasures : 0
-        title : 'Chambers of Power'
+        name:'thecave_part15'
+        base_enemy_level:18
+        portal:1
+        treasures:0
+        title:'Chambers of Power'
     }
     scene{
-        name : 'thecave_part1411'
+        name:'thecave_part1411'
         connected_scene{
-            name : 'thecave_crypt1'
+            name:'thecave_crypt1'
         }
-        base_enemy_level : 14
-        portal : 1
-        treasures : 0
+        base_enemy_level:14
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'thecave_crypt1'
+        name:'thecave_crypt1'
         connected_scene{
-            name : 'thecave_crypt2'
-            direction : 1
+            name:'thecave_crypt2'
+            direction:1
         }
-        u1 : 1
-        base_enemy_level : 14
-        treasures : 1
-        title : 'Purplemoor Crypt'
+        u1:1
+        base_enemy_level:14
+        treasures:1
+        title:'Purplemoor Crypt'
     }
     scene{
-        name : 'thecave_crypt2'
+        name:'thecave_crypt2'
         connected_scene{
-            name : 'beyond_graveyard'
+            name:'beyond_graveyard'
         }
-        base_enemy_level : 15
-        portal : 1
-        treasures : 1
-        title : 'Purplemoor Crypt'
+        base_enemy_level:15
+        portal:1
+        treasures:1
+        title:'Purplemoor Crypt'
     }
     scene{
-        name : 'beyond_graveyard'
-        u1 : 1
-        base_enemy_level : 15
-        treasures : 0
-        title : 'Purplemoor Graveyard'
+        name:'beyond_graveyard'
+        u1:1
+        base_enemy_level:15
+        treasures:0
+        title:'Purplemoor Graveyard'
     }
-    sequence : 13
-    default_music : 'cave'
+    sequence:13
+    default_music:'cave'
 }
 zone{
-    name : 'fire'
-    title : 'Fiery Depths'
+    name:'fire'
+    title:'Fiery Depths'
     scene{
-        name : 'fire_part1'
+        name:'fire_part1'
         connected_scene{
-            name : 'fire_part2'
-            direction : 1
+            name:'fire_part2'
+            direction:1
         }
-        treasures : 1
+        treasures:1
     }
     scene{
-        name : 'fire_part2'
+        name:'fire_part2'
         connected_scene{
-            name : 'fire_part3'
-            direction : 1
+            name:'fire_part3'
+            direction:1
         }
-        treasures : 0
+        treasures:0
     }
     scene{
-        name : 'fire_part3'
+        name:'fire_part3'
         connected_scene{
-            name : 'fire_part31'
+            name:'fire_part31'
         }
         connected_scene{
-            name : 'fire_part4'
-            direction : 1
+            name:'fire_part4'
+            direction:1
         }
-        portal : 1
-        treasures : 1
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'fire_part31'
+        name:'fire_part31'
         connected_scene{
-            name : 'fire_part4'
-            direction : 1
-            u1 : 1
+            name:'fire_part4'
+            direction:1
+            u1:1
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'fire_part4'
+        name:'fire_part4'
         connected_scene{
-            name : 'fire_part5'
+            name:'fire_part5'
         }
-        treasures : 1
+        treasures:1
     }
     scene{
-        name : 'fire_part5'
+        name:'fire_part5'
         connected_scene{
-            name : 'fire_partBoss'
-            direction : 1
+            name:'fire_partBoss'
+            direction:1
         }
-        portal : 1
-        treasures : 0
-        title : 'Chambers of The Flame'
+        portal:1
+        treasures:0
+        title:'Chambers of The Flame'
     }
     scene{
-        name : 'fire_partBoss'
-        feature : 3
-        treasures : 0
-        title : 'Chambers of The Flame'
+        name:'fire_partBoss'
+        feature:3
+        treasures:0
+        title:'Chambers of The Flame'
     }
-    sequence : 15
-    default_music : 'dungeon1'
+    sequence:15
+    default_music:'dungeon1'
 }
 zone{
-    name : 'snowy'
-    title : 'Snowy Slopes'
+    name:'snowy'
+    title:'Snowy Slopes'
     scene{
-        name : 'snowy_part1'
+        name:'snowy_part1'
         connected_scene{
-            name : 'snowy_part2'
-            direction : 1
+            name:'snowy_part2'
+            direction:1
         }
         connected_scene{
-            name : 'snowy_cave1'
+            name:'snowy_cave1'
         }
         connected_scene{
-            name : 'snowy_cave2'
+            name:'snowy_cave2'
         }
-        portal : 1
-        treasures : 0
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'snowy_cave1'
-        u1 : 1
-        treasures : 1
-        title : 'Infested Cave'
+        name:'snowy_cave1'
+        u1:1
+        treasures:1
+        title:'Infested Cave'
     }
     scene{
-        name : 'snowy_cave2'
-        u1 : 1
-        treasures : 1
-        title : 'Infested Gold Mine'
+        name:'snowy_cave2'
+        u1:1
+        treasures:1
+        title:'Infested Gold Mine'
     }
     scene{
-        name : 'snowy_part2'
+        name:'snowy_part2'
         connected_scene{
-            name : 'snowy_part3'
-            direction : 1
+            name:'snowy_part3'
+            direction:1
         }
-        treasures : 2
+        treasures:2
     }
     scene{
-        name : 'snowy_part3'
+        name:'snowy_part3'
         connected_scene{
-            name : 'snowy_part4'
-            direction : 1
+            name:'snowy_part4'
+            direction:1
         }
-        treasures : 0
+        treasures:0
     }
     scene{
-        name : 'snowy_part4'
+        name:'snowy_part4'
         connected_scene{
-            name : 'icecastle_part1'
-            direction : 1
+            name:'icecastle_part1'
+            direction:1
         }
-        portal : 1
-        treasures : 0
-        title : 'Snowy Summit'
+        portal:1
+        treasures:0
+        title:'Snowy Summit'
     }
-    sequence : 16
-    default_music : 'outdoors_light'
+    sequence:16
+    default_music:'outdoors_light'
 }
 zone{
-    name : 'icecastle'
-    title : 'Frozen Temple'
+    name:'icecastle'
+    title:'Frozen Temple'
     scene{
-        name : 'icecastle_part1'
+        name:'icecastle_part1'
         connected_scene{
-            name : 'icecastle_part11'
+            name:'icecastle_part11'
         }
         connected_scene{
-            name : 'icecastle_part2'
-            direction : 1
+            name:'icecastle_part2'
+            direction:1
         }
-        treasures : 0
+        treasures:0
     }
     scene{
-        name : 'icecastle_part11'
-        u1 : 1
-        treasures : 1
+        name:'icecastle_part11'
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'icecastle_part2'
+        name:'icecastle_part2'
         connected_scene{
-            name : 'icecastle_part3'
+            name:'icecastle_part3'
         }
-        u1 : 1
-        treasures : 1
+        u1:1
+        treasures:1
     }
     scene{
-        name : 'icecastle_part3'
+        name:'icecastle_part3'
         connected_scene{
-            name : 'icecastle_part4'
-            direction : 1
+            name:'icecastle_part4'
+            direction:1
         }
-        portal : 1
-        treasures : 0
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'icecastle_part4'
+        name:'icecastle_part4'
         connected_scene{
-            name : 'icecastle_part5'
-            direction : 7
+            name:'icecastle_part5'
+            direction:7
         }
         connected_scene{
-            name : 'icecastle_partBoss'
-            direction : 1
+            name:'icecastle_partBoss'
+            direction:1
         }
-        base_enemy_level : 18
-        portal : 1
-        treasures : 0
+        base_enemy_level:18
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'icecastle_part5'
-        base_enemy_level : 18
-        treasures : 0
-        title : 'Hall of Trials'
+        name:'icecastle_part5'
+        base_enemy_level:18
+        treasures:0
+        title:'Hall of Trials'
     }
     scene{
-        name : 'icecastle_partBoss'
-        feature : 3
-        base_enemy_level : 18
-        portal : 1
-        treasures : 0
-        title : 'Hall of The Dwarven Kings'
+        name:'icecastle_partBoss'
+        feature:3
+        base_enemy_level:18
+        portal:1
+        treasures:0
+        title:'Hall of The Dwarven Kings'
     }
-    sequence : 17
-    default_music : 'dungeon1'
+    sequence:17
+    default_music:'dungeon1'
 }
 zone{
-    name : 'lowergrove'
-    title : "World's End Keep"
+    name:'lowergrove'
+    title:"World's End Keep"
     scene{
-        name : 'lowergrove_part1'
+        name:'lowergrove_part1'
         connected_scene{
-            name : 'worldsend_part1'
-            direction : 1
+            name:'worldsend_part1'
+            direction:1
         }
-        base_enemy_level : 18
-        music : 'forest'
-        treasures : 0
-        title : 'Corrupted Grove'
+        base_enemy_level:18
+        music:'forest'
+        treasures:0
+        title:'Corrupted Grove'
     }
     scene{
-        name : 'worldsend_part1'
+        name:'worldsend_part1'
         connected_scene{
-            name : 'worldsend_part2'
-            direction : 1
+            name:'worldsend_part2'
+            direction:1
         }
-        base_enemy_level : 19
-        portal : 1
-        treasures : 1
+        base_enemy_level:19
+        portal:1
+        treasures:1
     }
     scene{
-        name : 'worldsend_part2'
+        name:'worldsend_part2'
         connected_scene{
-            name : 'worldsend_part3'
+            name:'worldsend_part3'
         }
-        u1 : 1
-        base_enemy_level : 19
-        treasures : 0
+        u1:1
+        base_enemy_level:19
+        treasures:0
     }
     scene{
-        name : 'worldsend_part3'
+        name:'worldsend_part3'
         connected_scene{
-            name : 'worldsend_part4'
+            name:'worldsend_part4'
         }
-        u1 : 1
-        base_enemy_level : 19
-        treasures : 1
+        u1:1
+        base_enemy_level:19
+        treasures:1
     }
     scene{
-        name : 'worldsend_part4'
+        name:'worldsend_part4'
         connected_scene{
-            name : 'worldsend_part5'
+            name:'worldsend_part5'
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'worldsend_part5'
+        name:'worldsend_part5'
         connected_scene{
-            name : 'worldsend_part6'
+            name:'worldsend_part6'
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'worldsend_part6'
+        name:'worldsend_part6'
         connected_scene{
-            name : 'worldsend_part7'
-            direction : 1
+            name:'worldsend_part7'
+            direction:1
         }
-        u1 : 1
-        treasures : 0
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'worldsend_part7'
+        name:'worldsend_part7'
         connected_scene{
-            name : 'worldsend_part8'
+            name:'worldsend_part8'
         }
         connected_scene{
-            name : 'worldsend_part9'
-            direction : 1
+            name:'worldsend_part9'
+            direction:1
         }
-        portal : 1
-        treasures : 0
+        portal:1
+        treasures:0
     }
     scene{
-        name : 'worldsend_part8'
-        u1 : 1
-        treasures : 0
+        name:'worldsend_part8'
+        u1:1
+        treasures:0
     }
     scene{
-        name : 'worldsend_part9'
-        feature : 3
-        treasures : 0
-        title : 'Lair of Death'
+        name:'worldsend_part9'
+        feature:3
+        treasures:0
+        title:'Lair of Death'
     }
-    sequence : 20
-    default_music : 'dungeon1'
+    sequence:20
+    default_music:'dungeon1'
 }
