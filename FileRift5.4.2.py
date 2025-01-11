@@ -1,5 +1,6 @@
 rift_mode = "recode"  # options: decode, recode, both
-allways_recode = True
+allways_recode = False
+
 
 # must use the following chars (=|:|;|,)
 style_after_tag = ":" # default : " : "
@@ -237,11 +238,14 @@ def lex_data():
         "\n",
         ":",
         "=",
+        ";",
+        ",",
         "#",
         "{",
         "}",
         '"',
         "'",
+        "$",
     ]
 
     lexList = []
@@ -365,31 +369,6 @@ def import_lua(match):
         return ""
 
 
-def import_chunk(match):
-    input = match.group(1)
-    objname, filename = input.split(";")
-
-    try:
-        with open("./source/"+filename, "r") as file:
-            content = file.read()
-        content = content.strip()
-        objstring = "library_item{\nobject{\nname : '" + objname + "'\nposition{\nx_position : 0.0\ny_position : 0.0\n}\nz_position : 0.0\nrotation : 0.0\nscale : 1.0\nlua_chunk{\nmain_chunk : $\n" + content + "\n$end\nsecondary_chunk : ''\n}\nhidden : 0\n}\nu0 : 1.0\n}\n"
-        return objstring
-    except FileNotFoundError:
-        print(" chunk file not found: "+filename)
-        return ""
-
-
-def import_obj(match):
-    input = match.group(1)
-    if len(input.split(";")) < 7:
-        print("not enough args for obj")
-        return ""
-    obj, ident, xpos, ypos, zpos, rot, scale = input.split(";")
-    obj_string = "object{name '"+obj.strip()+"' identifier '"+ident.strip()+"' position{ x_position "+xpos+" y_position "+ypos+" } z_position "+zpos+" rotation "+rot+" scale "+scale+" hidden 0 }"
-    return obj_string
-
-
 def recode_lexList(lexList):
 
     global metalevel
@@ -456,6 +435,9 @@ def recode_lexList(lexList):
         match mode:
             case "tag":
 
+                if lexeme in ["=",":",";",","]:  # delimiters are optional
+                    continue
+
                 if lexeme == "}":  # block end
 
                     formats[metalevel] == {"name": "-"}
@@ -501,7 +483,7 @@ def recode_lexList(lexList):
 
             case "data":
 
-                if lexeme == ":" or lexeme == "=":  # delimiters are optional
+                if lexeme in ["=",":",";",","]:  # delimiters are optional
                     continue
 
                 elif lexeme == "{":  # block start
@@ -661,7 +643,6 @@ if rift_mode in ["recode", "both"]:
             if name.split(".")[-1] == "fr":
                 template_name = name[:-3]
             template_list.append([template_name, os.path.join(root, name)])
-    print(template_list)
 
     for game_file in files_list:
 
@@ -687,12 +668,10 @@ if rift_mode in ["recode", "both"]:
 
         # --- import source file data ---
 
-        intext = re.sub(r'\$\$\$\[(.*)\]',   import_file,  intext)
-        intext = re.sub(r'\$source\[(.*)\]', import_file,  intext)
-        intext = re.sub(r'\$lua\[(.*)\]',    import_lua ,  intext)
-        intext = re.sub(r'\$chunk\[(.*)\]',  import_chunk, intext)
-        intext = re.sub(r'\$obj\[(.*)\]',    import_obj,   intext)
-        intext = re.sub(r'\$(([a-z]|\.){3,25})\[(.*)\]', import_template, intext)
+        intext = re.sub(r"\$\$\$\[(.*)\]",   import_file,  intext)
+        intext = re.sub(r"\$source\[(.*)\]", import_file,  intext)
+        intext = re.sub(r"\$lua\[(.*)\]",    import_lua ,  intext)
+        intext = re.sub(r"\$(([a-z]|\.){3,25})\[(.*)\]", import_template, intext)
 
         # --- generate hash and compare against older hash ---
 
@@ -717,7 +696,8 @@ if rift_mode in ["recode", "both"]:
                 file_found = True
                 if old_hash == hash:
                     skip_recode = True
-                    no_skipped += 1
+                    if not allways_recode:
+                        no_skipped += 1
                 else:
                     manifest[index] = manifest_line
 
