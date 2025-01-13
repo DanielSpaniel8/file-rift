@@ -1,4 +1,4 @@
-rift_mode = "decode"  # options: decode, recode, both
+rift_mode = "recode"  # options: decode, recode, both, custom
 allways_recode = False
 
 
@@ -335,7 +335,7 @@ def import_template(match):
         return ""
     def replace_mark(match):
         try:
-            return replacements.split(";")[int(match.group(1))-1]
+            return replacements.split(";")[int(match.group(1))-1].strip()
         except Exception as x:
             print("not enough args for", template_filename)
             print(x)
@@ -582,9 +582,11 @@ def recode_lexList(lexList):
 no_decoded = 0
 no_recoded = 0
 no_skipped = 0
-if rift_mode in ["decode", "both"]:
+if rift_mode in ["decode", "both", "custom"]:
     files_list = []
-    for root, dirs, files in os.walk("./de_in"):
+    root_path = "./de_in"
+    if rift_mode == "custom": root_path = "./de_in/custom"
+    for root, dirs, files in os.walk(root_path):
         for name in files:
             files_list.append(os.path.join(root, name))
 
