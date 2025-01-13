@@ -1,4 +1,6 @@
-![fr_logo](fileriftlogo0.png)
+<h3 align="center">
+    <img src="fileriftlogo0.png" alt="fr_logo" width="300">
+</h3>
 
 ## Overview
 File Rift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These files include:
