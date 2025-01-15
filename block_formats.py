@@ -171,8 +171,8 @@ scene = {
                     '2d' : 'y',
                     '35' : 'z',
                 },
-                '192' : [2, 'u8'],
-                '19a' : [2, 'u9'],
+                '192' : 'u8',
+                '19a' : 'u9',
             },
             '4a' : {
                 'name' : 'u2',
@@ -239,7 +239,7 @@ scene = {
                     '2d' : 'y',
                     '35' : 'z',
                 },
-                '192' : [2, 'u7'],
+                '192' : 'u7',
             },
             '52' : {
                 'name' : 'u3',
@@ -336,18 +336,18 @@ scene = {
             '4a' : {
                 'name' : ('lua_chunk_0','on_collision_chunk'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '52' : {
                 'name' : ('lua_chunk_1','off_collision_chunk'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '58' : 'z',
             '62' : {
                 'name' : 'lua_chunk_2',
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '6d' : 'u4',
             '70' : 'u5',
@@ -456,7 +456,7 @@ scene = {
             'name' : 'pressure_trigger',
             '0d' : 'u0',
             '12' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
                 '12' : ('secrndary_chunk','secondary_chunk'),
             },
@@ -466,9 +466,9 @@ scene = {
         '4f2' : {   # ?monster entity
             'name' : '?monster_entity',
             '0a' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '12' : 'u0',
             '18' : 'u2',
@@ -496,9 +496,9 @@ scene = {
             'name' : 'program',
             '08' : 'u0',
             '12' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '18' : 'u1',
             '20' : 'u2',
@@ -524,9 +524,9 @@ scene = {
         '512' : {   # entity action
             'name' : 'entity_action',
             '0a' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             }
         },
         '51a' : {   # physics platform
@@ -543,9 +543,9 @@ scene = {
         '52a' : {   # hero entity
             'name' : 'hero_entity',
             '0a' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             }
         },
         '642' : {   # file
@@ -696,9 +696,9 @@ scene = {
             '4d' : 'u7',
             '55' : 'u8',
             '5a' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '65' : 'u9',
             '6d' : 'u10',
@@ -797,9 +797,9 @@ scene = {
             '08' : 'u0',
             '10' : 'u1',
             '1a' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '22' : 'name',
             '2a' : ('?model','item'),
@@ -891,9 +891,9 @@ scene = {
     },
     '48' : 'hidden',
     '52' : {
-        'name' : 'lua_chunk',
+        'name' : ('lua_chunk', 'chunk', 'lua'),
         '0a' : [1,'main_chunk'],
-        '12' : [2, 'secondary_chunk'],
+        '12' : 'secondary_chunk',
     },
 },
 
@@ -1069,8 +1069,8 @@ scene = {
                             '2d' : 'y',
                             '35' : 'z',
                         },
-                        '192' : [2, 'u8'],
-                        '19a' : [2, 'u9'],
+                        '192' : 'u8',
+                        '19a' : 'u9',
                     },
                     '4a' : {
                         'name' : 'u2',
@@ -1137,7 +1137,7 @@ scene = {
                             '2d' : 'y',
                             '35' : 'z',
                         },
-                        '192' : [2, 'u7'],
+                        '192' : 'u7',
                     },
                     '52' : {
                         'name' : 'u3',
@@ -1234,18 +1234,18 @@ scene = {
                     '4a' : {
                         'name' : ('lua_chunk_0','on_collision_chunk'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '52' : {
                         'name' : ('lua_chunk_1','off_collision_chunk'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '58' : 'z',
                     '62' : {
                         'name' : 'lua_chunk_2',
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '6d' : 'u4',
                     '70' : 'u5',
@@ -1354,7 +1354,7 @@ scene = {
                     'name' : 'pressure_trigger',
                     '0d' : 'u0',
                     '12' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
                         '12' : ('secrndary_chunk','secondary_chunk'),
                     },
@@ -1364,7 +1364,7 @@ scene = {
                 '4f2' : {   # ?monster entity
                     'name' : '?monster_entity',
                     '0a' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
                         '12' : ('secrndary_chunk','secondary_chunk'),
                     },
@@ -1394,9 +1394,9 @@ scene = {
                     'name' : 'program',
                     '08' : 'u0',
                     '12' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '18' : 'u1',
                     '20' : 'u2',
@@ -1422,9 +1422,9 @@ scene = {
                 '512' : {   # entity action
                     'name' : 'entity_action',
                     '0a' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     }
                 },
                 '51a' : {   # physics platform
@@ -1441,9 +1441,9 @@ scene = {
                 '52a' : {   # hero entity
                     'name' : 'hero_entity',
                     '0a' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     }
                 },
                 '642' : {   # file
@@ -1594,9 +1594,9 @@ scene = {
                     '4d' : 'u7',
                     '55' : 'u8',
                     '5a' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '65' : 'u9',
                     '6d' : 'u10',
@@ -1695,9 +1695,9 @@ scene = {
                     '08' : 'u0',
                     '10' : 'u1',
                     '1a' : {
-                        'name' : 'lua_chunk',
+                        'name' : ('lua_chunk', 'chunk', 'lua'),
                         '0a' : [1,'main_chunk'],
-                        '12' : [2, 'secondary_chunk'],
+                        '12' : 'secondary_chunk',
                     },
                     '22' : 'name',
                     '2a' : ('?model','item'),
@@ -1788,18 +1788,18 @@ scene = {
                 '25' : 'z',
             },
             '52' : {
-                'name' : 'lua_chunk',
+                'name' : ('lua_chunk', 'chunk', 'lua'),
                 '0a' : [1,'main_chunk'],
-                '12' : [2, 'secondary_chunk'],
+                '12' : 'secondary_chunk',
             },
             '48' : 'u5',
         },
         '15' : 'u1',
     },
     '2a' : {
-        'name' : 'lua_chunk',
+        'name' : ('lua_chunk', 'chunk', 'lua'),
         '0a' : [1,'main_chunk'],
-        '12' : [2, 'secondary_chunk'],
+        '12' : 'secondary_chunk',
         '1a' : 'name'
     },
     '1a' : 'scl_file',
@@ -1825,9 +1825,9 @@ scene = {
 },
 
 '2a' : {
-    'name' : 'lua_chunk',
+    'name' : ('lua_chunk', 'chunk', 'lua'),
     '0a' : [1,'main_chunk'],
-    '12' : [2, 'secondary_chunk'],
+    '12' : 'secondary_chunk',
 },
 
 
@@ -2009,8 +2009,8 @@ scl = {
                         '2d' : 'y',
                         '35' : 'z',
                     },
-                    '192' : [2, 'u8'],
-                    '19a' : [2, 'u9'],
+                    '192' : 'u8',
+                    '19a' : 'u9',
                 },
                 '4a' : {
                     'name' : 'u2',
@@ -2077,7 +2077,7 @@ scl = {
                         '2d' : 'y',
                         '35' : 'z',
                     },
-                    '192' : [2, 'u7'],
+                    '192' : 'u7',
                 },
                 '52' : {
                     'name' : 'u3',
@@ -2174,18 +2174,18 @@ scl = {
                 '4a' : {
                     'name' : ('lua_chunk_0','on_collision_chunk'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '52' : {
                     'name' : ('lua_chunk_1','off_collision_chunk'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '58' : 'z',
                 '62' : {
                     'name' : 'lua_chunk_2',
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '6d' : 'u4',
                 '70' : 'u5',
@@ -2338,9 +2338,9 @@ scl = {
                 'name' : 'pressure_trigger',
                 '0d' : 'u0',
                 '12' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '1a' : 'u1',
                 '20' : 'u2',
@@ -2348,9 +2348,9 @@ scl = {
             '4f2' : {   # ?monster entity
                 'name' : '?monster_entity',
                 '0a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '12' : 'u0',
                 '18' : 'u2',
@@ -2383,9 +2383,9 @@ scl = {
                 'name' : 'program',
                 '08' : 'u0',
                 '12' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '18' : 'u1',
                 '20' : 'u2',
@@ -2411,9 +2411,9 @@ scl = {
             '512' : {   # entity action
                 'name' : 'entity_action',
                 '0a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 }
             },
             '51a' : {   # physics platform
@@ -2430,7 +2430,7 @@ scl = {
             '52a' : {   # hero entity
                 'name' : 'hero_entity',
                 '0a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
                     '12' : 'secondary_chunk',
                 }
@@ -2442,9 +2442,9 @@ scl = {
             '692' : {   # properties
                 'name' : 'properties',
                 '0a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 }
             },
             '7d2' : {   # particle emitter
@@ -2591,7 +2591,7 @@ scl = {
                 '4d' : 'u7',
                 '55' : 'u8',
                 '5a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
                     '12' : 'secondary_chunk',
                 },
@@ -2715,9 +2715,9 @@ scl = {
                 '08' : 'u0',
                 '10' : 'u1',
                 '1a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 },
                 '22' : 'name',
                 '2a' : ('?model','item'),
@@ -2845,9 +2845,9 @@ scl = {
             '1172' : { #t
                 'name' : 'temp0',
                 '0a' : {
-                    'name' : 'lua_chunk',
+                    'name' : ('lua_chunk', 'chunk', 'lua'),
                     '0a' : [1,'main_chunk'],
-                    '12' : [2, 'secondary_chunk'],
+                    '12' : 'secondary_chunk',
                 }
             },
 
@@ -2869,9 +2869,9 @@ scl = {
         },
         '48' : 'hidden',
         '52' : {
-            'name' : 'lua_chunk',
+            'name' : ('lua_chunk', 'chunk', 'lua'),
             '0a' : [1,'main_chunk'],
-            '12' : [2, 'secondary_chunk'],
+            '12' : 'secondary_chunk',
         },
     },
 
@@ -2884,9 +2884,9 @@ scl = {
 
 
 '2a' : {
-    'name' : 'lua_chunk',
+    'name' : ('lua_chunk', 'chunk', 'lua'),
     '0a' : [1,'main_chunk'],
-    '12' : [2, 'secondary_chunk'],
+    '12' : 'secondary_chunk',
     '1a' : 'program_name',
 },
 

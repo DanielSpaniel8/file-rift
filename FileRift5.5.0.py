@@ -106,35 +106,47 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
 
     n = "name"
     formNames = ""
-    for i in formats:
-        if isinstance(i[n], tuple):
-            formNames += i[n][-1] + "/"
-        else:
-            formNames += i[n] + "/"
-
     if not taghex in form:
+        for i in formats:
+            if isinstance(i[n], tuple):
+                formNames += i[n][-1] + "/"
+            else:
+                formNames += i[n] + "/"
+
         print(
-            f"\n{taghex} / off = {hex(sum(offsets)-1)} / met = {metalevel} / file = {game_file}\n{formNames}"
+        f"\nunrecognized tag: {taghex} / off = {hex(sum(offsets)-1)} / met = {metalevel} / file = {game_file}\n{formNames}"
         )
         print(outLines)
         quit()
 
     if not n in formats[metalevel]:
+        for i in formats:
+            if isinstance(i[n], tuple):
+                formNames += i[n][-1] + "/"
+            else:
+                formNames += i[n] + "/"
         print(
-            f"\nunnamed / off = {hex(sum(offsets)-1)} / met = {metalevel}\n{formNames}"
+            f"\nblock with no name / off = {hex(sum(offsets)-1)} / met = {metalevel}\n{formNames}"
         )
         quit()
 
     # --- handle different wire types ---
 
-    indent = " " * metalevel * 4  # prepare indentation
+    indent = " " * (metalevel*4)  # prepare indentation
     if isinstance(form[taghex], tuple):  # backwards compatibility
         tagname = form[taghex][-1]
     else:
         tagname = form[taghex]
 
     if typeVarInt:
-        outLines.append(indent + str(tagname) + style_after_tag + str(de_varint()) + style_after_record + "\n")
+        outLines.append(
+        indent
+        + str(tagname)
+        + style_after_tag
+        + str(de_varint())
+        + style_after_record
+        + "\n"
+        )
 
     if typeInt64:
         outLines.append(
@@ -181,15 +193,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 offsets[metalevel] += pointer
 
             if k[0] == 2:  # bytestring
-                outLines.append(
-                    indent
-                    + tagname[1]
-                    + style_after_tag
-                    + str(inbytes[sum(offsets) : sum(offsets) + pointer])[1:]
-                    + style_after_record
-                    + "\n"
-                )
-                offsets[metalevel] += pointer
+                print("deprecated alternative action")
 
         if isinstance(tagname, dict):  # if there are subblocks:
             if isinstance(tagname["name"], tuple):
@@ -203,7 +207,14 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
             formats[metalevel] = tagname
 
     if typeInt32:
-        outLines.append((indent + tagname + style_after_tag + de_int32()) + style_after_record + "\n")
+        outLines.append((
+            indent
+            + tagname
+            + style_after_tag
+            + de_int32())
+            + style_after_record
+            + "\n"
+        )
         offsets[metalevel] += 4
 
     # --- pop if neccesary and recall handler function ---
@@ -217,7 +228,7 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
                 metalevel -= 1
 
                 # close curly braces
-                indent = " " * metalevel * 4
+                indent = " " * (metalevel*4)
                 outLines.append(indent + "}" + style_after_block + "\n")
 
                 # reset format

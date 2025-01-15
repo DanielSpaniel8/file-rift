@@ -1,185 +1,185 @@
 # rifted with FR v5.5.0
 
-scl_file_name : 'lowergrove_stuff',
+scl_file_name:'lowergrove_stuff'
 library_item{
     object{
-        name : 'lowergrove_torch',
+        name:'lowergrove_torch'
         component{
-            component_type : 'Model',
-            number : 1,
+            component_type:'Model'
+            number:1
             3D_model{
-                name : 'grove_torch',
-                u0 : 0.0,
-                u1 : 0.5,
-                u2 : 0.0,
+                name:'grove_torch'
+                u0:0.0
+                u1:0.5
+                u2:0.0
                 u3{
-                    w : 0.0,
-                    x : 0.0,
-                    y : 0.0,
-                    z : 1.0,
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0,
+                u5:0
                 u6{
-                    w : 1.0,
-                    x : 1.0,
-                    y : 1.0,
-                    z : 1.0,
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            component_type : 'Light',
-            number : 103,
+            component_type:'Light'
+            number:103
             light{
-                u0 : 3,
-                u1 : 1.5,
+                u0:3
+                u1:1.5
                 u2{
-                    w : 0.8222222328186035,
-                    x : 0.6466666460037231,
-                    y : 0.5666667222976685,
-                    z : 0.0,
+                    w:0.8222222328186035
+                    x:0.6466666460037231
+                    y:0.5666667222976685
+                    z:0.0
                 }
-                u3 : 0.0,
-                u4 : 0.00019999999494757503,
+                u3:0.0
+                u4:0.00019999999494757503
                 u5{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u6 : 250.0,
+                u6:250.0
             }
         }
         component{
-            component_type : 'FireEmitter',
-            number : 105,
+            component_type:'FireEmitter'
+            number:105
             fire_emitter{
-                particle_emitter : 108,
-                light : 103,
+                particle_emitter:108
+                light:103
                 u0{
-                    w : 0.8222222328186035,
-                    x : 0.6466666460037231,
-                    y : 0.5666667222976685,
-                    z : 0.0,
+                    w:0.8222222328186035
+                    x:0.6466666460037231
+                    y:0.5666667222976685
+                    z:0.0
                 }
-                u1 : 0.10000000149011612,
-                u2 : 0.8999999761581421,
+                u1:0.10000000149011612
+                u2:0.8999999761581421
                 u3{
-                    x : 2.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:2.0
+                    y:0.0
+                    z:0.0
                 }
                 u4{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
             }
         }
         component{
-            component_type : 'ParticleEmitter',
-            number : 108,
+            component_type:'ParticleEmitter'
+            number:108
             particle_emitter{
-                particle : 109,
-                particle : 111,
-                particle : 112,
-                u1 : 0,
-                u2 : 30,
-                u3 : 0,
-                u4 : 0,
-                u6 : 0,
+                particle:109
+                particle:111
+                particle:112
+                u1:0
+                u2:30
+                u3:0
+                u4:0
+                u6:0
             }
         }
         component{
-            component_type : 'Particle',
-            number : 109,
+            component_type:'Particle'
+            number:109
             particle{
-                name : 'particle_fure_1',
-                u0 : 20.0,
+                name:'particle_fure_1'
+                u0:20.0
             }
         }
         component{
-            component_type : 'Particle',
-            number : 111,
+            component_type:'Particle'
+            number:111
             particle{
-                name : 'particle_fure_2',
-                u0 : 22.0,
+                name:'particle_fure_2'
+                u0:22.0
             }
         }
         component{
-            component_type : 'Particle',
-            number : 112,
+            component_type:'Particle'
+            number:112
             particle{
-                name : 'particle_fure_3',
-                u0 : 20.0,
+                name:'particle_fure_3'
+                u0:20.0
             }
         }
         position{
-            x_position : 0.0,
-            y_position : 0.0,
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0,
-        rotation : 0.0,
-        scale : 1.0,
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0,
-            x : 0.0,
-            y : 0.0,
-            z : 0.0,
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0,
+        hidden:0
     }
-    u0 : 1.0,
+    u0:1.0
 }
 library_item{
     object{
-        name : 'lowergrove_tree1',
+        name:'lowergrove_tree1'
         component{
-            component_type : 'Model',
-            number : 101,
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'lowergrove_tree1',
-                u0 : 1.5707963705062866,
-                u1 : 0.0,
-                u2 : 0.0,
+                name:'lowergrove_tree1'
+                u0:1.5707963705062866
+                u1:0.0
+                u2:0.0
                 u3{
-                    w : 0.0,
-                    x : 0.0,
-                    y : 0.0,
-                    z : 1.0,
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0,
+                u5:0
                 u6{
-                    w : 1.0,
-                    x : 1.0,
-                    y : 1.0,
-                    z : 1.0,
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         position{
-            x_position : 0.0,
-            y_position : 0.0,
+            x_position:0.0
+            y_position:0.0
         }
-        z_position : 0.0,
-        rotation : 0.0,
-        scale : 1.0,
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
         u0{
-            w : 0.0,
-            x : 0.0,
-            y : 0.0,
-            z : 0.0,
+            w:0.0
+            x:0.0
+            y:0.0
+            z:0.0
         }
-        hidden : 0,
+        hidden:0
     }
-    u0 : 1.0,
+    u0:1.0
 }
