@@ -1,585 +1,585 @@
-# rifted with FR v5.5.0
+# rifted with FR v5.5.1
 
 collectable_item{
-    item_type:2
-    name:'brasssword'
-    title:'Brass Sword'
-    subtitle:'+0 damage'
-    info:'Good for killing insects.'
-    unique_item:1
-    min_damage:3
-    max_damage:6
-    sequence_position:1
+    item_type : 2,
+    name : 'brasssword',
+    title : 'Brass Sword',
+    subtitle : '+0 damage',
+    info : 'Good for killing insects.',
+    unique_item : 1,
+    min_damage : 3,
+    max_damage : 6,
+    sequence_position : 1,
 }
 collectable_item{
-    item_type:2
-    name:'ironsword'
-    title:'Iron Sword'
-    subtitle:'+1 damage'
-    info:'Basic iron sword.'
-    unique_item:1
-    min_damage:5
-    max_damage:10
-    sequence_position:2
+    item_type : 2,
+    name : 'ironsword',
+    title : 'Iron Sword',
+    subtitle : '+1 damage',
+    info : 'Basic iron sword.',
+    unique_item : 1,
+    min_damage : 5,
+    max_damage : 10,
+    sequence_position : 2,
 }
 collectable_item{
-    item_type:2
-    name:'needle'
-    title:'The Needle'
-    subtitle:'+1 damage'
-    info:'Basic iron sword.'
-    unique_item:1
-    min_damage:7
-    max_damage:13
-    sequence_position:3
+    item_type : 2,
+    name : 'needle',
+    title : 'The Needle',
+    subtitle : '+1 damage',
+    info : 'Basic iron sword.',
+    unique_item : 1,
+    min_damage : 7,
+    max_damage : 13,
+    sequence_position : 3,
 }
 collectable_item{
-    item_type:2
-    name:'broadsword'
-    title:'Broad Sword'
-    subtitle:'+2 damage'
-    info:'High quality broad sword.'
-    unique_item:1
-    min_damage:10
-    max_damage:15
-    sequence_position:4
+    item_type : 2,
+    name : 'broadsword',
+    title : 'Broad Sword',
+    subtitle : '+2 damage',
+    info : 'High quality broad sword.',
+    unique_item : 1,
+    min_damage : 10,
+    max_damage : 15,
+    sequence_position : 4,
 }
 collectable_item{
-    item_type:2
-    name:'thorn'
-    title:'The Thorn'
-    subtitle:'+2 damage'
-    info:'High quality broad sword.'
-    unique_item:1
-    min_damage:12
-    max_damage:18
-    sequence_position:5
+    item_type : 2,
+    name : 'thorn',
+    title : 'The Thorn',
+    subtitle : '+2 damage',
+    info : 'High quality broad sword.',
+    unique_item : 1,
+    min_damage : 12,
+    max_damage : 18,
+    sequence_position : 5,
 }
 collectable_item{
-    item_type:2
-    name:'magicsword'
-    title:'Magic Sword'
-    subtitle:'+3 damage'
-    info:'Magic enchanted sword.'
-    unique_item:1
-    min_damage:15
-    max_damage:20
-    sequence_position:6
+    item_type : 2,
+    name : 'magicsword',
+    title : 'Magic Sword',
+    subtitle : '+3 damage',
+    info : 'Magic enchanted sword.',
+    unique_item : 1,
+    min_damage : 15,
+    max_damage : 20,
+    sequence_position : 6,
 }
 collectable_item{
-    item_type:2
-    name:'legendsword'
-    title:'The Mageblade'
-    subtitle:'+4 damage'
-    info:'The legendary Mageblade.'
-    unique_item:1
-    min_damage:20
-    max_damage:25
-    sequence_position:7
+    item_type : 2,
+    name : 'legendsword',
+    title : 'The Mageblade',
+    subtitle : '+4 damage',
+    info : 'The legendary Mageblade.',
+    unique_item : 1,
+    min_damage : 20,
+    max_damage : 25,
+    sequence_position : 7,
 }
 collectable_item{
-    item_type:3
-    name:'platearmor'
-    title:'Plate Armor'
-    subtitle:'50% damage reduction'
-    info:'50% damage reduction.'
-    unique_item:1
-    sequence_position:1
+    item_type : 3,
+    name : 'platearmor',
+    title : 'Plate Armor',
+    subtitle : '50% damage reduction',
+    info : '50% damage reduction.',
+    unique_item : 1,
+    sequence_position : 1,
 }
 collectable_item{
-    item_type:3
-    name:'magicarmor'
-    title:'Magic Armor'
-    subtitle:'75% damage reduction'
-    info:'75% damage reduction.'
-    unique_item:1
-    sequence_position:2
+    item_type : 3,
+    name : 'magicarmor',
+    title : 'Magic Armor',
+    subtitle : '75% damage reduction',
+    info : '75% damage reduction.',
+    unique_item : 1,
+    sequence_position : 2,
 }
 collectable_item{
-    item_type:4
-    name:'firetrinket'
-    title:'Trinket of Fire'
-    subtitle:'-'
-    info:'Adds a fire enchantment to your weapon, armor or spells.'
-    unique_item:1
+    item_type : 4,
+    name : 'firetrinket',
+    title : 'Trinket of Fire',
+    subtitle : '-',
+    info : 'Adds a fire enchantment to your weapon, armor or spells.',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:4
-    name:'icetrinket'
-    title:'Trinket of Ice'
-    subtitle:'-'
-    info:'Adds a cold enchantment to your weapon, armor or spells.'
-    unique_item:1
+    item_type : 4,
+    name : 'icetrinket',
+    title : 'Trinket of Ice',
+    subtitle : '-',
+    info : 'Adds a cold enchantment to your weapon, armor or spells.',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:4
-    name:'shadowtrinket'
-    title:'Trinket of Shadow'
-    subtitle:'-'
-    info:'Adds a shadow enchantment to your weapon, armor or spells.'
-    unique_item:1
+    item_type : 4,
+    name : 'shadowtrinket',
+    title : 'Trinket of Shadow',
+    subtitle : '-',
+    info : 'Adds a shadow enchantment to your weapon, armor or spells.',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:1
-    name:'healingpotion'
-    title:'Healing Potion'
-    info:'Restores 5 hearts when used. You can only carry one healing potion at a time.'
-    unique_item:1
+    item_type : 1,
+    name : 'healingpotion',
+    title : 'Healing Potion',
+    info : 'Restores 5 hearts when used. You can only carry one healing potion at a time.',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:1
-    name:'experiencesack'
-    title:'Sack of Experience'
-    info:'Gives a lot of experience.'
+    item_type : 1,
+    name : 'experiencesack',
+    title : 'Sack of Experience',
+    info : 'Gives a lot of experience.',
 }
 collectable_item{
-    item_type:1
-    name:'ankh'
-    title:'Ankh of Resurrection'
-    info:'-'
+    item_type : 1,
+    name : 'ankh',
+    title : 'Ankh of Resurrection',
+    info : '-',
 }
 collectable_item{
-    item_type:5
-    name:'key_yellow'
-    title:'A Key'
+    item_type : 5,
+    name : 'key_yellow',
+    title : 'A Key',
 }
 collectable_item{
-    item_type:5
-    name:'iselon_shard_1'
-    title:'First shard of the Mageblade'
-    unique_item:1
+    item_type : 5,
+    name : 'iselon_shard_1',
+    title : 'First shard of the Mageblade',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:5
-    name:'iselon_shard_2'
-    title:'Second shard of the Mageblade'
-    unique_item:1
+    item_type : 5,
+    name : 'iselon_shard_2',
+    title : 'Second shard of the Mageblade',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:5
-    name:'iselon_shard_3'
-    title:'Third shard of the Mageblade'
-    unique_item:1
+    item_type : 5,
+    name : 'iselon_shard_3',
+    title : 'Third shard of the Mageblade',
+    unique_item : 1,
 }
 collectable_item{
-    item_type:5
-    name:'iselon_shard_4'
-    title:'Fourth shard of the Mageblade'
-    unique_item:1
+    item_type : 5,
+    name : 'iselon_shard_4',
+    title : 'Fourth shard of the Mageblade',
+    unique_item : 1,
 }
 skill{
-    name:'bolt'
-    title:'Magic Bolt'
-    subtitle:'---'
-    u0:10
-    min_damage:5
-    max_damage:10
+    name : 'bolt',
+    title : 'Magic Bolt',
+    subtitle : '---',
+    u0 : 10,
+    min_damage : 5,
+    max_damage : 10,
 }
 skill{
-    name:'bomb'
-    title:'Magic Bomb'
-    subtitle:'---'
-    u0:20
-    min_damage:10
-    max_damage:20
+    name : 'bomb',
+    title : 'Magic Bomb',
+    subtitle : '---',
+    u0 : 20,
+    min_damage : 10,
+    max_damage : 20,
 }
 skill{
-    name:'hookshot'
-    title:"Dragon's Grasp"
-    subtitle:'---'
-    u0:25
-    min_damage:5
-    max_damage:10
+    name : 'hookshot',
+    title : "Dragon's Grasp",
+    subtitle : '---',
+    u0 : 25,
+    min_damage : 5,
+    max_damage : 10,
 }
 skill{
-    name:'dimension'
-    title:'Dimension Rift'
-    subtitle:'???'
-    u0:40
-    min_damage:0
-    max_damage:0
+    name : 'dimension',
+    title : 'Dimension Rift',
+    subtitle : '???',
+    u0 : 40,
+    min_damage : 0,
+    max_damage : 0,
 }
 quest{
-    name:'vaseQuest'
-    title:'Recover the Vase'
-    target_level:'plains_part2'
+    name : 'vaseQuest',
+    title : 'Recover the Vase',
+    target_level : 'plains_part2',
 }
 quest{
-    name:'snowyboulder'
-    title:'Get the Golden Boulder'
-    target_level:'snowy_part1'
+    name : 'snowyboulder',
+    title : 'Get the Golden Boulder',
+    target_level : 'snowy_part1',
 }
 quest{
-    name:'quest01_find_master'
-    title:'Find Master in the Woods'
-    target_level:'town_woods_end'
+    name : 'quest01_find_master',
+    title : 'Find Master in the Woods',
+    target_level : 'town_woods_end',
 }
 quest{
-    name:'quest02_village_elder'
-    target_level:'town_part1'
+    name : 'quest02_village_elder',
+    target_level : 'town_part1',
 }
 quest{
-    name:'quest03_woodkeep'
-    title:'Find the Legendary Weapon'
-    target_level:'plains_woodkeep3'
+    name : 'quest03_woodkeep',
+    title : 'Find the Legendary Weapon',
+    target_level : 'plains_woodkeep3',
 }
 quest{
-    name:'quest04_village_elder2'
-    target_level:'town_part1'
+    name : 'quest04_village_elder2',
+    target_level : 'town_part1',
 }
 quest{
-    name:'quest05_florennum'
-    title:'Speak to the King for Help'
-    target_level:'florennum_jail_part1'
+    name : 'quest05_florennum',
+    title : 'Speak to the King for Help',
+    target_level : 'florennum_jail_part1',
 }
 quest{
-    name:'quest06_florennum_shard'
-    title:'Recover the Second Shard'
-    target_level:'florennum_jail_boss'
+    name : 'quest06_florennum_shard',
+    title : 'Recover the Second Shard',
+    target_level : 'florennum_jail_boss',
 }
 quest{
-    name:'quest07_go_to_king'
-    target_level:'florennum_jail_part1'
+    name : 'quest07_go_to_king',
+    target_level : 'florennum_jail_part1',
 }
 quest{
-    name:'quest071_fire'
-    title:'The Fiery Depths'
-    target_level:'fire_partBoss'
+    name : 'quest071_fire',
+    title : 'The Fiery Depths',
+    target_level : 'fire_partBoss',
 }
 quest{
-    name:'quest072_ice'
-    title:'The Snowy Peaks'
-    target_level:'icecastle_partBoss'
+    name : 'quest072_ice',
+    title : 'The Snowy Peaks',
+    target_level : 'icecastle_partBoss',
 }
 quest{
-    name:'quest09_assemble'
-    title:'The Chambers of Power'
-    target_level:'thecave_part15'
+    name : 'quest09_assemble',
+    title : 'The Chambers of Power',
+    target_level : 'thecave_part15',
 }
 quest{
-    name:'quest10_death'
-    title:'Destroy the Source of Corruption'
-    target_level:'worldsend_part9'
+    name : 'quest10_death',
+    title : 'Destroy the Source of Corruption',
+    target_level : 'worldsend_part9',
 }
 entity_info{
-    name:'monster'
-    title:'Monster'
+    name : 'monster',
+    title : 'Monster',
 }
 entity_info{
-    name:'boss'
-    title:'Boss'
-    u0:1
-    u1:0
-    u2:0
-    u3:0
+    name : 'boss',
+    title : 'Boss',
+    u0 : 1,
+    u1 : 0,
+    u2 : 0,
+    u3 : 0,
 }
 entity_info{
-    name:'boss_corruptor'
-    title:'Corruptor'
-    u0:1
-    u1:0
-    u2:0
-    u3:0
-    u5:1.0
+    name : 'boss_corruptor',
+    title : 'Corruptor',
+    u0 : 1,
+    u1 : 0,
+    u2 : 0,
+    u3 : 0,
+    u5 : 1.0,
 }
 entity_info{
-    name:'boss_fire'
-    title:'Boss'
-    u0:1
-    u1:0
-    u2:0
-    u4:1.0
+    name : 'boss_fire',
+    title : 'Boss',
+    u0 : 1,
+    u1 : 0,
+    u2 : 0,
+    u4 : 1.0,
 }
 entity_info{
-    name:'lesser_corruptor'
-    title:'Lesser Corruptor'
-    u1:0
+    name : 'lesser_corruptor',
+    title : 'Lesser Corruptor',
+    u1 : 0,
 }
 entity_info{
-    name:'corruptor'
-    title:'Corruptor'
-    u1:0
-    u5:1.0
+    name : 'corruptor',
+    title : 'Corruptor',
+    u1 : 0,
+    u5 : 1.0,
 }
 entity_info{
-    name:'bolt'
-    u1:0
-    u3:0
+    name : 'bolt',
+    u1 : 0,
+    u3 : 0,
 }
 entity_info{
-    name:'skeleton_lord'
-    title:'Skeleton Lord'
-    u0:1
+    name : 'skeleton_lord',
+    title : 'Skeleton Lord',
+    u0 : 1,
 }
 entity_info{
-    name:'Chaos Orb'
-    title:'Chaos Orb'
-    u0:1
-    u1:0
-    u3:0
-    u5:1.0
+    name : 'Chaos Orb',
+    title : 'Chaos Orb',
+    u0 : 1,
+    u1 : 0,
+    u3 : 0,
+    u5 : 1.0,
 }
 entity_info{
-    name:'Master of Chaos'
-    title:'Master of Chaos'
-    u0:1
-    u1:0
-    u3:0
-    u5:1.0
+    name : 'Master of Chaos',
+    title : 'Master of Chaos',
+    u0 : 1,
+    u1 : 0,
+    u3 : 0,
+    u5 : 1.0,
 }
 entity_info{
-    name:'Burning Charger'
-    title:'Burning Charger'
-    u1:0
+    name : 'Burning Charger',
+    title : 'Burning Charger',
+    u1 : 0,
 }
 compass_info{
-    u0:2
-    name:'quest01_find_master'
-    target_level:'town_woods_end'
-    target_object:'questTrigger1'
+    u0 : 2,
+    name : 'quest01_find_master',
+    target_level : 'town_woods_end',
+    target_object : 'questTrigger1',
 }
 compass_info{
-    u0:2
-    name:'quest02_village_elder'
-    target_level:'town_healerhouse'
-    target_object:'resurrectionTrigger'
+    u0 : 2,
+    name : 'quest02_village_elder',
+    target_level : 'town_healerhouse',
+    target_object : 'resurrectionTrigger',
 }
 compass_info{
-    u0:1
-    name:'vaseQuest'
-    target_level:'plains_house1'
-    target_object:'key'
+    u0 : 1,
+    name : 'vaseQuest',
+    target_level : 'plains_house1',
+    target_object : 'key',
 }
 compass_info{
-    u0:2
-    name:'vaseQuest'
-    target_level:'plains_tower1'
-    target_object:'questvase'
-    u1:'questvase'
+    u0 : 2,
+    name : 'vaseQuest',
+    target_level : 'plains_tower1',
+    target_object : 'questvase',
+    u1 : 'questvase',
 }
 compass_info{
-    u0:4
-    name:'specialkey'
-    target_level:'plains_woodkeep'
-    target_object:'item_key_yellow1'
+    u0 : 4,
+    name : 'specialkey',
+    target_level : 'plains_woodkeep',
+    target_object : 'item_key_yellow1',
 }
 compass_info{
-    u0:4
-    name:'d1_key2'
-    target_level:'plains_woodkeep'
-    target_object:'obj13'
+    u0 : 4,
+    name : 'd1_key2',
+    target_level : 'plains_woodkeep',
+    target_object : 'obj13',
 }
 compass_info{
-    u0:4
-    name:'d1_key3'
-    target_level:'plains_woodkeep'
-    target_object:'obj13#2'
+    u0 : 4,
+    name : 'd1_key3',
+    target_level : 'plains_woodkeep',
+    target_object : 'obj13#2',
 }
 compass_info{
-    u0:3
-    name:'bomb'
-    target_level:'plains_woodkeep_cellar'
-    target_object:'trigger'
+    u0 : 3,
+    name : 'bomb',
+    target_level : 'plains_woodkeep_cellar',
+    target_object : 'trigger',
 }
 compass_info{
-    u0:4
-    name:'d1_key4'
-    target_level:'plains_woodkeep3'
-    target_object:'obj16'
+    u0 : 4,
+    name : 'd1_key4',
+    target_level : 'plains_woodkeep3',
+    target_object : 'obj16',
 }
 compass_info{
-    u0:2
-    name:'quest03_woodkeep'
-    target_level:'plains_woodkeep3'
-    target_object:'bossdoor'
+    u0 : 2,
+    name : 'quest03_woodkeep',
+    target_level : 'plains_woodkeep3',
+    target_object : 'bossdoor',
 }
 compass_info{
-    u0:2
-    name:'quest04_village_elder2'
-    target_level:'town_elderhouse'
-    target_object:'trigger'
-    u2:1
+    u0 : 2,
+    name : 'quest04_village_elder2',
+    target_level : 'town_elderhouse',
+    target_object : 'trigger',
+    u2 : 1,
 }
 compass_info{
-    u0:4
-    name:'d2_key0'
-    target_level:'florennum_wall1'
-    target_object:'obj9'
+    u0 : 4,
+    name : 'd2_key0',
+    target_level : 'florennum_wall1',
+    target_object : 'obj9',
 }
 compass_info{
-    u0:4
-    name:'flor_key1'
-    target_level:'florennum_towertop'
-    target_object:'obj3'
+    u0 : 4,
+    name : 'flor_key1',
+    target_level : 'florennum_towertop',
+    target_object : 'obj3',
 }
 compass_info{
-    u0:4
-    name:'tower2_key1'
-    target_level:'florennum_tower2'
-    target_object:'item_key_yellow1'
+    u0 : 4,
+    name : 'tower2_key1',
+    target_level : 'florennum_tower2',
+    target_object : 'item_key_yellow1',
 }
 compass_info{
-    u0:2
-    name:'quest05_florennum'
-    target_level:'florennum_jail_part1'
-    target_object:'knight1'
+    u0 : 2,
+    name : 'quest05_florennum',
+    target_level : 'florennum_jail_part1',
+    target_object : 'knight1',
 }
 compass_info{
-    u0:4
-    name:'f_jail_p2_key'
-    target_level:'florennum_jail_part2'
-    target_object:'obj19'
+    u0 : 4,
+    name : 'f_jail_p2_key',
+    target_level : 'florennum_jail_part2',
+    target_object : 'obj19',
 }
 compass_info{
-    u0:2
-    name:'quest06_florennum_shard'
-    target_level:'florennum_jail_boss'
-    target_object:'focusArea'
+    u0 : 2,
+    name : 'quest06_florennum_shard',
+    target_level : 'florennum_jail_boss',
+    target_object : 'focusArea',
 }
 compass_info{
-    u0:2
-    name:'quest07_go_to_king'
-    target_level:'florennum_jail_part1'
-    target_object:'quest07_script'
-    u2:1
+    u0 : 2,
+    name : 'quest07_go_to_king',
+    target_level : 'florennum_jail_part1',
+    target_object : 'quest07_script',
+    u2 : 1,
 }
 compass_info{
-    u0:4
-    name:'key1'
-    target_level:'fire_part1'
-    target_object:'key1'
+    u0 : 4,
+    name : 'key1',
+    target_level : 'fire_part1',
+    target_object : 'key1',
 }
 compass_info{
-    u0:3
-    name:'hookshot'
-    target_level:'fire_part31'
-    target_object:'spellget_script1'
+    u0 : 3,
+    name : 'hookshot',
+    target_level : 'fire_part31',
+    target_object : 'spellget_script1',
 }
 compass_info{
-    u0:4
-    name:'firep5_key'
-    target_level:'fire_part5'
-    target_object:'firep5_key'
+    u0 : 4,
+    name : 'firep5_key',
+    target_level : 'fire_part5',
+    target_object : 'firep5_key',
 }
 compass_info{
-    u0:2
-    name:'quest071_fire'
-    target_level:'fire_partBoss'
-    target_object:'fakeground1'
+    u0 : 2,
+    name : 'quest071_fire',
+    target_level : 'fire_partBoss',
+    target_object : 'fakeground1',
 }
 compass_info{
-    u0:1
-    name:'snowyboulder'
-    target_level:'snowy_part1'
-    target_object:'quest'
-    u2:1
+    u0 : 1,
+    name : 'snowyboulder',
+    target_level : 'snowy_part1',
+    target_object : 'quest',
+    u2 : 1,
 }
 compass_info{
-    u0:2
-    name:'snowyboulder'
-    target_level:'snowy_cave2'
-    target_object:'boss'
-    u1:'bouldergold'
+    u0 : 2,
+    name : 'snowyboulder',
+    target_level : 'snowy_cave2',
+    target_object : 'boss',
+    u1 : 'bouldergold',
 }
 compass_info{
-    u0:4
-    name:'snowy1_key1'
-    target_level:'snowy_part1'
-    target_object:'snowy1_key1'
+    u0 : 4,
+    name : 'snowy1_key1',
+    target_level : 'snowy_part1',
+    target_object : 'snowy1_key1',
 }
 compass_info{
-    u0:4
-    name:'icecastle_key1'
-    target_level:'icecastle_part11'
-    target_object:'obj1'
+    u0 : 4,
+    name : 'icecastle_key1',
+    target_level : 'icecastle_part11',
+    target_object : 'obj1',
 }
 compass_info{
-    u0:4
-    name:'icekey2'
-    target_level:'icecastle_part2'
-    target_object:'obj7'
+    u0 : 4,
+    name : 'icekey2',
+    target_level : 'icecastle_part2',
+    target_object : 'obj7',
 }
 compass_info{
-    u0:1
-    name:'dimension'
-    target_level:'icecastle_part5'
-    target_object:'trigger1'
+    u0 : 1,
+    name : 'dimension',
+    target_level : 'icecastle_part5',
+    target_object : 'trigger1',
 }
 compass_info{
-    u0:2
-    name:'dimension'
-    target_level:'icecastle_part5'
-    target_object:'sign'
-    u1:'sign'
+    u0 : 2,
+    name : 'dimension',
+    target_level : 'icecastle_part5',
+    target_object : 'sign',
+    u1 : 'sign',
 }
 compass_info{
-    u0:4
-    name:'icecastle_bosskey'
-    target_level:'icecastle_part4'
-    target_object:'dragonkin'
+    u0 : 4,
+    name : 'icecastle_bosskey',
+    target_level : 'icecastle_part4',
+    target_object : 'dragonkin',
 }
 compass_info{
-    u0:2
-    name:'quest072_ice'
-    target_level:'icecastle_partBoss'
-    target_object:'door'
+    u0 : 2,
+    name : 'quest072_ice',
+    target_level : 'icecastle_partBoss',
+    target_object : 'door',
 }
 compass_info{
-    u0:2
-    name:'quest09_assemble'
-    target_level:'thecave_part15'
-    target_object:'obj7#3'
-    u2:1
+    u0 : 2,
+    name : 'quest09_assemble',
+    target_level : 'thecave_part15',
+    target_object : 'obj7#3',
+    u2 : 1,
 }
 compass_info{
-    u0:4
-    name:'key11'
-    target_level:'worldsend_part1'
-    target_object:'item_key_yellow1'
+    u0 : 4,
+    name : 'key11',
+    target_level : 'worldsend_part1',
+    target_object : 'item_key_yellow1',
 }
 compass_info{
-    u0:4
-    name:'key12'
-    target_level:'worldsend_part1'
-    target_object:'guard'
+    u0 : 4,
+    name : 'key12',
+    target_level : 'worldsend_part1',
+    target_object : 'guard',
 }
 compass_info{
-    u0:4
-    name:'p3_key1'
-    target_level:'worldsend_part3'
-    target_object:'worldsend_p3_key1'
+    u0 : 4,
+    name : 'p3_key1',
+    target_level : 'worldsend_part3',
+    target_object : 'worldsend_p3_key1',
     waypoint{
-        target_level:'worldsend_part1'
-        target_object:'obj14#6'
+        target_level : 'worldsend_part1',
+        target_object : 'obj14#6',
     }
     waypoint{
-        target_level:'worldsend_part2'
-        target_object:'obj14#8'
-    }
-}
-compass_info{
-    u0:4
-    name:'worldsendkey_part5'
-    target_level:'worldsend_part5'
-    target_object:'item_key_yellow1'
-    waypoint{
-        target_level:'worldsend_part1'
-        target_object:'obj14#5'
-    }
-    waypoint{
-        target_level:'worldsend_part2'
-        target_object:'obj14#7'
+        target_level : 'worldsend_part2',
+        target_object : 'obj14#8',
     }
 }
 compass_info{
-    u0:4
-    name:'we_p8_key'
-    target_level:'worldsend_part8'
-    target_object:'item_key_yellow1'
+    u0 : 4,
+    name : 'worldsendkey_part5',
+    target_level : 'worldsend_part5',
+    target_object : 'item_key_yellow1',
+    waypoint{
+        target_level : 'worldsend_part1',
+        target_object : 'obj14#5',
+    }
+    waypoint{
+        target_level : 'worldsend_part2',
+        target_object : 'obj14#7',
+    }
 }
 compass_info{
-    u0:2
-    name:'quest10_death'
-    target_level:'worldsend_part9'
-    target_object:'dimArea1'
+    u0 : 4,
+    name : 'we_p8_key',
+    target_level : 'worldsend_part8',
+    target_object : 'item_key_yellow1',
+}
+compass_info{
+    u0 : 2,
+    name : 'quest10_death',
+    target_level : 'worldsend_part9',
+    target_object : 'dimArea1',
 }

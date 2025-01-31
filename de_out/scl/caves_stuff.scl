@@ -1,51 +1,51 @@
-# rifted with FR v5.5.0
+# rifted with FR v5.5.1
 
-scl_file_name:'caves_stuff'
+scl_file_name : 'caves_stuff',
 library_item{
     object{
-        name:'board'
+        name : 'board',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'board'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'board',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:0.0
-                    x:0.0
-                    y:0.0
-                    z:1.0
+                    w : 0.0,
+                    x : 0.0,
+                    y : 0.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }

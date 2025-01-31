@@ -1,547 +1,546 @@
-# rifted with FR v5.5.0
+# rifted with FR v5.5.1
 
-scl_file_name:'fire'
+scl_file_name : 'fire',
 library_item{
     object{
-        name:'blast'
+        name : 'blast',
         component{
-            component_type:'ParticleEmitter'
-            number:1
+            type : 'ParticleEmitter',
+            number : 1,
             particle_emitter{
-                particle:102
-                particle:103
-                particle:104
-                u1:0
-                u2:30
-                u3:101
-                u4:0
+                particle : 102,
+                particle : 103,
+                particle : 104,
+                u1 : 0,
+                u2 : 30,
+                u3 : 101,
+                u4 : 0,
                 u5{
-                    u0:1
+                    u0 : 1,
                     colour{
-                        red:1.0
-                        green:1.0
-                        blue:1.0
-                        brightness:0.0
+                        red : 1.0,
+                        green : 1.0,
+                        blue : 1.0,
+                        brightness : 0.0,
                     }
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:0
+                u6 : 0,
             }
         }
         component{
-            component_type:'ParticleEmitter'
-            number:101
+            type : 'ParticleEmitter',
+            number : 101,
             particle_emitter{
-                particle:102
-                particle:103
-                particle:104
-                u1:0
-                u2:100
-                u3:0
-                u4:1
+                particle : 102,
+                particle : 103,
+                particle : 104,
+                u1 : 0,
+                u2 : 100,
+                u3 : 0,
+                u4 : 1,
                 u5{
-                    u0:2
+                    u0 : 2,
                     colour{
-                        red:0.9999999403953552
-                        green:0.7444444298744202
-                        blue:0.45555561780929565
-                        brightness:0.0
+                        red : 0.9999999403953552,
+                        green : 0.7444444298744202,
+                        blue : 0.45555561780929565,
+                        brightness : 0.0,
                     }
-                    u2:100.0
-                    u2:0.30000001192092896
-                    u2:3.0
-                    u2:30.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 100.0,
+                    u2 : 0.30000001192092896,
+                    u2 : 3.0,
+                    u2 : 30.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:1
+                u6 : 1,
             }
         }
         component{
-            component_type:'Particle'
-            number:102
+            type : 'Particle',
+            number : 102,
             particle{
-                name:'particle_fure_1'
-                u0:25.0
+                name : 'particle_fure_1',
+                u0 : 25.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:103
+            type : 'Particle',
+            number : 103,
             particle{
-                name:'particle_fure_2'
-                u0:20.0
+                name : 'particle_fure_2',
+                u0 : 20.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:104
+            type : 'Particle',
+            number : 104,
             particle{
-                name:'particle_fure_3'
-                u0:15.0
+                name : 'particle_fure_3',
+                u0 : 15.0,
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-10.0
-            x:-10.0
-            y:20.0
-            z:20.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : -10.0,
+            bottom : -10.0,
+            right : 20.0,
+            top : 20.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'fireblast'
+        name : 'fireblast',
         component{
-            component_type:'ParticleEmitter'
-            number:2
+            type : 'ParticleEmitter',
+            number : 2,
             particle_emitter{
-                particle:102
-                particle:103
-                particle:104
-                u1:0
-                u2:30
-                u3:101
-                u4:0
+                particle : 102,
+                particle : 103,
+                particle : 104,
+                u1 : 0,
+                u2 : 30,
+                u3 : 101,
+                u4 : 0,
                 u5{
-                    u0:2
+                    u0 : 2,
                     colour{
-                        red:1.0
-                        green:0.6555556058883667
-                        blue:0.0
-                        brightness:0.0
+                        red : 1.0,
+                        green : 0.6555556058883667,
+                        blue : 0.0,
+                        brightness : 0.0,
                     }
-                    u2:30.0
-                    u2:0.30000001192092896
-                    u2:40.0
-                    u2:40.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 30.0,
+                    u2 : 0.30000001192092896,
+                    u2 : 40.0,
+                    u2 : 40.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:0
+                u6 : 0,
             }
         }
         component{
-            component_type:'ParticleEmitter'
-            number:101
+            type : 'ParticleEmitter',
+            number : 101,
             particle_emitter{
-                particle:102
-                particle:103
-                particle:104
-                u1:0
-                u2:100
-                u3:0
-                u4:1
+                particle : 102,
+                particle : 103,
+                particle : 104,
+                u1 : 0,
+                u2 : 100,
+                u3 : 0,
+                u4 : 1,
                 u5{
-                    u0:2
+                    u0 : 2,
                     colour{
-                        red:1.0
-                        green:0.855555534362793
-                        blue:0.0
-                        brightness:0.0
+                        red : 1.0,
+                        green : 0.855555534362793,
+                        blue : 0.0,
+                        brightness : 0.0,
                     }
-                    u2:40.0
-                    u2:0.30000001192092896
-                    u2:35.0
-                    u2:35.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 40.0,
+                    u2 : 0.30000001192092896,
+                    u2 : 35.0,
+                    u2 : 35.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:1
+                u6 : 1,
             }
         }
         component{
-            component_type:'Particle'
-            number:102
+            type : 'Particle',
+            number : 102,
             particle{
-                name:'particle_fure_1'
-                u0:25.0
+                name : 'particle_fure_1',
+                u0 : 25.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:103
+            type : 'Particle',
+            number : 103,
             particle{
-                name:'particle_fure_2'
-                u0:20.0
+                name : 'particle_fure_2',
+                u0 : 20.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:104
+            type : 'Particle',
+            number : 104,
             particle{
-                name:'particle_fure_3'
-                u0:15.0
+                name : 'particle_fure_3',
+                u0 : 15.0,
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:1000.0
-            z:4.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 1000.0,
+            top : 4.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'firespray'
+        name : 'firespray',
         component{
-            component_type:'Light'
-            number:1
+            type : 'Light',
+            number : 1,
             light{
-                u0:3
-                u1:1.5
+                u0 : 3,
+                u1 : 1.5,
                 u2{
-                    w:1.0
-                    x:0.5614814758300781
-                    y:0.17777776718139648
-                    z:1.0
+                    w : 1.0,
+                    x : 0.5614814758300781,
+                    y : 0.17777776718139648,
+                    z : 1.0,
                 }
-                u3:0.0
-                u4:0.00019999999494757503
+                u3 : 0.0,
+                u4 : 0.00019999999494757503,
                 u5{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u6:300.0
+                u6 : 300.0,
             }
         }
         component{
-            component_type:'TransformController'
-            number:2
+            type : 'TransformController',
+            number : 2,
         }
         component{
-            component_type:'ParticleEmitter'
-            number:102
+            type : 'ParticleEmitter',
+            number : 102,
             particle_emitter{
-                particle:103
-                particle:104
-                particle:105
-                u1:0
-                u2:50
-                u3:0
-                u4:0
+                particle : 103,
+                particle : 104,
+                particle : 105,
+                u1 : 0,
+                u2 : 50,
+                u3 : 0,
+                u4 : 0,
                 u5{
-                    u0:5
+                    u0 : 5,
                     colour{
-                        red:1.0
-                        green:0.49037057161331177
-                        blue:0.04444456100463867
-                        brightness:0.0
+                        red : 1.0,
+                        green : 0.49037057161331177,
+                        blue : 0.04444456100463867,
+                        brightness : 0.0,
                     }
-                    u2:90.0
-                    u2:10.0
-                    u2:0.0
-                    u2:15.0
-                    u2:0.0
-                    u2:500.0
-                    u2:0.0
-                    u2:0.0
-                    u2:0.5
-                    u2:1.0
-                    u2:1.0
-                    u2:0.009999999776482582
-                    u2:0.30000001192092896
-                    u2:0.0
-                    u2:0.0
-                    u3:0.05000000074505806
-                    u4:0.0
-                    u5:0.0
+                    u2 : 90.0,
+                    u2 : 10.0,
+                    u2 : 0.0,
+                    u2 : 15.0,
+                    u2 : 0.0,
+                    u2 : 500.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 0.5,
+                    u2 : 1.0,
+                    u2 : 1.0,
+                    u2 : 0.009999999776482582,
+                    u2 : 0.30000001192092896,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u3 : 0.05000000074505806,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:0
+                u6 : 0,
             }
         }
         component{
-            component_type:'Particle'
-            number:103
+            type : 'Particle',
+            number : 103,
             particle{
-                name:'particle_fure_1'
-                u0:40.0
+                name : 'particle_fure_1',
+                u0 : 40.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:104
+            type : 'Particle',
+            number : 104,
             particle{
-                name:'particle_fure_2'
-                u0:40.0
+                name : 'particle_fure_2',
+                u0 : 40.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:105
+            type : 'Particle',
+            number : 105,
             particle{
-                name:'particle_fure_3'
-                u0:40.0
+                name : 'particle_fure_3',
+                u0 : 40.0,
             }
         }
         component{
-            component_type:'SimpleGlow'
-            number:107
+            type : 'SimpleGlow',
+            number : 107,
             simple_glow{
                 colour{
-                    red:1.0
-                    green:0.47851860523223877
-                    blue:0.022222280502319336
-                    brightness:0.0
+                    red : 1.0,
+                    green : 0.47851860523223877,
+                    blue : 0.022222280502319336,
+                    brightness : 0.0,
                 }
-                radius:50.0
-                u2:10
-                u3:0.0
-                u4:0.15000000596046448
-                u5:1.0
+                radius : 50.0,
+                u2 : 10,
+                u3 : 0.0,
+                u4 : 0.15000000596046448,
+                u5 : 1.0,
                 u6{
-                    y:0.0
-                    z:0.0
+                    y : 0.0,
+                    z : 0.0,
                 }
             }
         }
         component{
-            component_type:'ParticleEmitter'
-            number:109
+            type : 'ParticleEmitter',
+            number : 109,
             particle_emitter{
-                particle:110
-                u1:0
-                u2:30
-                u3:102
-                u4:0
+                particle : 110,
+                u1 : 0,
+                u2 : 30,
+                u3 : 102,
+                u4 : 0,
                 u5{
-                    u0:5
+                    u0 : 5,
                     colour{
-                        red:0.20000000298023224
-                        green:0.1066666841506958
-                        blue:0.0
-                        brightness:0.0
+                        red : 0.20000000298023224,
+                        green : 0.1066666841506958,
+                        blue : 0.0,
+                        brightness : 0.0,
                     }
-                    u2:90.0
-                    u2:0.0
-                    u2:0.0
-                    u2:0.0
-                    u2:0.0
-                    u2:300.0
-                    u2:0.0
-                    u2:0.0
-                    u2:1.0
-                    u2:0.30000001192092896
-                    u2:1.0
-                    u2:0.019999999552965164
-                    u2:0.5
-                    u2:0.0
-                    u2:0.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 90.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 300.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 1.0,
+                    u2 : 0.30000001192092896,
+                    u2 : 1.0,
+                    u2 : 0.019999999552965164,
+                    u2 : 0.5,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:0
+                u6 : 0,
             }
         }
         component{
-            component_type:'Particle'
-            number:110
+            type : 'Particle',
+            number : 110,
             particle{
-                name:'particle'
-                u0:48.0
+                name : 'particle',
+                u0 : 48.0,
             }
         }
         component{
-            component_type:'ParticleEmitter'
-            number:112
+            type : 'ParticleEmitter',
+            number : 112,
             particle_emitter{
-                particle:114
-                u1:0
-                u2:50
-                u3:0
-                u4:0
+                particle : 114,
+                u1 : 0,
+                u2 : 50,
+                u3 : 0,
+                u4 : 0,
                 u5{
-                    u0:5
+                    u0 : 5,
                     colour{
-                        red:0.0
-                        green:0.0
-                        blue:0.0
-                        brightness:1.0
+                        red : 0.0,
+                        green : 0.0,
+                        blue : 0.0,
+                        brightness : 1.0,
                     }
-                    u2:90.0
-                    u2:60.0
-                    u2:0.0
-                    u2:0.0
-                    u2:150.0
-                    u2:150.0
-                    u2:0.20000000298023224
-                    u2:0.0
-                    u2:0.15000000596046448
-                    u2:0.0
-                    u2:0.0
-                    u2:0.03999999910593033
-                    u2:0.699999988079071
-                    u2:0.20000000298023224
-                    u2:0.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 90.0,
+                    u2 : 60.0,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 150.0,
+                    u2 : 150.0,
+                    u2 : 0.20000000298023224,
+                    u2 : 0.0,
+                    u2 : 0.15000000596046448,
+                    u2 : 0.0,
+                    u2 : 0.0,
+                    u2 : 0.03999999910593033,
+                    u2 : 0.699999988079071,
+                    u2 : 0.20000000298023224,
+                    u2 : 0.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:0.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 0.0,
                     }
                 }
-                u6:0
+                u6 : 0,
                 u7{
-                    u0:0.0
-                    u1:-200.0
-                    u2:0.0
+                    u0 : 0.0,
+                    u1 : -200.0,
+                    u2 : 0.0,
                 }
             }
         }
         component{
-            component_type:'Particle'
-            number:114
+            type : 'Particle',
+            number : 114,
             particle{
-                name:'particle_fure_1'
-                u0:48.0
+                name : 'particle_fure_1',
+                u0 : 48.0,
             }
         }
         component{
-            component_type:'CollisionShape'
-            number:116
+            type : 'CollisionShape',
+            number : 116,
             collision_shape{
                 box_shape{
-                    left:-25.0
-                    bottom:10.0
-                    right:50.0
-                    top:150.0
+                    left : -25.0,
+                    bottom : 10.0,
+                    right : 50.0,
+                    top : 150.0,
                 }
             }
             collision_shape_2{
-                u3:1
-                w:-15.0
-                x:15.0
-                z:1
+                u3 : 1,
+                w : -15.0,
+                x : 15.0,
+                z : 1,
             }
         }
         component{
-            component_type:'Damage'
-            number:118
+            type : 'Damage',
+            number : 118,
             damage{
-                damage:2
-                u1:0
-                u2:0
-                u3:1
-                u5:1.0
-                u6:0.0
-                u7:0
-                u8:1
+                damage : 2,
+                u1 : 0,
+                u2 : 0,
+                u3 : 1,
+                u5 : 1.0,
+                u6 : 0.0,
+                u7 : 0,
+                u8 : 1,
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-50.0
-            x:-50.0
-            y:100.0
-            z:210.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : -50.0,
+            bottom : -50.0,
+            right : 100.0,
+            top : 210.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'firesprayer'
+        name : 'firesprayer',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'fire_firespray'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'fire_firespray',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         component{
-            component_type:'Program'
-            number:102
+            type : 'Program',
+            number : 102,
             program{
-                u0:1
+                u0 : 1,
                 lua{
-                    main_chunk :
-$
+                    main : $
 local self = ...;
 
 Program.Wait(2.0);
@@ -553,989 +552,980 @@ spray:setHidden(true);
 
 
 while true do
-    spray:setHidden(false);
-    TransformController.ScaleTo(spray, 1, 0.6);
+	spray:setHidden(false);
+	TransformController.ScaleTo(spray, 1, 0.6);
 
-    Program.Wait(4.0);
-    
-    TransformController.ScaleTo(spray, 0.01, 1.5);
-    Program.Wait(2);
-    spray:setHidden(true);
+	Program.Wait(4.0);
+	
+	TransformController.ScaleTo(spray, 0.01, 1.5);
+	Program.Wait(2);
+	spray:setHidden(true);
 
-    Program.Wait(2.0);
+	Program.Wait(2.0);
 end
-
 $end
-                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc1\x01\x00\x00local self = ...;\r\n\r\nProgram.Wait(2.0);\r\n\r\nlocal spray = Scene.CreateObject("firespray", "fspr", self);\r\nspray:setRotation(self:rotation());\r\nTransformController.ScaleTo(spray, 0.01, 0);\r\nspray:setHidden(true);\r\n\r\n\r\nwhile true do\r\n\tspray:setHidden(false);\r\n\tTransformController.ScaleTo(spray, 1, 0.6);\r\n\r\n\tProgram.Wait(4.0);\r\n\t\r\n\tTransformController.ScaleTo(spray, 0.01, 1.5);\r\n\tProgram.Wait(2);\r\n\tspray:setHidden(true);\r\n\r\n\tProgram.Wait(2.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x068\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x8b@\xc3\x00\x02\x01\x80\x00\x9c@\x80\x01\x8b@\xc3\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\x00\x04\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00AA\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x8b@\xc3\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x16\x00\xf8\x7f\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\n\x00\x00\x00firespray\x00\x04\x05\x00\x00\x00fspr\x00\x04\x0c\x00\x00\x00setRotation\x00\x04\t\x00\x00\x00rotation\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\n\x00\x00\x00setHidden\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xe3?\x03\x00\x00\x00\x00\x00\x00\x10@\x03\x00\x00\x00\x00\x00\x00\xf8?\x00\x00\x00\x008\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x007\x00\x00\x00\x06\x00\x00\x00spray\x00\x0b\x00\x00\x007\x00\x00\x00\x00\x00\x00\x00'
+                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc1\x01\x00\x00local self = ...;\r\n\r\nProgram.Wait(2.0);\r\n\r\nlocal spray = Scene.CreateObject("firespray", "fspr", self);\r\nspray:setRotation(self:rotation());\r\nTransformController.ScaleTo(spray, 0.01, 0);\r\nspray:setHidden(true);\r\n\r\n\r\nwhile true do\r\n\tspray:setHidden(false);\r\n\tTransformController.ScaleTo(spray, 1, 0.6);\r\n\r\n\tProgram.Wait(4.0);\r\n\t\r\n\tTransformController.ScaleTo(spray, 0.01, 1.5);\r\n\tProgram.Wait(2);\r\n\tspray:setHidden(true);\r\n\r\n\tProgram.Wait(2.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x068\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x8b@\xc3\x00\x02\x01\x80\x00\x9c@\x80\x01\x8b@\xc3\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\x00\x04\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00AA\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x8b@\xc3\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x16\x00\xf8\x7f\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\n\x00\x00\x00firespray\x00\x04\x05\x00\x00\x00fspr\x00\x04\x0c\x00\x00\x00setRotation\x00\x04\t\x00\x00\x00rotation\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\n\x00\x00\x00setHidden\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xe3?\x03\x00\x00\x00\x00\x00\x00\x10@\x03\x00\x00\x00\x00\x00\x00\xf8?\x00\x00\x00\x008\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x007\x00\x00\x00\x06\x00\x00\x00spray\x00\x0b\x00\x00\x007\x00\x00\x00\x00\x00\x00\x00',
                 }
-                u1:1
-                u2:1
+                u1 : 1,
+                event : 1,
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'lava#2'
+        name : 'lava#2',
         component{
-            component_type:'WaterMesh'
-            number:101
+            type : 'WaterMesh',
+            number : 101,
             water_mesh{
-                u0:111
-                u1:106
+                u0 : 111,
+                u1 : 106,
                 u2{
-                    w:1.0
-                    x:0.0
-                    y:0.0
-                    z:0.7444444298744202
+                    w : 1.0,
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.7444444298744202,
                 }
                 u3{
-                    w:1.0
-                    x:0.0
-                    y:0.0
-                    z:0.7444444298744202
+                    w : 1.0,
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.7444444298744202,
                 }
             }
         }
         component{
-            component_type:'TextureMapping'
-            number:106
+            type : 'TextureMapping',
+            number : 106,
             texture_mapping{
-                texture_file:'water'
-                u0:50.0
+                texture_file : 'water',
+                u0 : 50.0,
                 u1{
-                    u1:0.0
-                    u2:0.0
+                    u1 : 0.0,
+                    u2 : 0.0,
                 }
             }
         }
         component{
-            component_type:'MonsterEntity'
-            number:109
+            type : 'MonsterEntity',
+            number : 109,
             entity{
-                u0:1
-                u1:0
+                u0 : 1,
+                u1 : 0,
             }
             ?monster_entity{
                 lua{
                 }
-                u0:''
-                u2:1
-                u3:1
+                u0 : '',
+                u2 : 1,
+                u3 : 1,
             }
         }
         component{
-            component_type:'CollisionShape'
-            number:111
+            type : 'CollisionShape',
+            number : 111,
             collision_shape{
                 box_shape{
-                    left:-700.0
-                    bottom:-200.0
-                    right:2100.0
-                    top:800.0
+                    left : -700.0,
+                    bottom : -200.0,
+                    right : 2100.0,
+                    top : 800.0,
                 }
             }
             collision_shape_2{
-                u3:1
-                w:-15.0
-                x:15.0
+                u3 : 1,
+                w : -15.0,
+                x : 15.0,
                 on_collision_chunk{
-                    main_chunk :
-$
+                    main : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
-    local blast = Scene.CreateObject("fireblast", "ffblsa");
-    blast:setPosition(target:position() + Vector3.New(0,-20,0));
-    SoundLibrary.PlayEffect("woosh1");
+	local blast = Scene.CreateObject("fireblast", "ffblsa");
+	blast:setPosition(target:position() + Vector3.New(0,-20,0));
+	SoundLibrary.PlayEffect("woosh1");
 end
-
 $end
-                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe7\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal blast = Scene.CreateObject("fireblast", "ffblsa");\r\n\tblast:setPosition(target:position() + Vector3.New(0,-20,0));\r\n\tSoundLibrary.PlayEffect("woosh1");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\x1a\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x04\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01A\x01\x00\x9c\x80\x80\x01\xcb\x80A\x01K\xc1\xc1\x00\\\x81\x00\x01\x85\x01\x02\x00\x86AB\x03\xc1\x81\x02\x00\x01\xc2\x02\x00A\x82\x02\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\xc5\x00\x03\x00\xc6@\xc3\x01\x01\x81\x03\x00\xdc@\x00\x01\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\n\x00\x00\x00fireblast\x00\x04\x07\x00\x00\x00ffblsa\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x004\xc0\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x19\x00\x00\x00\x06\x00\x00\x00blast\x00\n\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
+                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe7\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal blast = Scene.CreateObject("fireblast", "ffblsa");\r\n\tblast:setPosition(target:position() + Vector3.New(0,-20,0));\r\n\tSoundLibrary.PlayEffect("woosh1");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\x1a\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x04\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01A\x01\x00\x9c\x80\x80\x01\xcb\x80A\x01K\xc1\xc1\x00\\\x81\x00\x01\x85\x01\x02\x00\x86AB\x03\xc1\x81\x02\x00\x01\xc2\x02\x00A\x82\x02\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\xc5\x00\x03\x00\xc6@\xc3\x01\x01\x81\x03\x00\xdc@\x00\x01\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\n\x00\x00\x00fireblast\x00\x04\x07\x00\x00\x00ffblsa\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x004\xc0\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x19\x00\x00\x00\x06\x00\x00\x00blast\x00\n\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00',
                 }
-                z:1
+                z : 1,
             }
         }
         component{
-            component_type:'Damage'
-            number:113
+            type : 'Damage',
+            number : 113,
             damage{
-                damage:4
-                u1:0
-                u2:0
-                u5:1.0
-                u6:0.0
-                u7:1
-                u8:1
+                damage : 4,
+                u1 : 0,
+                u2 : 0,
+                u5 : 1.0,
+                u6 : 0.0,
+                u7 : 1,
+                u8 : 1,
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-700.0
-            x:-200.0
-            y:2100.0
-            z:800.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : -700.0,
+            bottom : -200.0,
+            right : 2100.0,
+            top : 800.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'magmapallo'
+        name : 'magmapallo',
         component{
-            component_type:'CollisionShape'
-            number:1
+            type : 'CollisionShape',
+            number : 1,
             collision_shape{
                 ball_shape{
                     offsets{
-                        x:0.0
-                        y:0.0
+                        x : 0.0,
+                        y : 0.0,
                     }
-                    radius:55.0
+                    radius : 55.0,
                 }
             }
             collision_shape_2{
-                u1:1
-                u3:1
-                w:-15.0
-                x:15.0
+                u1 : 1,
+                u3 : 1,
+                w : -15.0,
+                x : 15.0,
                 on_collision_chunk{
-                    main_chunk :
-$
+                    main : $
 local self, target, collisionNormal, groundCollision = ...;
 
 if groundCollision then
-    Camera.Rumble();
+	Camera.Rumble();
 end
 
-
 $end
-                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00q\x00\x00\x00local self, target, collisionNormal, groundCollision = ...;\r\n\r\nif groundCollision then\r\n\tCamera.Rumble();\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x07\x00\x00\x00%\x00\x80\x02\xda\x00\x00\x00\x16\x80\x00\x80\x05\x01\x00\x00\x06A@\x02\x1cA\x80\x00\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x07\x00\x00\x00Camera\x00\x04\x07\x00\x00\x00Rumble\x00\x00\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x06\x00\x00\x00\x10\x00\x00\x00collisionNormal\x00\x01\x00\x00\x00\x06\x00\x00\x00\x10\x00\x00\x00groundCollision\x00\x01\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00'
+                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00q\x00\x00\x00local self, target, collisionNormal, groundCollision = ...;\r\n\r\nif groundCollision then\r\n\tCamera.Rumble();\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x07\x00\x00\x00%\x00\x80\x02\xda\x00\x00\x00\x16\x80\x00\x80\x05\x01\x00\x00\x06A@\x02\x1cA\x80\x00\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x07\x00\x00\x00Camera\x00\x04\x07\x00\x00\x00Rumble\x00\x00\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x06\x00\x00\x00\x10\x00\x00\x00collisionNormal\x00\x01\x00\x00\x00\x06\x00\x00\x00\x10\x00\x00\x00groundCollision\x00\x01\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00',
                 }
-                z:1
+                z : 1,
             }
         }
         component{
-            component_type:'TransformController'
-            number:2
+            type : 'TransformController',
+            number : 2,
         }
         component{
-            component_type:'PhysicsObject'
-            number:3
+            type : 'PhysicsObject',
+            number : 3,
             physics_object{
-                enabled:1
-                ground_friction:0.0
-                air_friction:0.0
-                speed:400.0
-                can_roll:1
-                bounciness:0.800000011920929
+                enabled : 1,
+                ground_friction : 0.0,
+                air_friction : 0.0,
+                speed : 400.0,
+                can_roll : 1,
+                bounciness : 0.800000011920929,
             }
         }
         component{
-            component_type:'ProjectileController'
-            number:4
+            type : 'ProjectileController',
+            number : 4,
             projectile_controller{
-                u0:0
-                u1:0
+                u0 : 0,
+                u1 : 0,
             }
         }
         component{
-            component_type:'Light'
-            number:5
+            type : 'Light',
+            number : 5,
             light{
-                u0:3
-                u1:1.5
+                u0 : 3,
+                u1 : 1.5,
                 u2{
-                    w:1.0
-                    x:0.7555555701255798
-                    y:0.5222222208976746
-                    z:1.0
+                    w : 1.0,
+                    x : 0.7555555701255798,
+                    y : 0.5222222208976746,
+                    z : 1.0,
                 }
-                u3:0.0
-                u4:0.00019999999494757503
+                u3 : 0.0,
+                u4 : 0.00019999999494757503,
                 u5{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u6:200.0
+                u6 : 200.0,
             }
         }
         component{
-            component_type:'ParticleEmitter'
-            number:6
+            type : 'ParticleEmitter',
+            number : 6,
             particle_emitter{
-                particle:7
-                particle:8
-                particle:9
-                u1:0
-                u2:60
-                u3:0
-                u4:0
+                particle : 7,
+                particle : 8,
+                particle : 9,
+                u1 : 0,
+                u2 : 60,
+                u3 : 0,
+                u4 : 0,
                 u5{
-                    u0:3
+                    u0 : 3,
                     colour{
-                        red:0.8587653636932373
-                        green:0.3952264189720154
-                        blue:0.16345691680908203
-                        brightness:0.0
+                        red : 0.8587653636932373,
+                        green : 0.3952264189720154,
+                        blue : 0.16345691680908203,
+                        brightness : 0.0,
                     }
-                    u2:0.009999999776482582
-                    u2:0.4000000059604645
-                    u2:2.0
-                    u2:60.0
-                    u2:0.30000001192092896
-                    u2:0.0
-                    u2:1.0
-                    u3:0.0
-                    u4:0.0
-                    u5:0.0
+                    u2 : 0.009999999776482582,
+                    u2 : 0.4000000059604645,
+                    u2 : 2.0,
+                    u2 : 60.0,
+                    u2 : 0.30000001192092896,
+                    u2 : 0.0,
+                    u2 : 1.0,
+                    u3 : 0.0,
+                    u4 : 0.0,
+                    u5 : 0.0,
                     u6{
-                        u0:0.0
-                        u1:0.0
-                        u2:53.0
+                        u0 : 0.0,
+                        u1 : 0.0,
+                        u2 : 53.0,
                     }
                 }
-                u6:0
+                u6 : 0,
             }
         }
         component{
-            component_type:'Particle'
-            number:7
+            type : 'Particle',
+            number : 7,
             particle{
-                name:'particle_fure_1'
-                u0:20.0
+                name : 'particle_fure_1',
+                u0 : 20.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:8
+            type : 'Particle',
+            number : 8,
             particle{
-                name:'particle_fure_2'
-                u0:23.0
+                name : 'particle_fure_2',
+                u0 : 23.0,
             }
         }
         component{
-            component_type:'Particle'
-            number:9
+            type : 'Particle',
+            number : 9,
             particle{
-                name:'particle_fure_3'
-                u0:17.0
+                name : 'particle_fure_3',
+                u0 : 17.0,
             }
         }
         component{
-            component_type:'SimpleGlow'
-            number:11
+            type : 'SimpleGlow',
+            number : 11,
             simple_glow{
                 colour{
-                    red:0.38333335518836975
-                    green:0.12777778506278992
-                    blue:0.12777787446975708
-                    brightness:0.0
+                    red : 0.38333335518836975,
+                    green : 0.12777778506278992,
+                    blue : 0.12777787446975708,
+                    brightness : 0.0,
                 }
-                radius:90.0
-                u2:10
-                u3:0.0
-                u4:0.15000000596046448
-                u5:0.800000011920929
+                radius : 90.0,
+                u2 : 10,
+                u3 : 0.0,
+                u4 : 0.15000000596046448,
+                u5 : 0.800000011920929,
                 u6{
-                    y:0.0
-                    z:0.0
+                    y : 0.0,
+                    z : 0.0,
                 }
             }
         }
         component{
-            component_type:'Damage'
-            number:12
+            type : 'Damage',
+            number : 12,
             damage{
-                damage:1
-                u1:0
-                u2:0
-                u5:1.0
-                u6:0.0
-                u7:0
-                u8:1
+                damage : 1,
+                u1 : 0,
+                u2 : 0,
+                u5 : 1.0,
+                u6 : 0.0,
+                u7 : 0,
+                u8 : 1,
             }
         }
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'balloffire'
-                u0:0.0
-                u1:1.0
-                u2:0.0
+                name : 'balloffire',
+                u0 : 0.0,
+                u1 : 1.0,
+                u2 : 0.0,
                 u3{
-                    w:0.41960784792900085
-                    x:0.2235294133424759
-                    y:0.1764705926179886
-                    z:1.0
+                    w : 0.41960784792900085,
+                    x : 0.2235294133424759,
+                    y : 0.1764705926179886,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-90.0
-            x:-90.0
-            y:180.0
-            z:180.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : -90.0,
+            bottom : -90.0,
+            right : 180.0,
+            top : 180.0,
         }
-        hidden:0
+        hidden : 0,
         lua{
-            main_chunk :
-$
+            main : $
 local self = ...;
 
 Program.Wait(5);
 
 if self:isAlive() then
-    self:destroy();
-    Scene.CreateObject("blast", "bbb", self);
+	self:destroy();
+	Scene.CreateObject("blast", "bbb", self);
 end
-
 $end
-            secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x83\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(5);\r\n\r\nif self:isAlive() then\r\n\tself:destroy();\r\n\tScene.CreateObject("blast", "bbb", self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\\x80\x00\x01Z\x00\x00\x00\x16\xc0\x01\x80K\x00A\x00\\@\x00\x01E@\x01\x00F\x80\xc1\x00\x81\xc0\x01\x00\xc1\x00\x02\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\t\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x04\x08\x00\x00\x00isAlive\x00\x04\x08\x00\x00\x00destroy\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x06\x00\x00\x00blast\x00\x04\x04\x00\x00\x00bbb\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00'
+            secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x83\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(5);\r\n\r\nif self:isAlive() then\r\n\tself:destroy();\r\n\tScene.CreateObject("blast", "bbb", self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\\x80\x00\x01Z\x00\x00\x00\x16\xc0\x01\x80K\x00A\x00\\@\x00\x01E@\x01\x00F\x80\xc1\x00\x81\xc0\x01\x00\xc1\x00\x02\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\t\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x04\x08\x00\x00\x00isAlive\x00\x04\x08\x00\x00\x00destroy\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x06\x00\x00\x00blast\x00\x04\x04\x00\x00\x00bbb\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00',
         }
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'rotating ground'
+        name : 'rotating ground',
         component{
-            component_type:'CollisionShape'
-            number:1
-            ?linked_component:100
+            type : 'CollisionShape',
+            number : 1,
+            ?linked_component : 100,
             collision_shape{
-                u2{
-                    u0{
-                        y:-9.96514892578125
-                        z:-154.75289916992188
+                polygon_shape{
+                    point{
+                        x : -9.96514892578125,
+                        y : -154.75289916992188,
                     }
-                    u0{
-                        y:21.5281982421875
-                        z:-150.70254516601562
+                    point{
+                        x : 21.5281982421875,
+                        y : -150.70254516601562,
                     }
-                    u0{
-                        y:38.3050537109375
-                        z:-29.908004760742188
+                    point{
+                        x : 38.3050537109375,
+                        y : -29.908004760742188,
                     }
-                    u0{
-                        y:62.6353759765625
-                        z:12.703506469726562
+                    point{
+                        x : 62.6353759765625,
+                        y : 12.703506469726562,
                     }
-                    u0{
-                        y:62.04803466796875
-                        z:58.61082458496094
+                    point{
+                        x : 62.04803466796875,
+                        y : 58.61082458496094,
                     }
-                    u0{
-                        y:37.72515869140625
-                        z:136.3459014892578
+                    point{
+                        x : 37.72515869140625,
+                        y : 136.3459014892578,
                     }
-                    u0{
-                        y:-53.746337890625
-                        z:154.75291442871094
+                    point{
+                        x : -53.746337890625,
+                        y : 154.75291442871094,
                     }
-                    u0{
-                        y:-62.6353759765625
-                        z:80.47584533691406
+                    point{
+                        x : -62.6353759765625,
+                        y : 80.47584533691406,
                     }
-                    u0{
-                        y:-50.49755859375
-                        z:46.18775939941406
+                    point{
+                        x : -50.49755859375,
+                        y : 46.18775939941406,
                     }
-                    u0{
-                        y:-44.12921142578125
-                        z:40.49342346191406
+                    point{
+                        x : -44.12921142578125,
+                        y : 40.49342346191406,
                     }
-                    u0{
-                        y:-16.7825927734375
-                        z:-25.4476318359375
+                    point{
+                        x : -16.7825927734375,
+                        y : -25.4476318359375,
                     }
-                    u0{
-                        y:-45.80859375
-                        z:-152.2833251953125
+                    point{
+                        x : -45.80859375,
+                        y : -152.2833251953125,
                     }
-                    u3:0
-                    u4:1
+                    u3 : 0,
+                    u4 : 1,
                 }
             }
             collision_shape_2{
-                u0:1
-                w:-85.0
-                x:85.0
-                z:1
+                u0 : 1,
+                w : -85.0,
+                x : 85.0,
+                z : 1,
             }
         }
         component{
-            component_type:'GroundPolygon'
-            number:100
+            type : 'GroundPolygon',
+            number : 100,
             ground_polygon{
                 vertex_list{
                     vertex_pos{
-                        x_pos:-9.96514892578125
-                        y_pos:-154.75289916992188
+                        x_pos : -9.96514892578125,
+                        y_pos : -154.75289916992188,
                     }
                     vertex_pos{
-                        x_pos:21.5281982421875
-                        y_pos:-150.70254516601562
+                        x_pos : 21.5281982421875,
+                        y_pos : -150.70254516601562,
                     }
                     vertex_pos{
-                        x_pos:38.3050537109375
-                        y_pos:-29.908004760742188
+                        x_pos : 38.3050537109375,
+                        y_pos : -29.908004760742188,
                     }
                     vertex_pos{
-                        x_pos:62.6353759765625
-                        y_pos:12.703506469726562
+                        x_pos : 62.6353759765625,
+                        y_pos : 12.703506469726562,
                     }
                     vertex_pos{
-                        x_pos:62.04803466796875
-                        y_pos:58.61082458496094
+                        x_pos : 62.04803466796875,
+                        y_pos : 58.61082458496094,
                     }
                     vertex_pos{
-                        x_pos:37.72515869140625
-                        y_pos:136.3459014892578
+                        x_pos : 37.72515869140625,
+                        y_pos : 136.3459014892578,
                     }
                     vertex_pos{
-                        x_pos:-53.746337890625
-                        y_pos:154.75291442871094
+                        x_pos : -53.746337890625,
+                        y_pos : 154.75291442871094,
                     }
                     vertex_pos{
-                        x_pos:-62.6353759765625
-                        y_pos:80.47584533691406
+                        x_pos : -62.6353759765625,
+                        y_pos : 80.47584533691406,
                     }
                     vertex_pos{
-                        x_pos:-50.49755859375
-                        y_pos:46.18775939941406
+                        x_pos : -50.49755859375,
+                        y_pos : 46.18775939941406,
                     }
                     vertex_pos{
-                        x_pos:-44.12921142578125
-                        y_pos:40.49342346191406
+                        x_pos : -44.12921142578125,
+                        y_pos : 40.49342346191406,
                     }
                     vertex_pos{
-                        x_pos:-16.7825927734375
-                        y_pos:-25.4476318359375
+                        x_pos : -16.7825927734375,
+                        y_pos : -25.4476318359375,
                     }
                     vertex_pos{
-                        x_pos:-45.80859375
-                        y_pos:-152.2833251953125
+                        x_pos : -45.80859375,
+                        y_pos : -152.2833251953125,
                     }
-                    u1:0
-                    u2:1
+                    u1 : 0,
+                    u2 : 1,
                 }
-                u1:1
-                u2:-85.0
-                u3:85.0
-                u4:''
+                u1 : 1,
+                u2 : -85.0,
+                u3 : 85.0,
+                u4 : '',
             }
         }
         component{
-            component_type:'GroundMesh'
-            number:101
+            type : 'GroundMesh',
+            number : 101,
             ground_mesh{
                 u0{
-                    w:-72.6353759765625
-                    x:-164.75289916992188
-                    y:145.270751953125
-                    z:329.50579833984375
+                    w : -72.6353759765625,
+                    x : -164.75289916992188,
+                    y : 145.270751953125,
+                    z : 329.50579833984375,
                 }
                 u1{
-                    u0:22
-                    u1:20
+                    u0 : 22,
+                    u1 : 20,
                     u2{
-                        u0:4
-                        u1:1
-                        u2:2
-                        u3:0
+                        u0 : 4,
+                        u1 : 1,
+                        u2 : 2,
+                        u3 : 0,
                     }
                     u3{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:0
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 0,
                     }
                     u4{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:12
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 12,
                     }
                     u5{
-                        u0:7
-                        u1:2
-                        u2:32
-                        u3:24
+                        u0 : 7,
+                        u1 : 2,
+                        u2 : 32,
+                        u3 : 24,
                     }
                     u6{
                         u0{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u1{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u2{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
-                        u3:0.0
+                        u3 : 0.0,
                         u4{
-                            name:'graveyard_ground'
-                            u0:1
-                            u2:1
+                            name : 'graveyard_ground',
+                            u0 : 1,
+                            u2 : 1,
                         }
                     }
                     u7{
-                        u:-62.6353759765625
-                        v:-154.75289916992188
-                        w:-110.93256378173828
-                        x:125.270751953125
-                        y:309.50579833984375
-                        z:222.10585021972656
+                        u : -62.6353759765625,
+                        v : -154.75289916992188,
+                        w : -110.93256378173828,
+                        x : 125.270751953125,
+                        y : 309.50579833984375,
+                        z : 222.10585021972656,
                     }
-                    u8:"@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\xa1\x1b:?\xc09\xacA\xda\xb3\x16\xc3y\xdd\xdd\xc2&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\x1b{f=`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\xc4\x94\\?`8\x19B\x98C\xef\xc1\x0c\x03\xd2\xc2\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\x8f\xca\xa3=\xa0\x8azB\x90AKA=\xe8\xc4B\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\x05\xd1d?\xa0\x8azB\x90AKA\x95\xa0\x97\xc2\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\xa4wI>01xB|qjB\xb9X\xdeB\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?i\xd7q?01xB|qjB5P\xcc\xc2\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?\xf8!\xbb=\x90\xe6\x16B\x8dX\x08CIr\xa2BI\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?.,S?\x90\xe6\x16B\x8dX\x08C\x9e\x85\x95\xc2I\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?q\xc7M>@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xfe\xb4g?@\xfcV\xc2\xbf\xc0\x1aC[n\x88\xc2\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xd3\x96h>\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@\x86vO?\xa0\x8az\xc2\xa2\xf3\xa0B'\xc0\xd0\xc2\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@#\xf5\xa8=\x80\xfdI\xc2D\xc08B\x0fN\xdaB$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@\xa9\xc5o?\x80\xfdI\xc2D\xc08B@\x9c\xb4\xc2$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@)\x1c\x0e>P\x840\xc2D\xf9!B\xe7,\xc8B\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@d}f?P\x840\xc2D\xf9!B\xbf=_\xc2\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@T\xb3\x8d>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>"
-                    u9:'\x00\x00\x01\x00\x02\x00\x01\x00\x03\x00\x02\x00\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x06\x00\x05\x00\x07\x00\x06\x00\x06\x00\x07\x00\x08\x00\x07\x00\t\x00\x08\x00\x08\x00\t\x00\n\x00\t\x00\x0b\x00\n\x00\n\x00\x0b\x00\x0c\x00\x0b\x00\r\x00\x0c\x00\x0c\x00\r\x00\x0e\x00\r\x00\x0f\x00\x0e\x00\x0e\x00\x0f\x00\x10\x00\x0f\x00\x11\x00\x10\x00\x10\x00\x11\x00\x12\x00\x11\x00\x13\x00\x12\x00\x12\x00\x13\x00\x14\x00\x13\x00\x15\x00\x14\x00'
+                    u8 : "@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\xa1\x1b:?\xc09\xacA\xda\xb3\x16\xc3y\xdd\xdd\xc2&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\x1b{f=`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\xc4\x94\\?`8\x19B\x98C\xef\xc1\x0c\x03\xd2\xc2\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\x8f\xca\xa3=\xa0\x8azB\x90AKA=\xe8\xc4B\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\x05\xd1d?\xa0\x8azB\x90AKA\x95\xa0\x97\xc2\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\xa4wI>01xB|qjB\xb9X\xdeB\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?i\xd7q?01xB|qjB5P\xcc\xc2\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?\xf8!\xbb=\x90\xe6\x16B\x8dX\x08CIr\xa2BI\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?.,S?\x90\xe6\x16B\x8dX\x08C\x9e\x85\x95\xc2I\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?q\xc7M>@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xfe\xb4g?@\xfcV\xc2\xbf\xc0\x1aC[n\x88\xc2\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xd3\x96h>\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@\x86vO?\xa0\x8az\xc2\xa2\xf3\xa0B'\xc0\xd0\xc2\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@#\xf5\xa8=\x80\xfdI\xc2D\xc08B\x0fN\xdaB$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@\xa9\xc5o?\x80\xfdI\xc2D\xc08B@\x9c\xb4\xc2$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@)\x1c\x0e>P\x840\xc2D\xf9!B\xe7,\xc8B\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@d}f?P\x840\xc2D\xf9!B\xbf=_\xc2\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@T\xb3\x8d>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>",
+                    u9 : '\x00\x00\x01\x00\x02\x00\x01\x00\x03\x00\x02\x00\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x06\x00\x05\x00\x07\x00\x06\x00\x06\x00\x07\x00\x08\x00\x07\x00\t\x00\x08\x00\x08\x00\t\x00\n\x00\t\x00\x0b\x00\n\x00\n\x00\x0b\x00\x0c\x00\x0b\x00\r\x00\x0c\x00\x0c\x00\r\x00\x0e\x00\r\x00\x0f\x00\x0e\x00\x0e\x00\x0f\x00\x10\x00\x0f\x00\x11\x00\x10\x00\x10\x00\x11\x00\x12\x00\x11\x00\x13\x00\x12\x00\x12\x00\x13\x00\x14\x00\x13\x00\x15\x00\x14\x00',
                 }
                 u1{
-                    u0:6
-                    u1:4
+                    u0 : 6,
+                    u1 : 4,
                     u2{
-                        u0:4
-                        u1:1
-                        u2:2
-                        u3:0
+                        u0 : 4,
+                        u1 : 1,
+                        u2 : 2,
+                        u3 : 0,
                     }
                     u3{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:0
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 0,
                     }
                     u4{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:12
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 12,
                     }
                     u5{
-                        u0:7
-                        u1:2
-                        u2:32
-                        u3:24
+                        u0 : 7,
+                        u1 : 2,
+                        u2 : 32,
+                        u3 : 24,
                     }
                     u6{
                         u0{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u1{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u2{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
-                        u3:0.0
+                        u3 : 0.0,
                         u4{
-                            name:'graveyard_ground'
-                            u0:1
-                            u2:1
+                            name : 'graveyard_ground',
+                            u0 : 1,
+                            u2 : 1,
                         }
                     }
                     u7{
-                        u:-45.80859375
-                        v:-154.75289916992188
-                        w:-102.4931411743164
-                        x:35.84344482421875
-                        y:129.30526733398438
-                        z:190.6591033935547
+                        u : -45.80859375,
+                        v : -154.75289916992188,
+                        w : -102.4931411743164,
+                        x : 35.84344482421875,
+                        y : 129.30526733398438,
+                        z : 190.6591033935547,
                     }
-                    u8:'@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@.HZ?\x00<7\xc2\x88H\x18\xc35\xb2\x9a\xc2\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@\xae.C>'
-                    u9:'\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x00\x00\x05\x00\x01\x00\x00\x00'
+                    u8 : '@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@.HZ?\x00<7\xc2\x88H\x18\xc35\xb2\x9a\xc2\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@\xae.C>',
+                    u9 : '\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x00\x00\x05\x00\x01\x00\x00\x00',
                 }
                 u2{
-                    u0:30
-                    u1:10
+                    u0 : 30,
+                    u1 : 10,
                     u2{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:0
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 0,
                     }
                     u3{
-                        u0:7
-                        u1:3
-                        u2:32
-                        u3:12
+                        u0 : 7,
+                        u1 : 3,
+                        u2 : 32,
+                        u3 : 12,
                     }
                     u4{
-                        u0:7
-                        u1:2
-                        u2:32
-                        u3:24
+                        u0 : 7,
+                        u1 : 2,
+                        u2 : 32,
+                        u3 : 24,
                     }
                     u5{
                         u0{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u1{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
                         u2{
-                            w:1.0
-                            x:1.0
-                            y:1.0
-                            z:1.0
+                            w : 1.0,
+                            x : 1.0,
+                            y : 1.0,
+                            z : 1.0,
                         }
-                        u3:0.0
+                        u3 : 0.0,
                         u4{
-                            u0:'graveyard_ground'
-                            u1:1
-                            u2:1
+                            u0 : 'graveyard_ground',
+                            u1 : 1,
+                            u2 : 1,
                         }
                     }
                     u6{
-                        u:-62.6353759765625
-                        v:-154.75289916992188
-                        w:56.74601745605469
-                        x:125.270751953125
-                        y:309.50579833984375
-                        z:54.427268981933594
+                        u : -62.6353759765625,
+                        v : -154.75289916992188,
+                        w : 56.74601745605469,
+                        x : 125.270751953125,
+                        y : 309.50579833984375,
+                        z : 54.427268981933594,
                     }
-                    u7:"\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\xbc\x94\x98>\xd8K/?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>q\xed\x91>\xc6;\x8f?\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\x0cr\x7f>ChR?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?q\xed\x91>\xc6;\x8f?\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?\xbc\x94\x98>\xd8K/?P\x840\xc2D\xf9!B\xe7,\xc8B\xb0\xceU?\xdbT\x84=&\xd1\x0b?\x96\x9f\xa5>\x1cw)?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB~\x14 ?\xc0a6=IsG?q\xed\x91>\xc6;\x8f?P\x840\xc2D\xf9!B\xe7,\xc8B~\x14 ?\xc0a6=IsG?\x96\x9f\xa5>\x1cw)?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B~\x14 ?\xc0a6=IsG?\x17\xa1\xdd>\x1d\xe2\xcb>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3Bk\x8b7>\xf2&\x10\xbe)Cy?\x17\xa1\xdd>\x1d\xe2\xcb>@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wBk\x8b7>\xf2&\x10\xbe)Cy?d\x97\xeb>Z\xbc\xf3\xbd\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbBk\x8b7>\xf2&\x10\xbe)Cy?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB:\xbc-?\x0b\xf4w=\xb7a;?q\xed\x91>\xc6;\x8f?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B:\xbc-?\x0b\xf4w=\xb7a;?\x17\xa1\xdd>\x1d\xe2\xcb>\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB:\xbc-?\x0b\xf4w=\xb7a;?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?q\xed\x91>\xc6;\x8f?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?}\x0b\x16?%\x8e\xd2\xbd\x90\xe6\x16B\x8dX\x08CIr\xa2B\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?m\xa1&?!\xcf\x85?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x17\xa1\xdd>\x1d\xe2\xcb>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x1b/\xa2>H\x81\xdf\xbd@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x05[\x15?3\xea\xbf\xbd\xed\x86N?d\x97\xeb>Z\xbc\xf3\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>q9'?\x98\xbf\xc2>\x90\xe6\x16B\x8dX\x08CIr\xa2B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>m\xa1&?!\xcf\x85?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>}\x0b\x16?%\x8e\xd2\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4BE\xa4:\xbf\xf1O\x10=\x01\xfc.?q9'?\x98\xbf\xc2>01xB|qjB\xb9X\xdeBE\xa4:\xbf\xf1O\x10=\x01\xfc.?\x85\x89??z\x04<?\x90\xe6\x16B\x8dX\x08CIr\xa2BE\xa4:\xbf\xf1O\x10=\x01\xfc.?m\xa1&?!\xcf\x85?`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?q9'?\x98\xbf\xc2>\xa0\x8azB\x90AKA=\xe8\xc4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?}#@?&\x02\r?01xB|qjB\xb9X\xdeB\xd9\xd5\x13>wf\x86\xbe\xf9=t?\x85\x89??z\x04<?"
+                    u7 : "\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\xbc\x94\x98>\xd8K/?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>q\xed\x91>\xc6;\x8f?\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\x0cr\x7f>ChR?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?q\xed\x91>\xc6;\x8f?\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?\xbc\x94\x98>\xd8K/?P\x840\xc2D\xf9!B\xe7,\xc8B\xb0\xceU?\xdbT\x84=&\xd1\x0b?\x96\x9f\xa5>\x1cw)?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB~\x14 ?\xc0a6=IsG?q\xed\x91>\xc6;\x8f?P\x840\xc2D\xf9!B\xe7,\xc8B~\x14 ?\xc0a6=IsG?\x96\x9f\xa5>\x1cw)?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B~\x14 ?\xc0a6=IsG?\x17\xa1\xdd>\x1d\xe2\xcb>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3Bk\x8b7>\xf2&\x10\xbe)Cy?\x17\xa1\xdd>\x1d\xe2\xcb>@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wBk\x8b7>\xf2&\x10\xbe)Cy?d\x97\xeb>Z\xbc\xf3\xbd\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbBk\x8b7>\xf2&\x10\xbe)Cy?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB:\xbc-?\x0b\xf4w=\xb7a;?q\xed\x91>\xc6;\x8f?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B:\xbc-?\x0b\xf4w=\xb7a;?\x17\xa1\xdd>\x1d\xe2\xcb>\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB:\xbc-?\x0b\xf4w=\xb7a;?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?q\xed\x91>\xc6;\x8f?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?}\x0b\x16?%\x8e\xd2\xbd\x90\xe6\x16B\x8dX\x08CIr\xa2B\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?m\xa1&?!\xcf\x85?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x17\xa1\xdd>\x1d\xe2\xcb>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x1b/\xa2>H\x81\xdf\xbd@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x05[\x15?3\xea\xbf\xbd\xed\x86N?d\x97\xeb>Z\xbc\xf3\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>q9'?\x98\xbf\xc2>\x90\xe6\x16B\x8dX\x08CIr\xa2B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>m\xa1&?!\xcf\x85?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>}\x0b\x16?%\x8e\xd2\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4BE\xa4:\xbf\xf1O\x10=\x01\xfc.?q9'?\x98\xbf\xc2>01xB|qjB\xb9X\xdeBE\xa4:\xbf\xf1O\x10=\x01\xfc.?\x85\x89??z\x04<?\x90\xe6\x16B\x8dX\x08CIr\xa2BE\xa4:\xbf\xf1O\x10=\x01\xfc.?m\xa1&?!\xcf\x85?`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?q9'?\x98\xbf\xc2>\xa0\x8azB\x90AKA=\xe8\xc4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?}#@?&\x02\r?01xB|qjB\xb9X\xdeB\xd9\xd5\x13>wf\x86\xbe\xf9=t?\x85\x89??z\x04<?",
                 }
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         component{
-            component_type:'GroundMeshGenerator'
-            number:102
+            type : 'GroundMeshGenerator',
+            number : 102,
             ground_mesh_generator{
-                ground_polygon:100
-                ground_mesh:101
-                texture_mapping_1:103
-                texture_mapping_2:104
-                u4:0
-                u5:70.0
-                u6:0
-                u7:170.0
-                u8:25.0
-                u9:5.0
-                u10:5.0
+                ground_polygon : 100,
+                ground_mesh : 101,
+                texture_mapping_1 : 103,
+                texture_mapping_2 : 104,
+                u4 : 0,
+                u5 : 70.0,
+                u6 : 0,
+                u7 : 170.0,
+                u8 : 25.0,
+                u9 : 5.0,
+                u10 : 5.0,
             }
         }
         component{
-            component_type:'TextureMapping'
-            number:103
+            type : 'TextureMapping',
+            number : 103,
             texture_mapping{
-                texture_file:'graveyard_ground'
-                u0:250.0
+                texture_file : 'graveyard_ground',
+                u0 : 250.0,
                 u1{
-                    u1:0.0
-                    u2:0.0
+                    u1 : 0.0,
+                    u2 : 0.0,
                 }
             }
         }
         component{
-            component_type:'TextureMapping'
-            number:104
+            type : 'TextureMapping',
+            number : 104,
             texture_mapping{
-                texture_file:'graveyard_ground'
-                u0:250.0
+                texture_file : 'graveyard_ground',
+                u0 : 250.0,
                 u1{
-                    u1:0.0
-                    u2:0.0
+                    u1 : 0.0,
+                    u2 : 0.0,
                 }
             }
         }
         component{
-            component_type:'TransformController'
-            number:107
+            type : 'TransformController',
+            number : 107,
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-62.6353759765625
-            x:-154.75289916992188
-            y:125.270751953125
-            z:309.50579833984375
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : -62.6353759765625,
+            bottom : -154.75289916992188,
+            right : 125.270751953125,
+            top : 309.50579833984375,
         }
-        hidden:0
+        hidden : 0,
         lua{
-            main_chunk :
-$
+            main : $
 local self = ...;
 
 while true do
-    TransformController.RotateBy(self, 360, 10.0);
-    Program.Wait(10.0);
+	TransformController.RotateBy(self, 360, 10.0);
+	Program.Wait(10.0);
 end
-
 $end
-            secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tTransformController.RotateBy(self, 360, 10.0);\r\n\tProgram.Wait(10.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\xc0\x00\x00\\@\x00\x01\x16\x00\xfd\x7f\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x03\x00\x00\x00\x00\x00\x80v@\x03\x00\x00\x00\x00\x00\x00$@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00'
+            secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tTransformController.RotateBy(self, 360, 10.0);\r\n\tProgram.Wait(10.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\xc0\x00\x00\\@\x00\x01\x16\x00\xfd\x7f\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x03\x00\x00\x00\x00\x00\x80v@\x03\x00\x00\x00\x00\x00\x00$@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00',
         }
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'stonepillairs'
+        name : 'stonepillairs',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'fire_stonepillairs'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'fire_stonepillairs',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'stonepillairs2'
+        name : 'stonepillairs2',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'fire_stonepillairs2'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'fire_stonepillairs2',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:0.800000011920929
+    u0 : 0.800000011920929,
 }
 library_item{
     object{
-        name:'stonepillairs3'
+        name : 'stonepillairs3',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'fire_stonepillairs3'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'fire_stonepillairs3',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
 library_item{
     object{
-        name:'stonepillairs4'
+        name : 'stonepillairs4',
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model',
+            number : 101,
             3D_model{
-                name:'fire_stonepillairs4'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'fire_stonepillairs4',
+                u0 : 0.0,
+                u1 : 0.0,
+                u2 : 0.0,
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0,
+                    y : 0.0,
+                    z : 0.0,
                 }
-                u5:0
+                u5 : 0,
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0,
+                    x : 1.0,
+                    y : 1.0,
+                    z : 1.0,
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x : 0.0,
+            y : 0.0,
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z : 0.0,
+        rotation : 0.0,
+        scale : 1.0,
+        shape{
+            left : 0.0,
+            bottom : 0.0,
+            right : 0.0,
+            top : 0.0,
         }
-        hidden:0
+        hidden : 0,
     }
-    u0:1.0
+    u0 : 1.0,
 }
