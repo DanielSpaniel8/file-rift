@@ -1,187 +1,187 @@
-# rifted with FR v5.5.1
+# rifted with FR v5.5.0
 
 music_definition{
-    name : 'menu',
+    name:'menu'
     file{
-        filename : '1-hero2',
-        u0 : 0.5,
+        filename:'1-hero2'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'house',
+    name:'house'
     file{
-        filename : '1-plaintest2',
-        u0 : 0.5,
+        filename:'1-plaintest2'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'outdoors_light',
+    name:'outdoors_light'
     file{
-        filename : 'squire_new2',
-        u0 : 0.5,
+        filename:'squire_new2'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'forest',
+    name:'forest'
     file{
-        filename : '2cave2',
-        u0 : 0.5,
+        filename:'2cave2'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'cave',
+    name:'cave'
     file{
-        filename : '2cave2',
-        u0 : 0.5,
+        filename:'2cave2'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'dungeon1',
+    name:'dungeon1'
     file{
-        filename : '1-dung73',
-        u0 : 0.5,
+        filename:'1-dung73'
+        u0:0.5
     }
 }
 music_definition{
-    name : 'boss',
+    name:'boss'
     file{
-        filename : '1-boss23',
-        u0 : 0.75,
+        filename:'1-boss23'
+        u0:0.75
     }
 }
 music_definition{
-    name : 'bosskill',
+    name:'bosskill'
     file{
-        filename : 'momentofwonder',
-        u0 : 0.75,
+        filename:'momentofwonder'
+        u0:0.75
     }
 }
 music_definition{
-    name : 'heartbeat',
+    name:'heartbeat'
     file{
-        filename : 'heartbeat',
-        u0 : 1.0,
+        filename:'heartbeat'
+        u0:1.0
     }
 }
 button_positions{
     button{
-        name : 'left',
+        name:'left'
         position{
-            left : 20.0,
-            bottom : 10.0,
+            left:20.0
+            bottom:10.0
         }
     }
     button{
-        name : 'right',
+        name:'right'
         position{
-            left : 100.0,
-            bottom : 10.0,
+            left:100.0
+            bottom:10.0
         }
     }
     button{
-        name : 'jump',
+        name:'jump'
         position{
-            right : 20.0,
-            bottom : 20.0,
+            right:20.0
+            bottom:20.0
         }
     }
     button{
-        name : 'swing',
+        name:'swing'
         position{
-            right : 100.0,
-            bottom : 10.0,
+            right:100.0
+            bottom:10.0
         }
     }
     button{
-        name : 'skill',
+        name:'skill'
         position{
-            right : 5.0,
-            bottom : 90.0,
+            right:5.0
+            bottom:90.0
         }
     }
     button{
-        name : 'skillToggle',
+        name:'skillToggle'
         position{
-            right : 10.0,
-            top : 17.0,
+            right:10.0
+            top:17.0
         }
     }
     button{
-        name : 'menu',
+        name:'menu'
         position{
-            left : 10.0,
-            top : 8.0,
+            left:10.0
+            top:8.0
         }
     }
     button{
-        name : 'consumables',
+        name:'consumables'
         position{
-            left : 209.0,
-            bottom : 10.0,
+            left:209.0
+            bottom:10.0
         }
     }
 }
 buttons{
     button{
-        name : 'left',
+        name:'left'
         position{
-            left : 10.0,
-            bottom : 30.0,
+            left:10.0
+            bottom:30.0
         }
     }
     button{
-        name : 'right',
+        name:'right'
         position{
-            left : 68.0,
-            bottom : 30.0,
+            left:68.0
+            bottom:30.0
         }
     }
     button{
-        name : 'jump',
+        name:'jump'
         position{
-            right : 10.0,
-            bottom : 38.0,
+            right:10.0
+            bottom:38.0
         }
     }
     button{
-        name : 'swing',
+        name:'swing'
         position{
-            right : 68.0,
-            bottom : 30.0,
+            right:68.0
+            bottom:30.0
         }
     }
     button{
-        name : 'skill',
+        name:'skill'
         position{
-            right : 5.0,
-            bottom : 86.0,
+            right:5.0
+            bottom:86.0
         }
     }
     button{
-        name : 'skillToggle',
+        name:'skillToggle'
         position{
-            right : 10.0,
-            top : 17.0,
+            right:10.0
+            top:17.0
         }
     }
     button{
-        name : 'menu',
+        name:'menu'
         position{
-            left : 10.0,
-            top : 8.0,
+            left:10.0
+            top:8.0
         }
     }
     button{
-        name : 'consumables',
+        name:'consumables'
         position{
-            left : 225.0,
-            bottom : 15.0,
+            left:225.0
+            bottom:15.0
         }
     }
     button{
-        name : 'exp',
+        name:'exp'
         position{
-            bottom : 80.0,
+            bottom:80.0
         }
     }
 }

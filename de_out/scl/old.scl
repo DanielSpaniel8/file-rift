@@ -1,227 +1,227 @@
-# rifted with FR v5.5.1
+# rifted with FR v5.5.0
 
-scl_file_name : 'old',
+scl_file_name:'old'
 library_item{
     object{
-        name : 'charging_golem',
+        name:'charging_golem'
         component{
-            type : 'Model',
-            number : 101,
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'golem_small',
-                u0 : 1.5707963705062866,
-                u1 : 0.0,
-                u2 : 0.0,
+                name:'golem_small'
+                u0:1.5707963705062866
+                u1:0.0
+                u2:0.0
                 u3{
-                    w : 0.0,
-                    x : 0.0,
-                    y : 0.0,
-                    z : 1.0,
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0,
+                u5:0
                 u6{
-                    w : 1.0,
-                    x : 1.0,
-                    y : 1.0,
-                    z : 1.0,
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            type : 'KeyframeAnimation',
-            number : 103,
+            component_type:'KeyframeAnimation'
+            number:103
             keyframe_animation{
-                linked_model_component_number : 101,
-                name : 'golem_small_walk',
-                u0 : 1,
-                u1 : 0.5,
-                u2 : 1,
+                linked_model_component_number:101
+                name:'golem_small_walk'
+                u0:1
+                u1:0.5
+                u2:1
             }
         }
         component{
-            type : 'AnimationController',
-            number : 107,
+            component_type:'AnimationController'
+            number:107
             animation_controller{
-                model_component : 101,
-                u1 : 0,
-                u2 : 0,
+                model_component:101
+                u1:0
+                u2:0
             }
         }
         component{
-            type : 'MonsterEntity',
-            number : 109,
+            component_type:'MonsterEntity'
+            number:109
             entity{
-                u0 : 18446744073709551615,
-                u1 : 1,
+                u0:18446744073709551615
+                u1:1
             }
             ?monster_entity{
                 lua{
                 }
-                u0 : '',
-                u2 : 1,
-                u3 : 1,
+                u0:''
+                u2:1
+                u3:1
             }
         }
         component{
-            type : 'UtilityShape',
-            number : 111,
+            component_type:'UtilityShape'
+            number:111
             collision_shape{
                 box_shape{
-                    left : -500.0,
-                    bottom : 0.0,
-                    right : 1000.0,
-                    top : 150.0,
+                    left:-500.0
+                    bottom:0.0
+                    right:1000.0
+                    top:150.0
                 }
             }
         }
         component{
-            type : 'Health',
-            number : 114,
+            component_type:'Health'
+            number:114
             health{
-                health_multiplier : 6,
-                u1 : 0,
+                health_multiplier:6
+                u1:0
                 u2{
-                    x : 0.0,
-                    y : 50.0,
+                    x:0.0
+                    y:50.0
                 }
             }
         }
         component{
-            type : 'Damage',
-            number : 117,
+            component_type:'Damage'
+            number:117
             damage{
-                damage : 2,
-                u1 : 0,
-                u2 : 0,
-                u5 : 1.0,
-                u6 : 0.0,
-                u7 : 0,
-                u8 : 1,
+                damage:2
+                u1:0
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            type : 'CollisionShape',
-            number : 120,
+            component_type:'CollisionShape'
+            number:120
             collision_shape{
                 box_shape{
-                    left : -30.0,
-                    bottom : -0.8058220148086548,
-                    right : 60.0,
-                    top : 132.24581909179688,
+                    left:-30.0
+                    bottom:-0.8058220148086548
+                    right:60.0
+                    top:132.24581909179688
                 }
             }
             collision_shape_2{
-                u1 : 1,
-                u2 : 1,
-                u3 : 1,
-                w : -15.0,
-                x : 15.0,
-                z : 1,
+                u1:1
+                u2:1
+                u3:1
+                w:-15.0
+                x:15.0
+                z:1
             }
         }
         component{
-            type : 'ChargingMonsterController',
-            number : 124,
+            component_type:'ChargingMonsterController'
+            number:124
             monster_controller{
-                u0 : 100.0,
-                u1 : 107,
-                u2 : 109,
-                u3 : 111,
+                u0:100.0
+                u1:107
+                u2:109
+                u3:111
             }
             charging_monster_controller{
-                walk_animation : 103,
-                charge_animation : 132,
-                run_animation : 128,
-                u0 : 230.0,
-                u1 : 300.0,
+                walk_animation:103
+                charge_animation:132
+                run_animation:128
+                u0:230.0
+                u1:300.0
             }
         }
         component{
-            type : 'KeyframeAnimation',
-            number : 128,
+            component_type:'KeyframeAnimation'
+            number:128
             keyframe_animation{
-                linked_model_component_number : 101,
-                name : 'golem_small_charge',
-                u0 : 1,
-                u1 : 1.2000000476837158,
-                u2 : 1,
+                linked_model_component_number:101
+                name:'golem_small_charge'
+                u0:1
+                u1:1.2000000476837158
+                u2:1
             }
         }
         component{
-            type : 'KeyframeAnimation',
-            number : 132,
+            component_type:'KeyframeAnimation'
+            number:132
             keyframe_animation{
-                linked_model_component_number : 101,
-                name : 'golem_small_attack1',
-                u0 : 1,
-                u1 : 1.0,
-                u2 : 1,
+                linked_model_component_number:101
+                name:'golem_small_attack1'
+                u0:1
+                u1:1.0
+                u2:1
             }
         }
         component{
-            type : 'BoneControlledCollisionShape',
-            number : 136,
+            component_type:'BoneControlledCollisionShape'
+            number:136
             collision_shape{
                 ball_shape{
                     offsets{
-                        x : 0.0,
-                        y : 0.0,
+                        x:0.0
+                        y:0.0
                     }
-                    radius : 30.0,
+                    radius:30.0
                 }
             }
             collision_shape_2{
-                u3 : 1,
-                w : -23.0,
-                x : 23.0,
-                z : 1,
+                u3:1
+                w:-23.0
+                x:23.0
+                z:1
             }
             bone_controlled_collision_shape{
-                u0 : 101,
-                bone_name : 'BoneRightHand3',
+                u0:101
+                bone_name:'BoneRightHand3'
             }
         }
         component{
-            type : 'BoneControlledCollisionShape',
-            number : 141,
+            component_type:'BoneControlledCollisionShape'
+            number:141
             collision_shape{
                 ball_shape{
                     offsets{
-                        x : 0.0,
-                        y : 0.0,
+                        x:0.0
+                        y:0.0
                     }
-                    radius : 30.0,
+                    radius:30.0
                 }
             }
             collision_shape_2{
-                w : -23.0,
-                x : 23.0,
-                z : 1,
+                w:-23.0
+                x:23.0
+                z:1
             }
             bone_controlled_collision_shape{
-                u0 : 101,
-                bone_name : 'BoneLeftHand3',
+                u0:101
+                bone_name:'BoneLeftHand3'
             }
         }
         position{
-            x : 0.0,
-            y : 0.0,
+            x_position:0.0
+            y_position:0.0
         }
-        z : 0.0,
-        rotation : 0.0,
-        scale : 1.0,
-        shape{
-            left : -30.0,
-            bottom : -0.8058220148086548,
-            right : 60.0,
-            top : 132.24581909179688,
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
+        u0{
+            w:-30.0
+            x:-0.8058220148086548
+            y:60.0
+            z:132.24581909179688
         }
-        hidden : 0,
+        hidden:0
     }
-    u0 : 1.0,
+    u0:1.0
 }

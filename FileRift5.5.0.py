@@ -15,7 +15,6 @@ from struct import pack, unpack
 import re
 import hashlib
 import subprocess
-import argparse
 
 from block_formats import (
     gdata,
@@ -30,26 +29,6 @@ from block_formats import (
     fnt
 )
 
-parser = argparse.ArgumentParser("FileRift")
-parser.add_argument("-r", "--recode", action="store_true", help="Run in recode mode")
-parser.add_argument("-d", "--decode", action="store_true", help="Run in decode mode")
-parser.add_argument("-c", "--custom", action="store_true", help="Decode files in /de_in/custom")
-parser.add_argument("-b", "--both", action="store_true", help="Run in decode then recode mode")
-parser.add_argument("-f", "--force", action="store_true", help="Run in recode mode with allways_recode turned on")
-
-args = parser.parse_args()
-
-if args.decode:
-    rift_mode = "decode"
-if args.both:
-    rift_mode = "both"
-if args.custom:
-    rift_mode = "custom"
-if args.recode:
-    rift_mode = "recode"
-if args.force:
-    rift_mode = "recode"
-    allways_recode = True
 
 
 def de_varint():  # decode varints   note: the offset is automatically moved by the length of the varint
@@ -198,24 +177,22 @@ def de_data():  # get the next tag, [pointer] and record and interpret them
 
         if isinstance(tagname, list):  # if there is an alternative action:
 
-            this_tagname = tagname[1]
-            if isinstance(this_tagname, tuple):
-                this_tagname = this_tagname[-1]
+            k = tagname
 
-            if tagname[0] == 1:  # lua chunk
-                outLines.append(indent + this_tagname + style_before_chunk + "\n")
-                chunk = bytes(
+            if k[0] == 1:  # lua chunk
+                outLines.append(indent + tagname[1] + style_before_chunk + "\n")
+                chunk = (
                     str(inbytes[sum(offsets) : sum(offsets) + pointer])[2:-1]
                     .replace("\\r", "")
-                    .replace("\t", "    "),
-                    "latin-1"
+                    .replace("\\n", "\n")
+                    .replace("\\t", "    ")
+                    .replace("\\\\", "\\")
                 )
-                chunk = chunk.decode("unicode-escape")
                 outLines.append(chunk)
-                outLines.append(f"\n$end\n")
+                outLines.append(f"\n\n$end\n")
                 offsets[metalevel] += pointer
 
-            if tagname[0] == 2:  # bytestring
+            if k[0] == 2:  # bytestring
                 print("deprecated alternative action")
 
         if isinstance(tagname, dict):  # if there are subblocks:
@@ -419,29 +396,21 @@ def recode_lexList(lexList):
         if isinstance(thisFormat, str):
             return "00", False
 
-        if name == "secondary":
-            return "12", True
-
         for key, value in thisFormat.items():
-            if not is_block and key == "name":  # make sure not to get a block tagname
-                continue                        # in a backwards compatibility tuple
-                                                # if it is not a block
+            if not is_block and key == "name":  # make sure not to get a block tagname in a backwards compatibility tuple if it is not a block
+                continue
             if isinstance(value, str) and value == name:  # if it is an item
                 if key == "name":
                     continue
                 return key, True
             if isinstance(value, tuple) and name in value:  # backwards compatibility
                 return key, True
-            if isinstance(value, list):
-                if isinstance(value[1], tuple) and name in value[1]:
-                    return key, True
-                elif value[1] == name:
-                    return key, True
-
+            if isinstance(value, list) and value[1] == name:
                 return key, True
             if isinstance(value, dict):  # if it is a block
-                if isinstance(value["name"], tuple) and name in value["name"]:
-                    return key, True
+                if isinstance(value["name"], tuple):
+                    if name in value["name"]:
+                        return key, True
                 elif value["name"] == name:
                     return key, True
 
@@ -501,7 +470,7 @@ def recode_lexList(lexList):
                 if not found:
                     block_format_path = ""
                     for i in formats[1:metalevel+1]:
-                        block_format_path += ("/"+str(i["name"]))
+                        block_format_path += ("/"+i["name"])
                     print('tag not found: "'+lexeme+'"')
                     print('file: '+game_file[8:]+':'+str(line_num))
                     print('block_formats path: '+block_format_path)
@@ -638,7 +607,7 @@ if rift_mode in ["decode", "both", "custom"]:
 
         # --- define starting variables ---
 
-        outLines = ["# rifted with FR v5.5.1\n\n"]
+        outLines = ["# rifted with FR v5.5.0\n\n"]
 
         offsets = [0] * 10
         pointers = [0] * 10
@@ -775,4 +744,4 @@ if no_skipped != 0:
     results += ("skipped "+str(no_skipped))
 
 print(results)
-print("File Rift v5.5.1")
+print("File Rift v5.5.0")

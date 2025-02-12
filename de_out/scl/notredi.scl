@@ -1,112 +1,113 @@
-# rifted with FR v5.5.1
+# rifted with FR v5.5.0
 
-scl_file_name : 'notredi',
+scl_file_name:'notredi'
 library_item{
     object{
-        name : 'kakkapiikkipy\xf6ryl\xe4',
+        name:'kakkapiikkipy\xf6ryl\xe4'
         component{
-            type : 'Model',
-            number : 101,
+            component_type:'Model'
+            number:101
             3D_model{
-                name : 'spikey',
-                u0 : 1.5707963705062866,
-                u1 : 0.5,
-                u2 : 0.0,
+                name:'spikey'
+                u0:1.5707963705062866
+                u1:0.5
+                u2:0.0
                 u3{
-                    w : 0.0,
-                    x : 0.0,
-                    y : 0.0,
-                    z : 1.0,
+                    w:0.0
+                    x:0.0
+                    y:0.0
+                    z:1.0
                 }
                 u4{
-                    x : 0.0,
-                    y : 0.0,
-                    z : 0.0,
+                    x:0.0
+                    y:0.0
+                    z:0.0
                 }
-                u5 : 0,
+                u5:0
                 u6{
-                    w : 1.0,
-                    x : 1.0,
-                    y : 1.0,
-                    z : 1.0,
+                    w:1.0
+                    x:1.0
+                    y:1.0
+                    z:1.0
                 }
             }
         }
         component{
-            type : 'KeyframeAnimation',
-            number : 103,
+            component_type:'KeyframeAnimation'
+            number:103
             keyframe_animation{
-                linked_model_component_number : 101,
-                name : 'spikey_stand',
-                u0 : 1,
-                u1 : 1.0,
-                u2 : 1,
+                linked_model_component_number:101
+                name:'spikey_stand'
+                u0:1
+                u1:1.0
+                u2:1
             }
         }
         component{
-            type : 'KeyframeAnimation',
-            number : 104,
+            component_type:'KeyframeAnimation'
+            number:104
             keyframe_animation{
-                linked_model_component_number : 101,
-                name : 'spikey_move',
-                u0 : 1,
-                u1 : 1.0,
-                u2 : 1,
+                linked_model_component_number:101
+                name:'spikey_move'
+                u0:1
+                u1:1.0
+                u2:1
             }
         }
         component{
-            type : 'AnimationController',
-            number : 105,
+            component_type:'AnimationController'
+            number:105
             animation_controller{
-                model_component : 101,
-                u1 : 0,
-                u2 : 0,
+                model_component:101
+                u1:0
+                u2:0
             }
         }
         component{
-            type : 'GenericMonsterController',
-            number : 106,
+            component_type:'GenericMonsterController'
+            number:106
             monster_controller{
-                u0 : 100.0,
-                u1 : 105,
-                u2 : 107,
-                u3 : 113,
+                u0:100.0
+                u1:105
+                u2:107
+                u3:113
             }
             generic_monster_controller{
-                walk_animation : 104,
+                walk_animation:104
             }
         }
         component{
-            type : 'MonsterEntity',
-            number : 107,
+            component_type:'MonsterEntity'
+            number:107
             entity{
-                u0 : 18446744073709551615,
-                u1 : 1,
+                u0:18446744073709551615
+                u1:1
             }
             ?monster_entity{
                 lua{
                 }
-                u0 : '',
-                u2 : 1,
-                u3 : 1,
+                u0:''
+                u2:1
+                u3:1
             }
         }
         component{
-            type : 'Attack',
-            number : 108,
+            component_type:'Attack'
+            number:108
             attack{
-                keyframe_animation_component : 103,
-                u0 : 111,
-                u1 : 0,
-                u2 : 120,
-                u3 : 1.0,
-                u4 : 1.0,
-                u5 : 0.20000000298023224,
-                u6 : 1.0,
-                u7 : 0.10000000149011612,
-                u8 : 0.20000000298023224,
+                keyframe_animation_component:103
+                u0:111
+                u1:0
+                u2:120
+                u3:1.0
+                u4:1.0
+                u5:0.20000000298023224
+                u6:1.0
+                u7:0.10000000149011612
+                u8:0.20000000298023224
                 lua{
-                    main : $
+                    main_chunk :
+$
 local self, target = ...;
 
 Program.Wait(0.1);
@@ -122,110 +123,111 @@ TransformController.ScaleTo(spikes,0.1,0.5);
 Program.Wait(0.8);
 spikes:destroy();
 
+
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00l\x01\x00\x00local self, target = ...;\r\n\r\nProgram.Wait(0.1);\r\n\r\nspikes = Scene.CreateObject("spikey_spikes","spikes1");\r\n\r\nTransformController.ScaleTo(spikes,0.1,0);\r\nspikes:setPosition(self:position()+Vector3.New(0,30,0));\r\nTransformController.ScaleTo(spikes,1,0.1);\r\nProgram.Wait(0.3);\r\nTransformController.ScaleTo(spikes,0.1,0.5);\r\n\r\nProgram.Wait(0.8);\r\nspikes:destroy();\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t5\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00\x9c\x80\x80\x01\x87\xc0\x00\x00\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x02\x00\x9c@\x00\x02\x85\xc0\x00\x00\x8b\xc0B\x01\x0b\x01C\x00\x1c\x81\x00\x01EA\x03\x00F\x81\xc3\x02\x81\x81\x02\x00\xc1\xc1\x03\x00\x01\x82\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x01\x04\x00A\x81\x00\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1@\x04\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85\xc0\x00\x00\x8b\x00E\x01\x9c@\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x07\x00\x00\x00spikes\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00spikey_spikes\x00\x04\x08\x00\x00\x00spikes1\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00>@\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x03\x00\x00\x00\x00\x00\x00\xe0?\x03\x9a\x99\x99\x99\x99\x99\xe9?\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x005\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x004\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x004\x00\x00\x00\x00\x00\x00\x00',
+                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00l\x01\x00\x00local self, target = ...;\r\n\r\nProgram.Wait(0.1);\r\n\r\nspikes = Scene.CreateObject("spikey_spikes","spikes1");\r\n\r\nTransformController.ScaleTo(spikes,0.1,0);\r\nspikes:setPosition(self:position()+Vector3.New(0,30,0));\r\nTransformController.ScaleTo(spikes,1,0.1);\r\nProgram.Wait(0.3);\r\nTransformController.ScaleTo(spikes,0.1,0.5);\r\n\r\nProgram.Wait(0.8);\r\nspikes:destroy();\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t5\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00\x9c\x80\x80\x01\x87\xc0\x00\x00\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x02\x00\x9c@\x00\x02\x85\xc0\x00\x00\x8b\xc0B\x01\x0b\x01C\x00\x1c\x81\x00\x01EA\x03\x00F\x81\xc3\x02\x81\x81\x02\x00\xc1\xc1\x03\x00\x01\x82\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x01\x04\x00A\x81\x00\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1@\x04\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85\xc0\x00\x00\x8b\x00E\x01\x9c@\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x07\x00\x00\x00spikes\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00spikey_spikes\x00\x04\x08\x00\x00\x00spikes1\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00>@\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x03\x00\x00\x00\x00\x00\x00\xe0?\x03\x9a\x99\x99\x99\x99\x99\xe9?\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x005\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x004\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x004\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u9 : 0.0,
-                u10 : 0.0,
+                u9:0.0
+                u10:0.0
             }
         }
         component{
-            type : 'CollisionShape',
-            number : 109,
+            component_type:'CollisionShape'
+            number:109
             collision_shape{
                 box_shape{
-                    left : -18.0,
-                    bottom : 4.0,
-                    right : 36.0,
-                    top : 38.0,
+                    left:-18.0
+                    bottom:4.0
+                    right:36.0
+                    top:38.0
                 }
             }
             collision_shape_2{
-                u1 : 1,
-                u2 : 1,
-                u3 : 1,
-                w : -15.0,
-                x : 15.0,
-                z : 1,
+                u1:1
+                u2:1
+                u3:1
+                w:-15.0
+                x:15.0
+                z:1
             }
         }
         component{
-            type : 'CollisionShape',
-            number : 111,
+            component_type:'CollisionShape'
+            number:111
             collision_shape{
                 box_shape{
-                    left : -50.0,
-                    bottom : -20.0,
-                    right : 100.0,
-                    top : 90.0,
+                    left:-50.0
+                    bottom:-20.0
+                    right:100.0
+                    top:90.0
                 }
             }
             collision_shape_2{
-                w : -15.0,
-                x : 15.0,
-                z : 1,
+                w:-15.0
+                x:15.0
+                z:1
             }
         }
         component{
-            type : 'UtilityShape',
-            number : 113,
+            component_type:'UtilityShape'
+            number:113
             collision_shape{
                 box_shape{
-                    left : -300.0,
-                    bottom : -50.0,
-                    right : 600.0,
-                    top : 150.0,
+                    left:-300.0
+                    bottom:-50.0
+                    right:600.0
+                    top:150.0
                 }
             }
         }
         component{
-            type : 'Damage',
-            number : 118,
+            component_type:'Damage'
+            number:118
             damage{
-                damage : 2,
-                u1 : 0,
-                u2 : 0,
-                u5 : 1.0,
-                u6 : 0.0,
-                u7 : 0,
-                u8 : 1,
+                damage:2
+                u1:0
+                u2:0
+                u5:1.0
+                u6:0.0
+                u7:0
+                u8:1
             }
         }
         component{
-            type : 'Health',
-            number : 119,
+            component_type:'Health'
+            number:119
             health{
-                health_multiplier : 2,
-                u1 : 0,
+                health_multiplier:2
+                u1:0
                 u2{
-                    x : 0.0,
-                    y : 50.0,
+                    x:0.0
+                    y:50.0
                 }
             }
         }
         component{
-            type : 'SoundEffect',
-            number : 120,
+            component_type:'SoundEffect'
+            number:120
             sound_effect{
-                sound : 'spikes1',
-                u0 : 0.20000000298023224,
-                u1 : 1.0,
+                sound:'spikes1'
+                u0:0.20000000298023224
+                u1:1.0
             }
         }
         position{
-            x : 0.0,
-            y : 0.0,
+            x_position:0.0
+            y_position:0.0
         }
-        z : 0.0,
-        rotation : 0.0,
-        scale : 1.0,
-        shape{
-            left : -50.0,
-            bottom : -20.0,
-            right : 100.0,
-            top : 90.0,
+        z_position:0.0
+        rotation:0.0
+        scale:1.0
+        u0{
+            w:-50.0
+            x:-20.0
+            y:100.0
+            z:90.0
         }
-        hidden : 0,
+        hidden:0
     }
-    u0 : 1.0,
+    u0:1.0
 }
