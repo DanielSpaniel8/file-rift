@@ -1,303 +1,302 @@
-# rifted with FR v5.5.0
+# rifted with FR v5.7.0
 
-scl_file_name:'florennum_stuff'
+scl_file_name : 'florennum_stuff'
 library_item{
     object{
-        name:'florennum_house1'
+        name : 'florennum_house1'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'florennum_house'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'florennum_house'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_house2'
+        name : 'florennum_house2'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'florennum_house2'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'florennum_house2'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_house3'
+        name : 'florennum_house3'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'florennum_house3'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'florennum_house3'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_housedoor'
+        name : 'florennum_housedoor'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'house_door'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'house_door'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_housedoor_open'
+        name : 'florennum_housedoor_open'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'house_door_open'
-                u0:0.0
-                u1:0.0
-                u2:0.0
+                name : 'house_door_open'
+                u0 : 0.0
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_lock'
+        name : 'florennum_lock'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'lock_yellow'
-                u0:1.5707963705062866
-                u1:0.5
-                u2:0.0
+                name : 'lock_yellow'
+                u0 : 1.5707963705062866
+                u1 : 0.5
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         component{
-            component_type:'CollisionShape'
-            number:103
+            type : 'CollisionShape'
+            number : 103
             collision_shape{
                 box_shape{
-                    left:-70.0
-                    bottom:-40.0
-                    right:140.0
-                    top:80.0
+                    left : -70.0
+                    bottom : -40.0
+                    right : 140.0
+                    top : 80.0
                 }
             }
             collision_shape_2{
-                w:-15.0
-                x:15.0
-                interaction_type:4
-                z:1
+                w : -15.0
+                x : 15.0
+                interaction_type : 4
+                z : 1
             }
         }
         component{
-            component_type:'Program'
-            number:105
+            type : 'Program'
+            number : 105
             program{
-                u0:1
+                u0 : 1
                 lua{
-                    main_chunk :
-$
+                    main : $
 local self = ...;
 
 if Character.HasItem("key_yellow") then
@@ -311,310 +310,305 @@ if Character.HasItem("key_yellow") then
 else
     Game.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));
 end
-
 $end
-                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\x08\x00\x00\x00AddFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
+                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\x08\x00\x00\x00AddFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1:1
-                u2:2
+                u1 : 1
+                event : 2
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-70.0
-            x:-40.0
-            y:140.0
-            z:80.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : -70.0
+            bottom : -40.0
+            right : 140.0
+            top : 80.0
         }
-        hidden:0
+        hidden : 0
         lua{
-            main_chunk :
-$
+            main : $
 local self = ...;
 
 if Character.HasFlag(self:identifier()) then
     self:setHidden(true);
     Program.Execute(Scene.Find(self:identifier() .. "_door"));
 end
-
 $end
-            secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9c\x00\x00\x00local self = ...;\r\n\r\nif Character.HasFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
+            secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9c\x00\x00\x00local self = ...;\r\n\r\nif Character.HasFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
         }
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_lockdoor'
+        name : 'florennum_lockdoor'
         component{
-            component_type:'SoundEffect'
-            number:1
+            type : 'SoundEffect'
+            number : 1
             sound_effect{
-                sound:'door_close'
-                u0:0.0
-                u1:1.0
+                sound : 'door_close'
+                u0 : 0.0
+                u1 : 1.0
             }
         }
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'castle_lockdoor'
-                u0:4.71238899230957
-                u1:0.0
-                u2:0.0
+                name : 'castle_lockdoor'
+                u0 : 4.71238899230957
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         component{
-            component_type:'DoorController'
-            number:103
+            type : 'DoorController'
+            number : 103
             door_controller{
-                u0:104
-                u1:105
-                u2:0
-                u3:1
-                u4:0
+                u0 : 104
+                u1 : 105
+                u2 : 0
+                u3 : 1
+                u4 : 0
             }
         }
         component{
-            component_type:'AnimationController'
-            number:104
+            type : 'AnimationController'
+            number : 104
             animation_controller{
-                model_component:101
-                u1:0
-                u2:0
+                model_component : 101
+                u1 : 0
+                u2 : 0
             }
         }
         component{
-            component_type:'KeyframeAnimation'
-            number:105
+            type : 'KeyframeAnimation'
+            number : 105
             keyframe_animation{
-                linked_model_component_number:101
-                name:'castle_lockdoor'
-                u0:0
-                u1:0.20000000298023224
-                u2:1
+                linked_model_component_number : 101
+                name : 'castle_lockdoor'
+                u0 : 0
+                u1 : 0.20000000298023224
+                u2 : 1
             }
         }
         component{
-            component_type:'CollisionShape'
-            number:106
+            type : 'CollisionShape'
+            number : 106
             collision_shape{
                 box_shape{
-                    left:-15.0
-                    bottom:0.0
-                    right:25.0
-                    top:246.53073120117188
+                    left : -15.0
+                    bottom : 0.0
+                    right : 25.0
+                    top : 246.53073120117188
                 }
             }
             collision_shape_2{
-                u0:1
-                w:-15.0
-                x:15.0
-                z:1
+                u0 : 1
+                w : -15.0
+                x : 15.0
+                z : 1
             }
         }
         component{
-            component_type:'Program'
-            number:109
+            type : 'Program'
+            number : 109
             program{
-                u0:1
+                u0 : 1
                 lua{
-                    main_chunk :
-$
+                    main : $
 local self = ...;
 
 DoorController.Open(self);
-
 $end
-                    secondary_chunk:'\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1:1
-                u2:0
+                u1 : 1
+                event : 0
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:-15.0
-            x:0.0
-            y:25.0
-            z:246.53073120117188
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : -15.0
+            bottom : 0.0
+            right : 25.0
+            top : 246.53073120117188
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
 library_item{
     object{
-        name:'florennum_tower'
+        name : 'florennum_tower'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'tower_nodoor'
-                u0:0.0
-                u1:0.5
-                u2:0.0
+                name : 'tower_nodoor'
+                u0 : 0.0
+                u1 : 0.5
+                u2 : 0.0
                 u3{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:2.0
+    u0 : 2.0
 }
 library_item{
     object{
-        name:'golden_knight'
+        name : 'golden_knight'
         component{
-            component_type:'Model'
-            number:101
+            type : 'Model'
+            number : 101
             3D_model{
-                name:'knight'
-                u0:3.752457857131958
-                u1:0.0
-                u2:0.0
+                name : 'knight'
+                u0 : 3.752457857131958
+                u1 : 0.0
+                u2 : 0.0
                 u3{
-                    w:0.0
-                    x:0.0
-                    y:0.0
-                    z:1.0
+                    w : 0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 1.0
                 }
                 u4{
-                    x:0.0
-                    y:0.0
-                    z:0.0
+                    x : 0.0
+                    y : 0.0
+                    z : 0.0
                 }
-                u5:0
+                u5 : 0
                 u6{
-                    w:1.0
-                    x:1.0
-                    y:1.0
-                    z:1.0
+                    w : 1.0
+                    x : 1.0
+                    y : 1.0
+                    z : 1.0
                 }
             }
         }
         component{
-            component_type:'StaticMonsterController'
-            number:103
+            type : 'StaticMonsterController'
+            number : 103
             monster_controller{
-                u0:100.0
-                u1:106
-                u2:104
-                u3:0
+                u0 : 100.0
+                u1 : 106
+                u2 : 104
+                u3 : 0
             }
             static_monster_controller{
-                u0:105
+                u0 : 105
             }
         }
         component{
-            component_type:'MonsterEntity'
-            number:104
+            type : 'MonsterEntity'
+            number : 104
             entity{
-                u0:18446744073709551615
-                u1:0
+                u0 : 18446744073709551615
+                u1 : 0
             }
             ?monster_entity{
                 lua{
                 }
-                u0:''
-                u2:1
-                u3:1
+                u0 : ''
+                u2 : 1
+                u3 : 1
             }
         }
         component{
-            component_type:'KeyframeAnimation'
-            number:105
+            type : 'KeyframeAnimation'
+            number : 105
             keyframe_animation{
-                linked_model_component_number:101
-                name:'npc_stand'
-                u0:1
-                u1:1.0
-                u2:1
+                linked_model_component_number : 101
+                name : 'npc_stand'
+                u0 : 1
+                u1 : 1.0
+                u2 : 1
             }
         }
         component{
-            component_type:'AnimationController'
-            number:106
+            type : 'AnimationController'
+            number : 106
             animation_controller{
-                model_component:101
-                u1:0
-                u2:0
+                model_component : 101
+                u1 : 0
+                u2 : 0
             }
         }
         position{
-            x_position:0.0
-            y_position:0.0
+            x_position : 0.0
+            y_position : 0.0
         }
-        z_position:0.0
-        rotation:0.0
-        scale:1.0
-        u0{
-            w:0.0
-            x:0.0
-            y:0.0
-            z:0.0
+        z_position : 0.0
+        rotation : 0.0
+        scale : 1.0
+        shape{
+            left : 0.0
+            bottom : 0.0
+            right : 0.0
+            top : 0.0
         }
-        hidden:0
+        hidden : 0
     }
-    u0:1.0
+    u0 : 1.0
 }
