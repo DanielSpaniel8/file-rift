@@ -1,201 +1,201 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'forest'
-library_item{
-    object{
-        name : 'forest_light'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 2.0
-                u2{
-                    w : 0.8518518805503845
-                    x : 0.6938270330429077
-                    y : 0.614814817905426
-                    z : 1.0
+Name : 'forest'
+Template{
+    Object{
+        Identifier : 'forest_light'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 2.0
+                Color{
+                    R : 0.8518518805503845
+                    G : 0.6938270330429077
+                    B : 0.614814817905426
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 250.0
+                Radius : 250.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'forest_spirit'
-        component{
-            type : 'Light'
-            number : 1
-            light{
-                u0 : 3
-                u1 : 2.0
-                u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'forest_spirit'
+        Component{
+            ClassName : 'Light'
+            Identifier : 1
+            LightComponent{
+                Type : 3
+                Intensity : 2.0
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 150.0
+                Radius : 150.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 120
-            particle_emitter{
-                particle : 123
-                u1 : 0
-                u2 : 100
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 3
-                    colour{
-                        red : 0.12839508056640625
-                        green : 0.22716054320335388
-                        blue : 0.22716057300567627
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 120
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ModelBindingId : 0
+                MaxParticles : 100
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 3
+                    BaseColor{
+                        R : 0.12839508056640625
+                        G : 0.22716054320335388
+                        B : 0.22716057300567627
+                        A : 0.0
                     }
-                    u2 : 0.00800000037997961
-                    u2 : 0.20000000298023224
-                    u2 : 0.800000011920929
-                    u2 : 8.0
-                    u2 : 0.30000001192092896
-                    u2 : 0.0
-                    u2 : 1.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
-                    }
-                }
-                u6 : 0
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 123
-            particle{
-                name : 'particle'
-                u0 : 15.0
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 127
-            simple_glow{
-                colour{
-                    red : 0.6308642029762268
-                    green : 0.7913580536842346
-                    blue : 0.780658483505249
-                    brightness : 0.5
-                }
-                radius : 15.0
-                u2 : 20
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
-                }
-            }
-        }
-        component{
-            type : 'ParticleEmitter'
-            number : 129
-            particle_emitter{
-                particle : 123
-                u1 : 0
-                u2 : 30
-                u3 : 120
-                u4 : 0
-                u5{
-                    u0 : 3
-                    colour{
-                        red : 0.5333333611488342
-                        green : 0.5333333611488342
-                        blue : 0.5333333611488342
-                        brightness : 0.0
-                    }
-                    u2 : 0.009999999776482582
-                    u2 : 0.20000000298023224
-                    u2 : 0.20000000298023224
-                    u2 : 6.0
-                    u2 : 0.30000001192092896
-                    u2 : 0.0
-                    u2 : 1.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 0.00800000037997961
+                    Parameter : 0.20000000298023224
+                    Parameter : 0.800000011920929
+                    Parameter : 8.0
+                    Parameter : 0.30000001192092896
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'OrbitController'
-            number : 131
-            orbit_controller{
-                u0{
-                    x : 0.38283267617225647
-                    y : 0.9218900203704834
-                    z : 0.059648867696523666
+        Component{
+            ClassName : 'Particle'
+            Identifier : 123
+            ParticleComponent{
+                TextureName : 'particle'
+                Size : 15.0
+            }
+        }
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 127
+            SimpleGlowComponent{
+                Color{
+                    R : 0.6308642029762268
+                    G : 0.7913580536842346
+                    B : 0.780658483505249
+                    A : 0.5
                 }
-                speed : 6.2831854820251465
-                radius : 40.0
+                Size : 15.0
+                NumSegments : 20
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 129
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 120
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 3
+                    BaseColor{
+                        R : 0.5333333611488342
+                        G : 0.5333333611488342
+                        B : 0.5333333611488342
+                        A : 0.0
+                    }
+                    Parameter : 0.009999999776482582
+                    Parameter : 0.20000000298023224
+                    Parameter : 0.20000000298023224
+                    Parameter : 6.0
+                    Parameter : 0.30000001192092896
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
+                    }
+                }
+                LocalSystem : 0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : -15.0
-            right : 30.0
-            top : 30.0
+        Component{
+            ClassName : 'OrbitController'
+            Identifier : 131
+            OrbitControllerComponent{
+                RotationAxis{
+                    X : 0.38283267617225647
+                    Y : 0.9218900203704834
+                    Z : 0.059648867696523666
+                }
+                RotationSpeed : 6.2831854820251465
+                OrbitDistance : 40.0
+            }
         }
-        hidden : 0
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : -15.0
+            Width : 30.0
+            Height : 30.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

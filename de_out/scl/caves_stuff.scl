@@ -1,51 +1,51 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'caves_stuff'
-library_item{
-    object{
-        name : 'board'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'board'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Name : 'caves_stuff'
+Template{
+    Object{
+        Identifier : 'board'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'board'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

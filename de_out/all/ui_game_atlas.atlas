@@ -1,1165 +1,1165 @@
 # rifted with FR v5.7.0
 
-atlas_file : 'ui_game_atlas',
-u0 : 0,
-mapping{
-    icon : 'ui_controls_button',
-    size{
-        w : 59.0,
-        x : 380.0,
-        y : 28.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_button_pressed',
-    size{
-        w : 30.0,
-        x : 380.0,
-        y : 28.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_jump',
-    size{
-        w : 291.0,
-        x : 261.0,
-        y : 41.0,
-        z : 40.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_left',
-    size{
-        w : 450.0,
-        x : 405.0,
-        y : 48.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_right',
-    size{
-        w : 401.0,
-        x : 407.0,
-        y : 48.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_swing',
-    size{
-        w : 171.0,
-        x : 380.0,
-        y : 52.0,
-        z : 31.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_controls_handle',
-    size{
-        w : 328.0,
-        x : 339.0,
-        y : 37.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_heartempty',
-    size{
-        w : 374.0,
-        x : 407.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_hearthalf',
-    size{
-        w : 347.0,
-        x : 407.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_heartfull',
-    size{
-        w : 320.0,
-        x : 413.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_manabar',
-    size{
-        w : 375.0,
-        x : 466.0,
-        y : 77.0,
-        z : 10.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_manabar_background',
-    size{
-        w : 297.0,
-        x : 466.0,
-        y : 77.0,
-        z : 10.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_xp_frame',
-    size{
-        w : 235.0,
-        x : 440.0,
-        y : 39.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_xp_bar',
-    size{
-        w : 24.0,
-        x : 440.0,
-        y : 210.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_pausebutton',
-    size{
-        w : 128.0,
-        x : 309.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_toggle_button',
-    size{
-        w : 0.0,
-        x : 409.0,
-        y : 50.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_toggle_button_pressed',
-    size{
-        w : 51.0,
-        x : 409.0,
-        y : 50.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_marker_hero',
-    size{
-        w : 163.0,
-        x : 309.0,
-        y : 26.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_marker_selected',
-    size{
-        w : 406.0,
-        x : 0.0,
-        y : 57.0,
-        z : 57.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_node',
-    size{
-        w : 183.0,
-        x : 106.0,
-        y : 57.0,
-        z : 57.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_path',
-    size{
-        w : 497.0,
-        x : 261.0,
-        y : 8.0,
-        z : 8.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_town',
-    size{
-        w : 67.0,
-        x : 106.0,
-        y : 57.0,
-        z : 57.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_boss',
-    size{
-        w : 125.0,
-        x : 106.0,
-        y : 57.0,
-        z : 57.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_locked',
-    size{
-        w : 296.0,
-        x : 380.0,
-        y : 27.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_checkmark',
-    size{
-        w : 115.0,
-        x : 380.0,
-        y : 28.0,
-        z : 30.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_quest',
-    size{
-        w : 324.0,
-        x : 380.0,
-        y : 22.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_treasure',
-    size{
-        w : 223.0,
-        x : 466.0,
-        y : 18.0,
-        z : 18.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_portal',
-    size{
-        w : 242.0,
-        x : 466.0,
-        y : 18.0,
-        z : 18.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_icon_portal_big',
-    size{
-        w : 261.0,
-        x : 466.0,
-        y : 18.0,
-        z : 18.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_bolt',
-    size{
-        w : 456.0,
-        x : 261.0,
-        y : 40.0,
-        z : 40.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_bomb',
-    size{
-        w : 374.0,
-        x : 261.0,
-        y : 40.0,
-        z : 40.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_hookshot',
-    size{
-        w : 415.0,
-        x : 261.0,
-        y : 40.0,
-        z : 40.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_dimension',
-    size{
-        w : 333.0,
-        x : 261.0,
-        y : 40.0,
-        z : 40.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_bolt_icon',
-    size{
-        w : 371.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_bomb_icon',
-    size{
-        w : 324.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_hookshot_icon',
-    size{
-        w : 331.0,
-        x : 167.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_skill_dimension_icon',
-    size{
-        w : 183.0,
-        x : 215.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_close',
-    size{
-        w : 1.0,
-        x : 208.0,
-        y : 40.0,
-        z : 42.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_char',
-    size{
-        w : 429.0,
-        x : 302.0,
-        y : 46.0,
-        z : 36.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_map',
-    size{
-        w : 257.0,
-        x : 380.0,
-        y : 38.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_quests',
-    size{
-        w : 382.0,
-        x : 302.0,
-        y : 46.0,
-        z : 36.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_settings',
-    size{
-        w : 89.0,
-        x : 309.0,
-        y : 38.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_inventory',
-    size{
-        w : 476.0,
-        x : 302.0,
-        y : 35.0,
-        z : 36.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_frame',
-    size{
-        w : 25.0,
-        x : 466.0,
-        y : 59.0,
-        z : 24.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_glow',
-    size{
-        w : 472.0,
-        x : 167.0,
-        y : 39.0,
-        z : 39.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab',
-    size{
-        w : 47.0,
-        x : 262.0,
-        y : 55.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_tab_selected',
-    size{
-        w : 204.0,
-        x : 167.0,
-        y : 79.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_inventory_coin',
-    size{
-        w : 0.0,
-        x : 466.0,
-        y : 24.0,
-        z : 24.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_inventory_panel',
-    size{
-        w : 0.0,
-        x : 345.0,
-        y : 327.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_inventory_trinket_slot_icon',
-    size{
-        w : 293.0,
-        x : 413.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_notification_background',
-    size{
-        w : 241.0,
-        x : 106.0,
-        y : 270.0,
-        z : 60.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'overlayitem_healingpotion',
-    size{
-        w : 144.0,
-        x : 380.0,
-        y : 26.0,
-        z : 30.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'overlayitem_key_yellow',
-    size{
-        w : 0.0,
-        x : 309.0,
-        y : 18.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_frame_dark',
-    size{
-        w : 275.0,
-        x : 440.0,
-        y : 25.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_iselon_slot',
-    size{
-        w : 203.0,
-        x : 0.0,
-        y : 202.0,
-        z : 105.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_iselon_completed',
-    size{
-        w : 0.0,
-        x : 0.0,
-        y : 202.0,
-        z : 105.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_health',
-    size{
-        w : 85.0,
-        x : 466.0,
-        y : 22.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_health_glow',
-    size{
-        w : 225.0,
-        x : 309.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_attack',
-    size{
-        w : 108.0,
-        x : 466.0,
-        y : 23.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_attack_glow',
-    size{
-        w : 366.0,
-        x : 339.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_magic',
-    size{
-        w : 2.0,
-        x : 438.0,
-        y : 21.0,
-        z : 23.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_attrib_magic_glow',
-    size{
-        w : 190.0,
-        x : 309.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_iselon_shard_1',
-    size{
-        w : 197.0,
-        x : 262.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_iselon_shard_2',
-    size{
-        w : 150.0,
-        x : 262.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_iselon_shard_3',
-    size{
-        w : 103.0,
-        x : 262.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_iselon_shard_4',
-    size{
-        w : 42.0,
-        x : 215.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_brasssword',
-    size{
-        w : 244.0,
-        x : 261.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_ironsword',
-    size{
-        w : 89.0,
-        x : 215.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_needle',
-    size{
-        w : 136.0,
-        x : 215.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_broadsword',
-    size{
-        w : 277.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_thorn',
-    size{
-        w : 418.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_magicsword',
-    size{
-        w : 465.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_legendsword',
-    size{
-        w : 0.0,
-        x : 262.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_platearmor',
-    size{
-        w : 425.0,
-        x : 167.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_magicarmor',
-    size{
-        w : 230.0,
-        x : 214.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_firetrinket',
-    size{
-        w : 378.0,
-        x : 167.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_icetrinket',
-    size{
-        w : 464.0,
-        x : 0.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_shadowtrinket',
-    size{
-        w : 284.0,
-        x : 167.0,
-        y : 46.0,
-        z : 46.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_firetrinket_nobg',
-    size{
-        w : 0.0,
-        x : 157.0,
-        y : 50.0,
-        z : 50.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_icetrinket_nobg',
-    size{
-        w : 16.0,
-        x : 106.0,
-        y : 50.0,
-        z : 50.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'item_shadowtrinket_nobg',
-    size{
-        w : 153.0,
-        x : 164.0,
-        y : 50.0,
-        z : 50.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'textbubble_border',
-    size{
-        w : 131.0,
-        x : 411.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'textbubble_peg',
-    size{
-        w : 280.0,
-        x : 466.0,
-        y : 16.0,
-        z : 18.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'textbubble_indicator',
-    size{
-        w : 499.0,
-        x : 405.0,
-        y : 12.0,
-        z : 5.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_frame',
-    size{
-        w : 185.0,
-        x : 412.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button',
-    size{
-        w : 212.0,
-        x : 413.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_light',
-    size{
-        w : 239.0,
-        x : 413.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_plus',
-    size{
-        w : 158.0,
-        x : 412.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_minus',
-    size{
-        w : 266.0,
-        x : 413.0,
-        y : 26.0,
-        z : 26.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_sound',
-    size{
-        w : 401.0,
-        x : 339.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_sound_off',
-    size{
-        w : 434.0,
-        x : 339.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_music',
-    size{
-        w : 467.0,
-        x : 339.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_music_off',
-    size{
-        w : 479.0,
-        x : 372.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_sound_blue',
-    size{
-        w : 446.0,
-        x : 372.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_sound_off_blue',
-    size{
-        w : 224.0,
-        x : 380.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_music_blue',
-    size{
-        w : 413.0,
-        x : 372.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_music_off_blue',
-    size{
-        w : 380.0,
-        x : 374.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_help',
-    size{
-        w : 347.0,
-        x : 374.0,
-        y : 32.0,
-        z : 32.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_close',
-    size{
-        w : 3.0,
-        x : 380.0,
-        y : 26.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_close_pressed',
-    size{
-        w : 88.0,
-        x : 380.0,
-        y : 26.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_arrow',
-    size{
-        w : 260.0,
-        x : 308.0,
-        y : 60.0,
-        z : 36.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_button_arrow_pressed',
-    size{
-        w : 321.0,
-        x : 302.0,
-        y : 60.0,
-        z : 36.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_health_bar',
-    size{
-        w : 301.0,
-        x : 440.0,
-        y : 210.0,
-        z : 25.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_slider_frame',
-    size{
-        w : 453.0,
-        x : 466.0,
-        y : 20.0,
-        z : 10.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_slider_bar',
-    size{
-        w : 231.0,
-        x : 485.0,
-        y : 280.0,
-        z : 10.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_slider_peg',
-    size{
-        w : 19.0,
-        x : 309.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_guide_arrow',
-    size{
-        w : 102.0,
-        x : 164.0,
-        y : 50.0,
-        z : 50.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_edge',
-    size{
-        w : 500.0,
-        x : 339.0,
-        y : 6.0,
-        z : 6.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_end',
-    size{
-        w : 51.0,
-        x : 164.0,
-        y : 50.0,
-        z : 50.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_end_noarrow',
-    size{
-        w : 54.0,
-        x : 309.0,
-        y : 34.0,
-        z : 34.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_icon_key',
-    size{
-        w : 132.0,
-        x : 466.0,
-        y : 22.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_icon_quest',
-    size{
-        w : 155.0,
-        x : 466.0,
-        y : 22.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_icon_spell',
-    size{
-        w : 178.0,
-        x : 466.0,
-        y : 22.0,
-        z : 22.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_node',
-    size{
-        w : 5.0,
-        x : 106.0,
-        y : 10.0,
-        z : 10.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'ui_map_guide_start',
-    size{
-        w : 102.0,
-        x : 411.0,
-        y : 28.0,
-        z : 28.0,
-    }
-    u0 : 1.0,
-}
-mapping{
-    icon : 'countbadge',
-    size{
-        w : 201.0,
-        x : 466.0,
-        y : 21.0,
-        z : 21.0,
-    }
-    u0 : 1.0,
-}
-u1 : 0,
+Name : 'ui_game_atlas'
+PixelFormat : 0
+Subtexture{
+    Name : 'ui_controls_button'
+    Bounds{
+        X : 59.0
+        Y : 380.0
+        Width : 28.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_button_pressed'
+    Bounds{
+        X : 30.0
+        Y : 380.0
+        Width : 28.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_jump'
+    Bounds{
+        X : 291.0
+        Y : 261.0
+        Width : 41.0
+        Height : 40.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_left'
+    Bounds{
+        X : 450.0
+        Y : 405.0
+        Width : 48.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_right'
+    Bounds{
+        X : 401.0
+        Y : 407.0
+        Width : 48.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_swing'
+    Bounds{
+        X : 171.0
+        Y : 380.0
+        Width : 52.0
+        Height : 31.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_controls_handle'
+    Bounds{
+        X : 328.0
+        Y : 339.0
+        Width : 37.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_heartempty'
+    Bounds{
+        X : 374.0
+        Y : 407.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_hearthalf'
+    Bounds{
+        X : 347.0
+        Y : 407.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_heartfull'
+    Bounds{
+        X : 320.0
+        Y : 413.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_manabar'
+    Bounds{
+        X : 375.0
+        Y : 466.0
+        Width : 77.0
+        Height : 10.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_manabar_background'
+    Bounds{
+        X : 297.0
+        Y : 466.0
+        Width : 77.0
+        Height : 10.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_xp_frame'
+    Bounds{
+        X : 235.0
+        Y : 440.0
+        Width : 39.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_xp_bar'
+    Bounds{
+        X : 24.0
+        Y : 440.0
+        Width : 210.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_pausebutton'
+    Bounds{
+        X : 128.0
+        Y : 309.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_toggle_button'
+    Bounds{
+        X : 0.0
+        Y : 409.0
+        Width : 50.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_toggle_button_pressed'
+    Bounds{
+        X : 51.0
+        Y : 409.0
+        Width : 50.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_marker_hero'
+    Bounds{
+        X : 163.0
+        Y : 309.0
+        Width : 26.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_marker_selected'
+    Bounds{
+        X : 406.0
+        Y : 0.0
+        Width : 57.0
+        Height : 57.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_node'
+    Bounds{
+        X : 183.0
+        Y : 106.0
+        Width : 57.0
+        Height : 57.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_path'
+    Bounds{
+        X : 497.0
+        Y : 261.0
+        Width : 8.0
+        Height : 8.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_town'
+    Bounds{
+        X : 67.0
+        Y : 106.0
+        Width : 57.0
+        Height : 57.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_boss'
+    Bounds{
+        X : 125.0
+        Y : 106.0
+        Width : 57.0
+        Height : 57.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_locked'
+    Bounds{
+        X : 296.0
+        Y : 380.0
+        Width : 27.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_checkmark'
+    Bounds{
+        X : 115.0
+        Y : 380.0
+        Width : 28.0
+        Height : 30.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_quest'
+    Bounds{
+        X : 324.0
+        Y : 380.0
+        Width : 22.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_treasure'
+    Bounds{
+        X : 223.0
+        Y : 466.0
+        Width : 18.0
+        Height : 18.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_portal'
+    Bounds{
+        X : 242.0
+        Y : 466.0
+        Width : 18.0
+        Height : 18.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_icon_portal_big'
+    Bounds{
+        X : 261.0
+        Y : 466.0
+        Width : 18.0
+        Height : 18.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_bolt'
+    Bounds{
+        X : 456.0
+        Y : 261.0
+        Width : 40.0
+        Height : 40.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_bomb'
+    Bounds{
+        X : 374.0
+        Y : 261.0
+        Width : 40.0
+        Height : 40.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_hookshot'
+    Bounds{
+        X : 415.0
+        Y : 261.0
+        Width : 40.0
+        Height : 40.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_dimension'
+    Bounds{
+        X : 333.0
+        Y : 261.0
+        Width : 40.0
+        Height : 40.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_bolt_icon'
+    Bounds{
+        X : 371.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_bomb_icon'
+    Bounds{
+        X : 324.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_hookshot_icon'
+    Bounds{
+        X : 331.0
+        Y : 167.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_skill_dimension_icon'
+    Bounds{
+        X : 183.0
+        Y : 215.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_close'
+    Bounds{
+        X : 1.0
+        Y : 208.0
+        Width : 40.0
+        Height : 42.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_char'
+    Bounds{
+        X : 429.0
+        Y : 302.0
+        Width : 46.0
+        Height : 36.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_map'
+    Bounds{
+        X : 257.0
+        Y : 380.0
+        Width : 38.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_quests'
+    Bounds{
+        X : 382.0
+        Y : 302.0
+        Width : 46.0
+        Height : 36.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_settings'
+    Bounds{
+        X : 89.0
+        Y : 309.0
+        Width : 38.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_inventory'
+    Bounds{
+        X : 476.0
+        Y : 302.0
+        Width : 35.0
+        Height : 36.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_frame'
+    Bounds{
+        X : 25.0
+        Y : 466.0
+        Width : 59.0
+        Height : 24.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_glow'
+    Bounds{
+        X : 472.0
+        Y : 167.0
+        Width : 39.0
+        Height : 39.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab'
+    Bounds{
+        X : 47.0
+        Y : 262.0
+        Width : 55.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_tab_selected'
+    Bounds{
+        X : 204.0
+        Y : 167.0
+        Width : 79.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_inventory_coin'
+    Bounds{
+        X : 0.0
+        Y : 466.0
+        Width : 24.0
+        Height : 24.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_inventory_panel'
+    Bounds{
+        X : 0.0
+        Y : 345.0
+        Width : 327.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_inventory_trinket_slot_icon'
+    Bounds{
+        X : 293.0
+        Y : 413.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_notification_background'
+    Bounds{
+        X : 241.0
+        Y : 106.0
+        Width : 270.0
+        Height : 60.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'overlayitem_healingpotion'
+    Bounds{
+        X : 144.0
+        Y : 380.0
+        Width : 26.0
+        Height : 30.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'overlayitem_key_yellow'
+    Bounds{
+        X : 0.0
+        Y : 309.0
+        Width : 18.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_frame_dark'
+    Bounds{
+        X : 275.0
+        Y : 440.0
+        Width : 25.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_iselon_slot'
+    Bounds{
+        X : 203.0
+        Y : 0.0
+        Width : 202.0
+        Height : 105.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_iselon_completed'
+    Bounds{
+        X : 0.0
+        Y : 0.0
+        Width : 202.0
+        Height : 105.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_health'
+    Bounds{
+        X : 85.0
+        Y : 466.0
+        Width : 22.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_health_glow'
+    Bounds{
+        X : 225.0
+        Y : 309.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_attack'
+    Bounds{
+        X : 108.0
+        Y : 466.0
+        Width : 23.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_attack_glow'
+    Bounds{
+        X : 366.0
+        Y : 339.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_magic'
+    Bounds{
+        X : 2.0
+        Y : 438.0
+        Width : 21.0
+        Height : 23.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_attrib_magic_glow'
+    Bounds{
+        X : 190.0
+        Y : 309.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_iselon_shard_1'
+    Bounds{
+        X : 197.0
+        Y : 262.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_iselon_shard_2'
+    Bounds{
+        X : 150.0
+        Y : 262.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_iselon_shard_3'
+    Bounds{
+        X : 103.0
+        Y : 262.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_iselon_shard_4'
+    Bounds{
+        X : 42.0
+        Y : 215.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_brasssword'
+    Bounds{
+        X : 244.0
+        Y : 261.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_ironsword'
+    Bounds{
+        X : 89.0
+        Y : 215.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_needle'
+    Bounds{
+        X : 136.0
+        Y : 215.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_broadsword'
+    Bounds{
+        X : 277.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_thorn'
+    Bounds{
+        X : 418.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_magicsword'
+    Bounds{
+        X : 465.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_legendsword'
+    Bounds{
+        X : 0.0
+        Y : 262.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_platearmor'
+    Bounds{
+        X : 425.0
+        Y : 167.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_magicarmor'
+    Bounds{
+        X : 230.0
+        Y : 214.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_firetrinket'
+    Bounds{
+        X : 378.0
+        Y : 167.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_icetrinket'
+    Bounds{
+        X : 464.0
+        Y : 0.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_shadowtrinket'
+    Bounds{
+        X : 284.0
+        Y : 167.0
+        Width : 46.0
+        Height : 46.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_firetrinket_nobg'
+    Bounds{
+        X : 0.0
+        Y : 157.0
+        Width : 50.0
+        Height : 50.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_icetrinket_nobg'
+    Bounds{
+        X : 16.0
+        Y : 106.0
+        Width : 50.0
+        Height : 50.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'item_shadowtrinket_nobg'
+    Bounds{
+        X : 153.0
+        Y : 164.0
+        Width : 50.0
+        Height : 50.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'textbubble_border'
+    Bounds{
+        X : 131.0
+        Y : 411.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'textbubble_peg'
+    Bounds{
+        X : 280.0
+        Y : 466.0
+        Width : 16.0
+        Height : 18.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'textbubble_indicator'
+    Bounds{
+        X : 499.0
+        Y : 405.0
+        Width : 12.0
+        Height : 5.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_frame'
+    Bounds{
+        X : 185.0
+        Y : 412.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button'
+    Bounds{
+        X : 212.0
+        Y : 413.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_light'
+    Bounds{
+        X : 239.0
+        Y : 413.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_plus'
+    Bounds{
+        X : 158.0
+        Y : 412.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_minus'
+    Bounds{
+        X : 266.0
+        Y : 413.0
+        Width : 26.0
+        Height : 26.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_sound'
+    Bounds{
+        X : 401.0
+        Y : 339.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_sound_off'
+    Bounds{
+        X : 434.0
+        Y : 339.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_music'
+    Bounds{
+        X : 467.0
+        Y : 339.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_music_off'
+    Bounds{
+        X : 479.0
+        Y : 372.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_sound_blue'
+    Bounds{
+        X : 446.0
+        Y : 372.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_sound_off_blue'
+    Bounds{
+        X : 224.0
+        Y : 380.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_music_blue'
+    Bounds{
+        X : 413.0
+        Y : 372.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_music_off_blue'
+    Bounds{
+        X : 380.0
+        Y : 374.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_help'
+    Bounds{
+        X : 347.0
+        Y : 374.0
+        Width : 32.0
+        Height : 32.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_close'
+    Bounds{
+        X : 3.0
+        Y : 380.0
+        Width : 26.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_close_pressed'
+    Bounds{
+        X : 88.0
+        Y : 380.0
+        Width : 26.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_arrow'
+    Bounds{
+        X : 260.0
+        Y : 308.0
+        Width : 60.0
+        Height : 36.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_button_arrow_pressed'
+    Bounds{
+        X : 321.0
+        Y : 302.0
+        Width : 60.0
+        Height : 36.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_health_bar'
+    Bounds{
+        X : 301.0
+        Y : 440.0
+        Width : 210.0
+        Height : 25.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_slider_frame'
+    Bounds{
+        X : 453.0
+        Y : 466.0
+        Width : 20.0
+        Height : 10.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_slider_bar'
+    Bounds{
+        X : 231.0
+        Y : 485.0
+        Width : 280.0
+        Height : 10.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_slider_peg'
+    Bounds{
+        X : 19.0
+        Y : 309.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_guide_arrow'
+    Bounds{
+        X : 102.0
+        Y : 164.0
+        Width : 50.0
+        Height : 50.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_edge'
+    Bounds{
+        X : 500.0
+        Y : 339.0
+        Width : 6.0
+        Height : 6.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_end'
+    Bounds{
+        X : 51.0
+        Y : 164.0
+        Width : 50.0
+        Height : 50.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_end_noarrow'
+    Bounds{
+        X : 54.0
+        Y : 309.0
+        Width : 34.0
+        Height : 34.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_icon_key'
+    Bounds{
+        X : 132.0
+        Y : 466.0
+        Width : 22.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_icon_quest'
+    Bounds{
+        X : 155.0
+        Y : 466.0
+        Width : 22.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_icon_spell'
+    Bounds{
+        X : 178.0
+        Y : 466.0
+        Width : 22.0
+        Height : 22.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_node'
+    Bounds{
+        X : 5.0
+        Y : 106.0
+        Width : 10.0
+        Height : 10.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'ui_map_guide_start'
+    Bounds{
+        X : 102.0
+        Y : 411.0
+        Width : 28.0
+        Height : 28.0
+    }
+    Resolution : 1.0
+}
+Subtexture{
+    Name : 'countbadge'
+    Bounds{
+        X : 201.0
+        Y : 466.0
+        Width : 21.0
+        Height : 21.0
+    }
+    Resolution : 1.0
+}
+ImageType : 0

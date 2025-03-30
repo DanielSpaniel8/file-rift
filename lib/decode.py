@@ -6,7 +6,7 @@ import config
 def decode(filepath: str) -> "str":
 
 
-    def varint() -> int:  # decode varints   note: the offset is automatically moved by the length of the varint
+    def varint() -> int:
 
         """decode a varint at the current offset in inbytes"""
 
@@ -27,13 +27,21 @@ def decode(filepath: str) -> "str":
         offsets[metalevel] += offset + 1
         return value
 
-    def i32() -> float:  # decode int32 -> string
+    def i32() -> float:
 
         """unpack a float32LE from the first four bytes of inbytes"""
 
         data = inbytes[sum(offsets) : sum(offsets) + 4]
         offsets[metalevel] +=4
         return struct.unpack("<f", data)[0]  # "<" for little endian, "f" for float. it returns a tuple, so we take the first item
+
+    def i64() -> float:
+
+        """unpack a float32LE from the first eight bytes of inbytes"""
+
+        data = inbytes[sum(offsets) : sum(offsets) + 8]
+        offsets[metalevel] +=8
+        return struct.unpack("<d", data)[0]  # "<" for little endian, "f" for float. it returns a tuple, so we take the first item
 
     def chunk() -> str:
 
@@ -48,7 +56,7 @@ def decode(filepath: str) -> "str":
 
     offsets = [0] * 10
     pointers = [0] * 10
-    formats = [{"name": "-"}] * 10
+    formats = [{"name":"-"}] * 10
 
     metalevel = 0 # this keeps track of the nesting level
 
@@ -81,27 +89,20 @@ def decode(filepath: str) -> "str":
         wiretype = ""
         match tagbyte % 8:
             case 0: wiretype = "varint"
+            case 1: wiretype = "i64"
             case 2: wiretype = "len"
             case 5: wiretype = "i32"
         
-        if not taghex in format:
+        tagname, tag_is_reference, tag_reference = util.match_tag(format, taghex)
+        if tagname == "No Match":
             print(
-                "tag not found: "
+                "no match for tag "
                 + taghex + "\n"
-                + filepath + " : "
-                + f"{sum(offsets)}({hex(sum(offsets))})\n"
-                + "pntrs: " + str(pointers)
-                + "meta: " + str(metalevel)
-                + util.skim_dict(format)
-                )
+                + util.prettify_dict(format)
+                + filepath + ":" + str(sum(offsets))
+                + "\n"
+            )
             return ""
-        if not "name" in format:
-            raise Exception("no name for block: "+str(sum(offsets)))
-
-        if isinstance(format[taghex], tuple):  # backwards compatibility
-            tagname = format[taghex][-1]
-        else:
-            tagname = format[taghex]
 
         if wiretype == "varint":
             content = str(varint())
@@ -112,11 +113,33 @@ def decode(filepath: str) -> "str":
                 + "\n"
             )
 
+        if wiretype == "i64":
+            content = str(i64())
+            out_lines.append(
+                indentation
+                + tagname + config.style_after_tag
+                + content + config.style_after_record
+                + "\n"
+            )
+
+
         if wiretype == "len":
             pointer = varint()
             pointers[metalevel] = pointer
 
-            if isinstance(tagname, str):  # plain str
+            if tag_is_reference:
+                out_lines.append(
+                    indentation
+                    + tagname
+                    + config.style_before_block + "{"
+                    + "\n"
+                )
+
+                metalevel += 1
+                formats[metalevel] = block_formats.block_formats[tag_reference]
+                indentation = config.style_indent * metalevel
+
+            else:
                 if tagname in block_formats.multiline_strs:
                     content = chunk()
                     out_lines.append(
@@ -135,18 +158,6 @@ def decode(filepath: str) -> "str":
                         + "\n"
                     )
                 offsets[metalevel] += pointer
-
-            if isinstance(tagname, dict):
-                out_lines.append(
-                    indentation
-                    + tagname["name"][-1]
-                    + config.style_before_block + "{"
-                    + "\n"
-                )
-
-                metalevel += 1
-                formats[metalevel] = tagname
-                indentation = config.style_indent * metalevel
 
         if wiretype == "i32":
             content = str(i32())

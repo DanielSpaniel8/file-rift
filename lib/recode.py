@@ -23,6 +23,8 @@ def lex(lines: str) -> "list[str]":
         "$",
     ]
 
+    decorators_list = ["=",":",";",","]
+
     lex_list = []
     lexeme = ""
 
@@ -31,6 +33,7 @@ def lex(lines: str) -> "list[str]":
     lua_mode = False
 
     for offset, char in enumerate(lines):
+
 
         if char != " " or d_str_mode or s_str_mode or lua_mode:
             lexeme += char
@@ -81,7 +84,8 @@ def lex(lines: str) -> "list[str]":
             if lines[offset + 1] in lexicon or char in lexicon:
 
                 if lexeme != "":
-                    lex_list.append(lexeme.replace("\n", "<newline>"))
+                    if not lexeme in decorators_list:
+                        lex_list.append(lexeme.replace("\n", "<newline>"))
                     lexeme = ""
 
     lex_list.append(lexeme.replace("\n", "<newline>"))
@@ -136,7 +140,7 @@ def recode(filepath: str) -> bytes:
         )
 
         err_out += (
-            util.skim_dict(formats[metalevel])
+            util.skim_dict(formats[metalevel], message_names[metalevel-1])
         )
 
         print(err_out)
@@ -167,8 +171,10 @@ def recode(filepath: str) -> bytes:
 
     lex_list = lex(file_content)
 
-    formats = [{"name": "-"}] * 10
+    formats = [{}] * 10
     formats[0] = block_formats.block_formats[filetype]
+    format = formats[0]
+    message_names = ["root"] + ([""] * 9)
 
     metalevel = 0  # how many layers of nested data deep we are
     out_bytes = [b""] * 10
@@ -176,6 +182,7 @@ def recode(filepath: str) -> bytes:
     line_num = 1
 
     tag = ""
+    tag_reference = ""
     tagnumber = 0
     tagname = ""
 
@@ -184,7 +191,6 @@ def recode(filepath: str) -> bytes:
     last_chunk = b""
 
     comments_list = ["#","--","//"]
-    decorators_list = ["=",":",";",","]
 
     for lexeme_number, lexeme in enumerate(lex_list):
 
@@ -204,17 +210,15 @@ def recode(filepath: str) -> bytes:
             continue
 
         if mode == "tag":
-            if lexeme in decorators_list:
-                continue
-
             if lexeme == "}":
-                formats[metalevel] = {'name':'-'}
+                formats[metalevel] = {}
 
                 out_bytes[metalevel -1] += varint(len(out_bytes[metalevel]))
                 out_bytes[metalevel -1] += out_bytes[metalevel]
                 out_bytes[metalevel] = b""
 
                 metalevel -= 1
+                format = formats[metalevel]
                 if metalevel <0:
                     raise Exception(
                         "negative metalevel\n"
@@ -226,30 +230,34 @@ def recode(filepath: str) -> bytes:
                 mode = "tag"
                 continue
 
-            tag = util.match_tagname(formats[metalevel], lexeme)
-            tagname = lexeme
-            tagnumber = int(tag, base=16)
-
+            ltype = util.get_lexeme_type(lexeme)
+            tag, _, tag_reference = util.match_tagname(format, lexeme)
             if tag == "00":
-                ltype = util.get_lexeme_type(lexeme)
                 if ltype != "tag":
                     show_error("type error", "expected tag, got "+ltype)
                 else:
-                    show_error("tag not found error", "could not find \""+lexeme+ "\" in format")
+                    show_error("tag not found error", "could not find tag in block_format: "+lexeme)
                 return b""
+                
+            tagname = lexeme
+            tagnumber = int(tag, base=16)
 
             last_mode = mode
             mode = "data"
             continue
 
         if mode == "data":
-            if lexeme in decorators_list:
-                continue
 
             if lexeme == "{":
                 out_bytes[metalevel] += varint(tagnumber)
-                formats[metalevel +1] = formats[metalevel][tag]
+                try:
+                    formats[metalevel +1] = block_formats.block_formats[tag_reference]
+                except KeyError:
+                    print("no "+tagname+" in \n"+util.prettify_dict(format))
+                    return b""
+                message_names[metalevel] = tagname
                 metalevel += 1
+                format = formats[metalevel]
                 last_mode = mode
                 mode = "tag"
                 continue
@@ -260,14 +268,14 @@ def recode(filepath: str) -> bytes:
                 continue
 
             if (
-                lexeme in ["@comp", "@compile"]
-                or
-                (
-                    config.compile_mode == "all"
-                    and
-                    tagname in block_formats.compile_tags
-                    )
-                ):
+            lexeme in ["@comp", "@compile"]
+            or
+            (
+                config.compile_mode == "all"
+                and
+                tagname in block_formats.compile_tags
+                )
+            ):
                 with open("./.luac.in", "wb") as file: file.write(last_chunk)
 
                 try:
@@ -307,6 +315,16 @@ def recode(filepath: str) -> bytes:
                     show_error("type error", "expected number, got "+ltype)
                     return b""
                 out_bytes[metalevel] += varint(int(lexeme))
+            if wiretype == 1:
+                if ltype != "number":
+                    show_error("type error", "expected number, got "+ltype)
+                    return b""
+                if lexeme[-1] == "d":
+                    data = lexeme[:-1]
+                    data = float(data)* (math.pi/180)
+                else:
+                    data = float(lexeme)
+                out_bytes[metalevel] += struct.pack("<d", data)
             if wiretype == 2:
                 if ltype != "string":
                     show_error("type error", "expected string, got "+ltype)
@@ -340,7 +358,8 @@ def recode(filepath: str) -> bytes:
                     chunk_line = int(matches.group(1))
                     chunk_err = matches.group(2)
                     show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
-                    return b""
+                    mode = "tag"
+                    continue
 
             out_bytes[metalevel] += varint(tagnumber)
             out_bytes[metalevel] += varint(len(lexeme))

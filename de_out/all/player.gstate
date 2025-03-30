@@ -1,41 +1,41 @@
 # rifted with FR v5.7.0
 
-inventory{
-    soul_shards : 998,
-    item{
-        name : 'legendsword',
+CharacterState{
+    CurrentCoins : 998
+    Item{
+        Name : 'legendsword'
     }
-    item{
-        name : 'platearmor',
+    Item{
+        Name : 'platearmor'
     }
-    item{
-        name : 'shadowtrinket',
+    Item{
+        Name : 'shadowtrinket'
     }
-    item{
-        name : 'icetrinket',
+    Item{
+        Name : 'icetrinket'
     }
-    item{
-        name : 'firetrinket',
+    Item{
+        Name : 'firetrinket'
     }
-    item{
-        name : 'iselon_shard_1',
+    Item{
+        Name : 'iselon_shard_1'
     }
-    item{
-        name : 'iselon_shard_2',
+    Item{
+        Name : 'iselon_shard_2'
     }
-    item{
-        name : 'iselon_shard_3',
+    Item{
+        Name : 'iselon_shard_3'
     }
-    item{
-        name : 'iselon_shard_4',
+    Item{
+        Name : 'iselon_shard_4'
     }
-    skill : 'bolt',
-    skill : 'bomb',
-    skill : 'hookshot',
-    skill : 'dimension',
-    selected_skill : 'hookshot',
-    sword_trinket : 'firetrinket',
+    Skill : 'bolt'
+    Skill : 'bomb'
+    Skill : 'hookshot'
+    Skill : 'dimension'
+    CurrentSkill : 'hookshot'
+    WeaponTrinket : 'firetrinket'
 }
-spawn_level : 'town_herohouse',
-spawnpoint : 'spawn_default',
-u1 : 'map',
+CurrentLevel : 'town_herohouse'
+CurrentSpawnPoint : 'spawn_default'
+SelectedMenuTab : 'map'

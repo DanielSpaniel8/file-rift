@@ -1,5 +1,5 @@
-multiline_strs = ["main_chunk", "main"]
-compile_tags = ["secondary_chunk", "secondary"]
+multiline_strs = ["String"]
+compile_tags = ["Bytes"]
 
 
 file_types = ["scene", "scl", "gdata", "gopt", "gplayer", "gstate", "scmap", "sounds", "fnt", "atlas"]
@@ -7,3254 +7,1267 @@ file_types = ["scene", "scl", "gdata", "gopt", "gplayer", "gstate", "scmap", "so
 
 block_formats = {
 
-"scene" : {
+    # filetypes section
 
-'name' : ('', 'root'),
-
-'0a' : {   # object
-
-    'name' : ('', 'object'),
-    '0a' : ('[optional] reference to a template to initialize the object from', 'name'),
-    '12' : ('used to refer to this object', 'identifier'),
-    '1a' : {   # component
-        'name' : ('', 'component'),
-        '0a' : ('', 'component_type','type'),
-        '10' : ('', 'number'),
-        '1a' : ('', 'name'),
-        '20' : ('', '?linked_component'),
-        '322' : {   # sprite
-            'name' : ('', 'sprite'),
-        },
-        '32a' : {   # model
-            'name' : ('', '3D_model'),
-            '0a' : ('POD file name', 'name'),
-            '15' : ('', 'u0'),
-            '1d' : ('', 'u1'),
-            '25' : ('', 'u2'),
-            '2a' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '32' : {
-                'name' : ('', 'u4'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '38' : ('', 'u5'),
-            '42' : {
-                'name' : ('', 'u6'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-        },
-        '332' : {   # keyframe animation
-            'name' : ('', 'keyframe_animation'),
-            '08' : ('link to the model that should use this animation', 'linked_model_component_number'),
-            '12' : ('', 'name'),
-            '18' : ('', 'u0'),
-            '25' : ('', 'u1'),
-            '28' : ('', 'u2'),
-        },
-        '33a' : {   # blend animation
-            'name' : ('', 'blend_animation'),
-            '08' : ('', 'animation_1'),
-            '10' : ('', 'animation_2'),
-            '1d' : ('', 'u0'),
-            '25' : ('', 'u1'),
-        },
-        '342' : {   # model transform controller
-            'name' : ('', 'model_transform_controller'),
-            '08' : ('', 'u0'),
-            '1a' : {
-                'name' : ('', 'u1'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '2d' : ('', 'u2'),
-        },
-        '372' : {   # ground polygon
-            'name' : ('', 'ground_polygon'),
-            '12' : {
-                'name' : ('', 'vertex_list'),
-                '0a' : {
-                    'name' : ('', 'vertex_pos'),
-                    '0d' : ('', 'x_pos'),
-                    '15' : ('', 'y_pos'),
-                },
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-            },
-            '18' : ('', 'u1'),
-            '25' : ('', 'u2'),
-            '2d' : ('', 'u3'),
-            '32' : ('', 'u4'),
-            '3d' : ('', 'u5'),
-            '40' : ('', 'u6'),
-        },
-        '37a' : {   # ground mesh
-            'name' : ('', 'ground_mesh'),
-            '3a' : {
-                'name' : ('', 'u0'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '42' : {
-                'name' : ('', 'u1'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '22' : {
-                    'name' : ('', 'u3'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '2a' : {
-                    'name' : ('', 'u4'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '32' : {
-                    'name' : ('', 'u5'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '52' : {
-                    'name' : ('', 'u6'),
-                    '0a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '12' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '25' : ('', 'u3'),
-                    '2a' : {
-                        'name' : ('', 'u4'),
-                        '0a' : ('', 'name'),
-                        '10' : ('', 'u0'),
-                        '20' : ('', 'u2'),
-                    },
-                },
-                '5a' : {
-                    'name' : ('', 'u7'),
-                    '0d' : ('', 'u'),
-                    '15' : ('', 'v'),
-                    '1d' : ('', 'w'),
-                    '25' : ('', 'x'),
-                    '2d' : ('', 'y'),
-                    '35' : ('', 'z'),
-                },
-                '192' : ('', 'u8'),
-                '19a' : ('', 'u9'),
-            },
-            '4a' : {
-                'name' : ('', 'u2'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '22' : {
-                    'name' : ('', 'u2'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '2a' : {
-                    'name' : ('', 'u3'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '32' : {
-                    'name' : ('', 'u4'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '52' : {
-                    'name' : ('', 'u5'),
-                    '0a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '12' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '25' : ('', 'u3'),
-                    '2a' : {
-                        'name' : ('', 'u4'),
-                        '0a' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '20' : ('', 'u2'),
-                    },
-                },
-                '5a' : {
-                    'name' : ('', 'u6'),
-                    '0d' : ('', 'u'),
-                    '15' : ('', 'v'),
-                    '1d' : ('', 'w'),
-                    '25' : ('', 'x'),
-                    '2d' : ('', 'y'),
-                    '35' : ('', 'z'),
-                },
-                '192' : ('', 'u7'),
-            },
-            '52' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '58' : ('', 'u4'),
-        },
-        '382' : {   # ground mesh generator
-            'name' : ('', 'ground_mesh_generator'),
-            '08' : ('', 'ground_polygon'),
-            '10' : ('', 'ground_mesh'),
-            '18' : ('', 'texture_mapping_1'),
-            '20' : ('', 'texture_mapping_2'),
-            '28' : ('', 'u4'),
-            '35' : ('', 'u5'),
-            '38' : ('', 'u6'),
-            '45' : ('', 'u7'),
-            '4d' : ('', 'u8'),
-            '55' : ('', 'u9'),
-            '5d' : ('', 'u10'),
-            '73f2' : ('', 'u11'),
-        },
-        '38a' : {   # texture mapping
-            'name' : ('', 'texture_mapping'),
-            '0a' : ('', 'texture_file'),
-            '15' : ('', 'u0'),
-            '1a' : {
-                'name' : ('', 'u1'),
-                '0d' : ('', 'u1'),
-                '15' : ('', 'u2'),
-            },
-        },
-        '392' : {   # water mesh
-            'name' : ('', 'water_mesh'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '22' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-
-        },
-        '3c2' : {   # collision shape
-            'name' : ('', 'collision_shape'),
-            '0a' : {
-                'name' : ('', 'u0','box_shape'),
-                '0d' : ('left edge of the shape', 'w','left'),
-                '15' : ('bottom edge of the shape', 'x','bottom'),
-                '1d' : ('right edge of the shape', 'y','right'),
-                '25' : ('top edge of the shape', 'z','top'),
-            },
-            '12' : {
-                'name' : ('', 'u1','ball_shape'),
-                '0a' : {
-                    'name' : ('', 'u0','offsets'),
-                    '0d' : ('x position of the ball\'s center', 'y','x'),
-                    '15' : ('y position of the ball\'s center', 'z','y'),
-                },
-                '15' : ('radius of the ball', 'u1','radius'),
-            },
-            '1a' : {
-                'name' : ('', 'u2','polygon_shape'),
-                '0a' : {
-                    'name' : ('each point or vertex is a corner of the shape', 'u0','vertex','point'),
-                    '0d' : ('', 'y','x_pos','x_position'),
-                    '15' : ('', 'z','y_pos','y_position'),
-                },
-                '10' : ('', 'u3'),
-                '18' : ('', 'u4'),
-            },
-        },
-        '3ca' : {   # collision shape 2
-            'name' : ('', 'collision_shape_2'),
-            '10' : ('', 'u0'),
-            '18' : ('', 'u1'),
-            '20' : ('', 'u2'),
-            '28' : ('', 'u3'),
-            '35' : ('', 'w'),
-            '3d' : ('', 'x'),
-            '40' : ('', 'interaction_type'),
-            '4a' : {
-                'name' : ('', 'lua_chunk_0','on_collision_chunk'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '52' : {
-                'name' : ('', 'lua_chunk_1','off_collision_chunk'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '58' : ('', 'z'),
-            '62' : {
-                'name' : ('', 'lua_chunk_2'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '6d' : ('', 'u4'),
-            '70' : ('', 'u5'),
-        },
-        '3d2' : {   # damage
-            'name' : ('', 'damage'),
-            '08' : ('', 'damage'),
-            '10' : ('', 'u1'),
-            '18' : ('', 'u2'),
-            '20' : ('', 'u3'),
-            '28' : ('', 'u4'),
-            '35' : ('', 'u5'),
-            '3d' : ('', 'u6'),
-            '40' : ('', 'u7'),
-            '48' : ('', 'u8'),
-        },
-        '3da' : {   # health
-            'name' : ('', 'health'),
-            '08' : ('', 'health_multiplier'),
-            '10' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            }
-        },
-        '3e2' : {   # bone controlled collision shape
-            'name' : ('', 'bone_controlled_collision_shape'),
-            '08' : ('', 'model_component'),
-            '12' : ('', 'bone_name'),
-        },
-        '3ea' : {   # object link controller
-            'name' : ('', 'object_link_controller'),
-            '0a' : ('', 'u0'),
-            '12' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '22' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '2a' : {
-                'name' : ('', 'u4'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-        },
-        '412' : {   # light
-            'name' : ('', 'light'),
-            '08' : ('', 'u0'),
-            '15' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '25' : ('', 'u3'),
-            '2d' : ('', 'u4'),
-            '32' : {
-                'name' : ('', 'u5'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '3d' : ('', 'u6'),
-        },
-        '462' : {   # sound effect
-            'name' : ('', 'sound_effect'),
-            '0a' : ('', 'sound'),
-            '15' : ('', 'u0'),
-            '1d' : ('', 'u1'),
-        },
-        '4aa' : {   # animation controller
-            'name' : ('', 'animation_controller'),
-            '08' : ('', 'model_component'),
-            '10' : ('', 'u1'),
-            '18' : ('', 'u2'),
-        },
-        '4c2' : {   # entity
-            'name' : ('', 'entity'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-        },
-        '4ca' : {   # bush controller
-            'name' : ('', 'bush_controller'),
-            '08' : ('', 'touched_animation'),
-            '10' : ('', 'u0'),
-            '18' : ('', 'u1'),
-        },
-        '4d2' : {   # elevator controller
-            'name' : ('', 'elevator_controller'),
-            '08' : ('', 'utility_shape_component'),
-            '10' : ('', 'u0'),
-        },
-        '4da' : {   # pressure trigger
-            'name' : ('', 'pressure_trigger'),
-            '0d' : ('', 'u0'),
-            '12' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secrndary_chunk','secondary_chunk', 'secondary'),
-            },
-            '1a' : ('', 'u1'),
-            '20' : ('', 'u2'),
-        },
-        '4f2' : {   # ?monster entity
-            'name' : ('', '?monster_entity'),
-            '0a' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '12' : ('', 'u0'),
-            '18' : ('', 'u2'),
-            '20' : ('', 'u3'),
-        },
-        '4fa' : {   # physics object
-            'name' : ('', 'physics_object'),
-            '08' : ('', 'u0','enabled'),
-            '1d' : ('', 'u1'),
-            '25' : ('', 'u2','ground_friction'),
-            '2d' : ('', 'u3','air_friction'),
-            '35' : ('', 'u4','speed'),
-            '38' : ('', 'u5','can_roll'),
-            '45' : ('', 'u6','bounciness'),
-        },
-        '4e2' : {   # door controller
-            'name' : ('', 'door_controller'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '20' : ('', 'u2'),
-            '28' : ('', 'u3'),
-            '30' : ('', 'u4'),
-        },
-        '4ea' : {   # program
-            'name' : ('', 'program'),
-            '08' : ('', 'u0'),
-            '12' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '18' : ('', 'u1'),
-            '20' : ('when should the program run?\n10 = interact button', 'u2','event'),
-        },
-        '502' : {   # breakable object
-            'name' : ('', 'breakable_object'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '18' : ('', 'u2'),
-            '22' : ('', 'u3'),
-        },
-        '50a' : {   # entity controller
-            'name' : ('', 'entity_controller'),
-            '08' : ('', 'entity_component'),
-            '10' : ('', 'animation_controller_component'),
-            '18' : ('', 'u2','walk_animation'),
-            '20' : ('', 'collision_shape'),
-            '2d' : ('', 'u4'),
-            '35' : ('', 'u5'),
-            '3d' : ('', 'u6'),            
-            '40' : ('', 'u7'),
-        },
-        '512' : {   # entity action
-            'name' : ('', 'entity_action'),
-            '0a' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            }
-        },
-        '51a' : {   # physics platform
-            'name' : ('', 'physics_platform'),
-            '0d' : ('', 'w'),
-            '15' : ('', 'x'),
-            '1d' : ('', 'y'),
-            '25' : ('', 'z'),
-        },
-        '522' : {   # entity info
-            'name' : ('', 'entity_info'),
-            '0a' : ('', 'name'),
-        },
-        '52a' : {   # hero entity
-            'name' : ('', 'hero_entity'),
-            '0a' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            }
-        },
-        '642' : {   # background
-            'name' : ('', 'file', 'background'),
-            '0a' : ('', 'filename'),
-        },
-        '692' : {   # properties
-            'name' : ('', 'properties'),
-            '0a' : ('', 'u0'),
-        },
-        '7d2' : {   # particle emitter
-            'name' : ('', 'particle_emitter'),
-            '10' : ('', 'particle'),
-            '18' : ('', 'u1'),
-            '20' : ('', 'u2'),
-            '28' : ('', 'u3'),
-            '30' : ('', 'u4'),
-            '3a' : {
-                'name' : ('', 'u5'),
-                '08' : ('', 'u0'),
-                '12' : {
-                    'name' : ('', 'u1', 'color', 'colour'),
-                    '0d' : ('', 'w','red'),
-                    '15' : ('', 'x','green'),
-                    '1d' : ('', 'y','blue'),
-                    '25' : ('', 'z','brightness'),
-                },
-                '1d' : ('', 'u2'),
-                '25' : ('', 'u3'),
-                '2d' : ('', 'u4'),
-                '35' : ('', 'u5'),
-                '3a' : {
-                    'name' : ('', 'u6'),
-                    '0d' : ('', 'u0'),
-                    '15' : ('', 'u1'),
-                    '1d' : ('', 'u2'),
-                }
-            },
-            '40' : ('', 'u6'),
-            '4a' : {
-                'name' : ('', 'u7'),
-                '0d' : ('', 'u0'),
-                '15' : ('', 'u1'),
-                '1d' : ('', 'u2'),
-            },
-            '52' : {
-                'name' : ('', 'u8'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-        },
-        '7da' : {   # particle
-            'name' : ('', 'particle'),
-            '0a' : ('', 'name'),
-            '15' : ('', 'u0'),
-        },
-        '7ea' : {   # fire emitter
-            'name' : ('', 'fire_emitter'),
-            '08' : ('', 'particle_emitter'),
-            '18' : ('', 'light'),
-            '2a' : {
-                'name' : ('', 'u0'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '35' : ('', 'u1'),
-            '3d' : ('', 'u2'),
-            '42' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '4a' : {
-                'name' : ('', 'u4'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-        },
-        '7f2' : {   # simple glow
-            'name' : ('', 'simple_glow'),
-            '0a' : {
-                'name' : ('', 'u0','color','colour'),
-                '0d' : ('', 'w','red'),
-                '15' : ('', 'x','green'),
-                '1d' : ('', 'y','blue'),
-                '25' : ('', 'z','brightness'),
-            },
-            '15' : ('', 'u1','glow_radius','radius'),
-            '18' : ('', 'u2'),
-            '25' : ('', 'u3'),
-            '2d' : ('', 'u4'),
-            '35' : ('', 'u5'),
-            '3a' : {
-                'name' : ('', 'u6'),
-                '0d' : ('', 'y'),
-                '15' : ('', 'z'),
-            },
-        },
-        '802' : {   # orbit controller
-            'name' : ('', 'orbit_controller'),
-            '0a' : {
-                'name' : ('', 'u0'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '15' : ('', 'speed'),
-            '1d' : ('', 'radius'),
-        },
-        '972' : {   # monster controller
-            'name' : ('', 'monster_controller'),
-            '0d' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '18' : ('', 'u2'),
-            '20' : ('', 'u3'),
-        },
-        '982' : {   # charging monster controller
-            'name' : ('', 'charging_monster_controller'),
-            '08' : ('', 'walk_animation'),
-            '10' : ('', 'charge_animation'),
-            '18' : ('', 'run_animation'),
-            '25' : ('', 'u0'),
-            '2d' : ('', 'u1'),
-        },
-        '98a' : {    #t
-            'name' : ('', 'temp1'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u2'),
-            '18' : ('', 'u3'),
-            '20' : ('', 'u4'),
-            '28' : ('', 'u5'),
-        },
-        '992' : {   # attack
-            'name' : ('', 'attack'),
-            '08' : ('', 'keyframe_animation_component'),
-            '10' : ('', 'u0'),
-            '18' : ('', 'u1'),
-            '20' : ('', 'u2'),
-            '2d' : ('', 'u3'),
-            '35' : ('', 'u4'),
-            '3d' : ('', 'u5'),
-            '45' : ('', 'u6'),
-            '4d' : ('', 'u7'),
-            '55' : ('', 'u8'),
-            '5a' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '65' : ('', 'u9'),
-            '6d' : ('', 'u10'),
-        },
-        '9aa' : {   # static monster controller
-            'name' : ('', 'static_monster_controller'),
-            '08' : ('', 'u0'),
-        },
-        '9c2' : {   # bouncing monster controller
-            'name' : ('', 'bouncing_monster_controller'),
-            '08' : ('', 'jump_animation'),
-            '10' : ('', 'land_animation'),
-            '1d' : ('', 'u0'),
-            '25' : ('', 'u1'),
-        },
-        '9d2' : {   # generic monster controller
-            'name' : ('', 'generic_monster_controller'),
-            '08' : ('', 'walk_animation'),
-        },
-        'c82' : {   # swingable weapon
-            'name' : ('', 'swingable_weapon'),
-            '08' : ('', 'linked_model_component_number'),
-            '10' : ('', 'u1'),
-            '20' : ('', 'u2'),
-            '28' : ('', 'u3'),
-            '30' : ('', 'u4'),
-            '38' : ('', 'u5'),
-            '40' : ('', 'u6'),
-            '48' : ('', 'u7'),
-            '55' : ('', 'w'),
-            '5d' : ('', 'x'),
-            '65' : ('', 'y'),
-            '6d' : ('', 'z'),
-            '72' : {
-                'name' : ('', 'u8'),
-                '0d' : ('', 'u0'),
-                '15' : ('', 'u1'),
-                '1d' : ('', 'u2'),
-                '25' : ('', 'u3'),
-            }
-        },
-        'c8a' : {   # swingable weapon controller
-            'name' : ('', 'swingable_weapon_controller'),
-            '08' : ('', 'parent_model'),
-            '12' : ('', 'bone'),
-            '1a' : ('', 'child_model'),
-        },
-        'c9a' : {   # weapon glow
-            'name' : ('', 'weapon_glow'),
-            '08' : ('', 'u0'),
-            '12' : {
-                'name' : ('', 'u1'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '25' : ('', 'u3'),
-        },
-        'ca2' : {   # weapon trail
-            'name' : ('', 'weapon_trail'),
-            '0a' : {
-                'name' : ('', 'u0'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            }
-        },
-        'fa2' : {   # portal
-            'name' : ('', 'portal'),
-            '0a' : ('', 'target_level'),
-            '12' : ('', 'spawnpoint'),
-            '18' : ('', 'touchable'),
-            '20' : ('', 'collision_shape_component'),
-        },
-        'faa' : {   # spawnpoint
-            'name' : ('', 'spawnpoint'),
-            '08' : ('', 'u0'),
-            '12' : {
-                'name' : ('', 'u1'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            }
-        },
-        'fb2' : {   # collectable item
-            'name' : ('', 'collectable_item'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '22' : ('', 'name'),
-            '2a' : ('', '?model','item'),
-            '30' : ('', 'u0'),
-        },
-        'fca' : {   # item drop
-            'name' : ('', 'item_drop'),
-            '0a' : ('', 'name'),
-            '12' : ('', 'identifier'),
-            '1a' : {   # item
-                'name' : ('', 'item'),
-                '0a' : ('', 'item_type','object'),
-                '12' : ('', 'identifier'),
-                '1d' : ('', 'u0'),
-                '20' : ('', 'u1'),
-                '28' : ('', 'amount'),
-            },
-            '20' : ('', 'u0'),
-            '28' : ('', 'u1'),
-        },
-        '1132' : {   # magic bolt
-            'name' : ('', 'magic_bolt'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-            '18' : ('', 'u2'),
-            '22' : {
-                'name' : ('', 'u3'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '2d' : ('', 'u4'),
-        },
-        '113a' : {   # magic explosion
-            'name' : ('', 'magic_explosion'),
-            '08' : ('', 'u0','particle_emitter'),
-            '10' : ('', 'u1'),
-            '1a' : {
-                'name' : ('', 'u2'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '25' : ('', 'u3','radius','explosion_radius'),
-            '2d' : ('', 'u4'),
-        },
-        '1142' : {   # skill
-            'name' : ('', 'skill'),
-            '08' : ('', 'u0'),
-            '12' : {
-                'name' : ('', 'u1'),
-                '0d' : ('', 'x'),
-                '15' : ('', 'y'),
-                '1d' : ('', 'z'),
-            },
-            '1a' : ('', 'cast_animation'),
-
-        },
-        '114a' : {   # magic spell cast
-            'name' : ('', 'magic_spell_cast'),
-            '08' : ('', 'particle_emitter'),
-            '10' : ('', 'u0'),
-        },
-        '115a' : {   # projectile controller
-            'name' : ('', 'projectile_controller'),
-            '08' : ('', 'u0'),
-            '10' : ('', 'u1'),
-        },
-        '1172' : { #t
-            'name' : ('', 'temp0'),
-        },
-    },
-    '22' : {
-        'name' : ('', 'position'),
-        '0d' : ('', 'x','x_pos','x_position'),
-        '15' : ('', 'y','y_pos','y_position'),
-    },
-    '2d' : ('', 'z','z_pos','z_position'),
-    '35' : ('', 'rotation'),
-    '3d' : ('', 'scale'),
-    '42' : {
-        'name' : ('', 'u2','shape'),
-        '0d' : ('', 'w','left'),
-        '15' : ('', 'x','bottom'),
-        '1d' : ('', 'y','right'),
-        '25' : ('', 'z','top'),
-    },
-    '48' : ('', 'hidden'),
-    '52' : {
-        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-        '0a' : ('', 'main_chunk', 'main'),
-        '12' : ('', 'secondary_chunk', 'secondary'),
-    },
-},
-
-
-'12' : {
-    'name' : ('contains object templates, which can only be used in this scene', '?scene_info','library'),
-    '0a' : ('', 'name'),
-    '12' : {
-        'name' : ('', 'library_item'),
-        '0a' : {
-            'name' : ('', 'object'),
-            '12' : ('', 'name'),
-            '1a' : {   # component
-                'name' : ('', 'component'),
-                '0a' : ('', 'component_type','type'),
-                '10' : ('', 'number'),
-                '1a' : ('', 'name'),
-                '20' : ('', '?linked_component'),
-                '322' : {   # sprite
-                    'name' : ('', 'sprite'),
-                },
-                '32a' : {   # model
-                    'name' : ('', '3D_model'),
-                    '0a' : ('', 'name'),
-                    '15' : ('', 'u0'),
-                    '1d' : ('', 'u1'),
-                    '25' : ('', 'u2'),
-                    '2a' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '32' : {
-                        'name' : ('', 'u4'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '38' : ('', 'u5'),
-                    '42' : {
-                        'name' : ('', 'u6'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                },
-                '332' : {   # keyframe animation
-                    'name' : ('', 'keyframe_animation'),
-                    '08' : ('', 'linked_model_component_number'),
-                    '12' : ('', 'name'),
-                    '18' : ('', 'u0'),
-                    '25' : ('', 'u1'),
-                    '28' : ('', 'u2'),
-                },
-                '33a' : {   # blend animation
-                    'name' : ('', 'blend_animation'),
-                    '08' : ('', 'animation_1'),
-                    '10' : ('', 'animation_2'),
-                    '1d' : ('', 'u0'),
-                    '25' : ('', 'u1'),
-                },
-                '342' : {   # model transform controller
-                    'name' : ('', 'model_transform_controller'),
-                    '08' : ('', 'u0'),
-                    '1a' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '2d' : ('', 'u2'),
-                },
-                '372' : {   # ground polygon
-                    'name' : ('', 'ground_polygon'),
-                    '12' : {
-                        'name' : ('', 'vertex_list'),
-                        '0a' : {
-                            'name' : ('', 'vertex_pos'),
-                            '0d' : ('', 'x_pos'),
-                            '15' : ('', 'y_pos'),
-                        },
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                    },
-                    '18' : ('', 'u1'),
-                    '25' : ('', 'u2'),
-                    '2d' : ('', 'u3'),
-                    '32' : ('', 'u4'),
-                    '3d' : ('', 'u5'),
-                    '40' : ('', 'u6'),
-                },
-                '37a' : {   # ground mesh
-                    'name' : ('', 'ground_mesh'),
-                    '3a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '42' : {
-                        'name' : ('', 'u1'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '1a' : {
-                            'name' : ('', 'u2'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '22' : {
-                            'name' : ('', 'u3'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '2a' : {
-                            'name' : ('', 'u4'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '32' : {
-                            'name' : ('', 'u5'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '52' : {
-                            'name' : ('', 'u6'),
-                            '0a' : {
-                                'name' : ('', 'u0'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '12' : {
-                                'name' : ('', 'u1'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '1a' : {
-                                'name' : ('', 'u2'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '25' : ('', 'u3'),
-                            '2a' : {
-                                'name' : ('', 'u4'),
-                                '0a' : ('', 'name'),
-                                '10' : ('', 'u0'),
-                                '20' : ('', 'u2'),
-                            },
-                        },
-                        '5a' : {
-                            'name' : ('', 'u7'),
-                            '0d' : ('', 'u'),
-                            '15' : ('', 'v'),
-                            '1d' : ('', 'w'),
-                            '25' : ('', 'x'),
-                            '2d' : ('', 'y'),
-                            '35' : ('', 'z'),
-                        },
-                        '192' : ('', 'u8'),
-                        '19a' : ('', 'u9'),
-                    },
-                    '4a' : {
-                        'name' : ('', 'u2'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '22' : {
-                            'name' : ('', 'u2'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '2a' : {
-                            'name' : ('', 'u3'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '32' : {
-                            'name' : ('', 'u4'),
-                            '08' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '18' : ('', 'u2'),
-                            '20' : ('', 'u3'),
-                        },
-                        '52' : {
-                            'name' : ('', 'u5'),
-                            '0a' : {
-                                'name' : ('', 'u0'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '12' : {
-                                'name' : ('', 'u1'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '1a' : {
-                                'name' : ('', 'u2'),
-                                '0d' : ('', 'w'),
-                                '15' : ('', 'x'),
-                                '1d' : ('', 'y'),
-                                '25' : ('', 'z'),
-                            },
-                            '25' : ('', 'u3'),
-                            '2a' : {
-                                'name' : ('', 'u4'),
-                                '0a' : ('', 'u0'),
-                                '10' : ('', 'u1'),
-                                '20' : ('', 'u2'),
-                            },
-                        },
-                        '5a' : {
-                            'name' : ('', 'u6'),
-                            '0d' : ('', 'u'),
-                            '15' : ('', 'v'),
-                            '1d' : ('', 'w'),
-                            '25' : ('', 'x'),
-                            '2d' : ('', 'y'),
-                            '35' : ('', 'z'),
-                        },
-                        '192' : ('', 'u7'),
-                    },
-                    '52' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '58' : ('', 'u4'),
-                },
-                '382' : {   # ground mesh generator
-                    'name' : ('', 'ground_mesh_generator'),
-                    '08' : ('', 'ground_polygon'),
-                    '10' : ('', 'ground_mesh'),
-                    '18' : ('', 'texture_mapping_1'),
-                    '20' : ('', 'texture_mapping_2'),
-                    '28' : ('', 'u4'),
-                    '35' : ('', 'u5'),
-                    '38' : ('', 'u6'),
-                    '45' : ('', 'u7'),
-                    '4d' : ('', 'u8'),
-                    '55' : ('', 'u9'),
-                    '5d' : ('', 'u10'),
-                    '73f2' : ('', 'u11'),
-                },
-                '38a' : {   # texture mapping
-                    'name' : ('', 'texture_mapping'),
-                    '0a' : ('', 'texture_file'),
-                    '15' : ('', 'u0'),
-                    '1a' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'u1'),
-                        '15' : ('', 'u2'),
-                    },
-                },
-                '392' : {   # water mesh
-                    'name' : ('', 'water_mesh'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '22' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-
-                },
-                '3c2' : {   # collision shape
-                    'name' : ('', 'collision_shape'),
-                    '0a' : {
-                        'name' : ('', 'u0','box_shape'),
-                        '0d' : ('', 'w','left'),
-                        '15' : ('', 'x','bottom'),
-                        '1d' : ('', 'y','right'),
-                        '25' : ('', 'z','top'),
-                    },
-                    '12' : {
-                        'name' : ('', 'u1','ball_shape'),
-                        '0a' : {
-                            'name' : ('', 'u0','offsets'),
-                            '0d' : ('', 'y','x'),
-                            '15' : ('', 'z','y'),
-                        },
-                        '15' : ('', 'u1','radius'),
-                    },
-                    '1a' : {
-                        'name' : ('', 'u2','polygon_shape'),
-                        '0a' : {
-                            'name' : ('', 'u0','vertex','point'),
-                            '0d' : ('', 'y','x','x_pos','x_position'),
-                            '15' : ('', 'z','y','y_pos','y_position'),
-                        },
-                        '10' : ('', 'u3'),
-                        '18' : ('', 'u4'),
-                    },
-                },
-                '3ca' : {   # collision shape 2
-                    'name' : ('', 'collision_shape_2'),
-                    '10' : ('', 'u0'),
-                    '18' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                    '28' : ('', 'u3'),
-                    '35' : ('', 'w'),
-                    '3d' : ('', 'x'),
-                    '40' : ('', 'interaction_type'),
-                    '4a' : {
-                        'name' : ('', 'lua_chunk_0','on_collision_chunk'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '52' : {
-                        'name' : ('', 'lua_chunk_1','off_collision_chunk'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '58' : ('', 'z'),
-                    '62' : {
-                        'name' : ('', 'lua_chunk_2'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '6d' : ('', 'u4'),
-                    '70' : ('', 'u5'),
-                },
-                '3d2' : {   # damage
-                    'name' : ('', 'damage'),
-                    '08' : ('', 'damage'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                    '28' : ('', 'u4'),
-                    '35' : ('', 'u5'),
-                    '3d' : ('', 'u6'),
-                    '40' : ('', 'u7'),
-                    '48' : ('', 'u8'),
-                },
-                '3da' : {   # health
-                    'name' : ('', 'health'),
-                    '08' : ('', 'health_multiplier'),
-                    '10' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    }
-                },
-                '3e2' : {   # bone controlled collision shape
-                    'name' : ('', 'bone_controlled_collision_shape'),
-                    '08' : ('', 'u0'),
-                    '12' : ('', 'bone_name'),
-                },
-                '3ea' : {   # object link controller
-                    'name' : ('', 'object_link_controller'),
-                    '0a' : ('', 'u0'),
-                    '12' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '22' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '2a' : {
-                        'name' : ('', 'u4'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                },
-                '412' : {   # light
-                    'name' : ('', 'light'),
-                    '08' : ('', 'u0'),
-                    '15' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '25' : ('', 'u3'),
-                    '2d' : ('', 'u4'),
-                    '32' : {
-                        'name' : ('', 'u5'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '3d' : ('', 'u6'),
-                },
-                '462' : {   # sound effect
-                    'name' : ('', 'sound_effect'),
-                    '0a' : ('', 'sound'),
-                    '15' : ('', 'u0'),
-                    '1d' : ('', 'u1'),
-                },
-                '4aa' : {   # animation controller
-                    'name' : ('', 'animation_controller'),
-                    '08' : ('', 'model_component'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                },
-                '4c2' : {   # entity
-                    'name' : ('', 'entity'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                },
-                '4ca' : {   # bush controller
-                    'name' : ('', 'bush_controller'),
-                    '08' : ('', 'touched_animation'),
-                    '10' : ('', 'u0'),
-                    '18' : ('', 'u1'),
-                },
-                '4d2' : {   # elevator controller
-                    'name' : ('', 'elevator_controller'),
-                    '08' : ('', 'utility_shape_component'),
-                    '10' : ('', 'u0'),
-                },
-                '4da' : {   # pressure trigger
-                    'name' : ('', 'pressure_trigger'),
-                    '0d' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secrndary_chunk','secondary_chunk', 'secondary'),
-                    },
-                    '1a' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                },
-                '4f2' : {   # ?monster entity
-                    'name' : ('', '?monster_entity'),
-                    '0a' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secrndary_chunk','secondary_chunk', 'secondary'),
-                    },
-                    '12' : ('', 'u0'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '4fa' : {   # physics object
-                    'name' : ('', 'physics_object'),
-                    '08' : ('', 'u0','enabled'),
-                    '1d' : ('', 'u1'),
-                    '25' : ('', 'u2','ground_friction'),
-                    '2d' : ('', 'u3','air_friction'),
-                    '35' : ('', 'u4','speed'),
-                    '38' : ('', 'u5','can_roll'),
-                    '45' : ('', 'u6','bounciness'),
-                },
-                '4e2' : {   # door controller
-                    'name' : ('', 'door_controller'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                    '28' : ('', 'u3'),
-                    '30' : ('', 'u4'),
-                },
-                '4ea' : {   # program
-                    'name' : ('', 'program'),
-                    '08' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '18' : ('', 'u1'),
-                    '20' : ('', 'u2','event'),
-                },
-                '502' : {   # breakable object
-                    'name' : ('', 'breakable_object'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '22' : ('', 'u3'),
-                },
-                '50a' : {   # entity controller
-                    'name' : ('', 'entity_controller'),
-                    '08' : ('', 'entity_component'),
-                    '10' : ('', 'animation_controller_component'),
-                    '18' : ('', 'u2','walk_animation'),
-                    '20' : ('', 'collision_shape'),
-                    '2d' : ('', 'u4'),
-                    '35' : ('', 'u5'),
-                    '3d' : ('', 'u6'),            
-                    '40' : ('', 'u7'),
-                },
-                '512' : {   # entity action
-                    'name' : ('', 'entity_action'),
-                    '0a' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    }
-                },
-                '51a' : {   # physics platform
-                    'name' : ('', 'physics_platform'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '522' : {   # entity info
-                    'name' : ('', 'entity_info'),
-                    '0a' : ('', 'name'),
-                },
-                '52a' : {   # hero entity
-                    'name' : ('', 'hero_entity'),
-                    '0a' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    }
-                },
-                '642' : {   # file
-                    'name' : ('', 'file'),
-                    '0a' : ('', 'filename'),
-                },
-                '692' : {   # properties
-                    'name' : ('', 'properties'),
-                    '0a' : ('', 'u0'),
-                },
-                '7d2' : {   # particle emitter
-                    'name' : ('', 'particle_emitter'),
-                    '10' : ('', 'particle'),
-                    '18' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                    '28' : ('', 'u3'),
-                    '30' : ('', 'u4'),
-                    '3a' : {
-                        'name' : ('', 'u5'),
-                        '08' : ('', 'u0'),
-                        '12' : {
-                            'name' : ('', 'u1', 'color', 'colour'),
-                            '0d' : ('', 'w','red'),
-                            '15' : ('', 'x','green'),
-                            '1d' : ('', 'y','blue'),
-                            '25' : ('', 'z','brightness'),
-                        },
-                        '1d' : ('', 'u2'),
-                        '25' : ('', 'u3'),
-                        '2d' : ('', 'u4'),
-                        '35' : ('', 'u5'),
-                        '3a' : {
-                            'name' : ('', 'u6'),
-                            '0d' : ('', 'u0'),
-                            '15' : ('', 'u1'),
-                            '1d' : ('', 'u2'),
-                        }
-                    },
-                    '40' : ('', 'u6'),
-                    '4a' : {
-                        'name' : ('', 'u7'),
-                        '0d' : ('', 'u0'),
-                        '15' : ('', 'u1'),
-                        '1d' : ('', 'u2'),
-                    },
-                    '52' : {
-                        'name' : ('', 'u8'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                },
-                '7da' : {   # particle
-                    'name' : ('', 'particle'),
-                    '0a' : ('', 'name'),
-                    '15' : ('', 'u0'),
-                },
-                '7ea' : {   # fire emitter
-                    'name' : ('', 'fire_emitter'),
-                    '08' : ('', 'particle_emitter'),
-                    '18' : ('', 'light'),
-                    '2a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '35' : ('', 'u1'),
-                    '3d' : ('', 'u2'),
-                    '42' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '4a' : {
-                        'name' : ('', 'u4'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                },
-                '7f2' : {   # simple glow
-                    'name' : ('', 'simple_glow'),
-                    '0a' : {
-                        'name' : ('', 'u0','color','colour'),
-                        '0d' : ('', 'w','red'),
-                        '15' : ('', 'x','green'),
-                        '1d' : ('', 'y','blue'),
-                        '25' : ('', 'z','brightness'),
-                    },
-                    '15' : ('', 'u1','glow_radius','radius'),
-                    '18' : ('', 'u2'),
-                    '25' : ('', 'u3'),
-                    '2d' : ('', 'u4'),
-                    '35' : ('', 'u5'),
-                    '3a' : {
-                        'name' : ('', 'u6'),
-                        '0d' : ('', 'y'),
-                        '15' : ('', 'z'),
-                    },
-                },
-                '802' : {   # orbit controller
-                    'name' : ('', 'orbit_controller'),
-                    '0a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '15' : ('', 'speed'),
-                    '1d' : ('', 'radius'),
-                },
-                '972' : {   # monster controller
-                    'name' : ('', 'monster_controller'),
-                    '0d' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '20' : ('', 'u3'),
-                },
-                '982' : {   # charging monster controller
-                    'name' : ('', 'charging_monster_controller'),
-                    '08' : ('', 'walk_animation'),
-                    '10' : ('', 'charge_animation'),
-                    '18' : ('', 'run_animation'),
-                    '25' : ('', 'u0'),
-                    '2d' : ('', 'u1'),
-                },
-                '98a' : {    #t
-                    'name' : ('', 'temp1'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u2'),
-                    '18' : ('', 'u3'),
-                    '20' : ('', 'u4'),
-                    '28' : ('', 'u5'),
-                },
-                '992' : {   # attack
-                    'name' : ('', 'attack'),
-                    '08' : ('', 'keyframe_animation_component'),
-                    '10' : ('', 'u0'),
-                    '18' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                    '2d' : ('', 'u3'),
-                    '35' : ('', 'u4'),
-                    '3d' : ('', 'u5'),
-                    '45' : ('', 'u6'),
-                    '4d' : ('', 'u7'),
-                    '55' : ('', 'u8'),
-                    '5a' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '65' : ('', 'u9'),
-                    '6d' : ('', 'u10'),
-                },
-                '9aa' : {   # static monster controller
-                    'name' : ('', 'static_monster_controller'),
-                    '08' : ('', 'u0'),
-                },
-                '9c2' : {   # bouncing monster controller
-                    'name' : ('', 'bouncing_monster_controller'),
-                    '08' : ('', 'jump_animation'),
-                    '10' : ('', 'land_animation'),
-                    '1d' : ('', 'u0'),
-                    '25' : ('', 'u1'),
-                },
-                '9d2' : {   # generic monster controller
-                    'name' : ('', 'generic_monster_controller'),
-                    '08' : ('', 'walk_animation'),
-                },
-                'c82' : {   # swingable weapon
-                    'name' : ('', 'swingable_weapon'),
-                    '08' : ('', 'linked_model_component_number'),
-                    '10' : ('', 'u1'),
-                    '20' : ('', 'u2'),
-                    '28' : ('', 'u3'),
-                    '30' : ('', 'u4'),
-                    '38' : ('', 'u5'),
-                    '40' : ('', 'u6'),
-                    '48' : ('', 'u7'),
-                    '55' : ('', 'w'),
-                    '5d' : ('', 'x'),
-                    '65' : ('', 'y'),
-                    '6d' : ('', 'z'),
-                    '72' : {
-                        'name' : ('', 'u8'),
-                        '0d' : ('', 'u0'),
-                        '15' : ('', 'u1'),
-                        '1d' : ('', 'u2'),
-                        '25' : ('', 'u3'),
-                    }
-                },
-                'c8a' : {   # swingable weapon controller
-                    'name' : ('', 'swingable_weapon_controller'),
-                    '08' : ('', 'parent_model'),
-                    '12' : ('', 'bone'),
-                    '1a' : ('', 'child_model'),
-                },
-                'c9a' : {   # weapon glow
-                    'name' : ('', 'weapon_glow'),
-                    '08' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '25' : ('', 'u3'),
-                },
-                'ca2' : {   # weapon trail
-                    'name' : ('', 'weapon_trail'),
-                    '0a' : {
-                        'name' : ('', 'u0'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    }
-                },
-                'fa2' : {   # portal
-                    'name' : ('', 'portal'),
-                    '0a' : ('', 'target_level'),
-                    '12' : ('', 'spawnpoint'),
-                    '18' : ('', 'touchable'),
-                    '20' : ('', 'collision_shape_component'),
-                },
-                'faa' : {   # spawnpoint
-                    'name' : ('', 'spawnpoint'),
-                    '08' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    }
-                },
-                'fb2' : {   # collectable item
-                    'name' : ('', 'collectable_item'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                        '0a' : ('', 'main_chunk', 'main'),
-                        '12' : ('', 'secondary_chunk', 'secondary'),
-                    },
-                    '22' : ('', 'name'),
-                    '2a' : ('', '?model','item'),
-                    '30' : ('', 'u0'),
-                },
-                'fca' : {   # item drop
-                    'name' : ('', 'item_drop'),
-                    '0a' : ('', 'name'),
-                    '12' : ('', 'identifier'),
-                    '1a' : {   # item
-                        'name' : ('', 'item'),
-                        '0a' : ('', 'item_type','object'),
-                        '12' : ('', 'identifier'),
-                        '1d' : ('', 'u0'),
-                        '20' : ('', 'u1'),
-                        '28' : ('', 'amount'),
-                    },
-                    '20' : ('', 'u0'),
-                    '28' : ('', 'u1'),
-                },
-                '1132' : {   # magic bolt
-                    'name' : ('', 'magic_bolt'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                    '22' : {
-                        'name' : ('', 'u3'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '2d' : ('', 'u4'),
-                },
-                '113a' : {   # magic explosion
-                    'name' : ('', 'magic_explosion'),
-                    '08' : ('', 'u0','particle_emitter'),
-                    '10' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '0d' : ('', 'w'),
-                        '15' : ('', 'x'),
-                        '1d' : ('', 'y'),
-                        '25' : ('', 'z'),
-                    },
-                    '25' : ('', 'u3'),
-                    '2d' : ('', 'u4'),
-                },
-                '1142' : {   # skill
-                    'name' : ('', 'skill'),
-                    '08' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'u1'),
-                        '0d' : ('', 'x'),
-                        '15' : ('', 'y'),
-                        '1d' : ('', 'z'),
-                    },
-                    '1a' : ('', 'cast_animation'),
-
-                },
-                '114a' : {   # magic spell cast
-                    'name' : ('', 'magic_spell_cast'),
-                    '08' : ('', 'particle_emitter'),
-                    '10' : ('', 'u0'),
-                },
-                '115a' : {   # projectile controller
-                    'name' : ('', 'projectile_controller'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                },
-                '1172' : { #t
-                    'name' : ('', 'temp0'),
-                },
-            },
-            '22' : {
-                'name' : ('', 'u0','position'),
-                '0d' : ('', 'y','x','x_pos','x_position'),
-                '15' : ('', 'z','y','y_pos','y_position'),
-            },
-            '2d' : ('', 'u1','z','z_pos','z_position'),
-            '35' : ('', 'u2','rotation'),
-            '3d' : ('', 'u3','scale'),
-            '42' : {
-                'name' : ('', 'u4','shape'),
-                '0d' : ('', 'w','left'),
-                '15' : ('', 'x','bottom'),
-                '1d' : ('', 'y','right'),
-                '25' : ('', 'z','top'),
-            },
-            '52' : {
-                'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                '0a' : ('', 'main_chunk', 'main'),
-                '12' : ('', 'secondary_chunk', 'secondary'),
-            },
-            '48' : ('', 'u5','hidden'),
-        },
-        '15' : ('', 'u1'),
-    },
-    '2a' : {
-        'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-        '0a' : ('', 'main_chunk', 'main'),
-        '12' : ('', 'secondary_chunk', 'secondary'),
-        '1a' : ('', 'name'),
-    },
-    '1a' : ('', 'scl_file'),
-},
-
-
-'1a' : {
-    'name' : ('', 'level_size'),
-    '0d' : ('', 'min_x'),
-    '15' : ('', 'min_y'),
-    '1d' : ('', 'max_x'),
-    '25' : ('', 'max_y'),
-},
-
-
-'22' : {
-    'name' : ('a scene group is used to hide or unhide any number of objects', 'group'),
-    '0a' : ('', 'name'),
-    '12' : ('add an number of objects to the group by identifier', 'object'),
-    '18' : ('', 'u0'),
-    '28' : ('', 'u1'),
-    '30' : ('', 'u2'),
-},
-
-'2a' : {
-    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-    '0a' : ('', 'main_chunk', 'main'),
-    '12' : ('', 'secondary_chunk', 'secondary'),
-},
-
-
-},
-
-
-"scl" : {
-
-'name' : ('', 'root'),
-
-'0a' : ('', 'scl_file_name'),
-
-
-'12' : {
-    'name' : ('', 'library_item'),
-    '0a' : {
-        'name' : ('', 'object'),
-        '12' : ('', 'name'),
-        '1a' : {
-            'name' : ('', 'component'),
-            '0a' : ('', 'component_type','type'),
-            '10' : ('', 'number'),
-            '1a' : ('', 'name'),
-            '20' : ('', '?linked_component'),
-            '322' : {   # sprite
-                'name' : ('', 'sprite'),
-            },
-            '32a' : {   # model
-                'name' : ('', '3D_model'),
-                '0a' : ('', 'name'),
-                '15' : ('', 'u0'),
-                '1d' : ('', 'u1'),
-                '25' : ('', 'u2'),
-                '2a' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '32' : {
-                    'name' : ('', 'u4'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '38' : ('', 'u5'),
-                '42' : {
-                    'name' : ('', 'u6'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-            },
-            '332' : {   # keyframe animation
-                'name' : ('', 'keyframe_animation'),
-                '08' : ('', 'linked_model_component_number'),
-                '12' : ('', 'name'),
-                '18' : ('', 'u0'),
-                '25' : ('', 'u1'),
-                '28' : ('', 'u2'),
-            },
-            '33a' : {   # blend animation
-                'name' : ('', 'blend_animation'),
-                '08' : ('', 'animation_1'),
-                '10' : ('', 'animation_2'),
-                '1d' : ('', 'u0'),
-                '25' : ('', 'u1'),
-            },
-            '342' : {   # model transform controller
-                'name' : ('', 'model_transform_controller'),
-                '08' : ('', 'u0'),
-                '1a' : {
-                    'name' : ('', 'u1'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '2d' : ('', 'u2'),
-            },
-            '372' : {   # ground polygon
-                'name' : ('', 'ground_polygon'),
-                '12' : {
-                    'name' : ('', 'vertex_list'),
-                    '0a' : {
-                        'name' : ('', 'vertex_pos'),
-                        '0d' : ('', 'x_pos'),
-                        '15' : ('', 'y_pos'),
-                    },
-                    '10' : ('', 'u1'),
-                    '18' : ('', 'u2'),
-                },
-                '18' : ('', 'u1'),
-                '25' : ('', 'u2'),
-                '2d' : ('', 'u3'),
-                '32' : ('', 'u4'),
-                '3d' : ('', 'u5'),
-                '40' : ('', 'u6'),
-            },
-            '37a' : {   # ground mesh
-                'name' : ('', 'ground_mesh'),
-                '3a' : {
-                    'name' : ('', 'u0'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '42' : {
-                    'name' : ('', 'u1'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '1a' : {
-                        'name' : ('', 'u2'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '22' : {
-                        'name' : ('', 'u3'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '2a' : {
-                        'name' : ('', 'u4'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '32' : {
-                        'name' : ('', 'u5'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '52' : {
-                        'name' : ('', 'u6'),
-                        '0a' : {
-                            'name' : ('', 'u0'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '12' : {
-                            'name' : ('', 'u1'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '1a' : {
-                            'name' : ('', 'u2'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '25' : ('', 'u3'),
-                        '2a' : {
-                            'name' : ('', 'u4'),
-                            '0a' : ('', 'name'),
-                            '10' : ('', 'u0'),
-                            '20' : ('', 'u2'),
-                        },
-                    },
-                    '5a' : {
-                        'name' : ('', 'u7'),
-                        '0d' : ('', 'u'),
-                        '15' : ('', 'v'),
-                        '1d' : ('', 'w'),
-                        '25' : ('', 'x'),
-                        '2d' : ('', 'y'),
-                        '35' : ('', 'z'),
-                    },
-                    '192' : ('', 'u8'),
-                    '19a' : ('', 'u9'),
-                },
-                '4a' : {
-                    'name' : ('', 'u2'),
-                    '08' : ('', 'u0'),
-                    '10' : ('', 'u1'),
-                    '22' : {
-                        'name' : ('', 'u2'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '2a' : {
-                        'name' : ('', 'u3'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '32' : {
-                        'name' : ('', 'u4'),
-                        '08' : ('', 'u0'),
-                        '10' : ('', 'u1'),
-                        '18' : ('', 'u2'),
-                        '20' : ('', 'u3'),
-                    },
-                    '52' : {
-                        'name' : ('', 'u5'),
-                        '0a' : {
-                            'name' : ('', 'u0'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '12' : {
-                            'name' : ('', 'u1'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '1a' : {
-                            'name' : ('', 'u2'),
-                            '0d' : ('', 'w'),
-                            '15' : ('', 'x'),
-                            '1d' : ('', 'y'),
-                            '25' : ('', 'z'),
-                        },
-                        '25' : ('', 'u3'),
-                        '2a' : {
-                            'name' : ('', 'u4'),
-                            '0a' : ('', 'u0'),
-                            '10' : ('', 'u1'),
-                            '20' : ('', 'u2'),
-                        },
-                    },
-                    '5a' : {
-                        'name' : ('', 'u6'),
-                        '0d' : ('', 'u'),
-                        '15' : ('', 'v'),
-                        '1d' : ('', 'w'),
-                        '25' : ('', 'x'),
-                        '2d' : ('', 'y'),
-                        '35' : ('', 'z'),
-                    },
-                    '192' : ('', 'u7'),
-                },
-                '52' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '58' : ('', 'u4'),
-            },
-            '382' : {   # ground mesh generator
-                'name' : ('', 'ground_mesh_generator'),
-                '08' : ('', 'ground_polygon'),
-                '10' : ('', 'ground_mesh'),
-                '18' : ('', 'texture_mapping_1'),
-                '20' : ('', 'texture_mapping_2'),
-                '28' : ('', 'u4'),
-                '35' : ('', 'u5'),
-                '38' : ('', 'u6'),
-                '45' : ('', 'u7'),
-                '4d' : ('', 'u8'),
-                '55' : ('', 'u9'),
-                '5d' : ('', 'u10'),
-                '73f2' : ('', 'u11'),
-            },
-            '38a' : {   # texture mapping
-                'name' : ('', 'texture_mapping'),
-                '0a' : ('', 'texture_file'),
-                '15' : ('', 'u0'),
-                '1a' : {
-                    'name' : ('', 'u1'),
-                    '0d' : ('', 'u1'),
-                    '15' : ('', 'u2'),
-                },
-            },
-            '392' : {   # water mesh
-                'name' : ('', 'water_mesh'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '22' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-
-            },
-            '3c2' : {   # collision shape
-                'name' : ('', 'collision_shape'),
-                '0a' : {
-                    'name' : ('', 'u0','box_shape'),
-                    '0d' : ('', 'w','left'),
-                    '15' : ('', 'x','bottom'),
-                    '1d' : ('', 'y','right'),
-                    '25' : ('', 'z','top'),
-                },
-                '12' : {
-                    'name' : ('', 'u1','ball_shape'),
-                    '0a' : {
-                        'name' : ('', 'u0','offsets'),
-                        '0d' : ('', 'y','x'),
-                        '15' : ('', 'z','y'),
-                    },
-                    '15' : ('', 'u1','radius'),
-                },
-                '1a' : {
-                    'name' : ('', 'u2','polygon_shape'),
-                    '0a' : {
-                        'name' : ('', 'u0','vertex','point'),
-                        '0d' : ('', 'y','x','x_pos','x_position'),
-                        '15' : ('', 'z','y','y_pos','y_position'),
-                    },
-                    '10' : ('', 'u3'),
-                    '18' : ('', 'u4'),
-                },
-            },
-            '3ca' : {   # collision shape 2
-                'name' : ('', 'collision_shape_2'),
-                '10' : ('', 'u0'),
-                '18' : ('', 'u1'),
-                '20' : ('', 'u2'),
-                '28' : ('', 'u3'),
-                '35' : ('', 'w'),
-                '3d' : ('', 'x'),
-                '40' : ('', 'interaction_type'),
-                '4a' : {
-                    'name' : ('', 'lua_chunk_0','on_collision_chunk'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '52' : {
-                    'name' : ('', 'lua_chunk_1','off_collision_chunk'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '58' : ('', 'z'),
-                '62' : {
-                    'name' : ('', 'lua_chunk_2'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '6d' : ('', 'u4'),
-                '70' : ('', 'u5'),
-            },
-            '3d2' : {   # damage
-                'name' : ('', 'damage'),
-                '08' : ('', 'damage'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-                '20' : ('', 'u3'),
-                '28' : ('', 'u4'),
-                '35' : ('', 'u5'),
-                '3d' : ('', 'u6'),
-                '40' : ('', 'u7'),
-                '48' : ('', 'u8'),
-            },
-            '3da' : {   # health
-                'name' : ('', 'health'),
-                '08' : ('', 'health_multiplier'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                }
-            },
-            '3e2' : {   # bone controlled collision shape
-                'name' : ('', 'bone_controlled_collision_shape'),
-                '08' : ('', 'u0'),
-                '12' : ('', 'bone_name'),
-            },
-            '3ea' : {   # object link controller
-                'name' : ('', 'object_link_controller'),
-                '0a' : ('', 'u0'),
-                '12' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '22' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '2a' : {
-                    'name' : ('', 'u4'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-            },
-            '412' : {   # light
-                'name' : ('', 'light'),
-                '08' : ('', 'u0'),
-                '15' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '25' : ('', 'u3'),
-                '2d' : ('', 'u4'),
-                '32' : {
-                    'name' : ('', 'u5'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '3d' : ('', 'u6'),
-            },
-            '41a' : { # shadow
-                'name' : ('', 'shadow'),
-                '0d' : ('', 'u0'),
-                '15' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-            },
-            '462' : {   # sound effect
-                'name' : ('', 'sound_effect'),
-                '0a' : ('', 'sound'),
-                '15' : ('', 'u0'),
-                '1d' : ('', 'u1'),
-            },
-            '4aa' : {   # animation controller
-                'name' : ('', 'animation_controller'),
-                '08' : ('', 'model_component'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-            },
-            '4b2' : {   # char anim controller
-                'name' : ('', 'char_anim_controller'),
-                '20' : ('', 'u0'),
-                '28' : ('', 'u1'),
-                '30' : ('', 'u2'),
-                '38' : ('', 'u3'),
-                '40' : ('', 'u4'),
-                '48' : ('', 'u5'),
-            },
-            '4ba' : {   # char controller
-                'name' : ('', 'char_controller'),
-                '08' : ('', 'char_anim_controller_1'),
-                '10' : ('', 'swingable_weapon_controller'),
-                '1d' : ('', 'run_speed'),
-                '25' : ('', 'jump_height'),
-                '2d' : ('', 'u0'),
-                '30' : ('', 'u1'),
-                '38' : ('', 'hero_entity'),
-                '40' : ('', 'swing'),
-                '48' : ('', 'char_anim_controller_2'),
-                '50' : ('', 'lift_animation'),
-                '58' : ('', 'drop_animation'),
-                '60' : ('', 'throw_animation'),
-                '68' : ('', 'hurt_animation'),
-                '70' : ('', 'push_animation'),
-                '78' : ('', 'die_animation'),
-                '85' : ('', 'sprint_speed'),
-                '8d' : ('', '?spin_jump_height'),
-                '90' : ('', 'u2'),
-                '98' : ('', 'u3'),
-                'a0' : ('', 'u4'),
-
-            },
-            '4c2' : {   # entity
-                'name' : ('', 'entity'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '4ca' : {   # bush controller
-                'name' : ('', 'bush_controller'),
-                '08' : ('', 'touched_animation'),
-                '10' : ('', 'u0'),
-                '18' : ('', 'u1'),
-            },
-            '4d2' : {   # elevator controller
-                'name' : ('', 'elevator_controller'),
-                '08' : ('', 'utility_shape_component'),
-                '10' : ('', 'u0'),
-            },
-            '4da' : {   # pressure trigger
-                'name' : ('', 'pressure_trigger'),
-                '0d' : ('', 'u0'),
-                '12' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '1a' : ('', 'u1'),
-                '20' : ('', 'u2'),
-            },
-            '4f2' : {   # ?monster entity
-                'name' : ('', '?monster_entity'),
-                '0a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '12' : ('', 'u0'),
-                '18' : ('', 'u2'),
-                '20' : ('', 'u3'),
-            },
-            '4fa' : {   # physics object
-                'name' : ('', 'physics_object'),
-                '08' : ('', 'u0','enabled'),
-                '12' : {
-                    'name' : ('', 'u1'),
-                    '0d' : ('', 'u0'),
-                    '15' : ('', 'u1'),
-                },
-                '1d' : ('', 'u2'),
-                '25' : ('', 'u3','ground_friction'),
-                '2d' : ('', 'u4','air_friction'),
-                '35' : ('', 'u5','speed'),
-                '38' : ('', 'u6','can_roll'),
-                '45' : ('', 'u7','bounciness'),
-            },
-            '4e2' : {   # door controller
-                'name' : ('', 'door_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '20' : ('', 'u2'),
-                '28' : ('', 'u3'),
-                '30' : ('', 'u4'),
-            },
-            '4ea' : {   # program
-                'name' : ('', 'program'),
-                '08' : ('', 'u0'),
-                '12' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '18' : ('', 'u1'),
-                '20' : ('', 'u2','event'),
-            },
-            '502' : {   # breakable object
-                'name' : ('', 'breakable_object'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-                '22' : ('', 'u3'),
-            },
-            '50a' : {   # entity controller
-                'name' : ('', 'entity_controller'),
-                '08' : ('', 'entity_component'),
-                '10' : ('', 'animation_controller_component'),
-                '18' : ('', 'u2','walk_animation'),
-                '20' : ('', 'collision_shape'),
-                '2d' : ('', 'u4'),
-                '35' : ('', 'u5'),
-                '3d' : ('', 'u6'),            
-                '40' : ('', 'u7'),
-            },
-            '512' : {   # entity action
-                'name' : ('', 'entity_action'),
-                '0a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                }
-            },
-            '51a' : {   # physics platform
-                'name' : ('', 'physics_platform'),
-                '0d' : ('', 'w'),
-                '15' : ('', 'x'),
-                '1d' : ('', 'y'),
-                '25' : ('', 'z'),
-            },
-            '522' : {   # entity info
-                'name' : ('', 'entity_info'),
-                '0a' : ('', 'name'),
-            },
-            '52a' : {   # hero entity
-                'name' : ('', 'hero_entity'),
-                '0a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                }
-            },
-            '642' : {   # file
-                'name' : ('', 'file'),
-                '0a' : ('', 'filename'),
-            },
-            '692' : {   # properties
-                'name' : ('', 'properties'),
-                '0a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                }
-            },
-            '7d2' : {   # particle emitter
-                'name' : ('', 'particle_emitter'),
-                '10' : ('', 'particle'),
-                '18' : ('', 'u1'),
-                '20' : ('', 'u2'),
-                '28' : ('', 'u3'),
-                '30' : ('', 'u4'),
-                '3a' : {
-                    'name' : ('', 'u5'),
-                    '08' : ('', 'u0'),
-                    '12' : {
-                        'name' : ('', 'u1', 'color', 'colour'),
-                        '0d' : ('', 'w','red'),
-                        '15' : ('', 'x','green'),
-                        '1d' : ('', 'y','blue'),
-                        '25' : ('', 'z','brightness'),
-                    },
-                    '1d' : ('', 'u2'),
-                    '25' : ('', 'u3'),
-                    '2d' : ('', 'u4'),
-                    '35' : ('', 'u5'),
-                    '3a' : {
-                        'name' : ('', 'u6'),
-                        '0d' : ('', 'u0'),
-                        '15' : ('', 'u1'),
-                        '1d' : ('', 'u2'),
-                    }
-                },
-                '40' : ('', 'u6'),
-                '4a' : {
-                    'name' : ('', 'u7'),
-                    '0d' : ('', 'u0'),
-                    '15' : ('', 'u1'),
-                    '1d' : ('', 'u2'),
-                },
-                '52' : {
-                    'name' : ('', 'u8'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-            },
-            '7da' : {   # particle
-                'name' : ('', 'particle'),
-                '0a' : ('', 'name'),
-                '15' : ('', 'u0'),
-            },
-            '7ea' : {   # fire emitter
-                'name' : ('', 'fire_emitter'),
-                '08' : ('', 'particle_emitter'),
-                '18' : ('', 'light'),
-                '2a' : {
-                    'name' : ('', 'u0'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '35' : ('', 'u1'),
-                '3d' : ('', 'u2'),
-                '42' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '4a' : {
-                    'name' : ('', 'u4'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-            },
-            '7f2' : {   # simple glow
-                'name' : ('', 'simple_glow'),
-                '0a' : {
-                    'name' : ('', 'u0','color','colour'),
-                    '0d' : ('', 'w','red'),
-                    '15' : ('', 'x','green'),
-                    '1d' : ('', 'y','blue'),
-                    '25' : ('', 'z','brightness'),
-                },
-                '15' : ('', 'u1','glow_radius','radius'),
-                '18' : ('', 'u2'),
-                '25' : ('', 'u3'),
-                '2d' : ('', 'u4'),
-                '35' : ('', 'u5'),
-                '3a' : {
-                    'name' : ('', 'u6'),
-                    '0d' : ('', 'y'),
-                    '15' : ('', 'z'),
-                },
-            },
-            '802' : {   # orbit controller
-                'name' : ('', 'orbit_controller'),
-                '0a' : {
-                    'name' : ('', 'u0'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '15' : ('', 'speed'),
-                '1d' : ('', 'radius'),
-            },
-            '972' : {   # monster controller
-                'name' : ('', 'monster_controller'),
-                '0d' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-                '20' : ('', 'u3'),
-            },
-            '97a' : {   # walking monster controller
-                'name' : ('', 'walking_monster_controller'),
-                '08' : ('', 'walk_animation'),
-            },
-            '982' : {   # charging monster controller
-                'name' : ('', 'charging_monster_controller'),
-                '08' : ('', 'walk_animation'),
-                '10' : ('', 'charge_animation'),
-                '18' : ('', 'run_animation'),
-                '25' : ('', 'u0'),
-                '2d' : ('', 'u1'),
-            },
-            '98a' : {    #t
-                'name' : ('', 'temp1'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u2'),
-                '18' : ('', 'u3'),
-                '20' : ('', 'u4'),
-                '28' : ('', 'u5'),
-            },
-            '992' : {   # attack
-                'name' : ('', 'attack'),
-                '08' : ('', 'keyframe_animation_component'),
-                '10' : ('', 'u0'),
-                '18' : ('', 'u1'),
-                '20' : ('', 'u2'),
-                '2d' : ('', 'u3'),
-                '35' : ('', 'u4'),
-                '3d' : ('', 'u5'),
-                '45' : ('', 'u6'),
-                '4d' : ('', 'u7'),
-                '55' : ('', 'u8'),
-                '5a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '65' : ('', 'u9'),
-                '6d' : ('', 'u10'),
-            },
-            '9a2' : {   # skelly monster controller
-                'name' : ('', 'skelly_monster_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '9aa' : {   # static monster controller
-                'name' : ('', 'static_monster_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '9b2' : {   # shooting monster controller
-                'name' : ('', 'shooting_monster_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '9ba' : {   # bat monster controller
-                'name' : ('', 'bat_monster_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '9c2' : {   # bouncing monster controller
-                'name' : ('', 'bouncing_monster_controller'),
-                '08' : ('', 'jump_animation'),
-                '10' : ('', 'land_animation'),
-                '1d' : ('', 'u0'),
-                '25' : ('', 'u1'),
-            },
-            '9ca' : {   # monster death controller
-                'name' : ('', 'monster_death_controller'),
-                '08' : ('', 'particle_emitter_component'),
-            },
-            '9d2' : {   # generic monster controller
-                'name' : ('', 'generic_monster_controller'),
-                '08' : ('', 'walk_animation'),
-            },
-            'c82' : {   # swingable weapon
-                'name' : ('', 'swingable_weapon'),
-                '08' : ('', 'linked_model_component_number'),
-                '10' : ('', 'u1'),
-                '20' : ('', 'u2'),
-                '28' : ('', 'u3'),
-                '30' : ('', 'u4'),
-                '38' : ('', 'u5'),
-                '40' : ('', 'u6'),
-                '48' : ('', 'u7'),
-                '55' : ('', 'w'),
-                '5d' : ('', 'x'),
-                '65' : ('', 'y'),
-                '6d' : ('', 'z'),
-                '72' : {
-                    'name' : ('', 'u8'),
-                    '0d' : ('', 'u0'),
-                    '15' : ('', 'u1'),
-                    '1d' : ('', 'u2'),
-                    '25' : ('', 'u3'),
-                }
-            },
-            'c8a' : {   # swingable weapon controller
-                'name' : ('', 'swingable_weapon_controller'),
-                '08' : ('', 'parent_model'),
-                '12' : ('', 'bone'),
-                '1a' : ('', 'child_model'),
-            },
-            'c92' : {   # swing
-                'name' : ('', 'swing'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-                '35' : ('', 'u3'),
-                '3d' : ('', 'u4'),
-            },
-            'c9a' : {   # weapon glow
-                'name' : ('', 'weapon_glow'),
-                '08' : ('', 'u0'),
-                '12' : {
-                    'name' : ('', 'u1'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '25' : ('', 'u3'),
-            },
-            'ca2' : {   # weapon trail
-                'name' : ('', 'weapon_trail'),
-                '0a' : {
-                    'name' : ('', 'u0'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                }
-            },
-            'fa2' : {   # portal
-                'name' : ('', 'portal'),
-                '0a' : ('', 'target_level'),
-                '12' : ('', 'spawnpoint'),
-                '18' : ('', 'touchable'),
-                '20' : ('', 'collision_shape_component'),
-            },
-            'faa' : {   # spawnpoint
-                'name' : ('', 'spawnpoint'),
-                '08' : ('', 'u0'),
-                '12' : ('', 'u1'),
-            },
-            'fb2' : {   # collectable item
-                'name' : ('', 'collectable_item'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                },
-                '22' : ('', 'name'),
-                '2a' : ('', '?model','item'),
-                '30' : ('', 'u0'),
-            },
-            'fca' : {   # item drop
-                'name' : ('', 'item_drop'),
-                '0a' : ('', 'name'),
-                '12' : ('', 'identifier'),
-                '1a' : {   # item
-                    'name' : ('', 'item'),
-                    '0a' : ('', 'item_type','object'),
-                    '12' : ('', 'identifier'),
-                    '1d' : ('', 'u0'),
-                    '20' : ('', 'u1'),
-                    '28' : ('', 'amount'),
-                },
-                '20' : ('', 'u0'),
-                '28' : ('', 'u1'),
-            },
-            'fda' : {   # portal effect
-                'name' : ('', 'portal_effect'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '22' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-            },
-            '1132' : {   # magic bolt
-                'name' : ('', 'magic_bolt'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '18' : ('', 'u2'),
-                '22' : {
-                    'name' : ('', 'u3'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '2d' : ('', 'u4'),
-            },
-            '113a' : {   # magic explosion
-                'name' : ('', 'magic_explosion'),
-                '08' : ('', 'u0','particle_emitter'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '25' : ('', 'u3'),
-                '2d' : ('', 'u4'),
-            },
-            '1142' : {   # skill
-                'name' : ('', 'skill'),
-                '08' : ('', 'u0'),
-                '12' : {
-                    'name' : ('', 'u1'),
-                    '0d' : ('', 'x'),
-                    '15' : ('', 'y'),
-                    '1d' : ('', 'z'),
-                },
-                '1a' : ('', 'cast_animation'),
-
-            },
-            '114a' : {   # magic spell cast
-                'name' : ('', 'magic_spell_cast'),
-                '08' : ('', 'particle_emitter'),
-                '10' : ('', 'u0'),
-            },
-            '1152' : {   # fire breath
-                'name' : ('', 'fire_breath'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-                '1a' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                }
-            },
-            '115a' : {   # projectile controller
-                'name' : ('', 'projectile_controller'),
-                '08' : ('', 'u0'),
-                '10' : ('', 'u1'),
-            },
-            '1162' : {   # magic bomb
-                'name' : ('', 'magic_bomb'),
-                '0a' : {
-                    'name' : ('', 'u0'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                }
-            },
-            '116a' : {   # magic hookshot
-                'name' : ('', 'magic_hookshot'),
-                '08' : ('', 'particle_emitter_component'),
-                '10' : ('', 'u0'),
-                '18' : ('', 'u1'),
-                '22' : {
-                    'name' : ('', 'u2'),
-                    '0d' : ('', 'w'),
-                    '15' : ('', 'x'),
-                    '1d' : ('', 'y'),
-                    '25' : ('', 'z'),
-                },
-                '28' : ('', 'u3'),
-            },
-            '1172' : { #t
-                'name' : ('', 'temp0'),
-                '0a' : {
-                    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-                    '0a' : ('', 'main_chunk', 'main'),
-                    '12' : ('', 'secondary_chunk', 'secondary'),
-                }
-            },
-
-        },
-        '22' : {
-            'name' : ('', 'position'),
-            '0d' : ('', 'x','x_pos','x_position'),
-            '15' : ('', 'y','y_pos','y_position'),
-        },
-        '2d' : ('', 'z','z_pos','z_position'),
-        '35' : ('', 'rotation'),
-        '3d' : ('', 'scale'),
-        '42' : {
-            'name' : ('', 'u0','shape'),
-            '0d' : ('', 'w','left'),
-            '15' : ('', 'x','bottom'),
-            '1d' : ('', 'y','right'),
-            '25' : ('', 'z','top'),
-        },
-        '48' : ('', 'hidden'),
-        '52' : {
-            'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-            '0a' : ('', 'main_chunk', 'main'),
-            '12' : ('', 'secondary_chunk', 'secondary'),
-        },
+    "scl": {
+        "Name": ("0a", ""),
+        "Template": ("12", "", "ObjectTemplate"),
+        "ImportedLibrary": ("1a", ""),
+        "Texture": ("22", "", "Texture"),
+        "Program": ("2a", "", "Program"),
     },
 
-    '15' : ('', 'u0'),
-
-},
-
-
-'1a' : ('', '?dependancy','require','load','scl'),
-
-
-'2a' : {
-    'name' : ('', 'lua_chunk', 'chunk', 'lua'),
-    '0a' : ('', 'main_chunk', 'main'),
-    '12' : ('', 'secondary_chunk', 'secondary'),
-    '1a' : ('', 'program_name'),
-},
-
-
-},
-
-
-"gdata" : {
-
-'name' : ('', 'root'),
-
-
-'0a' : {   # collectable item
-
-    'name' : ('', 'collectable_item'),
-    '12' : ('', 'name'),
-    '1a' : ('', 'title'),
-    '22' : ('', 'subtitle'),
-    '2a' : ('', 'info'),
-    # item types : 1=non-collectable,2=sword,3=armour,4=trinket,5=collectable
-    '08' : ('', 'item_type'),
-    '30' : ('', 'unique_item'),
-    '38' : ('', 'min_damage'),
-    '40' : ('', 'max_damage'),
-    '48' : ('if the player has an item with sequence_position=3,\nhe cannot pick up an item with sequence_position=1', 'sequence_position'),
-
-},
-'12' : {   # skill
-
-    'name' : ('', 'skill'),
-    '0a' : ('', 'name'),
-    '12' : ('', 'title'),
-    '1a' : ('', 'subtitle'),
-    '20' : ('', 'u0'),
-    '28' : ('', 'min_damage'),
-    '30' : ('', 'max_damage'),
-
-},
-'1a' : {   # quest
-
-    'name' : ('', 'quest'),
-    '0a' : ('', 'name'),
-    '12' : ('', 'title'),
-    '22' : ('', 'target_level'),
-
-},
-'22' : {   # entity info
-
-    'name' : ('', 'entity_info'),
-    '0a' : ('', 'name'),
-    '12' : ('', 'title'),
-    '18' : ('', 'u0'),
-    '20' : ('', 'u1'),
-    '28' : ('', 'u2'),
-    '30' : ('', 'u3'),
-    '3d' : ('', 'u4'),
-    '45' : ('', 'u5'),
-
-},
-'2a' : {   # compass info
-
-    'name' : ('', 'compass_info'),
-    '08' : ('', 'u0'),
-    '12' : ('', 'name'),
-    '1a' : ('', 'target_level'),
-    '22' : ('', 'target_object'),
-    '2a' : ('', 'u1'),
-    '30' : ('', 'u2'),
-    '3a' : {   # waypoints
-
-        'name' : ('', 'waypoint'),
-        '0a' : ('', 'target_level'),
-        '12' : ('', 'target_object'),
-
+    "scene" : {
+        "Object": ("0a", "", "SceneObject"),
+        "ObjectLibrary": ("12", "", "ObjectLibrary"),
+        "Bounds": ("1a", "", "SceneBounds"),
+        "Group" : ("22", "", "SceneObjectGroup"),
+        "OnLoad": ("2a", "", "Program"),
     },
 
-},
-
-
-},
-
-
-"gopt" : {
-
-'name' : ('', 'root'),
-
-'0a' : {   # music definition
-    'name' : ('', 'music_definition'),
-    '0a' : ('', 'name'),
-    '12' : {
-        'name' : ('', 'file'),
-        '0a' : ('', 'filename'),
-        '15' : ('', 'u0'),
-    }
-},
-
-'32' : {
-    'name' : ('', 'button_positions'),
-    '12' : {
-        'name' : ('', 'button'),
-        '0a' : ('', 'name'),
-        '1a' : {
-            'name' : ('', 'position'),
-            '0d' : ('', 'left'),
-            '15' : ('', 'right'),
-            '1d' : ('', 'bottom'),            
-            '25' : ('', 'top'),
-        },
-    },
-},
-
-'3a' : {
-    'name' : ('', 'buttons'),
-    '12' : {
-        'name' : ('', 'button'),
-        '0a' : ('', 'name'),
-        '1a' : {
-            'name' : ('', 'position'),
-            '0d' : ('', 'left'),
-            '15' : ('', 'right'),
-            '1d' : ('', 'bottom'),            
-            '25' : ('', 'top'),
-        },
-    }
-}
-
-},
-
-
-"gplayer" : {
-
-'name' : ('', 'root'),
-'0a' : ('', 'save_name'),
-'10' : ('', 'percentage'),
-'19' : ('', 'u0'),
-'22' : {
-    'name' : ('', '?player'),
-    '0a' : {
-        'name' : ('', 'inventory'),
-        '10' : ('', 'u0'),
-        '20' : ('', 'u1'),
-        '28' : ('', 'u2'),
-        '30' : ('', 'u3'),
-        '38' : ('', 'u4'),
-        '5a' : {
-            'name' : ('', 'item'),
-            '0a' : ('', 'name'),
-            '10' : ('', 'u0'),
-            },
-        '7a' : ('', 'spell'),
-        '82' : ('', 'selected_spell'),
-        '8a' : ('', 'sword_trinket'),
-        '92' : ('', 'armour_trinket'),
-        '9a' : ('', 'magic_trinket'),
-        'a0' : ('', 'u5'),
-        'a8' : ('', 'u6'),
-        'b0' : ('', 'u7'),
-        },
-    '12' : {
-        'name' : ('', 'scene_info'),
-        '0a' : ('', 'scene'),
-        '10' : ('', 'u0'),
-        '1a' : {
-            'name' : ('', 'flags'),
-            '0a' : ('', 'name'),
-            },
-        '20' : ('', 'u8'),
-        '28' : ('', 'u9'),
-        },
-    '1a' : ('', 'u0'),
-    '22' : ('', 'u1'),
-    '2a' : ('', 'u2'),
-    '3a' : {
-        'name' : ('', 'u3'),
-        '0a' : ('', 'u0'),
-        '10' : ('', 'u1'),
-        },
-    '42' : {
-        'name' : ('', 'flags'),
-        '0a' : ('', 'flag'),
-        },
-    '4a' : ('', 'last_menu_screen'),
-    '52' : ('', 'u4'),
-    '5a' : ('', 'u5'),
-    '62' : {
-        'name' : ('', 'quest_text'),
-        '0a' : ('', 'name'),
-        '12' : ('', 'text'),
-        },
-    '6a' : ('', 'u6'),
-    '70' : ('', 'u7'),
-    '78' : ('', 'u8'),
-    '82' : ('', 'u9'),
-    '8a' : ('', 'u10'),
-    '90' : ('', 'u11'),
-    '98' : ('', 'u12'),
-    'a0' : ('', 'u13'),
-    'a8' : ('', 'u14'),
-    },
-'2a' : ('', 'u0'),
-'32' : ('', 'u1'),
-'3a' : ('', 'u2'),
-'42' : ('', 'u3'),
-'4a' : ('', 'u4'),
-'52' : {
-    'name' : ('', 'u5'),
-    '09' : ('', 'u0'),
-    },
-'5d' : ('', 'u6'),
-'62' : {
-        'name' : ('', 'achievement_counter'),
-        '0a' : ('', 'name'),
-        '10' : ('', 'count'),
-    },
-'72' : ('', 'player_id'),
-
-},
-
-
-"gstate" : {
-
-'name' : ('', 'root'),
-
-'0a' : {
-    'name' : ('', 'inventory'),
-    '28' : ('', 'soul_shards'),
-    '5a' : {
-        'name' : ('', 'item'),
-        '0a' : ('', 'name'),
-    },
-    '7a' : ('', 'skill'),
-    '82' : ('', 'selected_skill'),
-    '8a' : ('', 'sword_trinket'),
-},
-'1a' : ('', 'spawn_level'),
-'22' : ('', 'spawnpoint'),
-'4a' : ('', 'u1'),
-
-},
-
-
-"scmap" : {
-
-'name' : ('', 'root'),
-
-'12' : {   # zone
-
-    'name' : ('', 'zone'),
-    '0a' : ('', 'name'),
-    '12' : ('', 'title'),
-    '1a' : {   # scene
-
-        'name' : ('', 'scene'),
-        '12' : ('', 'name'),
-        '1a' : {   # connected scene
-
-            'name' : ('', 'connected_scene'),
-            '0a' : ('', 'name'),
-            # directions: 1=right 2=top-right 3=top 3=top-left etc.
-            '10' : ('which direction to the connected map tile?\n1=right 2=top-right 3=top 3=top-left etc.', 'direction'),
-            '18' : ('', 'u1'),
-            '20' : ('enemies in this scene will be this level', 'base_enemy_level'),
-        },
-
-        # features: 1=town 2=??? 3=boss
-        '20' : ('', 'feature'),
-        '28' : ('', 'u1'),
-        '30' : ('enemies in this scene will be this level', 'u2', 'base_enemy_level'),
-        '3a' : ('', 'music'),
-        '40' : ('', 'u3', 'portal'),
-        '48' : ('', 'treasures'),
-        '52' : ('', 'title'),
-        '58' : ('', 'u5'),
-        },
-
-    '20' : ('', 'sequence'),
-    '2a' : ('', 'default_music'),
-    }
-},
-
-
-"sounds" : {
-
-'name' : ('', 'root'),
-
-'0a' : {
-    'name' : ('', 'sound'),
-    '0a' : ('', 'name'),
-    '12' : ('', 'file'),
-    '1d' : ('', 'u0'),
-    '25' : ('', 'u1'),
-}
-
-},
-
-
-"fnt" : {
-
-'name' : ('', 'root'),
-
-'0a' : ('', 'fnt_file'),
-'12' : {
-    'name' : ('', 'u0'),
-    '0a' : ('', 'pvr_file'),
-    '10' : ('', 'u0'),
-    '20' : ('', 'u2'),
-    },
-'1a' : {
-    'name' : ('', 'character'),
-    '08' : ('ascii decimal code point', 'character_code'),
-    '12' : {
-        'name' : ('defines how the character is rendered', 'rendering'),
-        '0d' : ('offset from previous character in a string', 'left_offset'), # left_padding
-        '15' : ('offset from baseline', 'bottom_offset'), # bottom_padding
-        '1d' : ('visual width', 'x_scaling'),
-        '25' : ('visual height', 'y_scaling'),
-        },
-    '18' : ('', 'u0'),
-    '22' : {
-        'name' : ('defines what part of the font texture is used for this char\ne.g. 0.5 = half the width of the image', 'mapping'),
-        '0d' : ('left side', 'origin_x'),
-        '15' : ('bottom', 'origin_y'),
-        '1d' : ('right side', 'width'),
-        '25' : ('top', 'height'),
-        },
-    },
-'22' : ('', 'u1'),
-'28' : ('', 'u2'),
-'32' : {
-    'name' : ('', 'u3'),
-        '0d' : ('', 'w'),
-        '15' : ('', 'x'),
-        '1d' : ('', 'y'),
-        '25' : ('', 'z'),
+    "gdata": {
+        "Item": ("0a", "", "Item"),
+        "Skill": ("12", "", "Skill"),
+        "Quest": ("1a", "", "Quest"),
+        "EntityClass": ("22", "", "EntityClass"),
+        "GuideTarget": ("2a", "", "GuideTarget"),
     },
 
-},
+    "gopt": {
+        "Playlist": ("0a", "", "MusicPlaylist"),
+        "MusicEnabled": ("10", ""),
+        "SoundEnabled": ("18", ""),
+        "MusicVolume": ("25", ""),
+        "SoundVolume": ("2d", ""),
+        "PhoneControlsLayout": ("32", "", "GUIViewLayout"),
+        "PadControlsLayout": ("3a", "", "GUIViewLayout"),
+        "GuideUnlocked": ("40", ""),
+        "CoinDoublerUnlocked": ("48", ""),
+        "NoAdsUnlocked": ("50", ""),
+    },
+
+    "gplayer": {
+        "Name": ("0a", ""),
+        "ExperienceLevel": ("10", ""),
+        "TimePlayed": ("19", ""),
+        "GameState": ("22", "", "GameState"),
+        "EquippedWeaponName": ("2a", ""),
+        "EquippedArmorName": ("32", ""),
+        "WeaponTrinketName": ("3a", ""),
+        "ArmorTrinketName": ("42", ""),
+        "CurrentLevelTitle": ("4a", ""),
+        "LastPlayedTime": ("52", "", "DateTime"),
+        "PercentCompleted": ("5d", ""),
+        "Counter": ("62", "", "PlayerProfile_Counter"),
+        "CheatEnabled": ("68", ""),
+        "Identifier": ("72", ""),
+    },
+
+    "gstate": {
+        "CharacterState": ("0a", "", "CharacterState"),
+        "LevelState": ("12", "", "LevelState"),
+        "CurrentLevel": ("1a", ""),
+        "CurrentSpawnPoint": ("22", ""),
+        "CurrentMapNodeName": ("2a", ""),
+        "QuestState": ("3a", "", "QuestState"),
+        "Properties": ("42", "", "StateProperties"),
+        "SelectedMenuTab": ("4a", ""),
+        "CarriedObjectTemplate": ("52", ""),
+        "CarriedObjectIdentifier": ("5a", ""),
+        "QuestText": ("62", "", "QuestText"),
+        "PreviousPortalLevel": ("6a", ""),
+        "MenuButtonFlashing": ("70", ""),
+        "SkillToggleButtonFlashing": ("78", ""),
+        "FlashingItemName": ("82", ""),
+        "FlashingSkillName": ("8a", ""),
+        "GuideEnabled": ("90", ""),
+        "GuideToggled": ("98", ""),
+        "CoinDoublerEnabled": ("a0", ""),
+        "CoinDoublerToggled": ("a8", ""),
+    },
+
+    "scmap": {
+        "Zone": ("12", "", "MapZone"),
+    },
+
+    "sounds": {
+        "Effect": ("0a", "", "SoundEffect"),
+    },
+
+    "fnt": {
+        "Name": ("0a", ""),
+        "Texture": ("12", "", "Texture"),
+        "Glyph": ("1a", "", "Font_Glyph"),
+        "Kerning": ("22", ""),
+        "Height": ("28", ""),
+        "BoundingBox": ("32", "", "Rectangle"),
+    },
+
+    "atlas": {
+        "Name": ("0a", ""),
+        "PixelFormat": ("10", ""),
+        "Subtexture": ("1a", "", "Texture_Subtexture"),
+        "ImageType": ("20", ""),
+        "ConversionInfo": ("2a", "", "Texture_ConversionInfo"),
+    },
+
+    # scene section
+
+    "Scene" : {
+        "Object": ("0a", "", "SceneObject"),
+        "ObjectLibrary": ("12", "", "ObjectLibrary"),
+        "Bounds": ("1a", "", "SceneBounds"),
+        "Group": ("22", "", "SceneObjectGroup"),
+        "OnLoad": ("2a", "", "Program"),
+    },
+
+    "SceneObject" : {
+        "TemplateName": ("0a", "[optional] reference to a template to initialize the object from"),
+        "Identifier": ("12", "used to refer to this object"),
+        "Component": ("1a", "", "Component"),
+        "Position": ("22", "", "Vector2"),
+        "Depth": ("2d", ""),
+        "Rotation": ("35", ""),
+        "Scaling": ("3d", ""),
+        "LocalAabb": ("42", "", "Rectangle"),
+        "Hidden": ("48", ""),
+        "OnLoad": ("52", "", "Program"),
+    },
+
+    "ObjectLibrary": {
+        "Name": ("0a", ""),
+        "Template": ("12", "", "ObjectTemplate"),
+        "ImportedLibrary": ("1a", ""),
+        "Texture": ("22", "", "Texture"),
+        "Program": ("2a", "", "Program"),
+    },
+
+    "ObjectTemplate": {
+        "Object": ("0a", "", "SceneObject"),
+        "Scaling": ("15", ""),
+    },
+
+    "SceneBounds" : {
+        "Top" : ("0d", "level max height"),
+        "Left" : ("15", ""),
+        "Right" : ("1d", ""),
+        "Bottom" : ("25", ""),
+    },
+
+    "SceneObjectGroup": {
+        "Identifier": ("0a", ""),
+        "ObjectIdentifier": ("12", ""),
+        "Hidden": ("18", ""),
+        "OnLoad": ("22", "", "Program"),
+        "CanBecomeActive": ("28", ""),
+        "Locked": ("30", ""),
+    },
+
+    # gamedata section
+
+    "GameData": {
+        "Item": ("0a", "", "Item"),
+        "Skill": ("12", "", "Skill"),
+        "Quest": ("1a", "", "Quest"),
+        "EntityClass": ("22", "", "EntityClass"),
+        "GuideTarget": ("2a", "", "GuideTarget"),
+    },
+
+    "Item": {
+        # "CONSUMABLE": 1
+        #     "WEAPON": 2
+        #     "ARMOR": 3
+        #     "TRINKET": 4
+        #     "QUEST": 5
+        #     "Type_MIN": 1
+        #     "Type_MAX": 5
+        #     "Type_ARRAYSIZE": 6
+        "Type": ("08", ""),
+        "Name": ("12", ""),
+        "Title": ("1a", ""),
+        "ShortDescription": ("22", ""),
+        "Description": ("2a", ""),
+        "Unique": ("30", ""),
+        "MinDamage": ("38", ""),
+        "MaxDamage": ("40", ""),
+        "Level": ("48", ""),
+    },
+
+    "Skill": {
+        "Name": ("0a", ""),
+        "Title": ("12", ""),
+        "Description": ("1a", ""),
+        "ManaCost": ("20", ""),
+        "MinDamage": ("28", ""),
+        "MaxDamage": ("30", ""),
+    },
+
+    "Quest": {
+        "Name": ("0a", ""),
+        "Title": ("12", ""),
+        "FollowUpQuest": ("1a", ""),
+        "MapLocation": ("22", ""),
+    },
+
+    "EntityClass": {
+        "Name": ("0a", ""),
+        "Title": ("12", ""),
+        "LevelHidden": ("18", ""),
+        "Freezable": ("20", ""),
+        "Stunnable": ("28", ""),
+        "Grabbable": ("30", ""),
+        "MagicResistance": ("3d", ""),
+        "PhysicalResistance": ("45", ""),
+    },
+
+    "GuideTarget": {
+        # "UNKNOWN": 0
+        #     "QUESTGET": 1
+        #     "QUEST": 2
+        #     "SPELL": 3
+        #     "KEY": 4
+        #     "Type_MIN": 0
+        #     "Type_MAX": 4
+        #     "Type_ARRAYSIZE": 5
+        "Type": ("08", ""),
+        "Name": ("12", ""),
+        "LevelName": ("1a", ""),
+        "ObjectIdentifier": ("22", ""),
+        "CarryObjectIdentifier": ("2a", ""),
+        "ShowOnlyAfterSceneLoad": ("30", ""),
+        "PortalHint": ("3a", "", "GuideTarget_LevelObject"),
+    },
+
+    "GuideTarget_LevelObject": {
+        "LevelName": ("0a", ""),
+        "ObjectIdentifier": ("12", ""),
+    },
+
+    # gameoptions section
 
 
-"atlas" : {
+    "GameOptions": {
+        "Playlist": ("0a", "", "MusicPlaylist"),
+        "MusicEnabled": ("10", ""),
+        "SoundEnabled": ("unk", ""),
+        "MusicVolume": ("unk", ""),
+        "SoundVolume": ("unk", ""),
+        "PhoneControlsLayout": ("32", "", "GUIViewLayout"),
+        "PadControlsLayout": ("3a", "", "GUIViewLayout"),
+        "GuideUnlocked": ("unk", ""),
+        "CoinDoublerUnlocked": ("unk", ""),
+        "NoAdsUnlocked": ("unk", ""),
+    },
 
-    'name' : ('', 'root'),
+    "MusicPlaylist": {
+        "Name": ("0a", ""),
+        "Track": ("12", "", "MusicTrack"),
+    },
 
-    '0a' : ('', 'atlas_file'),
-    '10' : ('', 'u0'),
-    '1a' : {
-        'name' : ('', 'mapping'),
-        '0a' : ('', 'icon'),
-        '12' : {
-            'name' : ('', 'size'),
-            '0d' : ('', 'w'),
-            '15' : ('', 'x'),
-            '1d' : ('', 'y'),
-            '25' : ('', 'z'),
-            },
-        '1d' : ('', 'u0'),
-        },
-    '20' : ('', 'u1'),
+    "MusicTrack": {
+        "ResourceName": ("0a", ""),
+        "Volume": ("15", ""),
+    },
 
-},
+    "GUIViewLayout": {
+        "Identifier": ("0a", ""),
+        "Subview": ("12", "", "GUIViewLayout"),
+        "Margins": ("1a", "", "GUIMargins"),
+    },
+
+    "GUIMargins": {
+        "Left": ("0d", ""),
+        "Right": ("15", ""),
+        "Bottom": ("1d", ""),
+        "Top": ("25", ""),
+    },
+
+    # player profile section
+
+    "PlayerProfile": {
+        "Name": ("0a", ""),
+        "ExperienceLevel": ("10", ""),
+        "TimePlayed": ("19", ""),
+        "GameState": ("22", "", "GameState"),
+        "EquippedWeaponName": ("2a", ""),
+        "EquippedArmorName": ("32", ""),
+        "WeaponTrinketName": ("3a", ""),
+        "ArmorTrinketName": ("42", ""),
+        "CurrentLevelTitle": ("4a", ""),
+        "LastPlayedTime": ("52", "", "DateTime"),
+        "PercentCompleted": ("5d", ""),
+        "Counter": ("62", "", "PlayerProfile_Counter"),
+        "CheatEnabled": ("68", ""),
+        "Identifier": ("72", ""),
+    },
+
+    "GameState": {
+        "CharacterState": ("0a", "", "CharacterState"),
+        "LevelState": ("12", "", "LevelState"),
+        "CurrentLevel": ("1a", ""),
+        "CurrentSpawnPoint": ("22", ""),
+        "CurrentMapNodeName": ("2a", ""),
+        "QuestState": ("3a", "", "QuestState"),
+        "Properties": ("42", "", "StateProperties"),
+        "SelectedMenuTab": ("4a", ""),
+        "CarriedObjectTemplate": ("52", ""),
+        "CarriedObjectIdentifier": ("5a", ""),
+        "QuestText": ("62", "", "QuestText"),
+        "PreviousPortalLevel": ("6a", ""),
+        "MenuButtonFlashing": ("70", ""),
+        "SkillToggleButtonFlashing": ("78", ""),
+        "FlashingItemName": ("82", ""),
+        "FlashingSkillName": ("8a", ""),
+        "GuideEnabled": ("90", ""),
+        "GuideToggled": ("98", ""),
+        "CoinDoublerEnabled": ("a0", ""),
+        "CoinDoublerToggled": ("a8", ""),
+    },
+
+    "CharacterState": {
+        "CurrentHealth": ("10", ""),
+        "CurrentMana": ("20", ""),
+        "CurrentCoins": ("28", ""),
+        "ExperiencePoints": ("30", ""),
+        "ExperienceLevel": ("38", ""),
+        "Item": ("5a", "", "CharacterState_ItemState"),
+        "EquippedWeapon": ("62", ""),
+        "EquippedArmor": ("6a", ""),
+        "Skill": ("7a", ""),
+        "CurrentSkill": ("82", ""),
+        "WeaponTrinket": ("8a", ""),
+        "ArmorTrinket": ("92", ""),
+        "SkillTrinket": ("9a", ""),
+        "HealthAttribute": ("a0", ""),
+        "AttackAttribute": ("a8", ""),
+        "MagicAttribute": ("b0", ""),
+    },
+
+    "CharacterState_ItemState": {
+        "Name": ("0a", ""),
+        "Count": ("10", ""),
+    },
+
+    "LevelState": {
+        "LevelName": ("0a", ""),
+        "Visited": ("10", ""),
+        "Properties": ("1a", "", "StateProperties"),
+        "NumTreasures": ("20", ""),
+        "TreasuresFound": ("28", ""),
+    },
+
+    "StateProperties": {
+        "Flag": ("0a", ""),
+    },
+
+    "QuestState": {
+        "QuestName": ("0a", ""),
+        "Completed": ("10", ""),
+    },
+
+    "QuestText": {
+        "QuestName": ("0a", ""),
+        "Line": ("12", ""),
+    },
+
+    "PlayerProfile_Counter": {
+        "Name": ("0a", ""),
+        "Value": ("10", ""),
+    },
+
+    # map section
+
+    "Map": {
+        "Zone": ("12", "", "MapZone"),
+    },
+
+    "MapZone": {
+        "Name": ("0a", ""),
+        "Title": ("12", ""),
+        "Node": ("1a", "", "MapNode"),
+        "ExperienceLevel": ("20", ""),
+        "Music": ("2a", ""),
+    },
+
+    "MapNode": {
+        # "TYPE_DEFAULT": 0
+        # "TYPE_TOWN": 1
+        # "TYPE_WAYPOINT": 2
+        # "TYPE_BOSS": 3
+        # "Type_MIN": 0
+        # "Type_MAX": 3
+        # "Type_ARRAYSIZE": 4
+        "Position": ("unk", ""),
+        "LevelName": ("12", ""),
+        "Portal": ("1a", "", "MapNode_Portal"),
+        "Type": ("20", ""),
+        "Hidden": ("28", ""),
+        "ExperienceLevel": ("30", ""),
+        "Music": ("3a", ""),
+        "HasPortal": ("40", ""),
+        "NumTreasures": ("48", ""),
+        "Title": ("52", ""),
+        "IgnoreInStatistics": ("58", ""),
+    },
+
+    "MapNode_Portal": {
+        # "E": 1
+        # "NE": 2
+        # "N": 3
+        # "NW": 4
+        # "W": 5
+        # "SW": 6
+        # "S": 7
+        # "SE": 8
+        # "Direction_MIN": 1
+        # "Direction_MAX": 8
+        # "Direction_ARRAYSIZE": 9
+        # "FORWARDS_AND_BACKWARDS": 0
+        # "FORWARDS_ONLY": 1
+        # "BACKWARDS_ONLY": 2
+        # "PassDirection_MIN": 0
+        # "PassDirection_MAX": 2
+        # "PassDirection_ARRAYSIZE": 3
+        "DestinationName": ("0a", ""),
+        "Direction": ("10", ""),
+        "PassDirection": ("18", ""),
+        "IgnoreInNodePositioning": ("20", ""),
+    },
+
+    # sound section
+
+    "SoundLibrary": {
+        "Effect": ("0a", "", "SoundEffect"),
+    },
+
+    "SoundEffect": {
+        "Name": ("0a", ""),
+        "ResourceName": ("12", ""),
+        "Volume": ("1d", ""),
+        "MinPlayInterval": ("25", ""),
+    },
+
+    # font section
+
+    "Font": {
+        "Name": ("0a", ""),
+        "Texture": ("12", "", "Texture"),
+        "Glyph": ("1a", "", "Font_Glyph"),
+        "Kerning": ("22", ""),
+        "Height": ("28", ""),
+        "BoundingBox": ("32", "", "Rectangle"),
+    },
+
+    "Font_Glyph": {
+        "CharCode": ("08", ""),
+        "DrawBounds": ("12", "", "Rectangle"),
+        "HorizAdvance": ("18", ""),
+        "TextureBounds": ("22", "", "Rectangle"),
+    },
+
+    "Texture": {
+        "Name": ("0a", ""),
+        "PixelFormat": ("10", ""),
+        "Subtexture": ("1a", "", "Texture_Subtexture"),
+        "ImageType": ("20", ""),
+        "ConversionInfo": ("2a", "", "Texture_ConversionInfo"),
+    },
+
+    "Texture_Subtexture": {
+        "Name": ("0a", ""),
+        "Bounds": ("12", "", "Rectangle"),
+        "Resolution": ("1d", ""),
+    },
+
+    "Texture_ConversionInfo": {
+        "Width": ("unk", ""),
+        "Height": ("unk", ""),
+        "ImageType": ("unk", ""),
+        "PixelFormat": ("unk", ""),
+    },
+
+
+
+
+    # general section
+
+    "Program": {
+        "String": ("0a", ""),
+        "Bytes": ("12", ""),
+        "Name": ("1a", ""),
+    },
+
+    "Vector2": {
+        "X": ("0d", ""),
+        "Y": ("15", ""),
+    },
+
+    "Vector3": {
+        "X": ("0d", ""),
+        "Y": ("15", ""),
+        "Z": ("1d", ""),
+    },
+
+    "Circle": {
+        "Center": ("0a", "", "Vector2"),
+        "Radius": ("15", ""),
+    },
+
+    "Rectangle": {
+        "X": ("0d", ""),
+        "Y": ("15", ""),
+        "Width": ("1d", ""),
+        "Height": ("25", ""),
+    },
+
+    "Square": {
+        "X": ("08", ""),
+        "Y": ("10", ""),
+        "Width": ("18", ""),
+        "Height": ("20", ""),
+    },
+
+    "Box": {
+        "X": ("0d", ""),
+        "Y": ("15", ""),
+        "Z": ("1d", ""),
+        "Width": ("25", ""),
+        "Height": ("2d", ""),
+        "Depth": ("35", ""),
+    },
+
+    "Polygon": {
+        "Vertex": ("0a", "", "Vector2"),
+        "Convex": ("10", ""),
+        "Closed": ("18", ""),
+    },
+
+    "FloatColor": {
+        "R": ("0d", ""),
+        "G": ("15", ""),
+        "B": ("1d", ""),
+        "A": ("25", ""),
+    },
+
+    "Mesh": {
+        "NumVertices": ("08", ""),
+        "NumFaces": ("10", ""),
+        "Indices": ("1a", "", "Square"),
+        "Vertices": ("22", "", "Square"),
+        "Normals": ("2a", "", "Square"),
+        "TexCoordSet": ("32", "", "Square"),
+        "VertexColors": ("unk", ""),
+        "BoneIndices": ("unk", ""),
+        "BoneWeights": ("unk", ""),
+        "Material": ("52", "", "MeshMaterial"),
+        "BoundingBox": ("5a", "", "Box"),
+        "VertexData": ("192", ""),
+        "IndexData": ("19a", ""),
+    },
+
+    "MeshMaterial": {
+        "AmbientColor": ("0a", "", "FloatColor"),
+        "DiffuseColor": ("12", "", "FloatColor"),
+        "SpecularColor": ("1a", "", "FloatColor"),
+        "Shininess": ("25", ""),
+        "Texture": ("2a", "", "Texture"),
+    },
+
+    "DateTime": {
+        "SecondsSinceReferenceDate": ("09", ""),
+    },
+
+
+
+    # component section
+
+    "Component": {
+        "ClassName": ("0a", ""),
+        "Identifier": ("10", ""),
+        "Label": ("1a", ""),
+        "ParentComponentIdentifier": ("20", ""),
+
+
+        "SpriteComponent": ("322", "", "SpriteComponent"),
+        "ModelComponent": ("32a", "", "ModelComponent"),
+        "KeyframeAnimationComponent": ("332", "", "KeyframeAnimationComponent"),
+        "BlendAnimationComponent": ("33a", "", "BlendAnimationComponent"),
+        "ModelTransformControllerComponent": ("342", "", "ModelTransformControllerComponent"),
+        "GroundPolygonComponent": ("372", "", "GroundPolygonComponent"),
+        "GroundMeshComponent": ("37a", "", "GroundMeshComponent"),
+        "GroundMeshGeneratorComponent": ("382", "", "GroundMeshGeneratorComponent"),
+        "TextureMappingComponent": ("38a", "", "TextureMappingComponent"),
+        "WaterMeshComponent": ("392", "", "WaterMeshComponent"),
+        "ShapeComponent": ("3c2", "", "ShapeComponent"),
+        "CollisionShapeComponent": ("3ca", "", "CollisionShapeComponent"),
+        "DamageComponent": ("3d2", "", "DamageComponent"),
+        "HealthComponent": ("3da", "", "HealthComponent"),
+        "BoneControlledCollisionShapeComponent": ("3e2", "", "BoneControlledCollisionShapeComponent"),
+        "ObjectLinkControllerComponent": ("3ea", "", "ObjectLinkControllerComponent"),
+        "LightComponent": ("412", "", "LightComponent"),
+        "ShadowComponent": ("41a", "", "ShadowComponent"),
+        "SoundEffectComponent": ("462", "", "SoundEffectComponent"),
+        "AnimationControllerComponent": ("4aa", "", "AnimationControllerComponent"),
+        "CharAnimControllerComponent": ("4b2", "", "CharAnimControllerComponent"),
+        "CharControllerComponent": ("4ba", "", "CharControllerComponent"),
+        "EntityComponent": ("4c2", "", "EntityComponent"),
+        "BushControllerComponent": ("4ca", "", "BushControllerComponent"),
+        "ElevatorControllerComponent": ("4d2", "", "ElevatorControllerComponent"),
+        "PressureTriggerComponent": ("4da", "", "PressureTriggerComponent"),
+        "DoorControllerComponent": ("4e2", "", "DoorControllerComponent"),
+        "ProgramComponent": ("4ea", "", "ProgramComponent"),
+        "MonsterEntityComponent": ("4f2", "", "MonsterEntityComponent"),
+        "PhysicsObjectComponent": ("4fa", "", "PhysicsObjectComponent"),
+        "BreakableObjectComponent": ("502", "", "BreakableObjectComponent"),
+        "EntityControllerComponent": ("50a", "", "EntityControllerComponent"),
+        "EntityActionComponent": ("512", "", "EntityActionComponent"),
+        "PhysicsPlatformComponent": ("51a", "", "PhysicsPlatformComponent"),
+        "EntityInfoComponent": ("522", "", "EntityInfoComponent"),
+        "HeroEntityComponent": ("52a", "", "HeroEntityComponent"),
+        "BackgroundComponent": ("642", "", "BackgroundComponent"),
+        "PropertiesComponent": ("692", "", "PropertiesComponent"),
+        "ParticleEmitterComponent": ("7d2", "", "ParticleEmitterComponent"),
+        "ParticleComponent": ("7da", "", "ParticleComponent"),
+        "FireEmitterComponent": ("7ea", "", "FireEmitterComponent"),
+        "SimpleGlowComponent": ("7f2", "", "SimpleGlowComponent"),
+        "ParticleObjectComponent": ("7fa", "", "ParticleObjectComponent"),
+        "OrbitControllerComponent": ("802", "", "OrbitControllerComponent"),
+        "ParticleFieldComponent": ("80a", "", "ParticleFieldComponent"),
+        "MonsterControllerComponent": ("972", "", "MonsterControllerComponent"),
+        "WalkingMonsterControllerComponent": ("97a", "", "WalkingMonsterControllerComponent"),
+        "ChargingMonsterControllerComponent": ("982", "", "ChargingMonsterControllerComponent"),
+        "SnappingMonsterControllerComponent": ("98a", "", "SnappingMonsterControllerComponent"),
+        "AttackComponent": ("992", "", "AttackComponent"),
+        "LeapingMonsterControllerComponent": ("99a", "", "LeapingMonsterControllerComponent"),
+        "SkellyMonsterControllerComponent": ("9a2", "", "SkellyMonsterControllerComponent"),
+        "StaticMonsterControllerComponent": ("9aa", "", "StaticMonsterControllerComponent"),
+        "ShootingMonsterControllerComponent": ("9b2", "", "ShootingMonsterControllerComponent"),
+        "BatMonsterControllerComponent": ("9ba", "", "BatMonsterControllerComponent"),
+        "BouncingMonsterControllerComponent": ("9c2", "", "BouncingMonsterControllerComponent"),
+        "MonsterDeathControllerComponent": ("9ca", "", "MonsterDeathControllerComponent"),
+        "GenericMonsterControllerComponent": ("9d2", "", "GenericMonsterControllerComponent"),
+        "SwingableWeaponComponent": ("c82", "", "SwingableWeaponComponent"),
+        "SwingableWeaponControllerComponent": ("c8a", "", "SwingableWeaponControllerComponent"),
+        "SwingComponent": ("c92", "", "SwingComponent"),
+        "WeaponGlowComponent": ("c9a", "", "WeaponGlowComponent"),
+        "WeaponTrailComponent": ("ca2", "", "WeaponTrailComponent"),
+        "PortalComponent": ("fa2", "", "PortalComponent"),
+        "SpawnPointComponent": ("faa", "", "SpawnPointComponent"),
+        "CollectableItemComponent": ("fb2", "", "CollectableItemComponent"),
+        "TouchableComponent": ("fc2", "", "TouchableComponent"),
+        "ItemDropComponent": ("fca", "", "ItemDropComponent"),
+        "OverlayTextComponent": ("fd2", "", "OverlayTextComponent"),
+        "PortalEffectComponent": ("fda", "", "PortalEffectComponent"),
+        "MagicBoltComponent": ("1132", "", "MagicBoltComponent"),
+        "MagicExplosionComponent": ("113a", "", "MagicExplosionComponent"),
+        "SkillComponent": ("1142", "", "SkillComponent"),
+        "MagicSpellCastComponent": ("114a", "", "MagicSpellCastComponent"),
+        "FireBreathComponent": ("1152", "", "FireBreathComponent"),
+        "ProjectileControllerComponent": ("115a", "", "ProjectileControllerComponent"),
+        "MagicBombComponent": ("1162", "", "MagicBombComponent"),
+        "MagicHookshotComponent": ("116a", "", "MagicHookshotComponent"),
+        "SpellComponent": ("1172", "", "SpellComponent"),
+        "DimensionObjectComponent": ("117a", "", "DimensionObjectComponent"),
+        "DimensionSpellComponent": ("1182", "", "DimensionSpellComponent"),
+    },
+
+    "SpriteComponent": {
+        "TextureName": ("0a", ""),
+    },
+    "ModelComponent": {
+        "Name": ("0a", ""),
+        "YRotation": ("15", ""),
+        "EmissionFactor": ("1d", ""),
+        "XRotation": ("25", ""),
+        "ShatterColor": ("2a", "", "FloatColor"),
+        "Origin": ("32", "", "Vector3"),
+        "Transparent": ("38", ""),
+        "DiffuseColor": ("42", "", "FloatColor"),
+    },
+    "KeyframeAnimationComponent": {
+        "ModelId": ("08", ""),
+        "Name": ("12", ""),
+        "Repeating": ("18", ""),
+        "SpeedMultiplier": ("25", ""),
+        "Running": ("28", ""),
+    },
+    "BlendAnimationComponent": {
+        "Animation1Id": ("08", ""),
+        "Animation2Id": ("10", ""),
+        "BlendTime": ("1d", ""),
+        "ReverseBlendTime": ("25", ""),
+    },
+    "ModelTransformControllerComponent": {
+        "ModelId": ("08", ""),
+        "Origin": ("12", "", "Vector3"),
+        "RotationAxis": ("1a", "", "Vector3"),
+        "RotationAngle": ("25", ""),
+        "RotationSpeed": ("2d", ""),
+    },
+    "GroundPolygonComponent": {
+        "Vertex": ("unk", ""),
+        "Polygon": ("12", "", "Polygon"),
+        "Collides": ("18", ""),
+        "MinDepth": ("25", ""),
+        "MaxDepth": ("2d", ""),
+        "OnCollide": ("32", "", "Program"),
+        "Friction": ("3d", ""),
+        "UnsafeGround": ("40", ""),
+    },
+    "GroundMeshComponent": {
+        "VertexData": ("unk", ""),
+        "Indices": ("unk", ""),
+        "Mesh": ("unk", ""),
+        "LocalAabb": ("3a", "", "Rectangle"),
+        "SurfaceMesh": ("42", "", "Mesh"),
+        "FrontMesh": ("4a", "", "Mesh"),
+        "Color": ("52", "", "FloatColor"),
+        "Transparent": ("58", ""),
+    },
+    "GroundMeshGeneratorComponent": {
+        # "MESH_TYPE_PLAIN": 0
+        #     "MESH_TYPE_ROUNDED_HAT": 1
+        #     "Type_MIN": 0
+        #     "Type_MAX": 1
+        #     "Type_ARRAYSIZE": 2
+        "GroundPolygonId": ("08", ""),
+        "TargetMeshId": ("10", ""),
+        "FrontTextureMappingId": ("18", ""),
+        "SurfaceTextureMappingId": ("20", ""),
+        "RandomSeed": ("28", ""),
+        "HorizNoise": ("35", ""),
+        "MeshType": ("38", ""),
+        "SurfaceWidth": ("45", ""),
+        "HatHeight": ("4d", ""),
+        "HatWidthOffset1": ("55", ""),
+        "HatWidthOffset2": ("5d", ""),
+        "unk": ("73f2", ""),
+    },
+    "TextureMappingComponent": {
+        "TextureName": ("0a", ""),
+        "Scale": ("15", ""),
+        "Offset": ("1a", "", "Vector2"),
+    },
+    "WaterMeshComponent": {
+        "BoundsShapeId": ("08", ""),
+        "TextureMappingId": ("10", ""),
+        "FrontColor": ("1a", "", "FloatColor"),
+        "SurfaceColor": ("22", "", "FloatColor"),
+    },
+    "ShapeComponent": {
+        "Rectangle": ("0a", "", "Rectangle"),
+        "Circle": ("12", "", "Circle"),
+        "Polygon": ("1a", "", "Polygon"),
+    },
+    "CollisionShapeComponent": {
+        # "SPECIAL_TYPE_NONE": 0
+        #     "SPECIAL_TYPE_PICKUP": 1
+        #     "SPECIAL_TYPE_PUSHABLE": 7
+        #     "SPECIAL_TYPE_USE": 4
+        #     "SPECIAL_TYPE_PORTAL": 2
+        #     "SPECIAL_TYPE_COLLECTABLE": 3
+        #     "SPECIAL_TYPE_BLOCKS_DAMAGE": 5
+        #     "SPECIAL_TYPE_GRABBABLE": 6
+        #     "SpecialType_MIN": 0
+        #     "SpecialType_MAX": 7
+        #     "SpecialType_ARRAYSIZE": 8
+        "IsGround": ("10", ""),
+        "Collides": ("18", ""),
+        "ReceivesDamage": ("20", ""),
+        "InflictsDamage": ("28", ""),
+        "MinDepth": ("35", ""),
+        "MaxDepth": ("3d", ""),
+        "SpecialType": ("40", ""),
+        "OnCollide": ("4a", "", "Program"),
+        "OnCollisionEnd": ("52", "", "Program"),
+        "Enabled": ("58", ""),
+        "OnReceiveDamage": ("62", "", "Program"),
+        "Friction": ("6d", ""),
+        "UnsafeGround": ("70", ""),
+    },
+    "DamageComponent": {
+        "MinDamage": ("08", ""),
+        "DamageType": ("10", ""),
+        "SpecialDamageType": ("18", ""),
+        "StandAlone": ("20", ""),
+        "MaxDamage": ("28", ""),
+        "PhysicalDamageFactor": ("35", ""),
+        "MagicDamageFactor": ("3d", ""),
+        "IgnoreTargetImmunity": ("40", ""),
+        "CanBeBlocked": ("48", ""),
+    },
+    "HealthComponent": {
+        # "HEALTH_TYPE_ENEMY": 0
+        #     "HEALTH_TYPE_FRIENDLY": 1
+        #     "Type_MIN": 0
+        #     "Type_MAX": 1
+        #     "Type_ARRAYSIZE": 2
+        "MaxHealth": ("08", ""),
+        "HEALTHTYPE": ("10", ""),
+        "BarOffset": ("1a", "", "Vector3"),
+    },
+    "BoneControlledCollisionShapeComponent": {
+        "ControllingModelId": ("08", ""),
+        "ControllingBoneName": ("12", ""),
+    },
+    "ObjectLinkControllerComponent": {
+        "TargetObjectIdentifier": ("0a", ""),
+        "TargetBoneIdentifier": ("12", ""),
+        "LocalOffset": ("1a", "", "Vector3"),
+        "WorldOffset": ("22", "", "Vector3"),
+        "LocalRotation": ("2a", "", "Vector3"),
+    },
+    "LightComponent": {
+        # "TYPE_UNKNOWN": 0
+        #     "TYPE_AMBIENT": 1
+        #     "TYPE_DIRECTIONAL": 2
+        #     "TYPE_POINT": 3
+        #     "TYPE_OVERLAY": 4
+        #     "Type_MIN": 0
+        #     "Type_MAX": 4
+        #     "Type_ARRAYSIZE": 5
+        "Type": ("08", ""),
+        "Intensity": ("15", ""),
+        "Color": ("1a", "", "FloatColor"),
+        "LinearAttenuation": ("25", ""),
+        "QuadraticAttenuation": ("2d", ""),
+        "Offset": ("32", "", "Vector3"),
+        "Radius": ("3d", ""),
+    },
+    "ShadowComponent": {
+        "WidthRadius": ("0d", ""),
+        "DepthRadius": ("15", ""),
+        "Offset": ("1a", "", "Vector3"),
+    },
+    "SoundEffectComponent": {
+        "Name": ("0a", ""),
+        "Delay": ("15", ""),
+        "Volume": ("1d", ""),
+    },
+    "AnimationControllerComponent": {
+        "ModelId": ("08", ""),
+        "DefaultAnimationId": ("10", ""),
+        "SelfUpdate": ("18", ""),
+    },
+    "CharAnimControllerComponent": {
+        "StandAnimationId": ("20", ""),
+        "WalkAnimationId": ("28", ""),
+        "JumpAnimationId": ("30", ""),
+        "FallAnimationId": ("38", ""),
+        "CastAnimationId": ("40", ""),
+        "AirJumpAnimationId": ("48", ""),
+    },
+    "CharControllerComponent": {
+        "DefaultAnimationControllerId": ("08", ""),
+        "RightWeaponControllerId": ("10", ""),
+        "NormalRunSpeed": ("1d", ""),
+        "JumpSpeed": ("25", ""),
+        "NormalMaxJumpTime": ("2d", ""),
+        "LeftWeaponControllerId": ("30", ""),
+        "EntityId": ("38", ""),
+        "SwingComponentId": ("40", ""),
+        "LiftAnimationControllerId": ("48", ""),
+        "LiftAnimationId": ("50", ""),
+        "DropAnimationId": ("58", ""),
+        "ThrowAnimationId": ("60", ""),
+        "HurtAnimationId": ("68", ""),
+        "DieAnimationId": ("70", ""),
+        "PushAnimationId": ("78", ""),
+        "FastRunSpeed": ("85", ""),
+        "FastMaxJumpTime": ("8d", ""),
+        "JumpSoundId": ("90", ""),
+        "AirJumpSoundId": ("98", ""),
+        "JumpLandSoundId": ("a0", ""),
+    },
+    "EntityComponent": {
+        "FacingDirection": ("08", ""),
+        "PhysicsEnabled": ("10", ""),
+    },
+    "BushControllerComponent": {
+        "WobbleAnimationId": ("08", ""),
+        "WobbleSoundId": ("10", ""),
+        "CutSoundId": ("18", ""),
+    },
+    "ElevatorControllerComponent": {
+        # "MODE_INACTIVE": 1
+        #     "MODE_WAIT": 2
+        #     "MODE_CONTINUOUS": 3
+        #     "Mode_MIN": 1
+        #     "Mode_MAX": 3
+        #     "Mode_ARRAYSIZE": 4
+        "ElevationShapeId": ("08", ""),
+        "Mode": ("10", ""),
+    },
+    "PressureTriggerComponent": {
+        "MaxHeightOffset": ("0d", ""),
+        "OnPress": ("12", "", "Program"),
+        "OnRelease": ("1a", "", "Program"),
+        "StayPressed": ("20", ""),
+    },
+    "DoorControllerComponent": {
+        "AnimationControllerId": ("08", ""),
+        "AnimationId": ("10", ""),
+        "Open": ("20", ""),
+        "CloseSoundId": ("28", ""),
+        "OpenSoundId": ("30", ""),
+    },
+    "ProgramComponent": {
+        # "TRIGGER_NONE": 0
+        #     "TRIGGER_ACTIVATE": 1
+        #     "TRIGGER_DEACTIVATE": 9
+        #     "TRIGGER_LOAD": 10
+        #     "TRIGGER_USE": 2
+        #     "TRIGGER_POPUP_OK": 3
+        #     "TRIGGER_POPUP_CANCEL": 4
+        #     "TRIGGER_DESTROY": 5
+        #     "TRIGGER_RECEIVE_DAMAGE": 6
+        #     "TRIGGER_BLOCK_DAMAGE": 7
+        #     "TRIGGER_INFLICT_DAMAGE": 8
+        #     "Trigger_MIN": 0
+        #     "Trigger_MAX": 10
+        #     "Trigger_ARRAYSIZE": 11
+        "ExecuteOnce": ("08", ""),
+        "Program": ("12", "", "Program"),
+        "Enabled": ("18", ""),
+        "Trigger": ("20", ""),
+    },
+    "MonsterEntityComponent": {
+        "OnKill": ("0a", "", "Program"),
+        "OnHurt": ("12", "", "Program"),
+        "GivesExperience": ("18", ""),
+        "DefaultDeathAnimation": ("20", ""),
+    },
+    "PhysicsObjectComponent": {
+        "PhysicsEnabled": ("08", ""),
+        "GravityDirection": ("12", "", "Vector2"),
+        "GravityMagnitude": ("1d", ""),
+        "GroundDeceleration": ("25", ""),
+        "AirDeceleration": ("2d", ""),
+        "MaxSpeed": ("35", ""),
+        "AllowRotation": ("38", ""),
+        "Elasticity": ("45", ""),
+    },
+    "BreakableObjectComponent": {
+        "BreaksOnImpact": ("08", ""),
+        "NumHitsToBreak": ("10", ""),
+        "RequiredDamageType": ("18", ""),
+        "OnBreak": ("22", "", "Program"),
+    },
+    "EntityControllerComponent": {
+        # "MOVEMENT_BEHAVIOR_NONE": 1
+        #     "MOVEMENT_BEHAVIOR_ROAM": 2
+        #     "MOVEMENT_BEHAVIOR_FOLLOW": 3
+        #     "MOVEMENT_BEHAVIOR_FIGHT": 4
+        #     "MovementBehavior_MIN": 1
+        #     "MovementBehavior_MAX": 4
+        #     "MovementBehavior_ARRAYSIZE": 5
+        "EntityId": ("08", ""),
+        "AnimationControllerId": ("10", ""),
+        "DefaultMoveAnimationId": ("18", ""),
+        "RoamAreaId": ("20", ""),
+        "DefaultMoveSpeed": ("2d", ""),
+        "DefaultAcceleration": ("35", ""),
+        "TargetingDistance": ("3d", ""),
+        "MovementBehavior": ("40", ""),
+    },
+    "EntityActionComponent": {
+        "OnActivate": ("0a", "", "Program"),
+    },
+    "PhysicsPlatformComponent": {
+        "Mass": ("0d", ""),
+        "SpringForce": ("15", ""),
+        "DecelerationForce": ("1d", ""),
+        "MinSpeed": ("25", ""),
+    },
+    "EntityInfoComponent": {
+        "EntityClass": ("0a", ""),
+    },
+    "HeroEntityComponent": {
+        "OnItemGet": ("0a", "", "Program"),
+    },
+    "BackgroundComponent": {
+        "TextureName": ("0a", ""),
+    },
+    "PropertiesComponent": {
+        "OnLoad": ("0a", "", "Program"),
+    },
+    "ParticleEmitter": {
+        # "TYPE_NONE": 0
+        #     "TYPE_BLAST": 1
+        #     "TYPE_SPARK": 2
+        #     "TYPE_TRAIL": 3
+        #     "TYPE_WHOOSH": 4
+        #     "TYPE_FOUNTAIN": 5
+        #     "Type_MIN": 0
+        #     "Type_MAX": 5
+        #     "Type_ARRAYSIZE": 6
+        "Type": ("08", ""),
+        "BaseColor": ("12", "", "FloatColor"),
+        "Parameter": ("1d", ""),
+        "HueVariance": ("25", ""),
+        "SaturationVariance": ("2d", ""),
+        "LightnessVariance": ("35", ""),
+        "OriginOffset": ("3a", "", "Vector3"),
+    },
+    "ParticleEmitterComponent": {
+        "ParticleId": ("10", ""),
+        "ModelBindingId": ("18", ""),
+        "MaxParticles": ("20", ""),
+        "ParentEmitterId": ("28", ""),
+        "DestroyWhenFinished": ("30", ""),
+        "Emitter": ("3a", "", "ParticleEmitter"),
+        "LocalSystem": ("40", ""),
+        "Gravity": ("4a", "", "Vector3"),
+        "Rotation": ("52", "", "Vector3"),
+    },
+    "ParticleComponent": {
+        "TextureName": ("0a", ""),
+        "Size": ("15", ""),
+    },
+    "FireEmitterComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "Origin": ("12", "", "Vector3"),
+        "LightId": ("18", ""),
+        "Color": ("2a", "", "FloatColor"),
+        "ParticleInterval": ("35", ""),
+        "ParticleMaxAge": ("3d", ""),
+        "ParticleSpread": ("42", "", "Vector3"),
+        "Origin3": ("4a", "", "Vector3"),
+    },
+    "SimpleGlowComponent": {
+        "Color": ("0a", "", "FloatColor"),
+        "Size": ("15", ""),
+        "NumSegments": ("18", ""),
+        "Depth": ("25", ""),
+        "PulseAmount": ("2d", ""),
+        "PulseTime": ("35", ""),
+        "Offset": ("3a", "", "Vector2"),
+    },
+    "ParticleObjectComponent": {
+        "ModelId": ("08", ""),
+    },
+    "OrbitControllerComponent": {
+        "RotationAxis": ("0a", "", "Vector3"),
+        "RotationSpeed": ("15", ""),
+        "OrbitDistance": ("1d", ""),
+    },
+    # "ParticleFieldComponent": { TODO: Solution for components with only extensions
+    # },
+    "MonsterControllerComponent": {
+        "WalkSpeed": ("0d", ""),
+        "AnimationControllerId": ("10", ""),
+        "EntityId": ("18", ""),
+        "RoamAreaId": ("20", ""),
+    },
+    "WalkingMonsterControllerComponent": {
+        "WalkAnimationId": ("08", ""),
+    },
+    "ChargingMonsterControllerComponent": {
+        "WalkAnimationId": ("08", ""),
+        "ChargeAnimationId": ("10", ""),
+        "RunAnimationId": ("18", ""),
+        "RunSpeed": ("25", ""),
+        "RunAcceleration": ("2d", ""),
+    },
+    "SnappingMonsterControllerComponent": {
+        "StandAnimationId": ("08", ""),
+        "AttackAnimationId": ("10", ""),
+        "BlendAnimationId": ("18", ""),
+        "AttackAreaId": ("20", ""),
+        "AttackSoundId": ("28", ""),
+    },
+    "AttackComponent": {
+        "AnimationId": ("08", ""),
+        "CollisionShapeId": ("10", ""),
+        "AttackAreaId": ("18", ""),
+        "SoundEffectId": ("20", ""),
+        "AttackInterval": ("2d", ""),
+        "AttackDuration": ("35", ""),
+        "DamageStartTime": ("3d", ""),
+        "DamageEndTime": ("45", ""),
+        "AnimationStartBlendTime": ("4d", ""),
+        "AnimationEndBlendTime": ("55", ""),
+        "OnAttack": ("5a", "", "Program"),
+        "DamageStartTime2": ("65", ""),
+        "DamageEndTime2": ("6d", ""),
+    },
+    "LeapingMonsterControllerComponent": {
+        "WalkAnimationId": ("08", ""),
+        "LeapAttackId": ("10", ""),
+    },
+    "SkellyMonsterControllerComponent": {
+        "CharControllerId": ("08", ""),
+        "AttackAreaId": ("10", ""),
+    },
+    "StaticMonsterControllerComponent": {
+        "AnimationId": ("08", ""),
+        "SoundId": ("10", ""),
+    },
+    "ShootingMonsterControllerComponent": {
+        "WalkAnimationId": ("08", ""),
+        "ShootAnimationId": ("10", ""),
+    },
+    "BatMonsterControllerComponent": {
+        "FlyAnimationId": ("08", ""),
+        "FlapSoundId": ("10", ""),
+    },
+    "BouncingMonsterControllerComponent": {
+        "JumpAnimationId": ("08", ""),
+        "FallAnimationId": ("10", ""),
+        "JumpAngle": ("1d", ""),
+        "JumpSpeed": ("25", ""),
+    },
+    "MonsterDeathControllerComponent": {
+        "ParticleEmitterId": ("08", ""),
+    },
+    "GenericMonsterControllerComponent": {
+        "WalkAnimationId": ("08", ""),
+    },
+    "SwingableWeaponComponent": {
+        "ModelId": ("08", ""),
+        "TrailId": ("10", ""),
+        "ImpactParticleEmitterId": ("20", ""),
+        "SwingSoundId": ("28", ""),
+        "DamageImpactSoundId": ("30", ""),
+        "GlowTrailId": ("38", ""),
+        "CollisionShapeId": ("40", ""),
+        "GlowId": ("48", ""),
+        "BaseLength": ("55", ""),
+        "GlowLength": ("5d", ""),
+        "GlowIntensity": ("65", ""),
+        "Width": ("6d", ""),
+        "GlowColor": ("72", "", "FloatColor"),
+    },
+    "SwingableWeaponControllerComponent": {
+        "ControllingModelId": ("08", ""),
+        "ControllingBoneName": ("12", ""),
+        "WeaponTemplateName": ("1a", ""),
+    },
+    "SwingComponent": {
+        "AnimationId": ("08", ""),
+        "SwingLeftWeapon": ("10", ""),
+        "SwingRightWeapon": ("18", ""),
+        "StartFrame": ("35", ""),
+        "EndFrame": ("3d", ""),
+    },
+    "WeaponGlowComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "Color": ("12", "", "FloatColor"),
+        "ParticleColor": ("1a", "", "FloatColor"),
+        "Width": ("25", ""),
+    },
+    "WeaponTrailComponent": {
+        "Color": ("0a", "", "FloatColor"),
+    },
+    "PortalComponent": {
+        "DestinationSceneName": ("0a", ""),
+        "SpawnPointName": ("12", ""),
+        "TapToEnter": ("18", ""),
+        "TriggerShapeId": ("20", ""),
+    },
+    "SpawnPointComponent": {
+        "FacingDirection": ("08", ""),
+        "SpawnOffset": ("12", "", "Vector3"),
+    },
+    "CollectableItemComponent": {
+        # "TYPE_UNKNOWN": 0
+        #     "TYPE_HEALTH_POTION": 1
+        #     "TYPE_MANA_POTION": 2
+        #     "TYPE_MAGIC_POWER": 3
+        #     "TYPE_COIN": 4
+        #     "TYPE_EXPERIENCE": 5
+        #     "Type_MIN": 0
+        #     "Type_MAX": 5
+        #     "Type_ARRAYSIZE": 6
+        "Type": ("08", ""),
+        "Value": ("10", ""),
+        "OnCollect": ("1a", "", "Program"),
+        "Identifier": ("22", ""),
+        "ItemName": ("2a", ""),
+        "RequiresPickup": ("30", ""),
+    },
+    "TouchableComponent": {
+        "TouchRadius": ("0d", ""),
+        "OnTouch": ("12", "", "Program"),
+    },
+    "ItemDropComponent_ItemDropEntry": {
+        "TemplateName": ("0a", ""),
+        "ItemIdentifier": ("12", ""),
+        "DropChance": ("1d", ""),
+        "MinCount": ("20", ""),
+        "MaxCount": ("28", ""),
+    },
+    "ItemDropComponent": {
+        "ItemName": ("0a", ""),
+        "ItemIdentifier": ("12", ""),
+        "DropEntry": ("1a", "", "ItemDropComponent_ItemDropEntry"),
+        "CanDropMultipleItems": ("20", ""),
+        "CanDropDefaultItems": ("28", ""),
+    },
+    "OverlayTextComponent": { # TODO: guess
+                             "Text": ("0a", ""),
+                             "TextOffset": ("10", ""),
+                             "SpriteName": ("1a", ""),
+                             "SpriteOffset": ("22", "", "Vector2"),
+                             },
+    "PortalEffectComponent": {
+        "PolygonId": ("08", ""),
+        "TextureMappingId": ("10", ""),
+        "Color": ("1a", "", "FloatColor"),
+        "Speed": ("22", "", "Vector3"),
+    },
+    "MagicBoltComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "SwooshSoundId": ("10", ""),
+        "HitSoundId": ("18", ""),
+        "Color": ("22", "", "FloatColor"),
+        "Speed": ("2d", ""),
+    },
+    "MagicExplosionComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "SoundId": ("10", ""),
+        "Color": ("1a", "", "FloatColor"),
+        "Radius": ("25", ""),
+        "Duration": ("2d", ""),
+    },
+    "SkillComponent": {
+        "CastFinishAnimationId": ("08", ""),
+        "Origin": ("12", "", "Vector3"),
+        "CastObjectTemplateName": ("1a", ""),
+    },
+    "MagicSpellCastComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "SoundEffectId": ("10", ""),
+    },
+    "FireBreathComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "SwooshSoundId": ("10", ""),
+        "Color": ("1a", "", "FloatColor"),
+    },
+    "ProjectileControllerComponent": {
+        "AlignObjectRotation": ("08", ""),
+        "BreakOnGroundCollision": ("10", ""),
+    },
+    "MagicBombComponent": {
+        "Color": ("0a", "", "FloatColor"),
+    },
+    "MagicHookshotComponent": {
+        "ParticleEmitterId": ("08", ""),
+        "SwooshSoundId": ("10", ""),
+        "HitSoundId": ("18", ""),
+        "Color": ("22", "", "FloatColor"),
+        "GroundHitSoundId": ("28", ""),
+    },
+    "SpellComponent": {
+        "OnCast": ("0a", "", "Program"),
+    },
+    # "DimensionObjectComponent": { TODO: Solution for components with only extensions
+    # },
+    # "DimensionSpellComponent": { TODO: Solution for components with only extensions
+    # },
+
+
+    # unused section
 
 
 }

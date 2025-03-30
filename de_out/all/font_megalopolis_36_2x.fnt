@@ -1,256 +1,252 @@
 # rifted with FR v5.7.0
 
-fnt_file : 'font_megalopolis_36_2x',
-u0{
-    pvr_file : 'font_megalopolis_36_2x',
-    u0 : 7,
-    u2 : 0,
-}
-character{
-    character_code : 49,
-    rendering{
-        left_offset : 3.5,
-        bottom_offset : 0.0,
-        x_scaling : 17.0,
-        y_scaling : 25.0,
+Name : 'font_megalopolis_36_2x'
+Texture : '\n\x16font_megalopolis_36_2x\x10\x07 \x00'
+Glyph{
+    CharCode : 49
+    DrawBounds{
+        X : 3.5
+        Y : 0.0
+        Width : 17.0
+        Height : 25.0
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.0,
-        origin_y : 0.0,
-        width : 0.1328125,
-        height : 0.1953125,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.0
+        Y : 0.0
+        Width : 0.1328125
+        Height : 0.1953125
     }
 }
-character{
-    character_code : 50,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : 0.0,
-        x_scaling : 19.5,
-        y_scaling : 26.0,
+Glyph{
+    CharCode : 50
+    DrawBounds{
+        X : 1.0
+        Y : 0.0
+        Width : 19.5
+        Height : 26.0
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.21484375,
-        origin_y : 0.0,
-        width : 0.15234375,
-        height : 0.203125,
-    }
-}
-character{
-    character_code : 51,
-    rendering{
-        left_offset : 2.0,
-        bottom_offset : -0.5,
-        x_scaling : 19.0,
-        y_scaling : 26.0,
-    }
-    u0 : 24,
-    mapping{
-        origin_x : 0.4296875,
-        origin_y : 0.0,
-        width : 0.1484375,
-        height : 0.203125,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.21484375
+        Y : 0.0
+        Width : 0.15234375
+        Height : 0.203125
     }
 }
-character{
-    character_code : 52,
-    rendering{
-        left_offset : 0.5,
-        bottom_offset : 0.0,
-        x_scaling : 22.0,
-        y_scaling : 25.0,
+Glyph{
+    CharCode : 51
+    DrawBounds{
+        X : 2.0
+        Y : -0.5
+        Width : 19.0
+        Height : 26.0
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.64453125,
-        origin_y : 0.0,
-        width : 0.171875,
-        height : 0.1953125,
-    }
-}
-character{
-    character_code : 53,
-    rendering{
-        left_offset : 2.5,
-        bottom_offset : -0.5,
-        x_scaling : 19.0,
-        y_scaling : 25.5,
-    }
-    u0 : 24,
-    mapping{
-        origin_x : 0.0,
-        origin_y : 0.20703125,
-        width : 0.1484375,
-        height : 0.19921875,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.4296875
+        Y : 0.0
+        Width : 0.1484375
+        Height : 0.203125
     }
 }
-character{
-    character_code : 54,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : -0.5,
-        x_scaling : 21.0,
-        y_scaling : 26.5,
+Glyph{
+    CharCode : 52
+    DrawBounds{
+        X : 0.5
+        Y : 0.0
+        Width : 22.0
+        Height : 25.0
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.21484375,
-        origin_y : 0.20703125,
-        width : 0.1640625,
-        height : 0.20703125,
-    }
-}
-character{
-    character_code : 55,
-    rendering{
-        left_offset : 3.0,
-        bottom_offset : 0.0,
-        x_scaling : 18.5,
-        y_scaling : 25.0,
-    }
-    u0 : 24,
-    mapping{
-        origin_x : 0.4296875,
-        origin_y : 0.20703125,
-        width : 0.14453125,
-        height : 0.1953125,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.64453125
+        Y : 0.0
+        Width : 0.171875
+        Height : 0.1953125
     }
 }
-character{
-    character_code : 56,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : -0.5,
-        x_scaling : 21.5,
-        y_scaling : 26.0,
+Glyph{
+    CharCode : 53
+    DrawBounds{
+        X : 2.5
+        Y : -0.5
+        Width : 19.0
+        Height : 25.5
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.64453125,
-        origin_y : 0.20703125,
-        width : 0.16796875,
-        height : 0.203125,
-    }
-}
-character{
-    character_code : 57,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : -0.5,
-        x_scaling : 21.0,
-        y_scaling : 26.0,
-    }
-    u0 : 24,
-    mapping{
-        origin_x : 0.0,
-        origin_y : 0.4140625,
-        width : 0.1640625,
-        height : 0.203125,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.0
+        Y : 0.20703125
+        Width : 0.1484375
+        Height : 0.19921875
     }
 }
-character{
-    character_code : 48,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : -0.5,
-        x_scaling : 21.5,
-        y_scaling : 26.0,
+Glyph{
+    CharCode : 54
+    DrawBounds{
+        X : 1.0
+        Y : -0.5
+        Width : 21.0
+        Height : 26.5
     }
-    u0 : 24,
-    mapping{
-        origin_x : 0.21484375,
-        origin_y : 0.4140625,
-        width : 0.16796875,
-        height : 0.203125,
-    }
-}
-character{
-    character_code : 95,
-    rendering{
-        left_offset : 0.0,
-        bottom_offset : -5.5,
-        x_scaling : 27.0,
-        y_scaling : 3.5,
-    }
-    u0 : 27,
-    mapping{
-        origin_x : 0.4296875,
-        origin_y : 0.4140625,
-        width : 0.2109375,
-        height : 0.02734375,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.21484375
+        Y : 0.20703125
+        Width : 0.1640625
+        Height : 0.20703125
     }
 }
-character{
-    character_code : 45,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : 6.5,
-        x_scaling : 11.5,
-        y_scaling : 6.5,
+Glyph{
+    CharCode : 55
+    DrawBounds{
+        X : 3.0
+        Y : 0.0
+        Width : 18.5
+        Height : 25.0
     }
-    u0 : 14,
-    mapping{
-        origin_x : 0.64453125,
-        origin_y : 0.4140625,
-        width : 0.08984375,
-        height : 0.05078125,
-    }
-}
-character{
-    character_code : 43,
-    rendering{
-        left_offset : 1.0,
-        bottom_offset : 0.0,
-        x_scaling : 20.5,
-        y_scaling : 19.5,
-    }
-    u0 : 23,
-    mapping{
-        origin_x : 0.0,
-        origin_y : 0.62109375,
-        width : 0.16015625,
-        height : 0.15234375,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.4296875
+        Y : 0.20703125
+        Width : 0.14453125
+        Height : 0.1953125
     }
 }
-character{
-    character_code : 46,
-    rendering{
-        left_offset : 0.5,
-        bottom_offset : -0.5,
-        x_scaling : 10.0,
-        y_scaling : 9.0,
+Glyph{
+    CharCode : 56
+    DrawBounds{
+        X : 1.0
+        Y : -0.5
+        Width : 21.5
+        Height : 26.0
     }
-    u0 : 11,
-    mapping{
-        origin_x : 0.21484375,
-        origin_y : 0.62109375,
-        width : 0.078125,
-        height : 0.0703125,
-    }
-}
-character{
-    character_code : 32,
-    rendering{
-        left_offset : 0.0,
-        bottom_offset : 0.0,
-        x_scaling : 0.0,
-        y_scaling : 0.0,
-    }
-    u0 : 9,
-    mapping{
-        origin_x : 0.0,
-        origin_y : 0.0,
-        width : 0.0,
-        height : 0.0,
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.64453125
+        Y : 0.20703125
+        Width : 0.16796875
+        Height : 0.203125
     }
 }
-u1 : '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-u2 : 43,
-u3{
-    w : -0.5,
-    x : -5.5,
-    y : 27.0,
-    z : 31.0,
+Glyph{
+    CharCode : 57
+    DrawBounds{
+        X : 1.0
+        Y : -0.5
+        Width : 21.0
+        Height : 26.0
+    }
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.0
+        Y : 0.4140625
+        Width : 0.1640625
+        Height : 0.203125
+    }
+}
+Glyph{
+    CharCode : 48
+    DrawBounds{
+        X : 1.0
+        Y : -0.5
+        Width : 21.5
+        Height : 26.0
+    }
+    HorizAdvance : 24
+    TextureBounds{
+        X : 0.21484375
+        Y : 0.4140625
+        Width : 0.16796875
+        Height : 0.203125
+    }
+}
+Glyph{
+    CharCode : 95
+    DrawBounds{
+        X : 0.0
+        Y : -5.5
+        Width : 27.0
+        Height : 3.5
+    }
+    HorizAdvance : 27
+    TextureBounds{
+        X : 0.4296875
+        Y : 0.4140625
+        Width : 0.2109375
+        Height : 0.02734375
+    }
+}
+Glyph{
+    CharCode : 45
+    DrawBounds{
+        X : 1.0
+        Y : 6.5
+        Width : 11.5
+        Height : 6.5
+    }
+    HorizAdvance : 14
+    TextureBounds{
+        X : 0.64453125
+        Y : 0.4140625
+        Width : 0.08984375
+        Height : 0.05078125
+    }
+}
+Glyph{
+    CharCode : 43
+    DrawBounds{
+        X : 1.0
+        Y : 0.0
+        Width : 20.5
+        Height : 19.5
+    }
+    HorizAdvance : 23
+    TextureBounds{
+        X : 0.0
+        Y : 0.62109375
+        Width : 0.16015625
+        Height : 0.15234375
+    }
+}
+Glyph{
+    CharCode : 46
+    DrawBounds{
+        X : 0.5
+        Y : -0.5
+        Width : 10.0
+        Height : 9.0
+    }
+    HorizAdvance : 11
+    TextureBounds{
+        X : 0.21484375
+        Y : 0.62109375
+        Width : 0.078125
+        Height : 0.0703125
+    }
+}
+Glyph{
+    CharCode : 32
+    DrawBounds{
+        X : 0.0
+        Y : 0.0
+        Width : 0.0
+        Height : 0.0
+    }
+    HorizAdvance : 9
+    TextureBounds{
+        X : 0.0
+        Y : 0.0
+        Width : 0.0
+        Height : 0.0
+    }
+}
+Kerning : '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+Height : 43
+BoundingBox{
+    X : -0.5
+    Y : -5.5
+    Width : 27.0
+    Height : 31.0
 }

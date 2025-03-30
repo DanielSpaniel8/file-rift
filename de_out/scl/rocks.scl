@@ -1,195 +1,195 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'rocks'
-library_item{
-    object{
-        name : 'hugerock1'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'hugerock1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Name : 'rocks'
+Template{
+    Object{
+        Identifier : 'hugerock1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'hugerock1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'rock1'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'rock1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'rock1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'rock1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'rock2'
-        component{
-            type : 'Model'
-            number : 103
-            3D_model{
-                name : 'rock2'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'rock2'
+        Component{
+            ClassName : 'Model'
+            Identifier : 103
+            ModelComponent{
+                Name : 'rock2'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'smallrock1'
-        component{
-            type : 'Model'
-            number : 103
-            3D_model{
-                name : 'smallrock1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'smallrock1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 103
+            ModelComponent{
+                Name : 'smallrock1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

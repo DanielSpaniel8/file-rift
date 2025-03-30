@@ -1,381 +1,381 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'lights'
-library_item{
-    object{
-        name : 'fire_150_13'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.2999999523162842
-                u2{
-                    w : 1.0
-                    x : 0.7333333492279053
-                    y : 0.5777778029441833
-                    z : 1.0
+Name : 'lights'
+Template{
+    Object{
+        Identifier : 'fire_150_13'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.2999999523162842
+                Color{
+                    R : 1.0
+                    G : 0.7333333492279053
+                    B : 0.5777778029441833
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 150.0
+                Radius : 150.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'fire_250_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 1.0
-                    x : 0.7555555701255798
-                    y : 0.5333333611488342
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'fire_250_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 1.0
+                    G : 0.7555555701255798
+                    B : 0.5333333611488342
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 250.0
+                Radius : 250.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'fire_300_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 1.0
-                    x : 0.6888889074325562
-                    y : 0.45555558800697327
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'fire_300_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 1.0
+                    G : 0.6888889074325562
+                    B : 0.45555558800697327
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 300.0
+                Radius : 300.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -100.0
-            bottom : -100.0
-            right : 200.0
-            top : 200.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -100.0
+            Y : -100.0
+            Width : 200.0
+            Height : 200.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'ice_150_13'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.2999999523162842
-                u2{
-                    w : 0.5333333611488342
-                    x : 0.7333333492279053
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'ice_150_13'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.2999999523162842
+                Color{
+                    R : 0.5333333611488342
+                    G : 0.7333333492279053
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 150.0
+                Radius : 150.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'ice_250_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 0.5333333611488342
-                    x : 0.7333333492279053
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'ice_250_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 0.5333333611488342
+                    G : 0.7333333492279053
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 250.0
+                Radius : 250.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'ice_300_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 0.5333333611488342
-                    x : 0.7333333492279053
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'ice_300_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 0.5333333611488342
+                    G : 0.7333333492279053
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 300.0
+                Radius : 300.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -100.0
-            bottom : -100.0
-            right : 200.0
-            top : 200.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -100.0
+            Y : -100.0
+            Width : 200.0
+            Height : 200.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'point_150_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 0.5
-                u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'point_150_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 0.5
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 200.0
+                Radius : 200.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'point_250_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'point_250_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 250.0
+                Radius : 250.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'point_300_15'
-        component{
-            type : 'Light'
-            number : 101
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'point_300_15'
+        Component{
+            ClassName : 'Light'
+            Identifier : 101
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 300.0
+                Radius : 300.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -100.0
-            bottom : -100.0
-            right : 200.0
-            top : 200.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -100.0
+            Y : -100.0
+            Width : 200.0
+            Height : 200.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

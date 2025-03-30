@@ -111,13 +111,13 @@ def template(match: re.Match) -> str:
 def get_info(filepath: str) -> str:
     split = filepath.split("/")
     if split[0] in block_formats.file_types:
-        format = get_bf_from_path(split)
+        format, format_name = get_bf_from_path(split)
     elif filepath[0] == ".":
         return get_template_info(filepath[1:])
     else:
         bf_path = get_bf_path(filepath)
-        format = get_bf_from_path(bf_path)
-    return skim_dict(format)
+        format, format_name = get_bf_from_path(bf_path)
+    return skim_dict(format, format_name)
 
 
 def get_bf_path(info_path: str) -> "list[str]":
@@ -188,26 +188,29 @@ def get_bf_path(info_path: str) -> "list[str]":
     return bf_path
 
 
-def get_bf_from_path(path: "list[str]") -> dict:
+def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
     file_type = path[0]
     if not file_type in block_formats.file_types:
         print("invalid filetype: "+file_type)
-        return {}
+        return {}, ""
     format = block_formats.block_formats[file_type]
+    format_name = file_type
     if len(path) > 1:
         for point in path[1:]:
-            tag = match_tagname(format, point)
+            tag, tag_is_reference, tag_reference = match_tagname(format, point)
             if tag == "00":
                 joined_path = ""
                 for i in path:
                     joined_path += "/"+i
                 print("invalid block_formats path: "+joined_path)
-                return {}
-            if isinstance(format[tag], tuple):
+                return {}, ""
+            if tag_is_reference:
+                format_name = point
+            else:
                 continue
-            format = format[tag]
+            format = block_formats.block_formats[tag_reference]
 
-    return format
+    return format, format_name
 
 
 def get_template_info(name: str) -> str:
@@ -287,7 +290,7 @@ def get_lexeme_type(lexeme: str) -> str:
     return lexeme_type
 
 
-def skim_dict (block_formats: dict) -> str:
+def skim_dict (block_formats: dict, name) -> str:
     """return the names and types of all dict items
     with a depth of 1"""
     try:
@@ -298,15 +301,14 @@ def skim_dict (block_formats: dict) -> str:
     if block_formats == {}:
         return ""
 
-    out_str = ""
+    out_str = "\n" + name + " (message)\n"
 
-    for item in items:
-        key = item[0]
-        value = item[1]
-        key_num = 0 
-        if key != "name":
-            key_num = int(key, base=16)
-
+    for key, value in items:
+        tag = value[0]
+        doc_string = value[1]
+        if tag == "unk":
+            continue
+        key_num = int(value[0], base=16)
         wire_type = "unknown"
         match key_num % 8:
             case 0:
@@ -316,28 +318,23 @@ def skim_dict (block_formats: dict) -> str:
             case 5:
                 wire_type = "float"
 
-        if isinstance(value, dict):
-            value = value["name"]
-            key_num = int(key, base=16)
-            wire_type = "message"
-        doc_string = value[0]
-        value = value[-1]
-
-        if key == "name":
-            out_str = (
-                "\n"
-                + value
-                + "(message)"
-                + "  "
+        if len(value) == 3:
+            out_str += (
+                "  "
+                + tag.rjust(3)
+                + " : "
+                + key
+                + " (message)  "
                 + doc_string.replace("\n", "\n        ")
-                + "\n")
+                + "\n"
+            )
             continue
 
         out_str += (
             "  "
-            + key.rjust(3)
+            + tag.rjust(3)
             + " : "
-            + value
+            + key
             + f" ({wire_type})"
             + "  "
             + doc_string.replace("\n", "\n        ")
@@ -347,18 +344,37 @@ def skim_dict (block_formats: dict) -> str:
     return out_str
 
 
-def match_tagname(format: dict, name: str) -> str:
-    for key, value in format.items():
-        if (
-            isinstance(value, tuple) and name in value
-            or 
-            isinstance(value, dict) and name in value["name"]
-        ):
-            if key == "name":
-                continue
-            return key
+def prettify_dict(block_formats: dict) -> str:
+    out_str = ""
+    out_str += "{\n"
+    items = block_formats.items()
+    for key, value in items:
+        out_str += (
+            "  "
+            + key + ": "
+            + str(value) + ",\n"
+        )
+    out_str += "}\n"
+    return out_str
 
-    return '00'
+
+
+def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
+    for key, value in format.items():
+        if value[0] == tag:
+            if len(value) == 3:
+                return key, True, value[2]
+            return key, False, ""
+    return "No Match", False, ""
+
+
+def match_tagname(block_format: dict, tagname: str) -> "tuple[str, bool, str]":
+    for key, value in block_format.items():
+        if key == tagname:
+            if len(value) == 3:
+                return value[0], True, value[2]
+            return value[0], False, ""
+    return "00", False, ""
 
 
 def truncate(string: str, length: int) -> str:
@@ -366,3 +382,25 @@ def truncate(string: str, length: int) -> str:
         return string[:length-1]+".."
     else:
         return string
+
+
+
+if __name__ == "__main__":
+    print(skim_dict(
+    {
+        "NumVertices": ("08", ""),
+        "NumFaces": ("10", ""),
+        "Indices": ("1a", "", "Square"),
+        "Vertices": ("22", "", "Square"),
+        "Normals": ("2a", "", "Square"),
+        "TexCoordSet": ("32", "", "Square"),
+        "VertexColors": ("unk", ""),
+        "BoneIndices": ("unk", ""),
+        "BoneWeights": ("unk", ""),
+        "Material": ("52", "", "MeshMaterial"),
+        "BoundingBox": ("5a", "", "Box"),
+        "VertexData": ("192", ""),
+        "IndexData": ("19a", ""),
+    },
+    "Mesh"
+    ))

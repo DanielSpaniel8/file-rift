@@ -1,67 +1,67 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'game_common'
-library_item{
-    object{
-        name : 'collect_health'
-        component{
-            type : 'ParticleEmitter'
-            number : 2
-            particle_emitter{
-                particle : 123
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 30
-                u3 : 120
-                u4 : 0
-                u5{
-                    u0 : 1
-                    colour{
-                        red : 0.4000000059604645
-                        green : 0.0
-                        blue : 1.4305115314527939e-07
-                        brightness : 0.0
+Name : 'game_common'
+Template{
+    Object{
+        Identifier : 'collect_health'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 2
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 120
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 1
+                    BaseColor{
+                        R : 0.4000000059604645
+                        G : 0.0
+                        B : 1.4305115314527939e-07
+                        A : 0.0
                     }
-                    u2 : 0.0
-                    u2 : 0.3499999940395355
-                    u2 : 30.0
-                    u2 : 80.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 30.0
+                    Parameter : 80.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 4
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 4
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Program'
-            number : 5
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 5
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 local hero = Scene.Find("hero");
 while true do
@@ -69,178 +69,178 @@ while true do
     Program.Wait(0.01);
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb4\x00\x00\x00local self = ...;\r\nlocal hero = Scene.Find("hero");\r\nwhile true do\r\n\tself:setPosition(hero:position() + hero:velocity() * 0.05 + Vector3.New(0, -5, 0));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x8b\xc0@\x00\x0b\x01\xc1\x00\x1c\x81\x00\x01KA\xc1\x00\\\x81\x00\x01N\x81\xc1\x02\x0cA\x01\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\xc1\x81\x02\x00\x01B\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\t\x00\x00\x00velocity\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x14\xc0\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x05\x00\x00\x00hero\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb4\x00\x00\x00local self = ...;\r\nlocal hero = Scene.Find("hero");\r\nwhile true do\r\n\tself:setPosition(hero:position() + hero:velocity() * 0.05 + Vector3.New(0, -5, 0));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x8b\xc0@\x00\x0b\x01\xc1\x00\x1c\x81\x00\x01KA\xc1\x00\\\x81\x00\x01N\x81\xc1\x02\x0cA\x01\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\xc1\x81\x02\x00\x01B\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\t\x00\x00\x00velocity\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x14\xc0\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x05\x00\x00\x00hero\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 1
+                Enabled : 1
+                Trigger : 1
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 6
-            particle_emitter{
-                particle : 7
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 1
-                    colour{
-                        red : 0.14444446563720703
-                        green : 0.14444446563720703
-                        blue : 0.14444446563720703
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 6
+            ParticleEmitterComponent{
+                ParticleId : 7
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 1
+                    BaseColor{
+                        R : 0.14444446563720703
+                        G : 0.14444446563720703
+                        B : 0.14444446563720703
+                        A : 0.0
                     }
-                    u2 : 20.0
-                    u2 : 0.3499999940395355
-                    u2 : 8.0
-                    u2 : 100.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
-                    }
-                }
-                u6 : 1
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 7
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'ParticleEmitter'
-            number : 120
-            particle_emitter{
-                particle : 123
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 100
-                u3 : 0
-                u4 : 1
-                u5{
-                    u0 : 2
-                    colour{
-                        red : 0.7061728239059448
-                        green : 0.18271607160568237
-                        blue : 0.1827162653207779
-                        brightness : 0.0
-                    }
-                    u2 : 35.0
-                    u2 : 0.3499999940395355
-                    u2 : 5.0
-                    u2 : 30.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 20.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 8.0
+                    Parameter : 100.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 123
-            particle{
-                name : 'particle_fure_1'
-                u0 : 30.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 7
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'TransformController'
-            number : 125
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 120
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 100
+                ParentEmitterId : 0
+                DestroyWhenFinished : 1
+                Emitter{
+                    Type : 2
+                    BaseColor{
+                        R : 0.7061728239059448
+                        G : 0.18271607160568237
+                        B : 0.1827162653207779
+                        A : 0.0
+                    }
+                    Parameter : 35.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 5.0
+                    Parameter : 30.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
+                    }
+                }
+                LocalSystem : 1
+            }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 123
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 30.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 125
         }
-        hidden : 0
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'collect_mana'
-        component{
-            type : 'ParticleEmitter'
-            number : 2
-            particle_emitter{
-                particle : 123
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 30
-                u3 : 120
-                u4 : 0
-                u5{
-                    u0 : 1
-                    colour{
-                        red : 0.0
-                        green : 0.1195068359375
-                        blue : 0.9777777791023254
-                        brightness : 0.0
+Template{
+    Object{
+        Identifier : 'collect_mana'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 2
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 120
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 1
+                    BaseColor{
+                        R : 0.0
+                        G : 0.1195068359375
+                        B : 0.9777777791023254
+                        A : 0.0
                     }
-                    u2 : 0.0
-                    u2 : 0.3499999940395355
-                    u2 : 30.0
-                    u2 : 80.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 30.0
+                    Parameter : 80.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 4
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 4
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Program'
-            number : 5
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 5
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 local hero = Scene.Find("hero");
 while true do
@@ -248,432 +248,436 @@ while true do
     Program.Wait(0.01);
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb4\x00\x00\x00local self = ...;\r\nlocal hero = Scene.Find("hero");\r\nwhile true do\r\n\tself:setPosition(hero:position() + hero:velocity() * 0.05 + Vector3.New(0, -5, 0));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x8b\xc0@\x00\x0b\x01\xc1\x00\x1c\x81\x00\x01KA\xc1\x00\\\x81\x00\x01N\x81\xc1\x02\x0cA\x01\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\xc1\x81\x02\x00\x01B\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\t\x00\x00\x00velocity\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x14\xc0\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x05\x00\x00\x00hero\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb4\x00\x00\x00local self = ...;\r\nlocal hero = Scene.Find("hero");\r\nwhile true do\r\n\tself:setPosition(hero:position() + hero:velocity() * 0.05 + Vector3.New(0, -5, 0));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x8b\xc0@\x00\x0b\x01\xc1\x00\x1c\x81\x00\x01KA\xc1\x00\\\x81\x00\x01N\x81\xc1\x02\x0cA\x01\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\xc1\x81\x02\x00\x01B\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\t\x00\x00\x00velocity\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x14\xc0\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x05\x00\x00\x00hero\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 1
+                Enabled : 1
+                Trigger : 1
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 6
-            particle_emitter{
-                particle : 7
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 1
-                    colour{
-                        red : 0.2666666805744171
-                        green : 0.2666666805744171
-                        blue : 0.2666666805744171
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 6
+            ParticleEmitterComponent{
+                ParticleId : 7
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 1
+                    BaseColor{
+                        R : 0.2666666805744171
+                        G : 0.2666666805744171
+                        B : 0.2666666805744171
+                        A : 0.0
                     }
-                    u2 : 20.0
-                    u2 : 0.3499999940395355
-                    u2 : 8.0
-                    u2 : 100.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
-                    }
-                }
-                u6 : 1
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 7
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'ParticleEmitter'
-            number : 120
-            particle_emitter{
-                particle : 123
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 100
-                u3 : 0
-                u4 : 1
-                u5{
-                    u0 : 2
-                    colour{
-                        red : 0.19185185432434082
-                        green : 0.265135794878006
-                        blue : 0.7414814829826355
-                        brightness : 0.0
-                    }
-                    u2 : 35.0
-                    u2 : 0.3499999940395355
-                    u2 : 5.0
-                    u2 : 30.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 20.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 8.0
+                    Parameter : 100.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 123
-            particle{
-                name : 'particle_fure_1'
-                u0 : 30.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 7
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'TransformController'
-            number : 125
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 120
+            ParticleEmitterComponent{
+                ParticleId : 123
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 100
+                ParentEmitterId : 0
+                DestroyWhenFinished : 1
+                Emitter{
+                    Type : 2
+                    BaseColor{
+                        R : 0.19185185432434082
+                        G : 0.265135794878006
+                        B : 0.7414814829826355
+                        A : 0.0
+                    }
+                    Parameter : 35.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 5.0
+                    Parameter : 30.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
+                    }
+                }
+                LocalSystem : 1
+            }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 123
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 30.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 125
         }
-        hidden : 0
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'effect_shatter'
-        component{
-            type : 'Particle'
-            number : 1
-            particle{
-                name : 'particle_break1'
-                u0 : 20.0
+Template{
+    Object{
+        Identifier : 'effect_shatter'
+        Component{
+            ClassName : 'Particle'
+            Identifier : 1
+            ParticleComponent{
+                TextureName : 'particle_break1'
+                Size : 20.0
             }
         }
-        component{
-            type : 'ShatterComponent'
-            number : 101
+        Component{
+            ClassName : 'ShatterComponent'
+            Identifier : 101
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 102
-            particle_emitter{
-                particle : 1
-                particle : 104
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u6 : 0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 102
+            ParticleEmitterComponent{
+                ParticleId : 1
+                ParticleId : 104
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 104
-            particle{
-                name : 'particle_break2'
-                u0 : 12.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 104
+            ParticleComponent{
+                TextureName : 'particle_break2'
+                Size : 12.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'iapstoremodel'
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
+Template{
+    Object{
+        Identifier : 'iapstoremodel'
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'iapCoin'
-                u0 : 1.5707963705062866
-                u1 : 0.20000000298023224
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'iapCoin'
+                YRotation : 1.5707963705062866
+                EmissionFactor : 0.20000000298023224
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.21111111342906952
-                    green : 0.21111111342906952
-                    blue : 0.21111111342906952
-                    brightness : 0.18888893723487854
-                }
-                radius : 30.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.21111111342906952
+                    G : 0.21111111342906952
+                    B : 0.21111111342906952
+                    A : 0.18888893723487854
+                }
+                Size : 30.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 40.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        hidden : 0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 40.0
+        }
+        Hidden : 0
     }
-    u0 : 1.2000000476837158
+    Scaling : 1.2000000476837158
 }
-library_item{
-    object{
-        name : 'iapstoretrigger'
-        component{
-            type : 'Portal'
-            number : 101
-            portal{
-                target_level : 'iapstore'
-                spawnpoint : ''
-                touchable : 1
-                collision_shape_component : 102
+Template{
+    Object{
+        Identifier : 'iapstoretrigger'
+        Component{
+            ClassName : 'Portal'
+            Identifier : 101
+            PortalComponent{
+                DestinationSceneName : 'iapstore'
+                SpawnPointName : ''
+                TapToEnter : 1
+                TriggerShapeId : 102
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 102
-            collision_shape{
-                box_shape{
-                    left : -41.5
-                    bottom : -43.0
-                    right : 83.0
-                    top : 133.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 102
+            ShapeComponent{
+                Rectangle{
+                    X : -41.5
+                    Y : -43.0
+                    Width : 83.0
+                    Height : 133.0
                 }
             }
-            collision_shape_2{
-                w : -15.0
-                x : 150.0
-                interaction_type : 2
-                on_collision_chunk{
-                    main : $
+            CollisionShapeComponent{
+                MinDepth : -15.0
+                MaxDepth : 150.0
+                SpecialType : 2
+                OnCollide{
+                    String : $
 local coinObject = Scene.Find("iapstoremodel");
 TransformController.ScaleTo(coinObject, 1.2, 0.2);
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local coinObject = Scene.Find("iapstoremodel");\r\nTransformController.ScaleTo(coinObject, 1.2, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0b\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c\x80\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x80\x00\x00\x00\xc1@\x01\x00\x01\x81\x01\x00\\@\x00\x02\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0e\x00\x00\x00iapstoremodel\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03333333\xf3?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00coinObject\x00\x04\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local coinObject = Scene.Find("iapstoremodel");\r\nTransformController.ScaleTo(coinObject, 1.2, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0b\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c\x80\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x80\x00\x00\x00\xc1@\x01\x00\x01\x81\x01\x00\\@\x00\x02\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0e\x00\x00\x00iapstoremodel\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03333333\xf3?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00coinObject\x00\x04\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00'
                 }
-                off_collision_chunk{
-                    main : $
+                OnCollisionEnd{
+                    String : $
 local coinObject = Scene.Find("iapstoremodel");
 TransformController.ScaleTo(coinObject, 1.0, 0.2);
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local coinObject = Scene.Find("iapstoremodel");\r\nTransformController.ScaleTo(coinObject, 1.0, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0b\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c\x80\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x80\x00\x00\x00\xc1@\x01\x00\x01\x81\x01\x00\\@\x00\x02\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0e\x00\x00\x00iapstoremodel\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00coinObject\x00\x04\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00d\x00\x00\x00local coinObject = Scene.Find("iapstoremodel");\r\nTransformController.ScaleTo(coinObject, 1.0, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0b\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c\x80\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x80\x00\x00\x00\xc1@\x01\x00\x01\x81\x01\x00\\@\x00\x02\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0e\x00\x00\x00iapstoremodel\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00coinObject\x00\x04\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -41.5
-            bottom : -43.0
-            right : 83.0
-            top : 133.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -41.5
+            Y : -43.0
+            Width : 83.0
+            Height : 133.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'particle_blast'
-        component{
-            type : 'Particle'
-            number : 1
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
+Template{
+    Object{
+        Identifier : 'particle_blast'
+        Component{
+            ClassName : 'Particle'
+            Identifier : 1
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 2
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 2
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 3
-            particle_emitter{
-                particle : 1
-                particle : 2
-                particle : 102
-                u1 : 0
-                u2 : 30
-                u3 : 101
-                u4 : 1
-                u5{
-                    u0 : 2
-                    colour{
-                        red : 1.0
-                        green : 1.0
-                        blue : 1.0
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 3
+            ParticleEmitterComponent{
+                ParticleId : 1
+                ParticleId : 2
+                ParticleId : 102
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 101
+                DestroyWhenFinished : 1
+                Emitter{
+                    Type : 2
+                    BaseColor{
+                        R : 1.0
+                        G : 1.0
+                        B : 1.0
+                        A : 0.0
                     }
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
-                    }
-                }
-                u6 : 0
-            }
-        }
-        component{
-            type : 'ParticleEmitter'
-            number : 101
-            particle_emitter{
-                particle : 102
-                particle : 1
-                particle : 2
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 1
-                u5{
-                    u0 : 1
-                    colour{
-                        red : 1.0
-                        green : 1.0
-                        blue : 1.0
-                        brightness : 0.0
-                    }
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 102
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 101
+            ParticleEmitterComponent{
+                ParticleId : 102
+                ParticleId : 1
+                ParticleId : 2
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 1
+                Emitter{
+                    Type : 1
+                    BaseColor{
+                        R : 1.0
+                        G : 1.0
+                        B : 1.0
+                        A : 0.0
+                    }
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
+                    }
+                }
+                LocalSystem : 0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 102
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        hidden : 0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'portal'
-        component{
-            type : 'SpawnPoint'
-            number : 1
-            spawnpoint{
-                u0 : 1
-                u1 : '\r\x00\x00\x00\x00\x15\x00\x00\xf0A\x1d\x00\x00\x00\x00'
+Template{
+    Object{
+        Identifier : 'portal'
+        Component{
+            ClassName : 'SpawnPoint'
+            Identifier : 1
+            SpawnPointComponent{
+                FacingDirection : 1
+                SpawnOffset{
+                    X : 0.0
+                    Y : 30.0
+                    Z : 0.0
+                }
             }
         }
-        component{
-            type : 'Program'
-            number : 2
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 2
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 if not Character.HasSceneFlag("has_portal") then
@@ -690,20 +694,20 @@ if Character.HasSceneFlag("portal_found") then
     Program.Execute(self, 3); -- create fires
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x11\x02\x00\x00local self = ...;\r\n\r\nif not Character.HasSceneFlag("has_portal") then\r\n\tCharacter.AddSceneFlag("has_portal");\r\nend\r\n\r\nself.leftTorch = Scene.CreateObject("portal_torch_left", "portal_torch_left");\r\nself.rightTorch = Scene.CreateObject("portal_torch_right", "portal_torch_right");\r\n\r\nself.leftTorch:setPosition(self:position() + Vector3.New(-75, 40, -70));\r\nself.rightTorch:setPosition(self:position() + Vector3.New(72, 40, -70));\r\n\r\nif Character.HasSceneFlag("portal_found") then\r\n\tProgram.Execute(self, 3); -- create fires\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08;\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z@\x00\x00\x16\xc0\x00\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E@\x01\x00F\x80\xc1\x00\x81\xc0\x01\x00\xc1\xc0\x01\x00\\\x80\x80\x01\t@\x00\x82E@\x01\x00F\x80\xc1\x00\x81@\x02\x00\xc1@\x02\x00\\\x80\x80\x01\t@\x00\x84F\x00A\x00K\x80\xc2\x00\xcb\xc0B\x00\xdc\x80\x00\x01\x05\x01\x03\x00\x06AC\x02A\x81\x03\x00\x81\xc1\x03\x00\xc1\x01\x04\x00\x1c\x81\x00\x02\xcc\x00\x81\x01\\@\x80\x01F\x00B\x00K\x80\xc2\x00\xcb\xc0B\x00\xdc\x80\x00\x01\x05\x01\x03\x00\x06AC\x02AA\x04\x00\x81\xc1\x03\x00\xc1\x01\x04\x00\x1c\x81\x00\x02\xcc\x00\x81\x01\\@\x80\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x04\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x00\x01\x80E\xc0\x04\x00F\x00\xc5\x00\x80\x00\x00\x00\xc1@\x05\x00\\@\x80\x01\x1e\x00\x80\x00\x16\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\x0b\x00\x00\x00has_portal\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\n\x00\x00\x00leftTorch\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x12\x00\x00\x00portal_torch_left\x00\x04\x0b\x00\x00\x00rightTorch\x00\x04\x13\x00\x00\x00portal_torch_right\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\xc0R\xc0\x03\x00\x00\x00\x00\x00\x00D@\x03\x00\x00\x00\x00\x00\x80Q\xc0\x03\x00\x00\x00\x00\x00\x00R@\x04\r\x00\x00\x00portal_found\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x00\x00\x00\x00;\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x11\x02\x00\x00local self = ...;\r\n\r\nif not Character.HasSceneFlag("has_portal") then\r\n\tCharacter.AddSceneFlag("has_portal");\r\nend\r\n\r\nself.leftTorch = Scene.CreateObject("portal_torch_left", "portal_torch_left");\r\nself.rightTorch = Scene.CreateObject("portal_torch_right", "portal_torch_right");\r\n\r\nself.leftTorch:setPosition(self:position() + Vector3.New(-75, 40, -70));\r\nself.rightTorch:setPosition(self:position() + Vector3.New(72, 40, -70));\r\n\r\nif Character.HasSceneFlag("portal_found") then\r\n\tProgram.Execute(self, 3); -- create fires\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08;\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z@\x00\x00\x16\xc0\x00\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E@\x01\x00F\x80\xc1\x00\x81\xc0\x01\x00\xc1\xc0\x01\x00\\\x80\x80\x01\t@\x00\x82E@\x01\x00F\x80\xc1\x00\x81@\x02\x00\xc1@\x02\x00\\\x80\x80\x01\t@\x00\x84F\x00A\x00K\x80\xc2\x00\xcb\xc0B\x00\xdc\x80\x00\x01\x05\x01\x03\x00\x06AC\x02A\x81\x03\x00\x81\xc1\x03\x00\xc1\x01\x04\x00\x1c\x81\x00\x02\xcc\x00\x81\x01\\@\x80\x01F\x00B\x00K\x80\xc2\x00\xcb\xc0B\x00\xdc\x80\x00\x01\x05\x01\x03\x00\x06AC\x02AA\x04\x00\x81\xc1\x03\x00\xc1\x01\x04\x00\x1c\x81\x00\x02\xcc\x00\x81\x01\\@\x80\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x04\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x00\x01\x80E\xc0\x04\x00F\x00\xc5\x00\x80\x00\x00\x00\xc1@\x05\x00\\@\x80\x01\x1e\x00\x80\x00\x16\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\x0b\x00\x00\x00has_portal\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\n\x00\x00\x00leftTorch\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x12\x00\x00\x00portal_torch_left\x00\x04\x0b\x00\x00\x00rightTorch\x00\x04\x13\x00\x00\x00portal_torch_right\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\xc0R\xc0\x03\x00\x00\x00\x00\x00\x00D@\x03\x00\x00\x00\x00\x00\x80Q\xc0\x03\x00\x00\x00\x00\x00\x00R@\x04\r\x00\x00\x00portal_found\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x00\x00\x00\x00;\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 10
+                Enabled : 1
+                Trigger : 10
             }
         }
-        component{
-            type : 'Program'
-            number : 3
-            name : 'createFires'
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 3
+            Label : 'createFires'
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 self.firesCreated = true;
@@ -721,129 +725,130 @@ TransformController.ScaleTo(rightFire, 0.01, 0);
 TransformController.ScaleTo(rightFire, 1, 0.15);
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x05\x02\x00\x00local self = ...;\r\n\r\nself.firesCreated = true;\r\n\r\nlocal leftFire = Scene.CreateObject("portal_torch_fire", "portal_fire_left");\r\nlocal rightFire = Scene.CreateObject("portal_torch_fire", "portal_fire_right");\r\n\r\nleftFire:setPosition(self.leftTorch:position());\r\nrightFire:setPosition(self.rightTorch:position());\r\n\r\nTransformController.ScaleTo(leftFire, 0.01, 0);\r\nTransformController.ScaleTo(leftFire, 1, 0.15);\r\n\r\nTransformController.ScaleTo(rightFire, 0.01, 0);\r\nTransformController.ScaleTo(rightFire, 1, 0.15);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07/\x00\x00\x00%\x00\x00\x01\t@@\x80E\x80\x00\x00F\xc0\xc0\x00\x81\x00\x01\x00\xc1@\x01\x00\\\x80\x80\x01\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01\x81\x01\x00\x9c\x80\x80\x01\xcb\xc0\xc1\x00F\x01B\x00KA\xc2\x02\\\x01\x00\x01\xdc@\x00\x00\xcb\xc0A\x01F\x81B\x00KA\xc2\x02\\\x01\x00\x01\xdc@\x00\x00\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x80\x00AA\x03\x00\x81\x81\x03\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x80\x00A\xc1\x03\x00\x81\x01\x04\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x00\x01AA\x03\x00\x81\x81\x03\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x00\x01A\xc1\x03\x00\x81\x01\x04\x00\xdc@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\r\x00\x00\x00firesCreated\x00\x01\x01\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x12\x00\x00\x00portal_torch_fire\x00\x04\x11\x00\x00\x00portal_fire_left\x00\x04\x12\x00\x00\x00portal_fire_right\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\n\x00\x00\x00leftTorch\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00rightTorch\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xc3?\x00\x00\x00\x00/\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00.\x00\x00\x00\t\x00\x00\x00leftFire\x00\x07\x00\x00\x00.\x00\x00\x00\n\x00\x00\x00rightFire\x00\x0c\x00\x00\x00.\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x05\x02\x00\x00local self = ...;\r\n\r\nself.firesCreated = true;\r\n\r\nlocal leftFire = Scene.CreateObject("portal_torch_fire", "portal_fire_left");\r\nlocal rightFire = Scene.CreateObject("portal_torch_fire", "portal_fire_right");\r\n\r\nleftFire:setPosition(self.leftTorch:position());\r\nrightFire:setPosition(self.rightTorch:position());\r\n\r\nTransformController.ScaleTo(leftFire, 0.01, 0);\r\nTransformController.ScaleTo(leftFire, 1, 0.15);\r\n\r\nTransformController.ScaleTo(rightFire, 0.01, 0);\r\nTransformController.ScaleTo(rightFire, 1, 0.15);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07/\x00\x00\x00%\x00\x00\x01\t@@\x80E\x80\x00\x00F\xc0\xc0\x00\x81\x00\x01\x00\xc1@\x01\x00\\\x80\x80\x01\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x01\x81\x01\x00\x9c\x80\x80\x01\xcb\xc0\xc1\x00F\x01B\x00KA\xc2\x02\\\x01\x00\x01\xdc@\x00\x00\xcb\xc0A\x01F\x81B\x00KA\xc2\x02\\\x01\x00\x01\xdc@\x00\x00\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x80\x00AA\x03\x00\x81\x81\x03\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x80\x00A\xc1\x03\x00\x81\x01\x04\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x00\x01AA\x03\x00\x81\x81\x03\x00\xdc@\x00\x02\xc5\xc0\x02\x00\xc6\x00\xc3\x01\x00\x01\x00\x01A\xc1\x03\x00\x81\x01\x04\x00\xdc@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\r\x00\x00\x00firesCreated\x00\x01\x01\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x12\x00\x00\x00portal_torch_fire\x00\x04\x11\x00\x00\x00portal_fire_left\x00\x04\x12\x00\x00\x00portal_fire_right\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\n\x00\x00\x00leftTorch\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00rightTorch\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xc3?\x00\x00\x00\x00/\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00.\x00\x00\x00\t\x00\x00\x00leftFire\x00\x07\x00\x00\x00.\x00\x00\x00\n\x00\x00\x00rightFire\x00\x0c\x00\x00\x00.\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 0
+                Enabled : 1
+                Trigger : 0
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 4
-            ?linked_component : 102
-            collision_shape{
-                polygon_shape{
-                    point{
-                        x_position : -94.46080017089844
-                        y_position : 1.84075927734375
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 4
+            ParentComponentIdentifier : 102
+            ShapeComponent{
+                Polygon{
+                    Vertex{
+                        X : -94.46080017089844
+                        Y : 1.84075927734375
                     }
-                    point{
-                        x_position : 101.94805908203125
-                        y_position : 2.36572265625
+                    Vertex{
+                        X : 101.94805908203125
+                        Y : 2.36572265625
                     }
-                    point{
-                        x_position : 63.26611328125
-                        y_position : 10.772216796875
+                    Vertex{
+                        X : 63.26611328125
+                        Y : 10.772216796875
                     }
-                    point{
-                        x_position : -57.924285888671875
-                        y_position : 11.21063232421875
+                    Vertex{
+                        X : -57.924285888671875
+                        Y : 11.21063232421875
                     }
-                    u3 : 0
-                    u4 : 1
+                    Convex : 0
+                    Closed : 1
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                w : -50.0
-                x : 50.0
-                z : 1
-            }
-        }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'portal'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-                u4{
-                    x : 4.0
-                    y : 0.0
-                    z : 10.0
-                }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
+            CollisionShapeComponent{
+                IsGround : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                Enabled : 1
             }
         }
-        component{
-            type : 'GroundPolygon'
-            number : 102
-            ground_polygon{
-                vertex_list{
-                    vertex_pos{
-                        x_pos : -94.46080017089844
-                        y_pos : 1.84075927734375
-                    }
-                    vertex_pos{
-                        x_pos : 101.94805908203125
-                        y_pos : 2.36572265625
-                    }
-                    vertex_pos{
-                        x_pos : 63.26611328125
-                        y_pos : 10.772216796875
-                    }
-                    vertex_pos{
-                        x_pos : -57.924285888671875
-                        y_pos : 11.21063232421875
-                    }
-                    u1 : 0
-                    u2 : 1
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'portal'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u1 : 1
-                u2 : -50.0
-                u3 : 50.0
-                u4 : ''
-            }
-        }
-        component{
-            type : 'Portal'
-            number : 105
-            portal{
-                target_level : ''
-                spawnpoint : ''
-                touchable : 1
-                collision_shape_component : 106
-            }
-        }
-        component{
-            type : 'CollisionShape'
-            number : 106
-            collision_shape{
-                box_shape{
-                    left : -50.0
-                    bottom : 20.0
-                    right : 100.0
-                    top : 110.0
+                Origin{
+                    X : 4.0
+                    Y : 0.0
+                    Z : 10.0
+                }
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
-            collision_shape_2{
-                w : -70.0
-                x : 50.0
-                on_collision_chunk{
-                    main : $
+        }
+        Component{
+            ClassName : 'GroundPolygon'
+            Identifier : 102
+            GroundPolygonComponent{
+                Polygon{
+                    Vertex{
+                        X : -94.46080017089844
+                        Y : 1.84075927734375
+                    }
+                    Vertex{
+                        X : 101.94805908203125
+                        Y : 2.36572265625
+                    }
+                    Vertex{
+                        X : 63.26611328125
+                        Y : 10.772216796875
+                    }
+                    Vertex{
+                        X : -57.924285888671875
+                        Y : 11.21063232421875
+                    }
+                    Convex : 0
+                    Closed : 1
+                }
+                Collides : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                OnCollide{
+                }
+            }
+        }
+        Component{
+            ClassName : 'Portal'
+            Identifier : 105
+            PortalComponent{
+                DestinationSceneName : ''
+                SpawnPointName : ''
+                TapToEnter : 1
+                TriggerShapeId : 106
+            }
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 106
+            ShapeComponent{
+                Rectangle{
+                    X : -50.0
+                    Y : 20.0
+                    Width : 100.0
+                    Height : 110.0
+                }
+            }
+            CollisionShapeComponent{
+                MinDepth : -70.0
+                MaxDepth : 50.0
+                OnCollide{
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -867,10 +872,10 @@ if target:identifier() == "hero" then
 end
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x02\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tPortal.Activate(self);\r\n\r\n\tlocal effect = Scene.CreateObject("portal_effect", "portal_effect_" .. self:identifier(), self);\r\n\teffect:setPosition(self:position() + Vector3.New(0, 68, -95));\r\n\tTransformController.ScaleTo(effect, 0.001, 0);\r\n\tself.effect = effect;\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tif not Character.HasSceneFlag("portal_found") then\r\n\t\tCharacter.AddSceneFlag("portal_found")\r\n\t\tProgram.Execute(self, 3); -- create fires\r\n\t\tProgram.Wait(0.2);\r\n\tend\r\n\r\n\tTransformController.ScaleTo(effect, 1, 0.2);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\nB\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x0e\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00K\x01@\x00\\\x81\x00\x01\x15A\x01\x02@\x01\x00\x00\x9c\x80\x00\x02\xcb\x00B\x01KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x04\x00\x81\x01\x03\x00\xdc@\x00\x02\t\x80\x00\x89\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01A\x05\x00\xdc@\x00\x01\xc5\x80\x05\x00\xc6\xc0\xc5\x01\x01\x01\x06\x00\xdc\x80\x00\x01\xda@\x00\x00\x16\x00\x03\x80\xc5\x80\x05\x00\xc6@\xc6\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\xc0\x04\x00\xc6\x80\xc6\x01\x00\x01\x00\x00A\xc1\x06\x00\xdc@\x80\x01\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01\x01\x07\x00\xdc@\x00\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x07\x00\x81\x01\x07\x00\xdc@\x00\x02\x1e\x00\x80\x00\x1e\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Portal\x00\x04\t\x00\x00\x00Activate\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00portal_effect\x00\x04\x0f\x00\x00\x00portal_effect_\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00Q@\x03\x00\x00\x00\x00\x00\xc0W\xc0\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\xfc\xa9\xf1\xd2MbP?\x04\x07\x00\x00\x00effect\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\r\x00\x00\x00portal_found\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\x08\x00\x00\x00Execute\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x03\x9a\x99\x99\x99\x99\x99\xc9?\x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00B\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x15\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00effect\x00\x12\x00\x00\x00A\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x02\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\tPortal.Activate(self);\r\n\r\n\tlocal effect = Scene.CreateObject("portal_effect", "portal_effect_" .. self:identifier(), self);\r\n\teffect:setPosition(self:position() + Vector3.New(0, 68, -95));\r\n\tTransformController.ScaleTo(effect, 0.001, 0);\r\n\tself.effect = effect;\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tif not Character.HasSceneFlag("portal_found") then\r\n\t\tCharacter.AddSceneFlag("portal_found")\r\n\t\tProgram.Execute(self, 3); -- create fires\r\n\t\tProgram.Wait(0.2);\r\n\tend\r\n\r\n\tTransformController.ScaleTo(effect, 1, 0.2);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\nB\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x0e\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00K\x01@\x00\\\x81\x00\x01\x15A\x01\x02@\x01\x00\x00\x9c\x80\x00\x02\xcb\x00B\x01KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\xdc@\x80\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x04\x00\x81\x01\x03\x00\xdc@\x00\x02\t\x80\x00\x89\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01A\x05\x00\xdc@\x00\x01\xc5\x80\x05\x00\xc6\xc0\xc5\x01\x01\x01\x06\x00\xdc\x80\x00\x01\xda@\x00\x00\x16\x00\x03\x80\xc5\x80\x05\x00\xc6@\xc6\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\xc0\x04\x00\xc6\x80\xc6\x01\x00\x01\x00\x00A\xc1\x06\x00\xdc@\x80\x01\xc5\xc0\x04\x00\xc6\x00\xc5\x01\x01\x01\x07\x00\xdc@\x00\x01\xc5\xc0\x03\x00\xc6\x00\xc4\x01\x00\x01\x00\x01AA\x07\x00\x81\x01\x07\x00\xdc@\x00\x02\x1e\x00\x80\x00\x1e\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Portal\x00\x04\t\x00\x00\x00Activate\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00portal_effect\x00\x04\x0f\x00\x00\x00portal_effect_\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00Q@\x03\x00\x00\x00\x00\x00\xc0W\xc0\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\xfc\xa9\xf1\xd2MbP?\x04\x07\x00\x00\x00effect\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\r\x00\x00\x00portal_found\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\x08\x00\x00\x00Execute\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x03\x9a\x99\x99\x99\x99\x99\xc9?\x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00B\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x15\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00A\x00\x00\x00\x07\x00\x00\x00effect\x00\x12\x00\x00\x00A\x00\x00\x00\x00\x00\x00\x00'
                 }
-                off_collision_chunk{
-                    main : $
+                OnCollisionEnd{
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -887,666 +892,668 @@ if target:identifier() == "hero" then
 end
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x008\x01\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tPortal.Deactivate(self);\r\n\r\n\tlocal effect = self.effect;\r\n\r\n\tif effect ~= nil then\r\n\t\tTransformController.ScaleTo(effect, 0.01, 0.3);\r\n\t\tProgram.Wait(0.25);\r\n\t\tScene.CreateObject("portal_blast", "b", effect);\r\n\t\teffect:destroy();\r\n\tend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x1f\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x00\x06\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x86\x00A\x00W@A\x01\x16@\x04\x80\xc5\x80\x01\x00\xc6\xc0\xc1\x01\x00\x01\x00\x01A\x01\x02\x00\x81A\x02\x00\xdc@\x00\x02\xc5\x80\x02\x00\xc6\xc0\xc2\x01\x01\x01\x03\x00\xdc@\x00\x01\xc5@\x03\x00\xc6\x80\xc3\x01\x01\xc1\x03\x00A\x01\x04\x00\x80\x01\x00\x01\xdc@\x00\x02\xcb@D\x01\xdc@\x00\x01\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Portal\x00\x04\x0b\x00\x00\x00Deactivate\x00\x04\x07\x00\x00\x00effect\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03333333\xd3?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00portal_blast\x00\x04\x02\x00\x00\x00b\x00\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x00\x1f\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1e\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x1e\x00\x00\x00\x07\x00\x00\x00effect\x00\n\x00\x00\x00\x1e\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x008\x01\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tPortal.Deactivate(self);\r\n\r\n\tlocal effect = self.effect;\r\n\r\n\tif effect ~= nil then\r\n\t\tTransformController.ScaleTo(effect, 0.01, 0.3);\r\n\t\tProgram.Wait(0.25);\r\n\t\tScene.CreateObject("portal_blast", "b", effect);\r\n\t\teffect:destroy();\r\n\tend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x1f\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x00\x06\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c@\x00\x01\x86\x00A\x00W@A\x01\x16@\x04\x80\xc5\x80\x01\x00\xc6\xc0\xc1\x01\x00\x01\x00\x01A\x01\x02\x00\x81A\x02\x00\xdc@\x00\x02\xc5\x80\x02\x00\xc6\xc0\xc2\x01\x01\x01\x03\x00\xdc@\x00\x01\xc5@\x03\x00\xc6\x80\xc3\x01\x01\xc1\x03\x00A\x01\x04\x00\x80\x01\x00\x01\xdc@\x00\x02\xcb@D\x01\xdc@\x00\x01\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Portal\x00\x04\x0b\x00\x00\x00Deactivate\x00\x04\x07\x00\x00\x00effect\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03333333\xd3?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00portal_blast\x00\x04\x02\x00\x00\x00b\x00\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x00\x1f\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1e\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x1e\x00\x00\x00\x07\x00\x00\x00effect\x00\n\x00\x00\x00\x1e\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -94.46080017089844
-            bottom : 0.0
-            right : 196.4088592529297
-            top : 130.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -94.46080017089844
+            Y : 0.0
+            Width : 196.4088592529297
+            Height : 130.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'portal_blast'
-        component{
-            type : 'ParticleEmitter'
-            number : 101
-            particle_emitter{
-                particle : 103
-                particle : 104
-                particle : 105
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 2
-                    colour{
-                        red : 0.4333333373069763
-                        green : 0.5133333206176758
-                        blue : 0.5666666626930237
-                        brightness : 0.0
+Template{
+    Object{
+        Identifier : 'portal_blast'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 101
+            ParticleEmitterComponent{
+                ParticleId : 103
+                ParticleId : 104
+                ParticleId : 105
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 2
+                    BaseColor{
+                        R : 0.4333333373069763
+                        G : 0.5133333206176758
+                        B : 0.5666666626930237
+                        A : 0.0
                     }
-                    u2 : 50.0
-                    u2 : 0.30000001192092896
-                    u2 : 6.0
-                    u2 : 30.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 50.0
+                    Parameter : 0.30000001192092896
+                    Parameter : 6.0
+                    Parameter : 30.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 103
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 103
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 104
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 104
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 105
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 105
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'portal_effect'
-        component{
-            type : 'PortalEffect'
-            number : 1
-            portal_effect{
-                u0 : 100
-                u1 : 103
-                u2{
-                    w : 0.8807407021522522
-                    x : 0.9471110701560974
-                    y : 0.9637036919593811
-                    z : 0.800000011920929
+Template{
+    Object{
+        Identifier : 'portal_effect'
+        Component{
+            ClassName : 'PortalEffect'
+            Identifier : 1
+            PortalEffectComponent{
+                PolygonId : 100
+                TextureMappingId : 103
+                Color{
+                    R : 0.8807407021522522
+                    G : 0.9471110701560974
+                    B : 0.9637036919593811
+                    A : 0.800000011920929
                 }
-                u3{
-                    x : 0.05000000074505806
-                    y : 0.08000000566244125
-                    z : 0.0
-                }
-            }
-        }
-        component{
-            type : 'ParticleEmitter'
-            number : 2
-            particle_emitter{
-                particle : 3
-                u1 : 0
-                u2 : 100
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.12222222238779068
-                        green : 0.12222222238779068
-                        blue : 0.12222222238779068
-                        brightness : 0.0
-                    }
-                    u2 : 0.0
-                    u2 : 360.0
-                    u2 : 20.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 50.0
-                    u2 : 0.20000000298023224
-                    u2 : 0.0
-                    u2 : 0.10000000149011612
-                    u2 : 0.0
-                    u2 : 1.0
-                    u2 : 0.019999999552965164
-                    u2 : 1.0
-                    u2 : 0.20000000298023224
-                    u2 : 0.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.10000000149011612
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
-                    }
-                }
-                u6 : 0
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'Light'
-            number : 4
-            light{
-                u0 : 3
-                u1 : 2.0
-                u2{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
-                }
-                u6 : 300.0
-            }
-        }
-        component{
-            type : 'TransformController'
-            number : 5
-        }
-        component{
-            type : 'GroundPolygon'
-            number : 100
-            ground_polygon{
-                vertex_list{
-                    vertex_pos{
-                        x_pos : -48.494873046875
-                        y_pos : -72.06495666503906
-                    }
-                    vertex_pos{
-                        x_pos : -3.850830078125
-                        y_pos : -81.76434326171875
-                    }
-                    vertex_pos{
-                        x_pos : 48.669921875
-                        y_pos : -72.10324096679688
-                    }
-                    vertex_pos{
-                        x_pos : 59.131103515625
-                        y_pos : -23.802703857421875
-                    }
-                    vertex_pos{
-                        x_pos : 61.85546875
-                        y_pos : 37.782379150390625
-                    }
-                    vertex_pos{
-                        x_pos : 48.486572265625
-                        y_pos : 62.678375244140625
-                    }
-                    vertex_pos{
-                        x_pos : 28.592514038085938
-                        y_pos : 81.78480529785156
-                    }
-                    vertex_pos{
-                        x_pos : -0.296142578125
-                        y_pos : 85.93389892578125
-                    }
-                    vertex_pos{
-                        x_pos : -29.1845703125
-                        y_pos : 81.77779388427734
-                    }
-                    vertex_pos{
-                        x_pos : -50.22900390625
-                        y_pos : 61.087677001953125
-                    }
-                    vertex_pos{
-                        x_pos : -60.73974609375
-                        y_pos : 33.52960205078125
-                    }
-                    vertex_pos{
-                        x_pos : -59.926025390625
-                        y_pos : -24.602325439453125
-                    }
-                    u1 : 0
-                    u2 : 1
-                }
-                u1 : 0
-                u2 : -1.0
-                u3 : 1.0
-                u4 : ''
-            }
-        }
-        component{
-            type : 'TextureMapping'
-            number : 103
-            texture_mapping{
-                texture_file : 'portal_effect'
-                u0 : 1.0
-                u1{
-                    u1 : 0.0
-                    u2 : 0.0
+                Speed{
+                    X : 0.05000000074505806
+                    Y : 0.08000000566244125
+                    Z : 0.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 2
+            ParticleEmitterComponent{
+                ParticleId : 3
+                ModelBindingId : 0
+                MaxParticles : 100
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.12222222238779068
+                        G : 0.12222222238779068
+                        B : 0.12222222238779068
+                        A : 0.0
+                    }
+                    Parameter : 0.0
+                    Parameter : 360.0
+                    Parameter : 20.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 50.0
+                    Parameter : 0.20000000298023224
+                    Parameter : 0.0
+                    Parameter : 0.10000000149011612
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    Parameter : 0.019999999552965164
+                    Parameter : 1.0
+                    Parameter : 0.20000000298023224
+                    Parameter : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.10000000149011612
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
+                    }
+                }
+                LocalSystem : 0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -100.0
-            bottom : -100.0
-            right : 200.0
-            top : 200.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle'
+                Size : 40.0
+            }
         }
-        hidden : 0
+        Component{
+            ClassName : 'Light'
+            Identifier : 4
+            LightComponent{
+                Type : 3
+                Intensity : 2.0
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
+                }
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                Radius : 300.0
+            }
+        }
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 5
+        }
+        Component{
+            ClassName : 'GroundPolygon'
+            Identifier : 100
+            GroundPolygonComponent{
+                Polygon{
+                    Vertex{
+                        X : -48.494873046875
+                        Y : -72.06495666503906
+                    }
+                    Vertex{
+                        X : -3.850830078125
+                        Y : -81.76434326171875
+                    }
+                    Vertex{
+                        X : 48.669921875
+                        Y : -72.10324096679688
+                    }
+                    Vertex{
+                        X : 59.131103515625
+                        Y : -23.802703857421875
+                    }
+                    Vertex{
+                        X : 61.85546875
+                        Y : 37.782379150390625
+                    }
+                    Vertex{
+                        X : 48.486572265625
+                        Y : 62.678375244140625
+                    }
+                    Vertex{
+                        X : 28.592514038085938
+                        Y : 81.78480529785156
+                    }
+                    Vertex{
+                        X : -0.296142578125
+                        Y : 85.93389892578125
+                    }
+                    Vertex{
+                        X : -29.1845703125
+                        Y : 81.77779388427734
+                    }
+                    Vertex{
+                        X : -50.22900390625
+                        Y : 61.087677001953125
+                    }
+                    Vertex{
+                        X : -60.73974609375
+                        Y : 33.52960205078125
+                    }
+                    Vertex{
+                        X : -59.926025390625
+                        Y : -24.602325439453125
+                    }
+                    Convex : 0
+                    Closed : 1
+                }
+                Collides : 0
+                MinDepth : -1.0
+                MaxDepth : 1.0
+                OnCollide{
+                }
+            }
+        }
+        Component{
+            ClassName : 'TextureMapping'
+            Identifier : 103
+            TextureMappingComponent{
+                TextureName : 'portal_effect'
+                Scale : 1.0
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
+        }
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -100.0
+            Y : -100.0
+            Width : 200.0
+            Height : 200.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'portal_torch_fire'
-        component{
-            type : 'SimpleGlow'
-            number : 1
-            simple_glow{
-                colour{
-                    red : 0.6383950710296631
-                    green : 0.6804032921791077
-                    blue : 0.7171604633331299
-                    brightness : 0.0
+Template{
+    Object{
+        Identifier : 'portal_torch_fire'
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 1
+            SimpleGlowComponent{
+                Color{
+                    R : 0.6383950710296631
+                    G : 0.6804032921791077
+                    B : 0.7171604633331299
+                    A : 0.0
                 }
-                radius : 10.0
-                u2 : 10
-                u3 : 0.0
-                u4 : 0.05000000074505806
-                u5 : 1.5
-                u6{
-                    y : 0.0
-                    z : 4.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 2
-            simple_glow{
-                colour{
-                    red : 0.21037039160728455
-                    green : 0.27041977643966675
-                    blue : 0.3229629695415497
-                    brightness : 0.0
-                }
-                radius : 30.0
-                u2 : 15
-                u3 : 0.0
-                u4 : 0.07999999821186066
-                u5 : 1.5
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Size : 10.0
+                NumSegments : 10
+                Depth : 0.0
+                PulseAmount : 0.05000000074505806
+                PulseTime : 1.5
+                Offset{
+                    X : 0.0
+                    Y : 4.0
                 }
             }
         }
-        component{
-            type : 'TransformController'
-            number : 3
-        }
-        component{
-            type : 'Light'
-            number : 103
-            light{
-                u0 : 3
-                u1 : 2.0
-                u2{
-                    w : 0.25777769088745117
-                    x : 0.6376676559448242
-                    y : 1.0
-                    z : 0.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 2
+            SimpleGlowComponent{
+                Color{
+                    R : 0.21037039160728455
+                    G : 0.27041977643966675
+                    B : 0.3229629695415497
+                    A : 0.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Size : 30.0
+                NumSegments : 15
+                Depth : 0.0
+                PulseAmount : 0.07999999821186066
+                PulseTime : 1.5
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
-                u6 : 250.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 108
-            particle_emitter{
-                particle : 109
-                particle : 111
-                particle : 112
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.38296306133270264
-                        green : 0.5433580279350281
-                        blue : 0.6837036609649658
-                        brightness : 0.24444444477558136
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 3
+        }
+        Component{
+            ClassName : 'Light'
+            Identifier : 103
+            LightComponent{
+                Type : 3
+                Intensity : 2.0
+                Color{
+                    R : 0.25777769088745117
+                    G : 0.6376676559448242
+                    B : 1.0
+                    A : 0.0
+                }
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                Radius : 250.0
+            }
+        }
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 108
+            ParticleEmitterComponent{
+                ParticleId : 109
+                ParticleId : 111
+                ParticleId : 112
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.38296306133270264
+                        G : 0.5433580279350281
+                        B : 0.6837036609649658
+                        A : 0.24444444477558136
                     }
-                    u2 : 90.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 2.0
-                    u2 : 0.0
-                    u2 : 50.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.8500000238418579
-                    u2 : 0.5
-                    u2 : 0.0
-                    u2 : 0.07000000029802322
-                    u2 : 1.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u3 : 0.10000000149011612
-                    u4 : 0.10000000149011612
-                    u5 : 0.10000000149011612
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 90.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 2.0
+                    Parameter : 0.0
+                    Parameter : 50.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.8500000238418579
+                    Parameter : 0.5
+                    Parameter : 0.0
+                    Parameter : 0.07000000029802322
+                    Parameter : 1.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    HueVariance : 0.10000000149011612
+                    SaturationVariance : 0.10000000149011612
+                    LightnessVariance : 0.10000000149011612
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 109
-            particle{
-                name : 'particle_fure_1'
-                u0 : 26.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 109
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 26.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 111
-            particle{
-                name : 'particle_fure_2'
-                u0 : 26.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 111
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 26.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 112
-            particle{
-                name : 'particle_fure_3'
-                u0 : 26.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 112
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 26.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.699999988079071
+    Scaling : 0.699999988079071
 }
-library_item{
-    object{
-        name : 'portal_torch_left'
-        component{
-            type : 'Model'
-            number : 1
-            3D_model{
-                name : 'grove_torch'
-                u0 : -1.919862151145935
-                u1 : 0.5
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'portal_torch_left'
+        Component{
+            ClassName : 'Model'
+            Identifier : 1
+            ModelComponent{
+                Name : 'grove_torch'
+                YRotation : -1.919862151145935
+                EmissionFactor : 0.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.699999988079071
+    Scaling : 0.699999988079071
 }
-library_item{
-    object{
-        name : 'portal_torch_right'
-        component{
-            type : 'Model'
-            number : 1
-            3D_model{
-                name : 'grove_torch'
-                u0 : -1.2217304706573486
-                u1 : 0.5
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'portal_torch_right'
+        Component{
+            ClassName : 'Model'
+            Identifier : 1
+            ModelComponent{
+                Name : 'grove_torch'
+                YRotation : -1.2217304706573486
+                EmissionFactor : 0.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.699999988079071
+    Scaling : 0.699999988079071
 }
-library_item{
-    object{
-        name : 'signpost'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'signpost'
-                u0 : 0.0
-                u1 : 0.4000000059604645
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'signpost'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'signpost'
+                YRotation : 0.0
+                EmissionFactor : 0.4000000059604645
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'EntityController'
-            number : 103
-            entity_controller{
-                entity_component : 107
-                animation_controller_component : 104
-                walk_animation : 110
-                collision_shape : 0
-                u4 : 0.0
-                u5 : 16000.0
-                u6 : 0.0
-                u7 : 1
+        Component{
+            ClassName : 'EntityController'
+            Identifier : 103
+            EntityControllerComponent{
+                EntityId : 107
+                AnimationControllerId : 104
+                DefaultMoveAnimationId : 110
+                RoamAreaId : 0
+                DefaultMoveSpeed : 0.0
+                DefaultAcceleration : 16000.0
+                TargetingDistance : 0.0
+                MovementBehavior : 1
             }
         }
-        component{
-            type : 'AnimationController'
-            number : 104
-            animation_controller{
-                model_component : 101
-                u1 : 0
-                u2 : 0
+        Component{
+            ClassName : 'AnimationController'
+            Identifier : 104
+            AnimationControllerComponent{
+                ModelId : 101
+                DefaultAnimationId : 0
+                SelfUpdate : 0
             }
         }
-        component{
-            type : 'KeyframeAnimation'
-            number : 105
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'signpost_wobble'
-                u0 : 1
-                u1 : 1.0
-                u2 : 1
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 105
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'signpost_wobble'
+                Repeating : 1
+                SpeedMultiplier : 1.0
+                Running : 1
             }
         }
-        component{
-            type : 'MonsterEntity'
-            number : 107
-            entity{
-                u0 : 1
-                u1 : 0
+        Component{
+            ClassName : 'MonsterEntity'
+            Identifier : 107
+            EntityComponent{
+                FacingDirection : 1
+                PhysicsEnabled : 0
             }
-            ?monster_entity{
-                lua{
+            MonsterEntityComponent{
+                OnKill{
                 }
-                u0 : ''
-                u2 : 1
-                u3 : 1
+                OnHurt{
+                }
+                GivesExperience : 1
+                DefaultDeathAnimation : 1
             }
         }
-        component{
-            type : 'KeyframeAnimation'
-            number : 110
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'signpost_normal'
-                u0 : 1
-                u1 : 0.30000001192092896
-                u2 : 1
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 110
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'signpost_normal'
+                Repeating : 1
+                SpeedMultiplier : 0.30000001192092896
+                Running : 1
             }
         }
-        component{
-            type : 'Program'
-            number : 111
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 111
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 self["texts"] ={"Hi! I'm sign."}
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x006\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"Hi! I\'m sign."}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x0e\x00\x00\x00Hi! I\'m sign.\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x006\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"Hi! I\'m sign."}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x0e\x00\x00\x00Hi! I\'m sign.\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 10
+                Enabled : 1
+                Trigger : 10
             }
         }
-        component{
-            type : 'EntityAction'
-            number : 112
-            entity_action{
-                lua{
-                    main : $
+        Component{
+            ClassName : 'EntityAction'
+            Identifier : 112
+            EntityActionComponent{
+                OnActivate{
+                    String : $
 local self = ...;
 
 local wobbleAnimation = 105;
@@ -1571,26 +1578,26 @@ AnimationController.BlendToAnimation(self, normalAnimation);
 -- HideTextBubble(bubble:identifier());
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x8d\x02\x00\x00local self = ...;\r\n\r\nlocal wobbleAnimation = 105;\r\nlocal normalAnimation = 110;\r\n\r\nKeyframeAnimation.SetCurrentTime(self, wobbleAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, wobbleAnimation);\r\n\r\nProgram.Wait(0.25);\r\n\r\nlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\nlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(20, 100, 0), text);\r\n\r\nProgram.Wait(0.25);\r\n\r\nKeyframeAnimation.SetCurrentTime(self, normalAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, normalAnimation);\r\n\r\n-- Program.Wait(3.0);\r\n-- Moved to collision end\r\n-- HideTextBubble(bubble:identifier());\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b:\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x81@\x00\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00@\x01\x80\x00\x81\x01\x01\x00\xdc@\x00\x02\xc5@\x01\x00\xc6\x80\xc1\x01\x00\x01\x00\x00@\x01\x80\x00\xdc@\x80\x01\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc6\x80B\x00\x05\xc1\x02\x00\x06\x01C\x02AA\x03\x00\x86\x81B\x00\x94\x01\x00\x03\x1c\x81\x80\x01\xc6\x00\x81\x01\x05\x81\x03\x00K\xc1C\x00\\\x81\x00\x01\x81\x01\x04\x00U\x81\x81\x02\x8bAD\x00\x9c\x81\x00\x01\xc5\x81\x04\x00\xc6\xc1\xc4\x03\x01\x02\x05\x00AB\x05\x00\x81\x82\x05\x00\xdc\x81\x00\x02\x8c\xc1\x01\x03\xc0\x01\x80\x01\x1c\x81\x00\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\\A\x00\x01E\x81\x00\x00F\xc1\xc0\x02\x80\x01\x00\x00\xc0\x01\x00\x01\x01\x02\x01\x00\\A\x00\x02EA\x01\x00F\x81\xc1\x02\x80\x01\x00\x00\xc0\x01\x00\x01\\A\x80\x01\x1e\x00\x80\x00\x17\x00\x00\x00\x03\x00\x00\x00\x00\x00@Z@\x03\x00\x00\x00\x00\x00\x80[@\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00texts\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x004@\x03\x00\x00\x00\x00\x00\x00Y@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00wobbleAnimation\x00\x02\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00normalAnimation\x00\x03\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x1a\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00*\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x8d\x02\x00\x00local self = ...;\r\n\r\nlocal wobbleAnimation = 105;\r\nlocal normalAnimation = 110;\r\n\r\nKeyframeAnimation.SetCurrentTime(self, wobbleAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, wobbleAnimation);\r\n\r\nProgram.Wait(0.25);\r\n\r\nlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\nlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(20, 100, 0), text);\r\n\r\nProgram.Wait(0.25);\r\n\r\nKeyframeAnimation.SetCurrentTime(self, normalAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, normalAnimation);\r\n\r\n-- Program.Wait(3.0);\r\n-- Moved to collision end\r\n-- HideTextBubble(bubble:identifier());\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b:\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x81@\x00\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00@\x01\x80\x00\x81\x01\x01\x00\xdc@\x00\x02\xc5@\x01\x00\xc6\x80\xc1\x01\x00\x01\x00\x00@\x01\x80\x00\xdc@\x80\x01\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc6\x80B\x00\x05\xc1\x02\x00\x06\x01C\x02AA\x03\x00\x86\x81B\x00\x94\x01\x00\x03\x1c\x81\x80\x01\xc6\x00\x81\x01\x05\x81\x03\x00K\xc1C\x00\\\x81\x00\x01\x81\x01\x04\x00U\x81\x81\x02\x8bAD\x00\x9c\x81\x00\x01\xc5\x81\x04\x00\xc6\xc1\xc4\x03\x01\x02\x05\x00AB\x05\x00\x81\x82\x05\x00\xdc\x81\x00\x02\x8c\xc1\x01\x03\xc0\x01\x80\x01\x1c\x81\x00\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\\A\x00\x01E\x81\x00\x00F\xc1\xc0\x02\x80\x01\x00\x00\xc0\x01\x00\x01\x01\x02\x01\x00\\A\x00\x02EA\x01\x00F\x81\xc1\x02\x80\x01\x00\x00\xc0\x01\x00\x01\\A\x80\x01\x1e\x00\x80\x00\x17\x00\x00\x00\x03\x00\x00\x00\x00\x00@Z@\x03\x00\x00\x00\x00\x00\x80[@\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00texts\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x004@\x03\x00\x00\x00\x00\x00\x00Y@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00wobbleAnimation\x00\x02\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00normalAnimation\x00\x03\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x1a\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00*\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 113
-            collision_shape{
-                box_shape{
-                    left : -100.0
-                    bottom : 0.0
-                    right : 200.0
-                    top : 150.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 113
+            ShapeComponent{
+                Rectangle{
+                    X : -100.0
+                    Y : 0.0
+                    Width : 200.0
+                    Height : 150.0
                 }
             }
-            collision_shape_2{
-                w : -150.0
-                x : 150.0
-                on_collision_chunk{
-                    main : $
+            CollisionShapeComponent{
+                MinDepth : -150.0
+                MaxDepth : 150.0
+                OnCollide{
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" and EntityController.IsIdle(self) then
@@ -1600,152 +1607,153 @@ if target:identifier() == "hero" and EntityController.IsIdle(self) then
 end
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
                 }
-                off_collision_chunk{
-                    main : $
+                OnCollisionEnd{
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
     HideTextBubble(self:identifier().."_bubble");
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00x\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier().."_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x01\x80\x85\x80\x00\x00\xcb\x00@\x00\xdc\x80\x00\x01\x01\xc1\x00\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00x\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier().."_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x01\x80\x85\x80\x00\x00\xcb\x00@\x00\xdc\x80\x00\x01\x01\xc1\x00\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -100.0
-            bottom : 0.0
-            right : 200.0
-            top : 150.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -100.0
+            Y : 0.0
+            Width : 200.0
+            Height : 150.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'signpost_blank'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'signpost_blank'
-                u0 : 0.0
-                u1 : 0.4000000059604645
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'signpost_blank'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'signpost_blank'
+                YRotation : 0.0
+                EmissionFactor : 0.4000000059604645
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'EntityController'
-            number : 103
-            entity_controller{
-                entity_component : 107
-                animation_controller_component : 104
-                walk_animation : 110
-                collision_shape : 0
-                u4 : 0.0
-                u5 : 16000.0
-                u6 : 0.0
-                u7 : 1
+        Component{
+            ClassName : 'EntityController'
+            Identifier : 103
+            EntityControllerComponent{
+                EntityId : 107
+                AnimationControllerId : 104
+                DefaultMoveAnimationId : 110
+                RoamAreaId : 0
+                DefaultMoveSpeed : 0.0
+                DefaultAcceleration : 16000.0
+                TargetingDistance : 0.0
+                MovementBehavior : 1
             }
         }
-        component{
-            type : 'AnimationController'
-            number : 104
-            animation_controller{
-                model_component : 101
-                u1 : 0
-                u2 : 0
+        Component{
+            ClassName : 'AnimationController'
+            Identifier : 104
+            AnimationControllerComponent{
+                ModelId : 101
+                DefaultAnimationId : 0
+                SelfUpdate : 0
             }
         }
-        component{
-            type : 'KeyframeAnimation'
-            number : 105
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'signpost_wobble'
-                u0 : 1
-                u1 : 1.0
-                u2 : 1
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 105
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'signpost_wobble'
+                Repeating : 1
+                SpeedMultiplier : 1.0
+                Running : 1
             }
         }
-        component{
-            type : 'MonsterEntity'
-            number : 107
-            entity{
-                u0 : 1
-                u1 : 0
+        Component{
+            ClassName : 'MonsterEntity'
+            Identifier : 107
+            EntityComponent{
+                FacingDirection : 1
+                PhysicsEnabled : 0
             }
-            ?monster_entity{
-                lua{
+            MonsterEntityComponent{
+                OnKill{
                 }
-                u0 : ''
-                u2 : 1
-                u3 : 1
+                OnHurt{
+                }
+                GivesExperience : 1
+                DefaultDeathAnimation : 1
             }
         }
-        component{
-            type : 'KeyframeAnimation'
-            number : 110
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'signpost_normal'
-                u0 : 1
-                u1 : 0.30000001192092896
-                u2 : 1
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 110
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'signpost_normal'
+                Repeating : 1
+                SpeedMultiplier : 0.30000001192092896
+                Running : 1
             }
         }
-        component{
-            type : 'Program'
-            number : 111
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 111
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 self["texts"] ={"Elder's house"}
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x006\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"Elder\'s house"}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x0e\x00\x00\x00Elder\'s house\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x006\x00\x00\x00local self = ...;\r\n\r\nself["texts"] ={"Elder\'s house"}\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01J\x00\x80\x00\x81@\x00\x00b@\x80\x00\t@\x00\x80\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x0e\x00\x00\x00Elder\'s house\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 10
+                Enabled : 1
+                Trigger : 10
             }
         }
-        component{
-            type : 'EntityAction'
-            number : 112
-            entity_action{
-                lua{
-                    main : $
+        Component{
+            ClassName : 'EntityAction'
+            Identifier : 112
+            EntityActionComponent{
+                OnActivate{
+                    String : $
 local self = ...;
 
 local wobbleAnimation = 105;
@@ -1770,26 +1778,26 @@ AnimationController.BlendToAnimation(self, normalAnimation);
 -- HideTextBubble(bubble:identifier());
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x8c\x02\x00\x00local self = ...;\r\n\r\nlocal wobbleAnimation = 105;\r\nlocal normalAnimation = 110;\r\n\r\nKeyframeAnimation.SetCurrentTime(self, wobbleAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, wobbleAnimation);\r\n\r\nProgram.Wait(0.25);\r\n\r\nlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\nlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(20, 70, 0), text);\r\n\r\nProgram.Wait(0.25);\r\n\r\nKeyframeAnimation.SetCurrentTime(self, normalAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, normalAnimation);\r\n\r\n-- Program.Wait(3.0);\r\n-- Moved to collision end\r\n-- HideTextBubble(bubble:identifier());\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b:\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x81@\x00\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00@\x01\x80\x00\x81\x01\x01\x00\xdc@\x00\x02\xc5@\x01\x00\xc6\x80\xc1\x01\x00\x01\x00\x00@\x01\x80\x00\xdc@\x80\x01\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc6\x80B\x00\x05\xc1\x02\x00\x06\x01C\x02AA\x03\x00\x86\x81B\x00\x94\x01\x00\x03\x1c\x81\x80\x01\xc6\x00\x81\x01\x05\x81\x03\x00K\xc1C\x00\\\x81\x00\x01\x81\x01\x04\x00U\x81\x81\x02\x8bAD\x00\x9c\x81\x00\x01\xc5\x81\x04\x00\xc6\xc1\xc4\x03\x01\x02\x05\x00AB\x05\x00\x81\x82\x05\x00\xdc\x81\x00\x02\x8c\xc1\x01\x03\xc0\x01\x80\x01\x1c\x81\x00\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\\A\x00\x01E\x81\x00\x00F\xc1\xc0\x02\x80\x01\x00\x00\xc0\x01\x00\x01\x01\x02\x01\x00\\A\x00\x02EA\x01\x00F\x81\xc1\x02\x80\x01\x00\x00\xc0\x01\x00\x01\\A\x80\x01\x1e\x00\x80\x00\x17\x00\x00\x00\x03\x00\x00\x00\x00\x00@Z@\x03\x00\x00\x00\x00\x00\x80[@\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00texts\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x004@\x03\x00\x00\x00\x00\x00\x80Q@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00wobbleAnimation\x00\x02\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00normalAnimation\x00\x03\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x1a\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00*\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x8c\x02\x00\x00local self = ...;\r\n\r\nlocal wobbleAnimation = 105;\r\nlocal normalAnimation = 110;\r\n\r\nKeyframeAnimation.SetCurrentTime(self, wobbleAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, wobbleAnimation);\r\n\r\nProgram.Wait(0.25);\r\n\r\nlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\nlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(20, 70, 0), text);\r\n\r\nProgram.Wait(0.25);\r\n\r\nKeyframeAnimation.SetCurrentTime(self, normalAnimation, 0.4);\r\nAnimationController.BlendToAnimation(self, normalAnimation);\r\n\r\n-- Program.Wait(3.0);\r\n-- Moved to collision end\r\n-- HideTextBubble(bubble:identifier());\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0b:\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x81@\x00\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00@\x01\x80\x00\x81\x01\x01\x00\xdc@\x00\x02\xc5@\x01\x00\xc6\x80\xc1\x01\x00\x01\x00\x00@\x01\x80\x00\xdc@\x80\x01\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc6\x80B\x00\x05\xc1\x02\x00\x06\x01C\x02AA\x03\x00\x86\x81B\x00\x94\x01\x00\x03\x1c\x81\x80\x01\xc6\x00\x81\x01\x05\x81\x03\x00K\xc1C\x00\\\x81\x00\x01\x81\x01\x04\x00U\x81\x81\x02\x8bAD\x00\x9c\x81\x00\x01\xc5\x81\x04\x00\xc6\xc1\xc4\x03\x01\x02\x05\x00AB\x05\x00\x81\x82\x05\x00\xdc\x81\x00\x02\x8c\xc1\x01\x03\xc0\x01\x80\x01\x1c\x81\x00\x02E\xc1\x01\x00F\x01\xc2\x02\x81A\x02\x00\\A\x00\x01E\x81\x00\x00F\xc1\xc0\x02\x80\x01\x00\x00\xc0\x01\x00\x01\x01\x02\x01\x00\\A\x00\x02EA\x01\x00F\x81\xc1\x02\x80\x01\x00\x00\xc0\x01\x00\x01\\A\x80\x01\x1e\x00\x80\x00\x17\x00\x00\x00\x03\x00\x00\x00\x00\x00@Z@\x03\x00\x00\x00\x00\x00\x80[@\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xd0?\x04\x06\x00\x00\x00texts\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x004@\x03\x00\x00\x00\x00\x00\x80Q@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00wobbleAnimation\x00\x02\x00\x00\x009\x00\x00\x00\x10\x00\x00\x00normalAnimation\x00\x03\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x1a\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00*\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 113
-            collision_shape{
-                box_shape{
-                    left : -150.0
-                    bottom : 0.0
-                    right : 300.0
-                    top : 150.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 113
+            ShapeComponent{
+                Rectangle{
+                    X : -150.0
+                    Y : 0.0
+                    Width : 300.0
+                    Height : 150.0
                 }
             }
-            collision_shape_2{
-                w : -150.0
-                x : 150.0
-                on_collision_chunk{
-                    main : $
+            CollisionShapeComponent{
+                MinDepth : -150.0
+                MaxDepth : 150.0
+                OnCollide{
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" and EntityController.IsIdle(self) then
@@ -1799,10 +1807,10 @@ if target:identifier() == "hero" and EntityController.IsIdle(self) then
 end
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9d\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\r\n\tEntityController.PerformAction(self, 112);\r\n\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
                 }
-                off_collision_chunk{
-                    main : $
+                OnCollisionEnd{
+                    String : $
 local self, target = ...;
 
 while not EntityController.IsIdle(self) do
@@ -1813,90 +1821,90 @@ if target:identifier() == "hero" then
     HideTextBubble(self:identifier().."_bubble");
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc1\x00\x00\x00local self, target = ...;\r\n\r\nwhile not EntityController.IsIdle(self) do\r\n\tProgram.Wait(0.05);\r\nend\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier().."_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x17\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c@\x00\x01\x16\x00\xfd\x7f\x8b@\xc1\x00\x9c\x80\x00\x01\x17\x80A\x01\x16@\x01\x80\x85\xc0\x01\x00\xcb@A\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\t\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x16\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc1\x00\x00\x00local self, target = ...;\r\n\r\nwhile not EntityController.IsIdle(self) do\r\n\tProgram.Wait(0.05);\r\nend\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier().."_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x17\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c@\x00\x01\x16\x00\xfd\x7f\x8b@\xc1\x00\x9c\x80\x00\x01\x17\x80A\x01\x16@\x01\x80\x85\xc0\x01\x00\xcb@A\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\t\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xa9?\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x16\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -150.0
-            bottom : 0.0
-            right : 300.0
-            top : 150.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -150.0
+            Y : 0.0
+            Width : 300.0
+            Height : 150.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.699999988079071
+    Scaling : 0.699999988079071
 }
-library_item{
-    object{
-        name : 'snowfall'
-        component{
-            type : 'ParticleEmitter'
-            number : 101
-            particle_emitter{
-                particle : 102
-                u1 : 0
-                u2 : 100
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 1.0
-                        green : 1.0
-                        blue : 1.0
-                        brightness : 0.7333333492279053
+Template{
+    Object{
+        Identifier : 'snowfall'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 101
+            ParticleEmitterComponent{
+                ParticleId : 102
+                ModelBindingId : 0
+                MaxParticles : 100
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 1.0
+                        G : 1.0
+                        B : 1.0
+                        A : 0.7333333492279053
                     }
-                    u2 : 270.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 1500.0
-                    u2 : 100.0
-                    u2 : 120.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.800000011920929
-                    u2 : 0.0
-                    u2 : 1.0
-                    u2 : 0.05000000074505806
-                    u2 : 5.0
-                    u2 : 0.0
-                    u2 : 0.30000001192092896
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 270.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 1500.0
+                    Parameter : 100.0
+                    Parameter : 120.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.800000011920929
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    Parameter : 0.05000000074505806
+                    Parameter : 5.0
+                    Parameter : 0.0
+                    Parameter : 0.30000001192092896
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 102
-            particle{
-                name : 'particle_fure_1'
-                u0 : 10.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 102
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 10.0
             }
         }
-        component{
-            type : 'Program'
-            number : 103
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 103
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 self:setAlwaysActive(true);
@@ -1910,295 +1918,295 @@ while true do
     Program.Wait(0.01);
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xd8\x00\x00\x00local self = ...;\r\n\r\nself:setAlwaysActive(true);\r\n\r\nProgram.Wait(0.01);\r\n\r\nlocal hero = Scene.Find("hero");\r\n\r\nwhile true do\r\n\tself:setPosition(hero:position() + Vector3.New(0, 110, 100));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1d\x00\x00\x00%\x00\x00\x01K\x00@\x00\xc2\x00\x80\x00\\@\x80\x01E@\x00\x00F\x80\xc0\x00\x81\xc0\x00\x00\\@\x00\x01E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\\x80\x00\x01\x8b\xc0A\x00\x0b\x01\xc2\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01B\x03\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85@\x00\x00\x86\x80@\x01\xc1\xc0\x00\x00\x9c@\x00\x01\x16\xc0\xfb\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x10\x00\x00\x00setAlwaysActive\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80[@\x03\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x1d\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1c\x00\x00\x00\x05\x00\x00\x00hero\x00\x0c\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xd8\x00\x00\x00local self = ...;\r\n\r\nself:setAlwaysActive(true);\r\n\r\nProgram.Wait(0.01);\r\n\r\nlocal hero = Scene.Find("hero");\r\n\r\nwhile true do\r\n\tself:setPosition(hero:position() + Vector3.New(0, 110, 100));\r\n\tProgram.Wait(0.01);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1d\x00\x00\x00%\x00\x00\x01K\x00@\x00\xc2\x00\x80\x00\\@\x80\x01E@\x00\x00F\x80\xc0\x00\x81\xc0\x00\x00\\@\x00\x01E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\\x80\x00\x01\x8b\xc0A\x00\x0b\x01\xc2\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01B\x03\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85@\x00\x00\x86\x80@\x01\xc1\xc0\x00\x00\x9c@\x00\x01\x16\xc0\xfb\x7f\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x10\x00\x00\x00setAlwaysActive\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80[@\x03\x00\x00\x00\x00\x00\x00Y@\x00\x00\x00\x00\x1d\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1c\x00\x00\x00\x05\x00\x00\x00hero\x00\x0c\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 10
+                Enabled : 1
+                Trigger : 10
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'weapon_glow'
-        component{
-            type : 'Transform'
-            number : 4
+Template{
+    Object{
+        Identifier : 'weapon_glow'
+        Component{
+            ClassName : 'Transform'
+            Identifier : 4
         }
-        component{
-            type : 'WeaponGlow'
-            number : 10
-            weapon_glow{
-                u0 : 12
-                u1{
-                    w : 0.8705882430076599
-                    x : 0.4588235318660736
-                    y : 0.250980406999588
-                    z : 0.0
+        Component{
+            ClassName : 'WeaponGlow'
+            Identifier : 10
+            WeaponGlowComponent{
+                ParticleEmitterId : 12
+                Color{
+                    R : 0.8705882430076599
+                    G : 0.4588235318660736
+                    B : 0.250980406999588
+                    A : 0.0
                 }
-                u2{
-                    w : 0.04313725605607033
-                    x : 0.34117648005485535
-                    y : 0.21960784494876862
-                    z : 0.0
+                ParticleColor{
+                    R : 0.04313725605607033
+                    G : 0.34117648005485535
+                    B : 0.21960784494876862
+                    A : 0.0
                 }
-                u3 : 8.0
+                Width : 8.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 12
-            name : 'glow'
-            particle_emitter{
-                particle : 13
-                particle : 14
-                particle : 15
-                u1 : 0
-                u2 : 70
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.4770370423793793
-                        green : 0.2558025121688843
-                        blue : 0.1451852023601532
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 12
+            Label : 'glow'
+            ParticleEmitterComponent{
+                ParticleId : 13
+                ParticleId : 14
+                ParticleId : 15
+                ModelBindingId : 0
+                MaxParticles : 70
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.4770370423793793
+                        G : 0.2558025121688843
+                        B : 0.1451852023601532
+                        A : 0.0
                     }
-                    u2 : 0.0
-                    u2 : 120.0
-                    u2 : 0.0
-                    u2 : 42.0
-                    u2 : 0.0
-                    u2 : 35.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.30000001192092896
-                    u2 : 1.0
-                    u2 : 0.0
-                    u2 : 0.00800000037997961
-                    u2 : 0.4000000059604645
-                    u2 : 0.0
-                    u2 : 0.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 27.0
-                        u1 : 0.0
-                        u2 : 0.0
+                    Parameter : 0.0
+                    Parameter : 120.0
+                    Parameter : 0.0
+                    Parameter : 42.0
+                    Parameter : 0.0
+                    Parameter : 35.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.30000001192092896
+                    Parameter : 1.0
+                    Parameter : 0.0
+                    Parameter : 0.00800000037997961
+                    Parameter : 0.4000000059604645
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 27.0
+                        Y : 0.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
-                u7{
-                    u0 : 0.0
-                    u1 : 100.0
-                    u2 : 0.0
+                LocalSystem : 1
+                Gravity{
+                    X : 0.0
+                    Y : 100.0
+                    Z : 0.0
                 }
-                u8{
-                    x : -1.5707963705062866
-                    y : 0.0
-                    z : 0.0
-                }
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 13
-            name : 'glow'
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 14
-            name : 'glow'
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 15
-            name : 'glow'
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
-            }
-        }
-        component{
-            type : 'ObjectLinkController'
-            number : 103
-            object_link_controller{
-                u0 : ''
-                u1 : ''
-                u2{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
-                }
-                u3{
-                    x : 0.0
-                    y : 0.0
-                    z : 2.0
-                }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Rotation{
+                    X : -1.5707963705062866
+                    Y : 0.0
+                    Z : 0.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 13
+            Label : 'glow'
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 14
+            Label : 'glow'
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
+            }
         }
-        hidden : 0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 15
+            Label : 'glow'
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
+            }
+        }
+        Component{
+            ClassName : 'ObjectLinkController'
+            Identifier : 103
+            ObjectLinkControllerComponent{
+                TargetObjectIdentifier : ''
+                TargetBoneIdentifier : ''
+                LocalOffset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                WorldOffset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 2.0
+                }
+                LocalRotation{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+            }
+        }
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'wsmoke'
-        component{
-            type : 'ObjectLinkController'
-            number : 1
-            object_link_controller{
-                u0 : ''
-                u1 : ''
-                u2{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+Template{
+    Object{
+        Identifier : 'wsmoke'
+        Component{
+            ClassName : 'ObjectLinkController'
+            Identifier : 1
+            ObjectLinkControllerComponent{
+                TargetObjectIdentifier : ''
+                TargetBoneIdentifier : ''
+                LocalOffset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u3{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                WorldOffset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LocalRotation{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
             }
         }
-        component{
-            type : 'Particle'
-            number : 2
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 2
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 101
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 101
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 102
-            particle_emitter{
-                particle : 101
-                particle : 2
-                particle : 3
-                u1 : 0
-                u2 : 10
-                u3 : 0
-                u4 : 1
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.3444444537162781
-                        green : 0.3444444537162781
-                        blue : 0.3444444537162781
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 102
+            ParticleEmitterComponent{
+                ParticleId : 101
+                ParticleId : 2
+                ParticleId : 3
+                ModelBindingId : 0
+                MaxParticles : 10
+                ParentEmitterId : 0
+                DestroyWhenFinished : 1
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.3444444537162781
+                        G : 0.3444444537162781
+                        B : 0.3444444537162781
+                        A : 0.0
                     }
-                    u2 : 165.0
-                    u2 : 30.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 70.0
-                    u2 : 0.0
-                    u2 : 0.30000001192092896
-                    u2 : 0.6000000238418579
-                    u2 : 0.5
-                    u2 : 1.0
-                    u2 : 0.05000000074505806
-                    u2 : 0.30000001192092896
-                    u2 : 0.20000000298023224
-                    u2 : 0.30000001192092896
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 2.0
-                        u2 : 0.0
+                    Parameter : 165.0
+                    Parameter : 30.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 70.0
+                    Parameter : 0.0
+                    Parameter : 0.30000001192092896
+                    Parameter : 0.6000000238418579
+                    Parameter : 0.5
+                    Parameter : 1.0
+                    Parameter : 0.05000000074505806
+                    Parameter : 0.30000001192092896
+                    Parameter : 0.20000000298023224
+                    Parameter : 0.30000001192092896
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 2.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
+                LocalSystem : 0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -10.0
-            bottom : -10.0
-            right : 20.0
-            top : 20.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -10.0
+            Y : -10.0
+            Width : 20.0
+            Height : 20.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-scl : 'collectibles'
-scl : 'dimensional'
-scl : 'hiro'
-scl : 'programs'
-scl : 'weapons'
+ImportedLibrary : 'collectibles'
+ImportedLibrary : 'dimensional'
+ImportedLibrary : 'hiro'
+ImportedLibrary : 'programs'
+ImportedLibrary : 'weapons'

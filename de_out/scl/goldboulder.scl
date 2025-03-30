@@ -1,243 +1,243 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'goldboulder'
-library_item{
-    object{
-        name : 'goldboulder'
-        component{
-            type : 'CollisionShape'
-            number : 1
-            collision_shape{
-                ball_shape{
-                    offsets{
-                        x : 0.0
-                        y : 0.0
+Name : 'goldboulder'
+Template{
+    Object{
+        Identifier : 'goldboulder'
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 1
+            ShapeComponent{
+                Circle{
+                    Center{
+                        X : 0.0
+                        Y : 0.0
                     }
-                    radius : 27.0
+                    Radius : 27.0
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                u1 : 1
-                u3 : 1
-                w : -15.0
-                x : 15.0
-                on_collision_chunk{
-                    main : $
+            CollisionShapeComponent{
+                IsGround : 1
+                Collides : 1
+                InflictsDamage : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                OnCollide{
+                    String : $
 
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x03\x00\x00\x00\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x01\x00\x00\x00\x1e\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x03\x00\x00\x00\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x01\x00\x00\x00\x1e\x00\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        component{
-            type : 'TransformController'
-            number : 2
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 2
         }
-        component{
-            type : 'PhysicsObject'
-            number : 3
-            physics_object{
-                enabled : 1
-                ground_friction : 80.0
-                air_friction : 0.0
-                speed : 500.0
-                can_roll : 1
-                bounciness : 0.30000001192092896
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 3
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 80.0
+                AirDeceleration : 0.0
+                MaxSpeed : 500.0
+                AllowRotation : 1
+                Elasticity : 0.30000001192092896
             }
         }
-        component{
-            type : 'Properties'
-            number : 4
-            properties{
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Properties'
+            Identifier : 4
+            PropertiesComponent{
+                OnLoad{
+                    String : $
 local self = ...;
 
 Properties.SetProperty(self, "questitem", "true")
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x00\x00\x00local self = ...;\r\n\r\nProperties.SetProperty(self, "questitem", "true")\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00SetProperty\x00\x04\n\x00\x00\x00questitem\x00\x04\x05\x00\x00\x00true\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00G\x00\x00\x00local self = ...;\r\n\r\nProperties.SetProperty(self, "questitem", "true")\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00SetProperty\x00\x04\n\x00\x00\x00questitem\x00\x04\x05\x00\x00\x00true\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
         }
-        component{
-            type : 'Light'
-            number : 5
-            light{
-                u0 : 3
-                u1 : 1.5
-                u2{
-                    w : 0.5444444417953491
-                    x : 0.36666667461395264
-                    y : 0.2222222238779068
-                    z : 1.0
+        Component{
+            ClassName : 'Light'
+            Identifier : 5
+            LightComponent{
+                Type : 3
+                Intensity : 1.5
+                Color{
+                    R : 0.5444444417953491
+                    G : 0.36666667461395264
+                    B : 0.2222222238779068
+                    A : 1.0
                 }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u6 : 200.0
+                Radius : 200.0
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 6
-            particle_emitter{
-                particle : 7
-                particle : 8
-                particle : 9
-                u1 : 0
-                u2 : 60
-                u3 : 0
-                u4 : 0
-                u6 : 0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 6
+            ParticleEmitterComponent{
+                ParticleId : 7
+                ParticleId : 8
+                ParticleId : 9
+                ModelBindingId : 0
+                MaxParticles : 60
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 7
-            particle{
-                name : 'particle_fure_1'
-                u0 : 20.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 7
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 20.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 8
-            particle{
-                name : 'particle_fure_2'
-                u0 : 23.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 8
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 23.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 9
-            particle{
-                name : 'particle_fure_3'
-                u0 : 17.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 9
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 17.0
             }
         }
-        component{
-            type : 'FireEmitter'
-            number : 10
-            fire_emitter{
-                particle_emitter : 6
-                light : 5
-                u0{
-                    w : 0.7444444298744202
-                    x : 0.7355555295944214
-                    y : 0.7222222089767456
-                    z : 0.0
+        Component{
+            ClassName : 'FireEmitter'
+            Identifier : 10
+            FireEmitterComponent{
+                ParticleEmitterId : 6
+                LightId : 5
+                Color{
+                    R : 0.7444444298744202
+                    G : 0.7355555295944214
+                    B : 0.7222222089767456
+                    A : 0.0
                 }
-                u1 : 0.019999999552965164
-                u2 : 0.30000001192092896
-                u3{
-                    x : 20.0
-                    y : 20.0
-                    z : 20.0
+                ParticleInterval : 0.019999999552965164
+                ParticleMaxAge : 0.30000001192092896
+                ParticleSpread{
+                    X : 20.0
+                    Y : 20.0
+                    Z : 20.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 11
-            simple_glow{
-                colour{
-                    red : 0.6222222447395325
-                    green : 0.5555555820465088
-                    blue : 0.23333337903022766
-                    brightness : 0.5
-                }
-                radius : 50.0
-                u2 : 10
-                u3 : 15.0
-                u4 : 0.0
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Origin3{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'ballofgold'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 0.7843137383460999
-                    x : 0.8117647171020508
-                    y : 0.9098039269447327
-                    z : 1.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 11
+            SimpleGlowComponent{
+                Color{
+                    R : 0.6222222447395325
+                    G : 0.5555555820465088
+                    B : 0.23333337903022766
+                    A : 0.5
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
-                }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Size : 50.0
+                NumSegments : 10
+                Depth : 15.0
+                PulseAmount : 0.0
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                ball_shape{
-                    offsets{
-                        x : 0.0
-                        y : 0.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'ballofgold'
+                YRotation : 0.0
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.7843137383460999
+                    G : 0.8117647171020508
+                    B : 0.9098039269447327
+                    A : 1.0
+                }
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
+                }
+            }
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Circle{
+                    Center{
+                        X : 0.0
+                        Y : 0.0
                     }
-                    radius : 40.0
+                    Radius : 40.0
                 }
             }
-            collision_shape_2{
-                w : -15.0
-                x : 15.0
-                interaction_type : 1
-                z : 1
+            CollisionShapeComponent{
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 1
+                Enabled : 1
             }
         }
-        component{
-            type : 'Damage'
-            number : 110
-            damage{
-                damage : 100
-                u1 : 1
-                u2 : 0
-                u3 : 1
-                u4 : 150
-                u5 : 1.0
-                u6 : 0.0
-                u7 : 0
-                u8 : 1
+        Component{
+            ClassName : 'Damage'
+            Identifier : 110
+            DamageComponent{
+                MinDamage : 100
+                DamageType : 1
+                SpecialDamageType : 0
+                StandAlone : 1
+                MaxDamage : 150
+                PhysicalDamageFactor : 1.0
+                MagicDamageFactor : 0.0
+                IgnoreTargetImmunity : 0
+                CanBeBlocked : 1
             }
         }
-        component{
-            type : 'Program'
-            number : 121
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 121
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 while true do
@@ -250,26 +250,26 @@ while true do
     end
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb8\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tProgram.Wait(0.2);\r\n\r\n\tif self:velocity():length() > 250 then\r\n\t\tDamage.SetActive(self, true);\r\n\telse\r\n\t\tDamage.SetActive(self, false);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x18\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\\x80\x00\x01K\x00\xc1\x00\\\x80\x00\x01\x18@\x80\x82\x16@\x01\x80E\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x80\x00\\@\x80\x01\x16\xc0\xfb\x7fE\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x00\x00\\@\x80\x01\x16@\xfa\x7f\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\t\x00\x00\x00velocity\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00@o@\x04\x07\x00\x00\x00Damage\x00\x04\n\x00\x00\x00SetActive\x00\x00\x00\x00\x00\x18\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb8\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tProgram.Wait(0.2);\r\n\r\n\tif self:velocity():length() > 250 then\r\n\t\tDamage.SetActive(self, true);\r\n\telse\r\n\t\tDamage.SetActive(self, false);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x18\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01K\xc0@\x00\\\x80\x00\x01K\x00\xc1\x00\\\x80\x00\x01\x18@\x80\x82\x16@\x01\x80E\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x80\x00\\@\x80\x01\x16\xc0\xfb\x7fE\x80\x01\x00F\xc0\xc1\x00\x80\x00\x00\x00\xc2\x00\x00\x00\\@\x80\x01\x16@\xfa\x7f\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\t\x00\x00\x00velocity\x00\x04\x07\x00\x00\x00length\x00\x03\x00\x00\x00\x00\x00@o@\x04\x07\x00\x00\x00Damage\x00\x04\n\x00\x00\x00SetActive\x00\x00\x00\x00\x00\x18\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 1
+                Enabled : 1
+                Trigger : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -50.0
-            bottom : -50.0
-            right : 100.0
-            top : 100.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -50.0
+            Y : -50.0
+            Width : 100.0
+            Height : 100.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

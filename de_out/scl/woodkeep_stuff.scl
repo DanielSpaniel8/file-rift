@@ -1,16 +1,16 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'woodkeep_stuff'
-library_item{
-    object{
-        name : 'castle_lock'
-        component{
-            type : 'Program'
-            number : 1
-            program{
-                u0 : 1
-                lua{
-                    main : $
+Name : 'woodkeep_stuff'
+Template{
+    Object{
+        Identifier : 'castle_lock'
+        Component{
+            ClassName : 'Program'
+            Identifier : 1
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 if Character.HasSceneFlag(self:identifier()) then
@@ -19,65 +19,65 @@ if Character.HasSceneFlag(self:identifier()) then
 end
 
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xa3\x00\x00\x00local self = ...;\r\n\r\nif Character.HasSceneFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xa3\x00\x00\x00local self = ...;\r\n\r\nif Character.HasSceneFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 10
+                Enabled : 1
+                Trigger : 10
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'lock_yellow'
-                u0 : 1.5707963705062866
-                u1 : 0.5
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'lock_yellow'
+                YRotation : 1.5707963705062866
+                EmissionFactor : 0.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 103
-            collision_shape{
-                box_shape{
-                    left : -70.0
-                    bottom : -40.0
-                    right : 140.0
-                    top : 80.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 103
+            ShapeComponent{
+                Rectangle{
+                    X : -70.0
+                    Y : -40.0
+                    Width : 140.0
+                    Height : 80.0
                 }
             }
-            collision_shape_2{
-                w : -15.0
-                x : 15.0
-                interaction_type : 4
-                z : 1
+            CollisionShapeComponent{
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 4
+                Enabled : 1
             }
         }
-        component{
-            type : 'Program'
-            number : 105
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'Program'
+            Identifier : 105
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 if Character.HasItem("key_yellow") then
@@ -92,537 +92,539 @@ else
     Game.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x84\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddSceneFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x84\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddSceneFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\r\x00\x00\x00AddSceneFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 2
+                Enabled : 1
+                Trigger : 2
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -70.0
-            bottom : -40.0
-            right : 140.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -70.0
+            Y : -40.0
+            Width : 140.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'castle_lockdoor'
-        component{
-            type : 'SoundEffect'
-            number : 1
-            sound_effect{
-                sound : 'door_close'
-                u0 : 0.0
-                u1 : 1.0
+Template{
+    Object{
+        Identifier : 'castle_lockdoor'
+        Component{
+            ClassName : 'SoundEffect'
+            Identifier : 1
+            SoundEffectComponent{
+                Name : 'door_close'
+                Delay : 0.0
+                Volume : 1.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'castle_lockdoor'
-                u0 : 4.71238899230957
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'castle_lockdoor'
+                YRotation : 4.71238899230957
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'DoorController'
-            number : 103
-            door_controller{
-                u0 : 104
-                u1 : 105
-                u2 : 0
-                u3 : 1
-                u4 : 0
-            }
-        }
-        component{
-            type : 'AnimationController'
-            number : 104
-            animation_controller{
-                model_component : 101
-                u1 : 0
-                u2 : 0
-            }
-        }
-        component{
-            type : 'KeyframeAnimation'
-            number : 105
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'castle_lockdoor'
-                u0 : 0
-                u1 : 0.20000000298023224
-                u2 : 1
-            }
-        }
-        component{
-            type : 'CollisionShape'
-            number : 106
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : 0.0
-                    right : 25.0
-                    top : 246.53073120117188
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                w : -15.0
-                x : 15.0
-                z : 1
+        }
+        Component{
+            ClassName : 'DoorController'
+            Identifier : 103
+            DoorControllerComponent{
+                AnimationControllerId : 104
+                AnimationId : 105
+                Open : 0
+                CloseSoundId : 1
+                OpenSoundId : 0
             }
         }
-        component{
-            type : 'Program'
-            number : 109
-            program{
-                u0 : 1
-                lua{
-                    main : $
+        Component{
+            ClassName : 'AnimationController'
+            Identifier : 104
+            AnimationControllerComponent{
+                ModelId : 101
+                DefaultAnimationId : 0
+                SelfUpdate : 0
+            }
+        }
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 105
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'castle_lockdoor'
+                Repeating : 0
+                SpeedMultiplier : 0.20000000298023224
+                Running : 1
+            }
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 106
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : 0.0
+                    Width : 25.0
+                    Height : 246.53073120117188
+                }
+            }
+            CollisionShapeComponent{
+                IsGround : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                Enabled : 1
+            }
+        }
+        Component{
+            ClassName : 'Program'
+            Identifier : 109
+            ProgramComponent{
+                ExecuteOnce : 1
+                Program{
+                    String : $
 local self = ...;
 
 DoorController.Open(self);
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                u1 : 1
-                event : 0
+                Enabled : 1
+                Trigger : 0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : 0.0
-            right : 25.0
-            top : 246.53073120117188
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : 0.0
+            Width : 25.0
+            Height : 246.53073120117188
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'deadtree1'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'deadtree1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'deadtree1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'deadtree1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'pole1'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'pole1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'pole1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'pole1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'pole2'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'pole2'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'pole2'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'pole2'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'polewall'
-        component{
-            type : 'CollisionShape'
-            number : 1
-            ?linked_component : 103
-            collision_shape{
-                polygon_shape{
-                    point{
-                        x_position : 8.294042587280273
-                        y_position : -19.394180297851562
+Template{
+    Object{
+        Identifier : 'polewall'
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 1
+            ParentComponentIdentifier : 103
+            ShapeComponent{
+                Polygon{
+                    Vertex{
+                        X : 8.294042587280273
+                        Y : -19.394180297851562
                     }
-                    point{
-                        x_position : 9.372367858886719
-                        y_position : 127.60641479492188
+                    Vertex{
+                        X : 9.372367858886719
+                        Y : 127.60641479492188
                     }
-                    point{
-                        x_position : 1.3621290922164917
-                        y_position : 171.5775146484375
+                    Vertex{
+                        X : 1.3621290922164917
+                        Y : 171.5775146484375
                     }
-                    point{
-                        x_position : -12.046072006225586
-                        y_position : 121.38899993896484
+                    Vertex{
+                        X : -12.046072006225586
+                        Y : 121.38899993896484
                     }
-                    point{
-                        x_position : -8.837845802307129
-                        y_position : 16.852190017700195
+                    Vertex{
+                        X : -8.837845802307129
+                        Y : 16.852190017700195
                     }
-                    u3 : 0
-                    u4 : 1
+                    Convex : 0
+                    Closed : 1
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                w : -50.0
-                x : 50.0
-                z : 1
+            CollisionShapeComponent{
+                IsGround : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                Enabled : 1
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'polewall'
-                u0 : 1.5707963705062866
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'polewall'
+                YRotation : 1.5707963705062866
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'GroundPolygon'
-            number : 103
-            ground_polygon{
-                vertex_list{
-                    vertex_pos{
-                        x_pos : 8.294042587280273
-                        y_pos : -19.394180297851562
+        Component{
+            ClassName : 'GroundPolygon'
+            Identifier : 103
+            GroundPolygonComponent{
+                Polygon{
+                    Vertex{
+                        X : 8.294042587280273
+                        Y : -19.394180297851562
                     }
-                    vertex_pos{
-                        x_pos : 9.372367858886719
-                        y_pos : 127.60641479492188
+                    Vertex{
+                        X : 9.372367858886719
+                        Y : 127.60641479492188
                     }
-                    vertex_pos{
-                        x_pos : 1.3621290922164917
-                        y_pos : 171.5775146484375
+                    Vertex{
+                        X : 1.3621290922164917
+                        Y : 171.5775146484375
                     }
-                    vertex_pos{
-                        x_pos : -12.046072006225586
-                        y_pos : 121.38899993896484
+                    Vertex{
+                        X : -12.046072006225586
+                        Y : 121.38899993896484
                     }
-                    vertex_pos{
-                        x_pos : -8.837845802307129
-                        y_pos : 16.852190017700195
+                    Vertex{
+                        X : -8.837845802307129
+                        Y : 16.852190017700195
                     }
-                    u1 : 0
-                    u2 : 1
+                    Convex : 0
+                    Closed : 1
                 }
-                u1 : 1
-                u2 : -50.0
-                u3 : 50.0
-                u4 : ''
+                Collides : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                OnCollide{
+                }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -12.046072006225586
-            bottom : -19.394180297851562
-            right : 21.418439865112305
-            top : 190.97169494628906
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -12.046072006225586
+            Y : -19.394180297851562
+            Width : 21.418439865112305
+            Height : 190.97169494628906
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'woodendoor'
-        component{
-            type : 'BreakableObject'
-            number : 1
-            breakable_object{
-                u0 : 0
-                u1 : 15
-                u2 : 0
-                u3 : ''
-            }
-        }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'woodendoor'
-                u0 : 4.71238899230957
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 0.43921568989753723
-                    x : 0.1921568661928177
-                    y : 0.0784313753247261
-                    z : 1.0
-                }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
-                }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'woodendoor'
+        Component{
+            ClassName : 'BreakableObject'
+            Identifier : 1
+            BreakableObjectComponent{
+                BreaksOnImpact : 0
+                NumHitsToBreak : 15
+                RequiredDamageType : 0
+                OnBreak{
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 103
-            collision_shape{
-                box_shape{
-                    left : -25.0
-                    bottom : 0.0
-                    right : 50.0
-                    top : 170.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'woodendoor'
+                YRotation : 4.71238899230957
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.43921568989753723
+                    G : 0.1921568661928177
+                    B : 0.0784313753247261
+                    A : 1.0
+                }
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                u2 : 1
-                w : -15.0
-                x : 15.0
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 103
+            ShapeComponent{
+                Rectangle{
+                    X : -25.0
+                    Y : 0.0
+                    Width : 50.0
+                    Height : 170.0
+                }
+            }
+            CollisionShapeComponent{
+                IsGround : 1
+                ReceivesDamage : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : 0.0
-            right : 50.0
-            top : 170.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : 0.0
+            Width : 50.0
+            Height : 170.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'woodendoor_frame'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'woodendoor_frame'
-                u0 : 1.5707963705062866
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'woodendoor_frame'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'woodendoor_frame'
+                YRotation : 1.5707963705062866
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

@@ -1,85 +1,85 @@
 # rifted with FR v5.7.0
 
-atlas_file : 'game_common_atlas',
-u0 : 0,
-mapping{
-    icon : 'particle',
-    size{
-        w : 79.0,
-        x : 85.0,
-        y : 48.0,
-        z : 48.0,
+Name : 'game_common_atlas'
+PixelFormat : 0
+Subtexture{
+    Name : 'particle'
+    Bounds{
+        X : 79.0
+        Y : 85.0
+        Width : 48.0
+        Height : 48.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'particle_fure_1',
-    size{
-        w : 83.0,
-        x : 0.0,
-        y : 32.0,
-        z : 40.0,
+Subtexture{
+    Name : 'particle_fure_1'
+    Bounds{
+        X : 83.0
+        Y : 0.0
+        Width : 32.0
+        Height : 40.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'particle_fure_2',
-    size{
-        w : 46.0,
-        x : 85.0,
-        y : 32.0,
-        z : 40.0,
+Subtexture{
+    Name : 'particle_fure_2'
+    Bounds{
+        X : 46.0
+        Y : 85.0
+        Width : 32.0
+        Height : 40.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'particle_fure_3',
-    size{
-        w : 13.0,
-        x : 85.0,
-        y : 32.0,
-        z : 40.0,
+Subtexture{
+    Name : 'particle_fure_3'
+    Bounds{
+        X : 13.0
+        Y : 85.0
+        Width : 32.0
+        Height : 40.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'flash_particle',
-    size{
-        w : 0.0,
-        x : 0.0,
-        y : 82.0,
-        z : 84.0,
+Subtexture{
+    Name : 'flash_particle'
+    Bounds{
+        X : 0.0
+        Y : 0.0
+        Width : 82.0
+        Height : 84.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'spark_particle',
-    size{
-        w : 67.0,
-        x : 134.0,
-        y : 14.0,
-        z : 6.0,
+Subtexture{
+    Name : 'spark_particle'
+    Bounds{
+        X : 67.0
+        Y : 134.0
+        Width : 14.0
+        Height : 6.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'particle_break1',
-    size{
-        w : 0.0,
-        x : 126.0,
-        y : 40.0,
-        z : 40.0,
+Subtexture{
+    Name : 'particle_break1'
+    Bounds{
+        X : 0.0
+        Y : 126.0
+        Width : 40.0
+        Height : 40.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-mapping{
-    icon : 'particle_break2',
-    size{
-        w : 41.0,
-        x : 126.0,
-        y : 25.0,
-        z : 25.0,
+Subtexture{
+    Name : 'particle_break2'
+    Bounds{
+        X : 41.0
+        Y : 126.0
+        Width : 25.0
+        Height : 25.0
     }
-    u0 : 1.0,
+    Resolution : 1.0
 }
-u1 : 0,
+ImageType : 0

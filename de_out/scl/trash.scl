@@ -1,439 +1,441 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'trash'
-library_item{
-    object{
-        name : 'ground'
-        component{
-            type : 'CollisionShape'
-            number : 1
-            ?linked_component : 100
-            collision_shape{
-                polygon_shape{
-                    point{
-                        x_position : -200.0
-                        y_position : -100.0
+Name : 'trash'
+Template{
+    Object{
+        Identifier : 'ground'
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 1
+            ParentComponentIdentifier : 100
+            ShapeComponent{
+                Polygon{
+                    Vertex{
+                        X : -200.0
+                        Y : -100.0
                     }
-                    point{
-                        x_position : 200.0
-                        y_position : -100.0
+                    Vertex{
+                        X : 200.0
+                        Y : -100.0
                     }
-                    point{
-                        x_position : 200.0
-                        y_position : 100.0
+                    Vertex{
+                        X : 200.0
+                        Y : 100.0
                     }
-                    point{
-                        x_position : -200.0
-                        y_position : 100.0
+                    Vertex{
+                        X : -200.0
+                        Y : 100.0
                     }
-                    u3 : 0
-                    u4 : 1
+                    Convex : 0
+                    Closed : 1
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                w : -50.0
-                x : 50.0
-                z : 1
-            }
-        }
-        component{
-            type : 'GroundPolygon'
-            number : 100
-            ground_polygon{
-                vertex_list{
-                    vertex_pos{
-                        x_pos : -200.0
-                        y_pos : -100.0
-                    }
-                    vertex_pos{
-                        x_pos : 200.0
-                        y_pos : -100.0
-                    }
-                    vertex_pos{
-                        x_pos : 200.0
-                        y_pos : 100.0
-                    }
-                    vertex_pos{
-                        x_pos : -200.0
-                        y_pos : 100.0
-                    }
-                    u1 : 0
-                    u2 : 1
-                }
-                u1 : 1
-                u2 : -50.0
-                u3 : 50.0
-                u4 : ''
+            CollisionShapeComponent{
+                IsGround : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                Enabled : 1
             }
         }
-        component{
-            type : 'GroundMesh'
-            number : 101
-            ground_mesh{
-                u0{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+        Component{
+            ClassName : 'GroundPolygon'
+            Identifier : 100
+            GroundPolygonComponent{
+                Polygon{
+                    Vertex{
+                        X : -200.0
+                        Y : -100.0
+                    }
+                    Vertex{
+                        X : 200.0
+                        Y : -100.0
+                    }
+                    Vertex{
+                        X : 200.0
+                        Y : 100.0
+                    }
+                    Vertex{
+                        X : -200.0
+                        Y : 100.0
+                    }
+                    Convex : 0
+                    Closed : 1
                 }
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Collides : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                OnCollide{
                 }
             }
         }
-        component{
-            type : 'GroundMeshGenerator'
-            number : 102
-            ground_mesh_generator{
-                ground_polygon : 100
-                ground_mesh : 101
-                texture_mapping_1 : 105
-                texture_mapping_2 : 105
-                u4 : 0
-                u5 : 0.0
-                u6 : 0
-                u7 : 100.0
-                u8 : 25.0
-                u9 : 5.0
-                u10 : 5.0
-            }
-        }
-        component{
-            type : 'TextureMapping'
-            number : 105
-            texture_mapping{
-                texture_file : 'bluebricks'
-                u0 : 250.0
-                u1{
-                    u1 : 0.0
-                    u2 : 0.0
+        Component{
+            ClassName : 'GroundMesh'
+            Identifier : 101
+            GroundMeshComponent{
+                LocalAabb{
+                    X : 0.0
+                    Y : 0.0
+                    Width : 0.0
+                    Height : 0.0
+                }
+                Color{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'GroundMeshGenerator'
+            Identifier : 102
+            GroundMeshGeneratorComponent{
+                GroundPolygonId : 100
+                TargetMeshId : 101
+                FrontTextureMappingId : 105
+                SurfaceTextureMappingId : 105
+                RandomSeed : 0
+                HorizNoise : 0.0
+                MeshType : 0
+                SurfaceWidth : 100.0
+                HatHeight : 25.0
+                HatWidthOffset1 : 5.0
+                HatWidthOffset2 : 5.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -200.0
-            bottom : -100.0
-            right : 400.0
-            top : 200.0
+        Component{
+            ClassName : 'TextureMapping'
+            Identifier : 105
+            TextureMappingComponent{
+                TextureName : 'bluebricks'
+                Scale : 250.0
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
         }
-        hidden : 0
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -200.0
+            Y : -100.0
+            Width : 400.0
+            Height : 200.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'hangingplatofm'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'platformwood2'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'hangingplatofm'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'platformwood2'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'laituri'
-        component{
-            type : 'CollisionShape'
-            number : 1
-            ?linked_component : 103
-            collision_shape{
-                polygon_shape{
-                    point{
-                        x_position : -44.53194808959961
-                        y_position : -7.654847621917725
+Template{
+    Object{
+        Identifier : 'laituri'
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 1
+            ParentComponentIdentifier : 103
+            ShapeComponent{
+                Polygon{
+                    Vertex{
+                        X : -44.53194808959961
+                        Y : -7.654847621917725
                     }
-                    point{
-                        x_position : 45.784114837646484
-                        y_position : -3.8942670822143555
+                    Vertex{
+                        X : 45.784114837646484
+                        Y : -3.8942670822143555
                     }
-                    point{
-                        x_position : 47.63790512084961
-                        y_position : -0.4207402169704437
+                    Vertex{
+                        X : 47.63790512084961
+                        Y : -0.4207402169704437
                     }
-                    point{
-                        x_position : -38.140811920166016
-                        y_position : -0.9269309639930725
+                    Vertex{
+                        X : -38.140811920166016
+                        Y : -0.9269309639930725
                     }
-                    u3 : 0
-                    u4 : 1
+                    Convex : 0
+                    Closed : 1
                 }
             }
-            collision_shape_2{
-                u0 : 1
-                w : -50.0
-                x : 50.0
-                z : 1
+            CollisionShapeComponent{
+                IsGround : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                Enabled : 1
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'laituri_strong'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'laituri_strong'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'GroundPolygon'
-            number : 103
-            ground_polygon{
-                vertex_list{
-                    vertex_pos{
-                        x_pos : -44.53194808959961
-                        y_pos : -7.654847621917725
+        Component{
+            ClassName : 'GroundPolygon'
+            Identifier : 103
+            GroundPolygonComponent{
+                Polygon{
+                    Vertex{
+                        X : -44.53194808959961
+                        Y : -7.654847621917725
                     }
-                    vertex_pos{
-                        x_pos : 45.784114837646484
-                        y_pos : -3.8942670822143555
+                    Vertex{
+                        X : 45.784114837646484
+                        Y : -3.8942670822143555
                     }
-                    vertex_pos{
-                        x_pos : 47.63790512084961
-                        y_pos : -0.4207402169704437
+                    Vertex{
+                        X : 47.63790512084961
+                        Y : -0.4207402169704437
                     }
-                    vertex_pos{
-                        x_pos : -38.140811920166016
-                        y_pos : -0.9269309639930725
+                    Vertex{
+                        X : -38.140811920166016
+                        Y : -0.9269309639930725
                     }
-                    u1 : 0
-                    u2 : 1
+                    Convex : 0
+                    Closed : 1
                 }
-                u1 : 1
-                u2 : -50.0
-                u3 : 50.0
-                u4 : ''
+                Collides : 1
+                MinDepth : -50.0
+                MaxDepth : 50.0
+                OnCollide{
+                }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -44.53194808959961
-            bottom : -7.654847621917725
-            right : 92.16985321044922
-            top : 7.654847621917725
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -44.53194808959961
+            Y : -7.654847621917725
+            Width : 92.16985321044922
+            Height : 7.654847621917725
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'tree'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'treek'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'tree'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'treek'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'tree2'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'treek2'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'tree2'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'treek2'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'web_trampoline'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'web_trampoline'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'web_trampoline'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'web_trampoline'
+                YRotation : 0.0
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 103
-            collision_shape{
-                box_shape{
-                    left : -60.0
-                    bottom : 0.0
-                    right : 120.0
-                    top : 30.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 103
+            ShapeComponent{
+                Rectangle{
+                    X : -60.0
+                    Y : 0.0
+                    Width : 120.0
+                    Height : 30.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                on_collision_chunk{
-                    main : $
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                OnCollide{
+                    String : $
 local self, target, normal = ...;
 
 local animation = 106;
@@ -447,45 +449,45 @@ if (target:identifier() == "hero") and (normal:y() < -0.5) then
 
 end
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self, target, normal = ...;\r\n\r\nlocal animation = 106;\r\n\r\nif (target:identifier() == "hero") and (normal:y() < -0.5) then\r\n\tKeyframeAnimation.SetRunning(self, animation, true);\r\n\tKeyframeAnimation.SetCurrentTime(self, animation, 0);\r\n\tProgram.Wait(0.10)\r\n\ttarget:setVelocity(Vector3.New(target:velocity():x(), 700, 0));\r\n\tProgram.Wait(KeyframeAnimation.TimeToCompletion(self,animation));\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n.\x00\x00\x00%\x00\x00\x02\xc1\x00\x00\x00\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\t\x80\x0b\xc1@\x01\x1c\x81\x00\x01\x18\x00A\x02\x16\x80\x08\x80\x05A\x01\x00\x06\x81A\x02@\x01\x00\x00\x80\x01\x80\x01\xc2\x01\x80\x00\x1cA\x00\x02\x05A\x01\x00\x06\xc1A\x02@\x01\x00\x00\x80\x01\x80\x01\xc1\x01\x02\x00\x1cA\x00\x02\x05A\x02\x00\x06\x81B\x02A\xc1\x02\x00\x1cA\x00\x01\x0b\x01\xc3\x00\x85A\x03\x00\x86\x81C\x03\xcb\xc1\xc3\x00\xdc\x81\x00\x01\xcb\x01\xc4\x03\xdc\x81\x00\x01\x01B\x04\x00A\x02\x02\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05A\x02\x00\x06\x81B\x02EA\x01\x00F\x81\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x01\\\x01\x80\x01\x1cA\x00\x00\x1e\x00\x80\x00\x13\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80Z@\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00\xe0\xbf\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0b\x00\x00\x00SetRunning\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00velocity\x00\x04\x02\x00\x00\x00x\x00\x03\x00\x00\x00\x00\x00\xe0\x85@\x04\x11\x00\x00\x00TimeToCompletion\x00\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00-\x00\x00\x00\n\x00\x00\x00animation\x00\x02\x00\x00\x00-\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self, target, normal = ...;\r\n\r\nlocal animation = 106;\r\n\r\nif (target:identifier() == "hero") and (normal:y() < -0.5) then\r\n\tKeyframeAnimation.SetRunning(self, animation, true);\r\n\tKeyframeAnimation.SetCurrentTime(self, animation, 0);\r\n\tProgram.Wait(0.10)\r\n\ttarget:setVelocity(Vector3.New(target:velocity():x(), 700, 0));\r\n\tProgram.Wait(KeyframeAnimation.TimeToCompletion(self,animation));\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n.\x00\x00\x00%\x00\x00\x02\xc1\x00\x00\x00\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\t\x80\x0b\xc1@\x01\x1c\x81\x00\x01\x18\x00A\x02\x16\x80\x08\x80\x05A\x01\x00\x06\x81A\x02@\x01\x00\x00\x80\x01\x80\x01\xc2\x01\x80\x00\x1cA\x00\x02\x05A\x01\x00\x06\xc1A\x02@\x01\x00\x00\x80\x01\x80\x01\xc1\x01\x02\x00\x1cA\x00\x02\x05A\x02\x00\x06\x81B\x02A\xc1\x02\x00\x1cA\x00\x01\x0b\x01\xc3\x00\x85A\x03\x00\x86\x81C\x03\xcb\xc1\xc3\x00\xdc\x81\x00\x01\xcb\x01\xc4\x03\xdc\x81\x00\x01\x01B\x04\x00A\x02\x02\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05A\x02\x00\x06\x81B\x02EA\x01\x00F\x81\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x01\\\x01\x80\x01\x1cA\x00\x00\x1e\x00\x80\x00\x13\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80Z@\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00\xe0\xbf\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0b\x00\x00\x00SetRunning\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00velocity\x00\x04\x02\x00\x00\x00x\x00\x03\x00\x00\x00\x00\x00\xe0\x85@\x04\x11\x00\x00\x00TimeToCompletion\x00\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00-\x00\x00\x00\n\x00\x00\x00animation\x00\x02\x00\x00\x00-\x00\x00\x00\x00\x00\x00\x00'
                 }
-                z : 1
+                Enabled : 1
             }
         }
-        component{
-            type : 'AnimationController'
-            number : 105
-            animation_controller{
-                model_component : 101
-                u1 : 106
-                u2 : 1
+        Component{
+            ClassName : 'AnimationController'
+            Identifier : 105
+            AnimationControllerComponent{
+                ModelId : 101
+                DefaultAnimationId : 106
+                SelfUpdate : 1
             }
         }
-        component{
-            type : 'KeyframeAnimation'
-            number : 106
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'web_trampoline'
-                u0 : 0
-                u1 : 2.0
-                u2 : 0
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 106
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'web_trampoline'
+                Repeating : 0
+                SpeedMultiplier : 2.0
+                Running : 0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -60.0
-            bottom : 0.0
-            right : 120.0
-            top : 30.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -60.0
+            Y : 0.0
+            Width : 120.0
+            Height : 30.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

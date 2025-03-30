@@ -1,226 +1,226 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'towers_stuff'
-library_item{
-    object{
-        name : 'pillair1'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'pillair1'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Name : 'towers_stuff'
+Template{
+    Object{
+        Identifier : 'pillair1'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'pillair1'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'torch_fire'
-        component{
-            type : 'SimpleGlow'
-            number : 1
-            simple_glow{
-                colour{
-                    red : 0.3876543343067169
-                    green : 0.21119342744350433
-                    blue : 0.05679011344909668
-                    brightness : 0.0
+Template{
+    Object{
+        Identifier : 'torch_fire'
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 1
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3876543343067169
+                    G : 0.21119342744350433
+                    B : 0.05679011344909668
+                    A : 0.0
                 }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.11999999731779099
-                u5 : 1.5
-                u6{
-                    y : 0.0
-                    z : 30.0
-                }
-            }
-        }
-        component{
-            type : 'Light'
-            number : 103
-            light{
-                u0 : 3
-                u1 : 2.0
-                u2{
-                    w : 1.0
-                    x : 0.25777778029441833
-                    y : 0.0
-                    z : 0.0
-                }
-                u3 : 0.0
-                u4 : 0.00019999999494757503
-                u5{
-                    x : 0.0
-                    y : 30.0
-                    z : 0.0
-                }
-                u6 : 250.0
-            }
-        }
-        component{
-            type : 'FireEmitter'
-            number : 105
-            fire_emitter{
-                particle_emitter : 108
-                light : 103
-                u0{
-                    w : 1.0
-                    x : 0.25777778029441833
-                    y : 0.0
-                    z : 0.0
-                }
-                u1 : 0.10000000149011612
-                u2 : 0.8999999761581421
-                u3{
-                    x : 2.0
-                    y : 0.0
-                    z : 0.0
-                }
-                u4{
-                    x : 0.0
-                    y : 15.0
-                    z : 0.0
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.11999999731779099
+                PulseTime : 1.5
+                Offset{
+                    X : 0.0
+                    Y : 30.0
                 }
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 108
-            particle_emitter{
-                particle : 109
-                particle : 111
-                particle : 112
-                u1 : 0
-                u2 : 30
-                u3 : 0
-                u4 : 0
-                u6 : 0
+        Component{
+            ClassName : 'Light'
+            Identifier : 103
+            LightComponent{
+                Type : 3
+                Intensity : 2.0
+                Color{
+                    R : 1.0
+                    G : 0.25777778029441833
+                    B : 0.0
+                    A : 0.0
+                }
+                LinearAttenuation : 0.0
+                QuadraticAttenuation : 0.00019999999494757503
+                Offset{
+                    X : 0.0
+                    Y : 30.0
+                    Z : 0.0
+                }
+                Radius : 250.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 109
-            particle{
-                name : 'particle_fure_1'
-                u0 : 30.0
+        Component{
+            ClassName : 'FireEmitter'
+            Identifier : 105
+            FireEmitterComponent{
+                ParticleEmitterId : 108
+                LightId : 103
+                Color{
+                    R : 1.0
+                    G : 0.25777778029441833
+                    B : 0.0
+                    A : 0.0
+                }
+                ParticleInterval : 0.10000000149011612
+                ParticleMaxAge : 0.8999999761581421
+                ParticleSpread{
+                    X : 2.0
+                    Y : 0.0
+                    Z : 0.0
+                }
+                Origin3{
+                    X : 0.0
+                    Y : 15.0
+                    Z : 0.0
+                }
             }
         }
-        component{
-            type : 'Particle'
-            number : 111
-            particle{
-                name : 'particle_fure_2'
-                u0 : 34.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 108
+            ParticleEmitterComponent{
+                ParticleId : 109
+                ParticleId : 111
+                ParticleId : 112
+                ModelBindingId : 0
+                MaxParticles : 30
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                LocalSystem : 0
             }
         }
-        component{
-            type : 'Particle'
-            number : 112
-            particle{
-                name : 'particle_fure_3'
-                u0 : 30.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 109
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 30.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 111
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 34.0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 112
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 30.0
+            }
         }
-        hidden : 0
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 40.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'torchholder'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'torchholder'
-                u0 : 0.0
-                u1 : 0.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'torchholder'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'torchholder'
+                YRotation : 0.0
+                EmissionFactor : 0.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : 0.0
-            bottom : 0.0
-            right : 0.0
-            top : 0.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : 0.0
+            Y : 0.0
+            Width : 0.0
+            Height : 0.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }

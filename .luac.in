@@ -3,25 +3,278 @@
 
 
 
-
-
-
 local self = ...;
 
-Program.Wait(9)
+local obj = Scene.CreateObject("sclplus")
+if obj then
+obj:setAlwaysActive(true)
+obj:setHidden(true)
+end
 
-self:destroy()
-
-
-
-
-
-
-
+Game.ShowNotification("before source")
+Program.Wait(2)
 
 
 
 
+-- lib/buttons.lua
+-- dependancy: sclplus.scl
+Button = {}
+
+function Button.New(name, text, func, pos, radius)
+
+    local function button_func(unused, args)
+
+        local name, text, func, pos, radius =
+            args[1], args[2], args[3],
+            args[4] or Scene.Find("hero"):position()+Vector3.New(0,40),
+            args[5] or 60
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        func()
+        bubble:destroy()
+    end
+
+    Thread.New(button_func, {name, text, func, pos, radius})
+
+end
+
+function Button.Menu(buttons, pos, radius)
+
+    local function button_func(unused,args)
+
+        local name, text, func, pos, radius =
+            args[1], args[2], args[3], args[4], args[5]
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        _bubble_refresh = true
+
+        if func ~= nil then 
+            func()
+        end
+    end
+
+    _bubble_refresh = false
+
+    _bubble_list = {}
+
+    for name, details in pairs(buttons) do
+        Thread.New("_bb_thr"..name, button_func, {name, details[1], details[2], details[3]+pos, radius or 75})
+        _bubble_list [#_bubble_list +1] = name
+    end
+
+    while not _bubble_refresh do Program.Wait(0.05) end
+
+    _bubble_refresh = false
+    
+    for _, n in pairs(_bubble_list) do
+        if Scene.Find("_bb_"..n.."_bubble") ~= nil then
+            HideTextBubble("_bb_"..n)
+        end
+    end
+
+end
 
 
+-- lib/itemvars.lua
+-- library for working with itemvars
+
+IV = {}
+
+function IV.Get(var)
+    if not Character.HasItem(var) then
+        return 0
+    end
+    return Character.ItemCount(var)
+end
+
+function IV.Set(var, num)
+    v = IV.Get(var)
+    num = Math.Floor(num)
+
+    if v == num then return end
+
+    if v > num then -- subtract
+        for i = 1,v-num do
+            if Character.HasItem(var) then
+                Character.RemoveItem(var)
+            end
+        end
+    end
+
+    if v < num then -- add
+        for i = 1,num-v do
+            Character.AddItem(var)
+        end
+    end
+end
+
+function IV.Inc(var)
+    Character.AddItem(var)
+end
+
+function IV.Dec(var)
+    if Character.HasItem(var) then
+        Character.RemoveItem(var)
+    end
+end
+
+function IV.Add(var, num)
+    IV.Set(var,IV.Get(var)+num)
+end
+
+function IV.Sub(var, num)
+    v=IV.Get(var)
+    if v-num < 0 then
+        IV.Set(var,0)
+    else
+        IV.Set(var,v-num)
+    end
+end
+
+function IV.GetS(var)
+    if not Character.HasItem(var) then
+        return 0
+    end
+    v = Character.ItemCount(var)
+    sign = v%2
+    v = (v-sign) / 2
+    if sign>0 then
+        return 0-v
+    end
+    return v
+end
+
+function IV.SetS(var, num)
+    num = Math.Floor(num)
+    if num==0 then
+        IV.Set(var, 0)
+    end
+    if num>0 then
+        IV.Set(var, num*2)
+    end
+    if num<0 then
+        IV.Set(var, (Math.Abs(num)*2)+1)
+    end
+end
+
+function IV.IncS(var)
+    v = IV.GetS(var)
+    IV.SetS(var, v+1)
+end
+
+function IV.DecS(var)
+    v = IV.GetS(var)
+    if not Character.HasItem(var) then
+        return
+    else
+        IV.SetS(var, v-1)
+    end
+end
+
+function IV.AddS(var, num)
+    IV.SetS(var,IV.GetS(var)+num)
+end
+
+function IV.SubS(var, num)
+    v=IV.GetS(var)
+    IV.SetS(var, v-num)
+end
+
+
+-- lib/buttons~0.lua
+-- dependancy: sclplus.scl
+Button = {}
+
+function Button.New(name, text, func, pos, radius)
+
+    local function button_func(unused, args)
+
+        local name, text, func, pos, radius =
+            args[1], args[2], args[3],
+            args[4] or Scene.Find("hero"):position()+Vector3.New(0,40),
+            args[5] or 60
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        func()
+        bubble:destroy()
+    end
+
+    Thread.New(button_func, {name, text, func, pos, radius})
+
+end
+
+function Button.Menu(buttons, pos, radius)
+
+    local function button_func(unused,args)
+
+        local name, text, func, pos, radius =
+            args[1], args[2], args[3], args[4], args[5]
+
+        local bubble = ShowTextBubble("_bb_"..name, pos, text)
+        TextBubble.SetTouchHandlingEnabled(bubble, true)
+        Touchable.SetTouchRadius(bubble, radius)
+
+        while not TextBubble.IsTextFinished(bubble) do Program.Wait(0.05) end
+
+        if func then func() end
+
+        _bubble_refresh = true
+    end
+
+    _bubble_refresh = false
+
+    _bubble_list = {}
+
+    for name, details in pairs(buttons) do
+        Thread.New('_bb_thr'..name, button_func, {name, details[1], details[2], details[3]+pos, radius or 75})
+        _bubble_list [#_bubble_list +1] = name
+    end
+
+    while not _bubble_refresh do Program.Wait(0.05) end
+
+    _bubble_refresh = false
+    
+    for _, n in pairs(_bubble_list) do
+        HideTextBubble("_bb_"..n)
+    end
+
+end
+
+
+-- tech/search.lua
+function search()
+Game.ShowNotification("start")
+Program.Wait(3)
+
+for i = 1, 20 do
+    for j = 1, 50 do
+        local obj = Scene.Find("obj"..i.."#"..j)
+
+        if obj ~= nil then
+
+            Camera.FocusAtPoint(obj:position())
+            Button.Menu({["n"] = {""..i.."#"..j.."\
+Next", function()end, Vector3.New(0, -50)}}, obj:position(), 100)
+
+        end
+    end
+end
+
+end
 

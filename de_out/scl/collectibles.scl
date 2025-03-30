@@ -1,3639 +1,3639 @@
 # rifted with FR v5.7.0
 
-scl_file_name : 'collectibles'
-library_item{
-    object{
-        name : 'iselon_shard_1'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.75
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Name : 'collectibles'
+Template{
+    Object{
+        Identifier : 'iselon_shard_1'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.75
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'iselon_shard_1'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'iselon_shard_1'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_iselon_shard_1'
-                u0 : 0.3490658402442932
-                u1 : 5.0
-                u2 : 0.3490658402442932
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_iselon_shard_1'
+                YRotation : 0.3490658402442932
+                EmissionFactor : 5.0
+                XRotation : 0.3490658402442932
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 10.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -17.0
-                    bottom : -15.0
-                    right : 34.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 10.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -17.0
+                    Y : -15.0
+                    Width : 34.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'iselon_shard_2'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.75
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'iselon_shard_2'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.75
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'iselon_shard_2'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'iselon_shard_2'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_iselon_shard_2'
-                u0 : 0.3490658402442932
-                u1 : 5.0
-                u2 : 0.3490658402442932
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_iselon_shard_2'
+                YRotation : 0.3490658402442932
+                EmissionFactor : 5.0
+                XRotation : 0.3490658402442932
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 10.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -17.0
-                    bottom : -15.0
-                    right : 34.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 10.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -17.0
+                    Y : -15.0
+                    Width : 34.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'iselon_shard_3'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.75
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'iselon_shard_3'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.75
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'iselon_shard_3'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'iselon_shard_3'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_iselon_shard_3'
-                u0 : 0.3490658402442932
-                u1 : 5.0
-                u2 : 0.3490658402442932
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_iselon_shard_3'
+                YRotation : 0.3490658402442932
+                EmissionFactor : 5.0
+                XRotation : 0.3490658402442932
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 10.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -17.0
-                    bottom : -15.0
-                    right : 34.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 10.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -17.0
+                    Y : -15.0
+                    Width : 34.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'iselon_shard_4'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.75
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'iselon_shard_4'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.75
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'iselon_shard_4'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'iselon_shard_4'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_iselon_shard_4'
-                u0 : 0.3490658402442932
-                u1 : 5.0
-                u2 : 0.3490658402442932
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_iselon_shard_4'
+                YRotation : 0.3490658402442932
+                EmissionFactor : 5.0
+                XRotation : 0.3490658402442932
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 10.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -17.0
-                    bottom : -15.0
-                    right : 34.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 10.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -17.0
+                    Y : -15.0
+                    Width : 34.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_brasssword'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_brasssword'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'brasssword'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'brasssword'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_ironsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 15.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 15.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 0.644444465637207
-                    y : 0.42222222685813904
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.12263374030590057
-                    green : 0.18696410953998566
-                    blue : 0.23292176425457
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 0.644444465637207
+                    B : 0.42222222685813904
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.12263374030590057
+                    G : 0.18696410953998566
+                    B : 0.23292176425457
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_broadsword'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_broadsword'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'broadsword'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'broadsword'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_broadsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_broadsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 10.0
-                    y : -7.0
-                    z : 0.0
+                Origin{
+                    X : 10.0
+                    Y : -7.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.12263374030590057
-                    green : 0.18696410953998566
-                    blue : 0.23292176425457
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.12263374030590057
+                    G : 0.18696410953998566
+                    B : 0.23292176425457
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_firetrinket'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_firetrinket'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'firetrinket'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'firetrinket'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_firetrinket'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_firetrinket'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -15.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -15.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 1.0
-                    green : 0.0
-                    blue : 0.0
-                    brightness : 0.4777778089046478
-                }
-                radius : 20.0
-                u2 : 16
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 1.2000000476837158
-                u6{
-                    y : 0.0
-                    z : 14.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : 0.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 1.0
+                    G : 0.0
+                    B : 0.0
+                    A : 0.4777778089046478
+                }
+                Size : 20.0
+                NumSegments : 16
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 1.2000000476837158
+                Offset{
+                    X : 0.0
+                    Y : 14.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : 0.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 50.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 50.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_healingpotion'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_healingpotion'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 2
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 2
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'TransformController'
-            number : 3
+        Component{
+            ClassName : 'TransformController'
+            Identifier : 3
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'healthbottlebig'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'healthbottlebig'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -12.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -12.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.6222222447395325
-                    green : 0.0
-                    blue : 2.8610230629055877e-07
-                    brightness : 0.20000000298023224
-                }
-                radius : 20.0
-                u2 : 10
-                u3 : 5.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 9.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 104
-            collision_shape{
-                box_shape{
-                    left : -12.0
-                    bottom : 0.0
-                    right : 24.0
-                    top : 24.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.6222222447395325
+                    G : 0.0
+                    B : 2.8610230629055877e-07
+                    A : 0.20000000298023224
+                }
+                Size : 20.0
+                NumSegments : 10
+                Depth : 5.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 9.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
-            }
         }
-        component{
-            type : 'CollectableItem'
-            number : 107
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 104
+            ShapeComponent{
+                Rectangle{
+                    X : -12.0
+                    Y : 0.0
+                    Width : 24.0
+                    Height : 24.0
                 }
-                name : ''
-                item : 'healingpotion'
-                u0 : 1
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 107
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                }
+                Identifier : ''
+                ItemName : 'healingpotion'
+                RequiresPickup : 1
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 44.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        hidden : 0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 44.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_icetrinket'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_icetrinket'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'icetrinket'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'icetrinket'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_icetrinket'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_icetrinket'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -15.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -15.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3222222328186035
-                    green : 0.46666666865348816
-                    blue : 1.0
-                    brightness : 0.6333333253860474
-                }
-                radius : 25.0
-                u2 : 16
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 1.2000000476837158
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : 0.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3222222328186035
+                    G : 0.46666666865348816
+                    B : 1.0
+                    A : 0.6333333253860474
+                }
+                Size : 25.0
+                NumSegments : 16
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 1.2000000476837158
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : 0.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_ironsword'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_ironsword'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'ironsword'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'ironsword'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_ironsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 15.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 15.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.12263374030590057
-                    green : 0.18696410953998566
-                    blue : 0.23292176425457
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.12263374030590057
+                    G : 0.18696410953998566
+                    B : 0.23292176425457
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.800000011920929
+    Scaling : 0.800000011920929
 }
-library_item{
-    object{
-        name : 'item_key_yellow'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_key_yellow'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 local self = ...;
 
 SoundLibrary.PlayEffect("surprise2");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'key_yellow'
-                u0 : 0
+                Identifier : ''
+                ItemName : 'key_yellow'
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.3161256313323975
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.3161256313323975
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_key_yellow'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_key_yellow'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -15.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -15.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.8000001907348633
-                    green : 0.8000000715255737
-                    blue : 0.0
-                    brightness : 0.5
-                }
-                radius : 15.0
-                u2 : 8
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : 0.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.8000001907348633
+                    G : 0.8000000715255737
+                    B : 0.0
+                    A : 0.5
+                }
+                Size : 15.0
+                NumSegments : 8
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : 0.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : -15.0
-            right : 30.0
-            top : 45.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : -15.0
+            Width : 30.0
+            Height : 45.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_key_yellow_shop'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_key_yellow_shop'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 local self = ...;
 
 SoundLibrary.PlayEffect("surprise2");
 Game.IncCounter("takingtheshortcut");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'key_yellow'
-                u0 : 0
+                Identifier : ''
+                ItemName : 'key_yellow'
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.3161256313323975
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.3161256313323975
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_key_yellow'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_key_yellow'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -15.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -15.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.8000001907348633
-                    green : 0.8000000715255737
-                    blue : 0.0
-                    brightness : 0.5
-                }
-                radius : 15.0
-                u2 : 8
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : 0.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.8000001907348633
+                    G : 0.8000000715255737
+                    B : 0.0
+                    A : 0.5
+                }
+                Size : 15.0
+                NumSegments : 8
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : 0.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : -15.0
-            right : 30.0
-            top : 45.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : -15.0
+            Width : 30.0
+            Height : 45.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_legendsword'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_legendsword'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'legendsword'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'legendsword'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_legendsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_legendsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 15.0
-                    y : -5.0
-                    z : 0.0
+                Origin{
+                    X : 15.0
+                    Y : -5.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -15.0
-                    right : 30.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -15.0
+                    Width : 30.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 0.800000011920929
+    Scaling : 0.800000011920929
 }
-library_item{
-    object{
-        name : 'item_magicarmor'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_magicarmor'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'magicarmor'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'magicarmor'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_magicplate'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_magicplate'
+                YRotation : 0.0
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -16.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -16.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.37457817792892456
-                    green : 0.1365329623222351
-                    blue : 0.20001177489757538
-                    brightness : 0.3333333432674408
-                }
-                radius : 20.0
-                u2 : 15
-                u3 : 25.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.37457817792892456
+                    G : 0.1365329623222351
+                    B : 0.20001177489757538
+                    A : 0.3333333432674408
+                }
+                Size : 20.0
+                NumSegments : 15
+                Depth : 25.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 50.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 50.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.5
+    Scaling : 1.5
 }
-library_item{
-    object{
-        name : 'item_magicsword'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_magicsword'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 Game.IncCounter("lordoftheundead");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'magicsword'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'magicsword'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_magicsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_magicsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 15.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 15.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.3283950686454773
-                    green : 0.45822399854660034
-                    blue : 0.5160493850708008
-                    brightness : 0.0
-                }
-                radius : 40.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -15.0
-                    right : 30.0
-                    top : 45.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.3283950686454773
+                    G : 0.45822399854660034
+                    B : 0.5160493850708008
+                    A : 0.0
+                }
+                Size : 40.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -15.0
+                    Width : 30.0
+                    Height : 45.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -40.0
-            bottom : -40.0
-            right : 80.0
-            top : 80.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -40.0
+            Y : -40.0
+            Width : 80.0
+            Height : 80.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_needle'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_needle'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 Game.IncCounter("lostsword");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'needle'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'needle'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_ironsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_ironsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 15.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 15.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 0.9333333373069763
-                    x : 0.7111111283302307
-                    y : 0.8777777552604675
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.36707818508148193
-                    green : 0.12029745429754257
-                    blue : 0.15514399111270905
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 0.9333333373069763
+                    G : 0.7111111283302307
+                    B : 0.8777777552604675
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.36707818508148193
+                    G : 0.12029745429754257
+                    B : 0.15514399111270905
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_platearmor'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.5
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_platearmor'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.5
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
                 }
-                name : ''
-                item : 'platearmor'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'platearmor'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_platearmor'
-                u0 : 0.0
-                u1 : 1.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_platearmor'
+                YRotation : 0.0
+                EmissionFactor : 1.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -12.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -12.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.12263374030590057
-                    green : 0.18696410953998566
-                    blue : 0.23292176425457
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 25.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.12263374030590057
+                    G : 0.18696410953998566
+                    B : 0.23292176425457
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 25.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.5
+    Scaling : 1.5
 }
-library_item{
-    object{
-        name : 'item_shadowtrinket'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_shadowtrinket'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 Game.IncCounter("theundead");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'shadowtrinket'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'shadowtrinket'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'item_shadowtrinket'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'item_shadowtrinket'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : -15.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : -15.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 1.0
-                    green : 0.3444444537162781
-                    blue : 1.0
-                    brightness : 0.6333333253860474
-                }
-                radius : 25.0
-                u2 : 16
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 1.2000000476837158
-                u6{
-                    y : 0.0
-                    z : 14.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : 0.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 1.0
+                    G : 0.3444444537162781
+                    B : 1.0
+                    A : 0.6333333253860474
+                }
+                Size : 25.0
+                NumSegments : 16
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 1.2000000476837158
+                Offset{
+                    X : 0.0
+                    Y : 14.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : 0.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'item_thorn'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u2 : 0.800000011920929
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'item_thorn'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.800000011920929
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                    main : $
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                    String : $
 Game.IncCounter("anotherentrance");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : 'thorn'
-                u0 : 1
+                Identifier : ''
+                ItemName : 'thorn'
+                RequiresPickup : 1
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 3.1415927410125732
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 3.1415927410125732
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'weapon_broadsword'
-                u0 : 0.7853981852531433
-                u1 : 1.0
-                u2 : 1.5707963705062866
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'weapon_broadsword'
+                YRotation : 0.7853981852531433
+                EmissionFactor : 1.0
+                XRotation : 1.5707963705062866
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 10.0
-                    y : -7.0
-                    z : 0.0
+                Origin{
+                    X : 10.0
+                    Y : -7.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 0.6777777671813965
-                    x : 1.0
-                    y : 0.644444465637207
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.12263374030590057
-                    green : 0.18696410953998566
-                    blue : 0.23292176425457
-                    brightness : 0.0
-                }
-                radius : 25.0
-                u2 : 15
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 15.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 0.6777777671813965
+                    G : 1.0
+                    B : 0.644444465637207
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -15.0
-                    bottom : -8.0
-                    right : 30.0
-                    top : 38.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.12263374030590057
+                    G : 0.18696410953998566
+                    B : 0.23292176425457
+                    A : 0.0
+                }
+                Size : 25.0
+                NumSegments : 15
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 15.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -15.0
+                    Y : -8.0
+                    Width : 30.0
+                    Height : 38.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -25.0
-            bottom : -25.0
-            right : 50.0
-            top : 55.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -25.0
+            Y : -25.0
+            Width : 50.0
+            Height : 55.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'manabottle'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'manabottle'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'manabottle'
-                u0 : 0.0
-                u1 : 1.5
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'manabottle'
+                YRotation : 0.0
+                EmissionFactor : 1.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.0
-                    green : 0.4000000059604645
-                    blue : 0.800000011920929
-                    brightness : 0.0
-                }
-                radius : 16.0
-                u2 : 10
-                u3 : 5.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 104
-            collision_shape{
-                box_shape{
-                    left : -10.0
-                    bottom : -10.0
-                    right : 20.0
-                    top : 20.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.0
+                    G : 0.4000000059604645
+                    B : 0.800000011920929
+                    A : 0.0
+                }
+                Size : 16.0
+                NumSegments : 10
+                Depth : 5.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
-            }
         }
-        component{
-            type : 'CollectableItem'
-            number : 107
-            collectable_item{
-                u0 : 2
-                u1 : 20
-                lua{
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 104
+            ShapeComponent{
+                Rectangle{
+                    X : -10.0
+                    Y : -10.0
+                    Width : 20.0
+                    Height : 20.0
                 }
-                name : ''
-                item : ''
-                u0 : 0
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 107
+            CollectableItemComponent{
+                Type : 2
+                Value : 20
+                OnCollect{
+                }
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -16.0
-            bottom : -16.0
-            right : 32.0
-            top : 32.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        hidden : 0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -16.0
+            Y : -16.0
+            Width : 32.0
+            Height : 32.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'manabottle_big'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'manabottle_big'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'manabottlebig'
-                u0 : 0.0
-                u1 : 1.5
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'manabottlebig'
+                YRotation : 0.0
+                EmissionFactor : 1.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.0
-                    green : 0.4000000059604645
-                    blue : 0.800000011920929
-                    brightness : 0.0
-                }
-                radius : 21.0
-                u2 : 10
-                u3 : 5.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 104
-            collision_shape{
-                box_shape{
-                    left : -12.0
-                    bottom : -12.0
-                    right : 24.0
-                    top : 24.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.0
+                    G : 0.4000000059604645
+                    B : 0.800000011920929
+                    A : 0.0
+                }
+                Size : 21.0
+                NumSegments : 10
+                Depth : 5.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
-            }
         }
-        component{
-            type : 'CollectableItem'
-            number : 107
-            collectable_item{
-                u0 : 2
-                u1 : 100
-                lua{
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 104
+            ShapeComponent{
+                Rectangle{
+                    X : -12.0
+                    Y : -12.0
+                    Width : 24.0
+                    Height : 24.0
                 }
-                name : ''
-                item : ''
-                u0 : 0
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 107
+            CollectableItemComponent{
+                Type : 2
+                Value : 100
+                OnCollect{
+                }
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -21.0
-            bottom : -21.0
-            right : 42.0
-            top : 42.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        hidden : 0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -21.0
+            Y : -21.0
+            Width : 42.0
+            Height : 42.0
+        }
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'nugget_health'
-        component{
-            type : 'ParticleEmitter'
-            number : 1
-            particle_emitter{
-                particle : 2
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 15
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.3720988631248474
-                        green : 0.11679011583328247
-                        blue : 0.11679020524024963
-                        brightness : 0.22222226858139038
+Template{
+    Object{
+        Identifier : 'nugget_health'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 1
+            ParticleEmitterComponent{
+                ParticleId : 2
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 15
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.3720988631248474
+                        G : 0.11679011583328247
+                        B : 0.11679020524024963
+                        A : 0.22222226858139038
                     }
-                    u2 : 90.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 11.0
-                    u2 : 0.0
-                    u2 : 25.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.3499999940395355
-                    u2 : 1.0
-                    u2 : 0.0
-                    u2 : 0.05000000074505806
-                    u2 : 0.6000000238418579
-                    u2 : 0.0
-                    u2 : 0.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : -3.0
-                        u2 : 0.0
+                    Parameter : 90.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 11.0
+                    Parameter : 0.0
+                    Parameter : 25.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 1.0
+                    Parameter : 0.0
+                    Parameter : 0.05000000074505806
+                    Parameter : 0.6000000238418579
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : -3.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 2
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 2
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 4
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 4
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'nugget_health'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'nugget_health'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 1.0
-                    green : 0.5
-                    blue : 0.5
-                    brightness : 0.0
-                }
-                radius : 12.0
-                u2 : 10
-                u3 : 0.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 104
-            collectable_item{
-                u0 : 1
-                u1 : 2
-                lua{
-                    main : $
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 1.0
+                    G : 0.5
+                    B : 0.5
+                    A : 0.0
+                }
+                Size : 12.0
+                NumSegments : 10
+                Depth : 0.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
+        }
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 104
+            CollectableItemComponent{
+                Type : 1
+                Value : 2
+                OnCollect{
+                    String : $
 local self = ...;
 Scene.CreateObject("collect_health", "", self);
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : ''
-                u0 : 0
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -6.0
-                    bottom : -7.0
-                    right : 12.0
-                    top : 27.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -6.0
+                    Y : -7.0
+                    Width : 12.0
+                    Height : 27.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        component{
-            type : 'PhysicsObject'
-            number : 107
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 107
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -12.0
-            bottom : -12.0
-            right : 24.0
-            top : 32.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -12.0
+            Y : -12.0
+            Width : 24.0
+            Height : 32.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'nugget_mana'
-        component{
-            type : 'ParticleEmitter'
-            number : 1
-            particle_emitter{
-                particle : 2
-                particle : 3
-                particle : 4
-                u1 : 0
-                u2 : 15
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 0.0
-                        green : 0.24000000953674316
-                        blue : 0.6000000834465027
-                        brightness : 0.2777777910232544
+Template{
+    Object{
+        Identifier : 'nugget_mana'
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 1
+            ParticleEmitterComponent{
+                ParticleId : 2
+                ParticleId : 3
+                ParticleId : 4
+                ModelBindingId : 0
+                MaxParticles : 15
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 0.0
+                        G : 0.24000000953674316
+                        B : 0.6000000834465027
+                        A : 0.2777777910232544
                     }
-                    u2 : 90.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 11.0
-                    u2 : 0.0
-                    u2 : 20.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.3499999940395355
-                    u2 : 1.0
-                    u2 : 0.0
-                    u2 : 0.05000000074505806
-                    u2 : 0.6000000238418579
-                    u2 : 0.0
-                    u2 : 0.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : -3.0
-                        u2 : 0.0
+                    Parameter : 90.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 11.0
+                    Parameter : 0.0
+                    Parameter : 20.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.3499999940395355
+                    Parameter : 1.0
+                    Parameter : 0.0
+                    Parameter : 0.05000000074505806
+                    Parameter : 0.6000000238418579
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : -3.0
+                        Z : 0.0
                     }
                 }
-                u6 : 1
+                LocalSystem : 1
             }
         }
-        component{
-            type : 'Particle'
-            number : 2
-            particle{
-                name : 'particle_fure_1'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 2
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 3
-            particle{
-                name : 'particle_fure_2'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 3
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Particle'
-            number : 4
-            particle{
-                name : 'particle_fure_3'
-                u0 : 40.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 4
+            ParticleComponent{
+                TextureName : 'particle_fure_3'
+                Size : 40.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'nugget_mana'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'nugget_mana'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.5
-                    green : 0.5
-                    blue : 1.0
-                    brightness : 0.0
-                }
-                radius : 12.0
-                u2 : 10
-                u3 : 0.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 104
-            collectable_item{
-                u0 : 2
-                u1 : 20
-                lua{
-                    main : $
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.5
+                    G : 0.5
+                    B : 1.0
+                    A : 0.0
+                }
+                Size : 12.0
+                NumSegments : 10
+                Depth : 0.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
+        }
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 104
+            CollectableItemComponent{
+                Type : 2
+                Value : 20
+                OnCollect{
+                    String : $
 local self = ...;
 Scene.CreateObject("collect_mana", "", self);
 SoundLibrary.PlayEffect("managet");
 $end
-                    secondary : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
                 }
-                name : ''
-                item : ''
-                u0 : 0
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -6.0
-                    bottom : -7.0
-                    right : 12.0
-                    top : 27.0
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -6.0
+                    Y : -7.0
+                    Width : 12.0
+                    Height : 27.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        component{
-            type : 'PhysicsObject'
-            number : 107
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 107
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -12.0
-            bottom : -12.0
-            right : 24.0
-            top : 32.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -12.0
+            Y : -12.0
+            Width : 24.0
+            Height : 32.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'powershard'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                u1{
-                    u0 : 0.009999500587582588
-                    u1 : 0.9999500513076782
+Template{
+    Object{
+        Identifier : 'powershard'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityDirection{
+                    X : 0.009999500587582588
+                    Y : 0.9999500513076782
                 }
-                u2 : 0.009999999776482582
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+                GravityMagnitude : 0.009999999776482582
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'powershard'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'powershard'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'AnimationController'
-            number : 103
-            animation_controller{
-                model_component : 101
-                u1 : 112
-                u2 : 1
-            }
-        }
-        component{
-            type : 'KeyframeAnimation'
-            number : 112
-            keyframe_animation{
-                linked_model_component_number : 101
-                name : 'powershard_sparkle'
-                u0 : 1
-                u1 : 1.0
-                u2 : 1
-            }
-        }
-        component{
-            type : 'CollectableItem'
-            number : 115
-            collectable_item{
-                u0 : 3
-                u1 : 100
-                lua{
-                }
-                name : ''
-                item : ''
-                u0 : 0
-            }
-        }
-        component{
-            type : 'CollisionShape'
-            number : 118
-            collision_shape{
-                box_shape{
-                    left : -20.0
-                    bottom : -20.0
-                    right : 40.0
-                    top : 40.0
-                }
-            }
-            collision_shape_2{
-                u1 : 1
-                w : -15.0
-                x : 15.0
-                interaction_type : 3
-                z : 1
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 120
-            simple_glow{
-                colour{
-                    red : 0.5000000596046448
-                    green : 1.0
-                    blue : 0.3777778148651123
-                    brightness : 0.5111111402511597
-                }
-                radius : 15.0
-                u2 : 10
-                u3 : 15.0
-                u4 : 0.25
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'AnimationController'
+            Identifier : 103
+            AnimationControllerComponent{
+                ModelId : 101
+                DefaultAnimationId : 112
+                SelfUpdate : 1
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 40.0
+        Component{
+            ClassName : 'KeyframeAnimation'
+            Identifier : 112
+            KeyframeAnimationComponent{
+                ModelId : 101
+                Name : 'powershard_sparkle'
+                Repeating : 1
+                SpeedMultiplier : 1.0
+                Running : 1
+            }
         }
-        hidden : 0
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 115
+            CollectableItemComponent{
+                Type : 3
+                Value : 100
+                OnCollect{
+                }
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
+            }
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 118
+            ShapeComponent{
+                Rectangle{
+                    X : -20.0
+                    Y : -20.0
+                    Width : 40.0
+                    Height : 40.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -15.0
+                MaxDepth : 15.0
+                SpecialType : 3
+                Enabled : 1
+            }
+        }
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 120
+            SimpleGlowComponent{
+                Color{
+                    R : 0.5000000596046448
+                    G : 1.0
+                    B : 0.3777778148651123
+                    A : 0.5111111402511597
+                }
+                Size : 15.0
+                NumSegments : 10
+                Depth : 15.0
+                PulseAmount : 0.25
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
+                }
+            }
+        }
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 40.0
+        }
+        Hidden : 0
     }
-    u0 : 0.699999988079071
+    Scaling : 0.699999988079071
 }
-library_item{
-    object{
-        name : 'sshard_blue'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'sshard_blue'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 4
-                u1 : 1
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 4
+                Value : 1
+                OnCollect{
                 }
-                name : ''
-                item : ''
-                u0 : 0
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 4.71238899230957
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 4.71238899230957
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'sshard_blue'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'sshard_blue'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.5
-                    green : 0.5
-                    blue : 1.0
-                    brightness : 0.5
-                }
-                radius : 15.0
-                u2 : 8
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : -15.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.5
+                    G : 0.5
+                    B : 1.0
+                    A : 0.5
+                }
+                Size : 15.0
+                NumSegments : 8
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : -15.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -20.0
-            bottom : -20.0
-            right : 40.0
-            top : 40.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -20.0
+            Y : -20.0
+            Width : 40.0
+            Height : 40.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'sshard_red'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'sshard_red'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 4
-                u1 : 5
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 4
+                Value : 5
+                OnCollect{
                 }
-                name : ''
-                item : ''
-                u0 : 0
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 4.71238899230957
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 4.71238899230957
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'sshard_red'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'sshard_red'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 1.0
-                    green : 0.5222222208976746
-                    blue : 0.5222222208976746
-                    brightness : 0.5111111402511597
-                }
-                radius : 15.0
-                u2 : 8
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : -15.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 1.0
+                    G : 0.5222222208976746
+                    B : 0.5222222208976746
+                    A : 0.5111111402511597
+                }
+                Size : 15.0
+                NumSegments : 8
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : -15.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : -15.0
-            right : 30.0
-            top : 30.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : -15.0
+            Width : 30.0
+            Height : 30.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'sshard_yellow'
-        component{
-            type : 'PhysicsObject'
-            number : 1
-            physics_object{
-                enabled : 1
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
+Template{
+    Object{
+        Identifier : 'sshard_yellow'
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 1
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        component{
-            type : 'CollectableItem'
-            number : 2
-            collectable_item{
-                u0 : 4
-                u1 : 20
-                lua{
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 2
+            CollectableItemComponent{
+                Type : 4
+                Value : 20
+                OnCollect{
                 }
-                name : ''
-                item : ''
-                u0 : 0
+                Identifier : ''
+                ItemName : ''
+                RequiresPickup : 0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 3
-            model_transform_controller{
-                u0 : 101
-                u2 : 4.71238899230957
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 3
+            ModelTransformControllerComponent{
+                ModelId : 101
+                RotationSpeed : 4.71238899230957
             }
         }
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'sshard_yellow'
-                u0 : 0.0
-                u1 : 5.0
-                u2 : 0.0
-                u3{
-                    w : 0.0
-                    x : 0.0
-                    y : 0.0
-                    z : 1.0
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'sshard_yellow'
+                YRotation : 0.0
+                EmissionFactor : 5.0
+                XRotation : 0.0
+                ShatterColor{
+                    R : 0.0
+                    G : 0.0
+                    B : 0.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
-                }
-            }
-        }
-        component{
-            type : 'SimpleGlow'
-            number : 102
-            simple_glow{
-                colour{
-                    red : 0.7444446086883545
-                    green : 0.7444444894790649
-                    blue : 0.0
-                    brightness : 0.18888893723487854
-                }
-                radius : 15.0
-                u2 : 8
-                u3 : 15.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 0.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'CollisionShape'
-            number : 105
-            collision_shape{
-                box_shape{
-                    left : -5.0
-                    bottom : -15.0
-                    right : 10.0
-                    top : 30.0
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 102
+            SimpleGlowComponent{
+                Color{
+                    R : 0.7444446086883545
+                    G : 0.7444444894790649
+                    B : 0.0
+                    A : 0.18888893723487854
+                }
+                Size : 15.0
+                NumSegments : 8
+                Depth : 15.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 0.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 105
+            ShapeComponent{
+                Rectangle{
+                    X : -5.0
+                    Y : -15.0
+                    Width : 10.0
+                    Height : 30.0
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Position{
+            X : 0.0
+            Y : 0.0
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -15.0
-            bottom : -15.0
-            right : 30.0
-            top : 30.0
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -15.0
+            Y : -15.0
+            Width : 30.0
+            Height : 30.0
         }
-        hidden : 0
+        Hidden : 0
     }
-    u0 : 1.0
+    Scaling : 1.0
 }
-library_item{
-    object{
-        name : 'xp_sack'
-        component{
-            type : 'Model'
-            number : 101
-            3D_model{
-                name : 'xp_sack'
-                u0 : 1.5707963705062866
-                u1 : 0.5
-                u2 : 0.0
-                u3{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+Template{
+    Object{
+        Identifier : 'xp_sack'
+        Component{
+            ClassName : 'Model'
+            Identifier : 101
+            ModelComponent{
+                Name : 'xp_sack'
+                YRotation : 1.5707963705062866
+                EmissionFactor : 0.5
+                XRotation : 0.0
+                ShatterColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
-                u4{
-                    x : 0.0
-                    y : 0.0
-                    z : 0.0
+                Origin{
+                    X : 0.0
+                    Y : 0.0
+                    Z : 0.0
                 }
-                u5 : 0
-                u6{
-                    w : 1.0
-                    x : 1.0
-                    y : 1.0
-                    z : 1.0
+                Transparent : 0
+                DiffuseColor{
+                    R : 1.0
+                    G : 1.0
+                    B : 1.0
+                    A : 1.0
                 }
             }
         }
-        component{
-            type : 'ParticleEmitter'
-            number : 102
-            particle_emitter{
-                particle : 103
-                particle : 106
-                u1 : 0
-                u2 : 80
-                u3 : 0
-                u4 : 0
-                u5{
-                    u0 : 5
-                    colour{
-                        red : 1.0
-                        green : 1.0
-                        blue : 1.0
-                        brightness : 0.0
+        Component{
+            ClassName : 'ParticleEmitter'
+            Identifier : 102
+            ParticleEmitterComponent{
+                ParticleId : 103
+                ParticleId : 106
+                ModelBindingId : 0
+                MaxParticles : 80
+                ParentEmitterId : 0
+                DestroyWhenFinished : 0
+                Emitter{
+                    Type : 5
+                    BaseColor{
+                        R : 1.0
+                        G : 1.0
+                        B : 1.0
+                        A : 0.0
                     }
-                    u2 : 90.0
-                    u2 : 45.0
-                    u2 : 0.0
-                    u2 : 15.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 0.0
-                    u2 : 1.0
-                    u2 : 0.0
-                    u2 : 1.0
-                    u2 : 0.05000000074505806
-                    u2 : 1.5
-                    u2 : 0.0
-                    u2 : 0.0
-                    u3 : 0.0
-                    u4 : 0.0
-                    u5 : 0.0
-                    u6{
-                        u0 : 0.0
-                        u1 : 80.0
-                        u2 : 0.0
+                    Parameter : 90.0
+                    Parameter : 45.0
+                    Parameter : 0.0
+                    Parameter : 15.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    Parameter : 0.0
+                    Parameter : 1.0
+                    Parameter : 0.05000000074505806
+                    Parameter : 1.5
+                    Parameter : 0.0
+                    Parameter : 0.0
+                    HueVariance : 0.0
+                    SaturationVariance : 0.0
+                    LightnessVariance : 0.0
+                    OriginOffset{
+                        X : 0.0
+                        Y : 80.0
+                        Z : 0.0
                     }
                 }
-                u6 : 0
-                u7{
-                    u0 : 0.0
-                    u1 : 20.0
-                    u2 : 0.0
+                LocalSystem : 0
+                Gravity{
+                    X : 0.0
+                    Y : 20.0
+                    Z : 0.0
                 }
             }
         }
-        component{
-            type : 'Particle'
-            number : 103
-            particle{
-                name : 'particle_fure_1'
-                u0 : 4.0
+        Component{
+            ClassName : 'Particle'
+            Identifier : 103
+            ParticleComponent{
+                TextureName : 'particle_fure_1'
+                Size : 4.0
             }
         }
-        component{
-            type : 'SimpleGlow'
-            number : 104
-            simple_glow{
-                colour{
-                    red : 0.5666666626930237
-                    green : 0.46666666865348816
-                    blue : 0.0
-                    brightness : 0.5
+        Component{
+            ClassName : 'SimpleGlow'
+            Identifier : 104
+            SimpleGlowComponent{
+                Color{
+                    R : 0.5666666626930237
+                    G : 0.46666666865348816
+                    B : 0.0
+                    A : 0.5
                 }
-                radius : 80.0
-                u2 : 20
-                u3 : 0.0
-                u4 : 0.15000000596046448
-                u5 : 0.800000011920929
-                u6{
-                    y : 0.0
-                    z : 50.0
-                }
-            }
-        }
-        component{
-            type : 'Particle'
-            number : 106
-            particle{
-                name : 'particle_fure_2'
-                u0 : 8.0
-            }
-        }
-        component{
-            type : 'PhysicsObject'
-            number : 108
-            physics_object{
-                enabled : 1
-                u2 : 0.800000011920929
-                ground_friction : 1500.0
-                air_friction : 0.0
-                speed : 700.0
-                can_roll : 0
-                bounciness : 0.0
-            }
-        }
-        component{
-            type : 'CollectableItem'
-            number : 110
-            collectable_item{
-                u0 : 0
-                u1 : 0
-                lua{
-                }
-                name : ''
-                item : 'experiencesack'
-                u0 : 1
-            }
-        }
-        component{
-            type : 'CollisionShape'
-            number : 111
-            collision_shape{
-                box_shape{
-                    left : -50.0
-                    bottom : 0.0
-                    right : 100.0
-                    top : 106.42947387695312
+                Size : 80.0
+                NumSegments : 20
+                Depth : 0.0
+                PulseAmount : 0.15000000596046448
+                PulseTime : 0.800000011920929
+                Offset{
+                    X : 0.0
+                    Y : 50.0
                 }
             }
-            collision_shape_2{
-                u1 : 1
-                w : -40.0
-                x : 40.0
-                interaction_type : 3
-                z : 1
+        }
+        Component{
+            ClassName : 'Particle'
+            Identifier : 106
+            ParticleComponent{
+                TextureName : 'particle_fure_2'
+                Size : 8.0
             }
         }
-        component{
-            type : 'ModelTransformController'
-            number : 113
-            model_transform_controller{
-                u0 : 101
+        Component{
+            ClassName : 'PhysicsObject'
+            Identifier : 108
+            PhysicsObjectComponent{
+                PhysicsEnabled : 1
+                GravityMagnitude : 0.800000011920929
+                GroundDeceleration : 1500.0
+                AirDeceleration : 0.0
+                MaxSpeed : 700.0
+                AllowRotation : 0
+                Elasticity : 0.0
             }
         }
-        position{
-            x_position : 0.0
-            y_position : 0.0
+        Component{
+            ClassName : 'CollectableItem'
+            Identifier : 110
+            CollectableItemComponent{
+                Type : 0
+                Value : 0
+                OnCollect{
+                }
+                Identifier : ''
+                ItemName : 'experiencesack'
+                RequiresPickup : 1
+            }
         }
-        z_position : 0.0
-        rotation : 0.0
-        scale : 1.0
-        shape{
-            left : -80.0
-            bottom : -80.0
-            right : 160.0
-            top : 186.42947387695312
+        Component{
+            ClassName : 'CollisionShape'
+            Identifier : 111
+            ShapeComponent{
+                Rectangle{
+                    X : -50.0
+                    Y : 0.0
+                    Width : 100.0
+                    Height : 106.42947387695312
+                }
+            }
+            CollisionShapeComponent{
+                Collides : 1
+                MinDepth : -40.0
+                MaxDepth : 40.0
+                SpecialType : 3
+                Enabled : 1
+            }
         }
-        hidden : 0
+        Component{
+            ClassName : 'ModelTransformController'
+            Identifier : 113
+            ModelTransformControllerComponent{
+                ModelId : 101
+            }
+        }
+        Position{
+            X : 0.0
+            Y : 0.0
+        }
+        Depth : 0.0
+        Rotation : 0.0
+        Scaling : 1.0
+        LocalAabb{
+            X : -80.0
+            Y : -80.0
+            Width : 160.0
+            Height : 186.42947387695312
+        }
+        Hidden : 0
     }
-    u0 : 0.4000000059604645
+    Scaling : 0.4000000059604645
 }
