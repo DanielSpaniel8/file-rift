@@ -1,7 +1,12 @@
 */*.pyc
 *.pyc
+**/__pycache__
+
+lib/temp
 source/*
 !source/example.lua
+templates
+!templates/default
 zip/*
 de_in/custom/*
 de_out/custom/*
@@ -13,5 +18,6 @@ re_out/*
 .manifest
 .luac.in
 .luac.out
-templates
-!templates/default
+**/*.in
+**/*.out
+**/.manifest
