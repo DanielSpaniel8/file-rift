@@ -1,1006 +1,1006 @@
 # rifted with FR v5.7.0
 
-Name : 'grovestuff'
-Template{
-    Object{
-        Identifier : 'grove_gate'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_gate'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Name 'grovestuff'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_gate'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_gate'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_hang1'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_hang1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_hang1'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_hang1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_hang2'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_hang2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_hang2'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_hang2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_hang3'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_hang3'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_hang3'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_hang3'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_hang4'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_hang4'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_hang4'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_hang4'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_hang5'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_hang5'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_hang5'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_hang5'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_platform1'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 102
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -114.240478515625
-                        Y : 19.92254638671875
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_platform1'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 102
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -114.240478515625
+                        Y 19.92254638671875
                     }
-                    Vertex{
-                        X : 180.8839569091797
-                        Y : 17.58331298828125
+                    Vertex{ # Vector2
+                        X 180.8839569091797
+                        Y 17.58331298828125
                     }
-                    Vertex{
-                        X : 180.7890625
-                        Y : 34.1312255859375
+                    Vertex{ # Vector2
+                        X 180.7890625
+                        Y 34.1312255859375
                     }
-                    Vertex{
-                        X : -117.36463928222656
-                        Y : 39.16119384765625
+                    Vertex{ # Vector2
+                        X -117.36463928222656
+                        Y 39.16119384765625
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_platform1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 102
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -114.240478515625
-                        Y : 19.92254638671875
-                    }
-                    Vertex{
-                        X : 180.8839569091797
-                        Y : 17.58331298828125
-                    }
-                    Vertex{
-                        X : 180.7890625
-                        Y : 34.1312255859375
-                    }
-                    Vertex{
-                        X : -117.36463928222656
-                        Y : 39.16119384765625
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_platform1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 102
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -114.240478515625
+                        Y 19.92254638671875
+                    }
+                    Vertex{ # Vector2
+                        X 180.8839569091797
+                        Y 17.58331298828125
+                    }
+                    Vertex{ # Vector2
+                        X 180.7890625
+                        Y 34.1312255859375
+                    }
+                    Vertex{ # Vector2
+                        X -117.36463928222656
+                        Y 39.16119384765625
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -117.36463928222656
-            Y : 0.0
-            Width : 298.24859619140625
-            Height : 39.16119384765625
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -117.36463928222656
+            Y 0.0
+            Width 298.24859619140625
+            Height 39.16119384765625
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_pole1'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_pole1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_pole1'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_pole1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_pole2'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_pole2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_pole2'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_pole2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_torch'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'grove_torch'
-                YRotation : -1.5707963705062866
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_torch'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'grove_torch'
+                YRotation -1.5707963705062866
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 2
-            SimpleGlowComponent{
-                Color{
-                    R : 0.2666666805744171
-                    G : 0.1111111119389534
-                    B : 0.3888888955116272
-                    A : 0.5
-                }
-                Size : 25.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.07999999821186066
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 10.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'Light'
-            Identifier : 103
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 0.8222222328186035
-                    G : 0.7244443893432617
-                    B : 1.0
-                    A : 0.0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 2
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.2666666805744171
+                    G 0.1111111119389534
+                    B 0.3888888955116272
+                    A 0.5
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'FireEmitter'
-            Identifier : 105
-            FireEmitterComponent{
-                ParticleEmitterId : 108
-                LightId : 103
-                Color{
-                    R : 0.8222222328186035
-                    G : 0.7244443893432617
-                    B : 1.0
-                    A : 0.0
-                }
-                ParticleInterval : 0.10000000149011612
-                ParticleMaxAge : 0.8999999761581421
-                ParticleSpread{
-                    X : 2.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Origin3{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Size 25.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.07999999821186066
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 10.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 108
-            ParticleEmitterComponent{
-                ParticleId : 109
-                ParticleId : 111
-                ParticleId : 112
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 103
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 0.8222222328186035
+                    G 0.7244443893432617
+                    B 1.0
+                    A 0.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 250.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 109
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'FireEmitter'
+            Identifier 105
+            FireEmitterComponent{ # FireEmitterComponent
+                ParticleEmitterId 108
+                LightId 103
+                Color{ # FloatColor
+                    R 0.8222222328186035
+                    G 0.7244443893432617
+                    B 1.0
+                    A 0.0
+                }
+                ParticleInterval 0.10000000149011612
+                ParticleMaxAge 0.8999999761581421
+                ParticleSpread{ # Vector3
+                    X 2.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Origin3{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 111
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 22.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 108
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 109
+                ParticleId 111
+                ParticleId 112
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 112
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 109
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 20.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 111
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 22.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -20.0
-            Y : -20.0
-            Width : 40.0
-            Height : 40.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 112
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 20.0
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -20.0
+            Y -20.0
+            Width 40.0
+            Height 40.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_tree1'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_tree1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_tree1'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_tree1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_tree2'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_tree2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_tree2'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_tree2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grove_tree3'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grove_tree3'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grove_tree3'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grove_tree3'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'whiteblock'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'stoneblock_white'
-                YRotation : 3.1415927410125732
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'whiteblock'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'stoneblock_white'
+                YRotation 3.1415927410125732
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'whitepillair'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'stonepillair_white'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'whitepillair'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'stonepillair_white'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'whiteplatform'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -65.3602066040039
-                        Y : -1.756103515625
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'whiteplatform'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -65.3602066040039
+                        Y -1.756103515625
                     }
-                    Vertex{
-                        X : 73.50769805908203
-                        Y : -1.7630615234375
+                    Vertex{ # Vector2
+                        X 73.50769805908203
+                        Y -1.7630615234375
                     }
-                    Vertex{
-                        X : 37.36806106567383
-                        Y : 7.17156982421875
+                    Vertex{ # Vector2
+                        X 37.36806106567383
+                        Y 7.17156982421875
                     }
-                    Vertex{
-                        X : -37.9691162109375
-                        Y : 7.093841552734375
+                    Vertex{ # Vector2
+                        X -37.9691162109375
+                        Y 7.093841552734375
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'stoneplatform_white'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -65.3602066040039
-                        Y : -1.756103515625
-                    }
-                    Vertex{
-                        X : 73.50769805908203
-                        Y : -1.7630615234375
-                    }
-                    Vertex{
-                        X : 37.36806106567383
-                        Y : 7.17156982421875
-                    }
-                    Vertex{
-                        X : -37.9691162109375
-                        Y : 7.093841552734375
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'stoneplatform_white'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -65.3602066040039
+                        Y -1.756103515625
+                    }
+                    Vertex{ # Vector2
+                        X 73.50769805908203
+                        Y -1.7630615234375
+                    }
+                    Vertex{ # Vector2
+                        X 37.36806106567383
+                        Y 7.17156982421875
+                    }
+                    Vertex{ # Vector2
+                        X -37.9691162109375
+                        Y 7.093841552734375
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -65.3602066040039
-            Y : -1.7630615234375
-            Width : 138.86790466308594
-            Height : 8.93463134765625
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -65.3602066040039
+            Y -1.7630615234375
+            Width 138.86790466308594
+            Height 8.93463134765625
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

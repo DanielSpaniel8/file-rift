@@ -1,25 +1,26 @@
 # rifted with FR v5.7.0
 
-Name : 'dimensional'
-Template{
-    Object{
-        Identifier : 'dimension_area'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 101
-            ShapeComponent{
-                Rectangle{
-                    X : -500.0
-                    Y : -1000.0
-                    Width : 2500.0
-                    Height : 2000.0
+Name 'dimensional'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dimension_area'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 101
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -500.0
+                    Y -1000.0
+                    Width 2500.0
+                    Height 2000.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                OnCollide{
-                    String : $
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -15.0
+                MaxDepth 15.0
+                OnCollide{ # Program
+                    String
+$
 local self, target= ...;
 
 if target:identifier() == "hero" then
@@ -28,10 +29,11 @@ if target:identifier() == "hero" then
         GenerateDimensionMonsters(target:position(), 2);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\t\tSetDimensionModeEnabled(true);\r\n\t\tGenerateDimensionMonsters(target:position(), 2);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0e\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x01\x80\x85\x80\x00\x00\xc2\x00\x80\x00\x9c@\x00\x01\x85\xc0\x00\x00\xcb\x00\xc1\x00\xdc\x80\x00\x01\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x04\x1a\x00\x00\x00GenerateDimensionMonsters\x00\x04\t\x00\x00\x00position\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x0e\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\r\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\r\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9f\x00\x00\x00local self, target= ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\t\tSetDimensionModeEnabled(true);\r\n\t\tGenerateDimensionMonsters(target:position(), 2);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0e\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x01\x80\x85\x80\x00\x00\xc2\x00\x80\x00\x9c@\x00\x01\x85\xc0\x00\x00\xcb\x00\xc1\x00\xdc\x80\x00\x01\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x04\x1a\x00\x00\x00GenerateDimensionMonsters\x00\x04\t\x00\x00\x00position\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x0e\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\r\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\r\x00\x00\x00\x00\x00\x00\x00'
                 }
-                OnCollisionEnd{
-                    String : $
+                OnCollisionEnd{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -40,231 +42,233 @@ if target:identifier() == "hero" then
 
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\t\tSetDimensionModeEnabled(false);\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc2\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\r\n\t\tSetDimensionModeEnabled(false);\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc2\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x18\x00\x00\x00SetDimensionModeEnabled\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -500.0
-            Y : -1000.0
-            Width : 2500.0
-            Height : 2000.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -500.0
+            Y -1000.0
+            Width 2500.0
+            Height 2000.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'dimension_monster'
-        Component{
-            ClassName : 'Light'
-            Identifier : 1
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dimension_monster'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 1
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 150.0
+                Radius 150.0
             }
         }
-        Component{
-            ClassName : 'DimensionObject'
-            Identifier : 2
+        Component{ # Component
+            ClassName 'DimensionObject'
+            Identifier 2
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 3
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 3
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 self:destroy();
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00%\x00\x00\x00local self = ...;\r\n\r\nself:destroy();\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x04\x00\x00\x00%\x00\x00\x01K\x00@\x00\\@\x00\x01\x1e\x00\x80\x00\x01\x00\x00\x00\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00%\x00\x00\x00local self = ...;\r\n\r\nself:destroy();\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x04\x00\x00\x00%\x00\x00\x01K\x00@\x00\\@\x00\x01\x1e\x00\x80\x00\x01\x00\x00\x00\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 9
+                Enabled 1
+                Trigger 9
             }
         }
-        Component{
-            ClassName : 'EntityInfo'
-            Identifier : 4
-            EntityInfoComponent{
-                EntityClass : 'Dark Energy'
+        Component{ # Component
+            ClassName 'EntityInfo'
+            Identifier 4
+            EntityInfoComponent{ # EntityInfoComponent
+                EntityClass 'Dark Energy'
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 120
-            ParticleEmitterComponent{
-                ParticleId : 123
-                ModelBindingId : 0
-                MaxParticles : 100
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                Emitter{
-                    Type : 3
-                    BaseColor{
-                        R : 0.7888888716697693
-                        G : 0.7888888716697693
-                        B : 0.7888888716697693
-                        A : 0.45555558800697327
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 120
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 123
+                ModelBindingId 0
+                MaxParticles 100
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                Emitter{ # ParticleEmitter
+                    Type 3
+                    BaseColor{ # FloatColor
+                        R 0.7888888716697693
+                        G 0.7888888716697693
+                        B 0.7888888716697693
+                        A 0.45555558800697327
                     }
-                    Parameter : 0.00800000037997961
-                    Parameter : 0.20000000298023224
-                    Parameter : 0.800000011920929
-                    Parameter : 8.0
-                    Parameter : 0.6000000238418579
-                    Parameter : 0.0
-                    Parameter : 1.0
-                    HueVariance : 0.0
-                    SaturationVariance : 0.0
-                    LightnessVariance : 0.0
-                    OriginOffset{
-                        X : 0.0
-                        Y : 0.0
-                        Z : 0.0
-                    }
-                }
-                LocalSystem : 0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 123
-            ParticleComponent{
-                TextureName : 'particle'
-                Size : 15.0
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 127
-            SimpleGlowComponent{
-                Color{
-                    R : 1.0
-                    G : 0.5111111402511597
-                    B : 0.511111319065094
-                    A : 0.5000000596046448
-                }
-                Size : 25.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 129
-            ParticleEmitterComponent{
-                ParticleId : 123
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 120
-                DestroyWhenFinished : 0
-                Emitter{
-                    Type : 3
-                    BaseColor{
-                        R : 0.27259260416030884
-                        G : 0.08296296000480652
-                        B : 0.08296302706003189
-                        A : 0.0
-                    }
-                    Parameter : 0.004999999888241291
-                    Parameter : 0.20000000298023224
-                    Parameter : 1.0
-                    Parameter : 25.0
-                    Parameter : 0.6000000238418579
-                    Parameter : 0.4000000059604645
-                    Parameter : 1.0
-                    HueVariance : 0.0
-                    SaturationVariance : 0.0
-                    LightnessVariance : 0.0
-                    OriginOffset{
-                        X : 0.0
-                        Y : 0.0
-                        Z : 0.0
+                    Parameter 0.00800000037997961
+                    Parameter 0.20000000298023224
+                    Parameter 0.800000011920929
+                    Parameter 8.0
+                    Parameter 0.6000000238418579
+                    Parameter 0.0
+                    Parameter 1.0
+                    HueVariance 0.0
+                    SaturationVariance 0.0
+                    LightnessVariance 0.0
+                    OriginOffset{ # Vector3
+                        X 0.0
+                        Y 0.0
+                        Z 0.0
                     }
                 }
-                LocalSystem : 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'EntityController'
-            Identifier : 133
-            EntityControllerComponent{
-                EntityId : 134
-                AnimationControllerId : 0
-                DefaultMoveAnimationId : 0
-                RoamAreaId : 0
-                DefaultMoveSpeed : 100.0
-                DefaultAcceleration : 800.0
-                TargetingDistance : 2000.0
-                MovementBehavior : 1
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 123
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle'
+                Size 15.0
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 134
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 0
-            }
-            MonsterEntityComponent{
-                OnKill{
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 127
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.5111111402511597
+                    B 0.511111319065094
+                    A 0.5000000596046448
                 }
-                OnHurt{
+                Size 25.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
             }
         }
-        Component{
-            ClassName : 'PhysicsObject'
-            Identifier : 136
-            PhysicsObjectComponent{
-                PhysicsEnabled : 1
-                GroundDeceleration : 1500.0
-                AirDeceleration : 0.0
-                MaxSpeed : 300.0
-                AllowRotation : 0
-                Elasticity : 0.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 129
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 123
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 120
+                DestroyWhenFinished 0
+                Emitter{ # ParticleEmitter
+                    Type 3
+                    BaseColor{ # FloatColor
+                        R 0.27259260416030884
+                        G 0.08296296000480652
+                        B 0.08296302706003189
+                        A 0.0
+                    }
+                    Parameter 0.004999999888241291
+                    Parameter 0.20000000298023224
+                    Parameter 1.0
+                    Parameter 25.0
+                    Parameter 0.6000000238418579
+                    Parameter 0.4000000059604645
+                    Parameter 1.0
+                    HueVariance 0.0
+                    SaturationVariance 0.0
+                    LightnessVariance 0.0
+                    OriginOffset{ # Vector3
+                        X 0.0
+                        Y 0.0
+                        Z 0.0
+                    }
+                }
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 137
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'EntityController'
+            Identifier 133
+            EntityControllerComponent{ # EntityControllerComponent
+                EntityId 134
+                AnimationControllerId 0
+                DefaultMoveAnimationId 0
+                RoamAreaId 0
+                DefaultMoveSpeed 100.0
+                DefaultAcceleration 800.0
+                TargetingDistance 2000.0
+                MovementBehavior 1
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 134
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 0
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'PhysicsObject'
+            Identifier 136
+            PhysicsObjectComponent{ # PhysicsObjectComponent
+                PhysicsEnabled 1
+                GroundDeceleration 1500.0
+                AirDeceleration 0.0
+                MaxSpeed 300.0
+                AllowRotation 0
+                Elasticity 0.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 137
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 dimensionMonsterCount = dimensionMonsterCount + 1;
@@ -296,314 +300,316 @@ while true do
 end
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xda\x02\x00\x00local self = ...;\r\n\r\ndimensionMonsterCount = dimensionMonsterCount + 1;\r\n\r\nself:setAlwaysActive(true);\r\n\r\n\r\nlocal targetPosition = self:position();\r\nlocal targetOffset = Vector3.New(0, 0, 0);\r\n\r\nwhile true do\r\n\tProgram.Wait(0.2);\r\n\tlocal target = EntityController.Target(self);\r\n\r\n\tlocal delta = targetPosition + targetOffset - self:position();\r\n\r\n\tPhysicsObject.SetGravityDirection(self, delta:normalized());\r\n\tPhysicsObject.SetGravityMagnitude(self, 2);\r\n\tPhysicsObject.SetDecelerationForce(self, 1.5);\r\n\r\n\tif Math.RandomInt(1, 5) == 1 then\r\n\t\tlocal r = 250;\r\n\t\ttargetOffset = Vector3.New(Math.RandomFloat(-r, r), Math.RandomFloat(-r, r), 0);\r\n\tend\r\n\r\n\tif  target ~= nil then\r\n\t\ttargetPosition = target:position();\r\n\tend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0bI\x00\x00\x00%\x00\x00\x01E\x00\x00\x00L@\xc0\x00G\x00\x00\x00K\x80@\x00\xc2\x00\x80\x00\\@\x80\x01K\xc0@\x00\\\x80\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\x81\x01\x00A\x81\x01\x00\x9c\x80\x00\x02\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc5\x80\x02\x00\xc6\xc0\xc2\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x0c\x81\x80\x00K\xc1@\x00\\\x81\x00\x01\rA\x01\x02E\x01\x03\x00FA\xc3\x02\x80\x01\x00\x00\xcb\x81C\x02\xdc\x01\x00\x01\\A\x00\x00E\x01\x03\x00F\xc1\xc3\x02\x80\x01\x00\x00\xc1\x01\x04\x00\\A\x80\x01E\x01\x03\x00FA\xc4\x02\x80\x01\x00\x00\xc1\x81\x04\x00\\A\x80\x01E\xc1\x04\x00F\x01\xc5\x02\x81A\x00\x00\xc1A\x05\x00\\\x81\x80\x01\x17@\xc0\x02\x16\xc0\x03\x80A\x81\x05\x00\x85\x01\x01\x00\x86AA\x03\xc5\xc1\x04\x00\xc6\xc1\xc5\x03\x12\x02\x80\x02@\x02\x80\x02\xdc\x81\x80\x01\x05\xc2\x04\x00\x06\xc2E\x04R\x02\x80\x02\x80\x02\x80\x02\x1c\x82\x80\x01A\x82\x01\x00\x9c\x81\x00\x02\x80\x00\x00\x03W\x00\xc6\x01\x16\x80\xf2\x7fK\xc1\xc0\x01\\\x81\x00\x01@\x00\x80\x02\x16\x80\xf1\x7f\x1e\x00\x80\x00\x19\x00\x00\x00\x04\x16\x00\x00\x00dimensionMonsterCount\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x10\x00\x00\x00setAlwaysActive\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x14\x00\x00\x00SetGravityDirection\x00\x04\x0b\x00\x00\x00normalized\x00\x04\x14\x00\x00\x00SetGravityMagnitude\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x15\x00\x00\x00SetDecelerationForce\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x03\x00\x00\x00\x00\x00@o@\x04\x0c\x00\x00\x00RandomFloat\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1c\x00\x00\x00\x1d\x00\x00\x00\x06\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00H\x00\x00\x00\x0f\x00\x00\x00targetPosition\x00\t\x00\x00\x00H\x00\x00\x00\r\x00\x00\x00targetOffset\x00\x0f\x00\x00\x00H\x00\x00\x00\x07\x00\x00\x00target\x00\x17\x00\x00\x00G\x00\x00\x00\x06\x00\x00\x00delta\x00\x1b\x00\x00\x00G\x00\x00\x00\x02\x00\x00\x00r\x003\x00\x00\x00B\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xda\x02\x00\x00local self = ...;\r\n\r\ndimensionMonsterCount = dimensionMonsterCount + 1;\r\n\r\nself:setAlwaysActive(true);\r\n\r\n\r\nlocal targetPosition = self:position();\r\nlocal targetOffset = Vector3.New(0, 0, 0);\r\n\r\nwhile true do\r\n\tProgram.Wait(0.2);\r\n\tlocal target = EntityController.Target(self);\r\n\r\n\tlocal delta = targetPosition + targetOffset - self:position();\r\n\r\n\tPhysicsObject.SetGravityDirection(self, delta:normalized());\r\n\tPhysicsObject.SetGravityMagnitude(self, 2);\r\n\tPhysicsObject.SetDecelerationForce(self, 1.5);\r\n\r\n\tif Math.RandomInt(1, 5) == 1 then\r\n\t\tlocal r = 250;\r\n\t\ttargetOffset = Vector3.New(Math.RandomFloat(-r, r), Math.RandomFloat(-r, r), 0);\r\n\tend\r\n\r\n\tif  target ~= nil then\r\n\t\ttargetPosition = target:position();\r\n\tend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0bI\x00\x00\x00%\x00\x00\x01E\x00\x00\x00L@\xc0\x00G\x00\x00\x00K\x80@\x00\xc2\x00\x80\x00\\@\x80\x01K\xc0@\x00\\\x80\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\x81\x01\x00A\x81\x01\x00\x9c\x80\x00\x02\xc5\xc0\x01\x00\xc6\x00\xc2\x01\x01A\x02\x00\xdc@\x00\x01\xc5\x80\x02\x00\xc6\xc0\xc2\x01\x00\x01\x00\x00\xdc\x80\x00\x01\x0c\x81\x80\x00K\xc1@\x00\\\x81\x00\x01\rA\x01\x02E\x01\x03\x00FA\xc3\x02\x80\x01\x00\x00\xcb\x81C\x02\xdc\x01\x00\x01\\A\x00\x00E\x01\x03\x00F\xc1\xc3\x02\x80\x01\x00\x00\xc1\x01\x04\x00\\A\x80\x01E\x01\x03\x00FA\xc4\x02\x80\x01\x00\x00\xc1\x81\x04\x00\\A\x80\x01E\xc1\x04\x00F\x01\xc5\x02\x81A\x00\x00\xc1A\x05\x00\\\x81\x80\x01\x17@\xc0\x02\x16\xc0\x03\x80A\x81\x05\x00\x85\x01\x01\x00\x86AA\x03\xc5\xc1\x04\x00\xc6\xc1\xc5\x03\x12\x02\x80\x02@\x02\x80\x02\xdc\x81\x80\x01\x05\xc2\x04\x00\x06\xc2E\x04R\x02\x80\x02\x80\x02\x80\x02\x1c\x82\x80\x01A\x82\x01\x00\x9c\x81\x00\x02\x80\x00\x00\x03W\x00\xc6\x01\x16\x80\xf2\x7fK\xc1\xc0\x01\\\x81\x00\x01@\x00\x80\x02\x16\x80\xf1\x7f\x1e\x00\x80\x00\x19\x00\x00\x00\x04\x16\x00\x00\x00dimensionMonsterCount\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x10\x00\x00\x00setAlwaysActive\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x14\x00\x00\x00SetGravityDirection\x00\x04\x0b\x00\x00\x00normalized\x00\x04\x14\x00\x00\x00SetGravityMagnitude\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x15\x00\x00\x00SetDecelerationForce\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\x14@\x03\x00\x00\x00\x00\x00@o@\x04\x0c\x00\x00\x00RandomFloat\x00\x00\x00\x00\x00\x00I\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1c\x00\x00\x00\x1d\x00\x00\x00\x06\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00H\x00\x00\x00\x0f\x00\x00\x00targetPosition\x00\t\x00\x00\x00H\x00\x00\x00\r\x00\x00\x00targetOffset\x00\x0f\x00\x00\x00H\x00\x00\x00\x07\x00\x00\x00target\x00\x17\x00\x00\x00G\x00\x00\x00\x06\x00\x00\x00delta\x00\x1b\x00\x00\x00G\x00\x00\x00\x02\x00\x00\x00r\x003\x00\x00\x00B\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 10
+                Enabled 1
+                Trigger 10
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 140
-            ShapeComponent{
-                Rectangle{
-                    X : -10.0
-                    Y : -10.0
-                    Width : 20.0
-                    Height : 20.0
-                }
-            }
-            CollisionShapeComponent{
-                ReceivesDamage : 1
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 142
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'Health'
-            Identifier : 146
-            HealthComponent{
-                MaxHealth : 1
-                HEALTHTYPE : 0
-                BarOffset{
-                    X : 0.0
-                    Y : 50.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 140
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -10.0
+                    Y -10.0
+                    Width 20.0
+                    Height 20.0
                 }
             }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                ReceivesDamage 1
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 151
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 142
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Health'
+            Identifier 146
+            HealthComponent{ # HealthComponent
+                MaxHealth 1
+                HEALTHTYPE 0
+                BarOffset{ # Vector3
+                    X 0.0
+                    Y 50.0
+                }
+            }
+        }
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 151
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 dimensionMonsterCount = dimensionMonsterCount - 1;
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00H\x00\x00\x00local self = ...;\r\n\r\ndimensionMonsterCount = dimensionMonsterCount - 1;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00%\x00\x00\x01E\x00\x00\x00M@\xc0\x00G\x00\x00\x00\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x16\x00\x00\x00dimensionMonsterCount\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00H\x00\x00\x00local self = ...;\r\n\r\ndimensionMonsterCount = dimensionMonsterCount - 1;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00%\x00\x00\x01E\x00\x00\x00M@\xc0\x00G\x00\x00\x00\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x16\x00\x00\x00dimensionMonsterCount\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 5
+                Enabled 1
+                Trigger 5
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -25.0
-            Y : -25.0
-            Width : 50.0
-            Height : 50.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -25.0
+            Y -25.0
+            Width 50.0
+            Height 50.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'dimension_portal'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'arch2'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dimension_portal'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'arch2'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 103
-            ParticleEmitterComponent{
-                ParticleId : 104
-                ParticleId : 105
-                ParticleId : 106
-                ModelBindingId : 0
-                MaxParticles : 100
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                Emitter{
-                    Type : 5
-                    BaseColor{
-                        R : 1.0
-                        G : 0.0
-                        B : 3.5762786865234375e-07
-                        A : 0.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 103
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 104
+                ParticleId 105
+                ParticleId 106
+                ModelBindingId 0
+                MaxParticles 100
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                Emitter{ # ParticleEmitter
+                    Type 5
+                    BaseColor{ # FloatColor
+                        R 1.0
+                        G 0.0
+                        B 3.5762786865234375e-07
+                        A 0.0
                     }
-                    Parameter : 90.0
-                    Parameter : 25.0
-                    Parameter : 0.0
-                    Parameter : 0.0
-                    Parameter : 0.0
-                    Parameter : 200.0
-                    Parameter : 0.0
-                    Parameter : 0.0
-                    Parameter : 1.0
-                    Parameter : 0.0
-                    Parameter : 1.0
-                    Parameter : 0.019999999552965164
-                    Parameter : 1.2000000476837158
-                    Parameter : 0.0
-                    Parameter : 0.699999988079071
-                    HueVariance : 0.0
-                    SaturationVariance : 0.0
-                    LightnessVariance : 0.0
-                    OriginOffset{
-                        X : 15.0
-                        Y : 55.0
-                        Z : 0.0
+                    Parameter 90.0
+                    Parameter 25.0
+                    Parameter 0.0
+                    Parameter 0.0
+                    Parameter 0.0
+                    Parameter 200.0
+                    Parameter 0.0
+                    Parameter 0.0
+                    Parameter 1.0
+                    Parameter 0.0
+                    Parameter 1.0
+                    Parameter 0.019999999552965164
+                    Parameter 1.2000000476837158
+                    Parameter 0.0
+                    Parameter 0.699999988079071
+                    HueVariance 0.0
+                    SaturationVariance 0.0
+                    LightnessVariance 0.0
+                    OriginOffset{ # Vector3
+                        X 15.0
+                        Y 55.0
+                        Z 0.0
                     }
                 }
-                LocalSystem : 0
-                Gravity{
-                    X : 0.0
-                    Y : -500.0
-                    Z : 0.0
+                LocalSystem 0
+                Gravity{ # Vector3
+                    X 0.0
+                    Y -500.0
+                    Z 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 104
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 104
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 20.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 105
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 25.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 105
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 25.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 106
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 15.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 106
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 15.0
             }
         }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 108
-            SimpleGlowComponent{
-                Color{
-                    R : 0.3888888955116272
-                    G : 0.0555555559694767
-                    B : 0.0555555559694767
-                    A : 0.5
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 108
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.3888888955116272
+                    G 0.0555555559694767
+                    B 0.0555555559694767
+                    A 0.5
                 }
-                Size : 75.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 15.0
-                    Y : 60.0
+                Size 75.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 15.0
+                    Y 60.0
                 }
             }
         }
-        Component{
-            ClassName : 'Light'
-            Identifier : 109
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 109
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 250.0
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -75.0
-            Y : -75.0
-            Width : 150.0
-            Height : 150.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -75.0
+            Y -75.0
+            Width 150.0
+            Height 150.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'dimensional_statue'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'sign_dimensional'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dimensional_statue'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'sign_dimensional'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'node_dimensional_off'
-        Component{
-            ClassName : 'Program'
-            Identifier : 1
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'node_dimensional_off'
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 1
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 CollisionShape.SetEnabled(self, 112);
@@ -611,197 +617,197 @@ local nodeOn = Scene.CreateObject("node_dimensional_on", "node1", self);
 nodeOn:setScaling(self:scaling());
 SoundLibrary.PlayEffect("surprise2");
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xd0\x00\x00\x00local self = ...;\r\n\r\nCollisionShape.SetEnabled(self, 112);\r\nlocal nodeOn = Scene.CreateObject("node_dimensional_on", "node1", self);\r\nnodeOn:setScaling(self:scaling());\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\\@\x80\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x80B\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\\@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x14\x00\x00\x00node_dimensional_on\x00\x04\x06\x00\x00\x00node1\x00\x04\x0b\x00\x00\x00setScaling\x00\x04\x08\x00\x00\x00scaling\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00nodeOn\x00\x0c\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xd0\x00\x00\x00local self = ...;\r\n\r\nCollisionShape.SetEnabled(self, 112);\r\nlocal nodeOn = Scene.CreateObject("node_dimensional_on", "node1", self);\r\nnodeOn:setScaling(self:scaling());\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\\@\x80\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x80B\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\\@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x14\x00\x00\x00node_dimensional_on\x00\x04\x06\x00\x00\x00node1\x00\x04\x0b\x00\x00\x00setScaling\x00\x04\x08\x00\x00\x00scaling\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00nodeOn\x00\x0c\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 6
+                Enabled 1
+                Trigger 6
             }
         }
-        Component{
-            ClassName : 'DimensionObject'
-            Identifier : 2
+        Component{ # Component
+            ClassName 'DimensionObject'
+            Identifier 2
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'node_dimensional_off'
-                YRotation : 0.0
-                EmissionFactor : 0.10000000149011612
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'node_dimensional_off'
+                YRotation 0.0
+                EmissionFactor 0.10000000149011612
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 109
-            LightComponent{
-                Type : 3
-                Intensity : 1.0
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Radius : 50.0
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 112
-            ShapeComponent{
-                Rectangle{
-                    X : -30.0
-                    Y : -12.0
-                    Width : 60.0
-                    Height : 24.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                ReceivesDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 109
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 50.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 112
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -30.0
+                    Y -12.0
+                    Width 60.0
+                    Height 24.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                ReceivesDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -30.0
-            Y : -12.0
-            Width : 60.0
-            Height : 24.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -30.0
+            Y -12.0
+            Width 60.0
+            Height 24.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'node_dimensional_on'
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 1
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'node_dimensional_on'
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 1
         }
-        Component{
-            ClassName : 'DimensionObject'
-            Identifier : 2
+        Component{ # Component
+            ClassName 'DimensionObject'
+            Identifier 2
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'node_dimensional_on'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'node_dimensional_on'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 103
-            SimpleGlowComponent{
-                Color{
-                    R : 1.0
-                    G : 0.0
-                    B : 0.0
-                    A : 0.5
-                }
-                Size : 20.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'Light'
-            Identifier : 104
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 0.6000000238418579
-                    B : 0.2888889014720917
-                    A : 1.0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 103
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.0
+                    B 0.0
+                    A 0.5
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Size 20.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
-                Radius : 150.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 104
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.6000000238418579
+                    B 0.2888889014720917
+                    A 1.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 150.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -20.0
-            Y : -20.0
-            Width : 40.0
-            Height : 40.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -20.0
+            Y -20.0
+            Width 40.0
+            Height 40.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

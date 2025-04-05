@@ -1,302 +1,303 @@
 # rifted with FR v5.7.0
 
-Name : 'florennum_stuff'
-Template{
-    Object{
-        Identifier : 'florennum_house1'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'florennum_house'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Name 'florennum_stuff'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_house1'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'florennum_house'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_house2'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'florennum_house2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_house2'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'florennum_house2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_house3'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'florennum_house3'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_house3'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'florennum_house3'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_housedoor'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'house_door'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_housedoor'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'house_door'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_housedoor_open'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'house_door_open'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_housedoor_open'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'house_door_open'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_lock'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'lock_yellow'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_lock'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'lock_yellow'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 103
-            ShapeComponent{
-                Rectangle{
-                    X : -70.0
-                    Y : -40.0
-                    Width : 140.0
-                    Height : 80.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 103
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -70.0
+                    Y -40.0
+                    Width 140.0
+                    Height 80.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 4
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 4
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 105
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 105
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 if Character.HasItem("key_yellow") then
@@ -311,28 +312,29 @@ else
     Game.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\x08\x00\x00\x00AddFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x7f\x01\x00\x00local self = ...;\r\n\r\nif Character.HasItem("key_yellow") then\r\n\tCharacter.RemoveItem("key_yellow");\r\n\tCharacter.AddFlag(self:identifier()); -- Remember that the door is open\r\n\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\r\n\tSoundLibrary.PlayEffect("unlock");\r\nelse\r\n\tGame.ShowNotification("Requires " .. Game.TitleForItem("key_yellow"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05,\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x06\x80E\x00\x00\x00F\xc0\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\x00\x00\x00F\x00\xc1\x00\x8b@A\x00\x9c\x00\x00\x01\\@\x00\x00K\x80A\x00\xc2\x00\x80\x00\\@\x80\x01E\xc0\x01\x00F\x00\xc2\x00\x85@\x02\x00\x86\x80B\x01\xcb@A\x00\xdc\x80\x00\x01\x01\xc1\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81\x80\x03\x00\\@\x00\x01\x16\x00\x02\x80E\xc0\x03\x00F\x00\xc4\x00\x81@\x04\x00\xc5\xc0\x03\x00\xc6\x80\xc4\x01\x01\x81\x00\x00\xdc\x80\x00\x01\x95\xc0\x00\x01\\@\x00\x01\x1e\x00\x80\x00\x13\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x0b\x00\x00\x00key_yellow\x00\x04\x0b\x00\x00\x00RemoveItem\x00\x04\x08\x00\x00\x00AddFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00ShowNotification\x00\x04\n\x00\x00\x00Requires \x00\x04\r\x00\x00\x00TitleForItem\x00\x00\x00\x00\x00,\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00+\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 2
+                Enabled 1
+                Trigger 2
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -70.0
-            Y : -40.0
-            Width : 140.0
-            Height : 80.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -70.0
+            Y -40.0
+            Width 140.0
+            Height 80.0
         }
-        Hidden : 0
-        OnLoad{
-            String : $
+        Hidden 0
+        OnLoad{ # Program
+            String
+$
 local self = ...;
 
 if Character.HasFlag(self:identifier()) then
@@ -340,276 +342,277 @@ if Character.HasFlag(self:identifier()) then
     Program.Execute(Scene.Find(self:identifier() .. "_door"));
 end
 $end
-            Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9c\x00\x00\x00local self = ...;\r\n\r\nif Character.HasFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
+            Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9c\x00\x00\x00local self = ...;\r\n\r\nif Character.HasFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x16\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\x00\x03\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x00\x00\x00\x00\x16\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00'
         }
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_lockdoor'
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 1
-            SoundEffectComponent{
-                Name : 'door_close'
-                Delay : 0.0
-                Volume : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_lockdoor'
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 1
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'door_close'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'castle_lockdoor'
-                YRotation : 4.71238899230957
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'castle_lockdoor'
+                YRotation 4.71238899230957
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'DoorController'
-            Identifier : 103
-            DoorControllerComponent{
-                AnimationControllerId : 104
-                AnimationId : 105
-                Open : 0
-                CloseSoundId : 1
-                OpenSoundId : 0
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 104
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 105
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'castle_lockdoor'
-                Repeating : 0
-                SpeedMultiplier : 0.20000000298023224
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 106
-            ShapeComponent{
-                Rectangle{
-                    X : -15.0
-                    Y : 0.0
-                    Width : 25.0
-                    Height : 246.53073120117188
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'DoorController'
+            Identifier 103
+            DoorControllerComponent{ # DoorControllerComponent
+                AnimationControllerId 104
+                AnimationId 105
+                Open 0
+                CloseSoundId 1
+                OpenSoundId 0
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 109
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 104
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 105
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'castle_lockdoor'
+                Repeating 0
+                SpeedMultiplier 0.20000000298023224
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 106
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -15.0
+                    Y 0.0
+                    Width 25.0
+                    Height 246.53073120117188
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 109
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 DoorController.Open(self);
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x000\x00\x00\x00local self = ...;\r\n\r\nDoorController.Open(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x02\x00\x00\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 0
+                Enabled 1
+                Trigger 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -15.0
-            Y : 0.0
-            Width : 25.0
-            Height : 246.53073120117188
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -15.0
+            Y 0.0
+            Width 25.0
+            Height 246.53073120117188
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'florennum_tower'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'tower_nodoor'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'florennum_tower'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'tower_nodoor'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 2.0
+    Scaling 2.0
 }
-Template{
-    Object{
-        Identifier : 'golden_knight'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'knight'
-                YRotation : 3.752457857131958
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'golden_knight'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'knight'
+                YRotation 3.752457857131958
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'StaticMonsterController'
-            Identifier : 103
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 106
-                EntityId : 104
-                RoamAreaId : 0
+        Component{ # Component
+            ClassName 'StaticMonsterController'
+            Identifier 103
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 106
+                EntityId 104
+                RoamAreaId 0
             }
-            StaticMonsterControllerComponent{
-                AnimationId : 105
+            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+                AnimationId 105
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 104
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 0
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 104
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 0
             }
-            MonsterEntityComponent{
-                OnKill{
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                OnHurt{
+                OnHurt{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 105
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_stand'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 105
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_stand'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 106
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 106
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

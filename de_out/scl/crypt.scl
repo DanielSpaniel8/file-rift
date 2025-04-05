@@ -1,321 +1,321 @@
 # rifted with FR v5.7.0
 
-Name : 'crypt'
-Template{
-    Object{
-        Identifier : 'crypt_torch'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'torch'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Name 'crypt'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'crypt_torch'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'torch'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 2
-            SimpleGlowComponent{
-                Color{
-                    R : 0.23333333432674408
-                    G : 0.35555556416511536
-                    B : 0.20000000298023224
-                    A : 0.5
-                }
-                Size : 27.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.07000000029802322
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : -1.0
-                    Y : 15.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 3
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 103
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 0.6222222447395325
-                    G : 0.9355555176734924
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 2
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.23333333432674408
+                    G 0.35555556416511536
+                    B 0.20000000298023224
+                    A 0.5
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'FireEmitter'
-            Identifier : 105
-            FireEmitterComponent{
-                ParticleEmitterId : 108
-                LightId : 103
-                Color{
-                    R : 0.3888888955116272
-                    G : 0.7888888716697693
-                    B : 0.0
-                    A : 0.0
-                }
-                ParticleInterval : 0.10000000149011612
-                ParticleMaxAge : 0.8999999761581421
-                ParticleSpread{
-                    X : 2.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Origin3{
-                    X : 0.0
-                    Y : 15.0
-                    Z : 0.0
+                Size 27.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.07000000029802322
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X -1.0
+                    Y 15.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 108
-            ParticleEmitterComponent{
-                ParticleId : 109
-                ParticleId : 111
-                ParticleId : 112
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 3
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 103
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 0.6222222447395325
+                    G 0.9355555176734924
+                    B 0.0
+                    A 1.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 250.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 109
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'FireEmitter'
+            Identifier 105
+            FireEmitterComponent{ # FireEmitterComponent
+                ParticleEmitterId 108
+                LightId 103
+                Color{ # FloatColor
+                    R 0.3888888955116272
+                    G 0.7888888716697693
+                    B 0.0
+                    A 0.0
+                }
+                ParticleInterval 0.10000000149011612
+                ParticleMaxAge 0.8999999761581421
+                ParticleSpread{ # Vector3
+                    X 2.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Origin3{ # Vector3
+                    X 0.0
+                    Y 15.0
+                    Z 0.0
+                }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 111
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 22.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 108
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 109
+                ParticleId 111
+                ParticleId 112
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 112
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 109
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 20.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 111
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 22.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -27.0
-            Y : -27.0
-            Width : 54.0
-            Height : 54.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 112
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 20.0
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -27.0
+            Y -27.0
+            Width 54.0
+            Height 54.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'torch_red'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'torch'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'torch_red'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'torch'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 2
-            SimpleGlowComponent{
-                Color{
-                    R : 0.4555555582046509
-                    G : 0.0
-                    B : 0.0
-                    A : 0.5
-                }
-                Size : 27.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.07000000029802322
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : -1.0
-                    Y : 15.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 3
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 103
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 2
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.4555555582046509
+                    G 0.0
+                    B 0.0
+                    A 0.5
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Radius : 500.0
-            }
-        }
-        Component{
-            ClassName : 'FireEmitter'
-            Identifier : 105
-            FireEmitterComponent{
-                ParticleEmitterId : 108
-                LightId : 103
-                Color{
-                    R : 1.0
-                    G : 0.4444444477558136
-                    B : 0.0
-                    A : 0.0
-                }
-                ParticleInterval : 0.10000000149011612
-                ParticleMaxAge : 0.8999999761581421
-                ParticleSpread{
-                    X : 2.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Origin3{
-                    X : 0.0
-                    Y : 15.0
-                    Z : 0.0
+                Size 27.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.07000000029802322
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X -1.0
+                    Y 15.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 108
-            ParticleEmitterComponent{
-                ParticleId : 109
-                ParticleId : 111
-                ParticleId : 112
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 3
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 103
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 500.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 109
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'FireEmitter'
+            Identifier 105
+            FireEmitterComponent{ # FireEmitterComponent
+                ParticleEmitterId 108
+                LightId 103
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.4444444477558136
+                    B 0.0
+                    A 0.0
+                }
+                ParticleInterval 0.10000000149011612
+                ParticleMaxAge 0.8999999761581421
+                ParticleSpread{ # Vector3
+                    X 2.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Origin3{ # Vector3
+                    X 0.0
+                    Y 15.0
+                    Z 0.0
+                }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 111
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 22.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 108
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 109
+                ParticleId 111
+                ParticleId 112
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 112
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 109
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 20.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 111
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 22.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -27.0
-            Y : -27.0
-            Width : 54.0
-            Height : 54.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 112
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 20.0
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -27.0
+            Y -27.0
+            Width 54.0
+            Height 54.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

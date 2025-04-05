@@ -1,585 +1,585 @@
 # rifted with FR v5.7.0
 
-Item{
-    Type : 2
-    Name : 'brasssword'
-    Title : 'Brass Sword'
-    ShortDescription : '+0 damage'
-    Description : 'Good for killing insects.'
-    Unique : 1
-    MinDamage : 3
-    MaxDamage : 6
-    Level : 1
-}
-Item{
-    Type : 2
-    Name : 'ironsword'
-    Title : 'Iron Sword'
-    ShortDescription : '+1 damage'
-    Description : 'Basic iron sword.'
-    Unique : 1
-    MinDamage : 5
-    MaxDamage : 10
-    Level : 2
-}
-Item{
-    Type : 2
-    Name : 'needle'
-    Title : 'The Needle'
-    ShortDescription : '+1 damage'
-    Description : 'Basic iron sword.'
-    Unique : 1
-    MinDamage : 7
-    MaxDamage : 13
-    Level : 3
-}
-Item{
-    Type : 2
-    Name : 'broadsword'
-    Title : 'Broad Sword'
-    ShortDescription : '+2 damage'
-    Description : 'High quality broad sword.'
-    Unique : 1
-    MinDamage : 10
-    MaxDamage : 15
-    Level : 4
-}
-Item{
-    Type : 2
-    Name : 'thorn'
-    Title : 'The Thorn'
-    ShortDescription : '+2 damage'
-    Description : 'High quality broad sword.'
-    Unique : 1
-    MinDamage : 12
-    MaxDamage : 18
-    Level : 5
-}
-Item{
-    Type : 2
-    Name : 'magicsword'
-    Title : 'Magic Sword'
-    ShortDescription : '+3 damage'
-    Description : 'Magic enchanted sword.'
-    Unique : 1
-    MinDamage : 15
-    MaxDamage : 20
-    Level : 6
-}
-Item{
-    Type : 2
-    Name : 'legendsword'
-    Title : 'The Mageblade'
-    ShortDescription : '+4 damage'
-    Description : 'The legendary Mageblade.'
-    Unique : 1
-    MinDamage : 20
-    MaxDamage : 25
-    Level : 7
-}
-Item{
-    Type : 3
-    Name : 'platearmor'
-    Title : 'Plate Armor'
-    ShortDescription : '50% damage reduction'
-    Description : '50% damage reduction.'
-    Unique : 1
-    Level : 1
-}
-Item{
-    Type : 3
-    Name : 'magicarmor'
-    Title : 'Magic Armor'
-    ShortDescription : '75% damage reduction'
-    Description : '75% damage reduction.'
-    Unique : 1
-    Level : 2
-}
-Item{
-    Type : 4
-    Name : 'firetrinket'
-    Title : 'Trinket of Fire'
-    ShortDescription : '-'
-    Description : 'Adds a fire enchantment to your weapon, armor or spells.'
-    Unique : 1
-}
-Item{
-    Type : 4
-    Name : 'icetrinket'
-    Title : 'Trinket of Ice'
-    ShortDescription : '-'
-    Description : 'Adds a cold enchantment to your weapon, armor or spells.'
-    Unique : 1
-}
-Item{
-    Type : 4
-    Name : 'shadowtrinket'
-    Title : 'Trinket of Shadow'
-    ShortDescription : '-'
-    Description : 'Adds a shadow enchantment to your weapon, armor or spells.'
-    Unique : 1
-}
-Item{
-    Type : 1
-    Name : 'healingpotion'
-    Title : 'Healing Potion'
-    Description : 'Restores 5 hearts when used. You can only carry one healing potion at a time.'
-    Unique : 1
-}
-Item{
-    Type : 1
-    Name : 'experiencesack'
-    Title : 'Sack of Experience'
-    Description : 'Gives a lot of experience.'
-}
-Item{
-    Type : 1
-    Name : 'ankh'
-    Title : 'Ankh of Resurrection'
-    Description : '-'
-}
-Item{
-    Type : 5
-    Name : 'key_yellow'
-    Title : 'A Key'
-}
-Item{
-    Type : 5
-    Name : 'iselon_shard_1'
-    Title : 'First shard of the Mageblade'
-    Unique : 1
-}
-Item{
-    Type : 5
-    Name : 'iselon_shard_2'
-    Title : 'Second shard of the Mageblade'
-    Unique : 1
-}
-Item{
-    Type : 5
-    Name : 'iselon_shard_3'
-    Title : 'Third shard of the Mageblade'
-    Unique : 1
-}
-Item{
-    Type : 5
-    Name : 'iselon_shard_4'
-    Title : 'Fourth shard of the Mageblade'
-    Unique : 1
-}
-Skill{
-    Name : 'bolt'
-    Title : 'Magic Bolt'
-    Description : '---'
-    ManaCost : 10
-    MinDamage : 5
-    MaxDamage : 10
-}
-Skill{
-    Name : 'bomb'
-    Title : 'Magic Bomb'
-    Description : '---'
-    ManaCost : 20
-    MinDamage : 10
-    MaxDamage : 20
-}
-Skill{
-    Name : 'hookshot'
-    Title : "Dragon's Grasp"
-    Description : '---'
-    ManaCost : 25
-    MinDamage : 5
-    MaxDamage : 10
-}
-Skill{
-    Name : 'dimension'
-    Title : 'Dimension Rift'
-    Description : '???'
-    ManaCost : 40
-    MinDamage : 0
-    MaxDamage : 0
-}
-Quest{
-    Name : 'vaseQuest'
-    Title : 'Recover the Vase'
-    MapLocation : 'plains_part2'
-}
-Quest{
-    Name : 'snowyboulder'
-    Title : 'Get the Golden Boulder'
-    MapLocation : 'snowy_part1'
-}
-Quest{
-    Name : 'quest01_find_master'
-    Title : 'Find Master in the Woods'
-    MapLocation : 'town_woods_end'
-}
-Quest{
-    Name : 'quest02_village_elder'
-    MapLocation : 'town_part1'
-}
-Quest{
-    Name : 'quest03_woodkeep'
-    Title : 'Find the Legendary Weapon'
-    MapLocation : 'plains_woodkeep3'
-}
-Quest{
-    Name : 'quest04_village_elder2'
-    MapLocation : 'town_part1'
-}
-Quest{
-    Name : 'quest05_florennum'
-    Title : 'Speak to the King for Help'
-    MapLocation : 'florennum_jail_part1'
-}
-Quest{
-    Name : 'quest06_florennum_shard'
-    Title : 'Recover the Second Shard'
-    MapLocation : 'florennum_jail_boss'
-}
-Quest{
-    Name : 'quest07_go_to_king'
-    MapLocation : 'florennum_jail_part1'
-}
-Quest{
-    Name : 'quest071_fire'
-    Title : 'The Fiery Depths'
-    MapLocation : 'fire_partBoss'
-}
-Quest{
-    Name : 'quest072_ice'
-    Title : 'The Snowy Peaks'
-    MapLocation : 'icecastle_partBoss'
-}
-Quest{
-    Name : 'quest09_assemble'
-    Title : 'The Chambers of Power'
-    MapLocation : 'thecave_part15'
-}
-Quest{
-    Name : 'quest10_death'
-    Title : 'Destroy the Source of Corruption'
-    MapLocation : 'worldsend_part9'
-}
-EntityClass{
-    Name : 'monster'
-    Title : 'Monster'
-}
-EntityClass{
-    Name : 'boss'
-    Title : 'Boss'
-    LevelHidden : 1
-    Freezable : 0
-    Stunnable : 0
-    Grabbable : 0
-}
-EntityClass{
-    Name : 'boss_corruptor'
-    Title : 'Corruptor'
-    LevelHidden : 1
-    Freezable : 0
-    Stunnable : 0
-    Grabbable : 0
-    PhysicalResistance : 1.0
-}
-EntityClass{
-    Name : 'boss_fire'
-    Title : 'Boss'
-    LevelHidden : 1
-    Freezable : 0
-    Stunnable : 0
-    MagicResistance : 1.0
-}
-EntityClass{
-    Name : 'lesser_corruptor'
-    Title : 'Lesser Corruptor'
-    Freezable : 0
-}
-EntityClass{
-    Name : 'corruptor'
-    Title : 'Corruptor'
-    Freezable : 0
-    PhysicalResistance : 1.0
-}
-EntityClass{
-    Name : 'bolt'
-    Freezable : 0
-    Grabbable : 0
-}
-EntityClass{
-    Name : 'skeleton_lord'
-    Title : 'Skeleton Lord'
-    LevelHidden : 1
-}
-EntityClass{
-    Name : 'Chaos Orb'
-    Title : 'Chaos Orb'
-    LevelHidden : 1
-    Freezable : 0
-    Grabbable : 0
-    PhysicalResistance : 1.0
-}
-EntityClass{
-    Name : 'Master of Chaos'
-    Title : 'Master of Chaos'
-    LevelHidden : 1
-    Freezable : 0
-    Grabbable : 0
-    PhysicalResistance : 1.0
-}
-EntityClass{
-    Name : 'Burning Charger'
-    Title : 'Burning Charger'
-    Freezable : 0
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest01_find_master'
-    LevelName : 'town_woods_end'
-    ObjectIdentifier : 'questTrigger1'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest02_village_elder'
-    LevelName : 'town_healerhouse'
-    ObjectIdentifier : 'resurrectionTrigger'
-}
-GuideTarget{
-    Type : 1
-    Name : 'vaseQuest'
-    LevelName : 'plains_house1'
-    ObjectIdentifier : 'key'
-}
-GuideTarget{
-    Type : 2
-    Name : 'vaseQuest'
-    LevelName : 'plains_tower1'
-    ObjectIdentifier : 'questvase'
-    CarryObjectIdentifier : 'questvase'
-}
-GuideTarget{
-    Type : 4
-    Name : 'specialkey'
-    LevelName : 'plains_woodkeep'
-    ObjectIdentifier : 'item_key_yellow1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'd1_key2'
-    LevelName : 'plains_woodkeep'
-    ObjectIdentifier : 'obj13'
-}
-GuideTarget{
-    Type : 4
-    Name : 'd1_key3'
-    LevelName : 'plains_woodkeep'
-    ObjectIdentifier : 'obj13#2'
-}
-GuideTarget{
-    Type : 3
-    Name : 'bomb'
-    LevelName : 'plains_woodkeep_cellar'
-    ObjectIdentifier : 'trigger'
-}
-GuideTarget{
-    Type : 4
-    Name : 'd1_key4'
-    LevelName : 'plains_woodkeep3'
-    ObjectIdentifier : 'obj16'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest03_woodkeep'
-    LevelName : 'plains_woodkeep3'
-    ObjectIdentifier : 'bossdoor'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest04_village_elder2'
-    LevelName : 'town_elderhouse'
-    ObjectIdentifier : 'trigger'
-    ShowOnlyAfterSceneLoad : 1
-}
-GuideTarget{
-    Type : 4
-    Name : 'd2_key0'
-    LevelName : 'florennum_wall1'
-    ObjectIdentifier : 'obj9'
-}
-GuideTarget{
-    Type : 4
-    Name : 'flor_key1'
-    LevelName : 'florennum_towertop'
-    ObjectIdentifier : 'obj3'
-}
-GuideTarget{
-    Type : 4
-    Name : 'tower2_key1'
-    LevelName : 'florennum_tower2'
-    ObjectIdentifier : 'item_key_yellow1'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest05_florennum'
-    LevelName : 'florennum_jail_part1'
-    ObjectIdentifier : 'knight1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'f_jail_p2_key'
-    LevelName : 'florennum_jail_part2'
-    ObjectIdentifier : 'obj19'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest06_florennum_shard'
-    LevelName : 'florennum_jail_boss'
-    ObjectIdentifier : 'focusArea'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest07_go_to_king'
-    LevelName : 'florennum_jail_part1'
-    ObjectIdentifier : 'quest07_script'
-    ShowOnlyAfterSceneLoad : 1
-}
-GuideTarget{
-    Type : 4
-    Name : 'key1'
-    LevelName : 'fire_part1'
-    ObjectIdentifier : 'key1'
-}
-GuideTarget{
-    Type : 3
-    Name : 'hookshot'
-    LevelName : 'fire_part31'
-    ObjectIdentifier : 'spellget_script1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'firep5_key'
-    LevelName : 'fire_part5'
-    ObjectIdentifier : 'firep5_key'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest071_fire'
-    LevelName : 'fire_partBoss'
-    ObjectIdentifier : 'fakeground1'
-}
-GuideTarget{
-    Type : 1
-    Name : 'snowyboulder'
-    LevelName : 'snowy_part1'
-    ObjectIdentifier : 'quest'
-    ShowOnlyAfterSceneLoad : 1
-}
-GuideTarget{
-    Type : 2
-    Name : 'snowyboulder'
-    LevelName : 'snowy_cave2'
-    ObjectIdentifier : 'boss'
-    CarryObjectIdentifier : 'bouldergold'
-}
-GuideTarget{
-    Type : 4
-    Name : 'snowy1_key1'
-    LevelName : 'snowy_part1'
-    ObjectIdentifier : 'snowy1_key1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'icecastle_key1'
-    LevelName : 'icecastle_part11'
-    ObjectIdentifier : 'obj1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'icekey2'
-    LevelName : 'icecastle_part2'
-    ObjectIdentifier : 'obj7'
-}
-GuideTarget{
-    Type : 1
-    Name : 'dimension'
-    LevelName : 'icecastle_part5'
-    ObjectIdentifier : 'trigger1'
-}
-GuideTarget{
-    Type : 2
-    Name : 'dimension'
-    LevelName : 'icecastle_part5'
-    ObjectIdentifier : 'sign'
-    CarryObjectIdentifier : 'sign'
-}
-GuideTarget{
-    Type : 4
-    Name : 'icecastle_bosskey'
-    LevelName : 'icecastle_part4'
-    ObjectIdentifier : 'dragonkin'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest072_ice'
-    LevelName : 'icecastle_partBoss'
-    ObjectIdentifier : 'door'
-}
-GuideTarget{
-    Type : 2
-    Name : 'quest09_assemble'
-    LevelName : 'thecave_part15'
-    ObjectIdentifier : 'obj7#3'
-    ShowOnlyAfterSceneLoad : 1
-}
-GuideTarget{
-    Type : 4
-    Name : 'key11'
-    LevelName : 'worldsend_part1'
-    ObjectIdentifier : 'item_key_yellow1'
-}
-GuideTarget{
-    Type : 4
-    Name : 'key12'
-    LevelName : 'worldsend_part1'
-    ObjectIdentifier : 'guard'
-}
-GuideTarget{
-    Type : 4
-    Name : 'p3_key1'
-    LevelName : 'worldsend_part3'
-    ObjectIdentifier : 'worldsend_p3_key1'
-    PortalHint{
-        LevelName : 'worldsend_part1'
-        ObjectIdentifier : 'obj14#6'
+Item{ # Item
+    Type 2
+    Name 'brasssword'
+    Title 'Brass Sword'
+    ShortDescription '+0 damage'
+    Description 'Good for killing insects.'
+    Unique 1
+    MinDamage 3
+    MaxDamage 6
+    Level 1
+}
+Item{ # Item
+    Type 2
+    Name 'ironsword'
+    Title 'Iron Sword'
+    ShortDescription '+1 damage'
+    Description 'Basic iron sword.'
+    Unique 1
+    MinDamage 5
+    MaxDamage 10
+    Level 2
+}
+Item{ # Item
+    Type 2
+    Name 'needle'
+    Title 'The Needle'
+    ShortDescription '+1 damage'
+    Description 'Basic iron sword.'
+    Unique 1
+    MinDamage 7
+    MaxDamage 13
+    Level 3
+}
+Item{ # Item
+    Type 2
+    Name 'broadsword'
+    Title 'Broad Sword'
+    ShortDescription '+2 damage'
+    Description 'High quality broad sword.'
+    Unique 1
+    MinDamage 10
+    MaxDamage 15
+    Level 4
+}
+Item{ # Item
+    Type 2
+    Name 'thorn'
+    Title 'The Thorn'
+    ShortDescription '+2 damage'
+    Description 'High quality broad sword.'
+    Unique 1
+    MinDamage 12
+    MaxDamage 18
+    Level 5
+}
+Item{ # Item
+    Type 2
+    Name 'magicsword'
+    Title 'Magic Sword'
+    ShortDescription '+3 damage'
+    Description 'Magic enchanted sword.'
+    Unique 1
+    MinDamage 15
+    MaxDamage 20
+    Level 6
+}
+Item{ # Item
+    Type 2
+    Name 'legendsword'
+    Title 'The Mageblade'
+    ShortDescription '+4 damage'
+    Description 'The legendary Mageblade.'
+    Unique 1
+    MinDamage 20
+    MaxDamage 25
+    Level 7
+}
+Item{ # Item
+    Type 3
+    Name 'platearmor'
+    Title 'Plate Armor'
+    ShortDescription '50% damage reduction'
+    Description '50% damage reduction.'
+    Unique 1
+    Level 1
+}
+Item{ # Item
+    Type 3
+    Name 'magicarmor'
+    Title 'Magic Armor'
+    ShortDescription '75% damage reduction'
+    Description '75% damage reduction.'
+    Unique 1
+    Level 2
+}
+Item{ # Item
+    Type 4
+    Name 'firetrinket'
+    Title 'Trinket of Fire'
+    ShortDescription '-'
+    Description 'Adds a fire enchantment to your weapon, armor or spells.'
+    Unique 1
+}
+Item{ # Item
+    Type 4
+    Name 'icetrinket'
+    Title 'Trinket of Ice'
+    ShortDescription '-'
+    Description 'Adds a cold enchantment to your weapon, armor or spells.'
+    Unique 1
+}
+Item{ # Item
+    Type 4
+    Name 'shadowtrinket'
+    Title 'Trinket of Shadow'
+    ShortDescription '-'
+    Description 'Adds a shadow enchantment to your weapon, armor or spells.'
+    Unique 1
+}
+Item{ # Item
+    Type 1
+    Name 'healingpotion'
+    Title 'Healing Potion'
+    Description 'Restores 5 hearts when used. You can only carry one healing potion at a time.'
+    Unique 1
+}
+Item{ # Item
+    Type 1
+    Name 'experiencesack'
+    Title 'Sack of Experience'
+    Description 'Gives a lot of experience.'
+}
+Item{ # Item
+    Type 1
+    Name 'ankh'
+    Title 'Ankh of Resurrection'
+    Description '-'
+}
+Item{ # Item
+    Type 5
+    Name 'key_yellow'
+    Title 'A Key'
+}
+Item{ # Item
+    Type 5
+    Name 'iselon_shard_1'
+    Title 'First shard of the Mageblade'
+    Unique 1
+}
+Item{ # Item
+    Type 5
+    Name 'iselon_shard_2'
+    Title 'Second shard of the Mageblade'
+    Unique 1
+}
+Item{ # Item
+    Type 5
+    Name 'iselon_shard_3'
+    Title 'Third shard of the Mageblade'
+    Unique 1
+}
+Item{ # Item
+    Type 5
+    Name 'iselon_shard_4'
+    Title 'Fourth shard of the Mageblade'
+    Unique 1
+}
+Skill{ # Skill
+    Name 'bolt'
+    Title 'Magic Bolt'
+    Description '---'
+    ManaCost 10
+    MinDamage 5
+    MaxDamage 10
+}
+Skill{ # Skill
+    Name 'bomb'
+    Title 'Magic Bomb'
+    Description '---'
+    ManaCost 20
+    MinDamage 10
+    MaxDamage 20
+}
+Skill{ # Skill
+    Name 'hookshot'
+    Title "Dragon's Grasp"
+    Description '---'
+    ManaCost 25
+    MinDamage 5
+    MaxDamage 10
+}
+Skill{ # Skill
+    Name 'dimension'
+    Title 'Dimension Rift'
+    Description '???'
+    ManaCost 40
+    MinDamage 0
+    MaxDamage 0
+}
+Quest{ # Quest
+    Name 'vaseQuest'
+    Title 'Recover the Vase'
+    MapLocation 'plains_part2'
+}
+Quest{ # Quest
+    Name 'snowyboulder'
+    Title 'Get the Golden Boulder'
+    MapLocation 'snowy_part1'
+}
+Quest{ # Quest
+    Name 'quest01_find_master'
+    Title 'Find Master in the Woods'
+    MapLocation 'town_woods_end'
+}
+Quest{ # Quest
+    Name 'quest02_village_elder'
+    MapLocation 'town_part1'
+}
+Quest{ # Quest
+    Name 'quest03_woodkeep'
+    Title 'Find the Legendary Weapon'
+    MapLocation 'plains_woodkeep3'
+}
+Quest{ # Quest
+    Name 'quest04_village_elder2'
+    MapLocation 'town_part1'
+}
+Quest{ # Quest
+    Name 'quest05_florennum'
+    Title 'Speak to the King for Help'
+    MapLocation 'florennum_jail_part1'
+}
+Quest{ # Quest
+    Name 'quest06_florennum_shard'
+    Title 'Recover the Second Shard'
+    MapLocation 'florennum_jail_boss'
+}
+Quest{ # Quest
+    Name 'quest07_go_to_king'
+    MapLocation 'florennum_jail_part1'
+}
+Quest{ # Quest
+    Name 'quest071_fire'
+    Title 'The Fiery Depths'
+    MapLocation 'fire_partBoss'
+}
+Quest{ # Quest
+    Name 'quest072_ice'
+    Title 'The Snowy Peaks'
+    MapLocation 'icecastle_partBoss'
+}
+Quest{ # Quest
+    Name 'quest09_assemble'
+    Title 'The Chambers of Power'
+    MapLocation 'thecave_part15'
+}
+Quest{ # Quest
+    Name 'quest10_death'
+    Title 'Destroy the Source of Corruption'
+    MapLocation 'worldsend_part9'
+}
+EntityClass{ # EntityClass
+    Name 'monster'
+    Title 'Monster'
+}
+EntityClass{ # EntityClass
+    Name 'boss'
+    Title 'Boss'
+    LevelHidden 1
+    Freezable 0
+    Stunnable 0
+    Grabbable 0
+}
+EntityClass{ # EntityClass
+    Name 'boss_corruptor'
+    Title 'Corruptor'
+    LevelHidden 1
+    Freezable 0
+    Stunnable 0
+    Grabbable 0
+    PhysicalResistance 1.0
+}
+EntityClass{ # EntityClass
+    Name 'boss_fire'
+    Title 'Boss'
+    LevelHidden 1
+    Freezable 0
+    Stunnable 0
+    MagicResistance 1.0
+}
+EntityClass{ # EntityClass
+    Name 'lesser_corruptor'
+    Title 'Lesser Corruptor'
+    Freezable 0
+}
+EntityClass{ # EntityClass
+    Name 'corruptor'
+    Title 'Corruptor'
+    Freezable 0
+    PhysicalResistance 1.0
+}
+EntityClass{ # EntityClass
+    Name 'bolt'
+    Freezable 0
+    Grabbable 0
+}
+EntityClass{ # EntityClass
+    Name 'skeleton_lord'
+    Title 'Skeleton Lord'
+    LevelHidden 1
+}
+EntityClass{ # EntityClass
+    Name 'Chaos Orb'
+    Title 'Chaos Orb'
+    LevelHidden 1
+    Freezable 0
+    Grabbable 0
+    PhysicalResistance 1.0
+}
+EntityClass{ # EntityClass
+    Name 'Master of Chaos'
+    Title 'Master of Chaos'
+    LevelHidden 1
+    Freezable 0
+    Grabbable 0
+    PhysicalResistance 1.0
+}
+EntityClass{ # EntityClass
+    Name 'Burning Charger'
+    Title 'Burning Charger'
+    Freezable 0
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest01_find_master'
+    LevelName 'town_woods_end'
+    ObjectIdentifier 'questTrigger1'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest02_village_elder'
+    LevelName 'town_healerhouse'
+    ObjectIdentifier 'resurrectionTrigger'
+}
+GuideTarget{ # GuideTarget
+    Type 1
+    Name 'vaseQuest'
+    LevelName 'plains_house1'
+    ObjectIdentifier 'key'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'vaseQuest'
+    LevelName 'plains_tower1'
+    ObjectIdentifier 'questvase'
+    CarryObjectIdentifier 'questvase'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'specialkey'
+    LevelName 'plains_woodkeep'
+    ObjectIdentifier 'item_key_yellow1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'd1_key2'
+    LevelName 'plains_woodkeep'
+    ObjectIdentifier 'obj13'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'd1_key3'
+    LevelName 'plains_woodkeep'
+    ObjectIdentifier 'obj13#2'
+}
+GuideTarget{ # GuideTarget
+    Type 3
+    Name 'bomb'
+    LevelName 'plains_woodkeep_cellar'
+    ObjectIdentifier 'trigger'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'd1_key4'
+    LevelName 'plains_woodkeep3'
+    ObjectIdentifier 'obj16'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest03_woodkeep'
+    LevelName 'plains_woodkeep3'
+    ObjectIdentifier 'bossdoor'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest04_village_elder2'
+    LevelName 'town_elderhouse'
+    ObjectIdentifier 'trigger'
+    ShowOnlyAfterSceneLoad 1
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'd2_key0'
+    LevelName 'florennum_wall1'
+    ObjectIdentifier 'obj9'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'flor_key1'
+    LevelName 'florennum_towertop'
+    ObjectIdentifier 'obj3'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'tower2_key1'
+    LevelName 'florennum_tower2'
+    ObjectIdentifier 'item_key_yellow1'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest05_florennum'
+    LevelName 'florennum_jail_part1'
+    ObjectIdentifier 'knight1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'f_jail_p2_key'
+    LevelName 'florennum_jail_part2'
+    ObjectIdentifier 'obj19'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest06_florennum_shard'
+    LevelName 'florennum_jail_boss'
+    ObjectIdentifier 'focusArea'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest07_go_to_king'
+    LevelName 'florennum_jail_part1'
+    ObjectIdentifier 'quest07_script'
+    ShowOnlyAfterSceneLoad 1
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'key1'
+    LevelName 'fire_part1'
+    ObjectIdentifier 'key1'
+}
+GuideTarget{ # GuideTarget
+    Type 3
+    Name 'hookshot'
+    LevelName 'fire_part31'
+    ObjectIdentifier 'spellget_script1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'firep5_key'
+    LevelName 'fire_part5'
+    ObjectIdentifier 'firep5_key'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest071_fire'
+    LevelName 'fire_partBoss'
+    ObjectIdentifier 'fakeground1'
+}
+GuideTarget{ # GuideTarget
+    Type 1
+    Name 'snowyboulder'
+    LevelName 'snowy_part1'
+    ObjectIdentifier 'quest'
+    ShowOnlyAfterSceneLoad 1
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'snowyboulder'
+    LevelName 'snowy_cave2'
+    ObjectIdentifier 'boss'
+    CarryObjectIdentifier 'bouldergold'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'snowy1_key1'
+    LevelName 'snowy_part1'
+    ObjectIdentifier 'snowy1_key1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'icecastle_key1'
+    LevelName 'icecastle_part11'
+    ObjectIdentifier 'obj1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'icekey2'
+    LevelName 'icecastle_part2'
+    ObjectIdentifier 'obj7'
+}
+GuideTarget{ # GuideTarget
+    Type 1
+    Name 'dimension'
+    LevelName 'icecastle_part5'
+    ObjectIdentifier 'trigger1'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'dimension'
+    LevelName 'icecastle_part5'
+    ObjectIdentifier 'sign'
+    CarryObjectIdentifier 'sign'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'icecastle_bosskey'
+    LevelName 'icecastle_part4'
+    ObjectIdentifier 'dragonkin'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest072_ice'
+    LevelName 'icecastle_partBoss'
+    ObjectIdentifier 'door'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest09_assemble'
+    LevelName 'thecave_part15'
+    ObjectIdentifier 'obj7#3'
+    ShowOnlyAfterSceneLoad 1
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'key11'
+    LevelName 'worldsend_part1'
+    ObjectIdentifier 'item_key_yellow1'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'key12'
+    LevelName 'worldsend_part1'
+    ObjectIdentifier 'guard'
+}
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'p3_key1'
+    LevelName 'worldsend_part3'
+    ObjectIdentifier 'worldsend_p3_key1'
+    PortalHint{ # GuideTarget_LevelObject
+        LevelName 'worldsend_part1'
+        ObjectIdentifier 'obj14#6'
     }
-    PortalHint{
-        LevelName : 'worldsend_part2'
-        ObjectIdentifier : 'obj14#8'
-    }
-}
-GuideTarget{
-    Type : 4
-    Name : 'worldsendkey_part5'
-    LevelName : 'worldsend_part5'
-    ObjectIdentifier : 'item_key_yellow1'
-    PortalHint{
-        LevelName : 'worldsend_part1'
-        ObjectIdentifier : 'obj14#5'
-    }
-    PortalHint{
-        LevelName : 'worldsend_part2'
-        ObjectIdentifier : 'obj14#7'
+    PortalHint{ # GuideTarget_LevelObject
+        LevelName 'worldsend_part2'
+        ObjectIdentifier 'obj14#8'
     }
 }
-GuideTarget{
-    Type : 4
-    Name : 'we_p8_key'
-    LevelName : 'worldsend_part8'
-    ObjectIdentifier : 'item_key_yellow1'
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'worldsendkey_part5'
+    LevelName 'worldsend_part5'
+    ObjectIdentifier 'item_key_yellow1'
+    PortalHint{ # GuideTarget_LevelObject
+        LevelName 'worldsend_part1'
+        ObjectIdentifier 'obj14#5'
+    }
+    PortalHint{ # GuideTarget_LevelObject
+        LevelName 'worldsend_part2'
+        ObjectIdentifier 'obj14#7'
+    }
 }
-GuideTarget{
-    Type : 2
-    Name : 'quest10_death'
-    LevelName : 'worldsend_part9'
-    ObjectIdentifier : 'dimArea1'
+GuideTarget{ # GuideTarget
+    Type 4
+    Name 'we_p8_key'
+    LevelName 'worldsend_part8'
+    ObjectIdentifier 'item_key_yellow1'
+}
+GuideTarget{ # GuideTarget
+    Type 2
+    Name 'quest10_death'
+    LevelName 'worldsend_part9'
+    ObjectIdentifier 'dimArea1'
 }

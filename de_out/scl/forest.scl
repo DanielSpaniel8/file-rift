@@ -1,201 +1,201 @@
 # rifted with FR v5.7.0
 
-Name : 'forest'
-Template{
-    Object{
-        Identifier : 'forest_light'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 0.8518518805503845
-                    G : 0.6938270330429077
-                    B : 0.614814817905426
-                    A : 1.0
+Name 'forest'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'forest_light'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 0.8518518805503845
+                    G 0.6938270330429077
+                    B 0.614814817905426
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 250.0
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'forest_spirit'
-        Component{
-            ClassName : 'Light'
-            Identifier : 1
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'forest_spirit'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 1
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 150.0
+                Radius 150.0
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 120
-            ParticleEmitterComponent{
-                ParticleId : 123
-                ModelBindingId : 0
-                MaxParticles : 100
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                Emitter{
-                    Type : 3
-                    BaseColor{
-                        R : 0.12839508056640625
-                        G : 0.22716054320335388
-                        B : 0.22716057300567627
-                        A : 0.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 120
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 123
+                ModelBindingId 0
+                MaxParticles 100
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                Emitter{ # ParticleEmitter
+                    Type 3
+                    BaseColor{ # FloatColor
+                        R 0.12839508056640625
+                        G 0.22716054320335388
+                        B 0.22716057300567627
+                        A 0.0
                     }
-                    Parameter : 0.00800000037997961
-                    Parameter : 0.20000000298023224
-                    Parameter : 0.800000011920929
-                    Parameter : 8.0
-                    Parameter : 0.30000001192092896
-                    Parameter : 0.0
-                    Parameter : 1.0
-                    HueVariance : 0.0
-                    SaturationVariance : 0.0
-                    LightnessVariance : 0.0
-                    OriginOffset{
-                        X : 0.0
-                        Y : 0.0
-                        Z : 0.0
-                    }
-                }
-                LocalSystem : 0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 123
-            ParticleComponent{
-                TextureName : 'particle'
-                Size : 15.0
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 127
-            SimpleGlowComponent{
-                Color{
-                    R : 0.6308642029762268
-                    G : 0.7913580536842346
-                    B : 0.780658483505249
-                    A : 0.5
-                }
-                Size : 15.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 129
-            ParticleEmitterComponent{
-                ParticleId : 123
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 120
-                DestroyWhenFinished : 0
-                Emitter{
-                    Type : 3
-                    BaseColor{
-                        R : 0.5333333611488342
-                        G : 0.5333333611488342
-                        B : 0.5333333611488342
-                        A : 0.0
-                    }
-                    Parameter : 0.009999999776482582
-                    Parameter : 0.20000000298023224
-                    Parameter : 0.20000000298023224
-                    Parameter : 6.0
-                    Parameter : 0.30000001192092896
-                    Parameter : 0.0
-                    Parameter : 1.0
-                    HueVariance : 0.0
-                    SaturationVariance : 0.0
-                    LightnessVariance : 0.0
-                    OriginOffset{
-                        X : 0.0
-                        Y : 0.0
-                        Z : 0.0
+                    Parameter 0.00800000037997961
+                    Parameter 0.20000000298023224
+                    Parameter 0.800000011920929
+                    Parameter 8.0
+                    Parameter 0.30000001192092896
+                    Parameter 0.0
+                    Parameter 1.0
+                    HueVariance 0.0
+                    SaturationVariance 0.0
+                    LightnessVariance 0.0
+                    OriginOffset{ # Vector3
+                        X 0.0
+                        Y 0.0
+                        Z 0.0
                     }
                 }
-                LocalSystem : 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'OrbitController'
-            Identifier : 131
-            OrbitControllerComponent{
-                RotationAxis{
-                    X : 0.38283267617225647
-                    Y : 0.9218900203704834
-                    Z : 0.059648867696523666
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 123
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle'
+                Size 15.0
+            }
+        }
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 127
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.6308642029762268
+                    G 0.7913580536842346
+                    B 0.780658483505249
+                    A 0.5
                 }
-                RotationSpeed : 6.2831854820251465
-                OrbitDistance : 40.0
+                Size 15.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
+                }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 129
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 123
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 120
+                DestroyWhenFinished 0
+                Emitter{ # ParticleEmitter
+                    Type 3
+                    BaseColor{ # FloatColor
+                        R 0.5333333611488342
+                        G 0.5333333611488342
+                        B 0.5333333611488342
+                        A 0.0
+                    }
+                    Parameter 0.009999999776482582
+                    Parameter 0.20000000298023224
+                    Parameter 0.20000000298023224
+                    Parameter 6.0
+                    Parameter 0.30000001192092896
+                    Parameter 0.0
+                    Parameter 1.0
+                    HueVariance 0.0
+                    SaturationVariance 0.0
+                    LightnessVariance 0.0
+                    OriginOffset{ # Vector3
+                        X 0.0
+                        Y 0.0
+                        Z 0.0
+                    }
+                }
+                LocalSystem 0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -15.0
-            Y : -15.0
-            Width : 30.0
-            Height : 30.0
+        Component{ # Component
+            ClassName 'OrbitController'
+            Identifier 131
+            OrbitControllerComponent{ # OrbitControllerComponent
+                RotationAxis{ # Vector3
+                    X 0.38283267617225647
+                    Y 0.9218900203704834
+                    Z 0.059648867696523666
+                }
+                RotationSpeed 6.2831854820251465
+                OrbitDistance 40.0
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -15.0
+            Y -15.0
+            Width 30.0
+            Height 30.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

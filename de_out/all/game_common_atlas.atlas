@@ -1,85 +1,85 @@
 # rifted with FR v5.7.0
 
-Name : 'game_common_atlas'
-PixelFormat : 0
-Subtexture{
-    Name : 'particle'
-    Bounds{
-        X : 79.0
-        Y : 85.0
-        Width : 48.0
-        Height : 48.0
+Name 'game_common_atlas'
+PixelFormat 0
+Subtexture{ # Texture_Subtexture
+    Name 'particle'
+    Bounds{ # Rectangle
+        X 79.0
+        Y 85.0
+        Width 48.0
+        Height 48.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'particle_fure_1'
-    Bounds{
-        X : 83.0
-        Y : 0.0
-        Width : 32.0
-        Height : 40.0
+Subtexture{ # Texture_Subtexture
+    Name 'particle_fure_1'
+    Bounds{ # Rectangle
+        X 83.0
+        Y 0.0
+        Width 32.0
+        Height 40.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'particle_fure_2'
-    Bounds{
-        X : 46.0
-        Y : 85.0
-        Width : 32.0
-        Height : 40.0
+Subtexture{ # Texture_Subtexture
+    Name 'particle_fure_2'
+    Bounds{ # Rectangle
+        X 46.0
+        Y 85.0
+        Width 32.0
+        Height 40.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'particle_fure_3'
-    Bounds{
-        X : 13.0
-        Y : 85.0
-        Width : 32.0
-        Height : 40.0
+Subtexture{ # Texture_Subtexture
+    Name 'particle_fure_3'
+    Bounds{ # Rectangle
+        X 13.0
+        Y 85.0
+        Width 32.0
+        Height 40.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'flash_particle'
-    Bounds{
-        X : 0.0
-        Y : 0.0
-        Width : 82.0
-        Height : 84.0
+Subtexture{ # Texture_Subtexture
+    Name 'flash_particle'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 82.0
+        Height 84.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'spark_particle'
-    Bounds{
-        X : 67.0
-        Y : 134.0
-        Width : 14.0
-        Height : 6.0
+Subtexture{ # Texture_Subtexture
+    Name 'spark_particle'
+    Bounds{ # Rectangle
+        X 67.0
+        Y 134.0
+        Width 14.0
+        Height 6.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'particle_break1'
-    Bounds{
-        X : 0.0
-        Y : 126.0
-        Width : 40.0
-        Height : 40.0
+Subtexture{ # Texture_Subtexture
+    Name 'particle_break1'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 126.0
+        Width 40.0
+        Height 40.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'particle_break2'
-    Bounds{
-        X : 41.0
-        Y : 126.0
-        Width : 25.0
-        Height : 25.0
+Subtexture{ # Texture_Subtexture
+    Name 'particle_break2'
+    Bounds{ # Rectangle
+        X 41.0
+        Y 126.0
+        Width 25.0
+        Height 25.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-ImageType : 0
+ImageType 0

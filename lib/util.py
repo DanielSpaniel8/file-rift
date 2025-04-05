@@ -17,18 +17,22 @@ def edit_test(file_content: bytes, filepath: str) -> bool:
     manifest = []
 
     try:
-        with open("./.manifest", "r") as file:
+        with open("./lib/manifest", "r") as file:
             manifest = file.readlines()
     except FileNotFoundError:
-        tf = open("./.manifest", "w")
+        tf = open("./lib/manifest", "w")
         tf.close()
-        with open("./.manifest", "r") as file:
+        with open("./lib/manifest", "r") as file:
             manifest = file.readlines()
 
     
     file_found = False
     for index, line in enumerate(manifest):  # scan the manifest file for a filename match
-        old_hash_file, old_hash = line.strip().split("*")  # if found, compare hashes
+        try:
+            old_hash_file, old_hash = line.strip().split("*")  # if found, compare hashes
+        except:
+            print("broken hash string: "+line)
+            continue
         if old_hash_file == filepath:
             if file_found:  # remove any duplicate hashes
                 manifest = manifest[:index]+manifest[index+1:]
@@ -41,9 +45,12 @@ def edit_test(file_content: bytes, filepath: str) -> bool:
     if not file_found:
         manifest.append(manifest_line)
 
-    with open("./.manifest", "w") as file:
-        for line in manifest:
-            file.write(line)
+    manifest_string = ""
+    for line in manifest:
+        manifest_string += line
+
+    with open("./lib/manifest", "w") as file:
+        file.write(manifest_string)
 
     return edited
 
@@ -73,7 +80,7 @@ def template(match: re.Match) -> str:
         
         return split_args[num].strip()
 
-    template_matches = re.match(r"(\s*#\susage:.*\n)?(.|\n)*(```([^`]+)```)((\n|.)*)", template)
+    template_matches = re.match(r"(\s*#.*\n)*(\s|\n)*(```([^`]+)```)?((\n|[^`])*)", template)
     if template_matches == None:
         print(
             "bad template format: "
@@ -248,7 +255,10 @@ def get_files (root: str) -> "list[str]":
     file_list = []
     for root, _, files in os.walk(root):
         for file_name in files:
-            file_list.append(os.path.join(root, file_name))
+            full_path = os.path.join(root, file_name)
+            if not file_name.split(".")[-1] in block_formats.file_types:
+                continue
+            file_list.append(full_path)
 
     return file_list
 
@@ -276,6 +286,7 @@ def get_lexeme_type(lexeme: str) -> str:
         "chunk_start":"$",
         "tag":r"[A-Za-z0-9_\?]+",
         "string":r"('.*'|\".*\")",
+        "compile_mark":r"(@comp|@compile)",
         "number":r"(-?\d*\.?\d+(e[\+-]\d+)?d?|nan)",
     }
 

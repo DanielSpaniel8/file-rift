@@ -1,228 +1,228 @@
 # rifted with FR v5.7.0
 
-Name : 'old'
-Template{
-    Object{
-        Identifier : 'charging_golem'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'golem_small'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Name 'old'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'charging_golem'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'golem_small'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'golem_small_walk'
-                Repeating : 1
-                SpeedMultiplier : 0.5
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 107
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 109
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
-            }
-            MonsterEntityComponent{
-                OnKill{
-                }
-                OnHurt{
-                }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
-            }
-        }
-        Component{
-            ClassName : 'UtilityShape'
-            Identifier : 111
-            ShapeComponent{
-                Rectangle{
-                    X : -500.0
-                    Y : 0.0
-                    Width : 1000.0
-                    Height : 150.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'Health'
-            Identifier : 114
-            HealthComponent{
-                MaxHealth : 6
-                HEALTHTYPE : 0
-                BarOffset{
-                    X : 0.0
-                    Y : 50.0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'golem_small_walk'
+                Repeating 1
+                SpeedMultiplier 0.5
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 107
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 109
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'UtilityShape'
+            Identifier 111
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -500.0
+                    Y 0.0
+                    Width 1000.0
+                    Height 150.0
                 }
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 117
-            DamageComponent{
-                MinDamage : 2
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 120
-            ShapeComponent{
-                Rectangle{
-                    X : -30.0
-                    Y : -0.8058220148086548
-                    Width : 60.0
-                    Height : 132.24581909179688
+        Component{ # Component
+            ClassName 'Health'
+            Identifier 114
+            HealthComponent{ # HealthComponent
+                MaxHealth 6
+                HEALTHTYPE 0
+                BarOffset{ # Vector3
+                    X 0.0
+                    Y 50.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                ReceivesDamage : 1
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 117
+            DamageComponent{ # DamageComponent
+                MinDamage 2
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'ChargingMonsterController'
-            Identifier : 124
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 107
-                EntityId : 109
-                RoamAreaId : 111
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 120
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -30.0
+                    Y -0.8058220148086548
+                    Width 60.0
+                    Height 132.24581909179688
+                }
             }
-            ChargingMonsterControllerComponent{
-                WalkAnimationId : 103
-                ChargeAnimationId : 132
-                RunAnimationId : 128
-                RunSpeed : 230.0
-                RunAcceleration : 300.0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 128
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'golem_small_charge'
-                Repeating : 1
-                SpeedMultiplier : 1.2000000476837158
-                Running : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                ReceivesDamage 1
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 132
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'golem_small_attack1'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'ChargingMonsterController'
+            Identifier 124
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 107
+                EntityId 109
+                RoamAreaId 111
+            }
+            ChargingMonsterControllerComponent{ # ChargingMonsterControllerComponent
+                WalkAnimationId 103
+                ChargeAnimationId 132
+                RunAnimationId 128
+                RunSpeed 230.0
+                RunAcceleration 300.0
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 136
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 0.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 128
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'golem_small_charge'
+                Repeating 1
+                SpeedMultiplier 1.2000000476837158
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 132
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'golem_small_attack1'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 136
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 0.0
+                        Y 0.0
                     }
-                    Radius : 30.0
+                    Radius 30.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -23.0
-                MaxDepth : 23.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -23.0
+                MaxDepth 23.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 101
-                ControllingBoneName : 'BoneRightHand3'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 101
+                ControllingBoneName 'BoneRightHand3'
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 141
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 0.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 141
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 0.0
+                        Y 0.0
                     }
-                    Radius : 30.0
+                    Radius 30.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -23.0
-                MaxDepth : 23.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -23.0
+                MaxDepth 23.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 101
-                ControllingBoneName : 'BoneLeftHand3'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 101
+                ControllingBoneName 'BoneLeftHand3'
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -30.0
-            Y : -0.8058220148086548
-            Width : 60.0
-            Height : 132.24581909179688
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -30.0
+            Y -0.8058220148086548
+            Width 60.0
+            Height 132.24581909179688
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

@@ -2,12 +2,96 @@ multiline_strs = ["String"]
 compile_tags = ["Bytes"]
 
 
-file_types = ["scene", "scl", "gdata", "gopt", "gplayer", "gstate", "scmap", "sounds", "fnt", "atlas"]
+file_types = ["fr", "scene", "scl", "gdata", "gopt", "gplayer", "gstate", "scmap", "sounds", "fnt", "atlas"]
 
 
 block_formats = {
 
     # filetypes section
+
+    "fr": {
+        "Name": ("0a", ""),
+        "Template": ("12", "", "ObjectTemplate"),
+        "ImportedLibrary": ("1a", ""),
+        "Texture": ("22", "", "Texture"),
+        "Program": ("2a", "", "Program"),
+
+        "Object": ("0a", "", "SceneObject"),
+        "ObjectLibrary": ("12", "", "ObjectLibrary"),
+        "Bounds": ("1a", "", "SceneBounds"),
+        "Group" : ("22", "", "SceneObjectGroup"),
+        "OnLoad": ("2a", "", "Program"),
+
+        "Item": ("0a", "", "Item"),
+        "Skill": ("12", "", "Skill"),
+        "Quest": ("1a", "", "Quest"),
+        "EntityClass": ("22", "", "EntityClass"),
+        "GuideTarget": ("2a", "", "GuideTarget"),
+
+        "Playlist": ("0a", "", "MusicPlaylist"),
+        "MusicEnabled": ("10", ""),
+        "SoundEnabled": ("18", ""),
+        "MusicVolume": ("25", ""),
+        "SoundVolume": ("2d", ""),
+        "PhoneControlsLayout": ("32", "", "GUIViewLayout"),
+        "PadControlsLayout": ("3a", "", "GUIViewLayout"),
+        "GuideUnlocked": ("40", ""),
+        "CoinDoublerUnlocked": ("48", ""),
+        "NoAdsUnlocked": ("50", ""),
+
+        "Name": ("0a", ""),
+        "ExperienceLevel": ("10", ""),
+        "TimePlayed": ("19", ""),
+        "GameState": ("22", "", "GameState"),
+        "EquippedWeaponName": ("2a", ""),
+        "EquippedArmorName": ("32", ""),
+        "WeaponTrinketName": ("3a", ""),
+        "ArmorTrinketName": ("42", ""),
+        "CurrentLevelTitle": ("4a", ""),
+        "LastPlayedTime": ("52", "", "DateTime"),
+        "PercentCompleted": ("5d", ""),
+        "Counter": ("62", "", "PlayerProfile_Counter"),
+        "CheatEnabled": ("68", ""),
+        "Identifier": ("72", ""),
+
+        "CharacterState": ("0a", "", "CharacterState"),
+        "LevelState": ("12", "", "LevelState"),
+        "CurrentLevel": ("1a", ""),
+        "CurrentSpawnPoint": ("22", ""),
+        "CurrentMapNodeName": ("2a", ""),
+        "QuestState": ("3a", "", "QuestState"),
+        "Properties": ("42", "", "StateProperties"),
+        "SelectedMenuTab": ("4a", ""),
+        "CarriedObjectTemplate": ("52", ""),
+        "CarriedObjectIdentifier": ("5a", ""),
+        "QuestText": ("62", "", "QuestText"),
+        "PreviousPortalLevel": ("6a", ""),
+        "MenuButtonFlashing": ("70", ""),
+        "SkillToggleButtonFlashing": ("78", ""),
+        "FlashingItemName": ("82", ""),
+        "FlashingSkillName": ("8a", ""),
+        "GuideEnabled": ("90", ""),
+        "GuideToggled": ("98", ""),
+        "CoinDoublerEnabled": ("a0", ""),
+        "CoinDoublerToggled": ("a8", ""),
+
+        "Zone": ("12", "", "MapZone"),
+
+        "Effect": ("0a", "", "SoundEffect"),
+
+        "Name": ("0a", ""),
+        "Texture": ("12", "", "Texture"),
+        "Glyph": ("1a", "", "Font_Glyph"),
+        "Kerning": ("22", ""),
+        "Height": ("28", ""),
+        "BoundingBox": ("32", "", "Rectangle"),
+
+        "Name": ("0a", ""),
+        "PixelFormat": ("10", ""),
+        "Subtexture": ("1a", "", "Texture_Subtexture"),
+        "ImageType": ("20", ""),
+        "ConversionInfo": ("2a", "", "Texture_ConversionInfo"),
+    },
 
     "scl": {
         "Name": ("0a", ""),
@@ -1205,11 +1289,11 @@ block_formats = {
         "CanDropDefaultItems": ("28", ""),
     },
     "OverlayTextComponent": { # TODO: guess
-                             "Text": ("0a", ""),
-                             "TextOffset": ("10", ""),
-                             "SpriteName": ("1a", ""),
-                             "SpriteOffset": ("22", "", "Vector2"),
-                             },
+        "Text": ("0a", ""),
+        "TextOffset": ("10", ""),
+        "SpriteName": ("1a", ""),
+        "SpriteOffset": ("22", "", "Vector2"),
+    },
     "PortalEffectComponent": {
         "PolygonId": ("08", ""),
         "TextureMappingId": ("10", ""),

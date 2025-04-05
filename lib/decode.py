@@ -128,12 +128,14 @@ def decode(filepath: str) -> "str":
             pointers[metalevel] = pointer
 
             if tag_is_reference:
-                out_lines.append(
+                message_string = (
                     indentation
-                    + tagname
-                    + config.style_before_block + "{"
-                    + "\n"
+                    + tagname + config.style_before_block
+                    + "{"
                 )
+                if config.style_show_field_name: message_string += " # " + tag_reference
+                message_string += "\n"
+                out_lines.append(message_string)
 
                 metalevel += 1
                 formats[metalevel] = block_formats.block_formats[tag_reference]
@@ -188,5 +190,7 @@ def decode(filepath: str) -> "str":
 
     for line in out_lines:
         output += line 
+
+    print("decoded: "+filepath[len("./de_in/"):])
 
     return output

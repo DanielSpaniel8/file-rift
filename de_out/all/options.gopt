@@ -1,187 +1,187 @@
 # rifted with FR v5.7.0
 
-Playlist{
-    Name : 'menu'
-    Track{
-        ResourceName : '1-hero2'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'menu'
+    Track{ # MusicTrack
+        ResourceName '1-hero2'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'house'
-    Track{
-        ResourceName : '1-plaintest2'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'house'
+    Track{ # MusicTrack
+        ResourceName '1-plaintest2'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'outdoors_light'
-    Track{
-        ResourceName : 'squire_new2'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'outdoors_light'
+    Track{ # MusicTrack
+        ResourceName 'squire_new2'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'forest'
-    Track{
-        ResourceName : '2cave2'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'forest'
+    Track{ # MusicTrack
+        ResourceName '2cave2'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'cave'
-    Track{
-        ResourceName : '2cave2'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'cave'
+    Track{ # MusicTrack
+        ResourceName '2cave2'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'dungeon1'
-    Track{
-        ResourceName : '1-dung73'
-        Volume : 0.5
+Playlist{ # MusicPlaylist
+    Name 'dungeon1'
+    Track{ # MusicTrack
+        ResourceName '1-dung73'
+        Volume 0.5
     }
 }
-Playlist{
-    Name : 'boss'
-    Track{
-        ResourceName : '1-boss23'
-        Volume : 0.75
+Playlist{ # MusicPlaylist
+    Name 'boss'
+    Track{ # MusicTrack
+        ResourceName '1-boss23'
+        Volume 0.75
     }
 }
-Playlist{
-    Name : 'bosskill'
-    Track{
-        ResourceName : 'momentofwonder'
-        Volume : 0.75
+Playlist{ # MusicPlaylist
+    Name 'bosskill'
+    Track{ # MusicTrack
+        ResourceName 'momentofwonder'
+        Volume 0.75
     }
 }
-Playlist{
-    Name : 'heartbeat'
-    Track{
-        ResourceName : 'heartbeat'
-        Volume : 1.0
+Playlist{ # MusicPlaylist
+    Name 'heartbeat'
+    Track{ # MusicTrack
+        ResourceName 'heartbeat'
+        Volume 1.0
     }
 }
-PhoneControlsLayout{
-    Subview{
-        Identifier : 'left'
-        Margins{
-            Left : 20.0
-            Bottom : 10.0
+PhoneControlsLayout{ # GUIViewLayout
+    Subview{ # GUIViewLayout
+        Identifier 'left'
+        Margins{ # GUIMargins
+            Left 20.0
+            Bottom 10.0
         }
     }
-    Subview{
-        Identifier : 'right'
-        Margins{
-            Left : 100.0
-            Bottom : 10.0
+    Subview{ # GUIViewLayout
+        Identifier 'right'
+        Margins{ # GUIMargins
+            Left 100.0
+            Bottom 10.0
         }
     }
-    Subview{
-        Identifier : 'jump'
-        Margins{
-            Right : 20.0
-            Bottom : 20.0
+    Subview{ # GUIViewLayout
+        Identifier 'jump'
+        Margins{ # GUIMargins
+            Right 20.0
+            Bottom 20.0
         }
     }
-    Subview{
-        Identifier : 'swing'
-        Margins{
-            Right : 100.0
-            Bottom : 10.0
+    Subview{ # GUIViewLayout
+        Identifier 'swing'
+        Margins{ # GUIMargins
+            Right 100.0
+            Bottom 10.0
         }
     }
-    Subview{
-        Identifier : 'skill'
-        Margins{
-            Right : 5.0
-            Bottom : 90.0
+    Subview{ # GUIViewLayout
+        Identifier 'skill'
+        Margins{ # GUIMargins
+            Right 5.0
+            Bottom 90.0
         }
     }
-    Subview{
-        Identifier : 'skillToggle'
-        Margins{
-            Right : 10.0
-            Top : 17.0
+    Subview{ # GUIViewLayout
+        Identifier 'skillToggle'
+        Margins{ # GUIMargins
+            Right 10.0
+            Top 17.0
         }
     }
-    Subview{
-        Identifier : 'menu'
-        Margins{
-            Left : 10.0
-            Top : 8.0
+    Subview{ # GUIViewLayout
+        Identifier 'menu'
+        Margins{ # GUIMargins
+            Left 10.0
+            Top 8.0
         }
     }
-    Subview{
-        Identifier : 'consumables'
-        Margins{
-            Left : 209.0
-            Bottom : 10.0
+    Subview{ # GUIViewLayout
+        Identifier 'consumables'
+        Margins{ # GUIMargins
+            Left 209.0
+            Bottom 10.0
         }
     }
 }
-PadControlsLayout{
-    Subview{
-        Identifier : 'left'
-        Margins{
-            Left : 10.0
-            Bottom : 30.0
+PadControlsLayout{ # GUIViewLayout
+    Subview{ # GUIViewLayout
+        Identifier 'left'
+        Margins{ # GUIMargins
+            Left 10.0
+            Bottom 30.0
         }
     }
-    Subview{
-        Identifier : 'right'
-        Margins{
-            Left : 68.0
-            Bottom : 30.0
+    Subview{ # GUIViewLayout
+        Identifier 'right'
+        Margins{ # GUIMargins
+            Left 68.0
+            Bottom 30.0
         }
     }
-    Subview{
-        Identifier : 'jump'
-        Margins{
-            Right : 10.0
-            Bottom : 38.0
+    Subview{ # GUIViewLayout
+        Identifier 'jump'
+        Margins{ # GUIMargins
+            Right 10.0
+            Bottom 38.0
         }
     }
-    Subview{
-        Identifier : 'swing'
-        Margins{
-            Right : 68.0
-            Bottom : 30.0
+    Subview{ # GUIViewLayout
+        Identifier 'swing'
+        Margins{ # GUIMargins
+            Right 68.0
+            Bottom 30.0
         }
     }
-    Subview{
-        Identifier : 'skill'
-        Margins{
-            Right : 5.0
-            Bottom : 86.0
+    Subview{ # GUIViewLayout
+        Identifier 'skill'
+        Margins{ # GUIMargins
+            Right 5.0
+            Bottom 86.0
         }
     }
-    Subview{
-        Identifier : 'skillToggle'
-        Margins{
-            Right : 10.0
-            Top : 17.0
+    Subview{ # GUIViewLayout
+        Identifier 'skillToggle'
+        Margins{ # GUIMargins
+            Right 10.0
+            Top 17.0
         }
     }
-    Subview{
-        Identifier : 'menu'
-        Margins{
-            Left : 10.0
-            Top : 8.0
+    Subview{ # GUIViewLayout
+        Identifier 'menu'
+        Margins{ # GUIMargins
+            Left 10.0
+            Top 8.0
         }
     }
-    Subview{
-        Identifier : 'consumables'
-        Margins{
-            Left : 225.0
-            Bottom : 15.0
+    Subview{ # GUIViewLayout
+        Identifier 'consumables'
+        Margins{ # GUIMargins
+            Left 225.0
+            Bottom 15.0
         }
     }
-    Subview{
-        Identifier : 'exp'
-        Margins{
-            Bottom : 80.0
+    Subview{ # GUIViewLayout
+        Identifier 'exp'
+        Margins{ # GUIMargins
+            Bottom 80.0
         }
     }
 }

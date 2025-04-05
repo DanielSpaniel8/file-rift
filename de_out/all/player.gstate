@@ -1,41 +1,41 @@
 # rifted with FR v5.7.0
 
-CharacterState{
-    CurrentCoins : 998
-    Item{
-        Name : 'legendsword'
+CharacterState{ # CharacterState
+    CurrentCoins 998
+    Item{ # CharacterState_ItemState
+        Name 'legendsword'
     }
-    Item{
-        Name : 'platearmor'
+    Item{ # CharacterState_ItemState
+        Name 'platearmor'
     }
-    Item{
-        Name : 'shadowtrinket'
+    Item{ # CharacterState_ItemState
+        Name 'shadowtrinket'
     }
-    Item{
-        Name : 'icetrinket'
+    Item{ # CharacterState_ItemState
+        Name 'icetrinket'
     }
-    Item{
-        Name : 'firetrinket'
+    Item{ # CharacterState_ItemState
+        Name 'firetrinket'
     }
-    Item{
-        Name : 'iselon_shard_1'
+    Item{ # CharacterState_ItemState
+        Name 'iselon_shard_1'
     }
-    Item{
-        Name : 'iselon_shard_2'
+    Item{ # CharacterState_ItemState
+        Name 'iselon_shard_2'
     }
-    Item{
-        Name : 'iselon_shard_3'
+    Item{ # CharacterState_ItemState
+        Name 'iselon_shard_3'
     }
-    Item{
-        Name : 'iselon_shard_4'
+    Item{ # CharacterState_ItemState
+        Name 'iselon_shard_4'
     }
-    Skill : 'bolt'
-    Skill : 'bomb'
-    Skill : 'hookshot'
-    Skill : 'dimension'
-    CurrentSkill : 'hookshot'
-    WeaponTrinket : 'firetrinket'
+    Skill 'bolt'
+    Skill 'bomb'
+    Skill 'hookshot'
+    Skill 'dimension'
+    CurrentSkill 'hookshot'
+    WeaponTrinket 'firetrinket'
 }
-CurrentLevel : 'town_herohouse'
-CurrentSpawnPoint : 'spawn_default'
-SelectedMenuTab : 'map'
+CurrentLevel 'town_herohouse'
+CurrentSpawnPoint 'spawn_default'
+SelectedMenuTab 'map'

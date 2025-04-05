@@ -1,1450 +1,1450 @@
 # rifted with FR v5.7.0
 
-Name : 'weapons'
-Template{
-    Object{
-        Identifier : 'brass_sword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Name 'weapons'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'brass_sword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 4
-            Label : 'impact'
-            ParticleEmitterComponent{
-                ParticleId : 5
-                ParticleId : 6
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 4
+            Label 'impact'
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 5
+                ParticleId 6
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 5
-            ParticleComponent{
-                TextureName : 'flash_particle'
-                Size : 50.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 5
+            ParticleComponent{ # ParticleComponent
+                TextureName 'flash_particle'
+                Size 50.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 6
-            ParticleComponent{
-                TextureName : 'spark_particle'
-                Size : 10.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 6
+            ParticleComponent{ # ParticleComponent
+                TextureName 'spark_particle'
+                Size 10.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponGlow'
-            Identifier : 10
-            WeaponGlowComponent{
-                ParticleEmitterId : 12
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+        Component{ # Component
+            ClassName 'WeaponGlow'
+            Identifier 10
+            WeaponGlowComponent{ # WeaponGlowComponent
+                ParticleEmitterId 12
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
-                ParticleColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+                ParticleColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
-                Width : 15.0
+                Width 15.0
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 12
-            Label : 'glow'
-            ParticleEmitterComponent{
-                ParticleId : 13
-                ParticleId : 14
-                ParticleId : 15
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 12
+            Label 'glow'
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 13
+                ParticleId 14
+                ParticleId 15
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 13
-            Label : 'glow'
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 14.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 13
+            Label 'glow'
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 14.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 14
-            Label : 'glow'
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 16.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 14
+            Label 'glow'
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 16.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 15
-            Label : 'glow'
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 14.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 15
+            Label 'glow'
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 14.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_ironsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 4
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 10
-                BaseLength : 50.0
-                GlowLength : 65.0
-                GlowIntensity : 0.0
-                Width : 10.0
-                GlowColor{
-                    R : 0.5
-                    G : 0.5
-                    B : 0.5
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_ironsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 4
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 10
+                BaseLength 50.0
+                GlowLength 65.0
+                GlowIntensity 0.0
+                Width 10.0
+                GlowColor{ # FloatColor
+                    R 0.5
+                    G 0.5
+                    B 0.5
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_brasssword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_brasssword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 0
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 0
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.5882353186607361
-                    G : 0.27450981736183167
-                    B : 0.16078431904315948
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_ironsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 0.644444465637207
-                    B : 0.4333333373069763
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.5882353186607361
+                    G 0.27450981736183167
+                    B 0.16078431904315948
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 55.0
-                GlowLength : 55.0
-                GlowIntensity : 1.0
-                Width : 6.0
-                GlowColor{
-                    R : 0.5918518900871277
-                    G : 0.27787652611732483
-                    B : 0.16370368003845215
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_ironsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 0.644444465637207
+                    B 0.4333333373069763
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 55.0
+                GlowLength 55.0
+                GlowIntensity 1.0
+                Width 6.0
+                GlowColor{ # FloatColor
+                    R 0.5918518900871277
+                    G 0.27787652611732483
+                    B 0.16370368003845215
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 0.8500000238418579
+    Scaling 0.8500000238418579
 }
-Template{
-    Object{
-        Identifier : 'weapon_broadsword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_broadsword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.7607843279838562
-                    G : 0.3490196168422699
-                    B : 0.14509804546833038
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_broadsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.7607843279838562
+                    G 0.3490196168422699
+                    B 0.14509804546833038
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 58.0
-                GlowLength : 58.0
-                GlowIntensity : 1.0
-                Width : 8.0
-                GlowColor{
-                    R : 0.764320969581604
-                    G : 0.3526337444782257
-                    B : 0.14679014682769775
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_broadsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 58.0
+                GlowLength 58.0
+                GlowIntensity 1.0
+                Width 8.0
+                GlowColor{ # FloatColor
+                    R 0.764320969581604
+                    G 0.3526337444782257
+                    B 0.14679014682769775
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_ironsword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_ironsword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.5568627715110779
-                    G : 0.29019609093666077
-                    B : 0.19607843458652496
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_ironsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.5568627715110779
+                    G 0.29019609093666077
+                    B 0.19607843458652496
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 55.0
-                GlowLength : 55.0
-                GlowIntensity : 1.0
-                Width : 6.0
-                GlowColor{
-                    R : 0.558271586894989
-                    G : 0.2935473322868347
-                    B : 0.19728398323059082
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_ironsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 55.0
+                GlowLength 55.0
+                GlowIntensity 1.0
+                Width 6.0
+                GlowColor{ # FloatColor
+                    R 0.558271586894989
+                    G 0.2935473322868347
+                    B 0.19728398323059082
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_legendsword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_legendsword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 1.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 1.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.7098039388656616
-                    G : 0.3176470696926117
-                    B : 0.1764705926179886
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_legendsword'
-                YRotation : 0.0
-                EmissionFactor : 5.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.7098039388656616
+                    G 0.3176470696926117
+                    B 0.1764705926179886
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 65.0
-                GlowLength : 65.0
-                GlowIntensity : 1.0
-                Width : 14.0
-                GlowColor{
-                    R : 0.7111111283302307
-                    G : 0.3199999928474426
-                    B : 0.17777776718139648
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_legendsword'
+                YRotation 0.0
+                EmissionFactor 5.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 65.0
+                GlowLength 65.0
+                GlowIntensity 1.0
+                Width 14.0
+                GlowColor{ # FloatColor
+                    R 0.7111111283302307
+                    G 0.3199999928474426
+                    B 0.17777776718139648
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_magicsword'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_magicsword'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.7647058963775635
-                    G : 0.32549020648002625
-                    B : 0.16470588743686676
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_magicsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.7647058963775635
+                    G 0.32549020648002625
+                    B 0.16470588743686676
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 65.0
-                GlowLength : 65.0
-                GlowIntensity : 1.0
-                Width : 6.0
-                GlowColor{
-                    R : 0.7674074172973633
-                    G : 0.32632097601890564
-                    B : 0.16592592000961304
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_magicsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 65.0
+                GlowLength 65.0
+                GlowIntensity 1.0
+                Width 6.0
+                GlowColor{ # FloatColor
+                    R 0.7674074172973633
+                    G 0.32632097601890564
+                    B 0.16592592000961304
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_needle'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_needle'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 0
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 0
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.5568627715110779
-                    G : 0.29019609093666077
-                    B : 0.19607843458652496
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_ironsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 0.7222222089767456
-                    B : 0.8222222328186035
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.5568627715110779
+                    G 0.29019609093666077
+                    B 0.19607843458652496
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 55.0
-                GlowLength : 55.0
-                GlowIntensity : 0.0
-                Width : 6.0
-                GlowColor{
-                    R : 0.558271586894989
-                    G : 0.2935473322868347
-                    B : 0.19728398323059082
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_ironsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 0.7222222089767456
+                    B 0.8222222328186035
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 55.0
+                GlowLength 55.0
+                GlowIntensity 0.0
+                Width 6.0
+                GlowColor{ # FloatColor
+                    R 0.558271586894989
+                    G 0.2935473322868347
+                    B 0.19728398323059082
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_stoneclub'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_stoneclub'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 0
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 0
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 1
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 1
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_club'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_club'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 0
-                CollisionShapeId : 2
-                GlowId : 10
-                BaseLength : 50.0
-                GlowLength : 65.0
-                GlowIntensity : 0.0
-                Width : 10.0
-                GlowColor{
-                    R : 0.5
-                    G : 0.5
-                    B : 0.5
-                    A : 0.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 0
+                CollisionShapeId 2
+                GlowId 10
+                BaseLength 50.0
+                GlowLength 65.0
+                GlowIntensity 0.0
+                Width 10.0
+                GlowColor{ # FloatColor
+                    R 0.5
+                    G 0.5
+                    B 0.5
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'weapon_thorn'
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 1
-            WeaponTrailComponent{
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'weapon_thorn'
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 1
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 5
-                Enabled : 0
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 5
+                Enabled 0
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 3
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 1
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 3
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 1
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'Transform'
-            Identifier : 4
+        Component{ # Component
+            ClassName 'Transform'
+            Identifier 4
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 7
-            Label : 'swing1'
-            SoundEffectComponent{
-                Name : 'sword_swing2'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 7
+            Label 'swing1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_swing2'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 8
-            Label : 'impact1'
-            SoundEffectComponent{
-                Name : 'sword_impact3'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 8
+            Label 'impact1'
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'sword_impact3'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'WeaponTrail'
-            Identifier : 16
-            Label : 'glow'
-            WeaponTrailComponent{
-                Color{
-                    R : 0.7607843279838562
-                    G : 0.3490196168422699
-                    B : 0.14509804546833038
-                    A : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'weapon_broadsword'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 0.6777777671813965
-                    G : 1.0
-                    B : 0.644444465637207
-                    A : 1.0
+        Component{ # Component
+            ClassName 'WeaponTrail'
+            Identifier 16
+            Label 'glow'
+            WeaponTrailComponent{ # WeaponTrailComponent
+                Color{ # FloatColor
+                    R 0.7607843279838562
+                    G 0.3490196168422699
+                    B 0.14509804546833038
+                    A 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'SwingableWeapon'
-            Identifier : 103
-            SwingableWeaponComponent{
-                ModelId : 101
-                TrailId : 1
-                ImpactParticleEmitterId : 0
-                SwingSoundId : 7
-                DamageImpactSoundId : 8
-                GlowTrailId : 16
-                CollisionShapeId : 2
-                GlowId : 0
-                BaseLength : 58.0
-                GlowLength : 58.0
-                GlowIntensity : 0.0
-                Width : 8.0
-                GlowColor{
-                    R : 0.764320969581604
-                    G : 0.3526337444782257
-                    B : 0.14679014682769775
-                    A : 0.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'weapon_broadsword'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 0.6777777671813965
+                    G 1.0
+                    B 0.644444465637207
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'SwingableWeapon'
+            Identifier 103
+            SwingableWeaponComponent{ # SwingableWeaponComponent
+                ModelId 101
+                TrailId 1
+                ImpactParticleEmitterId 0
+                SwingSoundId 7
+                DamageImpactSoundId 8
+                GlowTrailId 16
+                CollisionShapeId 2
+                GlowId 0
+                BaseLength 58.0
+                GlowLength 58.0
+                GlowIntensity 0.0
+                Width 8.0
+                GlowColor{ # FloatColor
+                    R 0.764320969581604
+                    G 0.3526337444782257
+                    B 0.14679014682769775
+                    A 0.0
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

@@ -1,252 +1,256 @@
 # rifted with FR v5.7.0
 
-Name : 'font_megalopolis_36'
-Texture : '\n\x13font_megalopolis_36\x10\x07 \x00'
-Glyph{
-    CharCode : 49
-    DrawBounds{
-        X : 3.0
-        Y : 0.0
-        Width : 18.0
-        Height : 25.0
+Name 'font_megalopolis_36'
+Texture{ # Texture
+    Name 'font_megalopolis_36'
+    PixelFormat 7
+    ImageType 0
+}
+Glyph{ # Font_Glyph
+    CharCode 49
+    DrawBounds{ # Rectangle
+        X 3.0
+        Y 0.0
+        Width 18.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 0.140625
-        Height : 0.1953125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 0.140625
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 50
-    DrawBounds{
-        X : 1.0
-        Y : 0.0
-        Width : 20.0
-        Height : 25.0
+Glyph{ # Font_Glyph
+    CharCode 50
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 0.0
+        Width 20.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.21875
-        Y : 0.0
-        Width : 0.15625
-        Height : 0.1953125
-    }
-}
-Glyph{
-    CharCode : 51
-    DrawBounds{
-        X : 2.0
-        Y : 0.0
-        Width : 19.0
-        Height : 25.0
-    }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.4375
-        Y : 0.0
-        Width : 0.1484375
-        Height : 0.1953125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.21875
+        Y 0.0
+        Width 0.15625
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 52
-    DrawBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 23.0
-        Height : 25.0
+Glyph{ # Font_Glyph
+    CharCode 51
+    DrawBounds{ # Rectangle
+        X 2.0
+        Y 0.0
+        Width 19.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.65625
-        Y : 0.0
-        Width : 0.1796875
-        Height : 0.1953125
-    }
-}
-Glyph{
-    CharCode : 53
-    DrawBounds{
-        X : 2.0
-        Y : 0.0
-        Width : 20.0
-        Height : 25.0
-    }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.0
-        Y : 0.1953125
-        Width : 0.15625
-        Height : 0.1953125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.4375
+        Y 0.0
+        Width 0.1484375
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 54
-    DrawBounds{
-        X : 1.0
-        Y : 0.0
-        Width : 21.0
-        Height : 25.0
+Glyph{ # Font_Glyph
+    CharCode 52
+    DrawBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 23.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.21875
-        Y : 0.1953125
-        Width : 0.1640625
-        Height : 0.1953125
-    }
-}
-Glyph{
-    CharCode : 55
-    DrawBounds{
-        X : 3.0
-        Y : 0.0
-        Width : 19.0
-        Height : 25.0
-    }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.4375
-        Y : 0.1953125
-        Width : 0.1484375
-        Height : 0.1953125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.65625
+        Y 0.0
+        Width 0.1796875
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 56
-    DrawBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 23.0
-        Height : 25.0
+Glyph{ # Font_Glyph
+    CharCode 53
+    DrawBounds{ # Rectangle
+        X 2.0
+        Y 0.0
+        Width 20.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.65625
-        Y : 0.1953125
-        Width : 0.1796875
-        Height : 0.1953125
-    }
-}
-Glyph{
-    CharCode : 57
-    DrawBounds{
-        X : 1.0
-        Y : 0.0
-        Width : 21.0
-        Height : 25.0
-    }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.0
-        Y : 0.390625
-        Width : 0.1640625
-        Height : 0.1953125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.0
+        Y 0.1953125
+        Width 0.15625
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 48
-    DrawBounds{
-        X : 1.0
-        Y : 0.0
-        Width : 22.0
-        Height : 25.0
+Glyph{ # Font_Glyph
+    CharCode 54
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 0.0
+        Width 21.0
+        Height 25.0
     }
-    HorizAdvance : 23
-    TextureBounds{
-        X : 0.21875
-        Y : 0.390625
-        Width : 0.171875
-        Height : 0.1953125
-    }
-}
-Glyph{
-    CharCode : 95
-    DrawBounds{
-        X : 0.0
-        Y : -5.0
-        Width : 27.0
-        Height : 4.0
-    }
-    HorizAdvance : 27
-    TextureBounds{
-        X : 0.4375
-        Y : 0.390625
-        Width : 0.2109375
-        Height : 0.03125
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.21875
+        Y 0.1953125
+        Width 0.1640625
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 45
-    DrawBounds{
-        X : 1.0
-        Y : 7.0
-        Width : 12.0
-        Height : 6.0
+Glyph{ # Font_Glyph
+    CharCode 55
+    DrawBounds{ # Rectangle
+        X 3.0
+        Y 0.0
+        Width 19.0
+        Height 25.0
     }
-    HorizAdvance : 14
-    TextureBounds{
-        X : 0.65625
-        Y : 0.390625
-        Width : 0.09375
-        Height : 0.046875
-    }
-}
-Glyph{
-    CharCode : 43
-    DrawBounds{
-        X : 1.0
-        Y : 0.0
-        Width : 20.0
-        Height : 20.0
-    }
-    HorizAdvance : 22
-    TextureBounds{
-        X : 0.0
-        Y : 0.5859375
-        Width : 0.15625
-        Height : 0.15625
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.4375
+        Y 0.1953125
+        Width 0.1484375
+        Height 0.1953125
     }
 }
-Glyph{
-    CharCode : 46
-    DrawBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 11.0
-        Height : 9.0
+Glyph{ # Font_Glyph
+    CharCode 56
+    DrawBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 23.0
+        Height 25.0
     }
-    HorizAdvance : 11
-    TextureBounds{
-        X : 0.21875
-        Y : 0.5859375
-        Width : 0.0859375
-        Height : 0.0703125
-    }
-}
-Glyph{
-    CharCode : 32
-    DrawBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 0.0
-        Height : 0.0
-    }
-    HorizAdvance : 9
-    TextureBounds{
-        X : 0.0
-        Y : 0.0
-        Width : 0.0
-        Height : 0.0
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.65625
+        Y 0.1953125
+        Width 0.1796875
+        Height 0.1953125
     }
 }
-Kerning : '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
-Height : 43
-BoundingBox{
-    X : -1.0
-    Y : -5.0
-    Width : 27.0
-    Height : 30.0
+Glyph{ # Font_Glyph
+    CharCode 57
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 0.0
+        Width 21.0
+        Height 25.0
+    }
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.0
+        Y 0.390625
+        Width 0.1640625
+        Height 0.1953125
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 48
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 0.0
+        Width 22.0
+        Height 25.0
+    }
+    HorizAdvance 23
+    TextureBounds{ # Rectangle
+        X 0.21875
+        Y 0.390625
+        Width 0.171875
+        Height 0.1953125
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 95
+    DrawBounds{ # Rectangle
+        X 0.0
+        Y -5.0
+        Width 27.0
+        Height 4.0
+    }
+    HorizAdvance 27
+    TextureBounds{ # Rectangle
+        X 0.4375
+        Y 0.390625
+        Width 0.2109375
+        Height 0.03125
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 45
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 7.0
+        Width 12.0
+        Height 6.0
+    }
+    HorizAdvance 14
+    TextureBounds{ # Rectangle
+        X 0.65625
+        Y 0.390625
+        Width 0.09375
+        Height 0.046875
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 43
+    DrawBounds{ # Rectangle
+        X 1.0
+        Y 0.0
+        Width 20.0
+        Height 20.0
+    }
+    HorizAdvance 22
+    TextureBounds{ # Rectangle
+        X 0.0
+        Y 0.5859375
+        Width 0.15625
+        Height 0.15625
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 46
+    DrawBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 11.0
+        Height 9.0
+    }
+    HorizAdvance 11
+    TextureBounds{ # Rectangle
+        X 0.21875
+        Y 0.5859375
+        Width 0.0859375
+        Height 0.0703125
+    }
+}
+Glyph{ # Font_Glyph
+    CharCode 32
+    DrawBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 0.0
+        Height 0.0
+    }
+    HorizAdvance 9
+    TextureBounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 0.0
+        Height 0.0
+    }
+}
+Kerning '\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+Height 43
+BoundingBox{ # Rectangle
+    X -1.0
+    Y -5.0
+    Width 27.0
+    Height 30.0
 }

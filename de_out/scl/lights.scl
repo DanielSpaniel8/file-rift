@@ -1,381 +1,381 @@
 # rifted with FR v5.7.0
 
-Name : 'lights'
-Template{
-    Object{
-        Identifier : 'fire_150_13'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.2999999523162842
-                Color{
-                    R : 1.0
-                    G : 0.7333333492279053
-                    B : 0.5777778029441833
-                    A : 1.0
+Name 'lights'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fire_150_13'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.2999999523162842
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.7333333492279053
+                    B 0.5777778029441833
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 150.0
+                Radius 150.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'fire_250_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 1.0
-                    G : 0.7555555701255798
-                    B : 0.5333333611488342
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fire_250_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.7555555701255798
+                    B 0.5333333611488342
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 250.0
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'fire_300_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 1.0
-                    G : 0.6888889074325562
-                    B : 0.45555558800697327
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fire_300_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.6888889074325562
+                    B 0.45555558800697327
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 300.0
+                Radius 300.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -100.0
-            Y : -100.0
-            Width : 200.0
-            Height : 200.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -100.0
+            Y -100.0
+            Width 200.0
+            Height 200.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'ice_150_13'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.2999999523162842
-                Color{
-                    R : 0.5333333611488342
-                    G : 0.7333333492279053
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'ice_150_13'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.2999999523162842
+                Color{ # FloatColor
+                    R 0.5333333611488342
+                    G 0.7333333492279053
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 150.0
+                Radius 150.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'ice_250_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 0.5333333611488342
-                    G : 0.7333333492279053
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'ice_250_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 0.5333333611488342
+                    G 0.7333333492279053
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 250.0
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'ice_300_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 0.5333333611488342
-                    G : 0.7333333492279053
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'ice_300_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 0.5333333611488342
+                    G 0.7333333492279053
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 300.0
+                Radius 300.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -100.0
-            Y : -100.0
-            Width : 200.0
-            Height : 200.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -100.0
+            Y -100.0
+            Width 200.0
+            Height 200.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'point_150_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 0.5
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'point_150_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 0.5
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 200.0
+                Radius 200.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'point_250_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'point_250_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 250.0
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'point_300_15'
-        Component{
-            ClassName : 'Light'
-            Identifier : 101
-            LightComponent{
-                Type : 3
-                Intensity : 1.5
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'point_300_15'
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 101
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 1.5
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Radius : 300.0
+                Radius 300.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -100.0
-            Y : -100.0
-            Width : 200.0
-            Height : 200.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -100.0
+            Y -100.0
+            Width 200.0
+            Height 200.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

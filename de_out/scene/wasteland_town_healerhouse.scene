@@ -1,154 +1,155 @@
 # rifted with FR v5.7.0
 
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'Background'
-    Component{
-        ClassName : 'Background'
-        Identifier : 101
-        BackgroundComponent{
-            TextureName : 'wasteland_bg'
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'Background'
+    Component{ # Component
+        ClassName 'Background'
+        Identifier 101
+        BackgroundComponent{ # BackgroundComponent
+            TextureName 'wasteland_bg'
         }
     }
-    Position{
-        X : -1202.0294189453125
-        Y : 1126.64306640625
+    Position{ # Vector2
+        X -1202.0294189453125
+        Y 1126.64306640625
     }
-    Depth : 1.7203826904296875
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
+    Depth 1.7203826904296875
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'DirectionalLight'
-    Component{
-        ClassName : 'Light'
-        Identifier : 101
-        LightComponent{
-            Type : 2
-            Intensity : 0.30000001192092896
-            Color{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'DirectionalLight'
+    Component{ # Component
+        ClassName 'Light'
+        Identifier 101
+        LightComponent{ # LightComponent
+            Type 2
+            Intensity 0.30000001192092896
+            Color{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Component{
-        ClassName : 'Light'
-        Identifier : 103
-        LightComponent{
-            Type : 1
-            Intensity : 0.5
-            Color{
-                R : 1.0
-                G : 0.699999988079071
-                B : 0.699999988079071
-                A : 1.0
+    Component{ # Component
+        ClassName 'Light'
+        Identifier 103
+        LightComponent{ # LightComponent
+            Type 1
+            Intensity 0.5
+            Color{ # FloatColor
+                R 1.0
+                G 0.699999988079071
+                B 0.699999988079071
+                A 1.0
             }
         }
     }
-    Component{
-        ClassName : 'Light'
-        Identifier : 105
-        LightComponent{
-            Type : 4
-            Intensity : 0.699999988079071
-            Color{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+    Component{ # Component
+        ClassName 'Light'
+        Identifier 105
+        LightComponent{ # LightComponent
+            Type 4
+            Intensity 0.699999988079071
+            Color{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 3.298828125
-        Y : 1855.27099609375
+    Position{ # Vector2
+        X 3.298828125
+        Y 1855.27099609375
     }
-    Depth : 560.502685546875
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
+    Depth 560.502685546875
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'npc_healer'
-    Identifier : 'healer'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'npc_healer'
-            YRotation : 2.356194496154785
-            EmissionFactor : 0.30000001192092896
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'npc_healer'
+    Identifier 'healer'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'npc_healer'
+            YRotation 2.356194496154785
+            EmissionFactor 0.30000001192092896
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 93.64187622070312
-        Y : 152.44781494140625
+    Position{ # Vector2
+        X 93.64187622070312
+        Y 152.44781494140625
     }
-    Depth : -25.72296142578125
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -25.162626266479492
-        Y : -40.0
-        Width : 49.33160400390625
-        Height : 67.98746490478516
+    Depth -25.72296142578125
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -25.162626266479492
+        Y -40.0
+        Width 49.33160400390625
+        Height 67.98746490478516
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'healingTrigger'
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 101
-        ShapeComponent{
-            Rectangle{
-                X : -82.5
-                Y : -200.0
-                Width : 165.0
-                Height : 234.5
+Object{ # SceneObject
+    Identifier 'healingTrigger'
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 101
+        ShapeComponent{ # ShapeComponent
+            Rectangle{ # Rectangle
+                X -82.5
+                Y -200.0
+                Width 165.0
+                Height 234.5
             }
         }
-        CollisionShapeComponent{
-            MinDepth : -15.0
-            MaxDepth : 15.0
-            OnCollide{
-                String : $
+        CollisionShapeComponent{ # CollisionShapeComponent
+            MinDepth -15.0
+            MaxDepth 15.0
+            OnCollide{ # Program
+                String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" and Health.CurrentHealth(target) < Health.MaxHealth(target) then
@@ -205,2363 +206,2363 @@ elseif target:identifier() == "hero" then
     Game.SetCinematicMode(false, true);
 end
 $end
-                Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x003\x05\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and Health.CurrentHealth(target) < Health.MaxHealth(target) then\r\n\r\n\tGame.SetCinematicMode(true, false);\r\n\r\n\tself:setHidden(true);\r\n\r\n\tProgram.Wait(0.5);\r\n\r\n\tlocal healer = Scene.Find("healer");\r\n\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"You\'re hurt, let me help you.", \r\n\t});\r\n\t\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.FadeOut();\r\n\t\r\n\tProgram.Wait(1.0);\r\n\tHealth.SetCurrentHealth(target, Health.MaxHealth(target));\r\n\tHealth.SetCurrentMana(target, Health.MaxMana(target));\r\n\tGame.FadeIn();\r\n\t\t\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"If you ever get hurt again, come visit me.", \r\n\t});\r\n\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.SetCinematicMode(false, true);\r\n\r\nelseif target:identifier() == "hero" then\r\n\tGame.SetCinematicMode(true, false);\r\n\r\n\tself:setHidden(true);\r\n\r\n\tProgram.Wait(0.5);\r\n\r\n\tlocal healer = Scene.Find("healer");\r\n\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"If you ever get hurt, come visit me.", \r\n\t});\r\n\r\n\tGame.FadeOut();\r\n\t\r\n\tProgram.Wait(1.0);\r\n\tHealth.SetCurrentMana(target, Health.MaxMana(target));\r\n\tGame.FadeIn();\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.SetCinematicMode(false, true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\xa4\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x17\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x80\x00\x9c\x80\x00\x01\xc5\x80\x00\x00\xc6\x00\xc1\x01\x00\x01\x80\x00\xdc\x80\x00\x01\x18\xc0\x00\x01\x16@\x15\x80\x85@\x01\x00\x86\x80A\x01\xc2\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x8b\xc0A\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c\x80\x00\x01\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01B\x05\x00\xe2A\x80\x00\xdc@\x80\x02\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\xc0\xc5\x01\xdc@\x80\x00\xc5\x00\x02\x00\xc6@\xc2\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\x80\x00\x00\xc6@\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\x01\xc1\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5\x80\x00\x00\xc6\x80\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\xc1\xc6\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5@\x01\x00\xc6\x00\xc7\x01\xdc@\x80\x00\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01B\x07\x00\xe2A\x80\x00\xdc@\x80\x02\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\x80\xc1\x01\x02\x01\x00\x00B\x01\x80\x00\xdc@\x80\x01\x16@\x0f\x80\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x0e\x80\x85@\x01\x00\x86\x80A\x01\xc2\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x8b\xc0A\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c\x80\x00\x01\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01\x82\x07\x00\xe2A\x80\x00\xdc@\x80\x02\xc5@\x01\x00\xc6\xc0\xc5\x01\xdc@\x80\x00\xc5\x00\x02\x00\xc6@\xc2\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\x80\x00\x00\xc6\x80\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\xc1\xc6\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5@\x01\x00\xc6\x00\xc7\x01\xdc@\x80\x00\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\x80\xc1\x01\x02\x01\x00\x00B\x01\x80\x00\xdc@\x80\x01\x1e\x00\x80\x00\x1f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Health\x00\x04\x0e\x00\x00\x00CurrentHealth\x00\x04\n\x00\x00\x00MaxHealth\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00SetCinematicMode\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xe0?\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x07\x00\x00\x00healer\x00\x04\x10\x00\x00\x00ShowTextBubbles\x00\x04\r\x00\x00\x00healerBubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x1e\x00\x00\x00You\'re hurt, let me help you.\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00FadeOut\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x11\x00\x00\x00SetCurrentHealth\x00\x04\x0f\x00\x00\x00SetCurrentMana\x00\x04\x08\x00\x00\x00MaxMana\x00\x04\x07\x00\x00\x00FadeIn\x00\x04+\x00\x00\x00If you ever get hurt again, come visit me.\x00\x04%\x00\x00\x00If you ever get hurt, come visit me.\x00\x00\x00\x00\x00\xa4\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\r\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1a\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00%\x00\x00\x00%\x00\x00\x00%\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00)\x00\x00\x00)\x00\x00\x00)\x00\x00\x00)\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00-\x00\x00\x00-\x00\x00\x00+\x00\x00\x00/\x00\x00\x00/\x00\x00\x00/\x00\x00\x001\x00\x00\x001\x00\x00\x001\x00\x00\x001\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x004\x00\x00\x004\x00\x00\x004\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x007\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\xa3\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\xa3\x00\x00\x00\x07\x00\x00\x00healer\x00\x1f\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00healer\x00y\x00\x00\x00\xa3\x00\x00\x00\x00\x00\x00\x00'
+                Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x003\x05\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and Health.CurrentHealth(target) < Health.MaxHealth(target) then\r\n\r\n\tGame.SetCinematicMode(true, false);\r\n\r\n\tself:setHidden(true);\r\n\r\n\tProgram.Wait(0.5);\r\n\r\n\tlocal healer = Scene.Find("healer");\r\n\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"You\'re hurt, let me help you.", \r\n\t});\r\n\t\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.FadeOut();\r\n\t\r\n\tProgram.Wait(1.0);\r\n\tHealth.SetCurrentHealth(target, Health.MaxHealth(target));\r\n\tHealth.SetCurrentMana(target, Health.MaxMana(target));\r\n\tGame.FadeIn();\r\n\t\t\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"If you ever get hurt again, come visit me.", \r\n\t});\r\n\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.SetCinematicMode(false, true);\r\n\r\nelseif target:identifier() == "hero" then\r\n\tGame.SetCinematicMode(true, false);\r\n\r\n\tself:setHidden(true);\r\n\r\n\tProgram.Wait(0.5);\r\n\r\n\tlocal healer = Scene.Find("healer");\r\n\r\n\tShowTextBubbles("healerBubble", healer:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"If you ever get hurt, come visit me.", \r\n\t});\r\n\r\n\tGame.FadeOut();\r\n\t\r\n\tProgram.Wait(1.0);\r\n\tHealth.SetCurrentMana(target, Health.MaxMana(target));\r\n\tGame.FadeIn();\r\n\tHideTextBubble("healerBubble");\r\n\r\n\tGame.SetCinematicMode(false, true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\xa4\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\xc0\x17\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x80\x00\x9c\x80\x00\x01\xc5\x80\x00\x00\xc6\x00\xc1\x01\x00\x01\x80\x00\xdc\x80\x00\x01\x18\xc0\x00\x01\x16@\x15\x80\x85@\x01\x00\x86\x80A\x01\xc2\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x8b\xc0A\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c\x80\x00\x01\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01B\x05\x00\xe2A\x80\x00\xdc@\x80\x02\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\xc0\xc5\x01\xdc@\x80\x00\xc5\x00\x02\x00\xc6@\xc2\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\x80\x00\x00\xc6@\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\x01\xc1\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5\x80\x00\x00\xc6\x80\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\xc1\xc6\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5@\x01\x00\xc6\x00\xc7\x01\xdc@\x80\x00\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01B\x07\x00\xe2A\x80\x00\xdc@\x80\x02\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\x80\xc1\x01\x02\x01\x00\x00B\x01\x80\x00\xdc@\x80\x01\x16@\x0f\x80\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x0e\x80\x85@\x01\x00\x86\x80A\x01\xc2\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x8b\xc0A\x00\x02\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c\x80\x00\x01\xc5\x80\x03\x00\x01\xc1\x03\x00K\x01D\x01\\\x81\x00\x01\x85A\x04\x00\x86\x81D\x03\xc1\xc1\x04\x00\x01\x02\x05\x00A\xc2\x04\x00\x9c\x81\x00\x02L\x81\x81\x02\x82\x01\x80\x00\xca\x01\x80\x00\x01\x82\x07\x00\xe2A\x80\x00\xdc@\x80\x02\xc5@\x01\x00\xc6\xc0\xc5\x01\xdc@\x80\x00\xc5\x00\x02\x00\xc6@\xc2\x01\x01\x01\x06\x00\xdc@\x00\x01\xc5\x80\x00\x00\xc6\x80\xc6\x01\x00\x01\x80\x00E\x81\x00\x00F\xc1\xc6\x02\x80\x01\x80\x00\\\x01\x00\x01\xdc@\x00\x00\xc5@\x01\x00\xc6\x00\xc7\x01\xdc@\x80\x00\xc5\x80\x05\x00\x01\xc1\x03\x00\xdc@\x00\x01\xc5@\x01\x00\xc6\x80\xc1\x01\x02\x01\x00\x00B\x01\x80\x00\xdc@\x80\x01\x1e\x00\x80\x00\x1f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Health\x00\x04\x0e\x00\x00\x00CurrentHealth\x00\x04\n\x00\x00\x00MaxHealth\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00SetCinematicMode\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xe0?\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x07\x00\x00\x00healer\x00\x04\x10\x00\x00\x00ShowTextBubbles\x00\x04\r\x00\x00\x00healerBubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x1e\x00\x00\x00You\'re hurt, let me help you.\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00FadeOut\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x11\x00\x00\x00SetCurrentHealth\x00\x04\x0f\x00\x00\x00SetCurrentMana\x00\x04\x08\x00\x00\x00MaxMana\x00\x04\x07\x00\x00\x00FadeIn\x00\x04+\x00\x00\x00If you ever get hurt again, come visit me.\x00\x04%\x00\x00\x00If you ever get hurt, come visit me.\x00\x00\x00\x00\x00\xa4\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\r\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x15\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1a\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00 \x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00%\x00\x00\x00%\x00\x00\x00%\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00\'\x00\x00\x00)\x00\x00\x00)\x00\x00\x00)\x00\x00\x00)\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00-\x00\x00\x00-\x00\x00\x00+\x00\x00\x00/\x00\x00\x00/\x00\x00\x00/\x00\x00\x001\x00\x00\x001\x00\x00\x001\x00\x00\x001\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x002\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x004\x00\x00\x004\x00\x00\x004\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x007\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\xa3\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\xa3\x00\x00\x00\x07\x00\x00\x00healer\x00\x1f\x00\x00\x00d\x00\x00\x00\x07\x00\x00\x00healer\x00y\x00\x00\x00\xa3\x00\x00\x00\x00\x00\x00\x00'
             }
-            Enabled : 1
+            Enabled 1
         }
     }
-    Position{
-        X : 74.97781372070312
-        Y : 310.8324279785156
+    Position{ # Vector2
+        X 74.97781372070312
+        Y 310.8324279785156
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -82.5
-        Y : -200.0
-        Width : 165.0
-        Height : 234.5
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -82.5
+        Y -200.0
+        Width 165.0
+        Height 234.5
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj1#2'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'bed'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj1#2'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'bed'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -180.83026123046875
-        Y : 110.24530029296875
+    Position{ # Vector2
+        X -180.83026123046875
+        Y 110.24530029296875
     }
-    Depth : -156.6748046875
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -53.09627151489258
-        Y : -0.4045476019382477
-        Width : 106.45399475097656
-        Height : 43.15983963012695
+    Depth -156.6748046875
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -53.09627151489258
+        Y -0.4045476019382477
+        Width 106.45399475097656
+        Height 43.15983963012695
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj1#3'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'bed'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj1#3'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'bed'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -3.7803802490234375
-        Y : 109.81684875488281
+    Position{ # Vector2
+        X -3.7803802490234375
+        Y 109.81684875488281
     }
-    Depth : -156.6748046875
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -53.09627151489258
-        Y : -0.4045476019382477
-        Width : 106.45399475097656
-        Height : 43.15983963012695
+    Depth -156.6748046875
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -53.09627151489258
+        Y -0.4045476019382477
+        Width 106.45399475097656
+        Height 43.15983963012695
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj14'
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 101
-        ShapeComponent{
-            Rectangle{
-                X : -45.0
-                Y : -200.0
-                Width : 90.0
-                Height : 400.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj14'
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 101
+        ShapeComponent{ # ShapeComponent
+            Rectangle{ # Rectangle
+                X -45.0
+                Y -200.0
+                Width 90.0
+                Height 400.0
             }
         }
-        CollisionShapeComponent{
-            MinDepth : -15.0
-            MaxDepth : 15.0
-            SpecialType : 2
-            Enabled : 1
+        CollisionShapeComponent{ # CollisionShapeComponent
+            MinDepth -15.0
+            MaxDepth 15.0
+            SpecialType 2
+            Enabled 1
         }
     }
-    Component{
-        ClassName : 'Portal'
-        Identifier : 104
-        PortalComponent{
-            DestinationSceneName : 'wasteland_town'
-            SpawnPointName : ''
-            TapToEnter : 0
-            TriggerShapeId : 101
+    Component{ # Component
+        ClassName 'Portal'
+        Identifier 104
+        PortalComponent{ # PortalComponent
+            DestinationSceneName 'wasteland_town'
+            SpawnPointName ''
+            TapToEnter 0
+            TriggerShapeId 101
         }
     }
-    Position{
-        X : -500.7042236328125
-        Y : 204.0025634765625
+    Position{ # Vector2
+        X -500.7042236328125
+        Y 204.0025634765625
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -45.0
-        Y : -200.0
-        Width : 90.0
-        Height : 400.0
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -45.0
+        Y -200.0
+        Width 90.0
+        Height 400.0
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj2'
-    Component{
-        ClassName : 'GroundPolygon'
-        Identifier : 100
-        GroundPolygonComponent{
-            Polygon{
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
+Object{ # SceneObject
+    Identifier 'obj2'
+    Component{ # Component
+        ClassName 'GroundPolygon'
+        Identifier 100
+        GroundPolygonComponent{ # GroundPolygonComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
                 }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
                 }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
                 }
-                Vertex{
-                    X : 962.2265625
-                    Y : 665.9594116210938
+                Vertex{ # Vector2
+                    X 962.2265625
+                    Y 665.9594116210938
                 }
-                Vertex{
-                    X : -112.4068603515625
-                    Y : 528.6842651367188
+                Vertex{ # Vector2
+                    X -112.4068603515625
+                    Y 528.6842651367188
                 }
-                Vertex{
-                    X : -955.6207885742188
-                    Y : 546.150146484375
+                Vertex{ # Vector2
+                    X -955.6207885742188
+                    Y 546.150146484375
                 }
-                Vertex{
-                    X : -885.8663940429688
-                    Y : 119.34304809570312
+                Vertex{ # Vector2
+                    X -885.8663940429688
+                    Y 119.34304809570312
                 }
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
                 }
-                Vertex{
-                    X : -387.05316162109375
-                    Y : 0.392242431640625
+                Vertex{ # Vector2
+                    X -387.05316162109375
+                    Y 0.392242431640625
                 }
-                Vertex{
-                    X : -386.41168212890625
-                    Y : 105.92822265625
+                Vertex{ # Vector2
+                    X -386.41168212890625
+                    Y 105.92822265625
                 }
-                Vertex{
-                    X : -110.98757934570312
-                    Y : 109.73516845703125
+                Vertex{ # Vector2
+                    X -110.98757934570312
+                    Y 109.73516845703125
                 }
-                Vertex{
-                    X : 130.69927978515625
-                    Y : 108.19100952148438
+                Vertex{ # Vector2
+                    X 130.69927978515625
+                    Y 108.19100952148438
                 }
-                Vertex{
-                    X : 139.54339599609375
-                    Y : -100.405517578125
+                Vertex{ # Vector2
+                    X 139.54339599609375
+                    Y -100.405517578125
                 }
-                Vertex{
-                    X : -115.107421875
-                    Y : -100.34588623046875
+                Vertex{ # Vector2
+                    X -115.107421875
+                    Y -100.34588623046875
                 }
-                Vertex{
-                    X : -937.118408203125
-                    Y : -100.25949096679688
+                Vertex{ # Vector2
+                    X -937.118408203125
+                    Y -100.25949096679688
                 }
-                Convex : 0
-                Closed : 1
+                Convex 0
+                Closed 1
             }
-            Collides : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            OnCollide{
-            }
-        }
-    }
-    Component{
-        ClassName : 'GroundMesh'
-        Identifier : 101
-        GroundMeshComponent{
-            LocalAabb{
-                X : -1014.267822265625
-                Y : -675.9594116210938
-                Width : 2028.53564453125
-                Height : 1351.9188232421875
-            }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'ground3'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -958.6201171875
-                    Y : 503.68426513671875
-                    Z : -85.0
-                    Width : 1923.822509765625
-                    Height : 162.6552734375
-                    Depth : 170.0
-                }
-                VertexData : '\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\n\xd7#?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x89\xd2\x1e?\xf4LqD\xbbU D\xcd\xcc\x9f\xc2\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc> \x90\xa0\xbc\xf4LqD\xbb\x15$D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\x10\xd7#\xbd\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?.+*?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\x00\x00\x00?\xd4S:?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0\xc2\xd3a\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@\x00\xd7\xa3\xbcP\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0B\xd3a\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@R\xb8\x1e?P\xd0\xe0\xc2\xcb\xab\x01D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbb\xab\x9a@.+*?P\xd0\xe0\xc2\x96\xd7\xfbC33\xa0B\xd3a\x7f=~\x80\x7f\xbf\x00\x00\x00\x80\xbb\xab\x9a@\xd4S:?\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0\xc2\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0B\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\xb0\xa7o\xc4\x96M\x02D33\xa0B\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0\xc2\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0B\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\n\xd7#?\xb0\xa7o\xc4\x96M\x02D33\xa0B\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A\x89\xd2\x1e?\xb0\xa7o\xc4\x96M\x02D\xcd\xcc\x9f\xc2\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A \x90\xa0\xbc\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\x10\xd7#\xbd'
-                IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
-            }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'ground3'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -940.118408203125
-                    Y : -125.405517578125
-                    Z : -85.0
-                    Width : 1079.661865234375
-                    Height : 25.146339416503906
-                    Depth : 170.0
-                }
-                VertexData : '\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\n\xd7#?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A\x89\xd2\x1e?\x1c\x8b\x0bC\xa0\xcf\xfa\xc2\xcd\xcc\x9f\xc2H\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A \x90\xa0\xbc\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\x10\xd7#\xbd\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0\xc2\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13A\x00\xd7\xa3\xbc\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0B\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13AR\xb8\x1e?\x007\xe6\xc2\x18\xb1\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80??\x9c\x13A.+*?\x007\xe6\xc2\x18\xb1\xfa\xc233\xa0B\xa47\x0e\xb9\x00\x00\x80\xbf\x00\x00\x00\x80?\x9c\x13A\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x138HA.+*?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\x138HA\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\n\xd7#?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA\x89\xd2\x1e?\x94\x07k\xc4\xb3\x84\xfa\xc2\xcd\xcc\x9f\xc2aj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA \x90\xa0\xbc\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\x10\xd7#\xbd'
-                IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
-            }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
-                    Z : -75.0
-                    Width : 2008.53564453125
-                    Height : 1212.109619140625
-                    Depth : 150.0
-                }
-                VertexData : '\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96\xc2\xe9\xa5|\xbf\t*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcc\xccL>\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\xe9\xa5|\xbf\t*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcd\xccL?sw]\xc4\xa4\xaf\xeeB\x00\x00\x96\xc2C\x00~\xbf\x1co\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcc\xccL>sw]\xc4\xa4\xaf\xeeB\x00\x00\x96BC\x00~\xbf\x1co\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcd\xccL?3\xbe]\xc4\x00\xb0"=\x00\x00\x96\xc2\xca\x87m\xbey\x04y\xbf\x00\x00\x00\x00TA-@\xcc\xccL>3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\xca\x87m\xbey\x04y\xbf\x00\x00\x00\x00TA-@\xcd\xccL?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96\xc2T\xedS>\x1auz\xbf\x00\x00\x00\x00\x01\x9e\x96@\xcc\xccL>\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96BT\xedS>\x1auz\xbf\x00\x00\x00\x00\x01\x9e\x96@\xcd\xccL?\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96\xc2g\x8a\xbc>\xc0\x02n\xbf\x00\x00\x00\x00F \xa4@\xcc\xccL>\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96Bg\x8a\xbc>\xc0\x02n\xbf\x00\x00\x00\x00F \xa4@\xcd\xccL?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96\xc2\xbab\x8f;_\xff\x7f\xbf\x00\x00\x00\x00;b\xc7@\xcc\xccL>\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\xbab\x8f;_\xff\x7f\xbf\x00\x00\x00\x00;b\xc7@\xcd\xccL?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96\xc2Y\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfdQ\xe6@\xcc\xccL>\x04\xb3\x02C\xcca\xd8B\x00\x00\x96BY\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfdQ\xe6@\xcd\xccL?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96\xc2-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb6\x85\x00A\xcc\xccL>\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb6\x85\x00A\xcd\xccL?\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96\xc2\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb6\x85\x00A\xcc\xccL>\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb6\x85\x00A\xcd\xccL?$\x11{\xc4g}&\xc4\x00\x00\x96\xc2\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x005\xfb$A\xcc\xccL>$\x11{\xc4g}&\xc4\x00\x00\x96B\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x005\xfb$A\xcd\xccL?\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96\xc2\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x83\x0edA\xcc\xccL>\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x83\x0edA\xcd\xccL?#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcd\xccL?'
-                IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0c\x00\x0e\x00\x0f\x00\r\x00\x0c\x00\x0f\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00\x14\x00\x16\x00\x17\x00\x15\x00\x14\x00\x17\x00'
-            }
-            SurfaceMesh{
-                NumVertices : 4
-                NumFaces : 2
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : 962.2265625
-                    Y : -661.479248046875
-                    Z : -75.0
-                    Width : 42.04119873046875
-                    Height : 1327.438720703125
-                    Depth : 150.0
-                }
-                VertexData : '#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcd\xccL?\x80\x8epDg}&D\x00\x00\x96\xc2)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00yR\xbdA\xcc\xccL>\x80\x8epDg}&D\x00\x00\x96B)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00yR\xbdA\xcd\xccL?'
-                IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00'
-            }
-            FrontMesh{
-                NumVertices : 39
-                NumFaces : 13
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
-                    Z : 75.0
-                    Width : 2008.53564453125
-                    Height : 1331.9189453125
-                    Depth : 0.0
-                }
-                VertexData : '\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xd7\x85\xbfrxl?\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xd7\x85\xbfrxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x97\x10C\xc0i\n\x00?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?X\x94e=j^p?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?xSN=\xdaW\'@\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xc1\xd7\x85\xbfrxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=$\x11{\xc4g}&\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xb2\x17a\xc0Q|\n\xc0'
-            }
-            Color{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Collides 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            OnCollide{ # Program
             }
         }
     }
-    Component{
-        ClassName : 'GroundMeshGenerator'
-        Identifier : 102
-        GroundMeshGeneratorComponent{
-            GroundPolygonId : 100
-            TargetMeshId : 101
-            FrontTextureMappingId : 103
-            SurfaceTextureMappingId : 104
-            RandomSeed : 0
-            HorizNoise : 0.0
-            MeshType : 1
-            SurfaceWidth : 150.0
-            HatHeight : 25.0
-            HatWidthOffset1 : 5.0
-            HatWidthOffset2 : 5.0
-        }
-    }
-    Component{
-        ClassName : 'TextureMapping'
-        Identifier : 103
-        TextureMappingComponent{
-            TextureName : 'florennum_ground'
-            Scale : 250.0
-            Offset{
-                X : 0.0
-                Y : 0.0
+    Component{ # Component
+        ClassName 'GroundMesh'
+        Identifier 101
+        GroundMeshComponent{ # GroundMeshComponent
+            LocalAabb{ # Rectangle
+                X -1014.267822265625
+                Y -675.9594116210938
+                Width 2028.53564453125
+                Height 1351.9188232421875
+            }
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
+                }
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
+                }
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
+                }
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'ground3'
+                        PixelFormat 1
+                        ImageType 1
+                    }
+                }
+                BoundingBox{ # Box
+                    X -958.6201171875
+                    Y 503.68426513671875
+                    Z -85.0
+                    Width 1923.822509765625
+                    Height 162.6552734375
+                    Depth 170.0
+                }
+                VertexData '\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\n\xd7#?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x89\xd2\x1e?\xf4LqD\xbbU D\xcd\xcc\x9f\xc2\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc> \x90\xa0\xbc\xf4LqD\xbb\x15$D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\x10\xd7#\xbd\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?.+*?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\x00\x00\x00?\xd4S:?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0\xc2\xd3a\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@\x00\xd7\xa3\xbcP\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0B\xd3a\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@R\xb8\x1e?P\xd0\xe0\xc2\xcb\xab\x01D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbb\xab\x9a@.+*?P\xd0\xe0\xc2\x96\xd7\xfbC33\xa0B\xd3a\x7f=~\x80\x7f\xbf\x00\x00\x00\x80\xbb\xab\x9a@\xd4S:?\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0\xc2\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0B\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\xb0\xa7o\xc4\x96M\x02D33\xa0B\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0\xc2\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x96\x8d\x08D\x00\x00\xa0B\xf7\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\n\xd7#?\xb0\xa7o\xc4\x96M\x02D33\xa0B\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A\x89\xd2\x1e?\xb0\xa7o\xc4\x96M\x02D\xcd\xcc\x9f\xc2\xf7\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A \x90\xa0\xbc\xb0\xa7o\xc4\x96\r\x06D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\x10\xd7#\xbd'
+                IndexData '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
+            }
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
+                }
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
+                }
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
+                }
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'ground3'
+                        PixelFormat 1
+                        ImageType 1
+                    }
+                }
+                BoundingBox{ # Box
+                    X -940.118408203125
+                    Y -125.405517578125
+                    Z -85.0
+                    Width 1079.661865234375
+                    Height 25.146339416503906
+                    Depth 170.0
+                }
+                VertexData '\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\n\xd7#?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A\x89\xd2\x1e?\x1c\x8b\x0bC\xa0\xcf\xfa\xc2\xcd\xcc\x9f\xc2H\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A \x90\xa0\xbc\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\x10\xd7#\xbd\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0\xc2\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13A\x00\xd7\xa3\xbc\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0B\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13AR\xb8\x1e?\x007\xe6\xc2\x18\xb1\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80??\x9c\x13A.+*?\x007\xe6\xc2\x18\xb1\xfa\xc233\xa0B\xa47\x0e\xb9\x00\x00\x80\xbf\x00\x00\x00\x80?\x9c\x13A\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x138HA.+*?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\x138HA\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\n\xd7#?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA\x89\xd2\x1e?\x94\x07k\xc4\xb3\x84\xfa\xc2\xcd\xcc\x9f\xc2aj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA \x90\xa0\xbc\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\x10\xd7#\xbd'
+                IndexData '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
+            }
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
+                }
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
+                }
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
+                }
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
+                    }
+                }
+                BoundingBox{ # Box
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                    Z -75.0
+                    Width 2008.53564453125
+                    Height 1212.109619140625
+                    Depth 150.0
+                }
+                VertexData '\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96\xc2\xe9\xa5|\xbf\t*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcc\xccL>\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\xe9\xa5|\xbf\t*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcd\xccL?sw]\xc4\xa4\xaf\xeeB\x00\x00\x96\xc2C\x00~\xbf\x1co\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcc\xccL>sw]\xc4\xa4\xaf\xeeB\x00\x00\x96BC\x00~\xbf\x1co\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcd\xccL?3\xbe]\xc4\x00\xb0"=\x00\x00\x96\xc2\xca\x87m\xbey\x04y\xbf\x00\x00\x00\x00TA-@\xcc\xccL>3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\xca\x87m\xbey\x04y\xbf\x00\x00\x00\x00TA-@\xcd\xccL?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96\xc2T\xedS>\x1auz\xbf\x00\x00\x00\x00\x01\x9e\x96@\xcc\xccL>\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96BT\xedS>\x1auz\xbf\x00\x00\x00\x00\x01\x9e\x96@\xcd\xccL?\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96\xc2g\x8a\xbc>\xc0\x02n\xbf\x00\x00\x00\x00F \xa4@\xcc\xccL>\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96Bg\x8a\xbc>\xc0\x02n\xbf\x00\x00\x00\x00F \xa4@\xcd\xccL?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96\xc2\xbab\x8f;_\xff\x7f\xbf\x00\x00\x00\x00;b\xc7@\xcc\xccL>\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\xbab\x8f;_\xff\x7f\xbf\x00\x00\x00\x00;b\xc7@\xcd\xccL?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96\xc2Y\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfdQ\xe6@\xcc\xccL>\x04\xb3\x02C\xcca\xd8B\x00\x00\x96BY\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfdQ\xe6@\xcd\xccL?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96\xc2-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb6\x85\x00A\xcc\xccL>\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb6\x85\x00A\xcd\xccL?\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96\xc2\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb6\x85\x00A\xcc\xccL>\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb6\x85\x00A\xcd\xccL?$\x11{\xc4g}&\xc4\x00\x00\x96\xc2\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x005\xfb$A\xcc\xccL>$\x11{\xc4g}&\xc4\x00\x00\x96B\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x005\xfb$A\xcd\xccL?\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96\xc2\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x83\x0edA\xcc\xccL>\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x83\x0edA\xcd\xccL?#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcd\xccL?'
+                IndexData '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0c\x00\x0e\x00\x0f\x00\r\x00\x0c\x00\x0f\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00\x14\x00\x16\x00\x17\x00\x15\x00\x14\x00\x17\x00'
+            }
+            SurfaceMesh{ # Mesh
+                NumVertices 4
+                NumFaces 2
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
+                }
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
+                }
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
+                }
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
+                    }
+                }
+                BoundingBox{ # Box
+                    X 962.2265625
+                    Y -661.479248046875
+                    Z -75.0
+                    Width 42.04119873046875
+                    Height 1327.438720703125
+                    Depth 150.0
+                }
+                VertexData '#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa4\xd2\x92A\xcd\xccL?\x80\x8epDg}&D\x00\x00\x96\xc2)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00yR\xbdA\xcc\xccL>\x80\x8epDg}&D\x00\x00\x96B)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00yR\xbdA\xcd\xccL?'
+                IndexData '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00'
+            }
+            FrontMesh{ # Mesh
+                NumVertices 39
+                NumFaces 13
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
+                }
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
+                }
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
+                    }
+                }
+                BoundingBox{ # Box
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                    Z 75.0
+                    Width 2008.53564453125
+                    Height 1331.9189453125
+                    Depth 0.0
+                }
+                VertexData '\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xd7\x85\xbfrxl?\xbb\xe7n\xc4\x9c\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0\x7f\xd0+@\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xd7\x85\xbfrxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x97\x10C\xc0i\n\x00?\xce\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd5+\x86\xbf\xd3f\x00?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?X\x94e=j^p?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?xSN=\xdaW\'@\xb24\xc1\xc3@\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xc1\xd7\x85\xbfrxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=$\x11{\xc4g}&\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xb2\x17a\xc0Q|\n\xc0'
+            }
+            Color{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Component{
-        ClassName : 'TextureMapping'
-        Identifier : 104
-        TextureMappingComponent{
-            TextureName : 'ground3'
-            Scale : 250.0
-            Offset{
-                X : 0.0
-                Y : 50.0
+    Component{ # Component
+        ClassName 'GroundMeshGenerator'
+        Identifier 102
+        GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+            GroundPolygonId 100
+            TargetMeshId 101
+            FrontTextureMappingId 103
+            SurfaceTextureMappingId 104
+            RandomSeed 0
+            HorizNoise 0.0
+            MeshType 1
+            SurfaceWidth 150.0
+            HatHeight 25.0
+            HatWidthOffset1 5.0
+            HatWidthOffset2 5.0
+        }
+    }
+    Component{ # Component
+        ClassName 'TextureMapping'
+        Identifier 103
+        TextureMappingComponent{ # TextureMappingComponent
+            TextureName 'florennum_ground'
+            Scale 250.0
+            Offset{ # Vector2
+                X 0.0
+                Y 0.0
             }
         }
     }
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 105
-        ParentComponentIdentifier : 100
-        ShapeComponent{
-            Polygon{
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
-                }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
-                }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
-                }
-                Vertex{
-                    X : 962.2265625
-                    Y : 665.9594116210938
-                }
-                Vertex{
-                    X : -112.4068603515625
-                    Y : 528.6842651367188
-                }
-                Vertex{
-                    X : -955.6207885742188
-                    Y : 546.150146484375
-                }
-                Vertex{
-                    X : -885.8663940429688
-                    Y : 119.34304809570312
-                }
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
-                }
-                Vertex{
-                    X : -387.05316162109375
-                    Y : 0.392242431640625
-                }
-                Vertex{
-                    X : -386.41168212890625
-                    Y : 105.92822265625
-                }
-                Convex : 0
-                Closed : 0
+    Component{ # Component
+        ClassName 'TextureMapping'
+        Identifier 104
+        TextureMappingComponent{ # TextureMappingComponent
+            TextureName 'ground3'
+            Scale 250.0
+            Offset{ # Vector2
+                X 0.0
+                Y 50.0
             }
         }
-        CollisionShapeComponent{
-            IsGround : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            Enabled : 1
-        }
     }
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 106
-        ParentComponentIdentifier : 100
-        ShapeComponent{
-            Polygon{
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 105
+        ParentComponentIdentifier 100
+        ShapeComponent{ # ShapeComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
                 }
-                Vertex{
-                    X : -387.05316162109375
-                    Y : 0.392242431640625
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
                 }
-                Vertex{
-                    X : -386.41168212890625
-                    Y : 105.92822265625
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
                 }
-                Vertex{
-                    X : -110.98757934570312
-                    Y : 109.73516845703125
+                Vertex{ # Vector2
+                    X 962.2265625
+                    Y 665.9594116210938
                 }
-                Vertex{
-                    X : 130.69927978515625
-                    Y : 108.19100952148438
+                Vertex{ # Vector2
+                    X -112.4068603515625
+                    Y 528.6842651367188
                 }
-                Vertex{
-                    X : 139.54339599609375
-                    Y : -100.405517578125
+                Vertex{ # Vector2
+                    X -955.6207885742188
+                    Y 546.150146484375
                 }
-                Vertex{
-                    X : -115.107421875
-                    Y : -100.34588623046875
+                Vertex{ # Vector2
+                    X -885.8663940429688
+                    Y 119.34304809570312
                 }
-                Vertex{
-                    X : -937.118408203125
-                    Y : -100.25949096679688
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
                 }
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
+                Vertex{ # Vector2
+                    X -387.05316162109375
+                    Y 0.392242431640625
                 }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
+                Vertex{ # Vector2
+                    X -386.41168212890625
+                    Y 105.92822265625
                 }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
-                }
-                Convex : 0
-                Closed : 0
+                Convex 0
+                Closed 0
             }
         }
-        CollisionShapeComponent{
-            IsGround : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            Enabled : 1
+        CollisionShapeComponent{ # CollisionShapeComponent
+            IsGround 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            Enabled 1
         }
     }
-    Position{
-        X : 5.3695526123046875
-        Y : 216.437744140625
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 106
+        ParentComponentIdentifier 100
+        ShapeComponent{ # ShapeComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
+                }
+                Vertex{ # Vector2
+                    X -387.05316162109375
+                    Y 0.392242431640625
+                }
+                Vertex{ # Vector2
+                    X -386.41168212890625
+                    Y 105.92822265625
+                }
+                Vertex{ # Vector2
+                    X -110.98757934570312
+                    Y 109.73516845703125
+                }
+                Vertex{ # Vector2
+                    X 130.69927978515625
+                    Y 108.19100952148438
+                }
+                Vertex{ # Vector2
+                    X 139.54339599609375
+                    Y -100.405517578125
+                }
+                Vertex{ # Vector2
+                    X -115.107421875
+                    Y -100.34588623046875
+                }
+                Vertex{ # Vector2
+                    X -937.118408203125
+                    Y -100.25949096679688
+                }
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                }
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
+                }
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
+                }
+                Convex 0
+                Closed 0
+            }
+        }
+        CollisionShapeComponent{ # CollisionShapeComponent
+            IsGround 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            Enabled 1
+        }
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -1004.267822265625
-        Y : -665.9594116210938
-        Width : 2008.53564453125
-        Height : 1331.9188232421875
+    Position{ # Vector2
+        X 5.3695526123046875
+        Y 216.437744140625
     }
-    Hidden : 0
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -1004.267822265625
+        Y -665.9594116210938
+        Width 2008.53564453125
+        Height 1331.9188232421875
+    }
+    Hidden 0
 }
-Object{
-    Identifier : 'obj2#2'
-    Component{
-        ClassName : 'GroundPolygon'
-        Identifier : 100
-        GroundPolygonComponent{
-            Polygon{
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
+Object{ # SceneObject
+    Identifier 'obj2#2'
+    Component{ # Component
+        ClassName 'GroundPolygon'
+        Identifier 100
+        GroundPolygonComponent{ # GroundPolygonComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
                 }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
                 }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
                 }
-                Vertex{
-                    X : 962.2265625
-                    Y : 665.9594116210938
+                Vertex{ # Vector2
+                    X 962.2265625
+                    Y 665.9594116210938
                 }
-                Vertex{
-                    X : -112.4068603515625
-                    Y : 528.6842651367188
+                Vertex{ # Vector2
+                    X -112.4068603515625
+                    Y 528.6842651367188
                 }
-                Vertex{
-                    X : -955.6207885742188
-                    Y : 546.1500854492188
+                Vertex{ # Vector2
+                    X -955.6207885742188
+                    Y 546.1500854492188
                 }
-                Vertex{
-                    X : -885.8663940429688
-                    Y : 119.34304809570312
+                Vertex{ # Vector2
+                    X -885.8663940429688
+                    Y 119.34304809570312
                 }
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
                 }
-                Vertex{
-                    X : -387.0533142089844
-                    Y : 0.392242431640625
+                Vertex{ # Vector2
+                    X -387.0533142089844
+                    Y 0.392242431640625
                 }
-                Vertex{
-                    X : -386.4118347167969
-                    Y : 105.92819213867188
+                Vertex{ # Vector2
+                    X -386.4118347167969
+                    Y 105.92819213867188
                 }
-                Vertex{
-                    X : -110.98757934570312
-                    Y : 109.73516845703125
+                Vertex{ # Vector2
+                    X -110.98757934570312
+                    Y 109.73516845703125
                 }
-                Vertex{
-                    X : 130.69927978515625
-                    Y : 108.19100952148438
+                Vertex{ # Vector2
+                    X 130.69927978515625
+                    Y 108.19100952148438
                 }
-                Vertex{
-                    X : 139.54339599609375
-                    Y : -100.405517578125
+                Vertex{ # Vector2
+                    X 139.54339599609375
+                    Y -100.405517578125
                 }
-                Vertex{
-                    X : -115.107421875
-                    Y : -100.34588623046875
+                Vertex{ # Vector2
+                    X -115.107421875
+                    Y -100.34588623046875
                 }
-                Vertex{
-                    X : -937.118408203125
-                    Y : -100.25949096679688
+                Vertex{ # Vector2
+                    X -937.118408203125
+                    Y -100.25949096679688
                 }
-                Convex : 0
-                Closed : 1
+                Convex 0
+                Closed 1
             }
-            Collides : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            OnCollide{
+            Collides 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            OnCollide{ # Program
             }
         }
     }
-    Component{
-        ClassName : 'GroundMesh'
-        Identifier : 101
-        GroundMeshComponent{
-            LocalAabb{
-                X : -1014.267822265625
-                Y : -675.9594116210938
-                Width : 2028.53564453125
-                Height : 1351.9188232421875
+    Component{ # Component
+        ClassName 'GroundMesh'
+        Identifier 101
+        GroundMeshComponent{ # GroundMeshComponent
+            LocalAabb{ # Rectangle
+                X -1014.267822265625
+                Y -675.9594116210938
+                Width 2028.53564453125
+                Height 1351.9188232421875
             }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
                 }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
                 }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
                 }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
                 }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'ground3'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -958.6201171875
-                    Y : 503.68426513671875
-                    Z : -85.0
-                    Width : 1923.822509765625
-                    Height : 162.6552734375
-                    Depth : 170.0
-                }
-                VertexData : '\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\n\xd7#?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x89\xd2\x1e?\xf4LqD\xbbU D\xcd\xcc\x9f\xc2\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc> \x90\xa0\xbc\xf4LqD\xbb\x15$D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\x10\xd7#\xbd\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?.+*?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\x00\x00\x00?\xd4S:?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0\xc2\xdca\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@\x00\xd7\xa3\xbcP\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0B\xdca\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@R\xb8\x1e?P\xd0\xe0\xc2\xcb\xab\x01D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbb\xab\x9a@.+*?P\xd0\xe0\xc2\x96\xd7\xfbC33\xa0B\xdca\x7f=~\x80\x7f\xbf\x00\x00\x00\x80\xbb\xab\x9a@\xd4S:?\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0\xc2\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0B\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\xb0\xa7o\xc4\x95M\x02D33\xa0B\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0\xc2\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0B\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\n\xd7#?\xb0\xa7o\xc4\x95M\x02D33\xa0B\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A\x89\xd2\x1e?\xb0\xa7o\xc4\x95M\x02D\xcd\xcc\x9f\xc2\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A \x90\xa0\xbc\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\x10\xd7#\xbd'
-                IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
-            }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'ground3'
-                        PixelFormat : 1
-                        ImageType : 1
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'ground3'
+                        PixelFormat 1
+                        ImageType 1
                     }
                 }
-                BoundingBox{
-                    X : -940.118408203125
-                    Y : -125.405517578125
-                    Z : -85.0
-                    Width : 1079.661865234375
-                    Height : 25.146339416503906
-                    Depth : 170.0
+                BoundingBox{ # Box
+                    X -958.6201171875
+                    Y 503.68426513671875
+                    Z -85.0
+                    Width 1923.822509765625
+                    Height 162.6552734375
+                    Depth 170.0
                 }
-                VertexData : '\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\n\xd7#?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A\x89\xd2\x1e?\x1c\x8b\x0bC\xa0\xcf\xfa\xc2\xcd\xcc\x9f\xc2H\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A \x90\xa0\xbc\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\x10\xd7#\xbd\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0\xc2\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13A\x00\xd7\xa3\xbc\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0B\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13AR\xb8\x1e?\x007\xe6\xc2\x18\xb1\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80??\x9c\x13A.+*?\x007\xe6\xc2\x18\xb1\xfa\xc233\xa0B\xa47\x0e\xb9\x00\x00\x80\xbf\x00\x00\x00\x80?\x9c\x13A\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x138HA.+*?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\x138HA\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\n\xd7#?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA\x89\xd2\x1e?\x94\x07k\xc4\xb3\x84\xfa\xc2\xcd\xcc\x9f\xc2aj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA \x90\xa0\xbc\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\x10\xd7#\xbd'
-                IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
+                VertexData '\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\n\xd7#?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x89\xd2\x1e?\xf4LqD\xbbU D\xcd\xcc\x9f\xc2\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\xcd\xcc\xcc> \x90\xa0\xbc\xf4LqD\xbb\x15$D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\x10\xd7#\xbd\xf4LqD\xbb\x95&D\x00\x00\xa0\xc2\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?\x00\xd7\xa3\xbc\xf4LqD\xbb\x95&D\x00\x00\xa0B\xb7\xc0\x01\xbe\xc0\xef}?\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?\xf4LqD\xbb\x15$D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?.+*?\xf4LqD\xbbU D33\xa0B\xb7\xc0\x01>\xc0\xef}\xbf\x00\x00\x00\x80\x00\x00\x00?\xd4S:?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0\xc2\xdca\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@\x00\xd7\xa3\xbcP\xd0\xe0\xc2\xcb+\x04D\x00\x00\xa0B\xdca\x7f\xbd~\x80\x7f?\x00\x00\x00\x00\xbb\xab\x9a@R\xb8\x1e?P\xd0\xe0\xc2\xcb\xab\x01D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbb\xab\x9a@.+*?P\xd0\xe0\xc2\x96\xd7\xfbC33\xa0B\xdca\x7f=~\x80\x7f\xbf\x00\x00\x00\x80\xbb\xab\x9a@\xd4S:?\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0\xc2\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0B\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\xb0\xa7o\xc4\x95M\x02D33\xa0B\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0\xc2\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\xb0\xa7o\xc4\x95\x8d\x08D\x00\x00\xa0B\xd0\xa5\xa9<\xf1\xf1\x7f?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\n\xd7#?\xb0\xa7o\xc4\x95M\x02D33\xa0B\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A\x89\xd2\x1e?\xb0\xa7o\xc4\x95M\x02D\xcd\xcc\x9f\xc2\xd0\xa5\xa9\xbc\xf1\xf1\x7f\xbf\x00\x00\x00\x80\xa6\xe9\x04A \x90\xa0\xbc\xb0\xa7o\xc4\x95\r\x06D\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xf3\x03A\x10\xd7#\xbd'
+                IndexData '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
             }
-            SurfaceMesh{
-                NumVertices : 24
-                NumFaces : 20
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
                 }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
                 }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
                 }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
                 }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
-                    }
-                }
-                BoundingBox{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
-                    Z : -75.0
-                    Width : 2008.53564453125
-                    Height : 1212.1094970703125
-                    Depth : 150.0
-                }
-                VertexData : '\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96\xc2\xe8\xa5|\xbf\n*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcc\xccL>\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\xe8\xa5|\xbf\n*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcd\xccL?sw]\xc4\xa4\xaf\xeeB\x00\x00\x96\xc2C\x00~\xbf\x1eo\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcc\xccL>sw]\xc4\xa4\xaf\xeeB\x00\x00\x96BC\x00~\xbf\x1eo\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcd\xccL?3\xbe]\xc4\x00\xb0"=\x00\x00\x96\xc2\xcf\x87m\xbez\x04y\xbf\x00\x00\x00\x00SA-@\xcc\xccL>3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\xcf\x87m\xbez\x04y\xbf\x00\x00\x00\x00SA-@\xcd\xccL?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96\xc2U\xedS>\x1buz\xbf\x00\x00\x00\x00\xff\x9d\x96@\xcc\xccL>\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96BU\xedS>\x1buz\xbf\x00\x00\x00\x00\xff\x9d\x96@\xcd\xccL?\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96\xc2a\x8a\xbc>\xc1\x02n\xbf\x00\x00\x00\x00C \xa4@\xcc\xccL>\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96Ba\x8a\xbc>\xc1\x02n\xbf\x00\x00\x00\x00C \xa4@\xcd\xccL?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96\xc27c\x8f;`\xff\x7f\xbf\x00\x00\x00\x009b\xc7@\xcc\xccL>\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B7c\x8f;`\xff\x7f\xbf\x00\x00\x00\x009b\xc7@\xcd\xccL?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96\xc2Y\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfbQ\xe6@\xcc\xccL>\x04\xb3\x02C\xcca\xd8B\x00\x00\x96BY\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfbQ\xe6@\xcd\xccL?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96\xc2-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb4\x85\x00A\xcc\xccL>\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb4\x85\x00A\xcd\xccL?\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96\xc2\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb4\x85\x00A\xcc\xccL>\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb4\x85\x00A\xcd\xccL?$\x11{\xc4g}&\xc4\x00\x00\x96\xc2\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x003\xfb$A\xcc\xccL>$\x11{\xc4g}&\xc4\x00\x00\x96B\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x003\xfb$A\xcd\xccL?\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96\xc2\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x81\x0edA\xcc\xccL>\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x81\x0edA\xcd\xccL?#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcd\xccL?'
-                IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0c\x00\x0e\x00\x0f\x00\r\x00\x0c\x00\x0f\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00\x14\x00\x16\x00\x17\x00\x15\x00\x14\x00\x17\x00'
-            }
-            SurfaceMesh{
-                NumVertices : 4
-                NumFaces : 2
-                Indices{
-                    X : 4
-                    Y : 1
-                    Width : 2
-                    Height : 0
-                }
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
-                }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
-                }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
-                }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
-                    }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'ground3'
+                        PixelFormat 1
+                        ImageType 1
                     }
                 }
-                BoundingBox{
-                    X : 962.2265625
-                    Y : -661.479248046875
-                    Z : -75.0
-                    Width : 42.04119873046875
-                    Height : 1327.438720703125
-                    Depth : 150.0
+                BoundingBox{ # Box
+                    X -940.118408203125
+                    Y -125.405517578125
+                    Z -85.0
+                    Width 1079.661865234375
+                    Height 25.146339416503906
+                    Depth 170.0
                 }
-                VertexData : '#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcd\xccL?\x80\x8epDg}&D\x00\x00\x96\xc2)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00wR\xbdA\xcc\xccL>\x80\x8epDg}&D\x00\x00\x96B)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00wR\xbdA\xcd\xccL?'
-                IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00'
+                VertexData '\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\n\xd7#?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A\x89\xd2\x1e?\x1c\x8b\x0bC\xa0\xcf\xfa\xc2\xcd\xcc\x9f\xc2H\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80r\xb6\x01A \x90\xa0\xbc\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?5\xac\x02A\x10\xd7#\xbd\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0\xc2H\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03A\x00\xd7\xa3\xbc\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\xa0BH\x8bu9\x00\x00\x80?\x00\x00\x00\x00\x0cP\x03AR\xb8\x1e?\x1c\x8b\x0bC\xa0\xcf\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cP\x03A.+*?\x1c\x8b\x0bC\xa0\xcf\xfa\xc233\xa0BH\x8bu\xb9\x00\x00\x80\xbf\x00\x00\x00\x80\x0cP\x03A\xd4S:?\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0\xc2\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13A\x00\xd7\xa3\xbc\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\xa0B\xa47\x0e9\x00\x00\x80?\x00\x00\x00\x00?\x9c\x13AR\xb8\x1e?\x007\xe6\xc2\x18\xb1\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80??\x9c\x13A.+*?\x007\xe6\xc2\x18\xb1\xfa\xc233\xa0B\xa47\x0e\xb9\x00\x00\x80\xbf\x00\x00\x00\x80?\x9c\x13A\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x138HA.+*?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\x138HA\xd4S:?\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0\xc2aj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HA\x00\xd7\xa3\xbc\x94\x07k\xc4\xb3\x84\xc8\xc2\x00\x00\xa0Baj\xdc8\xff\xff\x7f?\x00\x00\x00\x00\x138HAR\xb8\x1e?\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaaB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\n\xd7#?\x94\x07k\xc4\xb3\x84\xfa\xc233\xa0Baj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA\x89\xd2\x1e?\x94\x07k\xc4\xb3\x84\xfa\xc2\xcd\xcc\x9f\xc2aj\xdc\xb8\xff\xff\x7f\xbf\x00\x00\x00\x80\xad\xd1IA \x90\xa0\xbc\x94\x07k\xc4\xb3\x84\xdc\xc2\x00\x00\xaa\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xea\xdbHA\x10\xd7#\xbd'
+                IndexData '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00'
             }
-            FrontMesh{
-                NumVertices : 39
-                NumFaces : 13
-                Vertices{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 0
+            SurfaceMesh{ # Mesh
+                NumVertices 24
+                NumFaces 20
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
                 }
-                Normals{
-                    X : 7
-                    Y : 3
-                    Width : 32
-                    Height : 12
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
                 }
-                TexCoordSet{
-                    X : 7
-                    Y : 2
-                    Width : 32
-                    Height : 24
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
                 }
-                Material{
-                    AmbientColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
+                }
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    DiffuseColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    SpecularColor{
-                        R : 1.0
-                        G : 1.0
-                        B : 1.0
-                        A : 1.0
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
                     }
-                    Shininess : 0.0
-                    Texture{
-                        Name : 'florennum_ground'
-                        PixelFormat : 1
-                        ImageType : 1
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
                     }
                 }
-                BoundingBox{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
-                    Z : 75.0
-                    Width : 2008.53564453125
-                    Height : 1331.9189453125
-                    Depth : 0.0
+                BoundingBox{ # Box
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                    Z -75.0
+                    Width 2008.53564453125
+                    Height 1212.1094970703125
+                    Depth 150.0
                 }
-                VertexData : '\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0~\xd0+@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xda+\x86\xbf\xd3f\x00?\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x90\xa3T\xc0~\xd0+@\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xda+\x86\xbf\xd3f\x00?\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xc6\xd7\x85\xbfpxl?\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0~\xd0+@\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc6\xd7\x85\xbfpxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?$\xc8B\xc0\x105z?3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x97\x10C\xc0i\n\x00?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xda+\x86\xbf\xd3f\x00?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc6\xd7\x85\xbfpxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=$\x11{\xc4g}&\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xb2\x17a\xc0Q|\n\xc0'
+                VertexData '\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96\xc2\xe8\xa5|\xbf\n*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcc\xccL>\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\xe8\xa5|\xbf\n*%\xbe\x00\x00\x00\x00\x00\x00\x00?\xcd\xccL?sw]\xc4\xa4\xaf\xeeB\x00\x00\x96\xc2C\x00~\xbf\x1eo\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcc\xccL>sw]\xc4\xa4\xaf\xeeB\x00\x00\x96BC\x00~\xbf\x1eo\xff\xbd\x00\x00\x00\x00T\xb6\x0e@\xcd\xccL?3\xbe]\xc4\x00\xb0"=\x00\x00\x96\xc2\xcf\x87m\xbez\x04y\xbf\x00\x00\x00\x00SA-@\xcc\xccL>3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\xcf\x87m\xbez\x04y\xbf\x00\x00\x00\x00SA-@\xcd\xccL?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96\xc2U\xedS>\x1buz\xbf\x00\x00\x00\x00\xff\x9d\x96@\xcc\xccL>\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96BU\xedS>\x1buz\xbf\x00\x00\x00\x00\xff\x9d\x96@\xcd\xccL?\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96\xc2a\x8a\xbc>\xc1\x02n\xbf\x00\x00\x00\x00C \xa4@\xcc\xccL>\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96Ba\x8a\xbc>\xc1\x02n\xbf\x00\x00\x00\x00C \xa4@\xcd\xccL?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96\xc27c\x8f;`\xff\x7f\xbf\x00\x00\x00\x009b\xc7@\xcc\xccL>\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B7c\x8f;`\xff\x7f\xbf\x00\x00\x00\x009b\xc7@\xcd\xccL?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96\xc2Y\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfbQ\xe6@\xcc\xccL>\x04\xb3\x02C\xcca\xd8B\x00\x00\x96BY\x84$\xbf\\#D\xbf\x00\x00\x00\x00\xfbQ\xe6@\xcd\xccL?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96\xc2-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb4\x85\x00A\xcc\xccL>\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B-\xc5\x7f\xbf\xd3\x81-\xbd\x00\x00\x00\x00\xb4\x85\x00A\xcd\xccL?\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96\xc2\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb4\x85\x00A\xcc\xccL>\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x1f7~\xbf\xe5g\xf1=\x00\x00\x00\x00\xb4\x85\x00A\xcd\xccL?$\x11{\xc4g}&\xc4\x00\x00\x96\xc2\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x003\xfb$A\xcc\xccL>$\x11{\xc4g}&\xc4\x00\x00\x96B\x91\xab\xfc\xbe\xcb\xa7^\xbf\x00\x00\x00\x003\xfb$A\xcd\xccL?\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96\xc2\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x81\x0edA\xcc\xccL>\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x88.\x12;\xd7\xff\x7f\xbf\x00\x00\x00\x00\x81\x0edA\xcd\xccL?#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcd\xccL?'
+                IndexData '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0c\x00\x0e\x00\x0f\x00\r\x00\x0c\x00\x0f\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00\x14\x00\x16\x00\x17\x00\x15\x00\x14\x00\x17\x00'
             }
-            Color{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
-            }
-        }
-    }
-    Component{
-        ClassName : 'GroundMeshGenerator'
-        Identifier : 102
-        GroundMeshGeneratorComponent{
-            GroundPolygonId : 100
-            TargetMeshId : 101
-            FrontTextureMappingId : 103
-            SurfaceTextureMappingId : 104
-            RandomSeed : 0
-            HorizNoise : 0.0
-            MeshType : 1
-            SurfaceWidth : 150.0
-            HatHeight : 25.0
-            HatWidthOffset1 : 5.0
-            HatWidthOffset2 : 5.0
-        }
-    }
-    Component{
-        ClassName : 'TextureMapping'
-        Identifier : 103
-        TextureMappingComponent{
-            TextureName : 'florennum_ground'
-            Scale : 250.0
-            Offset{
-                X : 0.0
-                Y : 0.0
-            }
-        }
-    }
-    Component{
-        ClassName : 'TextureMapping'
-        Identifier : 104
-        TextureMappingComponent{
-            TextureName : 'ground3'
-            Scale : 250.0
-            Offset{
-                X : 0.0
-                Y : 50.0
-            }
-        }
-    }
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 105
-        ParentComponentIdentifier : 100
-        ShapeComponent{
-            Polygon{
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
+            SurfaceMesh{ # Mesh
+                NumVertices 4
+                NumFaces 2
+                Indices{ # Square
+                    X 4
+                    Y 1
+                    Width 2
+                    Height 0
                 }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
                 }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
                 }
-                Vertex{
-                    X : 962.2265625
-                    Y : 665.9594116210938
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
                 }
-                Vertex{
-                    X : -112.4068603515625
-                    Y : 528.6842651367188
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
+                    }
                 }
-                Vertex{
-                    X : -955.6207885742188
-                    Y : 546.1500854492188
+                BoundingBox{ # Box
+                    X 962.2265625
+                    Y -661.479248046875
+                    Z -75.0
+                    Width 42.04119873046875
+                    Height 1327.438720703125
+                    Depth 150.0
                 }
-                Vertex{
-                    X : -885.8663940429688
-                    Y : 119.34304809570312
+                VertexData '#\x11{D\xac^%\xc4\x00\x00\x96\xc2\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcc\xccL>#\x11{D\xac^%\xc4\x00\x00\x96B\x03\x82K?\xd3N\x1b\xbf\x00\x00\x00\x00\xa3\xd2\x92A\xcd\xccL?\x80\x8epDg}&D\x00\x00\x96\xc2)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00wR\xbdA\xcc\xccL>\x80\x8epDg}&D\x00\x00\x96B)\xdf\x7f?\xb8\xa8\x01=\x00\x00\x00\x00wR\xbdA\xcd\xccL?'
+                IndexData '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00'
+            }
+            FrontMesh{ # Mesh
+                NumVertices 39
+                NumFaces 13
+                Vertices{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 0
                 }
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
+                Normals{ # Square
+                    X 7
+                    Y 3
+                    Width 32
+                    Height 12
                 }
-                Vertex{
-                    X : -387.0533142089844
-                    Y : 0.392242431640625
+                TexCoordSet{ # Square
+                    X 7
+                    Y 2
+                    Width 32
+                    Height 24
                 }
-                Vertex{
-                    X : -386.4118347167969
-                    Y : 105.92819213867188
+                Material{ # MeshMaterial
+                    AmbientColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    DiffuseColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    SpecularColor{ # FloatColor
+                        R 1.0
+                        G 1.0
+                        B 1.0
+                        A 1.0
+                    }
+                    Shininess 0.0
+                    Texture{ # Texture
+                        Name 'florennum_ground'
+                        PixelFormat 1
+                        ImageType 1
+                    }
                 }
-                Convex : 0
-                Closed : 0
-            }
-        }
-        CollisionShapeComponent{
-            IsGround : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            Enabled : 1
-        }
-    }
-    Component{
-        ClassName : 'CollisionShape'
-        Identifier : 106
-        ParentComponentIdentifier : 100
-        ShapeComponent{
-            Polygon{
-                Vertex{
-                    X : -886.9718627929688
-                    Y : 0.0397186279296875
+                BoundingBox{ # Box
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                    Z 75.0
+                    Width 2008.53564453125
+                    Height 1331.9189453125
+                    Depth 0.0
                 }
-                Vertex{
-                    X : -387.0533142089844
-                    Y : 0.392242431640625
+                VertexData '\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0~\xd0+@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?$\xc8B\xc0\x105z?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xda+\x86\xbf\xd3f\x00?\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x90\xa3T\xc0~\xd0+@\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xda+\x86\xbf\xd3f\x00?\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xc6\xd7\x85\xbfpxl?\xbb\xe7n\xc4\x9b\x89\x08D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x90\xa3T\xc0~\xd0+@\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc6\xd7\x85\xbfpxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@sw]\xc4\xa4\xaf\xeeB\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?$\xc8B\xc0\x105z?3\xbe]\xc4\x00\xb0"=\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x97\x10C\xc0i\n\x00?\xd3\x86\xc1\xc3\x00\xd4\xc8>\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xda+\x86\xbf\xd3f\x00?\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xb74\xc1\xc3<\xdb\xd3B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc6\xd7\x85\xbfpxl?P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\xa4\xf9\xdd\xc2hx\xdbB\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?X\x94e=j^p?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@P\xd0\xe0\xc2\xcb+\x04D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?xSN=\xdaW\'@\x04\xb3\x02C\xcca\xd8B\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x04\xeb\x82?\xa0\xc9n?\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x80\x8epDg}&D\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?>*\x8b@Q|J@\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=#\x11{D\xac^%\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xd9\x8b\x90@\xb4V\t\xc0\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x1c\x8b\x0bC\xa0\xcf\xc8\xc2\x00\x00\x96B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?<r\x87?`z\xc9=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x007\xe6\xc2\x18\xb1\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?x\x14"=l\xf7\xc9=\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=\x80\x01\x9e\xc1\xa21\x1b\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xee\x8c\xd7>J\xd6\xfd\xbf\x94Gj\xc4\xdc\x84\xc8\xc2\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xfe\xe6O\xc0\x9c\xac\xca=$\x11{\xc4g}&\xc4\x00\x00\x96B\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xb2\x17a\xc0Q|\n\xc0'
+            }
+            Color{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
+            }
+        }
+    }
+    Component{ # Component
+        ClassName 'GroundMeshGenerator'
+        Identifier 102
+        GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+            GroundPolygonId 100
+            TargetMeshId 101
+            FrontTextureMappingId 103
+            SurfaceTextureMappingId 104
+            RandomSeed 0
+            HorizNoise 0.0
+            MeshType 1
+            SurfaceWidth 150.0
+            HatHeight 25.0
+            HatWidthOffset1 5.0
+            HatWidthOffset2 5.0
+        }
+    }
+    Component{ # Component
+        ClassName 'TextureMapping'
+        Identifier 103
+        TextureMappingComponent{ # TextureMappingComponent
+            TextureName 'florennum_ground'
+            Scale 250.0
+            Offset{ # Vector2
+                X 0.0
+                Y 0.0
+            }
+        }
+    }
+    Component{ # Component
+        ClassName 'TextureMapping'
+        Identifier 104
+        TextureMappingComponent{ # TextureMappingComponent
+            TextureName 'ground3'
+            Scale 250.0
+            Offset{ # Vector2
+                X 0.0
+                Y 50.0
+            }
+        }
+    }
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 105
+        ParentComponentIdentifier 100
+        ShapeComponent{ # ShapeComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
                 }
-                Vertex{
-                    X : -386.4118347167969
-                    Y : 105.92819213867188
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
                 }
-                Vertex{
-                    X : -110.98757934570312
-                    Y : 109.73516845703125
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
                 }
-                Vertex{
-                    X : 130.69927978515625
-                    Y : 108.19100952148438
+                Vertex{ # Vector2
+                    X 962.2265625
+                    Y 665.9594116210938
                 }
-                Vertex{
-                    X : 139.54339599609375
-                    Y : -100.405517578125
+                Vertex{ # Vector2
+                    X -112.4068603515625
+                    Y 528.6842651367188
                 }
-                Vertex{
-                    X : -115.107421875
-                    Y : -100.34588623046875
+                Vertex{ # Vector2
+                    X -955.6207885742188
+                    Y 546.1500854492188
                 }
-                Vertex{
-                    X : -937.118408203125
-                    Y : -100.25949096679688
+                Vertex{ # Vector2
+                    X -885.8663940429688
+                    Y 119.34304809570312
                 }
-                Vertex{
-                    X : -1004.267822265625
-                    Y : -665.9594116210938
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
                 }
-                Vertex{
-                    X : -19.750732421875
-                    Y : -620.7755126953125
+                Vertex{ # Vector2
+                    X -387.0533142089844
+                    Y 0.392242431640625
                 }
-                Vertex{
-                    X : 1004.2677612304688
-                    Y : -661.479248046875
+                Vertex{ # Vector2
+                    X -386.4118347167969
+                    Y 105.92819213867188
                 }
-                Convex : 0
-                Closed : 0
+                Convex 0
+                Closed 0
             }
         }
-        CollisionShapeComponent{
-            IsGround : 1
-            MinDepth : -80.0
-            MaxDepth : 80.0
-            Enabled : 1
+        CollisionShapeComponent{ # CollisionShapeComponent
+            IsGround 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            Enabled 1
         }
     }
-    Position{
-        X : 5.046783447265625
-        Y : 215.25534057617188
+    Component{ # Component
+        ClassName 'CollisionShape'
+        Identifier 106
+        ParentComponentIdentifier 100
+        ShapeComponent{ # ShapeComponent
+            Polygon{ # Polygon
+                Vertex{ # Vector2
+                    X -886.9718627929688
+                    Y 0.0397186279296875
+                }
+                Vertex{ # Vector2
+                    X -387.0533142089844
+                    Y 0.392242431640625
+                }
+                Vertex{ # Vector2
+                    X -386.4118347167969
+                    Y 105.92819213867188
+                }
+                Vertex{ # Vector2
+                    X -110.98757934570312
+                    Y 109.73516845703125
+                }
+                Vertex{ # Vector2
+                    X 130.69927978515625
+                    Y 108.19100952148438
+                }
+                Vertex{ # Vector2
+                    X 139.54339599609375
+                    Y -100.405517578125
+                }
+                Vertex{ # Vector2
+                    X -115.107421875
+                    Y -100.34588623046875
+                }
+                Vertex{ # Vector2
+                    X -937.118408203125
+                    Y -100.25949096679688
+                }
+                Vertex{ # Vector2
+                    X -1004.267822265625
+                    Y -665.9594116210938
+                }
+                Vertex{ # Vector2
+                    X -19.750732421875
+                    Y -620.7755126953125
+                }
+                Vertex{ # Vector2
+                    X 1004.2677612304688
+                    Y -661.479248046875
+                }
+                Convex 0
+                Closed 0
+            }
+        }
+        CollisionShapeComponent{ # CollisionShapeComponent
+            IsGround 1
+            MinDepth -80.0
+            MaxDepth 80.0
+            Enabled 1
+        }
     }
-    Depth : -139.9328155517578
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -1004.267822265625
-        Y : -665.9594116210938
-        Width : 2008.53564453125
-        Height : 1331.9188232421875
+    Position{ # Vector2
+        X 5.046783447265625
+        Y 215.25534057617188
     }
-    Hidden : 0
+    Depth -139.9328155517578
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -1004.267822265625
+        Y -665.9594116210938
+        Width 2008.53564453125
+        Height 1331.9188232421875
+    }
+    Hidden 0
 }
-Object{
-    Identifier : 'obj3#2'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'shop_pedastal'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj3#2'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'shop_pedastal'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
-            }
-        }
-    }
-    Position{
-        X : -317.9268798828125
-        Y : 36.415687561035156
-    }
-    Depth : 86.19608306884766
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -24.35943603515625
-        Y : 3.244429588317871
-        Width : 58.53528594970703
-        Height : 121.26319122314453
-    }
-    Hidden : 0
-}
-Object{
-    Identifier : 'obj3#4'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'shop_pedastal'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
-            }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
-            }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
-            }
-        }
-    }
-    Position{
-        X : -42.889007568359375
-        Y : 34.29168701171875
-    }
-    Depth : 86.19608306884766
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -24.35943603515625
-        Y : 3.244429588317871
-        Width : 58.53528594970703
-        Height : 121.26319122314453
-    }
-    Hidden : 0
-}
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj4'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'carpet1'
-            YRotation : 0.0
-            EmissionFactor : 0.20000000298023224
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
-            }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
-            }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -240.9420623779297
-        Y : 118.04257202148438
+    Position{ # Vector2
+        X -317.9268798828125
+        Y 36.415687561035156
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -128.824951171875
-        Y : 0.0
-        Width : 258.7838439941406
-        Height : 1.204187035560608
+    Depth 86.19608306884766
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -24.35943603515625
+        Y 3.244429588317871
+        Width 58.53528594970703
+        Height 121.26319122314453
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj4#2'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'carpet1'
-            YRotation : 0.0
-            EmissionFactor : 0.20000000298023224
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj3#4'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'shop_pedastal'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -568.1021728515625
-        Y : 118.07052612304688
+    Position{ # Vector2
+        X -42.889007568359375
+        Y 34.29168701171875
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -128.824951171875
-        Y : 0.0
-        Width : 258.7838439941406
-        Height : 1.204187035560608
+    Depth 86.19608306884766
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -24.35943603515625
+        Y 3.244429588317871
+        Width 58.53528594970703
+        Height 121.26319122314453
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj4#3'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'carpet1'
-            YRotation : 0.0
-            EmissionFactor : 0.20000000298023224
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj4'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'carpet1'
+            YRotation 0.0
+            EmissionFactor 0.20000000298023224
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 292.4151916503906
-        Y : 362.2904357910156
+    Position{ # Vector2
+        X -240.9420623779297
+        Y 118.04257202148438
     }
-    Depth : 0.0
-    Rotation : -0.015501633286476135
-    Scaling : 1.0
-    LocalAabb{
-        X : -128.824951171875
-        Y : 0.0
-        Width : 258.7838439941406
-        Height : 1.204187035560608
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -128.824951171875
+        Y 0.0
+        Width 258.7838439941406
+        Height 1.204187035560608
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj4#2'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'carpet1'
+            YRotation 0.0
+            EmissionFactor 0.20000000298023224
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -438.260498046875
-        Y : 103.89103698730469
+    Position{ # Vector2
+        X -568.1021728515625
+        Y 118.07052612304688
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -128.824951171875
+        Y 0.0
+        Width 258.7838439941406
+        Height 1.204187035560608
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6#11'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj4#3'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'carpet1'
+            YRotation 0.0
+            EmissionFactor 0.20000000298023224
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 508.1412048339844
-        Y : 338.2117004394531
+    Position{ # Vector2
+        X 292.4151916503906
+        Y 362.2904357910156
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth 0.0
+    Rotation -0.015501633286476135
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -128.824951171875
+        Y 0.0
+        Width 258.7838439941406
+        Height 1.204187035560608
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6#5'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -48.949127197265625
-        Y : 104.2158203125
+    Position{ # Vector2
+        X -438.260498046875
+        Y 103.89103698730469
     }
-    Depth : -215.00001525878906
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6#6'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 1.5707963705062866
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6#11'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -244.40330505371094
-        Y : 100.24774169921875
+    Position{ # Vector2
+        X 508.1412048339844
+        Y 338.2117004394531
     }
-    Depth : -156.6427764892578
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -6.283003330230713
-        Y : 0.0788421630859375
-        Width : 11.530210494995117
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6#8'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6#5'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 97.33303833007812
-        Y : 337.5321350097656
+    Position{ # Vector2
+        X -48.949127197265625
+        Y 104.2158203125
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -215.00001525878906
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj6#9'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6#6'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 1.5707963705062866
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -39.890594482421875
-        Y : 337.8995666503906
+    Position{ # Vector2
+        X -244.40330505371094
+        Y 100.24774169921875
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -156.6427764892578
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -6.283003330230713
+        Y 0.0788421630859375
+        Width 11.530210494995117
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj7'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall_window'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6#8'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -305.0213623046875
-        Y : 93.36489868164062
+    Position{ # Vector2
+        X 97.33303833007812
+        Y 337.5321350097656
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj7#3'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall_window'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj6#9'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 370.70068359375
-        Y : 348.7899475097656
+    Position{ # Vector2
+        X -39.890594482421875
+        Y 337.8995666503906
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj7#4'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall_window'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj7'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall_window'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 233.20071411132812
-        Y : 351.1076965332031
+    Position{ # Vector2
+        X -305.0213623046875
+        Y 93.36489868164062
     }
-    Depth : -84.58218383789062
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj7#5'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall_window'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj7#3'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall_window'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -180.387939453125
-        Y : 95.31646728515625
+    Position{ # Vector2
+        X 370.70068359375
+        Y 348.7899475097656
     }
-    Depth : -215.94345092773438
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'obj7#6'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'wall_window'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj7#4'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall_window'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 81.87881469726562
-        Y : 95.31646728515625
+    Position{ # Vector2
+        X 233.20071411132812
+        Y 351.1076965332031
     }
-    Depth : -215.94345092773438
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -68.305908203125
-        Y : 0.0788421630859375
-        Width : 137.93499755859375
-        Height : 238.47666931152344
+    Depth -84.58218383789062
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj8'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'table1'
-            YRotation : 0.0
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj7#5'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall_window'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 304.31787109375
-        Y : 363.1368103027344
+    Position{ # Vector2
+        X -180.387939453125
+        Y 95.31646728515625
     }
-    Depth : -46.41966247558594
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -53.09626007080078
-        Y : -0.4045476019382477
-        Width : 106.4539794921875
-        Height : 53.033164978027344
+    Depth -215.94345092773438
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj9'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'chair1'
-            YRotation : 1.5707963705062866
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    Identifier 'obj7#6'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'wall_window'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 236.89071655273438
-        Y : 364.2098083496094
+    Position{ # Vector2
+        X 81.87881469726562
+        Y 95.31646728515625
     }
-    Depth : -44.999267578125
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -23.153675079345703
-        Y : -0.7013130187988281
-        Width : 31.367515563964844
-        Height : 57.68374252319336
+    Depth -215.94345092773438
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -68.305908203125
+        Y 0.0788421630859375
+        Width 137.93499755859375
+        Height 238.47666931152344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    TemplateName : 'Template 1'
-    Identifier : 'obj9#2'
-    Component{
-        ClassName : 'Model'
-        Identifier : 101
-        ModelComponent{
-            Name : 'chair1'
-            YRotation : 4.71238899230957
-            EmissionFactor : 0.0
-            XRotation : 0.0
-            ShatterColor{
-                R : 0.0
-                G : 0.0
-                B : 0.0
-                A : 1.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj8'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'table1'
+            YRotation 0.0
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
             }
-            Origin{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Transparent : 0
-            DiffuseColor{
-                R : 1.0
-                G : 1.0
-                B : 1.0
-                A : 1.0
-            }
-        }
-    }
-    Position{
-        X : 351.55859375
-        Y : 362.2318420410156
-    }
-    Depth : -44.999267578125
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -8.213839530944824
-        Y : -0.7013130187988281
-        Width : 31.36751365661621
-        Height : 57.68374252319336
-    }
-    Hidden : 0
-}
-Object{
-    Identifier : 'spawn_default'
-    Component{
-        ClassName : 'SpawnPoint'
-        Identifier : 101
-        SpawnPointComponent{
-            FacingDirection : 1
-            SpawnOffset{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -86.63723754882812
-        Y : 159.67068481445312
+    Position{ # Vector2
+        X 304.31787109375
+        Y 363.1368103027344
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
+    Depth -46.41966247558594
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -53.09626007080078
+        Y -0.4045476019382477
+        Width 106.4539794921875
+        Height 53.033164978027344
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'spawn_from_resurrection'
-    Component{
-        ClassName : 'SpawnPoint'
-        Identifier : 101
-        SpawnPointComponent{
-            FacingDirection : 1
-            SpawnOffset{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj9'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'chair1'
+            YRotation 1.5707963705062866
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
+            }
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
+            }
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : 38.640472412109375
-        Y : 137.51698303222656
+    Position{ # Vector2
+        X 236.89071655273438
+        Y 364.2098083496094
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
+    Depth -44.999267578125
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -23.153675079345703
+        Y -0.7013130187988281
+        Width 31.367515563964844
+        Height 57.68374252319336
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'spawn_from_wasteland_town'
-    Component{
-        ClassName : 'SpawnPoint'
-        Identifier : 101
-        SpawnPointComponent{
-            FacingDirection : 1
-            SpawnOffset{
-                X : 0.0
-                Y : 0.0
-                Z : 0.0
+Object{ # SceneObject
+    TemplateName 'Template 1'
+    Identifier 'obj9#2'
+    Component{ # Component
+        ClassName 'Model'
+        Identifier 101
+        ModelComponent{ # ModelComponent
+            Name 'chair1'
+            YRotation 4.71238899230957
+            EmissionFactor 0.0
+            XRotation 0.0
+            ShatterColor{ # FloatColor
+                R 0.0
+                G 0.0
+                B 0.0
+                A 1.0
+            }
+            Origin{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
+            }
+            Transparent 0
+            DiffuseColor{ # FloatColor
+                R 1.0
+                G 1.0
+                B 1.0
+                A 1.0
             }
         }
     }
-    Position{
-        X : -405.2760009765625
-        Y : 154.1256866455078
+    Position{ # Vector2
+        X 351.55859375
+        Y 362.2318420410156
     }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
+    Depth -44.999267578125
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -8.213839530944824
+        Y -0.7013130187988281
+        Width 31.36751365661621
+        Height 57.68374252319336
     }
-    Hidden : 0
+    Hidden 0
 }
-Object{
-    Identifier : 'text'
-    Position{
-        X : 43.785003662109375
-        Y : 221.64779663085938
-    }
-    Depth : 0.0
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -30.0
-        Y : -30.0
-        Width : 60.0
-        Height : 60.0
-    }
-    Hidden : 1
-}
-Object{
-    TemplateName : 'torch'
-    Identifier : 'torch1'
-    Position{
-        X : -36.98057556152344
-        Y : 167.22605895996094
-    }
-    Depth : 86.36177825927734
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -50.0
-        Y : -50.0
-        Width : 100.0
-        Height : 100.0
-    }
-    Hidden : 0
-}
-Object{
-    TemplateName : 'torch'
-    Identifier : 'torch1#2'
-    Position{
-        X : -311.4945983886719
-        Y : 168.9560546875
-    }
-    Depth : 86.36177825927734
-    Rotation : 0.0
-    Scaling : 1.0
-    LocalAabb{
-        X : -50.0
-        Y : -50.0
-        Width : 100.0
-        Height : 100.0
-    }
-    Hidden : 0
-}
-ObjectLibrary{
-    Name : 'wasteland_town_healerhouse'
-    Template{
-        Object{
-            Identifier : 'Template 1'
-            Position{
-                X : 0.0
-                Y : 0.0
+Object{ # SceneObject
+    Identifier 'spawn_default'
+    Component{ # Component
+        ClassName 'SpawnPoint'
+        Identifier 101
+        SpawnPointComponent{ # SpawnPointComponent
+            FacingDirection 1
+            SpawnOffset{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
             }
-            Depth : 0.0
-            Rotation : 0.0
-            Scaling : 1.0
-            LocalAabb{
-                X : -10.0
-                Y : -10.0
-                Width : 20.0
-                Height : 20.0
-            }
-            Hidden : 0
         }
-        Scaling : 1.0
     }
-    ImportedLibrary : 'caves_stuff'
-    ImportedLibrary : 'game_common'
-    ImportedLibrary : 'monsters'
-    ImportedLibrary : 'npc'
-    ImportedLibrary : 'plains_stuff'
-    ImportedLibrary : 'rocks'
-    ImportedLibrary : 'towers_stuff'
-    ImportedLibrary : 'traps_stuffs'
-    ImportedLibrary : 'trash'
-    ImportedLibrary : 'woodkeep_stuff'
+    Position{ # Vector2
+        X -86.63723754882812
+        Y 159.67068481445312
+    }
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
+    }
+    Hidden 0
 }
-Bounds{
-    Top : -450.0
-    Left : -200.0
-    Right : 1550.0
-    Bottom : 900.0
+Object{ # SceneObject
+    Identifier 'spawn_from_resurrection'
+    Component{ # Component
+        ClassName 'SpawnPoint'
+        Identifier 101
+        SpawnPointComponent{ # SpawnPointComponent
+            FacingDirection 1
+            SpawnOffset{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
+            }
+        }
+    }
+    Position{ # Vector2
+        X 38.640472412109375
+        Y 137.51698303222656
+    }
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
+    }
+    Hidden 0
+}
+Object{ # SceneObject
+    Identifier 'spawn_from_wasteland_town'
+    Component{ # Component
+        ClassName 'SpawnPoint'
+        Identifier 101
+        SpawnPointComponent{ # SpawnPointComponent
+            FacingDirection 1
+            SpawnOffset{ # Vector3
+                X 0.0
+                Y 0.0
+                Z 0.0
+            }
+        }
+    }
+    Position{ # Vector2
+        X -405.2760009765625
+        Y 154.1256866455078
+    }
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
+    }
+    Hidden 0
+}
+Object{ # SceneObject
+    Identifier 'text'
+    Position{ # Vector2
+        X 43.785003662109375
+        Y 221.64779663085938
+    }
+    Depth 0.0
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -30.0
+        Y -30.0
+        Width 60.0
+        Height 60.0
+    }
+    Hidden 1
+}
+Object{ # SceneObject
+    TemplateName 'torch'
+    Identifier 'torch1'
+    Position{ # Vector2
+        X -36.98057556152344
+        Y 167.22605895996094
+    }
+    Depth 86.36177825927734
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -50.0
+        Y -50.0
+        Width 100.0
+        Height 100.0
+    }
+    Hidden 0
+}
+Object{ # SceneObject
+    TemplateName 'torch'
+    Identifier 'torch1#2'
+    Position{ # Vector2
+        X -311.4945983886719
+        Y 168.9560546875
+    }
+    Depth 86.36177825927734
+    Rotation 0.0
+    Scaling 1.0
+    LocalAabb{ # Rectangle
+        X -50.0
+        Y -50.0
+        Width 100.0
+        Height 100.0
+    }
+    Hidden 0
+}
+ObjectLibrary{ # ObjectLibrary
+    Name 'wasteland_town_healerhouse'
+    Template{ # ObjectTemplate
+        Object{ # SceneObject
+            Identifier 'Template 1'
+            Position{ # Vector2
+                X 0.0
+                Y 0.0
+            }
+            Depth 0.0
+            Rotation 0.0
+            Scaling 1.0
+            LocalAabb{ # Rectangle
+                X -10.0
+                Y -10.0
+                Width 20.0
+                Height 20.0
+            }
+            Hidden 0
+        }
+        Scaling 1.0
+    }
+    ImportedLibrary 'caves_stuff'
+    ImportedLibrary 'game_common'
+    ImportedLibrary 'monsters'
+    ImportedLibrary 'npc'
+    ImportedLibrary 'plains_stuff'
+    ImportedLibrary 'rocks'
+    ImportedLibrary 'towers_stuff'
+    ImportedLibrary 'traps_stuffs'
+    ImportedLibrary 'trash'
+    ImportedLibrary 'woodkeep_stuff'
+}
+Bounds{ # SceneBounds
+    Top -450.0
+    Left -200.0
+    Right 1550.0
+    Bottom 900.0
 }

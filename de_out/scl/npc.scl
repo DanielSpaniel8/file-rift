@@ -1,446 +1,447 @@
 # rifted with FR v5.7.0
 
-Name : 'npc'
-Template{
-    Object{
-        Identifier : 'critter_konna_green'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'critter_konna_green'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Name 'npc'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'critter_konna_green'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'critter_konna_green'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 102
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'critter_konna_walk'
-                Repeating : 1
-                SpeedMultiplier : 1.5
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 104
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 1
-            }
-            MonsterEntityComponent{
-                OnKill{
-                }
-                OnHurt{
-                }
-                GivesExperience : 0
-                DefaultDeathAnimation : 1
-            }
-        }
-        Component{
-            ClassName : 'EntityController'
-            Identifier : 106
-            EntityControllerComponent{
-                EntityId : 104
-                AnimationControllerId : 102
-                DefaultMoveAnimationId : 103
-                RoamAreaId : 113
-                DefaultMoveSpeed : 35.0
-                DefaultAcceleration : 800.0
-                TargetingDistance : 100.0
-                MovementBehavior : 2
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 107
-            ShapeComponent{
-                Rectangle{
-                    X : -35.0
-                    Y : -20.0
-                    Width : 62.0
-                    Height : 60.0
-                }
-            }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -250.0
-                MaxDepth : 250.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'UtilityShape'
-            Identifier : 113
-            ShapeComponent{
-                Rectangle{
-                    X : -600.0
-                    Y : -200.0
-                    Width : 1200.0
-                    Height : 400.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 102
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -35.0
-            Y : -20.0
-            Width : 62.0
-            Height : 60.0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'critter_konna_walk'
+                Repeating 1
+                SpeedMultiplier 1.5
+                Running 1
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 104
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 1
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 0
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'EntityController'
+            Identifier 106
+            EntityControllerComponent{ # EntityControllerComponent
+                EntityId 104
+                AnimationControllerId 102
+                DefaultMoveAnimationId 103
+                RoamAreaId 113
+                DefaultMoveSpeed 35.0
+                DefaultAcceleration 800.0
+                TargetingDistance 100.0
+                MovementBehavior 2
+            }
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 107
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -35.0
+                    Y -20.0
+                    Width 62.0
+                    Height 60.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -250.0
+                MaxDepth 250.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'UtilityShape'
+            Identifier 113
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -600.0
+                    Y -200.0
+                    Width 1200.0
+                    Height 400.0
+                }
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -35.0
+            Y -20.0
+            Width 62.0
+            Height 60.0
+        }
+        Hidden 0
     }
-    Scaling : 0.3499999940395355
+    Scaling 0.3499999940395355
 }
-Template{
-    Object{
-        Identifier : 'dwarf'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_dwarf1'
-                YRotation : 4.014257431030273
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dwarf'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_dwarf1'
+                YRotation 4.014257431030273
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'StaticMonsterController'
-            Identifier : 103
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 106
-                EntityId : 104
-                RoamAreaId : 0
+        Component{ # Component
+            ClassName 'StaticMonsterController'
+            Identifier 103
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 106
+                EntityId 104
+                RoamAreaId 0
             }
-            StaticMonsterControllerComponent{
-                AnimationId : 108
+            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+                AnimationId 108
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 104
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 104
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
             }
-            MonsterEntityComponent{
-                OnKill{
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                OnHurt{
+                OnHurt{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 106
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 106
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 108
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_dwarf_stand'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 108
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_dwarf_stand'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'king'
-        Component{
-            ClassName : 'Entity'
-            Identifier : 1
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'king'
+        Component{ # Component
+            ClassName 'Entity'
+            Identifier 1
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_king'
-                YRotation : 2.356194496154785
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_king'
+                YRotation 2.356194496154785
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_oldman_stand'
-                Repeating : 1
-                SpeedMultiplier : 0.6000000238418579
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 109
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 103
-                SelfUpdate : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 111
-            ShapeComponent{
-                Rectangle{
-                    X : -32.70899963378906
-                    Y : -34.29396057128906
-                    Width : 64.53463745117188
-                    Height : 62.28142547607422
-                }
-            }
-            CollisionShapeComponent{
-                Collides : 1
-                ReceivesDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Health'
-            Identifier : 114
-            HealthComponent{
-                MaxHealth : 1
-                HEALTHTYPE : 0
-                BarOffset{
-                    X : 0.0
-                    Y : 50.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_oldman_stand'
+                Repeating 1
+                SpeedMultiplier 0.6000000238418579
+                Running 1
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -32.70899963378906
-            Y : -34.29396057128906
-            Width : 64.53463745117188
-            Height : 62.28142547607422
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 109
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 103
+                SelfUpdate 1
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 111
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -32.70899963378906
+                    Y -34.29396057128906
+                    Width 64.53463745117188
+                    Height 62.28142547607422
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                ReceivesDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Health'
+            Identifier 114
+            HealthComponent{ # HealthComponent
+                MaxHealth 1
+                HEALTHTYPE 0
+                BarOffset{ # Vector3
+                    X 0.0
+                    Y 50.0
+                }
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -32.70899963378906
+            Y -34.29396057128906
+            Width 64.53463745117188
+            Height 62.28142547607422
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'npc_healer'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_healer'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'npc_healer'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_healer'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 105
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_female_stand'
-                Repeating : 1
-                SpeedMultiplier : 0.30000001192092896
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 106
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 108
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_walk_slow'
-                Repeating : 1
-                SpeedMultiplier : 1.600000023841858
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 109
-            ShapeComponent{
-                Rectangle{
-                    X : -10.0
-                    Y : -40.0
-                    Width : 20.0
-                    Height : 67.98746490478516
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 105
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_female_stand'
+                Repeating 1
+                SpeedMultiplier 0.30000001192092896
+                Running 1
             }
         }
-        Component{
-            ClassName : 'Entity'
-            Identifier : 111
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 106
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Component{
-            ClassName : 'EntityController'
-            Identifier : 112
-            EntityControllerComponent{
-                EntityId : 111
-                AnimationControllerId : 106
-                DefaultMoveAnimationId : 105
-                RoamAreaId : 109
-                DefaultMoveSpeed : 0.0
-                DefaultAcceleration : 800.0
-                TargetingDistance : 0.0
-                MovementBehavior : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 108
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_walk_slow'
+                Repeating 1
+                SpeedMultiplier 1.600000023841858
+                Running 1
             }
         }
-        Component{
-            ClassName : 'EntityAction'
-            Identifier : 115
-            EntityActionComponent{
-                OnActivate{
-                    String : $
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 109
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -10.0
+                    Y -40.0
+                    Width 20.0
+                    Height 67.98746490478516
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Entity'
+            Identifier 111
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'EntityController'
+            Identifier 112
+            EntityControllerComponent{ # EntityControllerComponent
+                EntityId 111
+                AnimationControllerId 106
+                DefaultMoveAnimationId 105
+                RoamAreaId 109
+                DefaultMoveSpeed 0.0
+                DefaultAcceleration 800.0
+                TargetingDistance 0.0
+                MovementBehavior 1
+            }
+        }
+        Component{ # Component
+            ClassName 'EntityAction'
+            Identifier 115
+            EntityActionComponent{ # EntityActionComponent
+                OnActivate{ # Program
+                    String
+$
 local self = ...;
 
 local castAnimation = 116;
@@ -453,251 +454,252 @@ Program.Wait(1000.0);
 
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe7\x00\x00\x00local self = ...;\r\n\r\nlocal castAnimation = 116;\r\n\r\nAnimationController.BlendToAnimation(self, castAnimation);\r\n\r\nSkill.BeginCasting(self, "", Vector3.New(EntityController.FacingDirection(self), 0, 0));\r\n\r\nProgram.Wait(1000.0);\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x85@\x00\x00\x86\x80@\x01\xc0\x00\x00\x00\x00\x01\x80\x00\x9c@\x80\x01\x85\xc0\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00E\x81\x01\x00F\xc1\xc1\x02\x85\x01\x02\x00\x86AB\x03\xc0\x01\x00\x00\x9c\x81\x00\x01\xc1\x81\x02\x00\x01\x82\x02\x00\\\x01\x00\x02\x9c@\x00\x00\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x1e\x00\x80\x00\x0e\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00]@\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x06\x00\x00\x00Skill\x00\x04\r\x00\x00\x00BeginCasting\x00\x04\x01\x00\x00\x00\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x10\x00\x00\x00FacingDirection\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00@\x8f@\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x0e\x00\x00\x00castAnimation\x00\x02\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe7\x00\x00\x00local self = ...;\r\n\r\nlocal castAnimation = 116;\r\n\r\nAnimationController.BlendToAnimation(self, castAnimation);\r\n\r\nSkill.BeginCasting(self, "", Vector3.New(EntityController.FacingDirection(self), 0, 0));\r\n\r\nProgram.Wait(1000.0);\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x1a\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x85@\x00\x00\x86\x80@\x01\xc0\x00\x00\x00\x00\x01\x80\x00\x9c@\x80\x01\x85\xc0\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00E\x81\x01\x00F\xc1\xc1\x02\x85\x01\x02\x00\x86AB\x03\xc0\x01\x00\x00\x9c\x81\x00\x01\xc1\x81\x02\x00\x01\x82\x02\x00\\\x01\x00\x02\x9c@\x00\x00\x85\xc0\x02\x00\x86\x00C\x01\xc1@\x03\x00\x9c@\x00\x01\x1e\x00\x80\x00\x0e\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00]@\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x06\x00\x00\x00Skill\x00\x04\r\x00\x00\x00BeginCasting\x00\x04\x01\x00\x00\x00\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x10\x00\x00\x00FacingDirection\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00@\x8f@\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x0e\x00\x00\x00castAnimation\x00\x02\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 116
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'hiro_cast'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 116
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'hiro_cast'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Component{
-            ClassName : 'Skill'
-            Identifier : 117
-            SkillComponent{
-                CastFinishAnimationId : 0
-                Origin{
-                    X : 30.0
-                    Y : 0.0
+        Component{ # Component
+            ClassName 'Skill'
+            Identifier 117
+            SkillComponent{ # SkillComponent
+                CastFinishAnimationId 0
+                Origin{ # Vector3
+                    X 30.0
+                    Y 0.0
                 }
-                CastObjectTemplateName : 'npc_healer_cast'
+                CastObjectTemplateName 'npc_healer_cast'
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -40.0
-            Width : 20.0
-            Height : 67.98746490478516
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -40.0
+            Width 20.0
+            Height 67.98746490478516
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'npc_healer_cast'
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 1
-            SimpleGlowComponent{
-                Color{
-                    R : 0.2777783274650574
-                    G : 1.0
-                    B : 0.16666662693023682
-                    A : 0.5
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'npc_healer_cast'
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 1
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.2777783274650574
+                    G 1.0
+                    B 0.16666662693023682
+                    A 0.5
                 }
-                Size : 20.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
+                Size 20.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 102
-            ParticleEmitterComponent{
-                ParticleId : 103
-                ParticleId : 104
-                ParticleId : 105
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 102
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 103
+                ParticleId 104
+                ParticleId 105
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 103
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 40.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 103
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 40.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 104
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 40.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 104
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 40.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 105
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 40.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 105
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 40.0
             }
         }
-        Component{
-            ClassName : 'MagicSpellCast'
-            Identifier : 109
-            MagicSpellCastComponent{
-                ParticleEmitterId : 102
-                SoundEffectId : 0
+        Component{ # Component
+            ClassName 'MagicSpellCast'
+            Identifier 109
+            MagicSpellCastComponent{ # MagicSpellCastComponent
+                ParticleEmitterId 102
+                SoundEffectId 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -20.0
-            Y : -20.0
-            Width : 40.0
-            Height : 40.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -20.0
+            Y -20.0
+            Width 40.0
+            Height 40.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'npc_male1_standing'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_male1'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'npc_male1_standing'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_male1'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'StaticMonsterController'
-            Identifier : 103
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 106
-                EntityId : 104
-                RoamAreaId : 0
+        Component{ # Component
+            ClassName 'StaticMonsterController'
+            Identifier 103
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 106
+                EntityId 104
+                RoamAreaId 0
             }
-            StaticMonsterControllerComponent{
-                AnimationId : 105
+            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+                AnimationId 105
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 104
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 104
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
             }
-            MonsterEntityComponent{
-                OnKill{
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                OnHurt{
+                OnHurt{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 105
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_stand'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 105
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_stand'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 106
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 106
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'npc_oldman'
-        Component{
-            ClassName : 'Entity'
-            Identifier : 1
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'npc_oldman'
+        Component{ # Component
+            ClassName 'Entity'
+            Identifier 1
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
             }
         }
-        Component{
-            ClassName : 'EntityAction'
-            Identifier : 2
-            EntityActionComponent{
-                OnActivate{
-                    String : $
+        Component{ # Component
+            ClassName 'EntityAction'
+            Identifier 2
+            EntityActionComponent{ # EntityActionComponent
+                OnActivate{ # Program
+                    String
+$
 local self = ...;
 
 if self["texts"] ~= nil then
@@ -718,31 +720,32 @@ if self["texts"] ~= nil then
     Program.Wait(0.4);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe6\x01\x00\x00local self = ...;\r\n\r\nif self["texts"] ~= nil then\r\n\tlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\n\tlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(0, 20, 0), text);\r\n\t\r\n\tlocal time = 0;\r\n\tlocal interval = 0.01;\r\n\twhile time < 2 do\r\n\t\tbubble:setPosition(self:position() + Vector3.New(0, 40, 0));\r\n\t\tProgram.Wait(interval);\r\n\t\ttime = time + interval;\r\n\tend\r\n\t\r\n\tHideTextBubble(bubble:identifier());\r\n\r\n\tProgram.Wait(0.4);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0c:\x00\x00\x00%\x00\x00\x01F\x00@\x00W@\xc0\x00\x16\x00\r\x80F\x00@\x00\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x06\x01@\x00\x14\x01\x00\x02\x9c\x80\x80\x01F\x80\x80\x00\x85@\x01\x00\xcb\x80A\x00\xdc\x80\x00\x01\x01\xc1\x01\x00\xd5\x00\x81\x01\x0b\x01B\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01\xc2\x02\x00\\\x81\x00\x02\x0cA\x01\x02@\x01\x80\x00\x9c\x80\x00\x02\xc1\xc0\x02\x00\x01A\x03\x00\x18\x80\xc3\x01\x16\x00\x04\x80K\xc1C\x01\xcb\x01B\x00\xdc\x81\x00\x01\x05B\x02\x00\x06\x82B\x04A\xc2\x02\x00\x81\x02\x04\x00\xc1\xc2\x02\x00\x1c\x82\x00\x02\xcc\x01\x82\x03\\A\x80\x01EA\x04\x00F\x81\xc4\x02\x80\x01\x00\x02\\A\x00\x01\xcc\x00\x81\x01\x16\x00\xfb\x7fE\xc1\x04\x00\x8b\x81A\x01\x9c\x01\x00\x01\\A\x00\x00EA\x04\x00F\x81\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x004@\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x0c\x00\x00\x00setPosition\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x0c\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00\x1c\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00time\x00\x1d\x00\x00\x009\x00\x00\x00\t\x00\x00\x00interval\x00\x1e\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe6\x01\x00\x00local self = ...;\r\n\r\nif self["texts"] ~= nil then\r\n\tlocal text = self["texts"][Math.RandomInt(1,#self["texts"])];\r\n\r\n\tlocal bubble = ShowTextBubble(self:identifier().."_bubble", self:position() + Vector3.New(0, 20, 0), text);\r\n\t\r\n\tlocal time = 0;\r\n\tlocal interval = 0.01;\r\n\twhile time < 2 do\r\n\t\tbubble:setPosition(self:position() + Vector3.New(0, 40, 0));\r\n\t\tProgram.Wait(interval);\r\n\t\ttime = time + interval;\r\n\tend\r\n\t\r\n\tHideTextBubble(bubble:identifier());\r\n\r\n\tProgram.Wait(0.4);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0c:\x00\x00\x00%\x00\x00\x01F\x00@\x00W@\xc0\x00\x16\x00\r\x80F\x00@\x00\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x06\x01@\x00\x14\x01\x00\x02\x9c\x80\x80\x01F\x80\x80\x00\x85@\x01\x00\xcb\x80A\x00\xdc\x80\x00\x01\x01\xc1\x01\x00\xd5\x00\x81\x01\x0b\x01B\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01\xc2\x02\x00\\\x81\x00\x02\x0cA\x01\x02@\x01\x80\x00\x9c\x80\x00\x02\xc1\xc0\x02\x00\x01A\x03\x00\x18\x80\xc3\x01\x16\x00\x04\x80K\xc1C\x01\xcb\x01B\x00\xdc\x81\x00\x01\x05B\x02\x00\x06\x82B\x04A\xc2\x02\x00\x81\x02\x04\x00\xc1\xc2\x02\x00\x1c\x82\x00\x02\xcc\x01\x82\x03\\A\x80\x01EA\x04\x00F\x81\xc4\x02\x80\x01\x00\x02\\A\x00\x01\xcc\x00\x81\x01\x16\x00\xfb\x7fE\xc1\x04\x00\x8b\x81A\x01\x9c\x01\x00\x01\\A\x00\x00EA\x04\x00F\x81\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x00\x04\x05\x00\x00\x00Math\x00\x04\n\x00\x00\x00RandomInt\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x004@\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x0c\x00\x00\x00setPosition\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x03\x9a\x99\x99\x99\x99\x99\xd9?\x00\x00\x00\x00:\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00text\x00\x0c\x00\x00\x009\x00\x00\x00\x07\x00\x00\x00bubble\x00\x1c\x00\x00\x009\x00\x00\x00\x05\x00\x00\x00time\x00\x1d\x00\x00\x009\x00\x00\x00\t\x00\x00\x00interval\x00\x1e\x00\x00\x009\x00\x00\x00\x00\x00\x00\x00'
                 }
             }
         }
-        Component{
-            ClassName : 'EntityController'
-            Identifier : 3
-            EntityControllerComponent{
-                EntityId : 1
-                AnimationControllerId : 109
-                DefaultMoveAnimationId : 103
-                RoamAreaId : 0
-                DefaultMoveSpeed : 0.0
-                DefaultAcceleration : 800.0
-                TargetingDistance : 0.0
-                MovementBehavior : 1
+        Component{ # Component
+            ClassName 'EntityController'
+            Identifier 3
+            EntityControllerComponent{ # EntityControllerComponent
+                EntityId 1
+                AnimationControllerId 109
+                DefaultMoveAnimationId 103
+                RoamAreaId 0
+                DefaultMoveSpeed 0.0
+                DefaultAcceleration 800.0
+                TargetingDistance 0.0
+                MovementBehavior 1
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 4
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 4
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 self["texts"] = {
@@ -755,213 +758,215 @@ self["texts"] = {
     "I hope you will be alright." 
 };
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xef\x00\x00\x00local self = ...;\r\n\r\nself["texts"] = {\r\n\t"It\'s so dark in here.", \r\n\t"Be careful.", \r\n\t"I hope you will be alright.", \r\n\t"There is no Error in this game.",\r\n\t"It\'s so dark in here.", \r\n\t"Be careful.", \r\n\t"I hope you will be alright." \r\n};\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x0c\x00\x00\x00%\x00\x00\x01J\x00\x80\x03\x81@\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00A\x01\x01\x00\x81A\x00\x00\xc1\x81\x00\x00\x01\xc2\x00\x00b@\x80\x03\t@\x00\x80\x1e\x00\x80\x00\x05\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x16\x00\x00\x00It\'s so dark in here.\x00\x04\x0c\x00\x00\x00Be careful.\x00\x04\x1c\x00\x00\x00I hope you will be alright.\x00\x04 \x00\x00\x00There is no Error in this game.\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xef\x00\x00\x00local self = ...;\r\n\r\nself["texts"] = {\r\n\t"It\'s so dark in here.", \r\n\t"Be careful.", \r\n\t"I hope you will be alright.", \r\n\t"There is no Error in this game.",\r\n\t"It\'s so dark in here.", \r\n\t"Be careful.", \r\n\t"I hope you will be alright." \r\n};\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x0c\x00\x00\x00%\x00\x00\x01J\x00\x80\x03\x81@\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00A\x01\x01\x00\x81A\x00\x00\xc1\x81\x00\x00\x01\xc2\x00\x00b@\x80\x03\t@\x00\x80\x1e\x00\x80\x00\x05\x00\x00\x00\x04\x06\x00\x00\x00texts\x00\x04\x16\x00\x00\x00It\'s so dark in here.\x00\x04\x0c\x00\x00\x00Be careful.\x00\x04\x1c\x00\x00\x00I hope you will be alright.\x00\x04 \x00\x00\x00There is no Error in this game.\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 10
+                Enabled 1
+                Trigger 10
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_oldman1'
-                YRotation : 2.356194496154785
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_oldman1'
+                YRotation 2.356194496154785
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_oldman_stand'
-                Repeating : 1
-                SpeedMultiplier : 0.6000000238418579
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_oldman_stand'
+                Repeating 1
+                SpeedMultiplier 0.6000000238418579
+                Running 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 109
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 103
-                SelfUpdate : 1
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 109
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 103
+                SelfUpdate 1
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 111
-            ShapeComponent{
-                Rectangle{
-                    X : -32.70899963378906
-                    Y : -34.29396057128906
-                    Width : 64.53463745117188
-                    Height : 62.28142547607422
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 111
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -32.70899963378906
+                    Y -34.29396057128906
+                    Width 64.53463745117188
+                    Height 62.28142547607422
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 100.0
-                OnCollide{
-                    String : $
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 100.0
+                OnCollide{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" and EntityController.IsIdle(self) then
     EntityController.PerformAction(self, 2);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x95\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\tEntityController.PerformAction(self, 2);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x95\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" and EntityController.IsIdle(self) then\r\n\tEntityController.PerformAction(self, 2);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x11\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x02\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x01A\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x00\x00\x00\x00\x11\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x10\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Health'
-            Identifier : 114
-            HealthComponent{
-                MaxHealth : 1
-                HEALTHTYPE : 0
-                BarOffset{
-                    X : 0.0
-                    Y : 50.0
+        Component{ # Component
+            ClassName 'Health'
+            Identifier 114
+            HealthComponent{ # HealthComponent
+                MaxHealth 1
+                HEALTHTYPE 0
+                BarOffset{ # Vector3
+                    X 0.0
+                    Y 50.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -32.70899963378906
-            Y : -34.29396057128906
-            Width : 64.53463745117188
-            Height : 62.28142547607422
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -32.70899963378906
+            Y -34.29396057128906
+            Width 64.53463745117188
+            Height 62.28142547607422
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'npc_shopkeeper'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_shopkeeper'
-                YRotation : 2.356194496154785
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'npc_shopkeeper'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_shopkeeper'
+                YRotation 2.356194496154785
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'StaticMonsterController'
-            Identifier : 103
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 106
-                EntityId : 104
-                RoamAreaId : 0
+        Component{ # Component
+            ClassName 'StaticMonsterController'
+            Identifier 103
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 106
+                EntityId 104
+                RoamAreaId 0
             }
-            StaticMonsterControllerComponent{
-                AnimationId : 105
+            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+                AnimationId 105
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 104
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 104
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
             }
-            MonsterEntityComponent{
-                OnKill{
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                OnHurt{
+                OnHurt{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 105
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_stand'
-                Repeating : 1
-                SpeedMultiplier : 0.5
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 105
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_stand'
+                Repeating 1
+                SpeedMultiplier 0.5
+                Running 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 106
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 106
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 108
-            ShapeComponent{
-                Rectangle{
-                    X : -60.0
-                    Y : -10.0
-                    Width : 120.0
-                    Height : 20.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 108
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -60.0
+                    Y -10.0
+                    Width 120.0
+                    Height 20.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
-                    String : $
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -976,48 +981,50 @@ if target:identifier() == "hero" then
     ShowTextBubble(self:identifier() .. "_bubble", self:position() + Vector3.New(13, 27, 0), text);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00_\x01\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal text;\r\n\r\n\tif Entity.GetFacingDirection(target) == 1 then\r\n\t\ttext = "Hello, I sell everything.";\r\n\telse\r\n\t\ttext = "Come back later to see if there is anything new!";\r\n\tend\r\n\r\n\tShowTextBubble(self:identifier() .. "_bubble", self:position() + Vector3.New(13, 27, 0), text);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n \x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x06\x80\x83\x00\x00\x01\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x80\x00\xdc\x80\x00\x01\x17\x00\xc1\x01\x16@\x00\x80\x81@\x01\x00\x16\x00\x00\x80\x81\x80\x01\x00\xc5\xc0\x01\x00\x0b\x01@\x00\x1c\x81\x00\x01A\x01\x02\x00\x15A\x01\x02KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\x80\x01\x00\x01\xdc@\x00\x02\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Entity\x00\x04\x13\x00\x00\x00GetFacingDirection\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x1a\x00\x00\x00Hello, I sell everything.\x00\x041\x00\x00\x00Come back later to see if there is anything new!\x00\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00*@\x03\x00\x00\x00\x00\x00\x00;@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x05\x00\x00\x00text\x00\x06\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00_\x01\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tlocal text;\r\n\r\n\tif Entity.GetFacingDirection(target) == 1 then\r\n\t\ttext = "Hello, I sell everything.";\r\n\telse\r\n\t\ttext = "Come back later to see if there is anything new!";\r\n\tend\r\n\r\n\tShowTextBubble(self:identifier() .. "_bubble", self:position() + Vector3.New(13, 27, 0), text);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n \x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x06\x80\x83\x00\x00\x01\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x80\x00\xdc\x80\x00\x01\x17\x00\xc1\x01\x16@\x00\x80\x81@\x01\x00\x16\x00\x00\x80\x81\x80\x01\x00\xc5\xc0\x01\x00\x0b\x01@\x00\x1c\x81\x00\x01A\x01\x02\x00\x15A\x01\x02KAB\x00\\\x81\x00\x01\x85\x81\x02\x00\x86\xc1B\x03\xc1\x01\x03\x00\x01B\x03\x00A\x82\x03\x00\x9c\x81\x00\x02L\x81\x81\x02\x80\x01\x00\x01\xdc@\x00\x02\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Entity\x00\x04\x13\x00\x00\x00GetFacingDirection\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x1a\x00\x00\x00Hello, I sell everything.\x00\x041\x00\x00\x00Come back later to see if there is anything new!\x00\x04\x0f\x00\x00\x00ShowTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00*@\x03\x00\x00\x00\x00\x00\x00;@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 \x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x1f\x00\x00\x00\x05\x00\x00\x00text\x00\x06\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00'
                 }
-                OnCollisionEnd{
-                    String : $
+                OnCollisionEnd{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" then
     HideTextBubble(self:identifier() .. "_bubble");
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00z\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier() .. "_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x01\x80\x85\x80\x00\x00\xcb\x00@\x00\xdc\x80\x00\x01\x01\xc1\x00\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00z\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideTextBubble(self:identifier() .. "_bubble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16@\x01\x80\x85\x80\x00\x00\xcb\x00@\x00\xdc\x80\x00\x01\x01\xc1\x00\x00\xd5\x00\x81\x01\x9c@\x00\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\x08\x00\x00\x00_bubble\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -60.0
-            Y : -10.0
-            Width : 120.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -60.0
+            Y -10.0
+            Width 120.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'shop_item'
-        Component{
-            ClassName : 'Program'
-            Identifier : 1
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'shop_item'
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 1
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 self["itemName"] = "healingpotion";
@@ -1025,33 +1032,34 @@ self["itemPrice"] = 50;
 
 CreateShopItem(self);
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00k\x00\x00\x00local self = ...;\r\n\r\nself["itemName"] = "healingpotion";\r\nself["itemPrice"] = 50;\r\n\r\nCreateShopItem(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x07\x00\x00\x00%\x00\x00\x01\t@@\x80\t\xc0@\x81E\x00\x01\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x05\x00\x00\x00\x04\t\x00\x00\x00itemName\x00\x04\x0e\x00\x00\x00healingpotion\x00\x04\n\x00\x00\x00itemPrice\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x0f\x00\x00\x00CreateShopItem\x00\x00\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00k\x00\x00\x00local self = ...;\r\n\r\nself["itemName"] = "healingpotion";\r\nself["itemPrice"] = 50;\r\n\r\nCreateShopItem(self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x07\x00\x00\x00%\x00\x00\x01\t@@\x80\t\xc0@\x81E\x00\x01\x00\x80\x00\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x05\x00\x00\x00\x04\t\x00\x00\x00itemName\x00\x04\x0e\x00\x00\x00healingpotion\x00\x04\n\x00\x00\x00itemPrice\x00\x03\x00\x00\x00\x00\x00\x00I@\x04\x0f\x00\x00\x00CreateShopItem\x00\x00\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 10
+                Enabled 1
+                Trigger 10
             }
         }
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 2
-            Label : 'for_reg'
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 2
+            Label 'for_reg'
         }
-        Component{
-            ClassName : 'ModelTransformController'
-            Identifier : 3
-            Label : 'for_reg'
-            ModelTransformControllerComponent{
-                ModelId : 0
+        Component{ # Component
+            ClassName 'ModelTransformController'
+            Identifier 3
+            Label 'for_reg'
+            ModelTransformControllerComponent{ # ModelTransformControllerComponent
+                ModelId 0
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 5
-            Label : 'buy'
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 5
+            Label 'buy'
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 --if IsShopItemInfoVisible(self) then
@@ -1111,368 +1119,370 @@ else
 end
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe1\x05\x00\x00local self = ...;\r\n\r\n--if IsShopItemInfoVisible(self) then\r\n\tHideShopItemInfo(self);\r\n--end\r\n\r\nlocal itemName = self["itemName"]\r\nlocal itemPrice = self["itemPrice"]\r\n\r\nlocal buyFailed = false;\r\nlocal failMessage;\r\n\r\nif Game.IsItemUnique(itemName) and Character.HasItem(itemName) then\r\n\r\n\tbuyFailed = true;\r\n\tfailMessage = "You can only carry one " .. Game.TitleForItem(itemName) .. ".";\r\n\r\nelseif Character.NumCoins() < itemPrice then\r\n\r\n\tbuyFailed = true;\r\n\tfailMessage = "You don\'t have enough Soul Shards to buy this item.";\r\n\r\nend\r\n\r\n\r\nif not buyFailed then\r\n\r\n\t--Game.ShowItemBuyPopup(itemName, itemPrice, self);\r\n\r\n\tlocal hero = Scene.Find("hero");\r\n\tlocal direction = Entity.GetFacingDirection(hero);\r\n\r\n\tlocal itemObject = Scene.CreateObject("item_" .. itemName, self:identifier() .. "_" .. itemName);\r\n\titemObject:setPosition(Vector3.New(self:position():x(), self:position():y() + 40, hero:depth()));\r\n\titemObject:setVelocity(Vector3.New(100 * direction, 330, 0));\r\n\t\r\n\tif self["itemIdentifier"] then\r\n\t\tCollectableItem.SetItemIdentifier(itemObject, self["itemIdentifier"]);\r\n\tend\r\n\r\n\r\n\tif not boughtItemPrices then boughtItemPrices = {}; end --global variable\r\n\tboughtItemPrices[itemObject:identifier()] = itemPrice;\r\n\r\n\r\n\tDestroyShopItem(self);\r\n\tself:destroy();\r\n\tCharacter.SetNumCoins(Character.NumCoins() - itemPrice);\r\n\r\nelse\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tGame.ShowNotification(failMessage);\r\n\tProgram.Wait(4.0);\r\n\r\n\tCollisionShape.SetEnabled(self, 107, true);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0f\x84\x00\x00\x00%\x00\x00\x01E\x00\x00\x00\x80\x00\x00\x00\\@\x00\x01F@@\x00\x86\x80@\x00\xc2\x00\x00\x00\x03\x01\x00\x02E\xc1\x00\x00F\x01\xc1\x02\x80\x01\x80\x00\\\x81\x00\x01Z\x01\x00\x00\x16\x80\x03\x80EA\x01\x00F\x81\xc1\x02\x80\x01\x80\x00\\\x81\x00\x01Z\x01\x00\x00\x16\x00\x02\x80\xc2\x00\x80\x00A\xc1\x01\x00\x85\xc1\x00\x00\x86\x01B\x03\xc0\x01\x80\x00\x9c\x81\x00\x01\xc1A\x02\x00\x15\xc1\x81\x02\x16\x80\x01\x80EA\x01\x00F\x81\xc2\x02\\\x81\x80\x00\x18\x80\x80\x02\x16@\x00\x80\xc2\x00\x80\x00\x01\xc1\x02\x00\xda@\x00\x00\x16\x00\x12\x80E\x01\x03\x00FA\xc3\x02\x81\x81\x03\x00\\\x81\x00\x01\x85\xc1\x03\x00\x86\x01D\x03\xc0\x01\x80\x02\x9c\x81\x00\x01\xc5\x01\x03\x00\xc6A\xc4\x03\x01\x82\x04\x00@\x02\x80\x00\x15B\x02\x04K\xc2D\x00\\\x82\x00\x01\x81\x02\x05\x00\xc0\x02\x80\x00U\xc2\x82\x04\xdc\x81\x80\x01\x0bB\xc5\x03\x85\x82\x05\x00\x86\xc2E\x05\xcb\x02F\x00\xdc\x82\x00\x01\xcbB\xc6\x05\xdc\x82\x00\x01\x0b\x03F\x00\x1c\x83\x00\x01\x0b\x83F\x06\x1c\x83\x00\x01\x0c\xc3F\x06K\x03\xc7\x02\\\x03\x00\x01\x9c\x02\x00\x00\x1cB\x00\x00\x0bB\xc7\x03\x85\x82\x05\x00\x86\xc2E\x05\xce\x82\x01\x8f\x01\xc3\x07\x00A\x03\x08\x00\x9c\x02\x00\x02\x1cB\x00\x00\x06BH\x00\x1a\x02\x00\x00\x16\x00\x01\x80\x05\x82\x08\x00\x06\xc2H\x04@\x02\x80\x03\x86BH\x00\x1cB\x80\x01\x05\x02\t\x00\x1aB\x00\x00\x16@\x00\x80\n\x02\x00\x00\x07\x02\t\x00\x05\x02\t\x00K\xc2\xc4\x03\\\x82\x00\x01\t\x82\x80\x04\x05B\t\x00@\x02\x00\x00\x1cB\x00\x01\x0b\x82I\x00\x1cB\x00\x01\x05B\x01\x00\x06\xc2I\x04EB\x01\x00F\x82\xc2\x04\\\x82\x80\x00M\x82\x80\x04\x1cB\x00\x01\x16\xc0\x04\x80E\x01\n\x00FA\xca\x02\x80\x01\x00\x00\xc1\x81\n\x00\x02\x02\x00\x00\\A\x00\x02E\xc1\x00\x00F\xc1\xca\x02\x80\x01\x00\x02\\A\x00\x01E\x01\x0b\x00FA\xcb\x02\x81\x81\x0b\x00\\A\x00\x01E\x01\n\x00FA\xca\x02\x80\x01\x00\x00\xc1\x81\n\x00\x02\x02\x80\x00\\A\x00\x02\x1e\x00\x80\x00/\x00\x00\x00\x04\x11\x00\x00\x00HideShopItemInfo\x00\x04\t\x00\x00\x00itemName\x00\x04\n\x00\x00\x00itemPrice\x00\x04\x05\x00\x00\x00Game\x00\x04\r\x00\x00\x00IsItemUnique\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x18\x00\x00\x00You can only carry one \x00\x04\r\x00\x00\x00TitleForItem\x00\x04\x02\x00\x00\x00.\x00\x04\t\x00\x00\x00NumCoins\x00\x044\x00\x00\x00You don\'t have enough Soul Shards to buy this item.\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Entity\x00\x04\x13\x00\x00\x00GetFacingDirection\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x06\x00\x00\x00item_\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x02\x00\x00\x00_\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00position\x00\x04\x02\x00\x00\x00x\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x06\x00\x00\x00depth\x00\x04\x0c\x00\x00\x00setVelocity\x00\x03\x00\x00\x00\x00\x00\x00Y@\x03\x00\x00\x00\x00\x00\xa0t@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0f\x00\x00\x00itemIdentifier\x00\x04\x10\x00\x00\x00CollectableItem\x00\x04\x12\x00\x00\x00SetItemIdentifier\x00\x04\x11\x00\x00\x00boughtItemPrices\x00\x04\x10\x00\x00\x00DestroyShopItem\x00\x04\x08\x00\x00\x00destroy\x00\x04\x0c\x00\x00\x00SetNumCoins\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x11\x00\x00\x00ShowNotification\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x10@\x00\x00\x00\x00\x84\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x15\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00%\x00\x00\x00%\x00\x00\x00%\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00.\x00\x00\x00.\x00\x00\x00.\x00\x00\x00/\x00\x00\x00/\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x005\x00\x00\x005\x00\x00\x005\x00\x00\x005\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x009\x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x83\x00\x00\x00\t\x00\x00\x00itemName\x00\x05\x00\x00\x00\x83\x00\x00\x00\n\x00\x00\x00itemPrice\x00\x06\x00\x00\x00\x83\x00\x00\x00\n\x00\x00\x00buyFailed\x00\x07\x00\x00\x00\x83\x00\x00\x00\x0c\x00\x00\x00failMessage\x00\x08\x00\x00\x00\x83\x00\x00\x00\x05\x00\x00\x00hero\x00*\x00\x00\x00n\x00\x00\x00\n\x00\x00\x00direction\x00.\x00\x00\x00n\x00\x00\x00\x0b\x00\x00\x00itemObject\x009\x00\x00\x00n\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe1\x05\x00\x00local self = ...;\r\n\r\n--if IsShopItemInfoVisible(self) then\r\n\tHideShopItemInfo(self);\r\n--end\r\n\r\nlocal itemName = self["itemName"]\r\nlocal itemPrice = self["itemPrice"]\r\n\r\nlocal buyFailed = false;\r\nlocal failMessage;\r\n\r\nif Game.IsItemUnique(itemName) and Character.HasItem(itemName) then\r\n\r\n\tbuyFailed = true;\r\n\tfailMessage = "You can only carry one " .. Game.TitleForItem(itemName) .. ".";\r\n\r\nelseif Character.NumCoins() < itemPrice then\r\n\r\n\tbuyFailed = true;\r\n\tfailMessage = "You don\'t have enough Soul Shards to buy this item.";\r\n\r\nend\r\n\r\n\r\nif not buyFailed then\r\n\r\n\t--Game.ShowItemBuyPopup(itemName, itemPrice, self);\r\n\r\n\tlocal hero = Scene.Find("hero");\r\n\tlocal direction = Entity.GetFacingDirection(hero);\r\n\r\n\tlocal itemObject = Scene.CreateObject("item_" .. itemName, self:identifier() .. "_" .. itemName);\r\n\titemObject:setPosition(Vector3.New(self:position():x(), self:position():y() + 40, hero:depth()));\r\n\titemObject:setVelocity(Vector3.New(100 * direction, 330, 0));\r\n\t\r\n\tif self["itemIdentifier"] then\r\n\t\tCollectableItem.SetItemIdentifier(itemObject, self["itemIdentifier"]);\r\n\tend\r\n\r\n\r\n\tif not boughtItemPrices then boughtItemPrices = {}; end --global variable\r\n\tboughtItemPrices[itemObject:identifier()] = itemPrice;\r\n\r\n\r\n\tDestroyShopItem(self);\r\n\tself:destroy();\r\n\tCharacter.SetNumCoins(Character.NumCoins() - itemPrice);\r\n\r\nelse\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tGame.ShowNotification(failMessage);\r\n\tProgram.Wait(4.0);\r\n\r\n\tCollisionShape.SetEnabled(self, 107, true);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0f\x84\x00\x00\x00%\x00\x00\x01E\x00\x00\x00\x80\x00\x00\x00\\@\x00\x01F@@\x00\x86\x80@\x00\xc2\x00\x00\x00\x03\x01\x00\x02E\xc1\x00\x00F\x01\xc1\x02\x80\x01\x80\x00\\\x81\x00\x01Z\x01\x00\x00\x16\x80\x03\x80EA\x01\x00F\x81\xc1\x02\x80\x01\x80\x00\\\x81\x00\x01Z\x01\x00\x00\x16\x00\x02\x80\xc2\x00\x80\x00A\xc1\x01\x00\x85\xc1\x00\x00\x86\x01B\x03\xc0\x01\x80\x00\x9c\x81\x00\x01\xc1A\x02\x00\x15\xc1\x81\x02\x16\x80\x01\x80EA\x01\x00F\x81\xc2\x02\\\x81\x80\x00\x18\x80\x80\x02\x16@\x00\x80\xc2\x00\x80\x00\x01\xc1\x02\x00\xda@\x00\x00\x16\x00\x12\x80E\x01\x03\x00FA\xc3\x02\x81\x81\x03\x00\\\x81\x00\x01\x85\xc1\x03\x00\x86\x01D\x03\xc0\x01\x80\x02\x9c\x81\x00\x01\xc5\x01\x03\x00\xc6A\xc4\x03\x01\x82\x04\x00@\x02\x80\x00\x15B\x02\x04K\xc2D\x00\\\x82\x00\x01\x81\x02\x05\x00\xc0\x02\x80\x00U\xc2\x82\x04\xdc\x81\x80\x01\x0bB\xc5\x03\x85\x82\x05\x00\x86\xc2E\x05\xcb\x02F\x00\xdc\x82\x00\x01\xcbB\xc6\x05\xdc\x82\x00\x01\x0b\x03F\x00\x1c\x83\x00\x01\x0b\x83F\x06\x1c\x83\x00\x01\x0c\xc3F\x06K\x03\xc7\x02\\\x03\x00\x01\x9c\x02\x00\x00\x1cB\x00\x00\x0bB\xc7\x03\x85\x82\x05\x00\x86\xc2E\x05\xce\x82\x01\x8f\x01\xc3\x07\x00A\x03\x08\x00\x9c\x02\x00\x02\x1cB\x00\x00\x06BH\x00\x1a\x02\x00\x00\x16\x00\x01\x80\x05\x82\x08\x00\x06\xc2H\x04@\x02\x80\x03\x86BH\x00\x1cB\x80\x01\x05\x02\t\x00\x1aB\x00\x00\x16@\x00\x80\n\x02\x00\x00\x07\x02\t\x00\x05\x02\t\x00K\xc2\xc4\x03\\\x82\x00\x01\t\x82\x80\x04\x05B\t\x00@\x02\x00\x00\x1cB\x00\x01\x0b\x82I\x00\x1cB\x00\x01\x05B\x01\x00\x06\xc2I\x04EB\x01\x00F\x82\xc2\x04\\\x82\x80\x00M\x82\x80\x04\x1cB\x00\x01\x16\xc0\x04\x80E\x01\n\x00FA\xca\x02\x80\x01\x00\x00\xc1\x81\n\x00\x02\x02\x00\x00\\A\x00\x02E\xc1\x00\x00F\xc1\xca\x02\x80\x01\x00\x02\\A\x00\x01E\x01\x0b\x00FA\xcb\x02\x81\x81\x0b\x00\\A\x00\x01E\x01\n\x00FA\xca\x02\x80\x01\x00\x00\xc1\x81\n\x00\x02\x02\x80\x00\\A\x00\x02\x1e\x00\x80\x00/\x00\x00\x00\x04\x11\x00\x00\x00HideShopItemInfo\x00\x04\t\x00\x00\x00itemName\x00\x04\n\x00\x00\x00itemPrice\x00\x04\x05\x00\x00\x00Game\x00\x04\r\x00\x00\x00IsItemUnique\x00\x04\n\x00\x00\x00Character\x00\x04\x08\x00\x00\x00HasItem\x00\x04\x18\x00\x00\x00You can only carry one \x00\x04\r\x00\x00\x00TitleForItem\x00\x04\x02\x00\x00\x00.\x00\x04\t\x00\x00\x00NumCoins\x00\x044\x00\x00\x00You don\'t have enough Soul Shards to buy this item.\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x07\x00\x00\x00Entity\x00\x04\x13\x00\x00\x00GetFacingDirection\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x06\x00\x00\x00item_\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x02\x00\x00\x00_\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00position\x00\x04\x02\x00\x00\x00x\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x06\x00\x00\x00depth\x00\x04\x0c\x00\x00\x00setVelocity\x00\x03\x00\x00\x00\x00\x00\x00Y@\x03\x00\x00\x00\x00\x00\xa0t@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0f\x00\x00\x00itemIdentifier\x00\x04\x10\x00\x00\x00CollectableItem\x00\x04\x12\x00\x00\x00SetItemIdentifier\x00\x04\x11\x00\x00\x00boughtItemPrices\x00\x04\x10\x00\x00\x00DestroyShopItem\x00\x04\x08\x00\x00\x00destroy\x00\x04\x0c\x00\x00\x00SetNumCoins\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x11\x00\x00\x00ShowNotification\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x10@\x00\x00\x00\x00\x84\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0f\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x15\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1e\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00!\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00"\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00#\x00\x00\x00%\x00\x00\x00%\x00\x00\x00%\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00&\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00*\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00+\x00\x00\x00.\x00\x00\x00.\x00\x00\x00.\x00\x00\x00/\x00\x00\x00/\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x000\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x003\x00\x00\x005\x00\x00\x005\x00\x00\x005\x00\x00\x005\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x006\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x008\x00\x00\x009\x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x83\x00\x00\x00\t\x00\x00\x00itemName\x00\x05\x00\x00\x00\x83\x00\x00\x00\n\x00\x00\x00itemPrice\x00\x06\x00\x00\x00\x83\x00\x00\x00\n\x00\x00\x00buyFailed\x00\x07\x00\x00\x00\x83\x00\x00\x00\x0c\x00\x00\x00failMessage\x00\x08\x00\x00\x00\x83\x00\x00\x00\x05\x00\x00\x00hero\x00*\x00\x00\x00n\x00\x00\x00\n\x00\x00\x00direction\x00.\x00\x00\x00n\x00\x00\x00\x0b\x00\x00\x00itemObject\x009\x00\x00\x00n\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 2
+                Enabled 1
+                Trigger 2
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 107
-            ShapeComponent{
-                Rectangle{
-                    X : -40.0
-                    Y : -80.0
-                    Width : 80.0
-                    Height : 93.73445129394531
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 107
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -40.0
+                    Y -80.0
+                    Width 80.0
+                    Height 93.73445129394531
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -200.0
-                MaxDepth : 200.0
-                SpecialType : 4
-                OnCollide{
-                    String : $
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -200.0
+                MaxDepth 200.0
+                SpecialType 4
+                OnCollide{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" then
     ShowShopItemInfo(self);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tShowShopItemInfo(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00ShowShopItemInfo\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tShowShopItemInfo(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00ShowShopItemInfo\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
                 }
-                OnCollisionEnd{
-                    String : $
+                OnCollisionEnd{ # Program
+                    String
+$
 local self, target = ...;
 
 if target:identifier() == "hero" then
     HideShopItemInfo(self);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideShopItemInfo(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00HideShopItemInfo\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tHideShopItemInfo(self);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\t\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x00\x80\x85\x80\x00\x00\xc0\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x11\x00\x00\x00HideShopItemInfo\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x08\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -40.0
-            Y : -80.0
-            Width : 80.0
-            Height : 93.73445129394531
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -40.0
+            Y -80.0
+            Width 80.0
+            Height 93.73445129394531
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'shop_torch'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'grove_torch'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'shop_torch'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'grove_torch'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 2
-            SimpleGlowComponent{
-                Color{
-                    R : 1.0
-                    G : 0.6711111664772034
-                    B : 0.17777776718139648
-                    A : 0.0
-                }
-                Size : 11.0
-                NumSegments : 10
-                Depth : 0.0
-                PulseAmount : 0.05000000074505806
-                PulseTime : 2.0
-                Offset{
-                    X : 0.0
-                    Y : 6.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 3
-            SimpleGlowComponent{
-                Color{
-                    R : 0.22962965071201324
-                    G : 0.13728395104408264
-                    B : 0.10370369255542755
-                    A : 0.0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 2
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.6711111664772034
+                    B 0.17777776718139648
+                    A 0.0
                 }
-                Size : 30.0
-                NumSegments : 10
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 1.0
-                Offset{
-                    X : 0.0
-                    Y : 13.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 103
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 0.8696296215057373
-                    G : 0.48720991611480713
-                    B : 0.15259265899658203
-                    A : 1.0
-                }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'FireEmitter'
-            Identifier : 105
-            FireEmitterComponent{
-                ParticleEmitterId : 108
-                LightId : 103
-                Color{
-                    R : 0.9444444179534912
-                    G : 0.2518514096736908
-                    B : 0.0
-                    A : 0.0
-                }
-                ParticleInterval : 0.10000000149011612
-                ParticleMaxAge : 0.8999999761581421
-                ParticleSpread{
-                    X : 2.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Origin3{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Size 11.0
+                NumSegments 10
+                Depth 0.0
+                PulseAmount 0.05000000074505806
+                PulseTime 2.0
+                Offset{ # Vector2
+                    X 0.0
+                    Y 6.0
                 }
             }
         }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 108
-            ParticleEmitterComponent{
-                ParticleId : 109
-                ParticleId : 111
-                ParticleId : 112
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 3
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.22962965071201324
+                    G 0.13728395104408264
+                    B 0.10370369255542755
+                    A 0.0
+                }
+                Size 30.0
+                NumSegments 10
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 1.0
+                Offset{ # Vector2
+                    X 0.0
+                    Y 13.0
+                }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 109
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 103
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 0.8696296215057373
+                    G 0.48720991611480713
+                    B 0.15259265899658203
+                    A 1.0
+                }
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Radius 250.0
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 111
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 22.0
+        Component{ # Component
+            ClassName 'FireEmitter'
+            Identifier 105
+            FireEmitterComponent{ # FireEmitterComponent
+                ParticleEmitterId 108
+                LightId 103
+                Color{ # FloatColor
+                    R 0.9444444179534912
+                    G 0.2518514096736908
+                    B 0.0
+                    A 0.0
+                }
+                ParticleInterval 0.10000000149011612
+                ParticleMaxAge 0.8999999761581421
+                ParticleSpread{ # Vector3
+                    X 2.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Origin3{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
             }
         }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 112
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 20.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 108
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 109
+                ParticleId 111
+                ParticleId 112
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 109
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 20.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 111
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 22.0
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 112
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 20.0
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'walkingmonsteroldman'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'npc_oldman1'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'walkingmonsteroldman'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'npc_oldman1'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'npc_oldman_walk'
-                Repeating : 1
-                SpeedMultiplier : 0.6000000238418579
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'WalkingMonsterController'
-            Identifier : 105
-            MonsterControllerComponent{
-                WalkSpeed : 17.0
-                AnimationControllerId : 109
-                EntityId : 107
-                RoamAreaId : 0
-            }
-            WalkingMonsterControllerComponent{
-                WalkAnimationId : 103
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 107
-            EntityComponent{
-                FacingDirection : 18446744073709551615
-                PhysicsEnabled : 1
-            }
-            MonsterEntityComponent{
-                OnKill{
-                }
-                OnHurt{
-                }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 109
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 111
-            ShapeComponent{
-                Rectangle{
-                    X : -32.70899963378906
-                    Y : -34.29396057128906
-                    Width : 64.53463745117188
-                    Height : 62.28142547607422
-                }
-            }
-            CollisionShapeComponent{
-                Collides : 1
-                ReceivesDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Health'
-            Identifier : 114
-            HealthComponent{
-                MaxHealth : 1
-                HEALTHTYPE : 0
-                BarOffset{
-                    X : 0.0
-                    Y : 50.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'npc_oldman_walk'
+                Repeating 1
+                SpeedMultiplier 0.6000000238418579
+                Running 1
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -32.70899963378906
-            Y : -34.29396057128906
-            Width : 64.53463745117188
-            Height : 62.28142547607422
+        Component{ # Component
+            ClassName 'WalkingMonsterController'
+            Identifier 105
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 17.0
+                AnimationControllerId 109
+                EntityId 107
+                RoamAreaId 0
+            }
+            WalkingMonsterControllerComponent{ # WalkingMonsterControllerComponent
+                WalkAnimationId 103
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 107
+            EntityComponent{ # EntityComponent
+                FacingDirection 18446744073709551615
+                PhysicsEnabled 1
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 109
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 111
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -32.70899963378906
+                    Y -34.29396057128906
+                    Width 64.53463745117188
+                    Height 62.28142547607422
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                ReceivesDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Health'
+            Identifier 114
+            HealthComponent{ # HealthComponent
+                MaxHealth 1
+                HEALTHTYPE 0
+                BarOffset{ # Vector3
+                    X 0.0
+                    Y 50.0
+                }
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -32.70899963378906
+            Y -34.29396057128906
+            Width 64.53463745117188
+            Height 62.28142547607422
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

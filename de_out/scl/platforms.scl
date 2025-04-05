@@ -1,102 +1,103 @@
 # rifted with FR v5.7.0
 
-Name : 'platforms'
-Template{
-    Object{
-        Identifier : 'dropping_plat0_d2return'
-        Component{
-            ClassName : 'PhysicsObject'
-            Identifier : 1
-            PhysicsObjectComponent{
-                PhysicsEnabled : 0
-                GroundDeceleration : 1500.0
-                AirDeceleration : 0.0
-                MaxSpeed : 700.0
-                AllowRotation : 0
-                Elasticity : 0.0
+Name 'platforms'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dropping_plat0_d2return'
+        Component{ # Component
+            ClassName 'PhysicsObject'
+            Identifier 1
+            PhysicsObjectComponent{ # PhysicsObjectComponent
+                PhysicsEnabled 0
+                GroundDeceleration 1500.0
+                AirDeceleration 0.0
+                MaxSpeed 700.0
+                AllowRotation 0
+                Elasticity 0.0
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ParentComponentIdentifier : 113
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -41.137939453125
-                        Y : -1.274169921875
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ParentComponentIdentifier 113
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -41.137939453125
+                        Y -1.274169921875
                     }
-                    Vertex{
-                        X : 40.745849609375
-                        Y : -1.11181640625
+                    Vertex{ # Vector2
+                        X 40.745849609375
+                        Y -1.11181640625
                     }
-                    Vertex{
-                        X : 40.54443359375
-                        Y : 10.74737548828125
+                    Vertex{ # Vector2
+                        X 40.54443359375
+                        Y 10.74737548828125
                     }
-                    Vertex{
-                        X : -41.364501953125
-                        Y : 10.53924560546875
+                    Vertex{ # Vector2
+                        X -41.364501953125
+                        Y 10.53924560546875
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood0'
-                YRotation : 0.0
-                EmissionFactor : 0.30000001192092896
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 104
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 107
-            ShapeComponent{
-                Rectangle{
-                    X : -40.0
-                    Y : 0.0
-                    Width : 80.0
-                    Height : 12.0
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood0'
+                YRotation 0.0
+                EmissionFactor 0.30000001192092896
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                OnCollide{
-                    String : $
+        }
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 104
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 107
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -40.0
+                    Y 0.0
+                    Width 80.0
+                    Height 12.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -15.0
+                MaxDepth 15.0
+                OnCollide{ # Program
+                    String
+$
 local self, target, normal = ...;
 
 local initialPosition = self:position();
@@ -118,18 +119,19 @@ if (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and
 
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x0c\x02\x00\x00local self, target, normal = ...;\r\n\r\nlocal initialPosition = self:position();\r\n\r\nif (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and\r\n\tnormal:y() < -0.3) then\r\n\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tfor i=1,1 do\r\n\t\tTransformController.TranslateBy(self, Vector3.New(10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\t\tTransformController.TranslateBy(self, Vector3.New(-10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\tend\r\n\r\n\tPhysicsObject.SetEnabled(self, true);\r\n\tSoundLibrary.PlayEffect("chirp1");\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0eE\x00\x00\x00%\x00\x00\x02\xcb\x00@\x00\xdc\x80\x00\x01\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x00\x0f\x80\x05\xc1\x00\x00\x06\x01A\x02@\x01\x00\x00\x81A\x01\x00\x1c\x81\x80\x01\x1a\x01\x00\x00\x16@\r\x80\x0b\x81A\x01\x1c\x81\x00\x01\x18\xc0A\x02\x16@\x0c\x80\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x00\x00\x1cA\x00\x02\x01A\x02\x00AA\x02\x00\x81A\x02\x00 A\x07\x80\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\x82\x03\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\xc2\x04\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x1f\x01\xf8\x7f\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x80\x00\x1cA\x80\x01\x05A\x05\x00\x06\x81E\x02A\xc1\x05\x00\x1cA\x00\x01\x1e\x00\x80\x00\x18\x00\x00\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\n\x00\x00\x00IsEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x02\x00\x00\x00y\x00\x03333333\xd3\xbf\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x14\x00\x00\x00TransformController\x00\x04\x0c\x00\x00\x00TranslateBy\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00$@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00$\xc0\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00E\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\n\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00D\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00D\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00D\x00\x00\x00\x10\x00\x00\x00initialPosition\x00\x03\x00\x00\x00D\x00\x00\x00\x0c\x00\x00\x00(for index)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0c\x00\x00\x00(for limit)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0b\x00\x00\x00(for step)\x00\x1b\x00\x00\x00;\x00\x00\x00\x02\x00\x00\x00i\x00\x1c\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x0c\x02\x00\x00local self, target, normal = ...;\r\n\r\nlocal initialPosition = self:position();\r\n\r\nif (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and\r\n\tnormal:y() < -0.3) then\r\n\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tfor i=1,1 do\r\n\t\tTransformController.TranslateBy(self, Vector3.New(10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\t\tTransformController.TranslateBy(self, Vector3.New(-10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\tend\r\n\r\n\tPhysicsObject.SetEnabled(self, true);\r\n\tSoundLibrary.PlayEffect("chirp1");\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0eE\x00\x00\x00%\x00\x00\x02\xcb\x00@\x00\xdc\x80\x00\x01\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x00\x0f\x80\x05\xc1\x00\x00\x06\x01A\x02@\x01\x00\x00\x81A\x01\x00\x1c\x81\x80\x01\x1a\x01\x00\x00\x16@\r\x80\x0b\x81A\x01\x1c\x81\x00\x01\x18\xc0A\x02\x16@\x0c\x80\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x00\x00\x1cA\x00\x02\x01A\x02\x00AA\x02\x00\x81A\x02\x00 A\x07\x80\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\x82\x03\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\xc2\x04\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x1f\x01\xf8\x7f\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x80\x00\x1cA\x80\x01\x05A\x05\x00\x06\x81E\x02A\xc1\x05\x00\x1cA\x00\x01\x1e\x00\x80\x00\x18\x00\x00\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\n\x00\x00\x00IsEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x02\x00\x00\x00y\x00\x03333333\xd3\xbf\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x14\x00\x00\x00TransformController\x00\x04\x0c\x00\x00\x00TranslateBy\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00$@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00$\xc0\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00E\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\n\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00D\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00D\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00D\x00\x00\x00\x10\x00\x00\x00initialPosition\x00\x03\x00\x00\x00D\x00\x00\x00\x0c\x00\x00\x00(for index)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0c\x00\x00\x00(for limit)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0b\x00\x00\x00(for step)\x00\x1b\x00\x00\x00;\x00\x00\x00\x02\x00\x00\x00i\x00\x1c\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Program'
-            Identifier : 110
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 110
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 local newObject = self:clone();
@@ -145,195 +147,196 @@ TransformController.ScaleTo(newObject, 0.01, 0);
 TransformController.ScaleTo(newObject, 1.0, 0.3);
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00n\x01\x00\x00local self = ...;\r\n\r\nlocal newObject = self:clone();\r\nnewObject:setPosition(PhysicsObject.OriginalPosition(self));\r\n\r\nPhysicsObject.SetEnabled(newObject, false);\r\nCollisionShape.SetEnabled(newObject, 107, true);\r\n\r\nProgram.Wait(2);\r\n\r\nScene.AddObject(newObject);\r\nTransformController.ScaleTo(newObject, 0.01, 0);\r\nTransformController.ScaleTo(newObject, 1.0, 0.3);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06)\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x01\x00\x86\x00A\x01\xc0\x00\x80\x00\x01\x81\x01\x00B\x01\x80\x00\x9c@\x00\x02\x85\xc0\x01\x00\x86\x00B\x01\xc1@\x02\x00\x9c@\x00\x01\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\x00\x03\x00\x86@C\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x85\x00\x03\x00\x86@C\x01\xc0\x00\x80\x00\x01\x01\x04\x00AA\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x00\x00\x00\x00)\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00(\x00\x00\x00\n\x00\x00\x00newObject\x00\x03\x00\x00\x00(\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00n\x01\x00\x00local self = ...;\r\n\r\nlocal newObject = self:clone();\r\nnewObject:setPosition(PhysicsObject.OriginalPosition(self));\r\n\r\nPhysicsObject.SetEnabled(newObject, false);\r\nCollisionShape.SetEnabled(newObject, 107, true);\r\n\r\nProgram.Wait(2);\r\n\r\nScene.AddObject(newObject);\r\nTransformController.ScaleTo(newObject, 0.01, 0);\r\nTransformController.ScaleTo(newObject, 1.0, 0.3);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06)\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x01\x00\x86\x00A\x01\xc0\x00\x80\x00\x01\x81\x01\x00B\x01\x80\x00\x9c@\x00\x02\x85\xc0\x01\x00\x86\x00B\x01\xc1@\x02\x00\x9c@\x00\x01\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\x00\x03\x00\x86@C\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x85\x00\x03\x00\x86@C\x01\xc0\x00\x80\x00\x01\x01\x04\x00AA\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x12\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x00\x00\x00\x00)\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00(\x00\x00\x00\n\x00\x00\x00newObject\x00\x03\x00\x00\x00(\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 5
+                Enabled 1
+                Trigger 5
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 113
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -41.137939453125
-                        Y : -1.274169921875
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 113
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -41.137939453125
+                        Y -1.274169921875
                     }
-                    Vertex{
-                        X : 40.745849609375
-                        Y : -1.11181640625
+                    Vertex{ # Vector2
+                        X 40.745849609375
+                        Y -1.11181640625
                     }
-                    Vertex{
-                        X : 40.54443359375
-                        Y : 10.74737548828125
+                    Vertex{ # Vector2
+                        X 40.54443359375
+                        Y 10.74737548828125
                     }
-                    Vertex{
-                        X : -41.364501953125
-                        Y : 10.53924560546875
+                    Vertex{ # Vector2
+                        X -41.364501953125
+                        Y 10.53924560546875
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -41.364501953125
-            Y : -1.274169921875
-            Width : 82.1103515625
-            Height : 13.274169921875
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -41.364501953125
+            Y -1.274169921875
+            Width 82.1103515625
+            Height 13.274169921875
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'dropping_platform0'
-        Component{
-            ClassName : 'PhysicsObject'
-            Identifier : 1
-            PhysicsObjectComponent{
-                PhysicsEnabled : 0
-                GroundDeceleration : 1500.0
-                AirDeceleration : 0.0
-                MaxSpeed : 700.0
-                AllowRotation : 0
-                Elasticity : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'dropping_platform0'
+        Component{ # Component
+            ClassName 'PhysicsObject'
+            Identifier 1
+            PhysicsObjectComponent{ # PhysicsObjectComponent
+                PhysicsEnabled 0
+                GroundDeceleration 1500.0
+                AirDeceleration 0.0
+                MaxSpeed 700.0
+                AllowRotation 0
+                Elasticity 0.0
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ParentComponentIdentifier : 102
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -48.84661865234375
-                        Y : -9.417236328125
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ParentComponentIdentifier 102
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -48.84661865234375
+                        Y -9.417236328125
                     }
-                    Vertex{
-                        X : 54.04461669921875
-                        Y : -10.31640625
+                    Vertex{ # Vector2
+                        X 54.04461669921875
+                        Y -10.31640625
                     }
-                    Vertex{
-                        X : 50.0162353515625
-                        Y : 13.7117919921875
+                    Vertex{ # Vector2
+                        X 50.0162353515625
+                        Y 13.7117919921875
                     }
-                    Vertex{
-                        X : 21.0169677734375
-                        Y : 12.03076171875
+                    Vertex{ # Vector2
+                        X 21.0169677734375
+                        Y 12.03076171875
                     }
-                    Vertex{
-                        X : -47.26104736328125
-                        Y : 13.5928955078125
+                    Vertex{ # Vector2
+                        X -47.26104736328125
+                        Y 13.5928955078125
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood0'
-                YRotation : 0.0
-                EmissionFactor : 0.30000001192092896
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 102
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -48.84661865234375
-                        Y : -9.417236328125
-                    }
-                    Vertex{
-                        X : 54.04461669921875
-                        Y : -10.31640625
-                    }
-                    Vertex{
-                        X : 50.0162353515625
-                        Y : 13.7117919921875
-                    }
-                    Vertex{
-                        X : 21.0169677734375
-                        Y : 12.03076171875
-                    }
-                    Vertex{
-                        X : -47.26104736328125
-                        Y : 13.5928955078125
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood0'
+                YRotation 0.0
+                EmissionFactor 0.30000001192092896
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'TransformController'
-            Identifier : 104
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 107
-            ShapeComponent{
-                Rectangle{
-                    X : -40.0
-                    Y : 0.0
-                    Width : 80.0
-                    Height : 10.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 102
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -48.84661865234375
+                        Y -9.417236328125
+                    }
+                    Vertex{ # Vector2
+                        X 54.04461669921875
+                        Y -10.31640625
+                    }
+                    Vertex{ # Vector2
+                        X 50.0162353515625
+                        Y 13.7117919921875
+                    }
+                    Vertex{ # Vector2
+                        X 21.0169677734375
+                        Y 12.03076171875
+                    }
+                    Vertex{ # Vector2
+                        X -47.26104736328125
+                        Y 13.5928955078125
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                OnCollide{
-                    String : $
+        }
+        Component{ # Component
+            ClassName 'TransformController'
+            Identifier 104
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 107
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -40.0
+                    Y 0.0
+                    Width 80.0
+                    Height 10.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -15.0
+                MaxDepth 15.0
+                OnCollide{ # Program
+                    String
+$
 local self, target, normal = ...;
 
 local initialPosition = self:position();
@@ -367,1193 +370,1193 @@ if (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and
     CollisionShape.SetEnabled(self, 107, true);
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00U\x03\x00\x00local self, target, normal = ...;\r\n\r\nlocal initialPosition = self:position();\r\n\r\nif (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and\r\n\tnormal:y() < -0.3) then\r\n\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tfor i=1,1 do\r\n\t\tTransformController.TranslateBy(self, Vector3.New(10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\t\tTransformController.TranslateBy(self, Vector3.New(-10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\tend\r\n\r\n\tPhysicsObject.SetEnabled(self, true);\r\n\tSoundLibrary.PlayEffect("chirp1");\r\n\r\n\tProgram.Wait(1.5);\r\n\r\n\tPhysicsObject.SetEnabled(self, false);\r\n\tself:setPosition(initialPosition);\r\n\tself:setVelocity(Vector3.New(0, 0, 0));\r\n\r\n\tTransformController.ScaleTo(self, 0.01, 0);\r\n\tProgram.Wait(0.01);\r\n\tTransformController.ScaleTo(self, 1.0, 0.5);\r\n\tProgram.Wait(0.5);\r\n\r\n\tCollisionShape.SetEnabled(self, 107, true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0es\x00\x00\x00%\x00\x00\x02\xcb\x00@\x00\xdc\x80\x00\x01\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\x1a\x80\x05\xc1\x00\x00\x06\x01A\x02@\x01\x00\x00\x81A\x01\x00\x1c\x81\x80\x01\x1a\x01\x00\x00\x16\xc0\x18\x80\x0b\x81A\x01\x1c\x81\x00\x01\x18\xc0A\x02\x16\xc0\x17\x80\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x00\x00\x1cA\x00\x02\x01A\x02\x00AA\x02\x00\x81A\x02\x00 A\x07\x80\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\x82\x03\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\xc2\x04\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x1f\x01\xf8\x7f\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x80\x00\x1cA\x80\x01\x05A\x05\x00\x06\x81E\x02A\xc1\x05\x00\x1cA\x00\x01\x05A\x04\x00\x06\x81D\x02A\x01\x06\x00\x1cA\x00\x01\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x00\x00\x1cA\x80\x01\x0bAF\x00\x80\x01\x80\x01\x1cA\x80\x01\x0b\x81F\x00\x85\x01\x03\x00\x86AC\x03\xc1\xc1\x03\x00\x01\xc2\x03\x00A\xc2\x03\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05\x81\x02\x00\x06\xc1F\x02@\x01\x00\x00\x81\x01\x07\x00\xc1\xc1\x03\x00\x1cA\x00\x02\x05A\x04\x00\x06\x81D\x02A\x01\x07\x00\x1cA\x00\x01\x05\x81\x02\x00\x06\xc1F\x02@\x01\x00\x00\x81A\x02\x00\xc1A\x07\x00\x1cA\x00\x02\x05A\x04\x00\x06\x81D\x02AA\x07\x00\x1cA\x00\x01\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x80\x00\x1cA\x00\x02\x1e\x00\x80\x00\x1e\x00\x00\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\n\x00\x00\x00IsEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x02\x00\x00\x00y\x00\x03333333\xd3\xbf\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x14\x00\x00\x00TransformController\x00\x04\x0c\x00\x00\x00TranslateBy\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00$@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00$\xc0\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x04\x0c\x00\x00\x00setPosition\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\xe0?\x00\x00\x00\x00s\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\n\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00 \x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00r\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00r\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00r\x00\x00\x00\x10\x00\x00\x00initialPosition\x00\x03\x00\x00\x00r\x00\x00\x00\x0c\x00\x00\x00(for index)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0c\x00\x00\x00(for limit)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0b\x00\x00\x00(for step)\x00\x1b\x00\x00\x00;\x00\x00\x00\x02\x00\x00\x00i\x00\x1c\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00U\x03\x00\x00local self, target, normal = ...;\r\n\r\nlocal initialPosition = self:position();\r\n\r\nif (target:identifier() == "hero" and CollisionShape.IsEnabled(self, 107) and\r\n\tnormal:y() < -0.3) then\r\n\r\n\tCollisionShape.SetEnabled(self, 107, false);\r\n\r\n\tfor i=1,1 do\r\n\t\tTransformController.TranslateBy(self, Vector3.New(10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\t\tTransformController.TranslateBy(self, Vector3.New(-10,0,0), 0.1);\r\n\t\tProgram.Wait(0.1);\r\n\tend\r\n\r\n\tPhysicsObject.SetEnabled(self, true);\r\n\tSoundLibrary.PlayEffect("chirp1");\r\n\r\n\tProgram.Wait(1.5);\r\n\r\n\tPhysicsObject.SetEnabled(self, false);\r\n\tself:setPosition(initialPosition);\r\n\tself:setVelocity(Vector3.New(0, 0, 0));\r\n\r\n\tTransformController.ScaleTo(self, 0.01, 0);\r\n\tProgram.Wait(0.01);\r\n\tTransformController.ScaleTo(self, 1.0, 0.5);\r\n\tProgram.Wait(0.5);\r\n\r\n\tCollisionShape.SetEnabled(self, 107, true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x0es\x00\x00\x00%\x00\x00\x02\xcb\x00@\x00\xdc\x80\x00\x01\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\x1a\x80\x05\xc1\x00\x00\x06\x01A\x02@\x01\x00\x00\x81A\x01\x00\x1c\x81\x80\x01\x1a\x01\x00\x00\x16\xc0\x18\x80\x0b\x81A\x01\x1c\x81\x00\x01\x18\xc0A\x02\x16\xc0\x17\x80\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x00\x00\x1cA\x00\x02\x01A\x02\x00AA\x02\x00\x81A\x02\x00 A\x07\x80\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\x82\x03\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x05\x82\x02\x00\x06\xc2B\x04@\x02\x00\x00\x85\x02\x03\x00\x86BC\x05\xc1\xc2\x04\x00\x01\xc3\x03\x00A\xc3\x03\x00\x9c\x82\x00\x02\xc1\x02\x04\x00\x1cB\x00\x02\x05B\x04\x00\x06\x82D\x04A\x02\x04\x00\x1cB\x00\x01\x1f\x01\xf8\x7f\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x80\x00\x1cA\x80\x01\x05A\x05\x00\x06\x81E\x02A\xc1\x05\x00\x1cA\x00\x01\x05A\x04\x00\x06\x81D\x02A\x01\x06\x00\x1cA\x00\x01\x05\x01\x05\x00\x06\x01B\x02@\x01\x00\x00\x82\x01\x00\x00\x1cA\x80\x01\x0bAF\x00\x80\x01\x80\x01\x1cA\x80\x01\x0b\x81F\x00\x85\x01\x03\x00\x86AC\x03\xc1\xc1\x03\x00\x01\xc2\x03\x00A\xc2\x03\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05\x81\x02\x00\x06\xc1F\x02@\x01\x00\x00\x81\x01\x07\x00\xc1\xc1\x03\x00\x1cA\x00\x02\x05A\x04\x00\x06\x81D\x02A\x01\x07\x00\x1cA\x00\x01\x05\x81\x02\x00\x06\xc1F\x02@\x01\x00\x00\x81A\x02\x00\xc1A\x07\x00\x1cA\x00\x02\x05A\x04\x00\x06\x81D\x02AA\x07\x00\x1cA\x00\x01\x05\xc1\x00\x00\x06\x01B\x02@\x01\x00\x00\x81A\x01\x00\xc2\x01\x80\x00\x1cA\x00\x02\x1e\x00\x80\x00\x1e\x00\x00\x00\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0f\x00\x00\x00CollisionShape\x00\x04\n\x00\x00\x00IsEnabled\x00\x03\x00\x00\x00\x00\x00\xc0Z@\x04\x02\x00\x00\x00y\x00\x03333333\xd3\xbf\x04\x0b\x00\x00\x00SetEnabled\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x04\x14\x00\x00\x00TransformController\x00\x04\x0c\x00\x00\x00TranslateBy\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00$@\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00$\xc0\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x04\x0c\x00\x00\x00setPosition\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\xe0?\x00\x00\x00\x00s\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\n\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x17\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1a\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1b\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1c\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1d\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00\x1f\x00\x00\x00 \x00\x00\x00\x08\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00r\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00r\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00r\x00\x00\x00\x10\x00\x00\x00initialPosition\x00\x03\x00\x00\x00r\x00\x00\x00\x0c\x00\x00\x00(for index)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0c\x00\x00\x00(for limit)\x00\x1b\x00\x00\x00;\x00\x00\x00\x0b\x00\x00\x00(for step)\x00\x1b\x00\x00\x00;\x00\x00\x00\x02\x00\x00\x00i\x00\x1c\x00\x00\x00:\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -48.84661865234375
-            Y : -10.31640625
-            Width : 102.8912353515625
-            Height : 24.0281982421875
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -48.84661865234375
+            Y -10.31640625
+            Width 102.8912353515625
+            Height 24.0281982421875
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'platformwood0'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -41.59521484375
-                        Y : 0.267578125
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'platformwood0'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -41.59521484375
+                        Y 0.267578125
                     }
-                    Vertex{
-                        X : 48.892333984375
-                        Y : 0.071533203125
+                    Vertex{ # Vector2
+                        X 48.892333984375
+                        Y 0.071533203125
                     }
-                    Vertex{
-                        X : 48.9415283203125
-                        Y : 10.55810546875
+                    Vertex{ # Vector2
+                        X 48.9415283203125
+                        Y 10.55810546875
                     }
-                    Vertex{
-                        X : -41.5526123046875
-                        Y : 10.70654296875
+                    Vertex{ # Vector2
+                        X -41.5526123046875
+                        Y 10.70654296875
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood0'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -41.59521484375
-                        Y : 0.267578125
-                    }
-                    Vertex{
-                        X : 48.892333984375
-                        Y : 0.071533203125
-                    }
-                    Vertex{
-                        X : 48.9415283203125
-                        Y : 10.55810546875
-                    }
-                    Vertex{
-                        X : -41.5526123046875
-                        Y : 10.70654296875
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood0'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -41.59521484375
+                        Y 0.267578125
+                    }
+                    Vertex{ # Vector2
+                        X 48.892333984375
+                        Y 0.071533203125
+                    }
+                    Vertex{ # Vector2
+                        X 48.9415283203125
+                        Y 10.55810546875
+                    }
+                    Vertex{ # Vector2
+                        X -41.5526123046875
+                        Y 10.70654296875
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -41.59521484375
-            Y : 0.0
-            Width : 90.5367431640625
-            Height : 10.70654296875
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -41.59521484375
+            Y 0.0
+            Width 90.5367431640625
+            Height 10.70654296875
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'platformwood1'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -68.1011962890625
-                        Y : -0.3656005859375
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'platformwood1'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -68.1011962890625
+                        Y -0.3656005859375
                     }
-                    Vertex{
-                        X : 84.3916015625
-                        Y : -0.22869873046875
+                    Vertex{ # Vector2
+                        X 84.3916015625
+                        Y -0.22869873046875
                     }
-                    Vertex{
-                        X : 84.4407958984375
-                        Y : 10.2578125
+                    Vertex{ # Vector2
+                        X 84.4407958984375
+                        Y 10.2578125
                     }
-                    Vertex{
-                        X : -68.05853271484375
-                        Y : 10.0733642578125
+                    Vertex{ # Vector2
+                        X -68.05853271484375
+                        Y 10.0733642578125
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -68.1011962890625
-                        Y : -0.3656005859375
-                    }
-                    Vertex{
-                        X : 84.3916015625
-                        Y : -0.22869873046875
-                    }
-                    Vertex{
-                        X : 84.4407958984375
-                        Y : 10.2578125
-                    }
-                    Vertex{
-                        X : -68.05853271484375
-                        Y : 10.0733642578125
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -68.1011962890625
+                        Y -0.3656005859375
+                    }
+                    Vertex{ # Vector2
+                        X 84.3916015625
+                        Y -0.22869873046875
+                    }
+                    Vertex{ # Vector2
+                        X 84.4407958984375
+                        Y 10.2578125
+                    }
+                    Vertex{ # Vector2
+                        X -68.05853271484375
+                        Y 10.0733642578125
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -68.1011962890625
-            Y : -0.3656005859375
-            Width : 152.5419921875
-            Height : 10.6234130859375
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -68.1011962890625
+            Y -0.3656005859375
+            Width 152.5419921875
+            Height 10.6234130859375
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'swingplatform2'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -77.83717346191406
-                        Y : -499.7137145996094
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'swingplatform2'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -77.83717346191406
+                        Y -499.7137145996094
                     }
-                    Vertex{
-                        X : 82.49716186523438
-                        Y : -499.4162902832031
+                    Vertex{ # Vector2
+                        X 82.49716186523438
+                        Y -499.4162902832031
                     }
-                    Vertex{
-                        X : 83.39263916015625
-                        Y : -488.2248840332031
+                    Vertex{ # Vector2
+                        X 83.39263916015625
+                        Y -488.2248840332031
                     }
-                    Vertex{
-                        X : -79.32577514648438
-                        Y : -489.0199279785156
+                    Vertex{ # Vector2
+                        X -79.32577514648438
+                        Y -489.0199279785156
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 500.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -77.83717346191406
-                        Y : -499.7137145996094
-                    }
-                    Vertex{
-                        X : 82.49716186523438
-                        Y : -499.4162902832031
-                    }
-                    Vertex{
-                        X : 83.39263916015625
-                        Y : -488.2248840332031
-                    }
-                    Vertex{
-                        X : -79.32577514648438
-                        Y : -489.0199279785156
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 500.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'PhysicsPlatform'
-            Identifier : 106
-            PhysicsPlatformComponent{
-                Mass : 1.0
-                SpringForce : 5.0
-                DecelerationForce : 0.15000000596046448
-                MinSpeed : 0.20000000298023224
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -77.83717346191406
+                        Y -499.7137145996094
+                    }
+                    Vertex{ # Vector2
+                        X 82.49716186523438
+                        Y -499.4162902832031
+                    }
+                    Vertex{ # Vector2
+                        X 83.39263916015625
+                        Y -488.2248840332031
+                    }
+                    Vertex{ # Vector2
+                        X -79.32577514648438
+                        Y -489.0199279785156
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'PhysicsPlatform'
+            Identifier 106
+            PhysicsPlatformComponent{ # PhysicsPlatformComponent
+                Mass 1.0
+                SpringForce 5.0
+                DecelerationForce 0.15000000596046448
+                MinSpeed 0.20000000298023224
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -79.32577514648438
-            Y : -499.7137145996094
-            Width : 162.71841430664062
-            Height : 499.7137145996094
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -79.32577514648438
+            Y -499.7137145996094
+            Width 162.71841430664062
+            Height 499.7137145996094
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'swingplatform3'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -157.09356689453125
-                        Y : -448.82330322265625
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'swingplatform3'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -157.09356689453125
+                        Y -448.82330322265625
                     }
-                    Vertex{
-                        X : 147.88818359375
-                        Y : -449.33184814453125
+                    Vertex{ # Vector2
+                        X 147.88818359375
+                        Y -449.33184814453125
                     }
-                    Vertex{
-                        X : 148.78363037109375
-                        Y : -438.14044189453125
+                    Vertex{ # Vector2
+                        X 148.78363037109375
+                        Y -438.14044189453125
                     }
-                    Vertex{
-                        X : -158.58221435546875
-                        Y : -438.12945556640625
+                    Vertex{ # Vector2
+                        X -158.58221435546875
+                        Y -438.12945556640625
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood3'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 450.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -157.09356689453125
-                        Y : -448.82330322265625
-                    }
-                    Vertex{
-                        X : 147.88818359375
-                        Y : -449.33184814453125
-                    }
-                    Vertex{
-                        X : 148.78363037109375
-                        Y : -438.14044189453125
-                    }
-                    Vertex{
-                        X : -158.58221435546875
-                        Y : -438.12945556640625
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood3'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 450.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'PhysicsPlatform'
-            Identifier : 106
-            PhysicsPlatformComponent{
-                Mass : 1.0
-                SpringForce : 5.0
-                DecelerationForce : 0.15000000596046448
-                MinSpeed : 0.20000000298023224
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -157.09356689453125
+                        Y -448.82330322265625
+                    }
+                    Vertex{ # Vector2
+                        X 147.88818359375
+                        Y -449.33184814453125
+                    }
+                    Vertex{ # Vector2
+                        X 148.78363037109375
+                        Y -438.14044189453125
+                    }
+                    Vertex{ # Vector2
+                        X -158.58221435546875
+                        Y -438.12945556640625
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'PhysicsPlatform'
+            Identifier 106
+            PhysicsPlatformComponent{ # PhysicsPlatformComponent
+                Mass 1.0
+                SpringForce 5.0
+                DecelerationForce 0.15000000596046448
+                MinSpeed 0.20000000298023224
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -158.58221435546875
-            Y : -449.33184814453125
-            Width : 307.3658447265625
-            Height : 449.33184814453125
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -158.58221435546875
+            Y -449.33184814453125
+            Width 307.3658447265625
+            Height 449.33184814453125
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'swingplatform6'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -175.9937744140625
-                        Y : -290.8612060546875
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'swingplatform6'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -175.9937744140625
+                        Y -290.8612060546875
                     }
-                    Vertex{
-                        X : -111.6893310546875
-                        Y : -291.3697509765625
+                    Vertex{ # Vector2
+                        X -111.6893310546875
+                        Y -291.3697509765625
                     }
-                    Vertex{
-                        X : -110.79388427734375
-                        Y : -280.1783447265625
+                    Vertex{ # Vector2
+                        X -110.79388427734375
+                        Y -280.1783447265625
                     }
-                    Vertex{
-                        X : -177.1024169921875
-                        Y : -280.1673583984375
+                    Vertex{ # Vector2
+                        X -177.1024169921875
+                        Y -280.1673583984375
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ParentComponentIdentifier : 109
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : 97.157958984375
-                        Y : -292.3404541015625
-                    }
-                    Vertex{
-                        X : 163.30938720703125
-                        Y : -291.873291015625
-                    }
-                    Vertex{
-                        X : 165.78912353515625
-                        Y : -281.4791259765625
-                    }
-                    Vertex{
-                        X : 94.49676513671875
-                        Y : -280.9990234375
-                    }
-                    Convex : 0
-                    Closed : 1
-                }
-            }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood6'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 290.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ParentComponentIdentifier 109
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 97.157958984375
+                        Y -292.3404541015625
+                    }
+                    Vertex{ # Vector2
+                        X 163.30938720703125
+                        Y -291.873291015625
+                    }
+                    Vertex{ # Vector2
+                        X 165.78912353515625
+                        Y -281.4791259765625
+                    }
+                    Vertex{ # Vector2
+                        X 94.49676513671875
+                        Y -280.9990234375
+                    }
+                    Convex 0
+                    Closed 1
                 }
             }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
+            }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -175.9937744140625
-                        Y : -290.8612060546875
-                    }
-                    Vertex{
-                        X : -111.6893310546875
-                        Y : -291.3697509765625
-                    }
-                    Vertex{
-                        X : -110.79388427734375
-                        Y : -280.1783447265625
-                    }
-                    Vertex{
-                        X : -177.1024169921875
-                        Y : -280.1673583984375
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood6'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 290.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'PhysicsPlatform'
-            Identifier : 106
-            PhysicsPlatformComponent{
-                Mass : 1.0
-                SpringForce : 5.0
-                DecelerationForce : 0.15000000596046448
-                MinSpeed : 0.20000000298023224
-            }
-        }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 109
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : 97.157958984375
-                        Y : -292.3404541015625
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -175.9937744140625
+                        Y -290.8612060546875
                     }
-                    Vertex{
-                        X : 163.30938720703125
-                        Y : -291.873291015625
+                    Vertex{ # Vector2
+                        X -111.6893310546875
+                        Y -291.3697509765625
                     }
-                    Vertex{
-                        X : 165.78912353515625
-                        Y : -281.4791259765625
+                    Vertex{ # Vector2
+                        X -110.79388427734375
+                        Y -280.1783447265625
                     }
-                    Vertex{
-                        X : 94.49676513671875
-                        Y : -280.9990234375
+                    Vertex{ # Vector2
+                        X -177.1024169921875
+                        Y -280.1673583984375
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'PhysicsPlatform'
+            Identifier 106
+            PhysicsPlatformComponent{ # PhysicsPlatformComponent
+                Mass 1.0
+                SpringForce 5.0
+                DecelerationForce 0.15000000596046448
+                MinSpeed 0.20000000298023224
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -177.1024169921875
-            Y : -292.3404541015625
-            Width : 342.89154052734375
-            Height : 292.3404541015625
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 109
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 97.157958984375
+                        Y -292.3404541015625
+                    }
+                    Vertex{ # Vector2
+                        X 163.30938720703125
+                        Y -291.873291015625
+                    }
+                    Vertex{ # Vector2
+                        X 165.78912353515625
+                        Y -281.4791259765625
+                    }
+                    Vertex{ # Vector2
+                        X 94.49676513671875
+                        Y -280.9990234375
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -177.1024169921875
+            Y -292.3404541015625
+            Width 342.89154052734375
+            Height 292.3404541015625
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'wheel1'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : 92.25921630859375
-                        Y : -107.8704833984375
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'wheel1'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 92.25921630859375
+                        Y -107.8704833984375
                     }
-                    Vertex{
-                        X : 124.35162353515625
-                        Y : -70.239013671875
+                    Vertex{ # Vector2
+                        X 124.35162353515625
+                        Y -70.239013671875
                     }
-                    Vertex{
-                        X : 137.72515869140625
-                        Y : -32.31219482421875
+                    Vertex{ # Vector2
+                        X 137.72515869140625
+                        Y -32.31219482421875
                     }
-                    Vertex{
-                        X : 138.2163848876953
-                        Y : -5.46649169921875
+                    Vertex{ # Vector2
+                        X 138.2163848876953
+                        Y -5.46649169921875
                     }
-                    Vertex{
-                        X : 123.78202819824219
-                        Y : -7.52130126953125
+                    Vertex{ # Vector2
+                        X 123.78202819824219
+                        Y -7.52130126953125
                     }
-                    Vertex{
-                        X : 125.0516357421875
-                        Y : -18.2401123046875
+                    Vertex{ # Vector2
+                        X 125.0516357421875
+                        Y -18.2401123046875
                     }
-                    Vertex{
-                        X : 110.83203125
-                        Y : -64.70001220703125
+                    Vertex{ # Vector2
+                        X 110.83203125
+                        Y -64.70001220703125
                     }
-                    Vertex{
-                        X : 83.3284912109375
-                        Y : -96.14117431640625
+                    Vertex{ # Vector2
+                        X 83.3284912109375
+                        Y -96.14117431640625
                     }
-                    Vertex{
-                        X : 44.96527099609375
-                        Y : -119.546630859375
+                    Vertex{ # Vector2
+                        X 44.96527099609375
+                        Y -119.546630859375
                     }
-                    Vertex{
-                        X : -0.31829833984375
-                        Y : -127.3916015625
+                    Vertex{ # Vector2
+                        X -0.31829833984375
+                        Y -127.3916015625
                     }
-                    Convex : 0
-                    Closed : 0
+                    Convex 0
+                    Closed 0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : 83.3284912109375
-                        Y : -96.14117431640625
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 83.3284912109375
+                        Y -96.14117431640625
                     }
-                    Vertex{
-                        X : 44.96527099609375
-                        Y : -119.546630859375
+                    Vertex{ # Vector2
+                        X 44.96527099609375
+                        Y -119.546630859375
                     }
-                    Vertex{
-                        X : -0.31829833984375
-                        Y : -127.3916015625
+                    Vertex{ # Vector2
+                        X -0.31829833984375
+                        Y -127.3916015625
                     }
-                    Vertex{
-                        X : -43.6575927734375
-                        Y : -118.67205810546875
+                    Vertex{ # Vector2
+                        X -43.6575927734375
+                        Y -118.67205810546875
                     }
-                    Vertex{
-                        X : -81.74908447265625
-                        Y : -98.10040283203125
+                    Vertex{ # Vector2
+                        X -81.74908447265625
+                        Y -98.10040283203125
                     }
-                    Vertex{
-                        X : -108.4365234375
-                        Y : -66.3941650390625
+                    Vertex{ # Vector2
+                        X -108.4365234375
+                        Y -66.3941650390625
                     }
-                    Vertex{
-                        X : -126.12060546875
-                        Y : -20.740966796875
+                    Vertex{ # Vector2
+                        X -126.12060546875
+                        Y -20.740966796875
                     }
-                    Vertex{
-                        X : -124.502197265625
-                        Y : 22.7664794921875
+                    Vertex{ # Vector2
+                        X -124.502197265625
+                        Y 22.7664794921875
                     }
-                    Vertex{
-                        X : -110.52337646484375
-                        Y : 65.193603515625
+                    Vertex{ # Vector2
+                        X -110.52337646484375
+                        Y 65.193603515625
                     }
-                    Vertex{
-                        X : -79.366943359375
-                        Y : 98.6712646484375
+                    Vertex{ # Vector2
+                        X -79.366943359375
+                        Y 98.6712646484375
                     }
-                    Convex : 0
-                    Closed : 0
+                    Convex 0
+                    Closed 0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 3
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -124.502197265625
-                        Y : 22.7664794921875
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 3
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -124.502197265625
+                        Y 22.7664794921875
                     }
-                    Vertex{
-                        X : -110.52337646484375
-                        Y : 65.193603515625
+                    Vertex{ # Vector2
+                        X -110.52337646484375
+                        Y 65.193603515625
                     }
-                    Vertex{
-                        X : -79.366943359375
-                        Y : 98.6712646484375
+                    Vertex{ # Vector2
+                        X -79.366943359375
+                        Y 98.6712646484375
                     }
-                    Vertex{
-                        X : -44.6412353515625
-                        Y : 119.900634765625
+                    Vertex{ # Vector2
+                        X -44.6412353515625
+                        Y 119.900634765625
                     }
-                    Vertex{
-                        X : 1.78460693359375
-                        Y : 128.5687255859375
+                    Vertex{ # Vector2
+                        X 1.78460693359375
+                        Y 128.5687255859375
                     }
-                    Vertex{
-                        X : 42.23211669921875
-                        Y : 121.3223876953125
+                    Vertex{ # Vector2
+                        X 42.23211669921875
+                        Y 121.3223876953125
                     }
-                    Vertex{
-                        X : 80.47039794921875
-                        Y : 98.348388671875
+                    Vertex{ # Vector2
+                        X 80.47039794921875
+                        Y 98.348388671875
                     }
-                    Vertex{
-                        X : 87.11095428466797
-                        Y : 90.406494140625
+                    Vertex{ # Vector2
+                        X 87.11095428466797
+                        Y 90.406494140625
                     }
-                    Vertex{
-                        X : 98.82844543457031
-                        Y : 97.7547607421875
+                    Vertex{ # Vector2
+                        X 98.82844543457031
+                        Y 97.7547607421875
                     }
-                    Vertex{
-                        X : 92.07344818115234
-                        Y : 106.9886474609375
+                    Vertex{ # Vector2
+                        X 92.07344818115234
+                        Y 106.9886474609375
                     }
-                    Convex : 0
-                    Closed : 0
+                    Convex 0
+                    Closed 0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 4
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : 87.11095428466797
-                        Y : 90.406494140625
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 4
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 87.11095428466797
+                        Y 90.406494140625
                     }
-                    Vertex{
-                        X : 98.82844543457031
-                        Y : 97.7547607421875
+                    Vertex{ # Vector2
+                        X 98.82844543457031
+                        Y 97.7547607421875
                     }
-                    Vertex{
-                        X : 92.07344818115234
-                        Y : 106.9886474609375
+                    Vertex{ # Vector2
+                        X 92.07344818115234
+                        Y 106.9886474609375
                     }
-                    Vertex{
-                        X : 48.509033203125
-                        Y : 133.3973388671875
+                    Vertex{ # Vector2
+                        X 48.509033203125
+                        Y 133.3973388671875
                     }
-                    Vertex{
-                        X : -0.07427978515625
-                        Y : 143.4317626953125
+                    Vertex{ # Vector2
+                        X -0.07427978515625
+                        Y 143.4317626953125
                     }
-                    Vertex{
-                        X : -46.45513916015625
-                        Y : 133.9415283203125
+                    Vertex{ # Vector2
+                        X -46.45513916015625
+                        Y 133.9415283203125
                     }
-                    Vertex{
-                        X : -90.2099609375
-                        Y : 111.086669921875
+                    Vertex{ # Vector2
+                        X -90.2099609375
+                        Y 111.086669921875
                     }
-                    Vertex{
-                        X : -108.2596435546875
-                        Y : 90.48614501953125
+                    Vertex{ # Vector2
+                        X -108.2596435546875
+                        Y 90.48614501953125
                     }
-                    Vertex{
-                        X : -123.38232421875
-                        Y : 70.9820556640625
+                    Vertex{ # Vector2
+                        X -123.38232421875
+                        Y 70.9820556640625
                     }
-                    Vertex{
-                        X : -140.2110595703125
-                        Y : 24.27294921875
+                    Vertex{ # Vector2
+                        X -140.2110595703125
+                        Y 24.27294921875
                     }
-                    Convex : 0
-                    Closed : 0
+                    Convex 0
+                    Closed 0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 5
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -108.2596435546875
-                        Y : 90.48614501953125
-                    }
-                    Vertex{
-                        X : -123.38232421875
-                        Y : 70.9820556640625
-                    }
-                    Vertex{
-                        X : -140.2110595703125
-                        Y : 24.27294921875
-                    }
-                    Vertex{
-                        X : -138.8836669921875
-                        Y : -23.5552978515625
-                    }
-                    Vertex{
-                        X : -122.5118408203125
-                        Y : -73.42578125
-                    }
-                    Vertex{
-                        X : -89.09832763671875
-                        Y : -110.5406494140625
-                    }
-                    Vertex{
-                        X : -45.89202880859375
-                        Y : -133.26495361328125
-                    }
-                    Vertex{
-                        X : 1.78936767578125
-                        Y : -142.2313232421875
-                    }
-                    Vertex{
-                        X : 51.538818359375
-                        Y : -131.6160888671875
-                    }
-                    Vertex{
-                        X : 92.25921630859375
-                        Y : -107.8704833984375
-                    }
-                    Vertex{
-                        X : 124.35162353515625
-                        Y : -70.239013671875
-                    }
-                    Vertex{
-                        X : 137.72515869140625
-                        Y : -32.31219482421875
-                    }
-                    Convex : 0
-                    Closed : 0
-                }
-            }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 100
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : 92.25921630859375
-                        Y : -107.8704833984375
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 5
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -108.2596435546875
+                        Y 90.48614501953125
                     }
-                    Vertex{
-                        X : 124.35162353515625
-                        Y : -70.239013671875
+                    Vertex{ # Vector2
+                        X -123.38232421875
+                        Y 70.9820556640625
                     }
-                    Vertex{
-                        X : 137.72515869140625
-                        Y : -32.31219482421875
+                    Vertex{ # Vector2
+                        X -140.2110595703125
+                        Y 24.27294921875
                     }
-                    Vertex{
-                        X : 138.2163848876953
-                        Y : -5.46649169921875
+                    Vertex{ # Vector2
+                        X -138.8836669921875
+                        Y -23.5552978515625
                     }
-                    Vertex{
-                        X : 123.78202819824219
-                        Y : -7.52130126953125
+                    Vertex{ # Vector2
+                        X -122.5118408203125
+                        Y -73.42578125
                     }
-                    Vertex{
-                        X : 125.0516357421875
-                        Y : -18.2401123046875
+                    Vertex{ # Vector2
+                        X -89.09832763671875
+                        Y -110.5406494140625
                     }
-                    Vertex{
-                        X : 110.83203125
-                        Y : -64.70001220703125
+                    Vertex{ # Vector2
+                        X -45.89202880859375
+                        Y -133.26495361328125
                     }
-                    Vertex{
-                        X : 83.3284912109375
-                        Y : -96.14117431640625
+                    Vertex{ # Vector2
+                        X 1.78936767578125
+                        Y -142.2313232421875
                     }
-                    Vertex{
-                        X : 44.96527099609375
-                        Y : -119.546630859375
+                    Vertex{ # Vector2
+                        X 51.538818359375
+                        Y -131.6160888671875
                     }
-                    Vertex{
-                        X : -0.31829833984375
-                        Y : -127.3916015625
+                    Vertex{ # Vector2
+                        X 92.25921630859375
+                        Y -107.8704833984375
                     }
-                    Vertex{
-                        X : -43.6575927734375
-                        Y : -118.67205810546875
+                    Vertex{ # Vector2
+                        X 124.35162353515625
+                        Y -70.239013671875
                     }
-                    Vertex{
-                        X : -81.74908447265625
-                        Y : -98.10040283203125
+                    Vertex{ # Vector2
+                        X 137.72515869140625
+                        Y -32.31219482421875
                     }
-                    Vertex{
-                        X : -108.4365234375
-                        Y : -66.3941650390625
-                    }
-                    Vertex{
-                        X : -126.12060546875
-                        Y : -20.740966796875
-                    }
-                    Vertex{
-                        X : -124.502197265625
-                        Y : 22.7664794921875
-                    }
-                    Vertex{
-                        X : -110.52337646484375
-                        Y : 65.193603515625
-                    }
-                    Vertex{
-                        X : -79.366943359375
-                        Y : 98.6712646484375
-                    }
-                    Vertex{
-                        X : -44.6412353515625
-                        Y : 119.900634765625
-                    }
-                    Vertex{
-                        X : 1.78460693359375
-                        Y : 128.5687255859375
-                    }
-                    Vertex{
-                        X : 42.23211669921875
-                        Y : 121.3223876953125
-                    }
-                    Vertex{
-                        X : 80.47039794921875
-                        Y : 98.348388671875
-                    }
-                    Vertex{
-                        X : 87.11095428466797
-                        Y : 90.406494140625
-                    }
-                    Vertex{
-                        X : 98.82844543457031
-                        Y : 97.7547607421875
-                    }
-                    Vertex{
-                        X : 92.07344818115234
-                        Y : 106.9886474609375
-                    }
-                    Vertex{
-                        X : 48.509033203125
-                        Y : 133.3973388671875
-                    }
-                    Vertex{
-                        X : -0.07427978515625
-                        Y : 143.4317626953125
-                    }
-                    Vertex{
-                        X : -46.45513916015625
-                        Y : 133.9415283203125
-                    }
-                    Vertex{
-                        X : -90.2099609375
-                        Y : 111.086669921875
-                    }
-                    Vertex{
-                        X : -108.2596435546875
-                        Y : 90.48614501953125
-                    }
-                    Vertex{
-                        X : -123.38232421875
-                        Y : 70.9820556640625
-                    }
-                    Vertex{
-                        X : -140.2110595703125
-                        Y : 24.27294921875
-                    }
-                    Vertex{
-                        X : -138.8836669921875
-                        Y : -23.5552978515625
-                    }
-                    Vertex{
-                        X : -122.5118408203125
-                        Y : -73.42578125
-                    }
-                    Vertex{
-                        X : -89.09832763671875
-                        Y : -110.5406494140625
-                    }
-                    Vertex{
-                        X : -45.89202880859375
-                        Y : -133.26495361328125
-                    }
-                    Vertex{
-                        X : 1.78936767578125
-                        Y : -142.2313232421875
-                    }
-                    Vertex{
-                        X : 51.538818359375
-                        Y : -131.6160888671875
-                    }
-                    Convex : 0
-                    Closed : 1
-                }
-                Collides : 1
-                MinDepth : -60.0
-                MaxDepth : 60.0
-                OnCollide{
+                    Convex 0
+                    Closed 0
                 }
             }
-        }
-        Component{
-            ClassName : 'PhysicsPlatform'
-            Identifier : 110
-            PhysicsPlatformComponent{
-                Mass : 1.0
-                SpringForce : 0.0
-                DecelerationForce : 0.05000000074505806
-                MinSpeed : 0.0
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'Model'
-            Identifier : 113
-            ModelComponent{
-                Name : 'wheel1'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 100
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X 92.25921630859375
+                        Y -107.8704833984375
+                    }
+                    Vertex{ # Vector2
+                        X 124.35162353515625
+                        Y -70.239013671875
+                    }
+                    Vertex{ # Vector2
+                        X 137.72515869140625
+                        Y -32.31219482421875
+                    }
+                    Vertex{ # Vector2
+                        X 138.2163848876953
+                        Y -5.46649169921875
+                    }
+                    Vertex{ # Vector2
+                        X 123.78202819824219
+                        Y -7.52130126953125
+                    }
+                    Vertex{ # Vector2
+                        X 125.0516357421875
+                        Y -18.2401123046875
+                    }
+                    Vertex{ # Vector2
+                        X 110.83203125
+                        Y -64.70001220703125
+                    }
+                    Vertex{ # Vector2
+                        X 83.3284912109375
+                        Y -96.14117431640625
+                    }
+                    Vertex{ # Vector2
+                        X 44.96527099609375
+                        Y -119.546630859375
+                    }
+                    Vertex{ # Vector2
+                        X -0.31829833984375
+                        Y -127.3916015625
+                    }
+                    Vertex{ # Vector2
+                        X -43.6575927734375
+                        Y -118.67205810546875
+                    }
+                    Vertex{ # Vector2
+                        X -81.74908447265625
+                        Y -98.10040283203125
+                    }
+                    Vertex{ # Vector2
+                        X -108.4365234375
+                        Y -66.3941650390625
+                    }
+                    Vertex{ # Vector2
+                        X -126.12060546875
+                        Y -20.740966796875
+                    }
+                    Vertex{ # Vector2
+                        X -124.502197265625
+                        Y 22.7664794921875
+                    }
+                    Vertex{ # Vector2
+                        X -110.52337646484375
+                        Y 65.193603515625
+                    }
+                    Vertex{ # Vector2
+                        X -79.366943359375
+                        Y 98.6712646484375
+                    }
+                    Vertex{ # Vector2
+                        X -44.6412353515625
+                        Y 119.900634765625
+                    }
+                    Vertex{ # Vector2
+                        X 1.78460693359375
+                        Y 128.5687255859375
+                    }
+                    Vertex{ # Vector2
+                        X 42.23211669921875
+                        Y 121.3223876953125
+                    }
+                    Vertex{ # Vector2
+                        X 80.47039794921875
+                        Y 98.348388671875
+                    }
+                    Vertex{ # Vector2
+                        X 87.11095428466797
+                        Y 90.406494140625
+                    }
+                    Vertex{ # Vector2
+                        X 98.82844543457031
+                        Y 97.7547607421875
+                    }
+                    Vertex{ # Vector2
+                        X 92.07344818115234
+                        Y 106.9886474609375
+                    }
+                    Vertex{ # Vector2
+                        X 48.509033203125
+                        Y 133.3973388671875
+                    }
+                    Vertex{ # Vector2
+                        X -0.07427978515625
+                        Y 143.4317626953125
+                    }
+                    Vertex{ # Vector2
+                        X -46.45513916015625
+                        Y 133.9415283203125
+                    }
+                    Vertex{ # Vector2
+                        X -90.2099609375
+                        Y 111.086669921875
+                    }
+                    Vertex{ # Vector2
+                        X -108.2596435546875
+                        Y 90.48614501953125
+                    }
+                    Vertex{ # Vector2
+                        X -123.38232421875
+                        Y 70.9820556640625
+                    }
+                    Vertex{ # Vector2
+                        X -140.2110595703125
+                        Y 24.27294921875
+                    }
+                    Vertex{ # Vector2
+                        X -138.8836669921875
+                        Y -23.5552978515625
+                    }
+                    Vertex{ # Vector2
+                        X -122.5118408203125
+                        Y -73.42578125
+                    }
+                    Vertex{ # Vector2
+                        X -89.09832763671875
+                        Y -110.5406494140625
+                    }
+                    Vertex{ # Vector2
+                        X -45.89202880859375
+                        Y -133.26495361328125
+                    }
+                    Vertex{ # Vector2
+                        X 1.78936767578125
+                        Y -142.2313232421875
+                    }
+                    Vertex{ # Vector2
+                        X 51.538818359375
+                        Y -131.6160888671875
+                    }
+                    Convex 0
+                    Closed 1
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Collides 1
+                MinDepth -60.0
+                MaxDepth 60.0
+                OnCollide{ # Program
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'PhysicsPlatform'
+            Identifier 110
+            PhysicsPlatformComponent{ # PhysicsPlatformComponent
+                Mass 1.0
+                SpringForce 0.0
+                DecelerationForce 0.05000000074505806
+                MinSpeed 0.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -140.2110595703125
-            Y : -142.2313232421875
-            Width : 278.42742919921875
-            Height : 285.6630859375
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 113
+            ModelComponent{ # ModelComponent
+                Name 'wheel1'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
+                }
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -140.2110595703125
+            Y -142.2313232421875
+            Width 278.42742919921875
+            Height 285.6630859375
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

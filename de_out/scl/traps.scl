@@ -1,649 +1,650 @@
 # rifted with FR v5.7.0
 
-Name : 'traps'
-Template{
-    Object{
-        Identifier : 'door_bars'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'fencetrap1'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Name 'traps'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'door_bars'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'fencetrap1'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : -15.0
-                    Y : 0.0
-                    Width : 23.0
-                    Height : 220.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -15.0
+                    Y 0.0
+                    Width 23.0
+                    Height 220.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 3
-            SoundEffectComponent{
-                Name : 'door_close'
-                Delay : 0.0
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 3
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'door_close'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 101
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'fencetrap1'
-                Repeating : 0
-                SpeedMultiplier : 0.20000000298023224
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 101
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'fencetrap1'
+                Repeating 0
+                SpeedMultiplier 0.20000000298023224
+                Running 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 105
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 105
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Component{
-            ClassName : 'DoorController'
-            Identifier : 107
-            DoorControllerComponent{
-                AnimationControllerId : 105
-                AnimationId : 101
-                Open : 1
-                CloseSoundId : 3
-                OpenSoundId : 0
+        Component{ # Component
+            ClassName 'DoorController'
+            Identifier 107
+            DoorControllerComponent{ # DoorControllerComponent
+                AnimationControllerId 105
+                AnimationId 101
+                Open 1
+                CloseSoundId 3
+                OpenSoundId 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -15.0
-            Y : 0.0
-            Width : 23.0
-            Height : 220.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -15.0
+            Y 0.0
+            Width 23.0
+            Height 220.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'fireball'
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 1
-            SimpleGlowComponent{
-                Color{
-                    R : 0.8333333134651184
-                    G : 0.29147660732269287
-                    B : 0.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball'
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 1
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.8333333134651184
+                    G 0.29147660732269287
+                    B 0.0
+                    A 0.0
                 }
-                Size : 25.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : -10.0
-                    Y : -10.0
-                    Width : 20.0
-                    Height : 20.0
+                Size 25.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 3
-            SoundEffectComponent{
-                Name : 'woosh1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 4
-            DamageComponent{
-                MinDamage : 2
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 0.0
-                MagicDamageFactor : 1.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 6
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 0.610582172870636
-                    B : 0.28888893127441406
-                    A : 1.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -10.0
+                    Y -10.0
+                    Width 20.0
+                    Height 20.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 3
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'woosh1'
+                Delay 0.0
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 4
+            DamageComponent{ # DamageComponent
+                MinDamage 2
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 0.0
+                MagicDamageFactor 1.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 6
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.610582172870636
+                    B 0.28888893127441406
+                    A 1.0
                 }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'EntityInfo'
-            Identifier : 7
-            EntityInfoComponent{
-                EntityClass : 'bolt'
-            }
-        }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 102
-            ParticleEmitterComponent{
-                ParticleId : 103
-                ParticleId : 104
-                ParticleId : 105
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 103
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 104
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 105
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'MagicBolt'
-            Identifier : 106
-            MagicBoltComponent{
-                ParticleEmitterId : 102
-                SwooshSoundId : 3
-                HitSoundId : 0
-                Color{
-                    R : 1.0
-                    G : 0.5160372257232666
-                    B : 0.009555578231811523
-                    A : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Speed : 0.0
-            }
-            SpellComponent{
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'EntityInfo'
+            Identifier 7
+            EntityInfoComponent{ # EntityInfoComponent
+                EntityClass 'bolt'
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 102
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 103
+                ParticleId 104
+                ParticleId 105
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 103
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 104
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 105
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'MagicBolt'
+            Identifier 106
+            MagicBoltComponent{ # MagicBoltComponent
+                ParticleEmitterId 102
+                SwooshSoundId 3
+                HitSoundId 0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.5160372257232666
+                    B 0.009555578231811523
+                    A 0.0
+                }
+                Speed 0.0
+            }
+            SpellComponent{ # SpellComponent
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
+        }
+        Hidden 0
     }
-    Scaling : 1.5
+    Scaling 1.5
 }
-Template{
-    Object{
-        Identifier : 'fireball_ballistic'
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 1
-            SimpleGlowComponent{
-                Color{
-                    R : 0.8333333134651184
-                    G : 0.29147660732269287
-                    B : 0.0
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball_ballistic'
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 1
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.8333333134651184
+                    G 0.29147660732269287
+                    B 0.0
+                    A 0.0
                 }
-                Size : 25.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : -10.0
-                    Y : -10.0
-                    Width : 20.0
-                    Height : 20.0
+                Size 25.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 3
-            SoundEffectComponent{
-                Name : 'woosh1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 4
-            DamageComponent{
-                MinDamage : 2
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 0.0
-                MagicDamageFactor : 1.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 6
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 1.0
-                    G : 0.610582172870636
-                    B : 0.28888893127441406
-                    A : 1.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -10.0
+                    Y -10.0
+                    Width 20.0
+                    Height 20.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 3
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'woosh1'
+                Delay 0.0
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 4
+            DamageComponent{ # DamageComponent
+                MinDamage 2
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 0.0
+                MagicDamageFactor 1.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 6
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.610582172870636
+                    B 0.28888893127441406
+                    A 1.0
                 }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'EntityInfo'
-            Identifier : 7
-            EntityInfoComponent{
-                EntityClass : 'bolt'
-            }
-        }
-        Component{
-            ClassName : 'PhysicsObject'
-            Identifier : 8
-            PhysicsObjectComponent{
-                PhysicsEnabled : 1
-                GravityMagnitude : 0.6000000238418579
-                GroundDeceleration : 1500.0
-                AirDeceleration : 0.0
-                MaxSpeed : 700.0
-                AllowRotation : 0
-                Elasticity : 0.0
-            }
-        }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 102
-            ParticleEmitterComponent{
-                ParticleId : 103
-                ParticleId : 104
-                ParticleId : 105
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 103
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 104
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 105
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'MagicBolt'
-            Identifier : 106
-            MagicBoltComponent{
-                ParticleEmitterId : 102
-                SwooshSoundId : 3
-                HitSoundId : 0
-                Color{
-                    R : 1.0
-                    G : 0.5160372257232666
-                    B : 0.009555578231811523
-                    A : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Speed : 0.0
-            }
-            SpellComponent{
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'EntityInfo'
+            Identifier 7
+            EntityInfoComponent{ # EntityInfoComponent
+                EntityClass 'bolt'
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Component{ # Component
+            ClassName 'PhysicsObject'
+            Identifier 8
+            PhysicsObjectComponent{ # PhysicsObjectComponent
+                PhysicsEnabled 1
+                GravityMagnitude 0.6000000238418579
+                GroundDeceleration 1500.0
+                AirDeceleration 0.0
+                MaxSpeed 700.0
+                AllowRotation 0
+                Elasticity 0.0
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 102
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 103
+                ParticleId 104
+                ParticleId 105
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 103
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 104
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 105
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'MagicBolt'
+            Identifier 106
+            MagicBoltComponent{ # MagicBoltComponent
+                ParticleEmitterId 102
+                SwooshSoundId 3
+                HitSoundId 0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.5160372257232666
+                    B 0.009555578231811523
+                    A 0.0
+                }
+                Speed 0.0
+            }
+            SpellComponent{ # SpellComponent
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
+        }
+        Hidden 0
     }
-    Scaling : 1.5
+    Scaling 1.5
 }
-Template{
-    Object{
-        Identifier : 'fireball_ballistic_purple'
-        Component{
-            ClassName : 'SimpleGlow'
-            Identifier : 1
-            SimpleGlowComponent{
-                Color{
-                    R : 0.5555555820465088
-                    G : 0.29147660732269287
-                    B : 0.5111111402511597
-                    A : 0.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball_ballistic_purple'
+        Component{ # Component
+            ClassName 'SimpleGlow'
+            Identifier 1
+            SimpleGlowComponent{ # SimpleGlowComponent
+                Color{ # FloatColor
+                    R 0.5555555820465088
+                    G 0.29147660732269287
+                    B 0.5111111402511597
+                    A 0.0
                 }
-                Size : 25.0
-                NumSegments : 20
-                Depth : 15.0
-                PulseAmount : 0.15000000596046448
-                PulseTime : 0.800000011920929
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 2
-            ShapeComponent{
-                Rectangle{
-                    X : -10.0
-                    Y : -10.0
-                    Width : 20.0
-                    Height : 20.0
+                Size 25.0
+                NumSegments 20
+                Depth 15.0
+                PulseAmount 0.15000000596046448
+                PulseTime 0.800000011920929
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 3
-            SoundEffectComponent{
-                Name : 'woosh1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 4
-            DamageComponent{
-                MinDamage : 2
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 0.0
-                MagicDamageFactor : 1.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'Light'
-            Identifier : 6
-            LightComponent{
-                Type : 3
-                Intensity : 2.0
-                Color{
-                    R : 0.6666666865348816
-                    G : 0.11058218032121658
-                    B : 1.0
-                    A : 1.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 2
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -10.0
+                    Y -10.0
+                    Width 20.0
+                    Height 20.0
                 }
-                LinearAttenuation : 0.0
-                QuadraticAttenuation : 0.00019999999494757503
-                Offset{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 3
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'woosh1'
+                Delay 0.0
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 4
+            DamageComponent{ # DamageComponent
+                MinDamage 2
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 0.0
+                MagicDamageFactor 1.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Light'
+            Identifier 6
+            LightComponent{ # LightComponent
+                Type 3
+                Intensity 2.0
+                Color{ # FloatColor
+                    R 0.6666666865348816
+                    G 0.11058218032121658
+                    B 1.0
+                    A 1.0
                 }
-                Radius : 250.0
-            }
-        }
-        Component{
-            ClassName : 'EntityInfo'
-            Identifier : 7
-            EntityInfoComponent{
-                EntityClass : 'bolt'
-            }
-        }
-        Component{
-            ClassName : 'PhysicsObject'
-            Identifier : 8
-            PhysicsObjectComponent{
-                PhysicsEnabled : 1
-                GravityMagnitude : 0.6000000238418579
-                GroundDeceleration : 1500.0
-                AirDeceleration : 0.0
-                MaxSpeed : 700.0
-                AllowRotation : 0
-                Elasticity : 0.0
-            }
-        }
-        Component{
-            ClassName : 'ParticleEmitter'
-            Identifier : 102
-            ParticleEmitterComponent{
-                ParticleId : 103
-                ParticleId : 104
-                ParticleId : 105
-                ModelBindingId : 0
-                MaxParticles : 30
-                ParentEmitterId : 0
-                DestroyWhenFinished : 0
-                LocalSystem : 0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 103
-            ParticleComponent{
-                TextureName : 'particle_fure_1'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 104
-            ParticleComponent{
-                TextureName : 'particle_fure_2'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'Particle'
-            Identifier : 105
-            ParticleComponent{
-                TextureName : 'particle_fure_3'
-                Size : 40.0
-            }
-        }
-        Component{
-            ClassName : 'MagicBolt'
-            Identifier : 106
-            MagicBoltComponent{
-                ParticleEmitterId : 102
-                SwooshSoundId : 3
-                HitSoundId : 0
-                Color{
-                    R : 1.0
-                    G : 0.5160372257232666
-                    B : 0.009555578231811523
-                    A : 0.0
+                LinearAttenuation 0.0
+                QuadraticAttenuation 0.00019999999494757503
+                Offset{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Speed : 0.0
-            }
-            SpellComponent{
+                Radius 250.0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'EntityInfo'
+            Identifier 7
+            EntityInfoComponent{ # EntityInfoComponent
+                EntityClass 'bolt'
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -50.0
-            Y : -50.0
-            Width : 100.0
-            Height : 100.0
+        Component{ # Component
+            ClassName 'PhysicsObject'
+            Identifier 8
+            PhysicsObjectComponent{ # PhysicsObjectComponent
+                PhysicsEnabled 1
+                GravityMagnitude 0.6000000238418579
+                GroundDeceleration 1500.0
+                AirDeceleration 0.0
+                MaxSpeed 700.0
+                AllowRotation 0
+                Elasticity 0.0
+            }
         }
-        Hidden : 0
+        Component{ # Component
+            ClassName 'ParticleEmitter'
+            Identifier 102
+            ParticleEmitterComponent{ # ParticleEmitterComponent
+                ParticleId 103
+                ParticleId 104
+                ParticleId 105
+                ModelBindingId 0
+                MaxParticles 30
+                ParentEmitterId 0
+                DestroyWhenFinished 0
+                LocalSystem 0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 103
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_1'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 104
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_2'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'Particle'
+            Identifier 105
+            ParticleComponent{ # ParticleComponent
+                TextureName 'particle_fure_3'
+                Size 40.0
+            }
+        }
+        Component{ # Component
+            ClassName 'MagicBolt'
+            Identifier 106
+            MagicBoltComponent{ # MagicBoltComponent
+                ParticleEmitterId 102
+                SwooshSoundId 3
+                HitSoundId 0
+                Color{ # FloatColor
+                    R 1.0
+                    G 0.5160372257232666
+                    B 0.009555578231811523
+                    A 0.0
+                }
+                Speed 0.0
+            }
+            SpellComponent{ # SpellComponent
+            }
+        }
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -50.0
+            Y -50.0
+            Width 100.0
+            Height 100.0
+        }
+        Hidden 0
     }
-    Scaling : 1.5
+    Scaling 1.5
 }
-Template{
-    Object{
-        Identifier : 'fireball_launcher'
-        Component{
-            ClassName : 'Program'
-            Identifier : 103
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball_launcher'
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 103
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 while true do
@@ -654,39 +655,40 @@ SoundLibrary.PlayEffect("woosh1");
 end
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe0\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 300);\r\nSoundLibrary.PlayEffect("woosh1");\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x19\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x85\x00\x03\x00\x86@C\x01\xc1\x80\x03\x00\x9c@\x00\x01\x16\x00\xfa\x7f\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00\x19\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x18\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xe0\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 300);\r\nSoundLibrary.PlayEffect("woosh1");\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x19\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x85\x00\x03\x00\x86@C\x01\xc1\x80\x03\x00\x9c@\x00\x01\x16\x00\xfa\x7f\x1e\x00\x80\x00\x0f\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00\x19\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x18\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x17\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 1
+                Enabled 1
+                Trigger 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'fireball_launcher_aimed'
-        Component{
-            ClassName : 'Program'
-            Identifier : 103
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball_launcher_aimed'
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 103
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 local target = Scene.Find("hero");
@@ -708,39 +710,40 @@ end
 end
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb6\x01\x00\x00local self = ...;\r\n\r\nlocal target = Scene.Find("hero");\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\n\r\nlocal direction = (target:position() - self:position()):normalized();\r\n\r\nlocal referenceDirection = Vector3.FromAngle(self:rotation())\r\n\r\n\r\nif direction:dot(referenceDirection) > 0.3 then\r\n\tlocal fireball = Scene.CreateObject("fireball", "f", self);\r\n\r\n\tfireball:setVelocity(direction * 300);\r\n\tSoundLibrary.PlayEffect("woosh1");\r\nend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08)\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x85\xc0\x00\x00\x86\x00A\x01\xc1@\x01\x00\x9c@\x00\x01\x8b\x80\xc1\x00\x9c\x80\x00\x01\xcb\x80A\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\x8b\xc0A\x01\x9c\x80\x00\x01\xc5\x00\x02\x00\xc6@\xc2\x01\x0b\x81B\x00\x1c\x01\x00\x01\xdc\x80\x00\x00\x0b\xc1B\x01\x80\x01\x80\x01\x1c\x81\x80\x01\x18\x00\x01\x86\x16\x80\xfa\x7f\x05\x01\x00\x00\x06AC\x02A\x81\x03\x00\x81\xc1\x03\x00\xc0\x01\x00\x00\x1c\x81\x00\x02K\x01D\x02\xceAD\x01\\A\x80\x01E\x81\x04\x00F\xc1\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x16\x00\xf7\x7f\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00normalized\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x04\x04\x00\x00\x00dot\x00\x03333333\xd3?\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00)\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00(\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00(\x00\x00\x00\n\x00\x00\x00direction\x00\x10\x00\x00\x00\'\x00\x00\x00\x13\x00\x00\x00referenceDirection\x00\x15\x00\x00\x00\'\x00\x00\x00\t\x00\x00\x00fireball\x00 \x00\x00\x00\'\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb6\x01\x00\x00local self = ...;\r\n\r\nlocal target = Scene.Find("hero");\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\n\r\nlocal direction = (target:position() - self:position()):normalized();\r\n\r\nlocal referenceDirection = Vector3.FromAngle(self:rotation())\r\n\r\n\r\nif direction:dot(referenceDirection) > 0.3 then\r\n\tlocal fireball = Scene.CreateObject("fireball", "f", self);\r\n\r\n\tfireball:setVelocity(direction * 300);\r\n\tSoundLibrary.PlayEffect("woosh1");\r\nend\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08)\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01\x85\xc0\x00\x00\x86\x00A\x01\xc1@\x01\x00\x9c@\x00\x01\x8b\x80\xc1\x00\x9c\x80\x00\x01\xcb\x80A\x00\xdc\x80\x00\x01\x8d\xc0\x00\x01\x8b\xc0A\x01\x9c\x80\x00\x01\xc5\x00\x02\x00\xc6@\xc2\x01\x0b\x81B\x00\x1c\x01\x00\x01\xdc\x80\x00\x00\x0b\xc1B\x01\x80\x01\x80\x01\x1c\x81\x80\x01\x18\x00\x01\x86\x16\x80\xfa\x7f\x05\x01\x00\x00\x06AC\x02A\x81\x03\x00\x81\xc1\x03\x00\xc0\x01\x00\x00\x1c\x81\x00\x02K\x01D\x02\xceAD\x01\\A\x80\x01E\x81\x04\x00F\xc1\xc4\x02\x81\x01\x05\x00\\A\x00\x01\x16\x00\xf7\x7f\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x05\x00\x00\x00hero\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\t\x00\x00\x00position\x00\x04\x0b\x00\x00\x00normalized\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x04\x04\x00\x00\x00dot\x00\x03333333\xd3?\x04\r\x00\x00\x00CreateObject\x00\x04\t\x00\x00\x00fireball\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x03\x00\x00\x00\x00\x00\xc0r@\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00woosh1\x00\x00\x00\x00\x00)\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00(\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00(\x00\x00\x00\n\x00\x00\x00direction\x00\x10\x00\x00\x00\'\x00\x00\x00\x13\x00\x00\x00referenceDirection\x00\x15\x00\x00\x00\'\x00\x00\x00\t\x00\x00\x00fireball\x00 \x00\x00\x00\'\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 1
+                Enabled 1
+                Trigger 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'fireball_launcher_ballistic'
-        Component{
-            ClassName : 'Program'
-            Identifier : 103
-            ProgramComponent{
-                ExecuteOnce : 1
-                Program{
-                    String : $
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'fireball_launcher_ballistic'
+        Component{ # Component
+            ClassName 'Program'
+            Identifier 103
+            ProgramComponent{ # ProgramComponent
+                ExecuteOnce 1
+                Program{ # Program
+                    String
+$
 local self = ...;
 
 while true do
@@ -750,1179 +753,1180 @@ fireball:setVelocity(Vector3.FromAngle(self:rotation()) * 600);
 end
 
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc6\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball_ballistic", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 600);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x16\x00\xfb\x7f\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x13\x00\x00\x00fireball_ballistic\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0\x82@\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc6\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\nProgram.Wait(2.0);\r\nlocal fireball = Scene.CreateObject("fireball_ballistic", "f", self);\r\nfireball:setVelocity(Vector3.FromAngle(self:rotation()) * 600);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x07\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x05\x01\x02\x00\x06AB\x02K\x81B\x00\\\x01\x00\x01\x1c\x81\x00\x00\x0e\xc1B\x02\x9c@\x80\x01\x16\x00\xfb\x7f\x1e\x00\x80\x00\x0c\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x00@\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x13\x00\x00\x00fireball_ballistic\x00\x04\x02\x00\x00\x00f\x00\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\n\x00\x00\x00FromAngle\x00\x04\t\x00\x00\x00rotation\x00\x03\x00\x00\x00\x00\x00\xc0\x82@\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\t\x00\x00\x00fireball\x00\x0b\x00\x00\x00\x13\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
-                Trigger : 1
+                Enabled 1
+                Trigger 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -10.0
-            Y : -10.0
-            Width : 20.0
-            Height : 20.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -10.0
+            Y -10.0
+            Width 20.0
+            Height 20.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'grabbable'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'grabbable'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'grabbable'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'grabbable'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 102
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 103
-                SelfUpdate : 1
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 102
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 103
+                SelfUpdate 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 103
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'grabbable_pulse'
-                Repeating : 1
-                SpeedMultiplier : 0.699999988079071
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 103
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'grabbable_pulse'
+                Repeating 1
+                SpeedMultiplier 0.699999988079071
+                Running 1
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 104
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 0.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 104
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 0.0
+                        Y 0.0
                     }
-                    Radius : 55.0
+                    Radius 55.0
                 }
             }
-            CollisionShapeComponent{
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                SpecialType : 6
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                MinDepth -15.0
+                MaxDepth 15.0
+                SpecialType 6
+                Enabled 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -55.0
-            Y : -55.0
-            Width : 110.0
-            Height : 110.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -55.0
+            Y -55.0
+            Width 110.0
+            Height 110.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'pressureplate'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 105
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -29.4775390625
-                        Y : 3.12396240234375
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'pressureplate'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 105
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -29.4775390625
+                        Y 3.12396240234375
                     }
-                    Vertex{
-                        X : 30.583251953125
-                        Y : 3.68853759765625
+                    Vertex{ # Vector2
+                        X 30.583251953125
+                        Y 3.68853759765625
                     }
-                    Vertex{
-                        X : 30.964599609375
-                        Y : 8.4600830078125
+                    Vertex{ # Vector2
+                        X 30.964599609375
+                        Y 8.4600830078125
                     }
-                    Vertex{
-                        X : -29.47314453125
-                        Y : 8.01177978515625
+                    Vertex{ # Vector2
+                        X -29.47314453125
+                        Y 8.01177978515625
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'pressureplate'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'PressureTrigger'
-            Identifier : 103
-            PressureTriggerComponent{
-                MaxHeightOffset : 5.0
-                OnPress{
-                    String : $
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'pressureplate'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
+                }
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
+                }
+            }
+        }
+        Component{ # Component
+            ClassName 'PressureTrigger'
+            Identifier 103
+            PressureTriggerComponent{ # PressureTriggerComponent
+                MaxHeightOffset 5.0
+                OnPress{ # Program
+                    String
+$
 Program.Wait(0.2);
 SoundLibrary.PlayEffect("unlock");
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x007\x00\x00\x00Program.Wait(0.2);\r\nSoundLibrary.PlayEffect("unlock");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\t\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x05\xc0\x00\x00\x06\x00A\x00A@\x01\x00\x1c@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x007\x00\x00\x00Program.Wait(0.2);\r\nSoundLibrary.PlayEffect("unlock");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\t\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x05\xc0\x00\x00\x06\x00A\x00A@\x01\x00\x1c@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
                 }
-                OnRelease{
+                OnRelease{ # Program
                 }
-                StayPressed : 1
+                StayPressed 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 105
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -29.4775390625
-                        Y : 3.12396240234375
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 105
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -29.4775390625
+                        Y 3.12396240234375
                     }
-                    Vertex{
-                        X : 30.583251953125
-                        Y : 3.68853759765625
+                    Vertex{ # Vector2
+                        X 30.583251953125
+                        Y 3.68853759765625
                     }
-                    Vertex{
-                        X : 30.964599609375
-                        Y : 8.4600830078125
+                    Vertex{ # Vector2
+                        X 30.964599609375
+                        Y 8.4600830078125
                     }
-                    Vertex{
-                        X : -29.47314453125
-                        Y : 8.01177978515625
+                    Vertex{ # Vector2
+                        X -29.47314453125
+                        Y 8.01177978515625
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -29.4775390625
-            Y : 0.0
-            Width : 60.442138671875
-            Height : 8.4600830078125
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -29.4775390625
+            Y 0.0
+            Width 60.442138671875
+            Height 8.4600830078125
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'pressureplate_frame'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'pressureplate_frame'
-                YRotation : 0.0
-                EmissionFactor : 0.5
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'pressureplate_frame'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'pressureplate_frame'
+                YRotation 0.0
+                EmissionFactor 0.5
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'spikes'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'spikes'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'spikes'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'spikes'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 2
-            SoundEffectComponent{
-                Name : 'spikes1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 101
-            ShapeComponent{
-                Rectangle{
-                    X : -67.26329803466797
-                    Y : 2.0
-                    Width : 130.2633056640625
-                    Height : 2.0
-                }
-            }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'SnappingMonsterController'
-            Identifier : 104
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 110
-                EntityId : 107
-                RoamAreaId : 0
-            }
-            SnappingMonsterControllerComponent{
-                StandAnimationId : 113
-                AttackAnimationId : 116
-                BlendAnimationId : 122
-                AttackAreaId : 125
-                AttackSoundId : 2
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 107
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 0
-            }
-            MonsterEntityComponent{
-                OnKill{
-                }
-                OnHurt{
-                }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 110
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 113
-            Label : 'down'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_down'
-                Repeating : 0
-                SpeedMultiplier : 1.0
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 116
-            Label : 'up'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_up'
-                Repeating : 0
-                SpeedMultiplier : 0.009999999776482582
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 119
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'BlendAnimation'
-            Identifier : 122
-            BlendAnimationComponent{
-                Animation1Id : 113
-                Animation2Id : 116
-                BlendTime : 0.10000000149011612
-                ReverseBlendTime : 1.0
-            }
-        }
-        Component{
-            ClassName : 'UtilityShape'
-            Identifier : 125
-            ShapeComponent{
-                Rectangle{
-                    X : -50.0
-                    Y : 0.0
-                    Width : 100.0
-                    Height : 40.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 129
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 40.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 2
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'spikes1'
+                Delay 0.0
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 101
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -67.26329803466797
+                    Y 2.0
+                    Width 130.2633056640625
+                    Height 2.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SnappingMonsterController'
+            Identifier 104
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 110
+                EntityId 107
+                RoamAreaId 0
+            }
+            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+                StandAnimationId 113
+                AttackAnimationId 116
+                BlendAnimationId 122
+                AttackAreaId 125
+                AttackSoundId 2
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 107
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 0
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 110
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 113
+            Label 'down'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_down'
+                Repeating 0
+                SpeedMultiplier 1.0
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 116
+            Label 'up'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_up'
+                Repeating 0
+                SpeedMultiplier 0.009999999776482582
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 119
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'BlendAnimation'
+            Identifier 122
+            BlendAnimationComponent{ # BlendAnimationComponent
+                Animation1Id 113
+                Animation2Id 116
+                BlendTime 0.10000000149011612
+                ReverseBlendTime 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'UtilityShape'
+            Identifier 125
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -50.0
+                    Y 0.0
+                    Width 100.0
+                    Height 40.0
+                }
+            }
+        }
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 129
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 40.0
+                        Y 0.0
                     }
-                    Radius : 40.0
+                    Radius 40.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 1
-                ControllingBoneName : 'BoneSpikes2'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 1
+                ControllingBoneName 'BoneSpikes2'
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -67.26329803466797
-            Y : 0.0
-            Width : 130.2633056640625
-            Height : 4.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -67.26329803466797
+            Y 0.0
+            Width 130.2633056640625
+            Height 4.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'spikes_continuous'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'spikes'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'spikes_continuous'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'spikes'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 2
-            SoundEffectComponent{
-                Name : 'spikes1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 101
-            ShapeComponent{
-                Rectangle{
-                    X : -67.26329803466797
-                    Y : 2.0
-                    Width : 130.2633056640625
-                    Height : 2.0
-                }
-            }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'SnappingMonsterController'
-            Identifier : 104
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 110
-                EntityId : 107
-                RoamAreaId : 0
-            }
-            SnappingMonsterControllerComponent{
-                StandAnimationId : 113
-                AttackAnimationId : 116
-                BlendAnimationId : 122
-                AttackAreaId : 125
-                AttackSoundId : 2
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 107
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 0
-            }
-            MonsterEntityComponent{
-                OnKill{
-                }
-                OnHurt{
-                }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
-            }
-        }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 110
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 0
-                SelfUpdate : 0
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 113
-            Label : 'down'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_down'
-                Repeating : 1
-                SpeedMultiplier : 1.0
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 116
-            Label : 'up'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_up'
-                Repeating : 1
-                SpeedMultiplier : 0.10000000149011612
-                Running : 1
-            }
-        }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 119
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
-            }
-        }
-        Component{
-            ClassName : 'BlendAnimation'
-            Identifier : 122
-            BlendAnimationComponent{
-                Animation1Id : 113
-                Animation2Id : 116
-                BlendTime : 0.10000000149011612
-                ReverseBlendTime : 0.4000000059604645
-            }
-        }
-        Component{
-            ClassName : 'UtilityShape'
-            Identifier : 125
-            ShapeComponent{
-                Rectangle{
-                    X : -600.0
-                    Y : 0.0
-                    Width : 1200.0
-                    Height : 300.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 129
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 40.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 2
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'spikes1'
+                Delay 0.0
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 101
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -67.26329803466797
+                    Y 2.0
+                    Width 130.2633056640625
+                    Height 2.0
+                }
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SnappingMonsterController'
+            Identifier 104
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 110
+                EntityId 107
+                RoamAreaId 0
+            }
+            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+                StandAnimationId 113
+                AttackAnimationId 116
+                BlendAnimationId 122
+                AttackAreaId 125
+                AttackSoundId 2
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 107
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 0
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
+                }
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
+            }
+        }
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 110
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 0
+                SelfUpdate 0
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 113
+            Label 'down'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_down'
+                Repeating 1
+                SpeedMultiplier 1.0
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 116
+            Label 'up'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_up'
+                Repeating 1
+                SpeedMultiplier 0.10000000149011612
+                Running 1
+            }
+        }
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 119
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
+            }
+        }
+        Component{ # Component
+            ClassName 'BlendAnimation'
+            Identifier 122
+            BlendAnimationComponent{ # BlendAnimationComponent
+                Animation1Id 113
+                Animation2Id 116
+                BlendTime 0.10000000149011612
+                ReverseBlendTime 0.4000000059604645
+            }
+        }
+        Component{ # Component
+            ClassName 'UtilityShape'
+            Identifier 125
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -600.0
+                    Y 0.0
+                    Width 1200.0
+                    Height 300.0
+                }
+            }
+        }
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 129
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 40.0
+                        Y 0.0
                     }
-                    Radius : 40.0
+                    Radius 40.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 1
-                ControllingBoneName : 'BoneSpikes2'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 1
+                ControllingBoneName 'BoneSpikes2'
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -67.26329803466797
-            Y : 0.0
-            Width : 130.2633056640625
-            Height : 4.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -67.26329803466797
+            Y 0.0
+            Width 130.2633056640625
+            Height 4.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'spikes_manual'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'spikes'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.30000001192092896
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'spikes_manual'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'spikes'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.30000001192092896
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 2
-            SoundEffectComponent{
-                Name : 'spikes1'
-                Delay : 0.0
-                Volume : 1.0
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 101
-            ShapeComponent{
-                Rectangle{
-                    X : -67.26329803466797
-                    Y : 2.0
-                    Width : 130.2633056640625
-                    Height : 2.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
+        }
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 2
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'spikes1'
+                Delay 0.0
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'SnappingMonsterController'
-            Identifier : 104
-            MonsterControllerComponent{
-                WalkSpeed : 100.0
-                AnimationControllerId : 110
-                EntityId : 107
-                RoamAreaId : 0
-            }
-            SnappingMonsterControllerComponent{
-                StandAnimationId : 113
-                AttackAnimationId : 116
-                BlendAnimationId : 122
-                AttackAreaId : 101
-                AttackSoundId : 2
-            }
-        }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 107
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 0
-            }
-            MonsterEntityComponent{
-                OnKill{
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 101
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -67.26329803466797
+                    Y 2.0
+                    Width 130.2633056640625
+                    Height 2.0
                 }
-                OnHurt{
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'SnappingMonsterController'
+            Identifier 104
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 100.0
+                AnimationControllerId 110
+                EntityId 107
+                RoamAreaId 0
+            }
+            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+                StandAnimationId 113
+                AttackAnimationId 116
+                BlendAnimationId 122
+                AttackAreaId 101
+                AttackSoundId 2
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 107
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 0
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 110
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 110
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 113
-            Label : 'down'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_down'
-                Repeating : 0
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 113
+            Label 'down'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_down'
+                Repeating 0
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 116
-            Label : 'up'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_up'
-                Repeating : 0
-                SpeedMultiplier : 0.10000000149011612
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 116
+            Label 'up'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_up'
+                Repeating 0
+                SpeedMultiplier 0.10000000149011612
+                Running 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 119
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 119
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'BlendAnimation'
-            Identifier : 122
-            BlendAnimationComponent{
-                Animation1Id : 113
-                Animation2Id : 116
-                BlendTime : 0.10000000149011612
-                ReverseBlendTime : 0.4000000059604645
+        Component{ # Component
+            ClassName 'BlendAnimation'
+            Identifier 122
+            BlendAnimationComponent{ # BlendAnimationComponent
+                Animation1Id 113
+                Animation2Id 116
+                BlendTime 0.10000000149011612
+                ReverseBlendTime 0.4000000059604645
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 129
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 40.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 129
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 40.0
+                        Y 0.0
                     }
-                    Radius : 40.0
+                    Radius 40.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 1
-                ControllingBoneName : 'BoneSpikes2'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 1
+                ControllingBoneName 'BoneSpikes2'
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -67.26329803466797
-            Y : 0.0
-            Width : 130.2633056640625
-            Height : 4.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -67.26329803466797
+            Y 0.0
+            Width 130.2633056640625
+            Height 4.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'spikes_up'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'spikes'
-                YRotation : 1.5707963705062866
-                EmissionFactor : 0.30000001192092896
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'spikes_up'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'spikes'
+                YRotation 1.5707963705062866
+                EmissionFactor 0.30000001192092896
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
-            }
-        }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 101
-            ShapeComponent{
-                Rectangle{
-                    X : -70.0
-                    Y : 30.0
-                    Width : 140.0
-                    Height : 60.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                Enabled : 1
-            }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 107
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 0
-            }
-            MonsterEntityComponent{
-                OnKill{
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 101
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -70.0
+                    Y 30.0
+                    Width 140.0
+                    Height 60.0
                 }
-                OnHurt{
+            }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                Enabled 1
+            }
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 107
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 0
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                OnHurt{ # Program
+                }
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 110
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 116
-                SelfUpdate : 1
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 110
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 116
+                SelfUpdate 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 113
-            Label : 'down'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_down'
-                Repeating : 0
-                SpeedMultiplier : 1.0
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 113
+            Label 'down'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_down'
+                Repeating 0
+                SpeedMultiplier 1.0
+                Running 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 116
-            Label : 'up'
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'spikes_up'
-                Repeating : 0
-                SpeedMultiplier : 0.10000000149011612
-                Running : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 116
+            Label 'up'
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'spikes_up'
+                Repeating 0
+                SpeedMultiplier 0.10000000149011612
+                Running 1
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 119
-            DamageComponent{
-                MinDamage : 1
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 1
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 119
+            DamageComponent{ # DamageComponent
+                MinDamage 1
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 1
+                CanBeBlocked 1
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -70.0
-            Y : 0.0
-            Width : 140.0
-            Height : 90.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -70.0
+            Y 0.0
+            Width 140.0
+            Height 90.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'swingingaxe'
-        Component{
-            ClassName : 'Model'
-            Identifier : 1
-            ModelComponent{
-                Name : 'swingingaxe'
-                YRotation : 0.7853981852531433
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'swingingaxe'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 1
+            ModelComponent{ # ModelComponent
+                Name 'swingingaxe'
+                YRotation 0.7853981852531433
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'Damage'
-            Identifier : 2
-            DamageComponent{
-                MinDamage : 2
-                DamageType : 0
-                SpecialDamageType : 0
-                PhysicalDamageFactor : 1.0
-                MagicDamageFactor : 0.0
-                IgnoreTargetImmunity : 0
-                CanBeBlocked : 1
+        Component{ # Component
+            ClassName 'Damage'
+            Identifier 2
+            DamageComponent{ # DamageComponent
+                MinDamage 2
+                DamageType 0
+                SpecialDamageType 0
+                PhysicalDamageFactor 1.0
+                MagicDamageFactor 0.0
+                IgnoreTargetImmunity 0
+                CanBeBlocked 1
             }
         }
-        Component{
-            ClassName : 'StaticMonsterController'
-            Identifier : 3
-            MonsterControllerComponent{
-                WalkSpeed : 0.0
-                AnimationControllerId : 110
-                EntityId : 103
-                RoamAreaId : 0
+        Component{ # Component
+            ClassName 'StaticMonsterController'
+            Identifier 3
+            MonsterControllerComponent{ # MonsterControllerComponent
+                WalkSpeed 0.0
+                AnimationControllerId 110
+                EntityId 103
+                RoamAreaId 0
             }
-            StaticMonsterControllerComponent{
-                AnimationId : 101
-                SoundId : 4
-                SoundId : 5
-            }
-        }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 4
-            SoundEffectComponent{
-                Name : 'axeswoosh1'
-                Delay : 0.3499999940395355
-                Volume : 1.0
+            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+                AnimationId 101
+                SoundId 4
+                SoundId 5
             }
         }
-        Component{
-            ClassName : 'SoundEffect'
-            Identifier : 5
-            SoundEffectComponent{
-                Name : 'axeswoosh1'
-                Delay : 1.600000023841858
-                Volume : 1.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 4
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'axeswoosh1'
+                Delay 0.3499999940395355
+                Volume 1.0
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 6
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 435.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'SoundEffect'
+            Identifier 5
+            SoundEffectComponent{ # SoundEffectComponent
+                Name 'axeswoosh1'
+                Delay 1.600000023841858
+                Volume 1.0
+            }
+        }
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 6
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 435.0
+                        Y 0.0
                     }
-                    Radius : 30.0
+                    Radius 30.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -100.0
-                MaxDepth : 100.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -100.0
+                MaxDepth 100.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 1
-                ControllingBoneName : 'Bone01'
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 1
+                ControllingBoneName 'Bone01'
             }
         }
-        Component{
-            ClassName : 'BoneControlledCollisionShape'
-            Identifier : 9
-            ShapeComponent{
-                Circle{
-                    Center{
-                        X : 380.0
-                        Y : 0.0
+        Component{ # Component
+            ClassName 'BoneControlledCollisionShape'
+            Identifier 9
+            ShapeComponent{ # ShapeComponent
+                Circle{ # Circle
+                    Center{ # Vector2
+                        X 380.0
+                        Y 0.0
                     }
-                    Radius : 30.0
+                    Radius 30.0
                 }
             }
-            CollisionShapeComponent{
-                InflictsDamage : 1
-                MinDepth : -100.0
-                MaxDepth : 100.0
-                Enabled : 1
+            CollisionShapeComponent{ # CollisionShapeComponent
+                InflictsDamage 1
+                MinDepth -100.0
+                MaxDepth 100.0
+                Enabled 1
             }
-            BoneControlledCollisionShapeComponent{
-                ControllingModelId : 1
-                ControllingBoneName : 'Bone01'
-            }
-        }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 101
-            KeyframeAnimationComponent{
-                ModelId : 1
-                Name : 'swingingaxe_swing'
-                Repeating : 1
-                SpeedMultiplier : 0.4000000059604645
-                Running : 1
+            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+                ControllingModelId 1
+                ControllingBoneName 'Bone01'
             }
         }
-        Component{
-            ClassName : 'MonsterEntity'
-            Identifier : 103
-            EntityComponent{
-                FacingDirection : 1
-                PhysicsEnabled : 1
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 101
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 1
+                Name 'swingingaxe_swing'
+                Repeating 1
+                SpeedMultiplier 0.4000000059604645
+                Running 1
             }
-            MonsterEntityComponent{
-                OnKill{
+        }
+        Component{ # Component
+            ClassName 'MonsterEntity'
+            Identifier 103
+            EntityComponent{ # EntityComponent
+                FacingDirection 1
+                PhysicsEnabled 1
+            }
+            MonsterEntityComponent{ # MonsterEntityComponent
+                OnKill{ # Program
                 }
-                OnHurt{
+                OnHurt{ # Program
                 }
-                GivesExperience : 1
-                DefaultDeathAnimation : 1
+                GivesExperience 1
+                DefaultDeathAnimation 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 110
-            AnimationControllerComponent{
-                ModelId : 1
-                DefaultAnimationId : 0
-                SelfUpdate : 0
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 110
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 1
+                DefaultAnimationId 0
+                SelfUpdate 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -24.258808135986328
-            Y : -6.815802097320557
-            Width : 46.25490951538086
-            Height : 538.15380859375
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -24.258808135986328
+            Y -6.815802097320557
+            Width 46.25490951538086
+            Height 538.15380859375
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

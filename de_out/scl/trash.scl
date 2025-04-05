@@ -1,441 +1,442 @@
 # rifted with FR v5.7.0
 
-Name : 'trash'
-Template{
-    Object{
-        Identifier : 'ground'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 100
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -200.0
-                        Y : -100.0
+Name 'trash'
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'ground'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 100
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -200.0
+                        Y -100.0
                     }
-                    Vertex{
-                        X : 200.0
-                        Y : -100.0
+                    Vertex{ # Vector2
+                        X 200.0
+                        Y -100.0
                     }
-                    Vertex{
-                        X : 200.0
-                        Y : 100.0
+                    Vertex{ # Vector2
+                        X 200.0
+                        Y 100.0
                     }
-                    Vertex{
-                        X : -200.0
-                        Y : 100.0
+                    Vertex{ # Vector2
+                        X -200.0
+                        Y 100.0
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 100
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -200.0
-                        Y : -100.0
-                    }
-                    Vertex{
-                        X : 200.0
-                        Y : -100.0
-                    }
-                    Vertex{
-                        X : 200.0
-                        Y : 100.0
-                    }
-                    Vertex{
-                        X : -200.0
-                        Y : 100.0
-                    }
-                    Convex : 0
-                    Closed : 1
-                }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundMesh'
-            Identifier : 101
-            GroundMeshComponent{
-                LocalAabb{
-                    X : 0.0
-                    Y : 0.0
-                    Width : 0.0
-                    Height : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 100
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -200.0
+                        Y -100.0
+                    }
+                    Vertex{ # Vector2
+                        X 200.0
+                        Y -100.0
+                    }
+                    Vertex{ # Vector2
+                        X 200.0
+                        Y 100.0
+                    }
+                    Vertex{ # Vector2
+                        X -200.0
+                        Y 100.0
+                    }
+                    Convex 0
+                    Closed 1
                 }
-                Color{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
                 }
             }
         }
-        Component{
-            ClassName : 'GroundMeshGenerator'
-            Identifier : 102
-            GroundMeshGeneratorComponent{
-                GroundPolygonId : 100
-                TargetMeshId : 101
-                FrontTextureMappingId : 105
-                SurfaceTextureMappingId : 105
-                RandomSeed : 0
-                HorizNoise : 0.0
-                MeshType : 0
-                SurfaceWidth : 100.0
-                HatHeight : 25.0
-                HatWidthOffset1 : 5.0
-                HatWidthOffset2 : 5.0
-            }
-        }
-        Component{
-            ClassName : 'TextureMapping'
-            Identifier : 105
-            TextureMappingComponent{
-                TextureName : 'bluebricks'
-                Scale : 250.0
-                Offset{
-                    X : 0.0
-                    Y : 0.0
+        Component{ # Component
+            ClassName 'GroundMesh'
+            Identifier 101
+            GroundMeshComponent{ # GroundMeshComponent
+                LocalAabb{ # Rectangle
+                    X 0.0
+                    Y 0.0
+                    Width 0.0
+                    Height 0.0
+                }
+                Color{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundMeshGenerator'
+            Identifier 102
+            GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+                GroundPolygonId 100
+                TargetMeshId 101
+                FrontTextureMappingId 105
+                SurfaceTextureMappingId 105
+                RandomSeed 0
+                HorizNoise 0.0
+                MeshType 0
+                SurfaceWidth 100.0
+                HatHeight 25.0
+                HatWidthOffset1 5.0
+                HatWidthOffset2 5.0
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -200.0
-            Y : -100.0
-            Width : 400.0
-            Height : 200.0
+        Component{ # Component
+            ClassName 'TextureMapping'
+            Identifier 105
+            TextureMappingComponent{ # TextureMappingComponent
+                TextureName 'bluebricks'
+                Scale 250.0
+                Offset{ # Vector2
+                    X 0.0
+                    Y 0.0
+                }
+            }
         }
-        Hidden : 0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
+        }
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -200.0
+            Y -100.0
+            Width 400.0
+            Height 200.0
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'hangingplatofm'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'platformwood2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'hangingplatofm'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'platformwood2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'laituri'
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 1
-            ParentComponentIdentifier : 103
-            ShapeComponent{
-                Polygon{
-                    Vertex{
-                        X : -44.53194808959961
-                        Y : -7.654847621917725
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'laituri'
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 1
+            ParentComponentIdentifier 103
+            ShapeComponent{ # ShapeComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -44.53194808959961
+                        Y -7.654847621917725
                     }
-                    Vertex{
-                        X : 45.784114837646484
-                        Y : -3.8942670822143555
+                    Vertex{ # Vector2
+                        X 45.784114837646484
+                        Y -3.8942670822143555
                     }
-                    Vertex{
-                        X : 47.63790512084961
-                        Y : -0.4207402169704437
+                    Vertex{ # Vector2
+                        X 47.63790512084961
+                        Y -0.4207402169704437
                     }
-                    Vertex{
-                        X : -38.140811920166016
-                        Y : -0.9269309639930725
+                    Vertex{ # Vector2
+                        X -38.140811920166016
+                        Y -0.9269309639930725
                     }
-                    Convex : 0
-                    Closed : 1
+                    Convex 0
+                    Closed 1
                 }
             }
-            CollisionShapeComponent{
-                IsGround : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                Enabled : 1
-            }
-        }
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'laituri_strong'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
-                }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
-                }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
-                }
+            CollisionShapeComponent{ # CollisionShapeComponent
+                IsGround 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'GroundPolygon'
-            Identifier : 103
-            GroundPolygonComponent{
-                Polygon{
-                    Vertex{
-                        X : -44.53194808959961
-                        Y : -7.654847621917725
-                    }
-                    Vertex{
-                        X : 45.784114837646484
-                        Y : -3.8942670822143555
-                    }
-                    Vertex{
-                        X : 47.63790512084961
-                        Y : -0.4207402169704437
-                    }
-                    Vertex{
-                        X : -38.140811920166016
-                        Y : -0.9269309639930725
-                    }
-                    Convex : 0
-                    Closed : 1
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'laituri_strong'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Collides : 1
-                MinDepth : -50.0
-                MaxDepth : 50.0
-                OnCollide{
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
+                }
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Component{ # Component
+            ClassName 'GroundPolygon'
+            Identifier 103
+            GroundPolygonComponent{ # GroundPolygonComponent
+                Polygon{ # Polygon
+                    Vertex{ # Vector2
+                        X -44.53194808959961
+                        Y -7.654847621917725
+                    }
+                    Vertex{ # Vector2
+                        X 45.784114837646484
+                        Y -3.8942670822143555
+                    }
+                    Vertex{ # Vector2
+                        X 47.63790512084961
+                        Y -0.4207402169704437
+                    }
+                    Vertex{ # Vector2
+                        X -38.140811920166016
+                        Y -0.9269309639930725
+                    }
+                    Convex 0
+                    Closed 1
+                }
+                Collides 1
+                MinDepth -50.0
+                MaxDepth 50.0
+                OnCollide{ # Program
+                }
+            }
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -44.53194808959961
-            Y : -7.654847621917725
-            Width : 92.16985321044922
-            Height : 7.654847621917725
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Hidden : 0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -44.53194808959961
+            Y -7.654847621917725
+            Width 92.16985321044922
+            Height 7.654847621917725
+        }
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'tree'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'treek'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'tree'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'treek'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'tree2'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'treek2'
-                YRotation : 0.0
-                EmissionFactor : 0.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 0.0
-                    G : 0.0
-                    B : 0.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'tree2'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'treek2'
+                YRotation 0.0
+                EmissionFactor 0.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 0.0
+                    G 0.0
+                    B 0.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : 0.0
-            Y : 0.0
-            Width : 0.0
-            Height : 0.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X 0.0
+            Y 0.0
+            Width 0.0
+            Height 0.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }
-Template{
-    Object{
-        Identifier : 'web_trampoline'
-        Component{
-            ClassName : 'Model'
-            Identifier : 101
-            ModelComponent{
-                Name : 'web_trampoline'
-                YRotation : 0.0
-                EmissionFactor : 1.0
-                XRotation : 0.0
-                ShatterColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+Template{ # ObjectTemplate
+    Object{ # SceneObject
+        Identifier 'web_trampoline'
+        Component{ # Component
+            ClassName 'Model'
+            Identifier 101
+            ModelComponent{ # ModelComponent
+                Name 'web_trampoline'
+                YRotation 0.0
+                EmissionFactor 1.0
+                XRotation 0.0
+                ShatterColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
-                Origin{
-                    X : 0.0
-                    Y : 0.0
-                    Z : 0.0
+                Origin{ # Vector3
+                    X 0.0
+                    Y 0.0
+                    Z 0.0
                 }
-                Transparent : 0
-                DiffuseColor{
-                    R : 1.0
-                    G : 1.0
-                    B : 1.0
-                    A : 1.0
+                Transparent 0
+                DiffuseColor{ # FloatColor
+                    R 1.0
+                    G 1.0
+                    B 1.0
+                    A 1.0
                 }
             }
         }
-        Component{
-            ClassName : 'CollisionShape'
-            Identifier : 103
-            ShapeComponent{
-                Rectangle{
-                    X : -60.0
-                    Y : 0.0
-                    Width : 120.0
-                    Height : 30.0
+        Component{ # Component
+            ClassName 'CollisionShape'
+            Identifier 103
+            ShapeComponent{ # ShapeComponent
+                Rectangle{ # Rectangle
+                    X -60.0
+                    Y 0.0
+                    Width 120.0
+                    Height 30.0
                 }
             }
-            CollisionShapeComponent{
-                Collides : 1
-                MinDepth : -15.0
-                MaxDepth : 15.0
-                OnCollide{
-                    String : $
+            CollisionShapeComponent{ # CollisionShapeComponent
+                Collides 1
+                MinDepth -15.0
+                MaxDepth 15.0
+                OnCollide{ # Program
+                    String
+$
 local self, target, normal = ...;
 
 local animation = 106;
@@ -449,45 +450,45 @@ if (target:identifier() == "hero") and (normal:y() < -0.5) then
 
 end
 $end
-                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self, target, normal = ...;\r\n\r\nlocal animation = 106;\r\n\r\nif (target:identifier() == "hero") and (normal:y() < -0.5) then\r\n\tKeyframeAnimation.SetRunning(self, animation, true);\r\n\tKeyframeAnimation.SetCurrentTime(self, animation, 0);\r\n\tProgram.Wait(0.10)\r\n\ttarget:setVelocity(Vector3.New(target:velocity():x(), 700, 0));\r\n\tProgram.Wait(KeyframeAnimation.TimeToCompletion(self,animation));\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n.\x00\x00\x00%\x00\x00\x02\xc1\x00\x00\x00\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\t\x80\x0b\xc1@\x01\x1c\x81\x00\x01\x18\x00A\x02\x16\x80\x08\x80\x05A\x01\x00\x06\x81A\x02@\x01\x00\x00\x80\x01\x80\x01\xc2\x01\x80\x00\x1cA\x00\x02\x05A\x01\x00\x06\xc1A\x02@\x01\x00\x00\x80\x01\x80\x01\xc1\x01\x02\x00\x1cA\x00\x02\x05A\x02\x00\x06\x81B\x02A\xc1\x02\x00\x1cA\x00\x01\x0b\x01\xc3\x00\x85A\x03\x00\x86\x81C\x03\xcb\xc1\xc3\x00\xdc\x81\x00\x01\xcb\x01\xc4\x03\xdc\x81\x00\x01\x01B\x04\x00A\x02\x02\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05A\x02\x00\x06\x81B\x02EA\x01\x00F\x81\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x01\\\x01\x80\x01\x1cA\x00\x00\x1e\x00\x80\x00\x13\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80Z@\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00\xe0\xbf\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0b\x00\x00\x00SetRunning\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00velocity\x00\x04\x02\x00\x00\x00x\x00\x03\x00\x00\x00\x00\x00\xe0\x85@\x04\x11\x00\x00\x00TimeToCompletion\x00\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00-\x00\x00\x00\n\x00\x00\x00animation\x00\x02\x00\x00\x00-\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x90\x01\x00\x00local self, target, normal = ...;\r\n\r\nlocal animation = 106;\r\n\r\nif (target:identifier() == "hero") and (normal:y() < -0.5) then\r\n\tKeyframeAnimation.SetRunning(self, animation, true);\r\n\tKeyframeAnimation.SetCurrentTime(self, animation, 0);\r\n\tProgram.Wait(0.10)\r\n\ttarget:setVelocity(Vector3.New(target:velocity():x(), 700, 0));\r\n\tProgram.Wait(KeyframeAnimation.TimeToCompletion(self,animation));\r\n\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n.\x00\x00\x00%\x00\x00\x02\xc1\x00\x00\x00\x0bA\xc0\x00\x1c\x81\x00\x01\x17\x80@\x02\x16\x80\t\x80\x0b\xc1@\x01\x1c\x81\x00\x01\x18\x00A\x02\x16\x80\x08\x80\x05A\x01\x00\x06\x81A\x02@\x01\x00\x00\x80\x01\x80\x01\xc2\x01\x80\x00\x1cA\x00\x02\x05A\x01\x00\x06\xc1A\x02@\x01\x00\x00\x80\x01\x80\x01\xc1\x01\x02\x00\x1cA\x00\x02\x05A\x02\x00\x06\x81B\x02A\xc1\x02\x00\x1cA\x00\x01\x0b\x01\xc3\x00\x85A\x03\x00\x86\x81C\x03\xcb\xc1\xc3\x00\xdc\x81\x00\x01\xcb\x01\xc4\x03\xdc\x81\x00\x01\x01B\x04\x00A\x02\x02\x00\x9c\x01\x00\x02\x1cA\x00\x00\x05A\x02\x00\x06\x81B\x02EA\x01\x00F\x81\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x01\\\x01\x80\x01\x1cA\x00\x00\x1e\x00\x80\x00\x13\x00\x00\x00\x03\x00\x00\x00\x00\x00\x80Z@\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x02\x00\x00\x00y\x00\x03\x00\x00\x00\x00\x00\x00\xe0\xbf\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0b\x00\x00\x00SetRunning\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00setVelocity\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x04\t\x00\x00\x00velocity\x00\x04\x02\x00\x00\x00x\x00\x03\x00\x00\x00\x00\x00\xe0\x85@\x04\x11\x00\x00\x00TimeToCompletion\x00\x00\x00\x00\x00.\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0c\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00-\x00\x00\x00\x07\x00\x00\x00normal\x00\x01\x00\x00\x00-\x00\x00\x00\n\x00\x00\x00animation\x00\x02\x00\x00\x00-\x00\x00\x00\x00\x00\x00\x00'
                 }
-                Enabled : 1
+                Enabled 1
             }
         }
-        Component{
-            ClassName : 'AnimationController'
-            Identifier : 105
-            AnimationControllerComponent{
-                ModelId : 101
-                DefaultAnimationId : 106
-                SelfUpdate : 1
+        Component{ # Component
+            ClassName 'AnimationController'
+            Identifier 105
+            AnimationControllerComponent{ # AnimationControllerComponent
+                ModelId 101
+                DefaultAnimationId 106
+                SelfUpdate 1
             }
         }
-        Component{
-            ClassName : 'KeyframeAnimation'
-            Identifier : 106
-            KeyframeAnimationComponent{
-                ModelId : 101
-                Name : 'web_trampoline'
-                Repeating : 0
-                SpeedMultiplier : 2.0
-                Running : 0
+        Component{ # Component
+            ClassName 'KeyframeAnimation'
+            Identifier 106
+            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+                ModelId 101
+                Name 'web_trampoline'
+                Repeating 0
+                SpeedMultiplier 2.0
+                Running 0
             }
         }
-        Position{
-            X : 0.0
-            Y : 0.0
+        Position{ # Vector2
+            X 0.0
+            Y 0.0
         }
-        Depth : 0.0
-        Rotation : 0.0
-        Scaling : 1.0
-        LocalAabb{
-            X : -60.0
-            Y : 0.0
-            Width : 120.0
-            Height : 30.0
+        Depth 0.0
+        Rotation 0.0
+        Scaling 1.0
+        LocalAabb{ # Rectangle
+            X -60.0
+            Y 0.0
+            Width 120.0
+            Height 30.0
         }
-        Hidden : 0
+        Hidden 0
     }
-    Scaling : 1.0
+    Scaling 1.0
 }

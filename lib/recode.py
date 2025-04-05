@@ -92,7 +92,7 @@ def lex(lines: str) -> "list[str]":
 
     return lex_list
 
-def recode(filepath: str) -> bytes:
+def recode(args) -> bytes:
 
     def varint(num: int) -> bytes:
         if num == 0:
@@ -121,7 +121,7 @@ def recode(filepath: str) -> bytes:
         pointer_len = 0
 
         for i in range(-3, 3):
-            if lexeme_number + i >= 0:
+            if lexeme_number + i >= 0 and lexeme_number + i < len(lex_list):
                 lexeme = lex_list[lexeme_number +i]
                 lexeme = lexeme.replace("\n","")
                 if lexeme == "<newline>":
@@ -147,27 +147,13 @@ def recode(filepath: str) -> bytes:
 
         return
 
+    file_content = args[0]
+    filepath = args[1]
+
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
-    if not filetype_match:
-        print("file has no extension: "+filepath)
-        return b""
-    else:
+    if filetype_match:
         filetype = filetype_match.group(1)
-    
-    if not filetype in block_formats.file_types:
-        print("unrecognized file extension: ", filetype)
-        return b""
-
-    with open(filepath, "r") as file:
-        file_content = file.read()
-
-    file_content = re.sub(r"\$([a-z\.\$]{3,25})\[([^\]]*)\]", util.template, file_content)
-
-    # --- compare checksum against manifest ---
-    edited = util.edit_test(bytes(file_content, "latin1"), filepath)
-    if not edited and not config.allways_recode:
-        return b""
 
     lex_list = lex(file_content)
 
@@ -188,7 +174,6 @@ def recode(filepath: str) -> bytes:
 
     mode = "tag"
     last_mode = "tag"
-    last_chunk = b""
 
     comments_list = ["#","--","//"]
 
@@ -204,7 +189,6 @@ def recode(filepath: str) -> bytes:
                 last_mode = mode
                 mode = "comment"
                 continue
-
         if lexeme == "<newline>":
             line_num += 1
             continue
@@ -268,41 +252,35 @@ def recode(filepath: str) -> bytes:
                 continue
 
             if (
-            lexeme in ["@comp", "@compile"]
+                lexeme in ["@comp", "@compile"]
             or
-            (
+                (
                 config.compile_mode == "all"
                 and
                 tagname in block_formats.compile_tags
                 )
             ):
-                with open("./.luac.in", "wb") as file: file.write(last_chunk)
+                chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
+                args = "./lib/luac -s -o "+chunk_cache_path+"%out "+chunk_cache_path
+                luac_out = subprocess.getoutput(args)
 
-                try:
-                    args = (
-                        "./.luac",
-                        "-s",
-                        "-o",
-                        "./.luac.out",
-                        "./.luac.in"
-                    )
-                    popen = subprocess.Popen(args)
-                    popen.wait()
-                except:
-                    print("failed to compile secondary_chunk")
-                    print("this feature only works on linux")
-                    print("defaulting to empty string")
-                    lexeme = ""
-                else:
-                    compiled_chunk = b""
-                    with open("./.luac.out", "rb") as file:
-                        compiled_chunk = file.read()
-                    out_bytes[metalevel] += varint(tagnumber)
-                    out_bytes[metalevel] += varint(len(compiled_chunk))
-                    out_bytes[metalevel] += compiled_chunk
-                    last_mode = mode
-                    mode = "tag"
-                    continue
+                if luac_out != "":
+                    matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
+                    if not matches == None:
+                        chunk_line = int(matches.group(1))
+                        chunk_err = matches.group(2)
+                        show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
+                        mode = "tag"
+                        continue
+
+                with open(chunk_cache_path+"%out", "rb") as file:
+                    chunk_content = file.read()
+                out_bytes[metalevel] += varint(tagnumber)
+                out_bytes[metalevel] += varint(len(chunk_content))
+                out_bytes[metalevel] += chunk_content
+                last_mode = mode
+                mode = "tag"
+                continue
 
 
 
@@ -326,7 +304,7 @@ def recode(filepath: str) -> bytes:
                     data = float(lexeme)
                 out_bytes[metalevel] += struct.pack("<d", data)
             if wiretype == 2:
-                if ltype != "string":
+                if not ltype in ["string", "compile_mark"]:
                     show_error("type error", "expected string, got "+ltype)
                     return b""
                 data = bytes(lexeme, "latin1").decode("unicode-escape")
@@ -348,12 +326,13 @@ def recode(filepath: str) -> bytes:
             mode = "tag"
 
         if mode == "chunk":
-            with open("./.luac.in", "w") as file:
+            chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
+            with open(chunk_cache_path, "w") as file:
                 file.write(lexeme)
-            args = "./.luac -p ./.luac.in"
+            args = "./lib/luac -p "+chunk_cache_path
             luac_out = subprocess.getoutput(args)
             if luac_out != "":
-                matches = re.match(r"\./\.luac: \./\.luac.in:(\d+): (.+)", luac_out)
+                matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
                 if not matches == None:
                     chunk_line = int(matches.group(1))
                     chunk_err = matches.group(2)
@@ -364,9 +343,13 @@ def recode(filepath: str) -> bytes:
             out_bytes[metalevel] += varint(tagnumber)
             out_bytes[metalevel] += varint(len(lexeme))
             out_bytes[metalevel] += bytes(lexeme, "latin1")
-            last_chunk = bytes(lexeme, "latin1")
             last_mode = mode
             mode = "tag"
 
+
+    if filepath[0] != "/":
+        filepath = filepath[len("./re_in/"):]
+    if len(out_bytes[0]) != 0:
+        print("recoded: "+filepath)
 
     return out_bytes[0]

@@ -1,375 +1,375 @@
 # rifted with FR v5.7.0
 
-Name : 'ui_game2_atlas'
-PixelFormat : 0
-Subtexture{
-    Name : 'ui_character_frame'
-    Bounds{
-        X : 0.0
-        Y : 0.0
-        Width : 290.0
-        Height : 82.0
+Name 'ui_game2_atlas'
+PixelFormat 0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_character_frame'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 0.0
+        Width 290.0
+        Height 82.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_main_button_small'
-    Bounds{
-        X : 5.0
-        Y : 185.0
-        Width : 12.0
-        Height : 18.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_main_button_small'
+    Bounds{ # Rectangle
+        X 5.0
+        Y 185.0
+        Width 12.0
+        Height 18.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_main_button_small_pressed'
-    Bounds{
-        X : 430.0
-        Y : 258.0
-        Width : 12.0
-        Height : 18.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_main_button_small_pressed'
+    Bounds{ # Rectangle
+        X 430.0
+        Y 258.0
+        Width 12.0
+        Height 18.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_main_button'
-    Bounds{
-        X : 95.0
-        Y : 195.0
-        Width : 26.0
-        Height : 26.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_main_button'
+    Bounds{ # Rectangle
+        X 95.0
+        Y 195.0
+        Width 26.0
+        Height 26.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_main_button_pressed'
-    Bounds{
-        X : 68.0
-        Y : 185.0
-        Width : 26.0
-        Height : 26.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_main_button_pressed'
+    Bounds{ # Rectangle
+        X 68.0
+        Y 185.0
+        Width 26.0
+        Height 26.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_itemslot'
-    Bounds{
-        X : 291.0
-        Y : 0.0
-        Width : 72.0
-        Height : 72.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_itemslot'
+    Bounds{ # Rectangle
+        X 291.0
+        Y 0.0
+        Width 72.0
+        Height 72.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_itemslot_glow'
-    Bounds{
-        X : 423.0
-        Y : 136.0
-        Width : 46.0
-        Height : 46.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_itemslot_glow'
+    Bounds{ # Rectangle
+        X 423.0
+        Y 136.0
+        Width 46.0
+        Height 46.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_stripe'
-    Bounds{
-        X : 0.0
-        Y : 230.0
-        Width : 510.0
-        Height : 27.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_stripe'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 230.0
+        Width 510.0
+        Height 27.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_stripe_tag'
-    Bounds{
-        X : 151.0
-        Y : 197.0
-        Width : 134.0
-        Height : 29.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_stripe_tag'
+    Bounds{ # Rectangle
+        X 151.0
+        Y 197.0
+        Width 134.0
+        Height 29.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_container'
-    Bounds{
-        X : 425.0
-        Y : 0.0
-        Width : 60.0
-        Height : 60.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_container'
+    Bounds{ # Rectangle
+        X 425.0
+        Y 0.0
+        Width 60.0
+        Height 60.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_button'
-    Bounds{
-        X : 32.0
-        Y : 83.0
-        Width : 116.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_button'
+    Bounds{ # Rectangle
+        X 32.0
+        Y 83.0
+        Width 116.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_menu_button_pressed'
-    Bounds{
-        X : 0.0
-        Y : 134.0
-        Width : 116.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_menu_button_pressed'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 134.0
+        Width 116.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_mainmenu_button'
-    Bounds{
-        X : 210.0
-        Y : 83.0
-        Width : 150.0
-        Height : 62.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_mainmenu_button'
+    Bounds{ # Rectangle
+        X 210.0
+        Y 83.0
+        Width 150.0
+        Height 62.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_mainmenu_button_pressed'
-    Bounds{
-        X : 361.0
-        Y : 73.0
-        Width : 150.0
-        Height : 62.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_mainmenu_button_pressed'
+    Bounds{ # Rectangle
+        X 361.0
+        Y 73.0
+        Width 150.0
+        Height 62.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_button_facebook'
-    Bounds{
-        X : 117.0
-        Y : 144.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_button_facebook'
+    Bounds{ # Rectangle
+        X 117.0
+        Y 144.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_button_facebook_pressed'
-    Bounds{
-        X : 168.0
-        Y : 146.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_button_facebook_pressed'
+    Bounds{ # Rectangle
+        X 168.0
+        Y 146.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_button_twitter'
-    Bounds{
-        X : 219.0
-        Y : 146.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_button_twitter'
+    Bounds{ # Rectangle
+        X 219.0
+        Y 146.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_button_twitter_pressed'
-    Bounds{
-        X : 270.0
-        Y : 146.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_button_twitter_pressed'
+    Bounds{ # Rectangle
+        X 270.0
+        Y 146.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_guide_toggle_off'
-    Bounds{
-        X : 149.0
-        Y : 83.0
-        Width : 60.0
-        Height : 60.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_guide_toggle_off'
+    Bounds{ # Rectangle
+        X 149.0
+        Y 83.0
+        Width 60.0
+        Height 60.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_guide_toggle_on'
-    Bounds{
-        X : 364.0
-        Y : 0.0
-        Width : 60.0
-        Height : 60.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_guide_toggle_on'
+    Bounds{ # Rectangle
+        X 364.0
+        Y 0.0
+        Width 60.0
+        Height 60.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_guide_buy'
-    Bounds{
-        X : 0.0
-        Y : 83.0
-        Width : 31.0
-        Height : 39.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_guide_buy'
+    Bounds{ # Rectangle
+        X 0.0
+        Y 83.0
+        Width 31.0
+        Height 39.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_guide_buy_pressed'
-    Bounds{
-        X : 470.0
-        Y : 136.0
-        Width : 31.0
-        Height : 39.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_guide_buy_pressed'
+    Bounds{ # Rectangle
+        X 470.0
+        Y 136.0
+        Width 31.0
+        Height 39.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_guide_arrow'
-    Bounds{
-        X : 321.0
-        Y : 146.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_guide_arrow'
+    Bounds{ # Rectangle
+        X 321.0
+        Y 146.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_edge'
-    Bounds{
-        X : 502.0
-        Y : 136.0
-        Width : 6.0
-        Height : 6.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_edge'
+    Bounds{ # Rectangle
+        X 502.0
+        Y 136.0
+        Width 6.0
+        Height 6.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_end'
-    Bounds{
-        X : 372.0
-        Y : 136.0
-        Width : 50.0
-        Height : 50.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_end'
+    Bounds{ # Rectangle
+        X 372.0
+        Y 136.0
+        Width 50.0
+        Height 50.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_end_noarrow'
-    Bounds{
-        X : 477.0
-        Y : 176.0
-        Width : 34.0
-        Height : 34.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_end_noarrow'
+    Bounds{ # Rectangle
+        X 477.0
+        Y 176.0
+        Width 34.0
+        Height 34.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_icon_key'
-    Bounds{
-        X : 489.0
-        Y : 258.0
-        Width : 22.0
-        Height : 22.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_icon_key'
+    Bounds{ # Rectangle
+        X 489.0
+        Y 258.0
+        Width 22.0
+        Height 22.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_icon_quest'
-    Bounds{
-        X : 466.0
-        Y : 258.0
-        Width : 22.0
-        Height : 22.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_icon_quest'
+    Bounds{ # Rectangle
+        X 466.0
+        Y 258.0
+        Width 22.0
+        Height 22.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_icon_spell'
-    Bounds{
-        X : 443.0
-        Y : 258.0
-        Width : 22.0
-        Height : 22.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_icon_spell'
+    Bounds{ # Rectangle
+        X 443.0
+        Y 258.0
+        Width 22.0
+        Height 22.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_node'
-    Bounds{
-        X : 419.0
-        Y : 258.0
-        Width : 10.0
-        Height : 10.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_node'
+    Bounds{ # Rectangle
+        X 419.0
+        Y 258.0
+        Width 10.0
+        Height 10.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_map_guide_start'
-    Bounds{
-        X : 122.0
-        Y : 195.0
-        Width : 28.0
-        Height : 28.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_map_guide_start'
+    Bounds{ # Rectangle
+        X 122.0
+        Y 195.0
+        Width 28.0
+        Height 28.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_google_signin'
-    Bounds{
-        X : 398.0
-        Y : 187.0
-        Width : 78.0
-        Height : 32.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_google_signin'
+    Bounds{ # Rectangle
+        X 398.0
+        Y 187.0
+        Width 78.0
+        Height 32.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_google_signin_pressed'
-    Bounds{
-        X : 319.0
-        Y : 197.0
-        Width : 78.0
-        Height : 32.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_google_signin_pressed'
+    Bounds{ # Rectangle
+        X 319.0
+        Y 197.0
+        Width 78.0
+        Height 32.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_google_controller'
-    Bounds{
-        X : 286.0
-        Y : 197.0
-        Width : 32.0
-        Height : 32.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_google_controller'
+    Bounds{ # Rectangle
+        X 286.0
+        Y 197.0
+        Width 32.0
+        Height 32.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'arro'
-    Bounds{
-        X : 43.0
-        Y : 185.0
-        Width : 24.0
-        Height : 24.0
+Subtexture{ # Texture_Subtexture
+    Name 'arro'
+    Bounds{ # Rectangle
+        X 43.0
+        Y 185.0
+        Width 24.0
+        Height 24.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'arro_r'
-    Bounds{
-        X : 18.0
-        Y : 185.0
-        Width : 24.0
-        Height : 24.0
+Subtexture{ # Texture_Subtexture
+    Name 'arro_r'
+    Bounds{ # Rectangle
+        X 18.0
+        Y 185.0
+        Width 24.0
+        Height 24.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-Subtexture{
-    Name : 'ui_frame_dark_blue'
-    Bounds{
-        X : 486.0
-        Y : 0.0
-        Width : 25.0
-        Height : 25.0
+Subtexture{ # Texture_Subtexture
+    Name 'ui_frame_dark_blue'
+    Bounds{ # Rectangle
+        X 486.0
+        Y 0.0
+        Width 25.0
+        Height 25.0
     }
-    Resolution : 1.0
+    Resolution 1.0
 }
-ImageType : 0
+ImageType 0
