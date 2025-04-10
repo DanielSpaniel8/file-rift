@@ -1,217 +1,215 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'quest_vase'
+Name : 'quest_vase',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'questvase'
+        Identifier : 'questvase',
         Component{ # Component
-            ClassName 'Properties'
-            Identifier 1
+            ClassName : 'Properties',
+            Identifier : 1,
             PropertiesComponent{ # PropertiesComponent
                 OnLoad{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 Properties.SetProperty(self, "questitem", "true");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00H\x00\x00\x00local self = ...;\r\n\r\nProperties.SetProperty(self, "questitem", "true");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00SetProperty\x00\x04\n\x00\x00\x00questitem\x00\x04\x05\x00\x00\x00true\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00H\x00\x00\x00local self = ...;\r\n\r\nProperties.SetProperty(self, "questitem", "true");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00SetProperty\x00\x04\n\x00\x00\x00questitem\x00\x04\x05\x00\x00\x00true\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00',
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 2
+            ClassName : 'ParticleEmitter',
+            Identifier : 2,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 3
-                ParticleId 6
-                ParticleId 7
-                ModelBindingId 0
-                MaxParticles 60
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 3,
+                ParticleId : 6,
+                ParticleId : 7,
+                ModelBindingId : 0,
+                MaxParticles : 60,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 5
+                    Type : 5,
                     BaseColor{ # FloatColor
-                        R 0.5185185670852661
-                        G 0.47703707218170166
-                        B 0.4148147702217102
-                        A 0.0
+                        R : 0.5185185670852661,
+                        G : 0.47703707218170166,
+                        B : 0.4148147702217102,
+                        A : 0.0,
                     }
-                    Parameter 90.0
-                    Parameter 10.0
-                    Parameter 0.0
-                    Parameter 10.0
-                    Parameter 0.0
-                    Parameter 20.0
-                    Parameter 0.0
-                    Parameter 0.6000000238418579
-                    Parameter 0.10000000149011612
-                    Parameter 0.0
-                    Parameter 1.0
-                    Parameter 0.019999999552965164
-                    Parameter 0.6000000238418579
-                    Parameter 0.0
-                    Parameter 0.0
-                    HueVariance 0.0
-                    SaturationVariance 0.20000000298023224
-                    LightnessVariance 0.20000000298023224
+                    Parameter : 90.0,
+                    Parameter : 10.0,
+                    Parameter : 0.0,
+                    Parameter : 10.0,
+                    Parameter : 0.0,
+                    Parameter : 20.0,
+                    Parameter : 0.0,
+                    Parameter : 0.6000000238418579,
+                    Parameter : 0.10000000149011612,
+                    Parameter : 0.0,
+                    Parameter : 1.0,
+                    Parameter : 0.019999999552965164,
+                    Parameter : 0.6000000238418579,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.20000000298023224,
+                    LightnessVariance : 0.20000000298023224,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 27.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 27.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 0
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 3
+            ClassName : 'Particle',
+            Identifier : 3,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 4
+            ClassName : 'CollisionShape',
+            Identifier : 4,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -22.0
-                    Y 5.0
-                    Width 44.0
-                    Height 15.0
+                    X : -22.0,
+                    Y : 5.0,
+                    Width : 44.0,
+                    Height : 15.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 1
-                Enabled 1
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 1,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'TransformController'
-            Identifier 5
+            ClassName : 'TransformController',
+            Identifier : 5,
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 6
+            ClassName : 'Particle',
+            Identifier : 6,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 7
+            ClassName : 'Particle',
+            Identifier : 7,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'pottery1'
-                YRotation 0.0
-                EmissionFactor 1.0
-                XRotation 0.0
+                Name : 'pottery1',
+                YRotation : 0.0,
+                EmissionFactor : 1.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 103
+            ClassName : 'CollisionShape',
+            Identifier : 103,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.012619972229004
-                    Y 0.0
-                    Width 30.122713088989258
-                    Height 28.714862823486328
+                    X : -15.012619972229004,
+                    Y : 0.0,
+                    Width : 30.122713088989258,
+                    Height : 28.714862823486328,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                IsGround 1
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 5
-                Enabled 1
+                IsGround : 1,
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 5,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'UtilityShape'
-            Identifier 106
+            ClassName : 'UtilityShape',
+            Identifier : 106,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -27.0
-                    Y 0.0
-                    Width 54.0
-                    Height 28.0
+                    X : -27.0,
+                    Y : 0.0,
+                    Width : 54.0,
+                    Height : 28.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 110
+            ClassName : 'PhysicsObject',
+            Identifier : 110,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 115
+            ClassName : 'SimpleGlow',
+            Identifier : 115,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.6111111044883728
-                    G 0.559259295463562
-                    B 0.45555561780929565
-                    A 0.0
+                    R : 0.6111111044883728,
+                    G : 0.559259295463562,
+                    B : 0.45555561780929565,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 20
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 20,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 14.0
+                    X : 0.0,
+                    Y : 14.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Program'
-            Identifier 120
+            ClassName : 'Program',
+            Identifier : 120,
             ProgramComponent{ # ProgramComponent
-                ExecuteOnce 1
+                ExecuteOnce : 1,
                 Program{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 local newObject = self:clone();
@@ -239,26 +237,26 @@ Camera.ResetFocus();
 Scene.SetPaused(false);
 
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x005\x02\x00\x00local self = ...;\r\n\r\nlocal newObject = self:clone();\r\nnewObject:setPosition(PhysicsObject.OriginalPosition(self));\r\n\r\nProgram.Wait(0.5);\r\nScene.SetPaused(true);\r\n\r\nCamera.FocusAtPoint(newObject:position());\r\n\r\nwhile not Camera.IsPointVisible(newObject:position()) do\r\n\tCamera.FocusAtPoint(newObject:position());\r\n\tProgram.Wait(0.1);\r\nend\r\n\r\nProgram.Wait(0.5);\r\n\r\nScene.AddObject(newObject);\r\nTransformController.ScaleTo(newObject, 0.01, 0);\r\nTransformController.ScaleTo(newObject, 1.0, 0.3);\r\n\r\nProgram.Wait(1.0);\r\n\r\nCamera.ResetFocus();\r\nScene.SetPaused(false);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06G\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x9c@\x00\x01\x85\xc0\x01\x00\x86\x00B\x01\xc2\x00\x80\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x00C\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c\x80\x00\x00\x9a@\x00\x00\x16@\x02\x80\x85@\x02\x00\x86\x80B\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c@\x00\x00\x85\x00\x01\x00\x86@A\x01\xc1@\x03\x00\x9c@\x00\x01\x16\x80\xfb\x7f\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x9c@\x00\x01\x85\xc0\x01\x00\x86\x80C\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\xc0\x03\x00\x86\x00D\x01\xc0\x00\x80\x00\x01A\x04\x00A\x81\x04\x00\x9c@\x00\x02\x85\xc0\x03\x00\x86\x00D\x01\xc0\x00\x80\x00\x01\xc1\x04\x00A\x01\x05\x00\x9c@\x00\x02\x85\x00\x01\x00\x86@A\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85@\x02\x00\x86@E\x01\x9c@\x80\x00\x85\xc0\x01\x00\x86\x00B\x01\xc2\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x16\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xe0?\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00SetPaused\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtPoint\x00\x04\t\x00\x00\x00position\x00\x04\x0f\x00\x00\x00IsPointVisible\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00G\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00F\x00\x00\x00\n\x00\x00\x00newObject\x00\x03\x00\x00\x00F\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x005\x02\x00\x00local self = ...;\r\n\r\nlocal newObject = self:clone();\r\nnewObject:setPosition(PhysicsObject.OriginalPosition(self));\r\n\r\nProgram.Wait(0.5);\r\nScene.SetPaused(true);\r\n\r\nCamera.FocusAtPoint(newObject:position());\r\n\r\nwhile not Camera.IsPointVisible(newObject:position()) do\r\n\tCamera.FocusAtPoint(newObject:position());\r\n\tProgram.Wait(0.1);\r\nend\r\n\r\nProgram.Wait(0.5);\r\n\r\nScene.AddObject(newObject);\r\nTransformController.ScaleTo(newObject, 0.01, 0);\r\nTransformController.ScaleTo(newObject, 1.0, 0.3);\r\n\r\nProgram.Wait(1.0);\r\n\r\nCamera.ResetFocus();\r\nScene.SetPaused(false);\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06G\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x9c@\x00\x01\x85\xc0\x01\x00\x86\x00B\x01\xc2\x00\x80\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c@\x00\x00\x85@\x02\x00\x86\x00C\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c\x80\x00\x00\x9a@\x00\x00\x16@\x02\x80\x85@\x02\x00\x86\x80B\x01\xcb\xc0\xc2\x00\xdc\x00\x00\x01\x9c@\x00\x00\x85\x00\x01\x00\x86@A\x01\xc1@\x03\x00\x9c@\x00\x01\x16\x80\xfb\x7f\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x9c@\x00\x01\x85\xc0\x01\x00\x86\x80C\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\xc0\x03\x00\x86\x00D\x01\xc0\x00\x80\x00\x01A\x04\x00A\x81\x04\x00\x9c@\x00\x02\x85\xc0\x03\x00\x86\x00D\x01\xc0\x00\x80\x00\x01\xc1\x04\x00A\x01\x05\x00\x9c@\x00\x02\x85\x00\x01\x00\x86@A\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85@\x02\x00\x86@E\x01\x9c@\x80\x00\x85\xc0\x01\x00\x86\x00B\x01\xc2\x00\x00\x00\x9c@\x00\x01\x1e\x00\x80\x00\x16\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\xe0?\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00SetPaused\x00\x04\x07\x00\x00\x00Camera\x00\x04\r\x00\x00\x00FocusAtPoint\x00\x04\t\x00\x00\x00position\x00\x04\x0f\x00\x00\x00IsPointVisible\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x04\x0b\x00\x00\x00ResetFocus\x00\x00\x00\x00\x00G\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x10\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x14\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x16\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x18\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x19\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00F\x00\x00\x00\n\x00\x00\x00newObject\x00\x03\x00\x00\x00F\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Trigger 5
+                Enabled : 1,
+                Trigger : 5,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 53.71486282348633
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 53.71486282348633,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 2.25
+    Scaling : 2.25,
 }

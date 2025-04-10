@@ -1,195 +1,195 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'rocks'
+Name : 'rocks',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'hugerock1'
+        Identifier : 'hugerock1',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'hugerock1'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'hugerock1',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'rock1'
+        Identifier : 'rock1',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'rock1'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'rock1',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'rock2'
+        Identifier : 'rock2',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 103
+            ClassName : 'Model',
+            Identifier : 103,
             ModelComponent{ # ModelComponent
-                Name 'rock2'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'rock2',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'smallrock1'
+        Identifier : 'smallrock1',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 103
+            ClassName : 'Model',
+            Identifier : 103,
             ModelComponent{ # ModelComponent
-                Name 'smallrock1'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'smallrock1',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }

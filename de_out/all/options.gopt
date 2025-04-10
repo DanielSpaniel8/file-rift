@@ -1,187 +1,187 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
 Playlist{ # MusicPlaylist
-    Name 'menu'
+    Name : 'menu',
     Track{ # MusicTrack
-        ResourceName '1-hero2'
-        Volume 0.5
+        ResourceName : '1-hero2',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'house'
+    Name : 'house',
     Track{ # MusicTrack
-        ResourceName '1-plaintest2'
-        Volume 0.5
+        ResourceName : '1-plaintest2',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'outdoors_light'
+    Name : 'outdoors_light',
     Track{ # MusicTrack
-        ResourceName 'squire_new2'
-        Volume 0.5
+        ResourceName : 'squire_new2',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'forest'
+    Name : 'forest',
     Track{ # MusicTrack
-        ResourceName '2cave2'
-        Volume 0.5
+        ResourceName : '2cave2',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'cave'
+    Name : 'cave',
     Track{ # MusicTrack
-        ResourceName '2cave2'
-        Volume 0.5
+        ResourceName : '2cave2',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'dungeon1'
+    Name : 'dungeon1',
     Track{ # MusicTrack
-        ResourceName '1-dung73'
-        Volume 0.5
+        ResourceName : '1-dung73',
+        Volume : 0.5,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'boss'
+    Name : 'boss',
     Track{ # MusicTrack
-        ResourceName '1-boss23'
-        Volume 0.75
+        ResourceName : '1-boss23',
+        Volume : 0.75,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'bosskill'
+    Name : 'bosskill',
     Track{ # MusicTrack
-        ResourceName 'momentofwonder'
-        Volume 0.75
+        ResourceName : 'momentofwonder',
+        Volume : 0.75,
     }
 }
 Playlist{ # MusicPlaylist
-    Name 'heartbeat'
+    Name : 'heartbeat',
     Track{ # MusicTrack
-        ResourceName 'heartbeat'
-        Volume 1.0
+        ResourceName : 'heartbeat',
+        Volume : 1.0,
     }
 }
 PhoneControlsLayout{ # GUIViewLayout
     Subview{ # GUIViewLayout
-        Identifier 'left'
+        Identifier : 'left',
         Margins{ # GUIMargins
-            Left 20.0
-            Bottom 10.0
+            Left : 20.0,
+            Bottom : 10.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'right'
+        Identifier : 'right',
         Margins{ # GUIMargins
-            Left 100.0
-            Bottom 10.0
+            Left : 100.0,
+            Bottom : 10.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'jump'
+        Identifier : 'jump',
         Margins{ # GUIMargins
-            Right 20.0
-            Bottom 20.0
+            Right : 20.0,
+            Bottom : 20.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'swing'
+        Identifier : 'swing',
         Margins{ # GUIMargins
-            Right 100.0
-            Bottom 10.0
+            Right : 100.0,
+            Bottom : 10.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'skill'
+        Identifier : 'skill',
         Margins{ # GUIMargins
-            Right 5.0
-            Bottom 90.0
+            Right : 5.0,
+            Bottom : 90.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'skillToggle'
+        Identifier : 'skillToggle',
         Margins{ # GUIMargins
-            Right 10.0
-            Top 17.0
+            Right : 10.0,
+            Top : 17.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'menu'
+        Identifier : 'menu',
         Margins{ # GUIMargins
-            Left 10.0
-            Top 8.0
+            Left : 10.0,
+            Top : 8.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'consumables'
+        Identifier : 'consumables',
         Margins{ # GUIMargins
-            Left 209.0
-            Bottom 10.0
+            Left : 209.0,
+            Bottom : 10.0,
         }
     }
 }
 PadControlsLayout{ # GUIViewLayout
     Subview{ # GUIViewLayout
-        Identifier 'left'
+        Identifier : 'left',
         Margins{ # GUIMargins
-            Left 10.0
-            Bottom 30.0
+            Left : 10.0,
+            Bottom : 30.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'right'
+        Identifier : 'right',
         Margins{ # GUIMargins
-            Left 68.0
-            Bottom 30.0
+            Left : 68.0,
+            Bottom : 30.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'jump'
+        Identifier : 'jump',
         Margins{ # GUIMargins
-            Right 10.0
-            Bottom 38.0
+            Right : 10.0,
+            Bottom : 38.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'swing'
+        Identifier : 'swing',
         Margins{ # GUIMargins
-            Right 68.0
-            Bottom 30.0
+            Right : 68.0,
+            Bottom : 30.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'skill'
+        Identifier : 'skill',
         Margins{ # GUIMargins
-            Right 5.0
-            Bottom 86.0
+            Right : 5.0,
+            Bottom : 86.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'skillToggle'
+        Identifier : 'skillToggle',
         Margins{ # GUIMargins
-            Right 10.0
-            Top 17.0
+            Right : 10.0,
+            Top : 17.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'menu'
+        Identifier : 'menu',
         Margins{ # GUIMargins
-            Left 10.0
-            Top 8.0
+            Left : 10.0,
+            Top : 8.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'consumables'
+        Identifier : 'consumables',
         Margins{ # GUIMargins
-            Left 225.0
-            Bottom 15.0
+            Left : 225.0,
+            Bottom : 15.0,
         }
     }
     Subview{ # GUIViewLayout
-        Identifier 'exp'
+        Identifier : 'exp',
         Margins{ # GUIMargins
-            Bottom 80.0
+            Bottom : 80.0,
         }
     }
 }

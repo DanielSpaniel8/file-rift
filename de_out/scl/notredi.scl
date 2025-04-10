@@ -1,114 +1,113 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'notredi'
+Name : 'notredi',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'kakkapiikkipy\xf6ryl\xe4'
+        Identifier : 'kakkapiikkipy\xf6ryl\xe4',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'spikey'
-                YRotation 1.5707963705062866
-                EmissionFactor 0.5
-                XRotation 0.0
+                Name : 'spikey',
+                YRotation : 1.5707963705062866,
+                EmissionFactor : 0.5,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'KeyframeAnimation'
-            Identifier 103
+            ClassName : 'KeyframeAnimation',
+            Identifier : 103,
             KeyframeAnimationComponent{ # KeyframeAnimationComponent
-                ModelId 101
-                Name 'spikey_stand'
-                Repeating 1
-                SpeedMultiplier 1.0
-                Running 1
+                ModelId : 101,
+                Name : 'spikey_stand',
+                Repeating : 1,
+                SpeedMultiplier : 1.0,
+                Running : 1,
             }
         }
         Component{ # Component
-            ClassName 'KeyframeAnimation'
-            Identifier 104
+            ClassName : 'KeyframeAnimation',
+            Identifier : 104,
             KeyframeAnimationComponent{ # KeyframeAnimationComponent
-                ModelId 101
-                Name 'spikey_move'
-                Repeating 1
-                SpeedMultiplier 1.0
-                Running 1
+                ModelId : 101,
+                Name : 'spikey_move',
+                Repeating : 1,
+                SpeedMultiplier : 1.0,
+                Running : 1,
             }
         }
         Component{ # Component
-            ClassName 'AnimationController'
-            Identifier 105
+            ClassName : 'AnimationController',
+            Identifier : 105,
             AnimationControllerComponent{ # AnimationControllerComponent
-                ModelId 101
-                DefaultAnimationId 0
-                SelfUpdate 0
+                ModelId : 101,
+                DefaultAnimationId : 0,
+                SelfUpdate : 0,
             }
         }
         Component{ # Component
-            ClassName 'GenericMonsterController'
-            Identifier 106
+            ClassName : 'GenericMonsterController',
+            Identifier : 106,
             MonsterControllerComponent{ # MonsterControllerComponent
-                WalkSpeed 100.0
-                AnimationControllerId 105
-                EntityId 107
-                RoamAreaId 113
+                WalkSpeed : 100.0,
+                AnimationControllerId : 105,
+                EntityId : 107,
+                RoamAreaId : 113,
             }
             GenericMonsterControllerComponent{ # GenericMonsterControllerComponent
-                WalkAnimationId 104
+                WalkAnimationId : 104,
             }
         }
         Component{ # Component
-            ClassName 'MonsterEntity'
-            Identifier 107
+            ClassName : 'MonsterEntity',
+            Identifier : 107,
             EntityComponent{ # EntityComponent
-                FacingDirection 18446744073709551615
-                PhysicsEnabled 1
+                FacingDirection : 18446744073709551615,
+                PhysicsEnabled : 1,
             }
             MonsterEntityComponent{ # MonsterEntityComponent
                 OnKill{ # Program
                 }
                 OnHurt{ # Program
                 }
-                GivesExperience 1
-                DefaultDeathAnimation 1
+                GivesExperience : 1,
+                DefaultDeathAnimation : 1,
             }
         }
         Component{ # Component
-            ClassName 'Attack'
-            Identifier 108
+            ClassName : 'Attack',
+            Identifier : 108,
             AttackComponent{ # AttackComponent
-                AnimationId 103
-                CollisionShapeId 111
-                AttackAreaId 0
-                SoundEffectId 120
-                AttackInterval 1.0
-                AttackDuration 1.0
-                DamageStartTime 0.20000000298023224
-                DamageEndTime 1.0
-                AnimationStartBlendTime 0.10000000149011612
-                AnimationEndBlendTime 0.20000000298023224
+                AnimationId : 103,
+                CollisionShapeId : 111,
+                AttackAreaId : 0,
+                SoundEffectId : 120,
+                AttackInterval : 1.0,
+                AttackDuration : 1.0,
+                DamageStartTime : 0.20000000298023224,
+                DamageEndTime : 1.0,
+                AnimationStartBlendTime : 0.10000000149011612,
+                AnimationEndBlendTime : 0.20000000298023224,
                 OnAttack{ # Program
-                    String
-$
+                    String : $
 local self, target = ...;
 
 Program.Wait(0.1);
@@ -125,109 +124,109 @@ Program.Wait(0.8);
 spikes:destroy();
 
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00l\x01\x00\x00local self, target = ...;\r\n\r\nProgram.Wait(0.1);\r\n\r\nspikes = Scene.CreateObject("spikey_spikes","spikes1");\r\n\r\nTransformController.ScaleTo(spikes,0.1,0);\r\nspikes:setPosition(self:position()+Vector3.New(0,30,0));\r\nTransformController.ScaleTo(spikes,1,0.1);\r\nProgram.Wait(0.3);\r\nTransformController.ScaleTo(spikes,0.1,0.5);\r\n\r\nProgram.Wait(0.8);\r\nspikes:destroy();\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t5\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00\x9c\x80\x80\x01\x87\xc0\x00\x00\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x02\x00\x9c@\x00\x02\x85\xc0\x00\x00\x8b\xc0B\x01\x0b\x01C\x00\x1c\x81\x00\x01EA\x03\x00F\x81\xc3\x02\x81\x81\x02\x00\xc1\xc1\x03\x00\x01\x82\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x01\x04\x00A\x81\x00\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1@\x04\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85\xc0\x00\x00\x8b\x00E\x01\x9c@\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x07\x00\x00\x00spikes\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00spikey_spikes\x00\x04\x08\x00\x00\x00spikes1\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00>@\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x03\x00\x00\x00\x00\x00\x00\xe0?\x03\x9a\x99\x99\x99\x99\x99\xe9?\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x005\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x004\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x004\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00l\x01\x00\x00local self, target = ...;\r\n\r\nProgram.Wait(0.1);\r\n\r\nspikes = Scene.CreateObject("spikey_spikes","spikes1");\r\n\r\nTransformController.ScaleTo(spikes,0.1,0);\r\nspikes:setPosition(self:position()+Vector3.New(0,30,0));\r\nTransformController.ScaleTo(spikes,1,0.1);\r\nProgram.Wait(0.3);\r\nTransformController.ScaleTo(spikes,0.1,0.5);\r\n\r\nProgram.Wait(0.8);\r\nspikes:destroy();\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t5\x00\x00\x00%\x00\x80\x01\x85\x00\x00\x00\x86@@\x01\xc1\x80\x00\x00\x9c@\x00\x01\x85\x00\x01\x00\x86@A\x01\xc1\x80\x01\x00\x01\xc1\x01\x00\x9c\x80\x80\x01\x87\xc0\x00\x00\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x02\x00\x9c@\x00\x02\x85\xc0\x00\x00\x8b\xc0B\x01\x0b\x01C\x00\x1c\x81\x00\x01EA\x03\x00F\x81\xc3\x02\x81\x81\x02\x00\xc1\xc1\x03\x00\x01\x82\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x01\x04\x00A\x81\x00\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1@\x04\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc5\xc0\x00\x00\x01\x81\x00\x00A\x81\x04\x00\x9c@\x00\x02\x85\x00\x00\x00\x86@@\x01\xc1\xc0\x04\x00\x9c@\x00\x01\x85\xc0\x00\x00\x8b\x00E\x01\x9c@\x00\x01\x1e\x00\x80\x00\x15\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x07\x00\x00\x00spikes\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0e\x00\x00\x00spikey_spikes\x00\x04\x08\x00\x00\x00spikes1\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00>@\x03\x00\x00\x00\x00\x00\x00\xf0?\x03333333\xd3?\x03\x00\x00\x00\x00\x00\x00\xe0?\x03\x9a\x99\x99\x99\x99\x99\xe9?\x04\x08\x00\x00\x00destroy\x00\x00\x00\x00\x005\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\r\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x004\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x004\x00\x00\x00\x00\x00\x00\x00',
                 }
-                DamageStartTime2 0.0
-                DamageEndTime2 0.0
+                DamageStartTime2 : 0.0,
+                DamageEndTime2 : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 109
+            ClassName : 'CollisionShape',
+            Identifier : 109,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -18.0
-                    Y 4.0
-                    Width 36.0
-                    Height 38.0
+                    X : -18.0,
+                    Y : 4.0,
+                    Width : 36.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                ReceivesDamage 1
-                InflictsDamage 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 1
+                Collides : 1,
+                ReceivesDamage : 1,
+                InflictsDamage : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 111
+            ClassName : 'CollisionShape',
+            Identifier : 111,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -50.0
-                    Y -20.0
-                    Width 100.0
-                    Height 90.0
+                    X : -50.0,
+                    Y : -20.0,
+                    Width : 100.0,
+                    Height : 90.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 1
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'UtilityShape'
-            Identifier 113
+            ClassName : 'UtilityShape',
+            Identifier : 113,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -300.0
-                    Y -50.0
-                    Width 600.0
-                    Height 150.0
+                    X : -300.0,
+                    Y : -50.0,
+                    Width : 600.0,
+                    Height : 150.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 118
+            ClassName : 'Damage',
+            Identifier : 118,
             DamageComponent{ # DamageComponent
-                MinDamage 2
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 1.0
-                MagicDamageFactor 0.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 2,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 1.0,
+                MagicDamageFactor : 0.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'Health'
-            Identifier 119
+            ClassName : 'Health',
+            Identifier : 119,
             HealthComponent{ # HealthComponent
-                MaxHealth 2
-                HEALTHTYPE 0
+                MaxHealth : 2,
+                HEALTHTYPE : 0,
                 BarOffset{ # Vector3
-                    X 0.0
-                    Y 50.0
+                    X : 0.0,
+                    Y : 50.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 120
+            ClassName : 'SoundEffect',
+            Identifier : 120,
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'spikes1'
-                Delay 0.20000000298023224
-                Volume 1.0
+                Name : 'spikes1',
+                Delay : 0.20000000298023224,
+                Volume : 1.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -50.0
-            Y -20.0
-            Width 100.0
-            Height 90.0
+            X : -50.0,
+            Y : -20.0,
+            Width : 100.0,
+            Height : 90.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }

@@ -109,11 +109,13 @@ def recode(args) -> bytes:
 
     def show_error(err_type: str, err_message: str) -> None:
         err_out = (
-            "\nerror in "
+            config.colour_error
+            + "\nerror " + config.colour_reset
+            + "in "
             + filepath.replace("./re_in/", "") + ":"
             + str(line_num) + "\n"
-            + err_type + ": "
-            + err_message + "\n"
+            + err_type + ": " + config.colour_error
+            + err_message + config.colour_reset + "\n"
         )
 
         ctx_line = ""
@@ -127,7 +129,10 @@ def recode(args) -> bytes:
                 if lexeme == "<newline>":
                     lexeme = "\\n"
                 lexeme = util.truncate(lexeme, 15)
-                ctx_line += lexeme + " "
+                if i == 0:
+                    ctx_line += config.colour_warning+lexeme+" "+config.colour_reset
+                else:
+                    ctx_line += lexeme + " "
                 if i < 0 and not lexeme == "\n":
                     ctx_len += len(lexeme) +1
                 if i == 0:
@@ -237,7 +242,7 @@ def recode(args) -> bytes:
                 try:
                     formats[metalevel +1] = block_formats.block_formats[tag_reference]
                 except KeyError:
-                    print("no "+tagname+" in \n"+util.prettify_dict(format))
+                    print(config.colour_error+"no "+config.colour_reset+tagname+" in \n"+util.prettify_dict(format))
                     return b""
                 message_names[metalevel] = tagname
                 metalevel += 1
@@ -269,7 +274,7 @@ def recode(args) -> bytes:
                     if not matches == None:
                         chunk_line = int(matches.group(1))
                         chunk_err = matches.group(2)
-                        show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
+                        show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
                         mode = "tag"
                         continue
 
@@ -350,6 +355,6 @@ def recode(args) -> bytes:
     if filepath[0] != "/":
         filepath = filepath[len("./re_in/"):]
     if len(out_bytes[0]) != 0:
-        print("recoded: "+filepath)
+        print(config.colour_success+"recoded: "+config.colour_reset+filepath)
 
     return out_bytes[0]

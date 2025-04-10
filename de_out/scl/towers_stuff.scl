@@ -1,226 +1,226 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'towers_stuff'
+Name : 'towers_stuff',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'pillair1'
+        Identifier : 'pillair1',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'pillair1'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'pillair1',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'torch_fire'
+        Identifier : 'torch_fire',
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 1
+            ClassName : 'SimpleGlow',
+            Identifier : 1,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3876543343067169
-                    G 0.21119342744350433
-                    B 0.05679011344909668
-                    A 0.0
+                    R : 0.3876543343067169,
+                    G : 0.21119342744350433,
+                    B : 0.05679011344909668,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.11999999731779099
-                PulseTime 1.5
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.11999999731779099,
+                PulseTime : 1.5,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 30.0
+                    X : 0.0,
+                    Y : 30.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Light'
-            Identifier 103
+            ClassName : 'Light',
+            Identifier : 103,
             LightComponent{ # LightComponent
-                Type 3
-                Intensity 2.0
+                Type : 3,
+                Intensity : 2.0,
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.25777778029441833
-                    B 0.0
-                    A 0.0
+                    R : 1.0,
+                    G : 0.25777778029441833,
+                    B : 0.0,
+                    A : 0.0,
                 }
-                LinearAttenuation 0.0
-                QuadraticAttenuation 0.00019999999494757503
+                LinearAttenuation : 0.0,
+                QuadraticAttenuation : 0.00019999999494757503,
                 Offset{ # Vector3
-                    X 0.0
-                    Y 30.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 30.0,
+                    Z : 0.0,
                 }
-                Radius 250.0
+                Radius : 250.0,
             }
         }
         Component{ # Component
-            ClassName 'FireEmitter'
-            Identifier 105
+            ClassName : 'FireEmitter',
+            Identifier : 105,
             FireEmitterComponent{ # FireEmitterComponent
-                ParticleEmitterId 108
-                LightId 103
+                ParticleEmitterId : 108,
+                LightId : 103,
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.25777778029441833
-                    B 0.0
-                    A 0.0
+                    R : 1.0,
+                    G : 0.25777778029441833,
+                    B : 0.0,
+                    A : 0.0,
                 }
-                ParticleInterval 0.10000000149011612
-                ParticleMaxAge 0.8999999761581421
+                ParticleInterval : 0.10000000149011612,
+                ParticleMaxAge : 0.8999999761581421,
                 ParticleSpread{ # Vector3
-                    X 2.0
-                    Y 0.0
-                    Z 0.0
+                    X : 2.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
                 Origin3{ # Vector3
-                    X 0.0
-                    Y 15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 15.0,
+                    Z : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 108
+            ClassName : 'ParticleEmitter',
+            Identifier : 108,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 109
-                ParticleId 111
-                ParticleId 112
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 109,
+                ParticleId : 111,
+                ParticleId : 112,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 109
+            ClassName : 'Particle',
+            Identifier : 109,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 30.0
+                TextureName : 'particle_fure_1',
+                Size : 30.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 111
+            ClassName : 'Particle',
+            Identifier : 111,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 34.0
+                TextureName : 'particle_fure_2',
+                Size : 34.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 112
+            ClassName : 'Particle',
+            Identifier : 112,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 30.0
+                TextureName : 'particle_fure_3',
+                Size : 30.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'torchholder'
+        Identifier : 'torchholder',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'torchholder'
-                YRotation 0.0
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'torchholder',
+                YRotation : 0.0,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }

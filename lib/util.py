@@ -3,6 +3,7 @@ import hashlib
 import re
 import importlib
 from lib import block_formats
+import config
 
 
 def edit_test(file_content: bytes, filepath: str) -> bool:
@@ -68,7 +69,7 @@ def template(match: re.Match) -> str:
         if name == pair[0]:
             template_filename = pair[1]
     if template_filename == "":
-        print("template not found: "+name)
+        print(config.colour_error+"template not found: "+config.colour_reset+name)
         return ""
     with open(template_filename, "r") as file:
         template = file.read()
@@ -76,14 +77,14 @@ def template(match: re.Match) -> str:
     def replace_mark(match: re.Match) -> str:
         num = int(match.group(1))
         if num > len(split_args):
-            print("not enough args for "+name)
+            print(config.colour_error+"not enough args for "+config.colour_reset+name)
         
         return split_args[num].strip()
 
     template_matches = re.match(r"(\s*#.*\n)*(\s|\n)*(```([^`]+)```)?((\n|[^`])*)", template)
     if template_matches == None:
         print(
-            "bad template format: "
+            config.colour_error+"bad template format: "+config.colour_reset
             + template_filename
             + "\ndefaulting to empty string"
             )
@@ -102,7 +103,7 @@ def template(match: re.Match) -> str:
             final_template = template_module.template_post(template, split_args)
         except Exception as ex:
             print(
-                "exception in template file $"
+                config.colour_error+"exception in template file $"+config.colour_reset
                 + name + ": "
                 + ex
                 )
@@ -141,13 +142,13 @@ def get_bf_path(info_path: str) -> "list[str]":
         with open(path, "r") as file:
             content = file.readlines()
     except FileNotFoundError:
-        print("file not found for info: "+path)
+        print(config.colour_error+"file not found for info: "+config.colour_reset+path)
         quit()
 
     if len(content) == 0:
         return [file_type]
     if len(content) < line:
-        print("line does not exist, did you save your file?")
+        print(config.colour_error+"line does not exist, did you save your file?"+config.colour_reset)
         quit()
     
     bf_path = []
@@ -198,7 +199,7 @@ def get_bf_path(info_path: str) -> "list[str]":
 def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
     file_type = path[0]
     if not file_type in block_formats.file_types:
-        print("invalid filetype: "+file_type)
+        print(config.colour_error+"invalid filetype: "+config.colour_reset+file_type)
         return {}, ""
     format = block_formats.block_formats[file_type]
     format_name = file_type
@@ -209,7 +210,7 @@ def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
                 joined_path = ""
                 for i in path:
                     joined_path += "/"+i
-                print("invalid block_formats path: "+joined_path)
+                print(config.colour_error+"invalid block_formats path: "+config.colour_reset+joined_path)
                 return {}, ""
             if tag_is_reference:
                 format_name = point
@@ -238,16 +239,28 @@ def get_template_info(name: str) -> str:
             template_filename = entry[1]
 
     if template_filename == "":
-        print("template not found: "+ name)
-        return ""
+        return config.colour_error+"template not found: "+config.colour_reset+ name
 
     with open(template_filename, "r") as file:
-        usage_line = file.readline()
-    match = re.match(r"\s*#\s*usage:\s*(\[.+\])", usage_line)
-    if match == None:
-        return "no usage info for $"+name
+        lines = file.readlines()
+    out_string = ""
+    for line in lines:
+        match = re.match(r"^\s*#\s*(.+)\n", line)
+        if match != None:
+            out_string += (
+                match.group(1).replace(";", "|")
+                .replace("[", "["+config.colour_data)
+                .replace("|", config.colour_reset+";"+config.colour_data)
+                .replace("]", config.colour_reset+"]")
+                + "\n"
+            )
+        else:
+            break
+
+    if out_string == "":
+        return "no info for $"+name
     else:
-        return ("$"+name+": "+match.group(1))
+        return out_string
 
 
 def get_files (root: str) -> "list[str]":
@@ -312,7 +325,7 @@ def skim_dict (block_formats: dict, name) -> str:
     if block_formats == {}:
         return ""
 
-    out_str = "\n" + name + " (message)\n"
+    out_str = "\n" + name + f" ({config.colour_data}message{config.colour_reset})\n"
 
     for key, value in items:
         tag = value[0]
@@ -332,10 +345,10 @@ def skim_dict (block_formats: dict, name) -> str:
         if len(value) == 3:
             out_str += (
                 "  "
-                + tag.rjust(3)
+                + config.colour_data+ tag.rjust(3)+config.colour_reset
                 + " : "
                 + key
-                + " (message)  "
+                + f" ({config.colour_data}message{config.colour_reset})  "
                 + doc_string.replace("\n", "\n        ")
                 + "\n"
             )
@@ -343,10 +356,10 @@ def skim_dict (block_formats: dict, name) -> str:
 
         out_str += (
             "  "
-            + tag.rjust(3)
+            + config.colour_data + tag.rjust(3)+config.colour_reset
             + " : "
             + key
-            + f" ({wire_type})"
+            + f" ({config.colour_data+wire_type+config.colour_reset})"
             + "  "
             + doc_string.replace("\n", "\n        ")
             + "\n"

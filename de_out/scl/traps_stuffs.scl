@@ -1,21 +1,20 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'traps_stuffs'
+Name : 'traps_stuffs',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'dropping_ground'
+        Identifier : 'dropping_ground',
         Component{ # Component
-            ClassName 'TransformController'
-            Identifier 1
+            ClassName : 'TransformController',
+            Identifier : 1,
         }
         Component{ # Component
-            ClassName 'Program'
-            Identifier 2
+            ClassName : 'Program',
+            Identifier : 2,
             ProgramComponent{ # ProgramComponent
-                ExecuteOnce 1
+                ExecuteOnce : 1,
                 Program{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 local newBlock = self:clone();
@@ -28,45 +27,44 @@ Scene.AddObject(newBlock);
 TransformController.ScaleTo(newBlock, 0.01, 0);
 TransformController.ScaleTo(newBlock, 1, 0.2);
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x002\x01\x00\x00local self = ...;\r\n\r\nlocal newBlock = self:clone();\r\nnewBlock:setPosition(PhysicsObject.OriginalPosition(self));\r\nPhysicsObject.SetEnabled(newBlock, false);\r\n\r\nProgram.Wait(3.0);\r\n\r\nScene.AddObject(newBlock);\r\nTransformController.ScaleTo(newBlock, 0.01, 0);\r\nTransformController.ScaleTo(newBlock, 1, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06#\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x01\x01\x03\x00AA\x03\x00\x9c@\x00\x02\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x1e\x00\x80\x00\x10\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00#\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00"\x00\x00\x00\t\x00\x00\x00newBlock\x00\x03\x00\x00\x00"\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x002\x01\x00\x00local self = ...;\r\n\r\nlocal newBlock = self:clone();\r\nnewBlock:setPosition(PhysicsObject.OriginalPosition(self));\r\nPhysicsObject.SetEnabled(newBlock, false);\r\n\r\nProgram.Wait(3.0);\r\n\r\nScene.AddObject(newBlock);\r\nTransformController.ScaleTo(newBlock, 0.01, 0);\r\nTransformController.ScaleTo(newBlock, 1, 0.2);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06#\x00\x00\x00%\x00\x00\x01K\x00@\x00\\\x80\x00\x01\x8b@\xc0\x00\x05\x81\x00\x00\x06\xc1@\x02@\x01\x00\x00\x1c\x01\x00\x01\x9c@\x00\x00\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x80\x00\x02\x01\x00\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x85\x00\x02\x00\x86@B\x01\xc0\x00\x80\x00\x9c@\x00\x01\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x01\x01\x03\x00AA\x03\x00\x9c@\x00\x02\x85\x80\x02\x00\x86\xc0B\x01\xc0\x00\x80\x00\x01\x81\x03\x00A\xc1\x03\x00\x9c@\x00\x02\x1e\x00\x80\x00\x10\x00\x00\x00\x04\x06\x00\x00\x00clone\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\x11\x00\x00\x00OriginalPosition\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x00\x00\x00\x00\x00\x00\x08@\x04\x06\x00\x00\x00Scene\x00\x04\n\x00\x00\x00AddObject\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\xf0?\x03\x9a\x99\x99\x99\x99\x99\xc9?\x00\x00\x00\x00#\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00"\x00\x00\x00\t\x00\x00\x00newBlock\x00\x03\x00\x00\x00"\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Trigger 5
+                Enabled : 1,
+                Trigger : 5,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 3
-            ParentComponentIdentifier 100
+            ClassName : 'CollisionShape',
+            Identifier : 3,
+            ParentComponentIdentifier : 100,
             ShapeComponent{ # ShapeComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X 25.786911010742188
-                        Y 38.710350036621094
+                        X : 25.786911010742188,
+                        Y : 38.710350036621094,
                     }
                     Vertex{ # Vector2
-                        X -25.786911010742188
-                        Y 37.740196228027344
+                        X : -25.786911010742188,
+                        Y : 37.740196228027344,
                     }
                     Vertex{ # Vector2
-                        X -16.473190307617188
-                        Y -38.710350036621094
+                        X : -16.473190307617188,
+                        Y : -38.710350036621094,
                     }
                     Vertex{ # Vector2
-                        X 16.7816162109375
-                        Y -15.8463134765625
+                        X : 16.7816162109375,
+                        Y : -15.8463134765625,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                IsGround 1
-                MinDepth -30.0
-                MaxDepth 30.0
+                IsGround : 1,
+                MinDepth : -30.0,
+                MaxDepth : 30.0,
                 OnCollide{ # Program
-                    String
-$
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -76,42 +74,41 @@ if target:identifier() == "hero" then
     end
 end
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc9\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tif not PhysicsObject.IsEnabled(self) then\r\n\t\tPhysicsObject.SetEnabled(self, true);\r\n\t\tSoundLibrary.PlayEffect("chirp1");\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x02\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x02\x01\x80\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\n\x00\x00\x00IsEnabled\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc9\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tif not PhysicsObject.IsEnabled(self) then\r\n\t\tPhysicsObject.SetEnabled(self, true);\r\n\t\tSoundLibrary.PlayEffect("chirp1");\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x02\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x02\x01\x80\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\n\x00\x00\x00IsEnabled\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Friction 0.10000000149011612
+                Enabled : 1,
+                Friction : 0.10000000149011612,
             }
         }
         Component{ # Component
-            ClassName 'GroundPolygon'
-            Identifier 100
+            ClassName : 'GroundPolygon',
+            Identifier : 100,
             GroundPolygonComponent{ # GroundPolygonComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X 25.786911010742188
-                        Y 38.710350036621094
+                        X : 25.786911010742188,
+                        Y : 38.710350036621094,
                     }
                     Vertex{ # Vector2
-                        X -25.786911010742188
-                        Y 37.740196228027344
+                        X : -25.786911010742188,
+                        Y : 37.740196228027344,
                     }
                     Vertex{ # Vector2
-                        X -16.473190307617188
-                        Y -38.710350036621094
+                        X : -16.473190307617188,
+                        Y : -38.710350036621094,
                     }
                     Vertex{ # Vector2
-                        X 16.7816162109375
-                        Y -15.8463134765625
+                        X : 16.7816162109375,
+                        Y : -15.8463134765625,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
-                Collides 1
-                MinDepth -30.0
-                MaxDepth 30.0
+                Collides : 1,
+                MinDepth : -30.0,
+                MaxDepth : 30.0,
                 OnCollide{ # Program
-                    String
-$
+                    String : $
 local self, target = ...;
 
 if target:identifier() == "hero" then
@@ -121,477 +118,477 @@ if target:identifier() == "hero" then
     end
 end
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc9\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tif not PhysicsObject.IsEnabled(self) then\r\n\t\tPhysicsObject.SetEnabled(self, true);\r\n\t\tSoundLibrary.PlayEffect("chirp1");\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x02\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x02\x01\x80\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\n\x00\x00\x00IsEnabled\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc9\x00\x00\x00local self, target = ...;\r\n\r\nif target:identifier() == "hero" then\r\n\tif not PhysicsObject.IsEnabled(self) then\r\n\t\tPhysicsObject.SetEnabled(self, true);\r\n\t\tSoundLibrary.PlayEffect("chirp1");\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x80\x01\x8b\x00\xc0\x00\x9c\x80\x00\x01\x17@@\x01\x16\x80\x03\x80\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a@\x00\x00\x16\x00\x02\x80\x85\x80\x00\x00\x86\x00A\x01\xc0\x00\x00\x00\x02\x01\x80\x00\x9c@\x80\x01\x85@\x01\x00\x86\x80A\x01\xc1\xc0\x01\x00\x9c@\x00\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x0b\x00\x00\x00identifier\x00\x04\x05\x00\x00\x00hero\x00\x04\x0e\x00\x00\x00PhysicsObject\x00\x04\n\x00\x00\x00IsEnabled\x00\x04\x0b\x00\x00\x00SetEnabled\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00chirp1\x00\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x01\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Friction 0.10000000149011612
+                Friction : 0.10000000149011612,
             }
         }
         Component{ # Component
-            ClassName 'GroundMesh'
-            Identifier 101
+            ClassName : 'GroundMesh',
+            Identifier : 101,
             GroundMeshComponent{ # GroundMeshComponent
                 LocalAabb{ # Rectangle
-                    X -35.78691101074219
-                    Y -48.710350036621094
-                    Width 71.57382202148438
-                    Height 97.42070007324219
+                    X : -35.78691101074219,
+                    Y : -48.710350036621094,
+                    Width : 71.57382202148438,
+                    Height : 97.42070007324219,
                 }
                 SurfaceMesh{ # Mesh
-                    NumVertices 20
-                    NumFaces 14
+                    NumVertices : 20,
+                    NumFaces : 14,
                     Indices{ # Square
-                        X 4
-                        Y 1
-                        Width 2
-                        Height 0
+                        X : 4,
+                        Y : 1,
+                        Width : 2,
+                        Height : 0,
                     }
                     Vertices{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 0
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 0,
                     }
                     Normals{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 12
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 12,
                     }
                     TexCoordSet{ # Square
-                        X 7
-                        Y 2
-                        Width 32
-                        Height 24
+                        X : 7,
+                        Y : 2,
+                        Width : 32,
+                        Height : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         DiffuseColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         SpecularColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
-                        Shininess 0.0
+                        Shininess : 0.0,
                         Texture{ # Texture
-                            Name 'icicle'
-                            PixelFormat 1
-                            ImageType 2
+                            Name : 'icicle',
+                            PixelFormat : 1,
+                            ImageType : 2,
                         }
                     }
                     BoundingBox{ # Box
-                        X -28.786380767822266
-                        Y 12.683773040771484
-                        Z -35.0
-                        Width 57.57276153564453
-                        Height 26.08300018310547
-                        Depth 70.0
+                        X : -28.786380767822266,
+                        Y : 12.683773040771484,
+                        Z : -35.0,
+                        Width : 57.57276153564453,
+                        Height : 26.08300018310547,
+                        Depth : 70.0,
                     }
-                    VertexData '\x82J\xe6A-\x11\x1bB\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?33\xb3>\x82J\xe6A-\x11\x1bB\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?ff&?\x82J\xe6AZ"\xe6A\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?ff\xe6>\xcd\xcc,?\x82J\xe6A\xb4D\\A\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\xc0>+\x87&?\x82J\xe6A\xb4D\\A33\xef\xc1~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\xc0>\xbct\xb3>\x82J\xe6AZ"\xe6A\x00\x00\x0c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?ff\xe6>ff\xa6>\x82J\xe6A-\x11\x1bB\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?33\xb3>\x82J\xe6A-\x11\x1bB\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?ff&?\x82J\xe6AZ"\xe6A\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?\xf9\xb54?\x82J\xe6A\xb4D\\A\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\x00?\xc8\xe8H?\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?33\xb3>\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?ff&?\x82J\xe6\xc1^x\xddA\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xb3\x06B?\xf9\xb54?\x82J\xe6\xc1\xbc\xf0JA\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06B?\xc8\xe8H?\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?33\xb3>\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?ff&?\x82J\xe6\xc1^x\xddA\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x80\xd3N?\xcd\xcc,?\x82J\xe6\xc1\xbc\xf0JA\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06b?+\x87&?\x82J\xe6\xc1\xbc\xf0JA33\xef\xc1~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06b?\xbct\xb3>\x82J\xe6\xc1^x\xddA\x00\x00\x0c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x80\xd3N?ff\xa6>'
-                    IndexData '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\x0e\x00\x13\x00\x12\x00\x0e\x00\x12\x00\x11\x00\x0e\x00\x11\x00\x0f\x00\x11\x00\x10\x00\x0f\x00'
+                    VertexData : '\x82J\xe6A-\x11\x1bB\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?33\xb3>\x82J\xe6A-\x11\x1bB\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?ff&?\x82J\xe6AZ"\xe6A\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?ff\xe6>\xcd\xcc,?\x82J\xe6A\xb4D\\A\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\xc0>+\x87&?\x82J\xe6A\xb4D\\A33\xef\xc1~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\xc0>\xbct\xb3>\x82J\xe6AZ"\xe6A\x00\x00\x0c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?ff\xe6>ff\xa6>\x82J\xe6A-\x11\x1bB\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?33\xb3>\x82J\xe6A-\x11\x1bB\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\x00\x00\x00?ff&?\x82J\xe6AZ"\xe6A\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?\xf9\xb54?\x82J\xe6A\xb4D\\A\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\x00\x00\x00?\xc8\xe8H?\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?33\xb3>\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?ff&?\x82J\xe6\xc1^x\xddA\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xb3\x06B?\xf9\xb54?\x82J\xe6\xc1\xbc\xf0JA\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06B?\xc8\xe8H?\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0\xc1~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?33\xb3>\x82J\xe6\xc1/\xbc\x16B\x00\x00\xf0A~\x12\x9a\xbci\xf4\x7f?\x00\x00\x00\x00\xb3\x06B?ff&?\x82J\xe6\xc1^x\xddA\x00\x00\x0cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x80\xd3N?\xcd\xcc,?\x82J\xe6\xc1\xbc\xf0JA\xcd\xcc\xf0A~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06b?+\x87&?\x82J\xe6\xc1\xbc\xf0JA33\xef\xc1~\x12\x9a<i\xf4\x7f\xbf\x00\x00\x00\x80\xb3\x06b?\xbct\xb3>\x82J\xe6\xc1^x\xddA\x00\x00\x0c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x80\xd3N?ff\xa6>',
+                    IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\x0e\x00\x13\x00\x12\x00\x0e\x00\x12\x00\x11\x00\x0e\x00\x11\x00\x0f\x00\x11\x00\x10\x00\x0f\x00',
                 }
                 SurfaceMesh{ # Mesh
-                    NumVertices 8
-                    NumFaces 6
+                    NumVertices : 8,
+                    NumFaces : 6,
                     Indices{ # Square
-                        X 4
-                        Y 1
-                        Width 2
-                        Height 0
+                        X : 4,
+                        Y : 1,
+                        Width : 2,
+                        Height : 0,
                     }
                     Vertices{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 0
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 0,
                     }
                     Normals{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 12
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 12,
                     }
                     TexCoordSet{ # Square
-                        X 7
-                        Y 2
-                        Width 32
-                        Height 24
+                        X : 7,
+                        Y : 2,
+                        Width : 32,
+                        Height : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         DiffuseColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         SpecularColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
-                        Shininess 0.0
+                        Shininess : 0.0,
                         Texture{ # Texture
-                            Name 'icecastle_ground'
-                            PixelFormat 1
-                            ImageType 2
+                            Name : 'icecastle_ground',
+                            PixelFormat : 1,
+                            ImageType : 2,
                         }
                     }
                     BoundingBox{ # Box
-                        X -25.786911010742188
-                        Y -38.710350036621094
-                        Z -25.0
-                        Width 51.573822021484375
-                        Height 77.42070007324219
-                        Depth 50.0
+                        X : -25.786911010742188,
+                        Y : -38.710350036621094,
+                        Z : -25.0,
+                        Width : 51.573822021484375,
+                        Height : 77.42070007324219,
+                        Depth : 50.0,
                     }
-                    VertexData '\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8\xc1\x04\x1f~\xbf\x86\xab\xf7\xbd\x00\x00\x00\x00\x00\x00\x00?\xcd\xcc\xcc>\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x04\x1f~\xbf\x86\xab\xf7\xbd\x00\x00\x00\x00\x00\x00\x00?\x9a\x99\x19?\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8\xc1-sH\xbf5<\x1f\xbf\x00\x00\x00\x00:\xddN?\xcd\xcc\xcc>\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8A-sH\xbf5<\x1f\xbf\x00\x00\x00\x00:\xddN?\x9a\x99\x19?\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8\xc12\xb4`?.O\xf5\xbe\x00\x00\x00\x00p0x?\xcd\xcc\xcc>\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A2\xb4`?.O\xf5\xbe\x00\x00\x00\x00p0x?\x9a\x99\x19?\x98K\xceAf\xd7\x1aB\x00\x00\xc8\xc1\x0c\x95|?\xa0\xc4&\xbe\x00\x00\x00\x00\xd5g\x98?\xcd\xcc\xcc>\x98K\xceAf\xd7\x1aB\x00\x00\xc8A\x0c\x95|?\xa0\xc4&\xbe\x00\x00\x00\x00\xd5g\x98?\x9a\x99\x19?'
-                    IndexData '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00'
+                    VertexData : '\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8\xc1\x04\x1f~\xbf\x86\xab\xf7\xbd\x00\x00\x00\x00\x00\x00\x00?\xcd\xcc\xcc>\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x04\x1f~\xbf\x86\xab\xf7\xbd\x00\x00\x00\x00\x00\x00\x00?\x9a\x99\x19?\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8\xc1-sH\xbf5<\x1f\xbf\x00\x00\x00\x00:\xddN?\xcd\xcc\xcc>\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8A-sH\xbf5<\x1f\xbf\x00\x00\x00\x00:\xddN?\x9a\x99\x19?\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8\xc12\xb4`?.O\xf5\xbe\x00\x00\x00\x00p0x?\xcd\xcc\xcc>\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A2\xb4`?.O\xf5\xbe\x00\x00\x00\x00p0x?\x9a\x99\x19?\x98K\xceAf\xd7\x1aB\x00\x00\xc8\xc1\x0c\x95|?\xa0\xc4&\xbe\x00\x00\x00\x00\xd5g\x98?\xcd\xcc\xcc>\x98K\xceAf\xd7\x1aB\x00\x00\xc8A\x0c\x95|?\xa0\xc4&\xbe\x00\x00\x00\x00\xd5g\x98?\x9a\x99\x19?',
+                    IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00',
                 }
                 FrontMesh{ # Mesh
-                    NumVertices 6
-                    NumFaces 2
+                    NumVertices : 6,
+                    NumFaces : 2,
                     Vertices{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 0
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 0,
                     }
                     Normals{ # Square
-                        X 7
-                        Y 3
-                        Width 32
-                        Height 12
+                        X : 7,
+                        Y : 3,
+                        Width : 32,
+                        Height : 12,
                     }
                     TexCoordSet{ # Square
-                        X 7
-                        Y 2
-                        Width 32
-                        Height 24
+                        X : 7,
+                        Y : 2,
+                        Width : 32,
+                        Height : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         DiffuseColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
                         SpecularColor{ # FloatColor
-                            R 1.0
-                            G 1.0
-                            B 1.0
-                            A 1.0
+                            R : 1.0,
+                            G : 1.0,
+                            B : 1.0,
+                            A : 1.0,
                         }
-                        Shininess 0.0
+                        Shininess : 0.0,
                         Texture{ # Texture
-                            Name 'icecastle_ground'
-                            PixelFormat 1
-                            ImageType 2
+                            Name : 'icecastle_ground',
+                            PixelFormat : 1,
+                            ImageType : 2,
                         }
                     }
                     BoundingBox{ # Box
-                        X -25.786911010742188
-                        Y -38.710350036621094
-                        Z 25.0
-                        Width 51.573822021484375
-                        Height 77.42070007324219
-                        Depth 0.0
+                        X : -25.786911010742188,
+                        Y : -38.710350036621094,
+                        Z : 25.0,
+                        Width : 51.573822021484375,
+                        Height : 77.42070007324219,
+                        Depth : 0.0,
                     }
-                    VertexData "\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?;0\xcb>^\xa5&?\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?NC\xde>\xa1\xb8\xb0>\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?3/\x11?\xf8\x8b\xdf>\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?;0\xcb>^\xa5&?\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?3/\x11?\xf8\x8b\xdf>\x98K\xceAf\xd7\x1aB\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe2g\x1a?\xb0\xa3'?"
+                    VertexData : "\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?;0\xcb>^\xa5&?\x18\xc9\x83\xc1f\xd7\x1a\xc2\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?NC\xde>\xa1\xb8\xb0>\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?3/\x11?\xf8\x8b\xdf>\x98K\xce\xc1\xf6\xf5\x16B\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?;0\xcb>^\xa5&?\xc0@\x86A\x80\x8a}\xc1\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?3/\x11?\xf8\x8b\xdf>\x98K\xceAf\xd7\x1aB\x00\x00\xc8A\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe2g\x1a?\xb0\xa3'?",
                 }
                 Color{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'GroundMeshGenerator'
-            Identifier 102
+            ClassName : 'GroundMeshGenerator',
+            Identifier : 102,
             GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
-                GroundPolygonId 100
-                TargetMeshId 101
-                FrontTextureMappingId 103
-                SurfaceTextureMappingId 104
-                RandomSeed 0
-                HorizNoise 0.0
-                MeshType 1
-                SurfaceWidth 50.0
-                HatHeight 25.0
-                HatWidthOffset1 5.0
-                HatWidthOffset2 5.0
+                GroundPolygonId : 100,
+                TargetMeshId : 101,
+                FrontTextureMappingId : 103,
+                SurfaceTextureMappingId : 104,
+                RandomSeed : 0,
+                HorizNoise : 0.0,
+                MeshType : 1,
+                SurfaceWidth : 50.0,
+                HatHeight : 25.0,
+                HatWidthOffset1 : 5.0,
+                HatWidthOffset2 : 5.0,
             }
         }
         Component{ # Component
-            ClassName 'TextureMapping'
-            Identifier 103
+            ClassName : 'TextureMapping',
+            Identifier : 103,
             TextureMappingComponent{ # TextureMappingComponent
-                TextureName 'icecastle_ground'
-                Scale 250.0
+                TextureName : 'icecastle_ground',
+                Scale : 250.0,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'TextureMapping'
-            Identifier 104
+            ClassName : 'TextureMapping',
+            Identifier : 104,
             TextureMappingComponent{ # TextureMappingComponent
-                TextureName 'icicle'
-                Scale 200.0
+                TextureName : 'icicle',
+                Scale : 200.0,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 107
+            ClassName : 'PhysicsObject',
+            Identifier : 107,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 0
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 0,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.786911010742188
-            Y -38.710350036621094
-            Width 51.573822021484375
-            Height 77.42070007324219
+            X : -25.786911010742188,
+            Y : -38.710350036621094,
+            Width : 51.573822021484375,
+            Height : 77.42070007324219,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'elevator1'
+        Identifier : 'elevator1',
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 1
-            ParentComponentIdentifier 103
+            ClassName : 'CollisionShape',
+            Identifier : 1,
+            ParentComponentIdentifier : 103,
             ShapeComponent{ # ShapeComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X -40.72107696533203
-                        Y -4.286221027374268
+                        X : -40.72107696533203,
+                        Y : -4.286221027374268,
                     }
                     Vertex{ # Vector2
-                        X 38.4854621887207
-                        Y -5.4731245040893555
+                        X : 38.4854621887207,
+                        Y : -5.4731245040893555,
                     }
                     Vertex{ # Vector2
-                        X 40.17571258544922
-                        Y 8.352277755737305
+                        X : 40.17571258544922,
+                        Y : 8.352277755737305,
                     }
                     Vertex{ # Vector2
-                        X -40.04035568237305
-                        Y 8.089414596557617
+                        X : -40.04035568237305,
+                        Y : 8.089414596557617,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                IsGround 1
-                MinDepth -50.0
-                MaxDepth 50.0
-                Enabled 1
+                IsGround : 1,
+                MinDepth : -50.0,
+                MaxDepth : 50.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 2
-            ParentComponentIdentifier 113
+            ClassName : 'CollisionShape',
+            Identifier : 2,
+            ParentComponentIdentifier : 113,
             ShapeComponent{ # ShapeComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X -49.11248779296875
-                        Y 112.0260009765625
+                        X : -49.11248779296875,
+                        Y : 112.0260009765625,
                     }
                     Vertex{ # Vector2
-                        X 48.74488830566406
-                        Y 112.56118774414062
+                        X : 48.74488830566406,
+                        Y : 112.56118774414062,
                     }
                     Vertex{ # Vector2
-                        X 48.368446350097656
-                        Y 119.72406005859375
+                        X : 48.368446350097656,
+                        Y : 119.72406005859375,
                     }
                     Vertex{ # Vector2
-                        X -49.387451171875
-                        Y 119.88470458984375
+                        X : -49.387451171875,
+                        Y : 119.88470458984375,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                IsGround 1
-                MinDepth -50.0
-                MaxDepth 50.0
-                Enabled 1
+                IsGround : 1,
+                MinDepth : -50.0,
+                MaxDepth : 50.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'elevator1'
-                YRotation 1.5707963705062866
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'elevator1',
+                YRotation : 1.5707963705062866,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'GroundPolygon'
-            Identifier 103
+            ClassName : 'GroundPolygon',
+            Identifier : 103,
             GroundPolygonComponent{ # GroundPolygonComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X -40.72107696533203
-                        Y -4.286221027374268
+                        X : -40.72107696533203,
+                        Y : -4.286221027374268,
                     }
                     Vertex{ # Vector2
-                        X 38.4854621887207
-                        Y -5.4731245040893555
+                        X : 38.4854621887207,
+                        Y : -5.4731245040893555,
                     }
                     Vertex{ # Vector2
-                        X 40.17571258544922
-                        Y 8.352277755737305
+                        X : 40.17571258544922,
+                        Y : 8.352277755737305,
                     }
                     Vertex{ # Vector2
-                        X -40.04035568237305
-                        Y 8.089414596557617
+                        X : -40.04035568237305,
+                        Y : 8.089414596557617,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
-                Collides 1
-                MinDepth -50.0
-                MaxDepth 50.0
+                Collides : 1,
+                MinDepth : -50.0,
+                MaxDepth : 50.0,
                 OnCollide{ # Program
                 }
             }
         }
         Component{ # Component
-            ClassName 'ElevatorController'
-            Identifier 106
+            ClassName : 'ElevatorController',
+            Identifier : 106,
             ElevatorControllerComponent{ # ElevatorControllerComponent
-                ElevationShapeId 109
-                Mode 2
+                ElevationShapeId : 109,
+                Mode : 2,
             }
         }
         Component{ # Component
-            ClassName 'UtilityShape'
-            Identifier 109
+            ClassName : 'UtilityShape',
+            Identifier : 109,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -50.0
-                    Y 0.0
-                    Width 100.0
-                    Height 860.0
+                    X : -50.0,
+                    Y : 0.0,
+                    Width : 100.0,
+                    Height : 860.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'GroundPolygon'
-            Identifier 113
+            ClassName : 'GroundPolygon',
+            Identifier : 113,
             GroundPolygonComponent{ # GroundPolygonComponent
                 Polygon{ # Polygon
                     Vertex{ # Vector2
-                        X -49.11248779296875
-                        Y 112.0260009765625
+                        X : -49.11248779296875,
+                        Y : 112.0260009765625,
                     }
                     Vertex{ # Vector2
-                        X 48.74488830566406
-                        Y 112.56118774414062
+                        X : 48.74488830566406,
+                        Y : 112.56118774414062,
                     }
                     Vertex{ # Vector2
-                        X 48.368446350097656
-                        Y 119.72406005859375
+                        X : 48.368446350097656,
+                        Y : 119.72406005859375,
                     }
                     Vertex{ # Vector2
-                        X -49.387451171875
-                        Y 119.88470458984375
+                        X : -49.387451171875,
+                        Y : 119.88470458984375,
                     }
-                    Convex 0
-                    Closed 1
+                    Convex : 0,
+                    Closed : 1,
                 }
-                Collides 1
-                MinDepth -50.0
-                MaxDepth 50.0
+                Collides : 1,
+                MinDepth : -50.0,
+                MaxDepth : 50.0,
                 OnCollide{ # Program
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -49.387451171875
-            Y -5.4731245040893555
-            Width 98.13233947753906
-            Height 125.35782623291016
+            X : -49.387451171875,
+            Y : -5.4731245040893555,
+            Width : 98.13233947753906,
+            Height : 125.35782623291016,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }

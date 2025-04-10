@@ -7,14 +7,16 @@ from multiprocessing import Pool
 
 if not config.rift_mode in ["recode", "decode", "both", "custom", "audit"]:
     print(
-        "invalid rift_mode: \""
+        config.colour_error
+        + "invalid rift_mode: \""
         + config.rift_mode
         + "\""
     )
     quit()
 if not config.compile_mode in ["keyword", "all"]:
     print(
-        "invalid compile_mode: \""
+        config.colour_error
+        + "invalid compile_mode: \""
         + config.compile_mode
         + "\""
     )
@@ -29,6 +31,7 @@ parser.add_argument("-f", "--force",  action="store_true", help="Run in recode m
 parser.add_argument("-a", "--audit",  action="store_true", help="Ask before recoding each directory in re_out")
 parser.add_argument("-i", "--info",                        help="Ask before recoding each directory in re_out")
 parser.add_argument("-p", "--path",                        help="Recode a file for a given filepath")
+parser.add_argument("-n", "--no-colour", action="store_true", help="Disable output colouring")
 
 args = parser.parse_args()
 
@@ -49,6 +52,15 @@ if args.force:
 if args.info:
     print(util.get_info(args.info))
     quit()
+if args.no_colour:
+    config.colour_enabled = False
+
+if not config.colour_enabled:
+    config.colour_success = ""
+    config.colour_error = ""
+    config.colour_warning = ""
+    config.colour_reset = ""
+    config.colour_data = ""
 
 
 decoded_count = 0
@@ -125,9 +137,9 @@ if config.ask_for_info:
 
 results = ""
 if decoded_count != 0:
-    results += ("decoded "+str(decoded_count)+"  ")
+    results += (config.colour_success+"decoded "+config.colour_reset+str(decoded_count)+"  ")
 if recoded_count != 0:
-    results += ("recoded "+str(recoded_count)+"  ")
+    results += (config.colour_success+"recoded "+config.colour_reset+str(recoded_count)+"  ")
 if skipped_count != 0:
     results += ("skipped "+str(skipped_count))
 

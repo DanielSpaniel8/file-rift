@@ -1,1143 +1,1143 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
 Zone{ # MapZone
-    Name 'town'
-    Title 'Cairnwood Village'
+    Name : 'town',
+    Title : 'Cairnwood Village',
     Node{ # MapNode
-        LevelName 'town_part1'
+        LevelName : 'town_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'town_shop'
+            DestinationName : 'town_shop',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'town_healerhouse'
+            DestinationName : 'town_healerhouse',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'town_elderhouse'
+            DestinationName : 'town_elderhouse',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'town_secrethouse'
+            DestinationName : 'town_secrethouse',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_part1'
-            Direction 1
+            DestinationName : 'plains_part1',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'town_woods1'
-            Direction 3
+            DestinationName : 'town_woods1',
+            Direction : 3,
         }
-        Type 1
-        HasPortal 1
-        NumTreasures 0
+        Type : 1,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'town_shop'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title 'Cairnwood Shop'
+        LevelName : 'town_shop',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : 'Cairnwood Shop',
     }
     Node{ # MapNode
-        LevelName 'town_healerhouse'
-        Hidden 1
-        NumTreasures 0
-        Title "Healer's House"
+        LevelName : 'town_healerhouse',
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : "Healer's House",
     }
     Node{ # MapNode
-        LevelName 'town_elderhouse'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title "Elder's House"
+        LevelName : 'town_elderhouse',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : "Elder's House",
     }
     Node{ # MapNode
-        LevelName 'town_secrethouse'
-        Hidden 1
-        Music 'house'
-        NumTreasures 1
-        Title 'Dusty Hut'
+        LevelName : 'town_secrethouse',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 1,
+        Title : 'Dusty Hut',
     }
-    ExperienceLevel 1
-    Music 'outdoors_light'
+    ExperienceLevel : 1,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'woods'
-    Title 'Cairnwood Forest'
+    Name : 'woods',
+    Title : 'Cairnwood Forest',
     Node{ # MapNode
-        LevelName 'town_woods1'
+        LevelName : 'town_woods1',
         Portal{ # MapNode_Portal
-            DestinationName 'town_woods_end'
-            Direction 5
+            DestinationName : 'town_woods_end',
+            Direction : 5,
         }
-        NumTreasures 1
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'town_woods_end'
-        NumTreasures 0
+        LevelName : 'town_woods_end',
+        NumTreasures : 0,
     }
-    ExperienceLevel 1
-    Music 'forest'
+    ExperienceLevel : 1,
+    Music : 'forest',
 }
 Zone{ # MapZone
-    Name 'plains'
-    Title 'The Plains'
+    Name : 'plains',
+    Title : 'The Plains',
     Node{ # MapNode
-        LevelName 'plains_part1'
+        LevelName : 'plains_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_part2'
-            Direction 1
+            DestinationName : 'plains_part2',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_caveFirst'
+            DestinationName : 'plains_caveFirst',
         }
-        NumTreasures 2
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'plains_caveFirst'
-        Hidden 1
-        Music 'cave'
-        NumTreasures 1
-        Title 'Murky Small Cave'
+        LevelName : 'plains_caveFirst',
+        Hidden : 1,
+        Music : 'cave',
+        NumTreasures : 1,
+        Title : 'Murky Small Cave',
     }
     Node{ # MapNode
-        LevelName 'plains_part2'
+        LevelName : 'plains_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_part3'
-            Direction 3
+            DestinationName : 'plains_part3',
+            Direction : 3,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_house1'
+            DestinationName : 'plains_house1',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_tower1'
+            DestinationName : 'plains_tower1',
         }
-        Type 2
-        ExperienceLevel 2
-        HasPortal 1
-        NumTreasures 2
+        Type : 2,
+        ExperienceLevel : 2,
+        HasPortal : 1,
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'plains_house1'
-        Hidden 1
-        NumTreasures 0
-        Title "Ferryman's House"
+        LevelName : 'plains_house1',
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : "Ferryman's House",
     }
     Node{ # MapNode
-        LevelName 'plains_tower1'
-        Hidden 1
-        ExperienceLevel 3
-        Music 'cave'
-        NumTreasures 0
-        Title 'Abandoned Guard Tower'
+        LevelName : 'plains_tower1',
+        Hidden : 1,
+        ExperienceLevel : 3,
+        Music : 'cave',
+        NumTreasures : 0,
+        Title : 'Abandoned Guard Tower',
     }
     Node{ # MapNode
-        LevelName 'plains_part3'
+        LevelName : 'plains_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_part4'
-            Direction 1
+            DestinationName : 'plains_part4',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_cave0'
+            DestinationName : 'plains_cave0',
         }
-        ExperienceLevel 3
-        HasPortal 1
-        NumTreasures 1
+        ExperienceLevel : 3,
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'plains_cave0'
-        Hidden 1
-        ExperienceLevel 4
-        Music 'cave'
-        NumTreasures 1
-        Title 'Marblemist Cave'
+        LevelName : 'plains_cave0',
+        Hidden : 1,
+        ExperienceLevel : 4,
+        Music : 'cave',
+        NumTreasures : 1,
+        Title : 'Marblemist Cave',
     }
     Node{ # MapNode
-        LevelName 'plains_part4'
+        LevelName : 'plains_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_woodkeep_entrance'
-            Direction 3
+            DestinationName : 'plains_woodkeep_entrance',
+            Direction : 3,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave0'
+            DestinationName : 'forest_cave0',
         }
-        Type 2
-        ExperienceLevel 4
-        HasPortal 1
-        NumTreasures 1
+        Type : 2,
+        ExperienceLevel : 4,
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'plains_woodkeep_entrance'
+        LevelName : 'plains_woodkeep_entrance',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_woodkeep'
-            Direction 1
+            DestinationName : 'plains_woodkeep',
+            Direction : 1,
         }
-        Type 2
-        ExperienceLevel 4
-        HasPortal 1
-        NumTreasures 0
+        Type : 2,
+        ExperienceLevel : 4,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
-    ExperienceLevel 2
-    Music 'outdoors_light'
+    ExperienceLevel : 2,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'woodkeep'
-    Title 'Forgotten Keep'
+    Name : 'woodkeep',
+    Title : 'Forgotten Keep',
     Node{ # MapNode
-        LevelName 'plains_woodkeep'
+        LevelName : 'plains_woodkeep',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_woodkeep2'
-            Direction 1
+            DestinationName : 'plains_woodkeep2',
+            Direction : 1,
         }
-        NumTreasures 3
+        NumTreasures : 3,
     }
     Node{ # MapNode
-        LevelName 'plains_woodkeep2'
+        LevelName : 'plains_woodkeep2',
         Portal{ # MapNode_Portal
-            DestinationName 'plains_woodkeep3'
-            Direction 1
+            DestinationName : 'plains_woodkeep3',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'plains_woodkeep_cellar'
+            DestinationName : 'plains_woodkeep_cellar',
         }
-        HasPortal 1
-        NumTreasures 1
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'plains_woodkeep_cellar'
-        Hidden 1
-        NumTreasures 0
-        Title 'Forgotten Keep Cellar'
+        LevelName : 'plains_woodkeep_cellar',
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Forgotten Keep Cellar',
     }
     Node{ # MapNode
-        LevelName 'plains_woodkeep3'
-        Type 3
-        ExperienceLevel 6
-        HasPortal 1
-        NumTreasures 2
-        Title 'Chamber of The Mageblade'
+        LevelName : 'plains_woodkeep3',
+        Type : 3,
+        ExperienceLevel : 6,
+        HasPortal : 1,
+        NumTreasures : 2,
+        Title : 'Chamber of The Mageblade',
     }
-    ExperienceLevel 5
-    Music 'dungeon1'
+    ExperienceLevel : 5,
+    Music : 'dungeon1',
 }
 Zone{ # MapZone
-    Name 'grove'
-    Title 'Evernight Forest'
+    Name : 'grove',
+    Title : 'Evernight Forest',
     Node{ # MapNode
-        LevelName 'forest_cave0'
+        LevelName : 'forest_cave0',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave1'
+            DestinationName : 'forest_cave1',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'forest_part1'
-            Direction 1
+            DestinationName : 'forest_part1',
+            Direction : 1,
         }
-        Hidden 1
-        NumTreasures 0
-        Title 'Cairnwood Valley Caves'
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Cairnwood Valley Caves',
     }
     Node{ # MapNode
-        LevelName 'forest_cave1'
-        Hidden 1
-        NumTreasures 1
-        Title 'Sinister Cave'
+        LevelName : 'forest_cave1',
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'Sinister Cave',
     }
     Node{ # MapNode
-        LevelName 'forest_part1'
+        LevelName : 'forest_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave2'
+            DestinationName : 'forest_cave2',
         }
-        Type 2
-        HasPortal 1
-        NumTreasures 2
+        Type : 2,
+        HasPortal : 1,
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'forest_cave2'
+        LevelName : 'forest_cave2',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_part2'
-            Direction 7
+            DestinationName : 'forest_part2',
+            Direction : 7,
         }
-        Hidden 1
-        NumTreasures 0
-        Title 'Evernight Caves'
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Evernight Caves',
     }
     Node{ # MapNode
-        LevelName 'forest_part2'
+        LevelName : 'forest_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave3'
+            DestinationName : 'forest_cave3',
         }
-        NumTreasures 1
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'forest_cave3'
+        LevelName : 'forest_cave3',
         Portal{ # MapNode_Portal
-            DestinationName 'grove_part1'
-            Direction 1
+            DestinationName : 'grove_part1',
+            Direction : 1,
         }
-        Hidden 1
-        NumTreasures 0
-        Title 'Evernight Caves'
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Evernight Caves',
     }
     Node{ # MapNode
-        LevelName 'grove_part1'
+        LevelName : 'grove_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave4'
+            DestinationName : 'forest_cave4',
         }
-        Type 2
-        HasPortal 1
-        NumTreasures 2
+        Type : 2,
+        HasPortal : 1,
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'forest_cave4'
+        LevelName : 'forest_cave4',
         Portal{ # MapNode_Portal
-            DestinationName 'grove_part2'
-            Direction 1
+            DestinationName : 'grove_part2',
+            Direction : 1,
         }
-        Hidden 1
-        NumTreasures 0
-        Title 'Evernight Caves'
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Evernight Caves',
     }
     Node{ # MapNode
-        LevelName 'grove_part2'
+        LevelName : 'grove_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'forest_cave5'
+            DestinationName : 'forest_cave5',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'grove_graveyard'
-            Direction 3
+            DestinationName : 'grove_graveyard',
+            Direction : 3,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'lowergrove_part1'
-            Direction 7
+            DestinationName : 'lowergrove_part1',
+            Direction : 7,
         }
-        Type 2
-        HasPortal 1
-        NumTreasures 0
-        Title 'Wellcliff Campsite'
+        Type : 2,
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Wellcliff Campsite',
     }
     Node{ # MapNode
-        LevelName 'forest_cave5'
+        LevelName : 'forest_cave5',
         Portal{ # MapNode_Portal
-            DestinationName 'grass_part1'
-            Direction 1
+            DestinationName : 'grass_part1',
+            Direction : 1,
         }
-        Hidden 1
-        NumTreasures 1
-        Title 'Evernight Caves'
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'Evernight Caves',
     }
     Node{ # MapNode
-        LevelName 'grove_graveyard'
+        LevelName : 'grove_graveyard',
         Portal{ # MapNode_Portal
-            DestinationName 'grove_crypt1'
+            DestinationName : 'grove_crypt1',
         }
-        ExperienceLevel 8
-        NumTreasures 0
-        Title 'Wellcliff Graveyard'
+        ExperienceLevel : 8,
+        NumTreasures : 0,
+        Title : 'Wellcliff Graveyard',
     }
     Node{ # MapNode
-        LevelName 'grove_crypt1'
-        Hidden 1
-        ExperienceLevel 8
-        Music 'dungeon1'
-        NumTreasures 2
-        Title 'Corrupted Crypt'
+        LevelName : 'grove_crypt1',
+        Hidden : 1,
+        ExperienceLevel : 8,
+        Music : 'dungeon1',
+        NumTreasures : 2,
+        Title : 'Corrupted Crypt',
     }
-    ExperienceLevel 7
-    Music 'forest'
+    ExperienceLevel : 7,
+    Music : 'forest',
 }
 Zone{ # MapZone
-    Name 'grass'
-    Title 'Outskirts of Florennum'
+    Name : 'grass',
+    Title : 'Outskirts of Florennum',
     Node{ # MapNode
-        LevelName 'grass_part1'
+        LevelName : 'grass_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'grass_part2'
-            Direction 1
+            DestinationName : 'grass_part2',
+            Direction : 1,
         }
-        Type 2
-        HasPortal 1
-        NumTreasures 2
-        Title "King's Road"
+        Type : 2,
+        HasPortal : 1,
+        NumTreasures : 2,
+        Title : "King's Road",
     }
     Node{ # MapNode
-        LevelName 'grass_part2'
+        LevelName : 'grass_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'grass_house'
+            DestinationName : 'grass_house',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_wall1'
+            DestinationName : 'florennum_wall1',
         }
-        HasPortal 1
-        NumTreasures 0
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'grass_house'
+        LevelName : 'grass_house',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_cave1'
+            DestinationName : 'florennum_cave1',
         }
-        Hidden 1
-        NumTreasures 0
-        Title '...'
-        IgnoreInStatistics 1
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : '...',
+        IgnoreInStatistics : 1,
     }
     Node{ # MapNode
-        LevelName 'grass_part3'
+        LevelName : 'grass_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_part1'
-            Direction 1
+            DestinationName : 'wasteland_part1',
+            Direction : 1,
         }
-        ExperienceLevel 11
-        NumTreasures 1
+        ExperienceLevel : 11,
+        NumTreasures : 1,
     }
-    ExperienceLevel 8
-    Music 'outdoors_light'
+    ExperienceLevel : 8,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'florennum'
-    Title 'City of Florennum'
+    Name : 'florennum',
+    Title : 'City of Florennum',
     Node{ # MapNode
-        LevelName 'florennum_wall1'
-        Hidden 1
-        NumTreasures 1
-        Title 'Walls of Florennum'
+        LevelName : 'florennum_wall1',
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'Walls of Florennum',
     }
     Node{ # MapNode
-        LevelName 'florennum_cave1'
+        LevelName : 'florennum_cave1',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_part1'
-            Direction 1
+            DestinationName : 'florennum_part1',
+            Direction : 1,
         }
-        Hidden 1
-        Music 'forest'
-        NumTreasures 1
-        Title 'City Sewers'
+        Hidden : 1,
+        Music : 'forest',
+        NumTreasures : 1,
+        Title : 'City Sewers',
     }
     Node{ # MapNode
-        LevelName 'florennum_part1'
+        LevelName : 'florennum_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_tower1'
+            DestinationName : 'florennum_tower1',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'grass_part3'
-            Direction 1
+            DestinationName : 'grass_part3',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_shop'
+            DestinationName : 'florennum_shop',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_healerhouse'
+            DestinationName : 'florennum_healerhouse',
         }
-        Type 1
-        HasPortal 1
-        NumTreasures 1
+        Type : 1,
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'florennum_shop'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title 'Marketplace of Florennum'
+        LevelName : 'florennum_shop',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : 'Marketplace of Florennum',
     }
     Node{ # MapNode
-        LevelName 'florennum_healerhouse'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title 'Healer of Florennum'
+        LevelName : 'florennum_healerhouse',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : 'Healer of Florennum',
     }
     Node{ # MapNode
-        LevelName 'florennum_tower1'
+        LevelName : 'florennum_tower1',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_towertop'
+            DestinationName : 'florennum_towertop',
         }
-        Hidden 1
-        NumTreasures 0
-        Title 'Eastern Guard Tower'
+        Hidden : 1,
+        NumTreasures : 0,
+        Title : 'Eastern Guard Tower',
     }
     Node{ # MapNode
-        LevelName 'florennum_towertop'
+        LevelName : 'florennum_towertop',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_tower2'
+            DestinationName : 'florennum_tower2',
         }
-        Hidden 1
-        NumTreasures 1
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'florennum_tower2'
+        LevelName : 'florennum_tower2',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_jail_part1'
-            Direction 3
+            DestinationName : 'florennum_jail_part1',
+            Direction : 3,
         }
-        Hidden 1
-        ExperienceLevel 10
-        Music 'dungeon1'
-        NumTreasures 0
-        Title 'Western Guard Tower'
+        Hidden : 1,
+        ExperienceLevel : 10,
+        Music : 'dungeon1',
+        NumTreasures : 0,
+        Title : 'Western Guard Tower',
     }
-    ExperienceLevel 9
-    Music 'outdoors_light'
+    ExperienceLevel : 9,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'florennum_jail'
-    Title 'Dungeon of Florennum'
+    Name : 'florennum_jail',
+    Title : 'Dungeon of Florennum',
     Node{ # MapNode
-        LevelName 'florennum_jail_part1'
+        LevelName : 'florennum_jail_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_jail_part2'
-            Direction 3
+            DestinationName : 'florennum_jail_part2',
+            Direction : 3,
         }
-        ExperienceLevel 10
-        HasPortal 1
-        NumTreasures 0
+        ExperienceLevel : 10,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'florennum_jail_part2'
+        LevelName : 'florennum_jail_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'florennum_jail_boss'
-            Direction 1
+            DestinationName : 'florennum_jail_boss',
+            Direction : 1,
         }
-        NumTreasures 0
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'florennum_jail_boss'
-        Type 3
-        HasPortal 1
-        NumTreasures 0
-        Title "Overseer's Lair"
+        LevelName : 'florennum_jail_boss',
+        Type : 3,
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : "Overseer's Lair",
     }
-    ExperienceLevel 11
-    Music 'dungeon1'
+    ExperienceLevel : 11,
+    Music : 'dungeon1',
 }
 Zone{ # MapZone
-    Name 'wasteland'
-    Title 'Wastelands'
+    Name : 'wasteland',
+    Title : 'Wastelands',
     Node{ # MapNode
-        LevelName 'wasteland_part1'
+        LevelName : 'wasteland_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_cave1'
+            DestinationName : 'wasteland_cave1',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_part2'
-            Direction 3
+            DestinationName : 'wasteland_part2',
+            Direction : 3,
         }
-        NumTreasures 1
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'wasteland_cave1'
+        LevelName : 'wasteland_cave1',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_house1'
-            PassDirection 1
+            DestinationName : 'wasteland_house1',
+            PassDirection : 1,
         }
-        Hidden 1
-        Music 'cave'
-        NumTreasures 1
-        Title 'Huge Cavern'
+        Hidden : 1,
+        Music : 'cave',
+        NumTreasures : 1,
+        Title : 'Huge Cavern',
     }
     Node{ # MapNode
-        LevelName 'wasteland_house1'
+        LevelName : 'wasteland_house1',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_part1'
-            PassDirection 1
+            DestinationName : 'wasteland_part1',
+            PassDirection : 1,
         }
-        Hidden 1
-        Music 'cave'
-        NumTreasures 1
-        Title "Thieves' Hideout"
+        Hidden : 1,
+        Music : 'cave',
+        NumTreasures : 1,
+        Title : "Thieves' Hideout",
     }
     Node{ # MapNode
-        LevelName 'wasteland_part2'
+        LevelName : 'wasteland_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_town'
-            Direction 1
+            DestinationName : 'wasteland_town',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 2
+        HasPortal : 1,
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'wasteland_town'
+        LevelName : 'wasteland_town',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_town_shop'
+            DestinationName : 'wasteland_town_shop',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_town_healerhouse'
+            DestinationName : 'wasteland_town_healerhouse',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_town_secrethouse'
+            DestinationName : 'wasteland_town_secrethouse',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_part3'
-            Direction 1
+            DestinationName : 'wasteland_part3',
+            Direction : 1,
         }
-        Type 1
-        HasPortal 1
-        NumTreasures 0
-        Title 'Greyhedge Village'
+        Type : 1,
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Greyhedge Village',
     }
     Node{ # MapNode
-        LevelName 'wasteland_town_shop'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title "Shopkeeper's House"
+        LevelName : 'wasteland_town_shop',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : "Shopkeeper's House",
     }
     Node{ # MapNode
-        LevelName 'wasteland_town_healerhouse'
-        Hidden 1
-        Music 'house'
-        NumTreasures 0
-        Title "Healer's House"
+        LevelName : 'wasteland_town_healerhouse',
+        Hidden : 1,
+        Music : 'house',
+        NumTreasures : 0,
+        Title : "Healer's House",
     }
     Node{ # MapNode
-        LevelName 'wasteland_town_secrethouse'
-        Hidden 1
-        NumTreasures 1
-        Title 'A Mysterious House'
+        LevelName : 'wasteland_town_secrethouse',
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'A Mysterious House',
     }
     Node{ # MapNode
-        LevelName 'wasteland_part3'
+        LevelName : 'wasteland_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_part4'
-            Direction 7
+            DestinationName : 'wasteland_part4',
+            Direction : 7,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_cave'
-            Direction 3
+            DestinationName : 'wasteland_cave',
+            Direction : 3,
         }
-        NumTreasures 2
-        Title 'Greyhedge Crossing'
+        NumTreasures : 2,
+        Title : 'Greyhedge Crossing',
     }
     Node{ # MapNode
-        LevelName 'wasteland_part4'
+        LevelName : 'wasteland_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part1'
-            Direction 1
+            DestinationName : 'thecave_part1',
+            Direction : 1,
         }
-        ExperienceLevel 13
-        NumTreasures 0
+        ExperienceLevel : 13,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'wasteland_cave'
+        LevelName : 'wasteland_cave',
         Portal{ # MapNode_Portal
-            DestinationName 'wasteland_cave_snowy'
-            Direction 1
+            DestinationName : 'wasteland_cave_snowy',
+            Direction : 1,
         }
-        ExperienceLevel 15
-        Music 'cave'
-        NumTreasures 1
-        Title 'Greyhedge Caves'
+        ExperienceLevel : 15,
+        Music : 'cave',
+        NumTreasures : 1,
+        Title : 'Greyhedge Caves',
     }
     Node{ # MapNode
-        LevelName 'wasteland_cave_snowy'
+        LevelName : 'wasteland_cave_snowy',
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_part1'
-            Direction 1
+            DestinationName : 'snowy_part1',
+            Direction : 1,
         }
-        ExperienceLevel 15
-        Music 'cave'
-        HasPortal 1
-        NumTreasures 0
-        Title 'Icy Cave'
+        ExperienceLevel : 15,
+        Music : 'cave',
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Icy Cave',
     }
-    ExperienceLevel 12
-    Music 'outdoors_light'
+    ExperienceLevel : 12,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'thecave'
-    Title 'Great Caves'
+    Name : 'thecave',
+    Title : 'Great Caves',
     Node{ # MapNode
-        LevelName 'thecave_part1'
+        LevelName : 'thecave_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part2'
+            DestinationName : 'thecave_part2',
         }
-        HasPortal 1
-        NumTreasures 1
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'thecave_part2'
+        LevelName : 'thecave_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part11'
+            DestinationName : 'thecave_part11',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part21'
-            Direction 7
+            DestinationName : 'thecave_part21',
+            Direction : 7,
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part11'
+        LevelName : 'thecave_part11',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part12'
+            DestinationName : 'thecave_part12',
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part12'
+        LevelName : 'thecave_part12',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part121'
+            DestinationName : 'thecave_part121',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part13'
-            Direction 1
+            DestinationName : 'thecave_part13',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part21'
-            PassDirection 1
-            IgnoreInNodePositioning 1
+            DestinationName : 'thecave_part21',
+            PassDirection : 1,
+            IgnoreInNodePositioning : 1,
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part121'
-        Hidden 1
-        NumTreasures 1
+        LevelName : 'thecave_part121',
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'thecave_part21'
+        LevelName : 'thecave_part21',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part22'
+            DestinationName : 'thecave_part22',
         }
-        ExperienceLevel 14
-        NumTreasures 0
+        ExperienceLevel : 14,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part22'
+        LevelName : 'thecave_part22',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part23'
+            DestinationName : 'thecave_part23',
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 0
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part23'
+        LevelName : 'thecave_part23',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part24'
-            Direction 1
+            DestinationName : 'thecave_part24',
+            Direction : 1,
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 0
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part24'
+        LevelName : 'thecave_part24',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part1'
-            Direction 1
+            DestinationName : 'fire_part1',
+            Direction : 1,
         }
-        ExperienceLevel 14
-        HasPortal 1
-        NumTreasures 0
+        ExperienceLevel : 14,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part13'
+        LevelName : 'thecave_part13',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part131'
+            DestinationName : 'thecave_part131',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part14'
+            DestinationName : 'thecave_part14',
         }
-        NumTreasures 0
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part131'
+        LevelName : 'thecave_part131',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part132'
+            DestinationName : 'thecave_part132',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part141'
+            DestinationName : 'thecave_part141',
         }
-        Hidden 1
-        NumTreasures 1
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'thecave_part132'
+        LevelName : 'thecave_part132',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part142'
+            DestinationName : 'thecave_part142',
         }
-        Hidden 1
-        NumTreasures 1
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'thecave_part14'
+        LevelName : 'thecave_part14',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part141'
-            PassDirection 1
+            DestinationName : 'thecave_part141',
+            PassDirection : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part15'
-            Direction 3
+            DestinationName : 'thecave_part15',
+            Direction : 3,
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part141'
+        LevelName : 'thecave_part141',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part142'
-            PassDirection 1
+            DestinationName : 'thecave_part142',
+            PassDirection : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part1411'
-            Direction 1
+            DestinationName : 'thecave_part1411',
+            Direction : 1,
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 0
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part142'
+        LevelName : 'thecave_part142',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part1421'
+            DestinationName : 'thecave_part1421',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part14'
-            PassDirection 1
+            DestinationName : 'thecave_part14',
+            PassDirection : 1,
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 0
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_part1421'
+        LevelName : 'thecave_part1421',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_part23'
-            IgnoreInNodePositioning 1
+            DestinationName : 'thecave_part23',
+            IgnoreInNodePositioning : 1,
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 1
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'thecave_part15'
-        ExperienceLevel 18
-        HasPortal 1
-        NumTreasures 0
-        Title 'Chambers of Power'
+        LevelName : 'thecave_part15',
+        ExperienceLevel : 18,
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Chambers of Power',
     }
     Node{ # MapNode
-        LevelName 'thecave_part1411'
+        LevelName : 'thecave_part1411',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_crypt1'
+            DestinationName : 'thecave_crypt1',
         }
-        ExperienceLevel 14
-        HasPortal 1
-        NumTreasures 0
+        ExperienceLevel : 14,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'thecave_crypt1'
+        LevelName : 'thecave_crypt1',
         Portal{ # MapNode_Portal
-            DestinationName 'thecave_crypt2'
-            Direction 1
+            DestinationName : 'thecave_crypt2',
+            Direction : 1,
         }
-        Hidden 1
-        ExperienceLevel 14
-        NumTreasures 1
-        Title 'Purplemoor Crypt'
+        Hidden : 1,
+        ExperienceLevel : 14,
+        NumTreasures : 1,
+        Title : 'Purplemoor Crypt',
     }
     Node{ # MapNode
-        LevelName 'thecave_crypt2'
+        LevelName : 'thecave_crypt2',
         Portal{ # MapNode_Portal
-            DestinationName 'beyond_graveyard'
+            DestinationName : 'beyond_graveyard',
         }
-        ExperienceLevel 15
-        HasPortal 1
-        NumTreasures 1
-        Title 'Purplemoor Crypt'
+        ExperienceLevel : 15,
+        HasPortal : 1,
+        NumTreasures : 1,
+        Title : 'Purplemoor Crypt',
     }
     Node{ # MapNode
-        LevelName 'beyond_graveyard'
-        Hidden 1
-        ExperienceLevel 15
-        NumTreasures 0
-        Title 'Purplemoor Graveyard'
+        LevelName : 'beyond_graveyard',
+        Hidden : 1,
+        ExperienceLevel : 15,
+        NumTreasures : 0,
+        Title : 'Purplemoor Graveyard',
     }
-    ExperienceLevel 13
-    Music 'cave'
+    ExperienceLevel : 13,
+    Music : 'cave',
 }
 Zone{ # MapZone
-    Name 'fire'
-    Title 'Fiery Depths'
+    Name : 'fire',
+    Title : 'Fiery Depths',
     Node{ # MapNode
-        LevelName 'fire_part1'
+        LevelName : 'fire_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part2'
-            Direction 1
+            DestinationName : 'fire_part2',
+            Direction : 1,
         }
-        NumTreasures 1
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'fire_part2'
+        LevelName : 'fire_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part3'
-            Direction 1
+            DestinationName : 'fire_part3',
+            Direction : 1,
         }
-        NumTreasures 0
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'fire_part3'
+        LevelName : 'fire_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part31'
+            DestinationName : 'fire_part31',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part4'
-            Direction 1
+            DestinationName : 'fire_part4',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 1
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'fire_part31'
+        LevelName : 'fire_part31',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part4'
-            Direction 1
-            PassDirection 1
+            DestinationName : 'fire_part4',
+            Direction : 1,
+            PassDirection : 1,
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'fire_part4'
+        LevelName : 'fire_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_part5'
+            DestinationName : 'fire_part5',
         }
-        NumTreasures 1
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'fire_part5'
+        LevelName : 'fire_part5',
         Portal{ # MapNode_Portal
-            DestinationName 'fire_partBoss'
-            Direction 1
+            DestinationName : 'fire_partBoss',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 0
-        Title 'Chambers of The Flame'
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Chambers of The Flame',
     }
     Node{ # MapNode
-        LevelName 'fire_partBoss'
-        Type 3
-        NumTreasures 0
-        Title 'Chambers of The Flame'
+        LevelName : 'fire_partBoss',
+        Type : 3,
+        NumTreasures : 0,
+        Title : 'Chambers of The Flame',
     }
-    ExperienceLevel 15
-    Music 'dungeon1'
+    ExperienceLevel : 15,
+    Music : 'dungeon1',
 }
 Zone{ # MapZone
-    Name 'snowy'
-    Title 'Snowy Slopes'
+    Name : 'snowy',
+    Title : 'Snowy Slopes',
     Node{ # MapNode
-        LevelName 'snowy_part1'
+        LevelName : 'snowy_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_part2'
-            Direction 1
+            DestinationName : 'snowy_part2',
+            Direction : 1,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_cave1'
+            DestinationName : 'snowy_cave1',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_cave2'
+            DestinationName : 'snowy_cave2',
         }
-        HasPortal 1
-        NumTreasures 0
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'snowy_cave1'
-        Hidden 1
-        NumTreasures 1
-        Title 'Infested Cave'
+        LevelName : 'snowy_cave1',
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'Infested Cave',
     }
     Node{ # MapNode
-        LevelName 'snowy_cave2'
-        Hidden 1
-        NumTreasures 1
-        Title 'Infested Gold Mine'
+        LevelName : 'snowy_cave2',
+        Hidden : 1,
+        NumTreasures : 1,
+        Title : 'Infested Gold Mine',
     }
     Node{ # MapNode
-        LevelName 'snowy_part2'
+        LevelName : 'snowy_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_part3'
-            Direction 1
+            DestinationName : 'snowy_part3',
+            Direction : 1,
         }
-        NumTreasures 2
+        NumTreasures : 2,
     }
     Node{ # MapNode
-        LevelName 'snowy_part3'
+        LevelName : 'snowy_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'snowy_part4'
-            Direction 1
+            DestinationName : 'snowy_part4',
+            Direction : 1,
         }
-        NumTreasures 0
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'snowy_part4'
+        LevelName : 'snowy_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part1'
-            Direction 1
+            DestinationName : 'icecastle_part1',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 0
-        Title 'Snowy Summit'
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Snowy Summit',
     }
-    ExperienceLevel 16
-    Music 'outdoors_light'
+    ExperienceLevel : 16,
+    Music : 'outdoors_light',
 }
 Zone{ # MapZone
-    Name 'icecastle'
-    Title 'Frozen Temple'
+    Name : 'icecastle',
+    Title : 'Frozen Temple',
     Node{ # MapNode
-        LevelName 'icecastle_part1'
+        LevelName : 'icecastle_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part11'
+            DestinationName : 'icecastle_part11',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part2'
-            Direction 1
+            DestinationName : 'icecastle_part2',
+            Direction : 1,
         }
-        NumTreasures 0
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'icecastle_part11'
-        Hidden 1
-        NumTreasures 1
+        LevelName : 'icecastle_part11',
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'icecastle_part2'
+        LevelName : 'icecastle_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part3'
+            DestinationName : 'icecastle_part3',
         }
-        Hidden 1
-        NumTreasures 1
+        Hidden : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'icecastle_part3'
+        LevelName : 'icecastle_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part4'
-            Direction 1
+            DestinationName : 'icecastle_part4',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 0
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'icecastle_part4'
+        LevelName : 'icecastle_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_part5'
-            Direction 7
+            DestinationName : 'icecastle_part5',
+            Direction : 7,
         }
         Portal{ # MapNode_Portal
-            DestinationName 'icecastle_partBoss'
-            Direction 1
+            DestinationName : 'icecastle_partBoss',
+            Direction : 1,
         }
-        ExperienceLevel 18
-        HasPortal 1
-        NumTreasures 0
+        ExperienceLevel : 18,
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'icecastle_part5'
-        ExperienceLevel 18
-        NumTreasures 0
-        Title 'Hall of Trials'
+        LevelName : 'icecastle_part5',
+        ExperienceLevel : 18,
+        NumTreasures : 0,
+        Title : 'Hall of Trials',
     }
     Node{ # MapNode
-        LevelName 'icecastle_partBoss'
-        Type 3
-        ExperienceLevel 18
-        HasPortal 1
-        NumTreasures 0
-        Title 'Hall of The Dwarven Kings'
+        LevelName : 'icecastle_partBoss',
+        Type : 3,
+        ExperienceLevel : 18,
+        HasPortal : 1,
+        NumTreasures : 0,
+        Title : 'Hall of The Dwarven Kings',
     }
-    ExperienceLevel 17
-    Music 'dungeon1'
+    ExperienceLevel : 17,
+    Music : 'dungeon1',
 }
 Zone{ # MapZone
-    Name 'lowergrove'
-    Title "World's End Keep"
+    Name : 'lowergrove',
+    Title : "World's End Keep",
     Node{ # MapNode
-        LevelName 'lowergrove_part1'
+        LevelName : 'lowergrove_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part1'
-            Direction 1
+            DestinationName : 'worldsend_part1',
+            Direction : 1,
         }
-        ExperienceLevel 18
-        Music 'forest'
-        NumTreasures 0
-        Title 'Corrupted Grove'
+        ExperienceLevel : 18,
+        Music : 'forest',
+        NumTreasures : 0,
+        Title : 'Corrupted Grove',
     }
     Node{ # MapNode
-        LevelName 'worldsend_part1'
+        LevelName : 'worldsend_part1',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part2'
-            Direction 1
+            DestinationName : 'worldsend_part2',
+            Direction : 1,
         }
-        ExperienceLevel 19
-        HasPortal 1
-        NumTreasures 1
+        ExperienceLevel : 19,
+        HasPortal : 1,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part2'
+        LevelName : 'worldsend_part2',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part3'
+            DestinationName : 'worldsend_part3',
         }
-        Hidden 1
-        ExperienceLevel 19
-        NumTreasures 0
+        Hidden : 1,
+        ExperienceLevel : 19,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part3'
+        LevelName : 'worldsend_part3',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part4'
+            DestinationName : 'worldsend_part4',
         }
-        Hidden 1
-        ExperienceLevel 19
-        NumTreasures 1
+        Hidden : 1,
+        ExperienceLevel : 19,
+        NumTreasures : 1,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part4'
+        LevelName : 'worldsend_part4',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part5'
+            DestinationName : 'worldsend_part5',
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part5'
+        LevelName : 'worldsend_part5',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part6'
+            DestinationName : 'worldsend_part6',
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part6'
+        LevelName : 'worldsend_part6',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part7'
-            Direction 1
+            DestinationName : 'worldsend_part7',
+            Direction : 1,
         }
-        Hidden 1
-        NumTreasures 0
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part7'
+        LevelName : 'worldsend_part7',
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part8'
+            DestinationName : 'worldsend_part8',
         }
         Portal{ # MapNode_Portal
-            DestinationName 'worldsend_part9'
-            Direction 1
+            DestinationName : 'worldsend_part9',
+            Direction : 1,
         }
-        HasPortal 1
-        NumTreasures 0
+        HasPortal : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part8'
-        Hidden 1
-        NumTreasures 0
+        LevelName : 'worldsend_part8',
+        Hidden : 1,
+        NumTreasures : 0,
     }
     Node{ # MapNode
-        LevelName 'worldsend_part9'
-        Type 3
-        NumTreasures 0
-        Title 'Lair of Death'
+        LevelName : 'worldsend_part9',
+        Type : 3,
+        NumTreasures : 0,
+        Title : 'Lair of Death',
     }
-    ExperienceLevel 20
-    Music 'dungeon1'
+    ExperienceLevel : 20,
+    Music : 'dungeon1',
 }

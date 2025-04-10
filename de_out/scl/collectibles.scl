@@ -1,3647 +1,3639 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'collectibles'
+Name : 'collectibles',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'iselon_shard_1'
+        Identifier : 'iselon_shard_1',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.75
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.75,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'iselon_shard_1'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'iselon_shard_1',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_iselon_shard_1'
-                YRotation 0.3490658402442932
-                EmissionFactor 5.0
-                XRotation 0.3490658402442932
+                Name : 'item_iselon_shard_1',
+                YRotation : 0.3490658402442932,
+                EmissionFactor : 5.0,
+                XRotation : 0.3490658402442932,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 10.0
+                    X : 0.0,
+                    Y : 10.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -17.0
-                    Y -15.0
-                    Width 34.0
-                    Height 45.0
+                    X : -17.0,
+                    Y : -15.0,
+                    Width : 34.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'iselon_shard_2'
+        Identifier : 'iselon_shard_2',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.75
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.75,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'iselon_shard_2'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'iselon_shard_2',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_iselon_shard_2'
-                YRotation 0.3490658402442932
-                EmissionFactor 5.0
-                XRotation 0.3490658402442932
+                Name : 'item_iselon_shard_2',
+                YRotation : 0.3490658402442932,
+                EmissionFactor : 5.0,
+                XRotation : 0.3490658402442932,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 10.0
+                    X : 0.0,
+                    Y : 10.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -17.0
-                    Y -15.0
-                    Width 34.0
-                    Height 45.0
+                    X : -17.0,
+                    Y : -15.0,
+                    Width : 34.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'iselon_shard_3'
+        Identifier : 'iselon_shard_3',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.75
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.75,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'iselon_shard_3'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'iselon_shard_3',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_iselon_shard_3'
-                YRotation 0.3490658402442932
-                EmissionFactor 5.0
-                XRotation 0.3490658402442932
+                Name : 'item_iselon_shard_3',
+                YRotation : 0.3490658402442932,
+                EmissionFactor : 5.0,
+                XRotation : 0.3490658402442932,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 10.0
+                    X : 0.0,
+                    Y : 10.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -17.0
-                    Y -15.0
-                    Width 34.0
-                    Height 45.0
+                    X : -17.0,
+                    Y : -15.0,
+                    Width : 34.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'iselon_shard_4'
+        Identifier : 'iselon_shard_4',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.75
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.75,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'iselon_shard_4'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'iselon_shard_4',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_iselon_shard_4'
-                YRotation 0.3490658402442932
-                EmissionFactor 5.0
-                XRotation 0.3490658402442932
+                Name : 'item_iselon_shard_4',
+                YRotation : 0.3490658402442932,
+                EmissionFactor : 5.0,
+                XRotation : 0.3490658402442932,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 10.0
+                    X : 0.0,
+                    Y : 10.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -17.0
-                    Y -15.0
-                    Width 34.0
-                    Height 45.0
+                    X : -17.0,
+                    Y : -15.0,
+                    Width : 34.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_brasssword'
+        Identifier : 'item_brasssword',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'brasssword'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'brasssword',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_ironsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_ironsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 15.0
-                    Y 0.0
-                    Z 0.0
+                    X : 15.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 0.644444465637207
-                    B 0.42222222685813904
-                    A 1.0
+                    R : 1.0,
+                    G : 0.644444465637207,
+                    B : 0.42222222685813904,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.12263374030590057
-                    G 0.18696410953998566
-                    B 0.23292176425457
-                    A 0.0
+                    R : 0.12263374030590057,
+                    G : 0.18696410953998566,
+                    B : 0.23292176425457,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_broadsword'
+        Identifier : 'item_broadsword',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'broadsword'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'broadsword',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_broadsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_broadsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 10.0
-                    Y -7.0
-                    Z 0.0
+                    X : 10.0,
+                    Y : -7.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.12263374030590057
-                    G 0.18696410953998566
-                    B 0.23292176425457
-                    A 0.0
+                    R : 0.12263374030590057,
+                    G : 0.18696410953998566,
+                    B : 0.23292176425457,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_firetrinket'
+        Identifier : 'item_firetrinket',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'firetrinket'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'firetrinket',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_firetrinket'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'item_firetrinket',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -15.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.0
-                    B 0.0
-                    A 0.4777778089046478
+                    R : 1.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 0.4777778089046478,
                 }
-                Size 20.0
-                NumSegments 16
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 1.2000000476837158
+                Size : 20.0,
+                NumSegments : 16,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 1.2000000476837158,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 14.0
+                    X : 0.0,
+                    Y : 14.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y 0.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : 0.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 50.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 50.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_healingpotion'
+        Identifier : 'item_healingpotion',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 2
+            ClassName : 'ModelTransformController',
+            Identifier : 2,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'TransformController'
-            Identifier 3
+            ClassName : 'TransformController',
+            Identifier : 3,
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'healthbottlebig'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'healthbottlebig',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -12.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -12.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.6222222447395325
-                    G 0.0
-                    B 2.8610230629055877e-07
-                    A 0.20000000298023224
+                    R : 0.6222222447395325,
+                    G : 0.0,
+                    B : 2.8610230629055877e-07,
+                    A : 0.20000000298023224,
                 }
-                Size 20.0
-                NumSegments 10
-                Depth 5.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 10,
+                Depth : 5.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 9.0
+                    X : 0.0,
+                    Y : 9.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 104
+            ClassName : 'CollisionShape',
+            Identifier : 104,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -12.0
-                    Y 0.0
-                    Width 24.0
-                    Height 24.0
+                    X : -12.0,
+                    Y : 0.0,
+                    Width : 24.0,
+                    Height : 24.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 107
+            ClassName : 'CollectableItem',
+            Identifier : 107,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'healingpotion'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'healingpotion',
+                RequiresPickup : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 44.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 44.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_icetrinket'
+        Identifier : 'item_icetrinket',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'icetrinket'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'icetrinket',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_icetrinket'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'item_icetrinket',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -15.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3222222328186035
-                    G 0.46666666865348816
-                    B 1.0
-                    A 0.6333333253860474
+                    R : 0.3222222328186035,
+                    G : 0.46666666865348816,
+                    B : 1.0,
+                    A : 0.6333333253860474,
                 }
-                Size 25.0
-                NumSegments 16
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 1.2000000476837158
+                Size : 25.0,
+                NumSegments : 16,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 1.2000000476837158,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y 0.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : 0.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_ironsword'
+        Identifier : 'item_ironsword',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'ironsword'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'ironsword',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_ironsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_ironsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 15.0
-                    Y 0.0
-                    Z 0.0
+                    X : 15.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.12263374030590057
-                    G 0.18696410953998566
-                    B 0.23292176425457
-                    A 0.0
+                    R : 0.12263374030590057,
+                    G : 0.18696410953998566,
+                    B : 0.23292176425457,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 0.800000011920929
+    Scaling : 0.800000011920929,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_key_yellow'
+        Identifier : 'item_key_yellow',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 SoundLibrary.PlayEffect("surprise2");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00;\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x06\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x05\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'key_yellow'
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : 'key_yellow',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.3161256313323975
+                ModelId : 101,
+                RotationSpeed : 3.3161256313323975,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_key_yellow'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'item_key_yellow',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -15.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.8000001907348633
-                    G 0.8000000715255737
-                    B 0.0
-                    A 0.5
+                    R : 0.8000001907348633,
+                    G : 0.8000000715255737,
+                    B : 0.0,
+                    A : 0.5,
                 }
-                Size 15.0
-                NumSegments 8
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 8,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y 0.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : 0.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -15.0
-            Y -15.0
-            Width 30.0
-            Height 45.0
+            X : -15.0,
+            Y : -15.0,
+            Width : 30.0,
+            Height : 45.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_key_yellow_shop'
+        Identifier : 'item_key_yellow_shop',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 SoundLibrary.PlayEffect("surprise2");
 Game.IncCounter("takingtheshortcut");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x00\x00\x00local self = ...;\r\n\r\nSoundLibrary.PlayEffect("surprise2");\r\nGame.IncCounter("takingtheshortcut");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\n\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\n\x00\x00\x00surprise2\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x12\x00\x00\x00takingtheshortcut\x00\x00\x00\x00\x00\n\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\t\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'key_yellow'
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : 'key_yellow',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.3161256313323975
+                ModelId : 101,
+                RotationSpeed : 3.3161256313323975,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_key_yellow'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'item_key_yellow',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -15.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.8000001907348633
-                    G 0.8000000715255737
-                    B 0.0
-                    A 0.5
+                    R : 0.8000001907348633,
+                    G : 0.8000000715255737,
+                    B : 0.0,
+                    A : 0.5,
                 }
-                Size 15.0
-                NumSegments 8
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 8,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y 0.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : 0.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -15.0
-            Y -15.0
-            Width 30.0
-            Height 45.0
+            X : -15.0,
+            Y : -15.0,
+            Width : 30.0,
+            Height : 45.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_legendsword'
+        Identifier : 'item_legendsword',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'legendsword'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'legendsword',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_legendsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_legendsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 15.0
-                    Y -5.0
-                    Z 0.0
+                    X : 15.0,
+                    Y : -5.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -15.0
-                    Width 30.0
-                    Height 45.0
+                    X : -15.0,
+                    Y : -15.0,
+                    Width : 30.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 0.800000011920929
+    Scaling : 0.800000011920929,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_magicarmor'
+        Identifier : 'item_magicarmor',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'magicarmor'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'magicarmor',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_magicplate'
-                YRotation 0.0
-                EmissionFactor 1.0
-                XRotation 0.0
+                Name : 'item_magicplate',
+                YRotation : 0.0,
+                EmissionFactor : 1.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -16.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -16.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.37457817792892456
-                    G 0.1365329623222351
-                    B 0.20001177489757538
-                    A 0.3333333432674408
+                    R : 0.37457817792892456,
+                    G : 0.1365329623222351,
+                    B : 0.20001177489757538,
+                    A : 0.3333333432674408,
                 }
-                Size 20.0
-                NumSegments 15
-                Depth 25.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 15,
+                Depth : 25.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 50.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 50.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.5
+    Scaling : 1.5,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_magicsword'
+        Identifier : 'item_magicsword',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 Game.IncCounter("lordoftheundead");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("lordoftheundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00lordoftheundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'magicsword'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'magicsword',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_magicsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_magicsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 15.0
-                    Y 0.0
-                    Z 0.0
+                    X : 15.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.3283950686454773
-                    G 0.45822399854660034
-                    B 0.5160493850708008
-                    A 0.0
+                    R : 0.3283950686454773,
+                    G : 0.45822399854660034,
+                    B : 0.5160493850708008,
+                    A : 0.0,
                 }
-                Size 40.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 40.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -15.0
-                    Width 30.0
-                    Height 45.0
+                    X : -15.0,
+                    Y : -15.0,
+                    Width : 30.0,
+                    Height : 45.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -40.0
-            Y -40.0
-            Width 80.0
-            Height 80.0
+            X : -40.0,
+            Y : -40.0,
+            Width : 80.0,
+            Height : 80.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_needle'
+        Identifier : 'item_needle',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 Game.IncCounter("lostsword");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("lostsword");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00lostsword\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'needle'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'needle',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_ironsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_ironsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 15.0
-                    Y 0.0
-                    Z 0.0
+                    X : 15.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 0.9333333373069763
-                    G 0.7111111283302307
-                    B 0.8777777552604675
-                    A 1.0
+                    R : 0.9333333373069763,
+                    G : 0.7111111283302307,
+                    B : 0.8777777552604675,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.36707818508148193
-                    G 0.12029745429754257
-                    B 0.15514399111270905
-                    A 0.0
+                    R : 0.36707818508148193,
+                    G : 0.12029745429754257,
+                    B : 0.15514399111270905,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_platearmor'
+        Identifier : 'item_platearmor',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.5
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.5,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'platearmor'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'platearmor',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_platearmor'
-                YRotation 0.0
-                EmissionFactor 1.0
-                XRotation 0.0
+                Name : 'item_platearmor',
+                YRotation : 0.0,
+                EmissionFactor : 1.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -12.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -12.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.12263374030590057
-                    G 0.18696410953998566
-                    B 0.23292176425457
-                    A 0.0
+                    R : 0.12263374030590057,
+                    G : 0.18696410953998566,
+                    B : 0.23292176425457,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 25.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 25.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.5
+    Scaling : 1.5,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_shadowtrinket'
+        Identifier : 'item_shadowtrinket',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 Game.IncCounter("theundead");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x1e\x00\x00\x00Game.IncCounter("theundead");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\n\x00\x00\x00theundead\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'shadowtrinket'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'shadowtrinket',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'item_shadowtrinket'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'item_shadowtrinket',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y -15.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -15.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.3444444537162781
-                    B 1.0
-                    A 0.6333333253860474
+                    R : 1.0,
+                    G : 0.3444444537162781,
+                    B : 1.0,
+                    A : 0.6333333253860474,
                 }
-                Size 25.0
-                NumSegments 16
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 1.2000000476837158
+                Size : 25.0,
+                NumSegments : 16,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 1.2000000476837158,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 14.0
+                    X : 0.0,
+                    Y : 14.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y 0.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : 0.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'item_thorn'
+        Identifier : 'item_thorn',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.800000011920929
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.800000011920929,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 Game.IncCounter("anotherentrance");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00$\x00\x00\x00Game.IncCounter("anotherentrance");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x05\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x1e\x00\x80\x00\x03\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x0b\x00\x00\x00IncCounter\x00\x04\x10\x00\x00\x00anotherentrance\x00\x00\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName 'thorn'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'thorn',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 3.1415927410125732
+                ModelId : 101,
+                RotationSpeed : 3.1415927410125732,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_broadsword'
-                YRotation 0.7853981852531433
-                EmissionFactor 1.0
-                XRotation 1.5707963705062866
+                Name : 'weapon_broadsword',
+                YRotation : 0.7853981852531433,
+                EmissionFactor : 1.0,
+                XRotation : 1.5707963705062866,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 10.0
-                    Y -7.0
-                    Z 0.0
+                    X : 10.0,
+                    Y : -7.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 0.6777777671813965
-                    G 1.0
-                    B 0.644444465637207
-                    A 1.0
+                    R : 0.6777777671813965,
+                    G : 1.0,
+                    B : 0.644444465637207,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.12263374030590057
-                    G 0.18696410953998566
-                    B 0.23292176425457
-                    A 0.0
+                    R : 0.12263374030590057,
+                    G : 0.18696410953998566,
+                    B : 0.23292176425457,
+                    A : 0.0,
                 }
-                Size 25.0
-                NumSegments 15
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 25.0,
+                NumSegments : 15,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 15.0
+                    X : 0.0,
+                    Y : 15.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -15.0
-                    Y -8.0
-                    Width 30.0
-                    Height 38.0
+                    X : -15.0,
+                    Y : -8.0,
+                    Width : 30.0,
+                    Height : 38.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -25.0
-            Y -25.0
-            Width 50.0
-            Height 55.0
+            X : -25.0,
+            Y : -25.0,
+            Width : 50.0,
+            Height : 55.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'manabottle'
+        Identifier : 'manabottle',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'manabottle'
-                YRotation 0.0
-                EmissionFactor 1.5
-                XRotation 0.0
+                Name : 'manabottle',
+                YRotation : 0.0,
+                EmissionFactor : 1.5,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.0
-                    G 0.4000000059604645
-                    B 0.800000011920929
-                    A 0.0
+                    R : 0.0,
+                    G : 0.4000000059604645,
+                    B : 0.800000011920929,
+                    A : 0.0,
                 }
-                Size 16.0
-                NumSegments 10
-                Depth 5.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 16.0,
+                NumSegments : 10,
+                Depth : 5.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 104
+            ClassName : 'CollisionShape',
+            Identifier : 104,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -10.0
-                    Y -10.0
-                    Width 20.0
-                    Height 20.0
+                    X : -10.0,
+                    Y : -10.0,
+                    Width : 20.0,
+                    Height : 20.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 107
+            ClassName : 'CollectableItem',
+            Identifier : 107,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 2
-                Value 20
+                Type : 2,
+                Value : 20,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -16.0
-            Y -16.0
-            Width 32.0
-            Height 32.0
+            X : -16.0,
+            Y : -16.0,
+            Width : 32.0,
+            Height : 32.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'manabottle_big'
+        Identifier : 'manabottle_big',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'manabottlebig'
-                YRotation 0.0
-                EmissionFactor 1.5
-                XRotation 0.0
+                Name : 'manabottlebig',
+                YRotation : 0.0,
+                EmissionFactor : 1.5,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.0
-                    G 0.4000000059604645
-                    B 0.800000011920929
-                    A 0.0
+                    R : 0.0,
+                    G : 0.4000000059604645,
+                    B : 0.800000011920929,
+                    A : 0.0,
                 }
-                Size 21.0
-                NumSegments 10
-                Depth 5.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 21.0,
+                NumSegments : 10,
+                Depth : 5.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 104
+            ClassName : 'CollisionShape',
+            Identifier : 104,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -12.0
-                    Y -12.0
-                    Width 24.0
-                    Height 24.0
+                    X : -12.0,
+                    Y : -12.0,
+                    Width : 24.0,
+                    Height : 24.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 107
+            ClassName : 'CollectableItem',
+            Identifier : 107,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 2
-                Value 100
+                Type : 2,
+                Value : 100,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -21.0
-            Y -21.0
-            Width 42.0
-            Height 42.0
+            X : -21.0,
+            Y : -21.0,
+            Width : 42.0,
+            Height : 42.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'nugget_health'
+        Identifier : 'nugget_health',
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 1
+            ClassName : 'ParticleEmitter',
+            Identifier : 1,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 2
-                ParticleId 3
-                ParticleId 4
-                ModelBindingId 0
-                MaxParticles 15
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 2,
+                ParticleId : 3,
+                ParticleId : 4,
+                ModelBindingId : 0,
+                MaxParticles : 15,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 5
+                    Type : 5,
                     BaseColor{ # FloatColor
-                        R 0.3720988631248474
-                        G 0.11679011583328247
-                        B 0.11679020524024963
-                        A 0.22222226858139038
+                        R : 0.3720988631248474,
+                        G : 0.11679011583328247,
+                        B : 0.11679020524024963,
+                        A : 0.22222226858139038,
                     }
-                    Parameter 90.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 11.0
-                    Parameter 0.0
-                    Parameter 25.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 0.3499999940395355
-                    Parameter 1.0
-                    Parameter 0.0
-                    Parameter 0.05000000074505806
-                    Parameter 0.6000000238418579
-                    Parameter 0.0
-                    Parameter 0.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 90.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 11.0,
+                    Parameter : 0.0,
+                    Parameter : 25.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 0.3499999940395355,
+                    Parameter : 1.0,
+                    Parameter : 0.0,
+                    Parameter : 0.05000000074505806,
+                    Parameter : 0.6000000238418579,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y -3.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : -3.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 1
+                LocalSystem : 1,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 2
+            ClassName : 'Particle',
+            Identifier : 2,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 3
+            ClassName : 'Particle',
+            Identifier : 3,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 4
+            ClassName : 'Particle',
+            Identifier : 4,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'nugget_health'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'nugget_health',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.5
-                    B 0.5
-                    A 0.0
+                    R : 1.0,
+                    G : 0.5,
+                    B : 0.5,
+                    A : 0.0,
                 }
-                Size 12.0
-                NumSegments 10
-                Depth 0.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 12.0,
+                NumSegments : 10,
+                Depth : 0.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 104
+            ClassName : 'CollectableItem',
+            Identifier : 104,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 1
-                Value 2
+                Type : 1,
+                Value : 2,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 Scene.CreateObject("collect_health", "", self);
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00C\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_health", "", self);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x08\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0f\x00\x00\x00collect_health\x00\x04\x01\x00\x00\x00\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x07\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -6.0
-                    Y -7.0
-                    Width 12.0
-                    Height 27.0
+                    X : -6.0,
+                    Y : -7.0,
+                    Width : 12.0,
+                    Height : 27.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 107
+            ClassName : 'PhysicsObject',
+            Identifier : 107,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -12.0
-            Y -12.0
-            Width 24.0
-            Height 32.0
+            X : -12.0,
+            Y : -12.0,
+            Width : 24.0,
+            Height : 32.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'nugget_mana'
+        Identifier : 'nugget_mana',
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 1
+            ClassName : 'ParticleEmitter',
+            Identifier : 1,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 2
-                ParticleId 3
-                ParticleId 4
-                ModelBindingId 0
-                MaxParticles 15
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 2,
+                ParticleId : 3,
+                ParticleId : 4,
+                ModelBindingId : 0,
+                MaxParticles : 15,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 5
+                    Type : 5,
                     BaseColor{ # FloatColor
-                        R 0.0
-                        G 0.24000000953674316
-                        B 0.6000000834465027
-                        A 0.2777777910232544
+                        R : 0.0,
+                        G : 0.24000000953674316,
+                        B : 0.6000000834465027,
+                        A : 0.2777777910232544,
                     }
-                    Parameter 90.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 11.0
-                    Parameter 0.0
-                    Parameter 20.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 0.3499999940395355
-                    Parameter 1.0
-                    Parameter 0.0
-                    Parameter 0.05000000074505806
-                    Parameter 0.6000000238418579
-                    Parameter 0.0
-                    Parameter 0.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 90.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 11.0,
+                    Parameter : 0.0,
+                    Parameter : 20.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 0.3499999940395355,
+                    Parameter : 1.0,
+                    Parameter : 0.0,
+                    Parameter : 0.05000000074505806,
+                    Parameter : 0.6000000238418579,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y -3.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : -3.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 1
+                LocalSystem : 1,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 2
+            ClassName : 'Particle',
+            Identifier : 2,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 3
+            ClassName : 'Particle',
+            Identifier : 3,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 4
+            ClassName : 'Particle',
+            Identifier : 4,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'nugget_mana'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'nugget_mana',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.5
-                    G 0.5
-                    B 1.0
-                    A 0.0
+                    R : 0.5,
+                    G : 0.5,
+                    B : 1.0,
+                    A : 0.0,
                 }
-                Size 12.0
-                NumSegments 10
-                Depth 0.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 12.0,
+                NumSegments : 10,
+                Depth : 0.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 104
+            ClassName : 'CollectableItem',
+            Identifier : 104,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 2
-                Value 20
+                Type : 2,
+                Value : 20,
                 OnCollect{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 Scene.CreateObject("collect_mana", "", self);
 SoundLibrary.PlayEffect("managet");
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00f\x00\x00\x00local self = ...;\r\nScene.CreateObject("collect_mana", "", self);\r\nSoundLibrary.PlayEffect("managet");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x0c\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\xc1\xc0\x00\x00\x00\x01\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\x80\x01\x00\\@\x00\x01\x1e\x00\x80\x00\x07\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\r\x00\x00\x00collect_mana\x00\x04\x01\x00\x00\x00\x00\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x08\x00\x00\x00managet\x00\x00\x00\x00\x00\x0c\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -6.0
-                    Y -7.0
-                    Width 12.0
-                    Height 27.0
+                    X : -6.0,
+                    Y : -7.0,
+                    Width : 12.0,
+                    Height : 27.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 107
+            ClassName : 'PhysicsObject',
+            Identifier : 107,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -12.0
-            Y -12.0
-            Width 24.0
-            Height 32.0
+            X : -12.0,
+            Y : -12.0,
+            Width : 24.0,
+            Height : 32.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'powershard'
+        Identifier : 'powershard',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
+                PhysicsEnabled : 1,
                 GravityDirection{ # Vector2
-                    X 0.009999500587582588
-                    Y 0.9999500513076782
+                    X : 0.009999500587582588,
+                    Y : 0.9999500513076782,
                 }
-                GravityMagnitude 0.009999999776482582
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                GravityMagnitude : 0.009999999776482582,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'powershard'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'powershard',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'AnimationController'
-            Identifier 103
+            ClassName : 'AnimationController',
+            Identifier : 103,
             AnimationControllerComponent{ # AnimationControllerComponent
-                ModelId 101
-                DefaultAnimationId 112
-                SelfUpdate 1
+                ModelId : 101,
+                DefaultAnimationId : 112,
+                SelfUpdate : 1,
             }
         }
         Component{ # Component
-            ClassName 'KeyframeAnimation'
-            Identifier 112
+            ClassName : 'KeyframeAnimation',
+            Identifier : 112,
             KeyframeAnimationComponent{ # KeyframeAnimationComponent
-                ModelId 101
-                Name 'powershard_sparkle'
-                Repeating 1
-                SpeedMultiplier 1.0
-                Running 1
+                ModelId : 101,
+                Name : 'powershard_sparkle',
+                Repeating : 1,
+                SpeedMultiplier : 1.0,
+                Running : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 115
+            ClassName : 'CollectableItem',
+            Identifier : 115,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 3
-                Value 100
+                Type : 3,
+                Value : 100,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 118
+            ClassName : 'CollisionShape',
+            Identifier : 118,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -20.0
-                    Y -20.0
-                    Width 40.0
-                    Height 40.0
+                    X : -20.0,
+                    Y : -20.0,
+                    Width : 40.0,
+                    Height : 40.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 120
+            ClassName : 'SimpleGlow',
+            Identifier : 120,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.5000000596046448
-                    G 1.0
-                    B 0.3777778148651123
-                    A 0.5111111402511597
+                    R : 0.5000000596046448,
+                    G : 1.0,
+                    B : 0.3777778148651123,
+                    A : 0.5111111402511597,
                 }
-                Size 15.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.25
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.25,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 0.699999988079071
+    Scaling : 0.699999988079071,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'sshard_blue'
+        Identifier : 'sshard_blue',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 4
-                Value 1
+                Type : 4,
+                Value : 1,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 4.71238899230957
+                ModelId : 101,
+                RotationSpeed : 4.71238899230957,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'sshard_blue'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'sshard_blue',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.5
-                    G 0.5
-                    B 1.0
-                    A 0.5
+                    R : 0.5,
+                    G : 0.5,
+                    B : 1.0,
+                    A : 0.5,
                 }
-                Size 15.0
-                NumSegments 8
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 8,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y -15.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : -15.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'sshard_red'
+        Identifier : 'sshard_red',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 4
-                Value 5
+                Type : 4,
+                Value : 5,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 4.71238899230957
+                ModelId : 101,
+                RotationSpeed : 4.71238899230957,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'sshard_red'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'sshard_red',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.5222222208976746
-                    B 0.5222222208976746
-                    A 0.5111111402511597
+                    R : 1.0,
+                    G : 0.5222222208976746,
+                    B : 0.5222222208976746,
+                    A : 0.5111111402511597,
                 }
-                Size 15.0
-                NumSegments 8
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 8,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y -15.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : -15.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -15.0
-            Y -15.0
-            Width 30.0
-            Height 30.0
+            X : -15.0,
+            Y : -15.0,
+            Width : 30.0,
+            Height : 30.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'sshard_yellow'
+        Identifier : 'sshard_yellow',
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 1
+            ClassName : 'PhysicsObject',
+            Identifier : 1,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 2
+            ClassName : 'CollectableItem',
+            Identifier : 2,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 4
-                Value 20
+                Type : 4,
+                Value : 20,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName ''
-                RequiresPickup 0
+                Identifier : '',
+                ItemName : '',
+                RequiresPickup : 0,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 3
+            ClassName : 'ModelTransformController',
+            Identifier : 3,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
-                RotationSpeed 4.71238899230957
+                ModelId : 101,
+                RotationSpeed : 4.71238899230957,
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'sshard_yellow'
-                YRotation 0.0
-                EmissionFactor 5.0
-                XRotation 0.0
+                Name : 'sshard_yellow',
+                YRotation : 0.0,
+                EmissionFactor : 5.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 102
+            ClassName : 'SimpleGlow',
+            Identifier : 102,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.7444446086883545
-                    G 0.7444444894790649
-                    B 0.0
-                    A 0.18888893723487854
+                    R : 0.7444446086883545,
+                    G : 0.7444444894790649,
+                    B : 0.0,
+                    A : 0.18888893723487854,
                 }
-                Size 15.0
-                NumSegments 8
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 15.0,
+                NumSegments : 8,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 105
+            ClassName : 'CollisionShape',
+            Identifier : 105,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -5.0
-                    Y -15.0
-                    Width 10.0
-                    Height 30.0
+                    X : -5.0,
+                    Y : -15.0,
+                    Width : 10.0,
+                    Height : 30.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -15.0
-            Y -15.0
-            Width 30.0
-            Height 30.0
+            X : -15.0,
+            Y : -15.0,
+            Width : 30.0,
+            Height : 30.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'xp_sack'
+        Identifier : 'xp_sack',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'xp_sack'
-                YRotation 1.5707963705062866
-                EmissionFactor 0.5
-                XRotation 0.0
+                Name : 'xp_sack',
+                YRotation : 1.5707963705062866,
+                EmissionFactor : 0.5,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 106
-                ModelBindingId 0
-                MaxParticles 80
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 103,
+                ParticleId : 106,
+                ModelBindingId : 0,
+                MaxParticles : 80,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 5
+                    Type : 5,
                     BaseColor{ # FloatColor
-                        R 1.0
-                        G 1.0
-                        B 1.0
-                        A 0.0
+                        R : 1.0,
+                        G : 1.0,
+                        B : 1.0,
+                        A : 0.0,
                     }
-                    Parameter 90.0
-                    Parameter 45.0
-                    Parameter 0.0
-                    Parameter 15.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 0.0
-                    Parameter 1.0
-                    Parameter 0.0
-                    Parameter 1.0
-                    Parameter 0.05000000074505806
-                    Parameter 1.5
-                    Parameter 0.0
-                    Parameter 0.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 90.0,
+                    Parameter : 45.0,
+                    Parameter : 0.0,
+                    Parameter : 15.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    Parameter : 1.0,
+                    Parameter : 0.0,
+                    Parameter : 1.0,
+                    Parameter : 0.05000000074505806,
+                    Parameter : 1.5,
+                    Parameter : 0.0,
+                    Parameter : 0.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 80.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 80.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 0
+                LocalSystem : 0,
                 Gravity{ # Vector3
-                    X 0.0
-                    Y 20.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 20.0,
+                    Z : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 4.0
+                TextureName : 'particle_fure_1',
+                Size : 4.0,
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 104
+            ClassName : 'SimpleGlow',
+            Identifier : 104,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.5666666626930237
-                    G 0.46666666865348816
-                    B 0.0
-                    A 0.5
+                    R : 0.5666666626930237,
+                    G : 0.46666666865348816,
+                    B : 0.0,
+                    A : 0.5,
                 }
-                Size 80.0
-                NumSegments 20
-                Depth 0.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 80.0,
+                NumSegments : 20,
+                Depth : 0.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 50.0
+                    X : 0.0,
+                    Y : 50.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 106
+            ClassName : 'Particle',
+            Identifier : 106,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 8.0
+                TextureName : 'particle_fure_2',
+                Size : 8.0,
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 108
+            ClassName : 'PhysicsObject',
+            Identifier : 108,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.800000011920929
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.800000011920929,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Component{ # Component
-            ClassName 'CollectableItem'
-            Identifier 110
+            ClassName : 'CollectableItem',
+            Identifier : 110,
             CollectableItemComponent{ # CollectableItemComponent
-                Type 0
-                Value 0
+                Type : 0,
+                Value : 0,
                 OnCollect{ # Program
                 }
-                Identifier ''
-                ItemName 'experiencesack'
-                RequiresPickup 1
+                Identifier : '',
+                ItemName : 'experiencesack',
+                RequiresPickup : 1,
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 111
+            ClassName : 'CollisionShape',
+            Identifier : 111,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -50.0
-                    Y 0.0
-                    Width 100.0
-                    Height 106.42947387695312
+                    X : -50.0,
+                    Y : 0.0,
+                    Width : 100.0,
+                    Height : 106.42947387695312,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                MinDepth -40.0
-                MaxDepth 40.0
-                SpecialType 3
-                Enabled 1
+                Collides : 1,
+                MinDepth : -40.0,
+                MaxDepth : 40.0,
+                SpecialType : 3,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'ModelTransformController'
-            Identifier 113
+            ClassName : 'ModelTransformController',
+            Identifier : 113,
             ModelTransformControllerComponent{ # ModelTransformControllerComponent
-                ModelId 101
+                ModelId : 101,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -80.0
-            Y -80.0
-            Width 160.0
-            Height 186.42947387695312
+            X : -80.0,
+            Y : -80.0,
+            Width : 160.0,
+            Height : 186.42947387695312,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 0.4000000059604645
+    Scaling : 0.4000000059604645,
 }

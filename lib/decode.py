@@ -65,13 +65,13 @@ def decode(filepath: str) -> "str":
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
     if not filetype_match:
-        print("file has no extension: "+filepath)
+        print(config.colour_error+"file has no extension: "+config.colour_reset+filepath)
         return ""
     else:
         filetype = filetype_match.group(1)
     
     if not filetype in block_formats.file_types:
-        print("unrecognized file extension: ", filetype)
+        print(config.colour_error+"unrecognized file extension: "+config.colour_reset, filetype)
         return ""
     formats[0] = block_formats.block_formats[filetype]
 
@@ -96,7 +96,8 @@ def decode(filepath: str) -> "str":
         tagname, tag_is_reference, tag_reference = util.match_tag(format, taghex)
         if tagname == "No Match":
             print(
-                "no match for tag "
+                config.colour_error
+                + "no match for tag "+config.colour_reset
                 + taghex + "\n"
                 + util.prettify_dict(format)
                 + filepath + ":" + str(sum(offsets))
@@ -191,6 +192,6 @@ def decode(filepath: str) -> "str":
     for line in out_lines:
         output += line 
 
-    print("decoded: "+filepath[len("./de_in/"):])
+    print(config.colour_success+"decoded: "+config.colour_reset+filepath[len("./de_in/"):])
 
     return output

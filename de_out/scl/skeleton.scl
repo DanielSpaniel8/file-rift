@@ -1,109 +1,108 @@
-# rifted with FR v5.7.0
+# rifted with FR v5.7.2
 
-Name 'skeleton'
+Name : 'skeleton',
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skeleton_bolt_ballistic'
+        Identifier : 'skeleton_bolt_ballistic',
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 1
+            ClassName : 'SimpleGlow',
+            Identifier : 1,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.0
-                    B 3.5762786865234375e-07
-                    A 0.5
+                    R : 1.0,
+                    G : 0.0,
+                    B : 3.5762786865234375e-07,
+                    A : 0.5,
                 }
-                Size 30.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 30.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 2
+            ClassName : 'CollisionShape',
+            Identifier : 2,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -10.0
-                    Y -10.0
-                    Width 20.0
-                    Height 20.0
+                    X : -10.0,
+                    Y : -10.0,
+                    Width : 20.0,
+                    Height : 20.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                InflictsDamage 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 1
+                Collides : 1,
+                InflictsDamage : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 3
+            ClassName : 'SoundEffect',
+            Identifier : 3,
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'woosh1'
-                Delay 0.0
-                Volume 1.0
+                Name : 'woosh1',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 4
+            ClassName : 'Damage',
+            Identifier : 4,
             DamageComponent{ # DamageComponent
-                MinDamage 4
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 0.0
-                MagicDamageFactor 1.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 4,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 0.0,
+                MagicDamageFactor : 1.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'Light'
-            Identifier 6
+            ClassName : 'Light',
+            Identifier : 6,
             LightComponent{ # LightComponent
-                Type 3
-                Intensity 2.0
+                Type : 3,
+                Intensity : 2.0,
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.35555556416511536
-                    B 0.35555556416511536
-                    A 1.0
+                    R : 1.0,
+                    G : 0.35555556416511536,
+                    B : 0.35555556416511536,
+                    A : 1.0,
                 }
-                LinearAttenuation 0.0
-                QuadraticAttenuation 0.00019999999494757503
+                LinearAttenuation : 0.0,
+                QuadraticAttenuation : 0.00019999999494757503,
                 Offset{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Radius 250.0
+                Radius : 250.0,
             }
         }
         Component{ # Component
-            ClassName 'Properties'
-            Identifier 7
+            ClassName : 'Properties',
+            Identifier : 7,
             PropertiesComponent{ # PropertiesComponent
                 OnLoad{ # Program
                 }
             }
         }
         Component{ # Component
-            ClassName 'Program'
-            Identifier 8
+            ClassName : 'Program',
+            Identifier : 8,
             ProgramComponent{ # ProgramComponent
-                ExecuteOnce 1
+                ExecuteOnce : 1,
                 Program{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 if Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then
@@ -118,208 +117,207 @@ end
 
 
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x01\x00\x00local self = ...;\r\n\r\nif Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then\r\n\tlocal skelly = Scene.CreateObject("summonedSkeleton", Properties.GetProperty(self, "caster") .. "_skelly", self);\r\n\r\n\tTransformController.ScaleTo(skelly, 0.01, 0.001);\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tTransformController.ScaleTo(skelly, 1.3, 0.25);\r\nend\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06*\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x01\x01\x01\x00\x9c\x80\x80\x01\xc1@\x01\x00\x95\xc0\x00\x01\\\x80\x00\x01\x17\x80\xc1\x00\x16\xc0\x06\x80E\x00\x00\x00F\xc0\xc1\x00\x81\x00\x02\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00A\x01\x01\x00\xdc\x80\x80\x01\x01A\x01\x00\xd5\x00\x81\x01\x00\x01\x00\x00\\\x80\x00\x02\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x85@\x03\x00\x86\x80C\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x03\x00A\x01\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00GetProperty\x00\x04\x07\x00\x00\x00caster\x00\x04\x08\x00\x00\x00_skelly\x00\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x11\x00\x00\x00summonedSkeleton\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\xfc\xa9\xf1\xd2MbP?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\xcd\xcc\xcc\xcc\xcc\xcc\xf4?\x03\x00\x00\x00\x00\x00\x00\xd0?\x00\x00\x00\x00*\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00)\x00\x00\x00\x07\x00\x00\x00skelly\x00\x19\x00\x00\x00)\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x01\x00\x00local self = ...;\r\n\r\nif Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then\r\n\tlocal skelly = Scene.CreateObject("summonedSkeleton", Properties.GetProperty(self, "caster") .. "_skelly", self);\r\n\r\n\tTransformController.ScaleTo(skelly, 0.01, 0.001);\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tTransformController.ScaleTo(skelly, 1.3, 0.25);\r\nend\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06*\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x01\x01\x01\x00\x9c\x80\x80\x01\xc1@\x01\x00\x95\xc0\x00\x01\\\x80\x00\x01\x17\x80\xc1\x00\x16\xc0\x06\x80E\x00\x00\x00F\xc0\xc1\x00\x81\x00\x02\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00A\x01\x01\x00\xdc\x80\x80\x01\x01A\x01\x00\xd5\x00\x81\x01\x00\x01\x00\x00\\\x80\x00\x02\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x85@\x03\x00\x86\x80C\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x03\x00A\x01\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00GetProperty\x00\x04\x07\x00\x00\x00caster\x00\x04\x08\x00\x00\x00_skelly\x00\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x11\x00\x00\x00summonedSkeleton\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\xfc\xa9\xf1\xd2MbP?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\xcd\xcc\xcc\xcc\xcc\xcc\xf4?\x03\x00\x00\x00\x00\x00\x00\xd0?\x00\x00\x00\x00*\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00)\x00\x00\x00\x07\x00\x00\x00skelly\x00\x19\x00\x00\x00)\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Trigger 5
+                Enabled : 1,
+                Trigger : 5,
             }
         }
         Component{ # Component
-            ClassName 'EntityInfo'
-            Identifier 9
+            ClassName : 'EntityInfo',
+            Identifier : 9,
             EntityInfoComponent{ # EntityInfoComponent
-                EntityClass 'bolt'
+                EntityClass : 'bolt',
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 104
-                ParticleId 105
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 103,
+                ParticleId : 104,
+                ParticleId : 105,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 105
+            ClassName : 'Particle',
+            Identifier : 105,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'MagicBolt'
-            Identifier 106
+            ClassName : 'MagicBolt',
+            Identifier : 106,
             MagicBoltComponent{ # MagicBoltComponent
-                ParticleEmitterId 102
-                SwooshSoundId 3
-                HitSoundId 0
+                ParticleEmitterId : 102,
+                SwooshSoundId : 3,
+                HitSoundId : 0,
                 Color{ # FloatColor
-                    R 0.4000000059604645
-                    G 0.05399999022483826
-                    B 0.054000113159418106
-                    A 0.0
+                    R : 0.4000000059604645,
+                    G : 0.05399999022483826,
+                    B : 0.054000113159418106,
+                    A : 0.0,
                 }
-                Speed 440.0
+                Speed : 440.0,
             }
             SpellComponent{ # SpellComponent
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 109
+            ClassName : 'PhysicsObject',
+            Identifier : 109,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.6000000238418579
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.6000000238418579,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -50.0
-            Y -50.0
-            Width 100.0
-            Height 100.0
+            X : -50.0,
+            Y : -50.0,
+            Width : 100.0,
+            Height : 100.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.5
+    Scaling : 1.5,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skeleton_bolt_frost'
+        Identifier : 'skeleton_bolt_frost',
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 1
+            ClassName : 'SimpleGlow',
+            Identifier : 1,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 1.0
-                    A 0.5
+                    R : 0.0,
+                    G : 0.0,
+                    B : 1.0,
+                    A : 0.5,
                 }
-                Size 30.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 30.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 2
+            ClassName : 'CollisionShape',
+            Identifier : 2,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -10.0
-                    Y -10.0
-                    Width 20.0
-                    Height 20.0
+                    X : -10.0,
+                    Y : -10.0,
+                    Width : 20.0,
+                    Height : 20.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                InflictsDamage 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 1
+                Collides : 1,
+                InflictsDamage : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 3
+            ClassName : 'SoundEffect',
+            Identifier : 3,
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'woosh1'
-                Delay 0.0
-                Volume 1.0
+                Name : 'woosh1',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 4
+            ClassName : 'Damage',
+            Identifier : 4,
             DamageComponent{ # DamageComponent
-                MinDamage 4
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 0.0
-                MagicDamageFactor 1.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 4,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 0.0,
+                MagicDamageFactor : 1.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'Light'
-            Identifier 6
+            ClassName : 'Light',
+            Identifier : 6,
             LightComponent{ # LightComponent
-                Type 3
-                Intensity 2.0
+                Type : 3,
+                Intensity : 2.0,
                 Color{ # FloatColor
-                    R 0.35555556416511536
-                    G 0.35555556416511536
-                    B 1.0
-                    A 1.0
+                    R : 0.35555556416511536,
+                    G : 0.35555556416511536,
+                    B : 1.0,
+                    A : 1.0,
                 }
-                LinearAttenuation 0.0
-                QuadraticAttenuation 0.00019999999494757503
+                LinearAttenuation : 0.0,
+                QuadraticAttenuation : 0.00019999999494757503,
                 Offset{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Radius 250.0
+                Radius : 250.0,
             }
         }
         Component{ # Component
-            ClassName 'Properties'
-            Identifier 7
+            ClassName : 'Properties',
+            Identifier : 7,
             PropertiesComponent{ # PropertiesComponent
                 OnLoad{ # Program
                 }
             }
         }
         Component{ # Component
-            ClassName 'Program'
-            Identifier 8
+            ClassName : 'Program',
+            Identifier : 8,
             ProgramComponent{ # ProgramComponent
-                ExecuteOnce 1
+                ExecuteOnce : 1,
                 Program{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 if Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then
@@ -334,885 +332,884 @@ end
 
 
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x01\x00\x00local self = ...;\r\n\r\nif Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then\r\n\tlocal skelly = Scene.CreateObject("summonedSkeleton", Properties.GetProperty(self, "caster") .. "_skelly", self);\r\n\r\n\tTransformController.ScaleTo(skelly, 0.01, 0.001);\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tTransformController.ScaleTo(skelly, 1.3, 0.25);\r\nend\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06*\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x01\x01\x01\x00\x9c\x80\x80\x01\xc1@\x01\x00\x95\xc0\x00\x01\\\x80\x00\x01\x17\x80\xc1\x00\x16\xc0\x06\x80E\x00\x00\x00F\xc0\xc1\x00\x81\x00\x02\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00A\x01\x01\x00\xdc\x80\x80\x01\x01A\x01\x00\xd5\x00\x81\x01\x00\x01\x00\x00\\\x80\x00\x02\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x85@\x03\x00\x86\x80C\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x03\x00A\x01\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00GetProperty\x00\x04\x07\x00\x00\x00caster\x00\x04\x08\x00\x00\x00_skelly\x00\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x11\x00\x00\x00summonedSkeleton\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\xfc\xa9\xf1\xd2MbP?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\xcd\xcc\xcc\xcc\xcc\xcc\xf4?\x03\x00\x00\x00\x00\x00\x00\xd0?\x00\x00\x00\x00*\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00)\x00\x00\x00\x07\x00\x00\x00skelly\x00\x19\x00\x00\x00)\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00b\x01\x00\x00local self = ...;\r\n\r\nif Scene.Find(Properties.GetProperty(self, "caster") .."_skelly") == nil then\r\n\tlocal skelly = Scene.CreateObject("summonedSkeleton", Properties.GetProperty(self, "caster") .. "_skelly", self);\r\n\r\n\tTransformController.ScaleTo(skelly, 0.01, 0.001);\r\n\r\n\tProgram.Wait(0.01);\r\n\r\n\tTransformController.ScaleTo(skelly, 1.3, 0.25);\r\nend\r\n\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06*\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x85\x80\x00\x00\x86\xc0@\x01\xc0\x00\x00\x00\x01\x01\x01\x00\x9c\x80\x80\x01\xc1@\x01\x00\x95\xc0\x00\x01\\\x80\x00\x01\x17\x80\xc1\x00\x16\xc0\x06\x80E\x00\x00\x00F\xc0\xc1\x00\x81\x00\x02\x00\xc5\x80\x00\x00\xc6\xc0\xc0\x01\x00\x01\x00\x00A\x01\x01\x00\xdc\x80\x80\x01\x01A\x01\x00\xd5\x00\x81\x01\x00\x01\x00\x00\\\x80\x00\x02\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x02\x00A\x01\x03\x00\x9c@\x00\x02\x85@\x03\x00\x86\x80C\x01\xc1\xc0\x02\x00\x9c@\x00\x01\x85@\x02\x00\x86\x80B\x01\xc0\x00\x80\x00\x01\xc1\x03\x00A\x01\x04\x00\x9c@\x00\x02\x1e\x00\x80\x00\x11\x00\x00\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x0b\x00\x00\x00Properties\x00\x04\x0c\x00\x00\x00GetProperty\x00\x04\x07\x00\x00\x00caster\x00\x04\x08\x00\x00\x00_skelly\x00\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x11\x00\x00\x00summonedSkeleton\x00\x04\x14\x00\x00\x00TransformController\x00\x04\x08\x00\x00\x00ScaleTo\x00\x03{\x14\xaeG\xe1z\x84?\x03\xfc\xa9\xf1\xd2MbP?\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\xcd\xcc\xcc\xcc\xcc\xcc\xf4?\x03\x00\x00\x00\x00\x00\x00\xd0?\x00\x00\x00\x00*\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00)\x00\x00\x00\x07\x00\x00\x00skelly\x00\x19\x00\x00\x00)\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Trigger 0
+                Enabled : 1,
+                Trigger : 0,
             }
         }
         Component{ # Component
-            ClassName 'EntityInfo'
-            Identifier 9
+            ClassName : 'EntityInfo',
+            Identifier : 9,
             EntityInfoComponent{ # EntityInfoComponent
-                EntityClass 'bolt'
+                EntityClass : 'bolt',
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 104
-                ParticleId 105
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 103,
+                ParticleId : 104,
+                ParticleId : 105,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 105
+            ClassName : 'Particle',
+            Identifier : 105,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'MagicBolt'
-            Identifier 106
+            ClassName : 'MagicBolt',
+            Identifier : 106,
             MagicBoltComponent{ # MagicBoltComponent
-                ParticleEmitterId 102
-                SwooshSoundId 3
-                HitSoundId 0
+                ParticleEmitterId : 102,
+                SwooshSoundId : 3,
+                HitSoundId : 0,
                 Color{ # FloatColor
-                    R 0.07777778059244156
-                    G 0.05399999022483826
-                    B 0.3984445333480835
-                    A 0.0
+                    R : 0.07777778059244156,
+                    G : 0.05399999022483826,
+                    B : 0.3984445333480835,
+                    A : 0.0,
                 }
-                Speed 440.0
+                Speed : 440.0,
             }
             SpellComponent{ # SpellComponent
             }
         }
         Component{ # Component
-            ClassName 'PhysicsObject'
-            Identifier 109
+            ClassName : 'PhysicsObject',
+            Identifier : 109,
             PhysicsObjectComponent{ # PhysicsObjectComponent
-                PhysicsEnabled 1
-                GravityMagnitude 0.6000000238418579
-                GroundDeceleration 1500.0
-                AirDeceleration 0.0
-                MaxSpeed 700.0
-                AllowRotation 0
-                Elasticity 0.0
+                PhysicsEnabled : 1,
+                GravityMagnitude : 0.6000000238418579,
+                GroundDeceleration : 1500.0,
+                AirDeceleration : 0.0,
+                MaxSpeed : 700.0,
+                AllowRotation : 0,
+                Elasticity : 0.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -50.0
-            Y -50.0
-            Width 100.0
-            Height 100.0
+            X : -50.0,
+            Y : -50.0,
+            Width : 100.0,
+            Height : 100.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.5
+    Scaling : 1.5,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skeleton_lord_sword'
+        Identifier : 'skeleton_lord_sword',
         Component{ # Component
-            ClassName 'WeaponTrail'
-            Identifier 1
+            ClassName : 'WeaponTrail',
+            Identifier : 1,
             WeaponTrailComponent{ # WeaponTrailComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 0.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 2
+            ClassName : 'CollisionShape',
+            Identifier : 2,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X 0.0
-                    Y 0.0
-                    Width 0.0
-                    Height 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Width : 0.0,
+                    Height : 0.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 0
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 0,
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 3
+            ClassName : 'Damage',
+            Identifier : 3,
             DamageComponent{ # DamageComponent
-                MinDamage 1
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 1.0
-                MagicDamageFactor 0.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 1,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 1.0,
+                MagicDamageFactor : 0.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'Transform'
-            Identifier 4
+            ClassName : 'Transform',
+            Identifier : 4,
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 7
-            Label 'swing1'
+            ClassName : 'SoundEffect',
+            Identifier : 7,
+            Label : 'swing1',
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'sword_swing2'
-                Delay 0.0
-                Volume 1.0
+                Name : 'sword_swing2',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 8
-            Label 'impact1'
+            ClassName : 'SoundEffect',
+            Identifier : 8,
+            Label : 'impact1',
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'sword_impact3'
-                Delay 0.0
-                Volume 1.0
+                Name : 'sword_impact3',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'WeaponTrail'
-            Identifier 16
-            Label 'glow'
+            ClassName : 'WeaponTrail',
+            Identifier : 16,
+            Label : 'glow',
             WeaponTrailComponent{ # WeaponTrailComponent
                 Color{ # FloatColor
-                    R 0.9333333373069763
-                    G 0.0
-                    B 0.0
-                    A 0.0
+                    R : 0.9333333373069763,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'weapon_broadsword'
-                YRotation 0.0
-                EmissionFactor 1.0
-                XRotation 0.0
+                Name : 'weapon_broadsword',
+                YRotation : 0.0,
+                EmissionFactor : 1.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SwingableWeapon'
-            Identifier 103
+            ClassName : 'SwingableWeapon',
+            Identifier : 103,
             SwingableWeaponComponent{ # SwingableWeaponComponent
-                ModelId 101
-                TrailId 1
-                ImpactParticleEmitterId 0
-                SwingSoundId 7
-                DamageImpactSoundId 8
-                GlowTrailId 16
-                CollisionShapeId 2
-                GlowId 10
-                BaseLength 50.0
-                GlowLength 58.0
-                GlowIntensity 1.0
-                Width 10.0
+                ModelId : 101,
+                TrailId : 1,
+                ImpactParticleEmitterId : 0,
+                SwingSoundId : 7,
+                DamageImpactSoundId : 8,
+                GlowTrailId : 16,
+                CollisionShapeId : 2,
+                GlowId : 10,
+                BaseLength : 50.0,
+                GlowLength : 58.0,
+                GlowIntensity : 1.0,
+                Width : 10.0,
                 GlowColor{ # FloatColor
-                    R 0.9333333373069763
-                    G 0.0
-                    B 3.337860050578456e-07
-                    A 0.0
+                    R : 0.9333333373069763,
+                    G : 0.0,
+                    B : 3.337860050578456e-07,
+                    A : 0.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skeleton_spell_cast'
+        Identifier : 'skeleton_spell_cast',
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 1
+            ClassName : 'SimpleGlow',
+            Identifier : 1,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 0.16666662693023682
-                    B 0.1666669249534607
-                    A 0.5
+                    R : 1.0,
+                    G : 0.16666662693023682,
+                    B : 0.1666669249534607,
+                    A : 0.5,
                 }
-                Size 20.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 104
-                ParticleId 105
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 103,
+                ParticleId : 104,
+                ParticleId : 105,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 105
+            ClassName : 'Particle',
+            Identifier : 105,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'MagicSpellCast'
-            Identifier 109
+            ClassName : 'MagicSpellCast',
+            Identifier : 109,
             MagicSpellCastComponent{ # MagicSpellCastComponent
-                ParticleEmitterId 102
-                SoundEffectId 0
+                ParticleEmitterId : 102,
+                SoundEffectId : 0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 2.0
+    Scaling : 2.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skeleton_spell_cast_frost'
+        Identifier : 'skeleton_spell_cast_frost',
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 1
+            ClassName : 'SimpleGlow',
+            Identifier : 1,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.1666666716337204
-                    G 0.16666662693023682
-                    B 1.0
-                    A 0.5
+                    R : 0.1666666716337204,
+                    G : 0.16666662693023682,
+                    B : 1.0,
+                    A : 0.5,
                 }
-                Size 20.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 104
-                ParticleId 105
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 103,
+                ParticleId : 104,
+                ParticleId : 105,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 105
+            ClassName : 'Particle',
+            Identifier : 105,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'MagicSpellCast'
-            Identifier 109
+            ClassName : 'MagicSpellCast',
+            Identifier : 109,
             MagicSpellCastComponent{ # MagicSpellCastComponent
-                ParticleEmitterId 102
-                SoundEffectId 0
+                ParticleEmitterId : 102,
+                SoundEffectId : 0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 2.0
+    Scaling : 2.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'skelly_weapon_sword'
+        Identifier : 'skelly_weapon_sword',
         Component{ # Component
-            ClassName 'WeaponTrail'
-            Identifier 1
+            ClassName : 'WeaponTrail',
+            Identifier : 1,
             WeaponTrailComponent{ # WeaponTrailComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 0.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 2
+            ClassName : 'CollisionShape',
+            Identifier : 2,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X 0.0
-                    Y 0.0
-                    Width 0.0
-                    Height 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Width : 0.0,
+                    Height : 0.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 0
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 0,
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 3
+            ClassName : 'Damage',
+            Identifier : 3,
             DamageComponent{ # DamageComponent
-                MinDamage 1
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 1.0
-                MagicDamageFactor 0.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 1,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 1.0,
+                MagicDamageFactor : 0.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 7
-            Label 'swing1'
+            ClassName : 'SoundEffect',
+            Identifier : 7,
+            Label : 'swing1',
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'sword_swing2'
-                Delay 0.0
-                Volume 1.0
+                Name : 'sword_swing2',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'SoundEffect'
-            Identifier 8
-            Label 'impact1'
+            ClassName : 'SoundEffect',
+            Identifier : 8,
+            Label : 'impact1',
             SoundEffectComponent{ # SoundEffectComponent
-                Name 'sword_impact3'
-                Delay 0.0
-                Volume 1.0
+                Name : 'sword_impact3',
+                Delay : 0.0,
+                Volume : 1.0,
             }
         }
         Component{ # Component
-            ClassName 'WeaponGlow'
-            Identifier 10
+            ClassName : 'WeaponGlow',
+            Identifier : 10,
             WeaponGlowComponent{ # WeaponGlowComponent
-                ParticleEmitterId 12
+                ParticleEmitterId : 12,
                 Color{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 0.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 0.0,
                 }
                 ParticleColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 0.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 0.0,
                 }
-                Width 15.0
+                Width : 15.0,
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 12
-            Label 'glow'
+            ClassName : 'ParticleEmitter',
+            Identifier : 12,
+            Label : 'glow',
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 13
-                ParticleId 14
-                ParticleId 15
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
-                LocalSystem 0
+                ParticleId : 13,
+                ParticleId : 14,
+                ParticleId : 15,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 13
-            Label 'glow'
+            ClassName : 'Particle',
+            Identifier : 13,
+            Label : 'glow',
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 14.0
+                TextureName : 'particle_fure_1',
+                Size : 14.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 14
-            Label 'glow'
+            ClassName : 'Particle',
+            Identifier : 14,
+            Label : 'glow',
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 16.0
+                TextureName : 'particle_fure_2',
+                Size : 16.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 15
-            Label 'glow'
+            ClassName : 'Particle',
+            Identifier : 15,
+            Label : 'glow',
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 14.0
+                TextureName : 'particle_fure_3',
+                Size : 14.0,
             }
         }
         Component{ # Component
-            ClassName 'WeaponTrail'
-            Identifier 16
-            Label 'glow'
+            ClassName : 'WeaponTrail',
+            Identifier : 16,
+            Label : 'glow',
             WeaponTrailComponent{ # WeaponTrailComponent
                 Color{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 0.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'skelly_sword'
-                YRotation 0.0
-                EmissionFactor 1.0
-                XRotation 0.0
+                Name : 'skelly_sword',
+                YRotation : 0.0,
+                EmissionFactor : 1.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 0.0
-                    G 0.0
-                    B 0.0
-                    A 1.0
+                    R : 0.0,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'SwingableWeapon'
-            Identifier 103
+            ClassName : 'SwingableWeapon',
+            Identifier : 103,
             SwingableWeaponComponent{ # SwingableWeaponComponent
-                ModelId 101
-                TrailId 1
-                ImpactParticleEmitterId 0
-                SwingSoundId 7
-                DamageImpactSoundId 8
-                GlowTrailId 16
-                CollisionShapeId 2
-                GlowId 10
-                BaseLength 50.0
-                GlowLength 65.0
-                GlowIntensity 0.0
-                Width 10.0
+                ModelId : 101,
+                TrailId : 1,
+                ImpactParticleEmitterId : 0,
+                SwingSoundId : 7,
+                DamageImpactSoundId : 8,
+                GlowTrailId : 16,
+                CollisionShapeId : 2,
+                GlowId : 10,
+                BaseLength : 50.0,
+                GlowLength : 65.0,
+                GlowIntensity : 0.0,
+                Width : 10.0,
                 GlowColor{ # FloatColor
-                    R 0.5
-                    G 0.5
-                    B 0.5
-                    A 0.0
+                    R : 0.5,
+                    G : 0.5,
+                    B : 0.5,
+                    A : 0.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X 0.0
-            Y 0.0
-            Width 0.0
-            Height 0.0
+            X : 0.0,
+            Y : 0.0,
+            Width : 0.0,
+            Height : 0.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'summonBlast'
+        Identifier : 'summonBlast',
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 2
+            ClassName : 'ParticleEmitter',
+            Identifier : 2,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 102
-                ParticleId 103
-                ParticleId 104
-                ModelBindingId 0
-                MaxParticles 80
-                ParentEmitterId 101
-                DestroyWhenFinished 0
+                ParticleId : 102,
+                ParticleId : 103,
+                ParticleId : 104,
+                ModelBindingId : 0,
+                MaxParticles : 80,
+                ParentEmitterId : 101,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 2
+                    Type : 2,
                     BaseColor{ # FloatColor
-                        R 1.0
-                        G 1.0
-                        B 1.0
-                        A 0.0
+                        R : 1.0,
+                        G : 1.0,
+                        B : 1.0,
+                        A : 0.0,
                     }
-                    Parameter 100.0
-                    Parameter 0.30000001192092896
-                    Parameter 50.0
-                    Parameter 50.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 100.0,
+                    Parameter : 0.30000001192092896,
+                    Parameter : 50.0,
+                    Parameter : 50.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 0.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 0.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 0
+                LocalSystem : 0,
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 101
+            ClassName : 'ParticleEmitter',
+            Identifier : 101,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 102
-                ParticleId 103
-                ParticleId 104
-                ModelBindingId 0
-                MaxParticles 100
-                ParentEmitterId 0
-                DestroyWhenFinished 1
+                ParticleId : 102,
+                ParticleId : 103,
+                ParticleId : 104,
+                ModelBindingId : 0,
+                MaxParticles : 100,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 1,
                 Emitter{ # ParticleEmitter
-                    Type 2
+                    Type : 2,
                     BaseColor{ # FloatColor
-                        R 1.0
-                        G 0.855555534362793
-                        B 0.888888955116272
-                        A 0.0
+                        R : 1.0,
+                        G : 0.855555534362793,
+                        B : 0.888888955116272,
+                        A : 0.0,
                     }
-                    Parameter 150.0
-                    Parameter 1.5
-                    Parameter 10.0
-                    Parameter 10.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 150.0,
+                    Parameter : 1.5,
+                    Parameter : 10.0,
+                    Parameter : 10.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 0.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 0.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 1
+                LocalSystem : 1,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 102
+            ClassName : 'Particle',
+            Identifier : 102,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 25.0
+                TextureName : 'particle_fure_1',
+                Size : 25.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 20.0
+                TextureName : 'particle_fure_2',
+                Size : 20.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 15.0
+                TextureName : 'particle_fure_3',
+                Size : 15.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -10.0
-            Y -10.0
-            Width 20.0
-            Height 20.0
+            X : -10.0,
+            Y : -10.0,
+            Width : 20.0,
+            Height : 20.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'summon_skeleton'
+        Identifier : 'summon_skeleton',
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 102
+            ClassName : 'ParticleEmitter',
+            Identifier : 102,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 103
-                ParticleId 104
-                ParticleId 105
-                ModelBindingId 0
-                MaxParticles 100
-                ParentEmitterId 0
-                DestroyWhenFinished 1
+                ParticleId : 103,
+                ParticleId : 104,
+                ParticleId : 105,
+                ModelBindingId : 0,
+                MaxParticles : 100,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 1,
                 Emitter{ # ParticleEmitter
-                    Type 1
+                    Type : 1,
                     BaseColor{ # FloatColor
-                        R 1.0
-                        G 1.0
-                        B 1.0
-                        A 0.0
+                        R : 1.0,
+                        G : 1.0,
+                        B : 1.0,
+                        A : 0.0,
                     }
-                    Parameter 70.0
-                    Parameter 0.6000000238418579
-                    Parameter 25.0
-                    Parameter 25.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 70.0,
+                    Parameter : 0.6000000238418579,
+                    Parameter : 25.0,
+                    Parameter : 25.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 0.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 0.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 1
+                LocalSystem : 1,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 103
+            ClassName : 'Particle',
+            Identifier : 103,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 40.0
+                TextureName : 'particle_fure_1',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 104
+            ClassName : 'Particle',
+            Identifier : 104,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 40.0
+                TextureName : 'particle_fure_2',
+                Size : 40.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 105
+            ClassName : 'Particle',
+            Identifier : 105,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 40.0
+                TextureName : 'particle_fure_3',
+                Size : 40.0,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -30.0
-            Y -30.0
-            Width 60.0
-            Height 60.0
+            X : -30.0,
+            Y : -30.0,
+            Width : 60.0,
+            Height : 60.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'summonedSkeleton'
+        Identifier : 'summonedSkeleton',
         Component{ # Component
-            ClassName 'Model'
-            Identifier 101
+            ClassName : 'Model',
+            Identifier : 101,
             ModelComponent{ # ModelComponent
-                Name 'skelly'
-                YRotation 1.5707963705062866
-                EmissionFactor 0.0
-                XRotation 0.0
+                Name : 'skelly',
+                YRotation : 1.5707963705062866,
+                EmissionFactor : 0.0,
+                XRotation : 0.0,
                 ShatterColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
                 Origin{ # Vector3
-                    X 0.0
-                    Y 0.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : 0.0,
+                    Z : 0.0,
                 }
-                Transparent 0
+                Transparent : 0,
                 DiffuseColor{ # FloatColor
-                    R 1.0
-                    G 1.0
-                    B 1.0
-                    A 1.0
+                    R : 1.0,
+                    G : 1.0,
+                    B : 1.0,
+                    A : 1.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'AnimationController'
-            Identifier 102
+            ClassName : 'AnimationController',
+            Identifier : 102,
             AnimationControllerComponent{ # AnimationControllerComponent
-                ModelId 101
-                DefaultAnimationId 0
-                SelfUpdate 0
+                ModelId : 101,
+                DefaultAnimationId : 0,
+                SelfUpdate : 0,
             }
         }
         Component{ # Component
-            ClassName 'MonsterEntity'
-            Identifier 103
+            ClassName : 'MonsterEntity',
+            Identifier : 103,
             EntityComponent{ # EntityComponent
-                FacingDirection 1
-                PhysicsEnabled 1
+                FacingDirection : 1,
+                PhysicsEnabled : 1,
             }
             MonsterEntityComponent{ # MonsterEntityComponent
                 OnKill{ # Program
                 }
                 OnHurt{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 local target = EntityController.Target(self);
@@ -1222,105 +1219,104 @@ if EntityController.IsIdle(self) then
 end
 
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb2\x00\x00\x00local self = ...;\r\n\r\nlocal target = EntityController.Target(self);\r\nProgram.Wait(0.3);\r\nif EntityController.IsIdle(self) then\r\n\tEntityController.PerformAction(self, 112);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c@\x00\x01\x85\x00\x00\x00\x86@A\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x00\x00\x00\x86\x80A\x01\xc0\x00\x00\x00\x01\xc1\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03333333\xd3?\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xb2\x00\x00\x00local self = ...;\r\n\r\nlocal target = EntityController.Target(self);\r\nProgram.Wait(0.3);\r\nif EntityController.IsIdle(self) then\r\n\tEntityController.PerformAction(self, 112);\r\nend\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x15\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x85\x80\x00\x00\x86\xc0@\x01\xc1\x00\x01\x00\x9c@\x00\x01\x85\x00\x00\x00\x86@A\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16\x00\x01\x80\x85\x00\x00\x00\x86\x80A\x01\xc0\x00\x00\x00\x01\xc1\x01\x00\x9c@\x80\x01\x1e\x00\x80\x00\x08\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03333333\xd3?\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x15\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x14\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00',
                 }
-                GivesExperience 1
-                DefaultDeathAnimation 1
+                GivesExperience : 1,
+                DefaultDeathAnimation : 1,
             }
         }
         Component{ # Component
-            ClassName 'EntityController'
-            Identifier 104
+            ClassName : 'EntityController',
+            Identifier : 104,
             EntityControllerComponent{ # EntityControllerComponent
-                EntityId 103
-                AnimationControllerId 102
-                DefaultMoveAnimationId 109
-                RoamAreaId 0
-                DefaultMoveSpeed 100.0
-                DefaultAcceleration 800.0
-                TargetingDistance 1000.0
-                MovementBehavior 4
+                EntityId : 103,
+                AnimationControllerId : 102,
+                DefaultMoveAnimationId : 109,
+                RoamAreaId : 0,
+                DefaultMoveSpeed : 100.0,
+                DefaultAcceleration : 800.0,
+                TargetingDistance : 1000.0,
+                MovementBehavior : 4,
             }
         }
         Component{ # Component
-            ClassName 'EntityInfo'
-            Identifier 105
+            ClassName : 'EntityInfo',
+            Identifier : 105,
             EntityInfoComponent{ # EntityInfoComponent
-                EntityClass 'Skeleton'
+                EntityClass : 'Skeleton',
             }
         }
         Component{ # Component
-            ClassName 'CollisionShape'
-            Identifier 106
+            ClassName : 'CollisionShape',
+            Identifier : 106,
             ShapeComponent{ # ShapeComponent
                 Rectangle{ # Rectangle
-                    X -10.0
-                    Y 0.0
-                    Width 20.0
-                    Height 50.0
+                    X : -10.0,
+                    Y : 0.0,
+                    Width : 20.0,
+                    Height : 50.0,
                 }
             }
             CollisionShapeComponent{ # CollisionShapeComponent
-                Collides 1
-                ReceivesDamage 1
-                InflictsDamage 1
-                MinDepth -15.0
-                MaxDepth 15.0
-                Enabled 1
+                Collides : 1,
+                ReceivesDamage : 1,
+                InflictsDamage : 1,
+                MinDepth : -15.0,
+                MaxDepth : 15.0,
+                Enabled : 1,
             }
         }
         Component{ # Component
-            ClassName 'SwingableWeaponController'
-            Identifier 108
+            ClassName : 'SwingableWeaponController',
+            Identifier : 108,
             SwingableWeaponControllerComponent{ # SwingableWeaponControllerComponent
-                ControllingModelId 101
-                ControllingBoneName 'BoneWeapon1'
-                WeaponTemplateName 'skelly_weapon_sword'
+                ControllingModelId : 101,
+                ControllingBoneName : 'BoneWeapon1',
+                WeaponTemplateName : 'skelly_weapon_sword',
             }
         }
         Component{ # Component
-            ClassName 'KeyframeAnimation'
-            Identifier 109
+            ClassName : 'KeyframeAnimation',
+            Identifier : 109,
             KeyframeAnimationComponent{ # KeyframeAnimationComponent
-                ModelId 101
-                Name 'skelly_walk'
-                Repeating 1
-                SpeedMultiplier 1.0
-                Running 1
+                ModelId : 101,
+                Name : 'skelly_walk',
+                Repeating : 1,
+                SpeedMultiplier : 1.0,
+                Running : 1,
             }
         }
         Component{ # Component
-            ClassName 'Damage'
-            Identifier 110
+            ClassName : 'Damage',
+            Identifier : 110,
             DamageComponent{ # DamageComponent
-                MinDamage 2
-                DamageType 0
-                SpecialDamageType 0
-                PhysicalDamageFactor 1.0
-                MagicDamageFactor 0.0
-                IgnoreTargetImmunity 0
-                CanBeBlocked 1
+                MinDamage : 2,
+                DamageType : 0,
+                SpecialDamageType : 0,
+                PhysicalDamageFactor : 1.0,
+                MagicDamageFactor : 0.0,
+                IgnoreTargetImmunity : 0,
+                CanBeBlocked : 1,
             }
         }
         Component{ # Component
-            ClassName 'Health'
-            Identifier 111
+            ClassName : 'Health',
+            Identifier : 111,
             HealthComponent{ # HealthComponent
-                MaxHealth 6
-                HEALTHTYPE 0
+                MaxHealth : 6,
+                HEALTHTYPE : 0,
                 BarOffset{ # Vector3
-                    X 0.0
-                    Y 50.0
+                    X : 0.0,
+                    Y : 50.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'EntityAction'
-            Identifier 112
+            ClassName : 'EntityAction',
+            Identifier : 112,
             EntityActionComponent{ # EntityActionComponent
                 OnActivate{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 local attackAnimation = 113;
@@ -1341,29 +1337,28 @@ Program.Wait(KeyframeAnimation.TimeToCompletion(self, attackAnimation));
 
 EntityController.SetMoveSpeed(self, EntityController.DefaultMoveSpeed(self));
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9a\x02\x00\x00local self = ...;\r\n\r\nlocal attackAnimation = 113;\r\n\r\nEntityController.SetMoveSpeed(self, 0);\r\nKeyframeAnimation.SetCurrentTime(self, attackAnimation, 0.0);\r\nAnimationController.BlendToAnimation(self, attackAnimation);\r\n\r\nProgram.Wait(0.1);\r\n\r\nlocal swingStartTime = KeyframeAnimation.TimeToFrame(self, attackAnimation, 13);\r\nlocal swingEndTime = KeyframeAnimation.TimeToFrame(self, attackAnimation, 16);\r\n\r\nProgram.Wait(swingStartTime);\r\nEntityController.StartSwing(self, 108, swingEndTime - swingStartTime);\r\n\r\nProgram.Wait(KeyframeAnimation.TimeToCompletion(self, attackAnimation));\r\n\r\nEntityController.SetMoveSpeed(self, EntityController.DefaultMoveSpeed(self));\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08=\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x85@\x00\x00\x86\x80@\x01\xc0\x00\x00\x00\x01\xc1\x00\x00\x9c@\x80\x01\x85\x00\x01\x00\x86@A\x01\xc0\x00\x00\x00\x00\x01\x80\x00A\xc1\x00\x00\x9c@\x00\x02\x85\x80\x01\x00\x86\xc0A\x01\xc0\x00\x00\x00\x00\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\x00\x01\x00\x86\xc0B\x01\xc0\x00\x00\x00\x00\x01\x80\x00A\x01\x03\x00\x9c\x80\x00\x02\xc5\x00\x01\x00\xc6\xc0\xc2\x01\x00\x01\x00\x00@\x01\x80\x00\x81A\x03\x00\xdc\x80\x00\x02\x05\x01\x02\x00\x06AB\x02@\x01\x00\x01\x1cA\x00\x01\x05A\x00\x00\x06\x81C\x02@\x01\x00\x00\x81\xc1\x03\x00\xcd\x81\x80\x01\x1cA\x00\x02\x05\x01\x02\x00\x06AB\x02E\x01\x01\x00F\x01\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x00\\\x01\x80\x01\x1cA\x00\x00\x05A\x00\x00\x06\x81@\x02@\x01\x00\x00\x85A\x00\x00\x86AD\x03\xc0\x01\x00\x00\x9c\x01\x00\x01\x1cA\x00\x00\x1e\x00\x80\x00\x12\x00\x00\x00\x03\x00\x00\x00\x00\x00@\\@\x04\x11\x00\x00\x00EntityController\x00\x04\r\x00\x00\x00SetMoveSpeed\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00TimeToFrame\x00\x03\x00\x00\x00\x00\x00\x00*@\x03\x00\x00\x00\x00\x00\x000@\x04\x0b\x00\x00\x00StartSwing\x00\x03\x00\x00\x00\x00\x00\x00[@\x04\x11\x00\x00\x00TimeToCompletion\x00\x04\x11\x00\x00\x00DefaultMoveSpeed\x00\x00\x00\x00\x00=\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00<\x00\x00\x00\x10\x00\x00\x00attackAnimation\x00\x02\x00\x00\x00<\x00\x00\x00\x0f\x00\x00\x00swingStartTime\x00\x1c\x00\x00\x00<\x00\x00\x00\r\x00\x00\x00swingEndTime\x00"\x00\x00\x00<\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x9a\x02\x00\x00local self = ...;\r\n\r\nlocal attackAnimation = 113;\r\n\r\nEntityController.SetMoveSpeed(self, 0);\r\nKeyframeAnimation.SetCurrentTime(self, attackAnimation, 0.0);\r\nAnimationController.BlendToAnimation(self, attackAnimation);\r\n\r\nProgram.Wait(0.1);\r\n\r\nlocal swingStartTime = KeyframeAnimation.TimeToFrame(self, attackAnimation, 13);\r\nlocal swingEndTime = KeyframeAnimation.TimeToFrame(self, attackAnimation, 16);\r\n\r\nProgram.Wait(swingStartTime);\r\nEntityController.StartSwing(self, 108, swingEndTime - swingStartTime);\r\n\r\nProgram.Wait(KeyframeAnimation.TimeToCompletion(self, attackAnimation));\r\n\r\nEntityController.SetMoveSpeed(self, EntityController.DefaultMoveSpeed(self));\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x08=\x00\x00\x00%\x00\x00\x01A\x00\x00\x00\x85@\x00\x00\x86\x80@\x01\xc0\x00\x00\x00\x01\xc1\x00\x00\x9c@\x80\x01\x85\x00\x01\x00\x86@A\x01\xc0\x00\x00\x00\x00\x01\x80\x00A\xc1\x00\x00\x9c@\x00\x02\x85\x80\x01\x00\x86\xc0A\x01\xc0\x00\x00\x00\x00\x01\x80\x00\x9c@\x80\x01\x85\x00\x02\x00\x86@B\x01\xc1\x80\x02\x00\x9c@\x00\x01\x85\x00\x01\x00\x86\xc0B\x01\xc0\x00\x00\x00\x00\x01\x80\x00A\x01\x03\x00\x9c\x80\x00\x02\xc5\x00\x01\x00\xc6\xc0\xc2\x01\x00\x01\x00\x00@\x01\x80\x00\x81A\x03\x00\xdc\x80\x00\x02\x05\x01\x02\x00\x06AB\x02@\x01\x00\x01\x1cA\x00\x01\x05A\x00\x00\x06\x81C\x02@\x01\x00\x00\x81\xc1\x03\x00\xcd\x81\x80\x01\x1cA\x00\x02\x05\x01\x02\x00\x06AB\x02E\x01\x01\x00F\x01\xc4\x02\x80\x01\x00\x00\xc0\x01\x80\x00\\\x01\x80\x01\x1cA\x00\x00\x05A\x00\x00\x06\x81@\x02@\x01\x00\x00\x85A\x00\x00\x86AD\x03\xc0\x01\x00\x00\x9c\x01\x00\x01\x1cA\x00\x00\x1e\x00\x80\x00\x12\x00\x00\x00\x03\x00\x00\x00\x00\x00@\\@\x04\x11\x00\x00\x00EntityController\x00\x04\r\x00\x00\x00SetMoveSpeed\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x04\x12\x00\x00\x00KeyframeAnimation\x00\x04\x0f\x00\x00\x00SetCurrentTime\x00\x04\x14\x00\x00\x00AnimationController\x00\x04\x11\x00\x00\x00BlendToAnimation\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x0c\x00\x00\x00TimeToFrame\x00\x03\x00\x00\x00\x00\x00\x00*@\x03\x00\x00\x00\x00\x00\x000@\x04\x0b\x00\x00\x00StartSwing\x00\x03\x00\x00\x00\x00\x00\x00[@\x04\x11\x00\x00\x00TimeToCompletion\x00\x04\x11\x00\x00\x00DefaultMoveSpeed\x00\x00\x00\x00\x00=\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\t\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0b\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0c\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0e\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x0f\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x11\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x13\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00<\x00\x00\x00\x10\x00\x00\x00attackAnimation\x00\x02\x00\x00\x00<\x00\x00\x00\x0f\x00\x00\x00swingStartTime\x00\x1c\x00\x00\x00<\x00\x00\x00\r\x00\x00\x00swingEndTime\x00"\x00\x00\x00<\x00\x00\x00\x00\x00\x00\x00',
                 }
             }
         }
         Component{ # Component
-            ClassName 'KeyframeAnimation'
-            Identifier 113
+            ClassName : 'KeyframeAnimation',
+            Identifier : 113,
             KeyframeAnimationComponent{ # KeyframeAnimationComponent
-                ModelId 101
-                Name 'skelly_attack1'
-                Repeating 0
-                SpeedMultiplier 1.2999999523162842
-                Running 1
+                ModelId : 101,
+                Name : 'skelly_attack1',
+                Repeating : 0,
+                SpeedMultiplier : 1.2999999523162842,
+                Running : 1,
             }
         }
         Component{ # Component
-            ClassName 'Program'
-            Identifier 116
+            ClassName : 'Program',
+            Identifier : 116,
             ProgramComponent{ # ProgramComponent
-                ExecuteOnce 1
+                ExecuteOnce : 1,
                 Program{ # Program
-                    String
-$
+                    String : $
 local self = ...;
 
 local target = EntityController.Target(self);
@@ -1374,29 +1369,28 @@ while true do
     end
 end
 $end
-                    Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xdc\x00\x00\x00local self = ...;\r\n\r\nlocal target = EntityController.Target(self);\r\nwhile true do\r\n\tProgram.Wait(Math.RandomFloat(1.5,3));\r\n\tif EntityController.IsIdle(self) then\r\n\t\tEntityController.PerformAction(self, 112);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x85\x80\x00\x00\x86\xc0@\x01\xc5\x00\x01\x00\xc6@\xc1\x01\x01\x81\x01\x00A\xc1\x01\x00\xdc\x00\x80\x01\x9c@\x00\x00\x85\x00\x00\x00\x86\x00B\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16@\xfc\x7f\x85\x00\x00\x00\x86@B\x01\xc0\x00\x00\x00\x01\x81\x02\x00\x9c@\x80\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0b\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x04\x05\x00\x00\x00Math\x00\x04\x0c\x00\x00\x00RandomFloat\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x03\x00\x00\x00\x00\x00\x00\x08@\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00'
+                    Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xdc\x00\x00\x00local self = ...;\r\n\r\nlocal target = EntityController.Target(self);\r\nwhile true do\r\n\tProgram.Wait(Math.RandomFloat(1.5,3));\r\n\tif EntityController.IsIdle(self) then\r\n\t\tEntityController.PerformAction(self, 112);\r\n\tend\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x06\x1a\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\\\x80\x00\x01\x85\x80\x00\x00\x86\xc0@\x01\xc5\x00\x01\x00\xc6@\xc1\x01\x01\x81\x01\x00A\xc1\x01\x00\xdc\x00\x80\x01\x9c@\x00\x00\x85\x00\x00\x00\x86\x00B\x01\xc0\x00\x00\x00\x9c\x80\x00\x01\x9a\x00\x00\x00\x16@\xfc\x7f\x85\x00\x00\x00\x86@B\x01\xc0\x00\x00\x00\x01\x81\x02\x00\x9c@\x80\x01\x16\xc0\xfa\x7f\x1e\x00\x80\x00\x0b\x00\x00\x00\x04\x11\x00\x00\x00EntityController\x00\x04\x07\x00\x00\x00Target\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x04\x05\x00\x00\x00Math\x00\x04\x0c\x00\x00\x00RandomFloat\x00\x03\x00\x00\x00\x00\x00\x00\xf8?\x03\x00\x00\x00\x00\x00\x00\x08@\x04\x07\x00\x00\x00IsIdle\x00\x04\x0e\x00\x00\x00PerformAction\x00\x03\x00\x00\x00\x00\x00\x00\\@\x00\x00\x00\x00\x1a\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x07\x00\x00\x00\x08\x00\x00\x00\t\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x19\x00\x00\x00\x07\x00\x00\x00target\x00\x05\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00',
                 }
-                Enabled 1
-                Trigger 1
+                Enabled : 1,
+                Trigger : 1,
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -10.0
-            Y 0.0
-            Width 20.0
-            Height 50.0
+            X : -10.0,
+            Y : 0.0,
+            Width : 20.0,
+            Height : 50.0,
         }
-        Hidden 0
+        Hidden : 0,
         OnLoad{ # Program
-            String
-$
+            String : $
 local self = ...;
 
 Program.Wait(0.1);
@@ -1404,272 +1398,272 @@ local blast = Scene.CreateObject("summonBlast", "blastie", self);
 blast:setPosition(self:position()+Vector3.New(0,40,0));
 
 $end
-            Bytes '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xa6\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(0.1);\r\nlocal blast = Scene.CreateObject("summonBlast", "blastie", self);\r\nblast:setPosition(self:position()+Vector3.New(0,40,0));\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x17\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01\xc2\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x1e\x00\x80\x00\r\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0c\x00\x00\x00summonBlast\x00\x04\x08\x00\x00\x00blastie\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x00\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x16\x00\x00\x00\x06\x00\x00\x00blast\x00\x0b\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00'
+            Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xa6\x00\x00\x00local self = ...;\r\n\r\nProgram.Wait(0.1);\r\nlocal blast = Scene.CreateObject("summonBlast", "blastie", self);\r\nblast:setPosition(self:position()+Vector3.New(0,40,0));\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\t\x17\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x81@\x01\x00\xc1\x80\x01\x00\x00\x01\x00\x00\\\x80\x00\x02\x8b\xc0\xc1\x00\x0b\x01B\x00\x1c\x81\x00\x01EA\x02\x00F\x81\xc2\x02\x81\xc1\x02\x00\xc1\x01\x03\x00\x01\xc2\x02\x00\\\x81\x00\x02\x0cA\x01\x02\x9c@\x80\x01\x1e\x00\x80\x00\r\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xb9?\x04\x06\x00\x00\x00Scene\x00\x04\r\x00\x00\x00CreateObject\x00\x04\x0c\x00\x00\x00summonBlast\x00\x04\x08\x00\x00\x00blastie\x00\x04\x0c\x00\x00\x00setPosition\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x00\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x02\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x16\x00\x00\x00\x06\x00\x00\x00blast\x00\x0b\x00\x00\x00\x16\x00\x00\x00\x00\x00\x00\x00',
         }
     }
-    Scaling 1.2999999523162842
+    Scaling : 1.2999999523162842,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'weapon_handglow_frost'
+        Identifier : 'weapon_handglow_frost',
         Component{ # Component
-            ClassName 'SwingableWeapon'
-            Identifier 1
+            ClassName : 'SwingableWeapon',
+            Identifier : 1,
             SwingableWeaponComponent{ # SwingableWeaponComponent
-                ModelId 0
-                TrailId 0
-                ImpactParticleEmitterId 0
-                SwingSoundId 0
-                DamageImpactSoundId 0
-                GlowTrailId 0
-                CollisionShapeId 0
-                GlowId 0
-                BaseLength 50.0
-                GlowLength 65.0
-                GlowIntensity 0.0
-                Width 10.0
+                ModelId : 0,
+                TrailId : 0,
+                ImpactParticleEmitterId : 0,
+                SwingSoundId : 0,
+                DamageImpactSoundId : 0,
+                GlowTrailId : 0,
+                CollisionShapeId : 0,
+                GlowId : 0,
+                BaseLength : 50.0,
+                GlowLength : 65.0,
+                GlowIntensity : 0.0,
+                Width : 10.0,
                 GlowColor{ # FloatColor
-                    R 0.5
-                    G 0.5
-                    B 0.5
-                    A 0.0
+                    R : 0.5,
+                    G : 0.5,
+                    B : 0.5,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 2
+            ClassName : 'ParticleEmitter',
+            Identifier : 2,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 3
-                ParticleId 4
-                ParticleId 5
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 3,
+                ParticleId : 4,
+                ParticleId : 5,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 3
+                    Type : 3,
                     BaseColor{ # FloatColor
-                        R 0.3111111521720886
-                        G 0.477777898311615
-                        B 0.9999999403953552
-                        A 0.0
+                        R : 0.3111111521720886,
+                        G : 0.477777898311615,
+                        B : 0.9999999403953552,
+                        A : 0.0,
                     }
-                    Parameter 0.019999999552965164
-                    Parameter 0.4000000059604645
-                    Parameter 1.0
-                    Parameter 10.0
-                    Parameter 0.30000001192092896
-                    Parameter 0.0
-                    Parameter 1.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 0.019999999552965164,
+                    Parameter : 0.4000000059604645,
+                    Parameter : 1.0,
+                    Parameter : 10.0,
+                    Parameter : 0.30000001192092896,
+                    Parameter : 0.0,
+                    Parameter : 1.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 0.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 0.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 0
+                LocalSystem : 0,
                 Gravity{ # Vector3
-                    X 0.0
-                    Y -1.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -1.0,
+                    Z : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 3
+            ClassName : 'Particle',
+            Identifier : 3,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 15.0
+                TextureName : 'particle_fure_1',
+                Size : 15.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 4
+            ClassName : 'Particle',
+            Identifier : 4,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 20.0
+                TextureName : 'particle_fure_2',
+                Size : 20.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 5
+            ClassName : 'Particle',
+            Identifier : 5,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 10.0
+                TextureName : 'particle_fure_3',
+                Size : 10.0,
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 101
+            ClassName : 'SimpleGlow',
+            Identifier : 101,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.1111111119389534
-                    G 0.13333334028720856
-                    B 0.6333333253860474
-                    A 0.5
+                    R : 0.1111111119389534,
+                    G : 0.13333334028720856,
+                    B : 0.6333333253860474,
+                    A : 0.5,
                 }
-                Size 20.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
 Template{ # ObjectTemplate
     Object{ # SceneObject
-        Identifier 'weapon_handglow_red'
+        Identifier : 'weapon_handglow_red',
         Component{ # Component
-            ClassName 'SwingableWeapon'
-            Identifier 1
+            ClassName : 'SwingableWeapon',
+            Identifier : 1,
             SwingableWeaponComponent{ # SwingableWeaponComponent
-                ModelId 0
-                TrailId 0
-                ImpactParticleEmitterId 0
-                SwingSoundId 0
-                DamageImpactSoundId 0
-                GlowTrailId 0
-                CollisionShapeId 0
-                GlowId 0
-                BaseLength 50.0
-                GlowLength 65.0
-                GlowIntensity 0.0
-                Width 10.0
+                ModelId : 0,
+                TrailId : 0,
+                ImpactParticleEmitterId : 0,
+                SwingSoundId : 0,
+                DamageImpactSoundId : 0,
+                GlowTrailId : 0,
+                CollisionShapeId : 0,
+                GlowId : 0,
+                BaseLength : 50.0,
+                GlowLength : 65.0,
+                GlowIntensity : 0.0,
+                Width : 10.0,
                 GlowColor{ # FloatColor
-                    R 0.5
-                    G 0.5
-                    B 0.5
-                    A 0.0
+                    R : 0.5,
+                    G : 0.5,
+                    B : 0.5,
+                    A : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'ParticleEmitter'
-            Identifier 2
+            ClassName : 'ParticleEmitter',
+            Identifier : 2,
             ParticleEmitterComponent{ # ParticleEmitterComponent
-                ParticleId 3
-                ParticleId 4
-                ParticleId 5
-                ModelBindingId 0
-                MaxParticles 30
-                ParentEmitterId 0
-                DestroyWhenFinished 0
+                ParticleId : 3,
+                ParticleId : 4,
+                ParticleId : 5,
+                ModelBindingId : 0,
+                MaxParticles : 30,
+                ParentEmitterId : 0,
+                DestroyWhenFinished : 0,
                 Emitter{ # ParticleEmitter
-                    Type 3
+                    Type : 3,
                     BaseColor{ # FloatColor
-                        R 0.6666666865348816
-                        G 0.20000001788139343
-                        B 0.18888890743255615
-                        A 0.0
+                        R : 0.6666666865348816,
+                        G : 0.20000001788139343,
+                        B : 0.18888890743255615,
+                        A : 0.0,
                     }
-                    Parameter 0.019999999552965164
-                    Parameter 0.4000000059604645
-                    Parameter 1.0
-                    Parameter 10.0
-                    Parameter 0.30000001192092896
-                    Parameter 0.0
-                    Parameter 1.0
-                    HueVariance 0.0
-                    SaturationVariance 0.0
-                    LightnessVariance 0.0
+                    Parameter : 0.019999999552965164,
+                    Parameter : 0.4000000059604645,
+                    Parameter : 1.0,
+                    Parameter : 10.0,
+                    Parameter : 0.30000001192092896,
+                    Parameter : 0.0,
+                    Parameter : 1.0,
+                    HueVariance : 0.0,
+                    SaturationVariance : 0.0,
+                    LightnessVariance : 0.0,
                     OriginOffset{ # Vector3
-                        X 0.0
-                        Y 0.0
-                        Z 0.0
+                        X : 0.0,
+                        Y : 0.0,
+                        Z : 0.0,
                     }
                 }
-                LocalSystem 0
+                LocalSystem : 0,
                 Gravity{ # Vector3
-                    X 0.0
-                    Y -1.0
-                    Z 0.0
+                    X : 0.0,
+                    Y : -1.0,
+                    Z : 0.0,
                 }
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 3
+            ClassName : 'Particle',
+            Identifier : 3,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_1'
-                Size 15.0
+                TextureName : 'particle_fure_1',
+                Size : 15.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 4
+            ClassName : 'Particle',
+            Identifier : 4,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_2'
-                Size 20.0
+                TextureName : 'particle_fure_2',
+                Size : 20.0,
             }
         }
         Component{ # Component
-            ClassName 'Particle'
-            Identifier 5
+            ClassName : 'Particle',
+            Identifier : 5,
             ParticleComponent{ # ParticleComponent
-                TextureName 'particle_fure_3'
-                Size 10.0
+                TextureName : 'particle_fure_3',
+                Size : 10.0,
             }
         }
         Component{ # Component
-            ClassName 'SimpleGlow'
-            Identifier 101
+            ClassName : 'SimpleGlow',
+            Identifier : 101,
             SimpleGlowComponent{ # SimpleGlowComponent
                 Color{ # FloatColor
-                    R 0.644444465637207
-                    G 0.0
-                    B 0.0
-                    A 0.5
+                    R : 0.644444465637207,
+                    G : 0.0,
+                    B : 0.0,
+                    A : 0.5,
                 }
-                Size 20.0
-                NumSegments 10
-                Depth 15.0
-                PulseAmount 0.15000000596046448
-                PulseTime 0.800000011920929
+                Size : 20.0,
+                NumSegments : 10,
+                Depth : 15.0,
+                PulseAmount : 0.15000000596046448,
+                PulseTime : 0.800000011920929,
                 Offset{ # Vector2
-                    X 0.0
-                    Y 0.0
+                    X : 0.0,
+                    Y : 0.0,
                 }
             }
         }
         Position{ # Vector2
-            X 0.0
-            Y 0.0
+            X : 0.0,
+            Y : 0.0,
         }
-        Depth 0.0
-        Rotation 0.0
-        Scaling 1.0
+        Depth : 0.0,
+        Rotation : 0.0,
+        Scaling : 1.0,
         LocalAabb{ # Rectangle
-            X -20.0
-            Y -20.0
-            Width 40.0
-            Height 40.0
+            X : -20.0,
+            Y : -20.0,
+            Width : 40.0,
+            Height : 40.0,
         }
-        Hidden 0
+        Hidden : 0,
     }
-    Scaling 1.0
+    Scaling : 1.0,
 }
