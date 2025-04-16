@@ -393,12 +393,13 @@ def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
 
 
 def match_tagname(block_format: dict, tagname: str) -> "tuple[str, bool, str]":
-    for key, value in block_format.items():
-        if key == tagname:
-            if len(value) == 3:
-                return value[0], True, value[2]
-            return value[0], False, ""
-    return "00", False, ""
+    if not tagname in block_format:
+        return "00", False, ""
+    else:
+        value = block_format[tagname]
+        if len(value) == 3:
+            return value[0], True, value[2]
+        return value[0], False, ""
 
 
 def truncate(string: str, length: int) -> str:

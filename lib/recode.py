@@ -1,3 +1,4 @@
+import os
 import re
 import math
 import struct
@@ -92,7 +93,7 @@ def lex(lines: str) -> "list[str]":
 
     return lex_list
 
-def recode(args) -> bytes:
+def recode(args) -> bool:
 
     def varint(num: int) -> bytes:
         if num == 0:
@@ -226,7 +227,7 @@ def recode(args) -> bytes:
                     show_error("type error", "expected tag, got "+ltype)
                 else:
                     show_error("tag not found error", "could not find tag in block_format: "+lexeme)
-                return b""
+                return False
                 
             tagname = lexeme
             tagnumber = int(tag, base=16)
@@ -243,7 +244,7 @@ def recode(args) -> bytes:
                     formats[metalevel +1] = block_formats.block_formats[tag_reference]
                 except KeyError:
                     print(config.colour_error+"no "+config.colour_reset+tagname+" in \n"+util.prettify_dict(format))
-                    return b""
+                    return False
                 message_names[metalevel] = tagname
                 metalevel += 1
                 format = formats[metalevel]
@@ -296,12 +297,12 @@ def recode(args) -> bytes:
             if wiretype == 0:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return b""
+                    return False
                 out_bytes[metalevel] += varint(int(lexeme))
             if wiretype == 1:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return b""
+                    return False
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -311,7 +312,7 @@ def recode(args) -> bytes:
             if wiretype == 2:
                 if not ltype in ["string", "compile_mark"]:
                     show_error("type error", "expected string, got "+ltype)
-                    return b""
+                    return False
                 data = bytes(lexeme, "latin1").decode("unicode-escape")
                 data = bytes(data, "latin1")[1:-1]
                 out_bytes[metalevel] += varint(len(data))
@@ -319,7 +320,7 @@ def recode(args) -> bytes:
             if wiretype == 5:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return b""
+                    return False
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -353,8 +354,18 @@ def recode(args) -> bytes:
 
 
     if filepath[0] != "/":
+        if filepath[0] != ".":
+            filepath = "./"+filepath
+        outfilepath = filepath.replace("./re_in/", "./re_out/")
         filepath = filepath[len("./re_in/"):]
+    else:
+        outfilepath = filepath.replace("/re_in/", "/re_out/")
+
     if len(out_bytes[0]) != 0:
         print(config.colour_success+"recoded: "+config.colour_reset+filepath)
+        os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
+        with open(outfilepath, "wb") as file:
+            file.write(out_bytes[0])
 
-    return out_bytes[0]
+
+    return True

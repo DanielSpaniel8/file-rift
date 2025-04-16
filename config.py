@@ -5,6 +5,9 @@ ask_for_info = False
 
 compile_mode = "keyword"  # keyword, all
 
+# the folder for your custom de_in files
+user_folder = "user"  # default : "user"
+
 # must use the following chars (=|:|;|,)
 style_after_tag = " : " # default : " : "
 style_after_record = "," # default : ","
@@ -26,4 +29,4 @@ colour_warning = "\033[1;33m"  # default : "\033[1;33m"
 colour_data    = "\033[1;34m"  # default : "\033[1;34m"
 colour_reset   = "\033[0m"  # default : "\033[0m"
 
-version_code = "5.7.2"
+version_code = "5.7.3"

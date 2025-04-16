@@ -5,7 +5,7 @@ from lib import util, recode, decode
 import argparse
 from multiprocessing import Pool
 
-if not config.rift_mode in ["recode", "decode", "both", "custom", "audit"]:
+if not config.rift_mode in ["recode", "decode", "both", "user", "audit"]:
     print(
         config.colour_error
         + "invalid rift_mode: \""
@@ -25,7 +25,7 @@ if not config.compile_mode in ["keyword", "all"]:
 parser = argparse.ArgumentParser("FileRift")
 parser.add_argument("-r", "--recode", action="store_true", help="Run in recode mode")
 parser.add_argument("-d", "--decode", action="store_true", help="Run in decode mode")
-parser.add_argument("-c", "--custom", action="store_true", help="Decode file in /de_in/custom")
+parser.add_argument("-u", "--user", action="store_true", help="Decode file in /de_in/user, unless otherwise specified")
 parser.add_argument("-b", "--both",   action="store_true", help="Run in decode then recode mode")
 parser.add_argument("-f", "--force",  action="store_true", help="Run in recode mode with allways_recode turned on")
 parser.add_argument("-a", "--audit",  action="store_true", help="Ask before recoding each directory in re_out")
@@ -42,8 +42,8 @@ if args.decode:
     config.rift_mode = "decode"
 if args.both:
     config.rift_mode = "both"
-if args.custom:
-    config.rift_mode = "custom"
+if args.user:
+    config.rift_mode = "user"
 if args.recode:
     config.rift_mode = "recode"
 if args.force:
@@ -72,7 +72,7 @@ def write_out(filepath: str, output: "str|bytes", root_prefix: str) -> bool:
     filepath = filepath.replace(root_prefix+"_in/", root_prefix+"_out/")
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
 
-    if output not in ["", b""]:
+    if not output in ["", b""]:
 
         write_string = "w"
         if isinstance(output, bytes):
@@ -94,9 +94,8 @@ if args.path:
     with open(filepath, "r") as file:
         file_content = file.read()
     file_content = re.sub(r"\$([a-z\.\$]{3,25})\[([^\]]*)\]", util.template, file_content)
-    output = recode.recode([file_content, filepath])
-    done = write_out(filepath, output, "re")
-    if done:
+    result = recode.recode([file_content, filepath])
+    if result:
         recoded_count = 1
     else:
         skipped_count = 1
@@ -116,20 +115,22 @@ if config.rift_mode in  ["recode", "both"]:
         tested_fileslist.append([file_content, path])
 
     outlist = Pool().map(recode.recode, tested_fileslist)
-    for i, out in enumerate(outlist):
-        done = write_out(fileslist[i], out, "re")
-        if done: recoded_count += 1
-        else: skipped_count += 1
+    for result in outlist:
+        if result:
+            recoded_count += 1
+        else:
+            skipped_count += 1
 
-if config.rift_mode in ["decode", "custom", "both"]:
-    if config.rift_mode != "decode": root_path = "./de_in/custom/"
+if config.rift_mode in ["decode", "user", "both"]:
+    if config.rift_mode != "decode": root_path = "./de_in/"+config.user_folder+"/"
     else: root_path = "./de_in/"
     fileslist = util.get_files(root_path)
     outlist = Pool().map(decode.decode, fileslist)
-    for path, out in enumerate(outlist):
-        done = write_out(fileslist[path], out, "de")
-        if done: decoded_count += 1
-        else: skipped_count += 1
+    for result in outlist:
+        if result:
+            decoded_count += 1
+        else:
+            skipped_count += 1
 
 if config.ask_for_info:
     info_path = input("info path: ")

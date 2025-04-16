@@ -1,9 +1,10 @@
+import os
 import re
 import struct
 from lib import block_formats, util
 import config
 
-def decode(filepath: str) -> "str":
+def decode(filepath: str) -> "bool":
 
 
     def varint() -> int:
@@ -66,13 +67,13 @@ def decode(filepath: str) -> "str":
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
     if not filetype_match:
         print(config.colour_error+"file has no extension: "+config.colour_reset+filepath)
-        return ""
+        return False
     else:
         filetype = filetype_match.group(1)
     
     if not filetype in block_formats.file_types:
         print(config.colour_error+"unrecognized file extension: "+config.colour_reset, filetype)
-        return ""
+        return False
     formats[0] = block_formats.block_formats[filetype]
 
     with open(filepath, "rb") as file:
@@ -103,7 +104,7 @@ def decode(filepath: str) -> "str":
                 + filepath + ":" + str(sum(offsets))
                 + "\n"
             )
-            return ""
+            return False
 
         if wiretype == "varint":
             content = str(varint())
@@ -188,10 +189,14 @@ def decode(filepath: str) -> "str":
             offsets[metalevel +1] = 0
 
     output = ""
-
     for line in out_lines:
         output += line 
 
+    outfilepath = filepath.replace("./de_in", "./de_out")
+    os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
+    with open(outfilepath, "w") as file:
+        file.write(output)
+
     print(config.colour_success+"decoded: "+config.colour_reset+filepath[len("./de_in/"):])
 
-    return output
+    return True
