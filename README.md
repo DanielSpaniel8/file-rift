@@ -9,6 +9,7 @@ File Rift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These
 - `*.fnt`: font mapping files
 - `*.gdata`: definitions for collectibles, spells, quests etc.
 - `*.gstate`: default state for newgames
+- `*.gplayer`: savegames
 - `*.gopt`: names for music tracks, as well as the default touch controls layout
 - `*.sounds`: names for sound effect tracks
 - `*.scmap`: in-game map layout
@@ -17,15 +18,39 @@ File Rift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These
 File Rift has two modes: decode and recode. In decode mode, File Rift will convert Swordigo binary files into a custom plain text format, which looks similar to a markup language. In recode mode, File Rift will convert those plain text files back into binary files which can be added into the game. Normally, File Rift will decode the original game files, however it can decode or recode any Swordigo files you give it.
 
 ## Usage
-Clone the repo or download a release. Run `FileRiftx.x.py` using Python 3.
+Clone the repo or download a release. Run `FileRift.py` using Python 3.
 ```bash
-python3 FileRiftx.x.py
+python3 FileRift.py
 ```
-To change the rift mode, open FileRiftx.x.py in an editor and change the value of the string `rift_mode`. Valid options are `"decode"`, `"recode"`, `"both"` and `"custom"`. `"custom"` mode is the same as decode, but it only searches the `/de_in/custom` folder.  
+To change the rift mode, open config.py in an editor and change the value of the string `rift_mode`. Valid options are `"decode"`, `"recode"`, `"both"` and `"user"`. `"user"` mode is the same as decode, but it only searches the `/de_in/user` folder.  
 All files in `/de_in` are used as input files for the decoder. The folders `all`, `scene` and `scl` are intended for the original game files. Any folders you make will be scanned when rifting, and all output files will be placed in `/de_out`.  
 All files in `/re_in` are used as input files for the recoder. Any folders you make will be scanned when rifting, and all output files will be placed in `/re_out`.  
 
-## syntax
+To get a list of command line flags, use `python3 FileRift.py --help`. Example output:
+
+```bash
+usage: FileRift [-h] [-r] [-d] [-u] [-b] [-f] [-a] [-i INFO] [-p PATH] [-n]
+
+options:
+  -h, --help            show this help message and exit
+  -r, --recode          Run in recode mode
+  -d, --decode          Run in decode mode
+  -u, --user            Decode file in /de_in/user, unless otherwise specified
+  -b, --both            Run in decode then recode mode
+  -f, --force           Run in recode mode with allways_recode turned on
+  -a, --audit           Ask before recoding each directory in re_out
+  -i INFO, --info INFO  Ask before recoding each directory in re_out
+  -p PATH, --path PATH  Recode a file for a given filepath
+  -n, --no-colour       Disable output colouring
+```
+
+When recoding, Rift will check the contents of every file against a checksum stored in `lib/.manifest`. If the checksum matches, the file will be skipped, saving a lot of time when recoding. To turn off this behaviour, use the `--force` flag, or set `allways_recode` to True in `config.py`.
+
+## Configuration
+
+Configuring FileRift is done using `config.py`. Most of the settings have comments explaining them.
+
+## Syntax
 File Rift decodes files into a custom format, which looks similar to a markup language.
 
 ```
@@ -33,97 +58,44 @@ File Rift decodes files into a custom format, which looks similar to a markup la
 a : 12 # integer
 b : 15.9 # float
 c : 'abc' # string
-d{ # sub-section
-    a : 1 # sub-item
+d{ # message
+    a : 1
 }
 ```
 
-The files are split up into records, with each record following the pattern of tag, delimiter, data.
+The files are split up into records, with each record a tag and some data.
 The tag is the key for a record, and specifies what information that record represents. Tags should be surrounded by whitespace, but not quotes.  
-The delimiter can be either `:` or `=`, but it is intirely optional.
-There are three main types of record: integer, float and string. These work the same as in pretty much any markup language.
+There are four main types of record: integer, float, string and message. The first three work the same as in pretty much any markup language, and messages simply contain other records.
+If you put a `d` after a float, it will be automatically converted from degrees to radians. `90d`
 
 Integers are all decimal digits, no decimal points allowed. `0` `1500`  
 Floats may have decimal points, but they don't have to. `0.0` `20`  
 Strings are surrounded by single quotes `'` or double quotes `"`.  
+Messages begin and end with braces. `{}`
 
 ## Lua Chunks
 
 scene and scl files often contain Lua chunks, which are represented like this:
 ```
-main_chunk : $
+String : $
 -- some lua here
 $end
 ```
 
 A Lua chunk always comes in a pair, with a 64-bit chunk and a 32-bit copy:
 ```
-lua_chunk{
-    main_chunk : $ ... $end    # 64-bit
-    secondary_chunk : ''  # 32-bit
+Program{
+    String : $ ... $end    # 64-bit
+    Bytes : ''  # 32-bit
 }
 ```
-The secondary chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods that utilize Lua chunks usually only work on 64-bit devices. File Rift can compile the main chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use `@comp`:
+The Bytes chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods which utilize Lua chunks usually only work on 64-bit devices. File Rift can compile the String chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use `@compile` or `@comp`:
 ```
-main_chunk : $ ... $end
-secondary_chunk : @comp
+String : $ ... $end
+Bytes : @comp
 ```
 As File Rift runs through your files, it keeps content of the last chunk, and when it finds `@comp`, it compiles the last chunk and adds it to that record. Be careful, if you use `@comp` in the wrong place, it will add the content of a random chunk to your record.  
 > Note: this feature currently only works on Linux.
-
-## Sourcing
-
-File Rift has two methods for bringing the contents of an external file into a recode file. You can source any file in the `/source` folder, and put its contents anywhere in a recode file.
-The purpose of the sourcing feature is to make modding a bit faster and easier by moving some parts of a file to an external file, which means you don't have to hunt for the correct line every time you need to make a change.
-
-- `$source`
-```
-# this example will bring all the fire dragon info from dragons/fire.txt in to dragons.scl
-
-file >> /re_in/dragons.scl:
-
-library_item{
-    object{
-        $source[dragons/fire.txt]
-    }
-}
-...
-
-
-file >> /source/dragons/fire.txt:
-
-        name : 'dragon_fire'
-        component{
-            component_type : 'EntityInfo'
-...
-```
-
-- `$lua`
-
-`$lua` is the same as the `$source`, but adds a comment with the sourced filename. I usually use it in Lua chunks, hence the name. It doesn't actually have to be used for Lua though.
-```
-file >> /re_in/dash_mod.scl:
-
-        main_chunk : $
-        $lua[dash.lua]
-        $end
-...
-
-
-file >> /source/dash.lua:
-
-Scene.Find("hero"):setVelocity(v)
-...
-
-
- >> recode output:
-        main_chunk : $
--- dash.scl
-Scene.Find("hero"):setVelocity(v)
-...
-        $end
-...
-```
 
 ## Templates
 
@@ -174,3 +146,45 @@ Templates are placed in `/templates`. The name of the file defines how it will b
 The filename must be made up of lower case letters and dots. Note that the extension .fr will be removed automatically, but not any other extension.  
 You can use directories for template files, but the path to the file is not used in the reference, e.g. `/templates/nt/proj/npc` is referenced as `$npc[...]`. This means that `/templates/a` is the same as `/templates/d/a`.  
 The template itself just uses a $ dollar sign and one or two decimal digits to indicate things to replace.
+
+## Tag Info
+
+Tag info helps you to write Swordigo files quickly, by showing what record tags are allowed in a message. Run rift with the `-i` flag, and pass a block_formats path like so:
+
+```
+python3 FileRift.py -i scene/Object/Position
+
+Position (message)
+   0d : X (float)
+   15 : Y (float)
+```
+
+This tells you that the Position Message contains two records, `X` and `Y`, both floats.
+You can also pass a filename and line number like this:
+
+```
+python3 FileRift.py -i re_in/testing/beyond_graveyard.scene:4
+
+Object (message)
+   0a : TemplateName (str)  [optional] reference to a template to initialize the object from
+   12 : Identifier (str)  used to refer to this object
+   1a : Component (message)
+   22 : Position (message)
+   2d : Depth (float)
+   35 : Rotation (float)
+   3d : Scaling (float)
+   42 : LocalAabb (message)
+   48 : Hidden (int)
+   52 : OnLoad (message)
+```
+
+## Template Info
+
+Calling Rift with the `-i` flag and a template name preceded by a dot will print all the comments at the start of the template file, which typically contain the documentation for the template:
+
+```
+python3 FileRift.py -i .obj
+
+usage: [name;ident;x_pos;y_pos;z_pos;rot;scale]
+add an object instance with the provided details
+```
