@@ -1351,7 +1351,18 @@ block_formats = {
     # },
 
 
-    # unused section
-
-
 }
+
+error_bad_input = ""
+
+cheat_codes = ["@enablecheatpassu", "@showdebugpassu", "@test_consume1337"]
+
+branches = ["Main", "Master", "Debug", "Dev"]
+
+yak = """
+Yes. self.me. But I can't be with you for Math.Huge. My grip of _G is fading.
+The compiler error that slew me is in this scope. I can grep it.
+It's trying to import the namespace of the Mageblade.
+You have to :destroy() it before the sword is nil while true.
+Read the friendly manual on lua, it will help you on your way.
+"""

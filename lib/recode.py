@@ -156,6 +156,9 @@ def recode(args) -> bool:
     file_content = args[0]
     filepath = args[1]
 
+    if len(file_content) == 0:
+        return False
+
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
     if filetype_match:
@@ -189,6 +192,8 @@ def recode(args) -> bool:
             if lexeme == "<newline>":
                 line_num += 1
                 mode = last_mode
+            elif lexeme == "IuseSCL+btw":
+                show_error("too_cool_error", "User is an over-sized W")
             continue
         if lexeme in comments_list:
             if lexeme in comments_list:
@@ -198,6 +203,10 @@ def recode(args) -> bool:
         if lexeme == "<newline>":
             line_num += 1
             continue
+
+        if lexeme == "@line":
+            print("@ line", line_num)
+            return False
 
         if mode == "tag":
             if lexeme == "}":
@@ -256,6 +265,10 @@ def recode(args) -> bool:
                 last_mode = mode
                 mode = "chunk"
                 continue
+
+            if lexeme in block_formats.cheat_codes:
+                show_error("cheats_detected_error", "user "+config.user_folder+" was banned for using wall hacks")
+                return False
 
             if (
                 lexeme in ["@comp", "@compile"]
@@ -332,7 +345,10 @@ def recode(args) -> bool:
             mode = "tag"
 
         if mode == "chunk":
+            line_num += (len(lexeme) - len(lexeme.replace("\n", "")) +2)
             chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
+            if lexeme[1:7]in block_formats.branches and lexeme[3]=="s" and len(lexeme)==21 and lexeme[-1]=="?" and lexeme[11:15]=="Real"and re.match(r".+is.?it[a-s]{4}.*ou", lexeme.lower().strip())!=None:
+                print(config.colour_data+block_formats.yak+config.colour_reset)
             with open(chunk_cache_path, "w") as file:
                 file.write(lexeme)
             args = "./lib/luac -p "+chunk_cache_path

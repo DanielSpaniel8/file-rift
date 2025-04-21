@@ -23,18 +23,26 @@ if not config.compile_mode in ["keyword", "all"]:
     quit()
 
 parser = argparse.ArgumentParser("FileRift")
-parser.add_argument("-r", "--recode", action="store_true", help="Run in recode mode")
-parser.add_argument("-d", "--decode", action="store_true", help="Run in decode mode")
-parser.add_argument("-u", "--user", action="store_true", help="Decode file in /de_in/user, unless otherwise specified")
-parser.add_argument("-b", "--both",   action="store_true", help="Run in decode then recode mode")
-parser.add_argument("-f", "--force",  action="store_true", help="Run in recode mode with allways_recode turned on")
-parser.add_argument("-a", "--audit",  action="store_true", help="Ask before recoding each directory in re_out")
-parser.add_argument("-i", "--info",                        help="Ask before recoding each directory in re_out")
-parser.add_argument("-p", "--path",                        help="Recode a file for a given filepath")
-parser.add_argument("-n", "--no-colour", action="store_true", help="Disable output colouring")
+parser.add_argument("-r", "--recode", action="store_true", help="run in recode mode")
+parser.add_argument("-d", "--decode", action="store_true", help="run in decode mode")
+parser.add_argument("-u", "--user",   action="store_true", help="decode file in /de_in/user, unless otherwise specified")
+parser.add_argument("-b", "--both",   action="store_true", help="run in decode then recode mode")
+parser.add_argument("-f", "--force",  action="store_true", help="run in recode mode with allways_recode turned on")
+parser.add_argument("-a", "--audit",  action="store_true", help="ask before recoding each directory in re_out")
+parser.add_argument("-i", "--info",   type=str,            help="ask before recoding each directory in re_out")
+parser.add_argument("-p", "--path",   type=str,            help="recode a file for a given filepath")
+parser.add_argument("-n", "--no-colour", action="store_true", help="disable output colouring")
 
 args = parser.parse_args()
 
+if args.no_colour:
+    config.colour_enabled = False
+if not config.colour_enabled:
+    config.colour_success = ""
+    config.colour_error = ""
+    config.colour_warning = ""
+    config.colour_reset = ""
+    config.colour_data = ""
 if args.audit:
     print("do audit")
     quit()
@@ -52,15 +60,6 @@ if args.force:
 if args.info:
     print(util.get_info(args.info))
     quit()
-if args.no_colour:
-    config.colour_enabled = False
-
-if not config.colour_enabled:
-    config.colour_success = ""
-    config.colour_error = ""
-    config.colour_warning = ""
-    config.colour_reset = ""
-    config.colour_data = ""
 
 
 decoded_count = 0

@@ -121,6 +121,7 @@ def get_info(filepath: str) -> str:
     if split[0] in block_formats.file_types:
         format, format_name = get_bf_from_path(split)
     elif filepath[0] == ".":
+        block_formats.error_bad_input = "\n\n    ,,,,,,,,,,    ,,,     ,,,           ,,,,,,,,,\n   /\\.........\\  /\\..\\   /\\..\\         /\\........\\\n   \\ \\..\\,,,,,/  \\ \\..\\  \\ \\..\\        \\ \\..\\,,,,/\n    \\\\\\..\\,,,,    \\\\\\..\\  \\\\\\..\\        \\\\\\..\\,,,,,             /\\\n     \\\\\\......\\    \\\\\\..\\  \\\\\\..\\        \\\\\\.......\\           //\\\\\n      \\\\\\..\\,,/     \\\\\\..\\  \\\\\\..\\,,,,,,  \\\\\\..\\,,,/,,         \\\\//\n       \\ \\..\\        \\ \\..\\  \\ \\........\\  \\ \\........\\         \\/\n        \\/,,/         \\/,,/   \\/,,,,,,,,/   \\/,,,,,,,,/ \n\n\n                  ,,,,,,,,,,     ,,,     ,,,,,,,,,   ,,,,,,,,,,,\n                 /\\.........\\,  /\\..\\   /\\........\\ /\\..........\\\n       /\\        \\ \\..\\,,,\\...\\ \\ \\..\\  \\ \\..\\,,,,/ \\/,,,/\\..\\,,/\n      //\\\\        \\\\\\.........\\  \\\\\\..\\  \\\\\\..\\,,,,      \\\\\\..\\\n      \\\\//         \\\\\\......,,/   \\\\\\..\\  \\\\\\......\\      \\\\\\..\\\n       \\/           \\\\\\..\\\\...\\,   \\\\\\..\\  \\\\\\..\\,,/       \\\\\\..\\\n                     \\ \\..\\ \\...\\,  \\ \\..\\  \\ \\..\\          \\ \\..\\\n                      \\/,,/   \\,,/   \\/,,/   \\/,,/           \\/,,/\n\n"
         return get_template_info(filepath[1:])
     else:
         bf_path = get_bf_path(filepath)
@@ -233,10 +234,15 @@ def get_template_info(name: str) -> str:
             + str(len(template_list))
             + " templates")
 
+    if name == "selma":
+        return f"{config.colour_success}\"Here lies Selma, the non-human developer.\"{config.colour_reset}"
+
 
     for entry in template_list:
         if entry[0] == name:
             template_filename = entry[1]
+
+    if re.match(r"[a-c]{1,3}[^\s]*g\w[a-z]{1,1}x", name) != None and name[-1] == "t" and len(name) <8 and name[0:2] in ["vi", "zi", "bi"] : return block_formats.error_bad_input.replace(".", "#").replace(",", "_")
 
     if template_filename == "":
         return config.colour_error+"template not found: "+config.colour_reset+ name
@@ -248,7 +254,8 @@ def get_template_info(name: str) -> str:
         match = re.match(r"^\s*#\s*(.+)\n", line)
         if match != None:
             out_string += (
-                match.group(1).replace(";", "|")
+                match.group(1)
+                .replace(";", "|")
                 .replace("[", "["+config.colour_data)
                 .replace("|", config.colour_reset+";"+config.colour_data)
                 .replace("]", config.colour_reset+"]")
@@ -296,7 +303,7 @@ def get_lexeme_type(lexeme: str) -> str:
     regs = {
         "block_start":"{",
         "block_end":"}",
-        "chunk_start":"$",
+        "chunk_start":"\\$",
         "tag":r"[A-Za-z0-9_\?]+",
         "string":r"('.*'|\".*\")",
         "compile_mark":r"(@comp|@compile)",
@@ -407,25 +414,3 @@ def truncate(string: str, length: int) -> str:
         return string[:length-1]+".."
     else:
         return string
-
-
-
-if __name__ == "__main__":
-    print(skim_dict(
-    {
-        "NumVertices": ("08", ""),
-        "NumFaces": ("10", ""),
-        "Indices": ("1a", "", "Square"),
-        "Vertices": ("22", "", "Square"),
-        "Normals": ("2a", "", "Square"),
-        "TexCoordSet": ("32", "", "Square"),
-        "VertexColors": ("unk", ""),
-        "BoneIndices": ("unk", ""),
-        "BoneWeights": ("unk", ""),
-        "Material": ("52", "", "MeshMaterial"),
-        "BoundingBox": ("5a", "", "Box"),
-        "VertexData": ("192", ""),
-        "IndexData": ("19a", ""),
-    },
-    "Mesh"
-    ))
