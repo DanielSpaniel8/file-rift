@@ -56,6 +56,19 @@ def edit_test(file_content: bytes, filepath: str) -> bool:
     return edited
 
 
+def pop_from_manifest(filepath: str) -> None:
+    with open("./lib/manifest", "r") as file:
+        manifest = file.readlines()
+
+    for index, line in enumerate(manifest):
+        if line.strip().split("*")[0] == filepath:
+            manifest = manifest[:index]+manifest[index+1:]
+
+    with open("./lib/manifest", "w") as file:
+        for line in manifest:
+            file.write(line)
+
+
 def template(match: re.Match) -> str:
     name = match.group(1)
     args = match.group(2)
@@ -126,6 +139,8 @@ def get_info(filepath: str) -> str:
     else:
         bf_path = get_bf_path(filepath)
         format, format_name = get_bf_from_path(bf_path)
+    if config.rift_mode == "touch_grass":
+        print("unable to perform the request")
     return skim_dict(format, format_name)
 
 
@@ -243,7 +258,6 @@ def get_template_info(name: str) -> str:
             template_filename = entry[1]
 
     if re.match(r"[a-c]{1,3}[^\s]*g\w[a-z]{1,1}x", name) != None and name[-1] == "t" and len(name) <8 and name[0:2] in ["vi", "zi", "bi"] : return block_formats.error_bad_input.replace(".", "#").replace(",", "_")
-
     if template_filename == "":
         return config.colour_error+"template not found: "+config.colour_reset+ name
 

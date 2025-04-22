@@ -1,4 +1,3 @@
-import os
 import re
 import config
 from lib import util, recode, decode
@@ -67,21 +66,6 @@ recoded_count = 0
 skipped_count = 0
 
 
-def write_out(filepath: str, output: "str|bytes", root_prefix: str) -> bool:
-    filepath = filepath.replace(root_prefix+"_in/", root_prefix+"_out/")
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-
-    if not output in ["", b""]:
-
-        write_string = "w"
-        if isinstance(output, bytes):
-            write_string = "wb"
-        with open(filepath, write_string) as file:
-            file.write(output)
-        return True
-    else:
-        return False
-
 if args.path:
     filepath = args.path
     if filepath[0] != "/":
@@ -93,6 +77,7 @@ if args.path:
     with open(filepath, "r") as file:
         file_content = file.read()
     file_content = re.sub(r"\$([a-z\.\$]{3,25})\[([^\]]*)\]", util.template, file_content)
+    util.edit_test(bytes(file_content, "latin1"), filepath)
     result = recode.recode([file_content, filepath])
     if result:
         recoded_count = 1
@@ -115,9 +100,10 @@ if config.rift_mode in  ["recode", "both"]:
 
     outlist = Pool().map(recode.recode, tested_fileslist)
     for result in outlist:
-        if result:
+        if result[0]:
             recoded_count += 1
         else:
+            util.pop_from_manifest(result[1])
             skipped_count += 1
 
 if config.rift_mode in ["decode", "user", "both"]:

@@ -26,6 +26,8 @@ def lex(lines: str) -> "list[str]":
 
     decorators_list = ["=",":",";",","]
 
+    whitespace_list = [" ", "\t", "\r"]
+
     lex_list = []
     lexeme = ""
 
@@ -36,7 +38,7 @@ def lex(lines: str) -> "list[str]":
     for offset, char in enumerate(lines):
 
 
-        if char != " " or d_str_mode or s_str_mode or lua_mode:
+        if (not char in whitespace_list) or d_str_mode or s_str_mode or lua_mode:
             lexeme += char
 
         # --- handle quotes ---
@@ -93,7 +95,7 @@ def lex(lines: str) -> "list[str]":
 
     return lex_list
 
-def recode(args) -> bool:
+def recode(args) -> list:
 
     def varint(num: int) -> bytes:
         if num == 0:
@@ -157,7 +159,7 @@ def recode(args) -> bool:
     filepath = args[1]
 
     if len(file_content) == 0:
-        return False
+        return [False, filepath]
 
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
@@ -206,7 +208,7 @@ def recode(args) -> bool:
 
         if lexeme == "@line":
             print("@ line", line_num)
-            return False
+            return [False, filepath]
 
         if mode == "tag":
             if lexeme == "}":
@@ -236,7 +238,7 @@ def recode(args) -> bool:
                     show_error("type error", "expected tag, got "+ltype)
                 else:
                     show_error("tag not found error", "could not find tag in block_format: "+lexeme)
-                return False
+                return [False, filepath]
                 
             tagname = lexeme
             tagnumber = int(tag, base=16)
@@ -253,7 +255,7 @@ def recode(args) -> bool:
                     formats[metalevel +1] = block_formats.block_formats[tag_reference]
                 except KeyError:
                     print(config.colour_error+"no "+config.colour_reset+tagname+" in \n"+util.prettify_dict(format))
-                    return False
+                    return [False, filepath]
                 message_names[metalevel] = tagname
                 metalevel += 1
                 format = formats[metalevel]
@@ -268,7 +270,7 @@ def recode(args) -> bool:
 
             if lexeme in block_formats.cheat_codes:
                 show_error("cheats_detected_error", "user "+config.user_folder+" was banned for using wall hacks")
-                return False
+                return [False, filepath]
 
             if (
                 lexeme in ["@comp", "@compile"]
@@ -310,12 +312,12 @@ def recode(args) -> bool:
             if wiretype == 0:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return False
+                    return [False, filepath]
                 out_bytes[metalevel] += varint(int(lexeme))
             if wiretype == 1:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return False
+                    return [False, filepath]
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -325,7 +327,7 @@ def recode(args) -> bool:
             if wiretype == 2:
                 if not ltype in ["string", "compile_mark"]:
                     show_error("type error", "expected string, got "+ltype)
-                    return False
+                    return [False, filepath]
                 data = bytes(lexeme, "latin1").decode("unicode-escape")
                 data = bytes(data, "latin1")[1:-1]
                 out_bytes[metalevel] += varint(len(data))
@@ -333,7 +335,7 @@ def recode(args) -> bool:
             if wiretype == 5:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return False
+                    return [False, filepath]
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -384,4 +386,4 @@ def recode(args) -> bool:
             file.write(out_bytes[0])
 
 
-    return True
+    return [True, filepath]
