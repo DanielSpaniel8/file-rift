@@ -53,7 +53,10 @@ def decode(filepath: str) -> "bool":
             .replace("\t", config.style_indent)
         )
 
-    out_lines = ["# rifted with FR v"+config.version_code+"\n\n"]
+    if config.style_show_version:
+        out_lines = ["# rifted with FR v"+config.version_code+"\n\n"]
+    else:
+        out_lines = []
 
     offsets = [0] * 10
     pointers = [0] * 10

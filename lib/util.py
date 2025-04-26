@@ -141,6 +141,7 @@ def get_info(filepath: str) -> str:
         format, format_name = get_bf_from_path(bf_path)
     if config.rift_mode == "touch_grass":
         print("unable to perform the request")
+        quit()
     return skim_dict(format, format_name)
 
 

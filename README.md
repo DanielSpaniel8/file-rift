@@ -55,11 +55,11 @@ File Rift decodes files into a custom format, which looks similar to a markup la
 
 ```
 # comment
-a : 12 # integer
-b : 15.9 # float
-c : 'abc' # string
-d{ # message
-    a : 1
+A : 12 # integer
+B : 15.9 # float
+C : 'abc' # string
+D{ # message
+    A : 1
 }
 ```
 
@@ -104,17 +104,17 @@ The purpose of templates is to make writting re_in files easier by abstracting c
 Here's how a template looks:
 ```yaml
 # templates/obj.fr
-object{
-    name : '$1',
-    identifier : '$2',
-    position{
-        x_position : $3,
-        y_position : $4,
+Object{
+    TemplateName : '$1',
+    Identifier : '$2',
+    Position{
+        X : $3,
+        Y : $4,
     }
-    z_position : $5,
-    rotation : $6,
-    scale : $7,
-    hidden : 0,
+    Depth : $5,
+    Rotation : $6,
+    Scaling : $7,
+    Hidden : 0,
 }
 ```
 
@@ -127,17 +127,17 @@ $obj[statue_knight; knight1; -256; 128; 0; 0; 1]
 
 That would be the same as writing:
 ```yaml
-object{
-    name : 'statue_knight',
-    identifier : 'knight1',
-    position{
-        x_position : -256,
-        y_position : -128,
+Object{
+    TemplateName : 'statue_knight',
+    Identifier : 'knight1',
+    Position{
+        X : -256,
+        Y : -128,
     }
-    z_position : 0,
-    rotation : 0,
-    scale : 1,
-    hidden : 0,
+    Depth : 0,
+    Rotation : 0,
+    Scaling : 1,
+    Hidden : 0,
 }
 ```
 

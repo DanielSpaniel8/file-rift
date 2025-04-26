@@ -4,7 +4,7 @@ from lib import util, recode, decode
 import argparse
 from multiprocessing import Pool
 
-if not config.rift_mode in ["recode", "decode", "both", "user", "audit"]:
+if not config.rift_mode in ["recode", "decode", "both", "user", "audit"]and False:
     print(
         config.colour_error
         + "invalid rift_mode: \""
