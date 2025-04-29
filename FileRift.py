@@ -76,7 +76,9 @@ if args.path:
     config.allways_recode = True
     with open(filepath, "r") as file:
         file_content = file.read()
-    file_content = re.sub(r"\$([a-z\.\$]{3,25})\[([^\]]*)\]", util.template, file_content)
+    template_regex = r"\$([a-z\.]{3,25})\[([^\]]*)\]"
+    while re.search(template_regex, file_content) != None:
+        file_content = re.sub(template_regex, util.template, file_content)
     util.edit_test(bytes(file_content, "latin1"), filepath)
     result = recode.recode([file_content, filepath])
     if result:
@@ -91,7 +93,9 @@ if config.rift_mode in  ["recode", "both"]:
     for path in fileslist:
         with open(path, "r") as file:
             file_content = file.read()
-        file_content = re.sub(r"\$([a-z\.\$]{3,25})\[([^\]]*)\]", util.template, file_content)
+        template_regex = r"\$([a-z\.]{3,25})\[([^\]]*)\]"
+        while re.search(template_regex, file_content) != None:
+            file_content = re.sub(template_regex, util.template, file_content)
         edited = util.edit_test(bytes(file_content, "latin1"), path)
         if not edited and not config.allways_recode:
             skipped_count += 1

@@ -406,6 +406,8 @@ def prettify_dict(block_formats: dict) -> str:
 
 
 def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
+    if tag == "07":
+        return "Comment", False, ""
     for key, value in format.items():
         if value[0] == tag:
             if len(value) == 3:
@@ -415,13 +417,14 @@ def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
 
 
 def match_tagname(block_format: dict, tagname: str) -> "tuple[str, bool, str]":
+    if tagname == "Comment":
+        return "07", False, ""
     if not tagname in block_format:
         return "00", False, ""
-    else:
-        value = block_format[tagname]
-        if len(value) == 3:
-            return value[0], True, value[2]
-        return value[0], False, ""
+    value = block_format[tagname]
+    if len(value) == 3:
+        return value[0], True, value[2]
+    return value[0], False, ""
 
 
 def truncate(string: str, length: int) -> str:

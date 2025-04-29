@@ -306,6 +306,8 @@ def recode(args) -> list:
 
 
             wiretype = tagnumber %8
+            if tagnumber == 7:
+                wiretype = 2
             out_bytes[metalevel] += varint(tagnumber)
 
             ltype = util.get_lexeme_type(lexeme)

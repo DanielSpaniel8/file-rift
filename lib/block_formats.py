@@ -542,19 +542,19 @@ block_formats = {
         "BoundingBox": ("32", "", "Rectangle"),
     },
 
-    "Font_Glyph": {
-        "CharCode": ("08", ""),
-        "DrawBounds": ("12", "", "Rectangle"),
-        "HorizAdvance": ("18", ""),
-        "TextureBounds": ("22", "", "Rectangle"),
-    },
-
     "Texture": {
         "Name": ("0a", ""),
         "PixelFormat": ("10", ""),
         "Subtexture": ("1a", "", "Texture_Subtexture"),
         "ImageType": ("20", ""),
         "ConversionInfo": ("2a", "", "Texture_ConversionInfo"),
+    },
+
+    "Font_Glyph": {
+        "CharCode": ("08", ""),
+        "DrawBounds": ("12", "", "Rectangle"),
+        "HorizAdvance": ("18", ""),
+        "TextureBounds": ("22", "", "Rectangle"),
     },
 
     "Texture_Subtexture": {

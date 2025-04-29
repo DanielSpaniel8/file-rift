@@ -88,6 +88,17 @@ def decode(filepath: str) -> "bool":
         format = formats[metalevel]
 
         tagbyte = varint()
+        if tagbyte == 7:
+            pointer = varint()
+            pointers[metalevel] = pointer
+            content = str(inbytes[sum(offsets) : sum(offsets) +  pointer])[1:]
+            out_lines.append(
+                indentation
+                + "Comment" + config.style_after_tag
+                +  content + config.style_after_record
+                + "\n"
+            )
+            offsets[metalevel] += pointer
         taghex = hex(tagbyte)[2:].zfill(2)
 
         wiretype = ""
@@ -96,6 +107,7 @@ def decode(filepath: str) -> "bool":
             case 1: wiretype = "i64"
             case 2: wiretype = "len"
             case 5: wiretype = "i32"
+            case 7: wiretype = "comment"
         
         tagname, tag_is_reference, tag_reference = util.match_tag(format, taghex)
         if tagname == "No Match":

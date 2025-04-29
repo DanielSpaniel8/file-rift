@@ -39,4 +39,4 @@ colour_warning = "\033[1;33m"  # default : "\033[1;33m"
 colour_data    = "\033[1;34m"  # default : "\033[1;34m"
 colour_reset   = "\033[0m"  # default : "\033[0m"
 
-version_code = "5.7.5"
+version_code = "5.7.6"
