@@ -95,7 +95,12 @@ def lex(lines: str) -> "list[str]":
 
     return lex_list
 
-def recode(args) -> list:
+def recode(args: list) -> list:
+    """takes a list with file content and path
+    returns a list with:
+    bool for if recode was successful
+    string for the filepath
+    bool for if there was an error"""
 
     def varint(num: int) -> bytes:
         if num == 0:
@@ -159,12 +164,14 @@ def recode(args) -> list:
     filepath = args[1]
 
     if len(file_content) == 0:
-        return [False, filepath]
+        return [False, filepath, False]
 
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
     if filetype_match:
         filetype = filetype_match.group(1)
+    else:
+        filetype = "fr"
 
     lex_list = lex(file_content)
 
@@ -194,8 +201,6 @@ def recode(args) -> list:
             if lexeme == "<newline>":
                 line_num += 1
                 mode = last_mode
-            elif lexeme == "IuseSCL+btw":
-                show_error("too_cool_error", "User is an over-sized W")
             continue
         if lexeme in comments_list:
             if lexeme in comments_list:
@@ -208,7 +213,7 @@ def recode(args) -> list:
 
         if lexeme == "@line":
             print("@ line", line_num)
-            return [False, filepath]
+            return [False, filepath, False]
 
         if mode == "tag":
             if lexeme == "}":
@@ -238,7 +243,7 @@ def recode(args) -> list:
                     show_error("type error", "expected tag, got "+ltype)
                 else:
                     show_error("tag not found error", "could not find tag in block_format: "+lexeme)
-                return [False, filepath]
+                return [False, filepath, True]
                 
             tagname = lexeme
             tagnumber = int(tag, base=16)
@@ -254,8 +259,12 @@ def recode(args) -> list:
                 try:
                     formats[metalevel +1] = block_formats.block_formats[tag_reference]
                 except KeyError:
-                    print(config.colour_error+"no "+config.colour_reset+tagname+" in \n"+util.prettify_dict(format))
-                    return [False, filepath]
+                    print(
+                        config.colour_error
+                        + "no " + config.colour_reset + tagname
+                        + " in \n" + util.prettify_dict(format)
+                    )
+                    return [False, filepath, True]
                 message_names[metalevel] = tagname
                 metalevel += 1
                 format = formats[metalevel]
@@ -267,10 +276,6 @@ def recode(args) -> list:
                 last_mode = mode
                 mode = "chunk"
                 continue
-
-            if lexeme in block_formats.cheat_codes:
-                show_error("cheats_detected_error", "user "+config.user_folder+" was banned for using wall hacks")
-                return [False, filepath]
 
             if (
                 lexeme in ["@comp", "@compile"]
@@ -314,12 +319,12 @@ def recode(args) -> list:
             if wiretype == 0:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath]
+                    return [False, filepath, True]
                 out_bytes[metalevel] += varint(int(lexeme))
             if wiretype == 1:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath]
+                    return [False, filepath, True]
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -329,7 +334,7 @@ def recode(args) -> list:
             if wiretype == 2:
                 if not ltype in ["string", "compile_mark"]:
                     show_error("type error", "expected string, got "+ltype)
-                    return [False, filepath]
+                    return [False, filepath, True]
                 data = bytes(lexeme, "latin1").decode("unicode-escape")
                 data = bytes(data, "latin1")[1:-1]
                 out_bytes[metalevel] += varint(len(data))
@@ -337,7 +342,7 @@ def recode(args) -> list:
             if wiretype == 5:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath]
+                    return [False, filepath, True]
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
                     data = float(data)* (math.pi/180)
@@ -358,13 +363,15 @@ def recode(args) -> list:
             args = "./lib/luac -p "+chunk_cache_path
             luac_out = subprocess.getoutput(args)
             if luac_out != "":
-                matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
+                matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
                 if not matches == None:
                     chunk_line = int(matches.group(1))
                     chunk_err = matches.group(2)
                     show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
                     mode = "tag"
                     continue
+                else:
+                    print(luac_out)
 
             out_bytes[metalevel] += varint(tagnumber)
             out_bytes[metalevel] += varint(len(lexeme))
@@ -372,6 +379,10 @@ def recode(args) -> list:
             last_mode = mode
             mode = "tag"
 
+
+    if filepath == "__stdin__":
+        print(config.colour_success+"recoded: "+config.colour_reset+"stdin")
+        return [True, "stdin", False]
 
     if filepath[0] != "/":
         if filepath[0] != ".":
@@ -383,9 +394,10 @@ def recode(args) -> list:
 
     if len(out_bytes[0]) != 0:
         print(config.colour_success+"recoded: "+config.colour_reset+filepath)
-        os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
-        with open(outfilepath, "wb") as file:
-            file.write(out_bytes[0])
+        if filepath != "stdin":
+            os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
+            with open(outfilepath, "wb") as file:
+                file.write(out_bytes[0])
 
 
-    return [True, filepath]
+    return [True, filepath, False]

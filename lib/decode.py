@@ -4,7 +4,7 @@ import struct
 from lib import block_formats, util
 import config
 
-def decode(filepath: str) -> "bool":
+def decode(filepath: str) -> "tuple[bool, bool]":
 
 
     def varint() -> int:
@@ -68,19 +68,24 @@ def decode(filepath: str) -> "bool":
 
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
-    if not filetype_match:
-        print(config.colour_error+"file has no extension: "+config.colour_reset+filepath)
-        return False
-    else:
+    if filetype_match:
         filetype = filetype_match.group(1)
+    else:
+        filetype = "fr"
     
+    if filepath[:9] == "__stdin__":
+        with open("./lib/temp/stdin.fr", "rb") as file:
+            inbytes = file.read()
+        if len(filepath) > 9:
+            filetype = filepath[9:]
+    else:
+        with open(filepath, "rb") as file:
+            inbytes = file.read()
+
     if not filetype in block_formats.file_types:
         print(config.colour_error+"unrecognized file extension: "+config.colour_reset, filetype)
-        return False
+        return False, True
     formats[0] = block_formats.block_formats[filetype]
-
-    with open(filepath, "rb") as file:
-        inbytes = file.read()
 
 
     while sum(offsets) < len(inbytes):
@@ -119,7 +124,7 @@ def decode(filepath: str) -> "bool":
                 + filepath + ":" + str(sum(offsets))
                 + "\n"
             )
-            return False
+            return False, True
 
         if wiretype == "varint":
             content = str(varint())
@@ -207,6 +212,11 @@ def decode(filepath: str) -> "bool":
     for line in out_lines:
         output += line 
 
+    if filepath[:9] == "__stdin__":
+        print(config.colour_success+"decoded: "+config.colour_reset+"stdin")
+        print(output)
+        return True, False
+
     outfilepath = filepath.replace("./de_in", "./de_out")
     os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
     with open(outfilepath, "w") as file:
@@ -214,4 +224,4 @@ def decode(filepath: str) -> "bool":
 
     print(config.colour_success+"decoded: "+config.colour_reset+filepath[len("./de_in/"):])
 
-    return True
+    return True, False

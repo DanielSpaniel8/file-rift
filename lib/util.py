@@ -260,7 +260,8 @@ def get_template_info(name: str) -> str:
 
     if re.match(r"[a-c]{1,3}[^\s]*g\w[a-z]{1,1}x", name) != None and name[-1] == "t" and len(name) <8 and name[0:2] in ["vi", "zi", "bi"] : return block_formats.error_bad_input.replace(".", "#").replace(",", "_")
     if template_filename == "":
-        return config.colour_error+"template not found: "+config.colour_reset+ name
+        print(config.colour_error+"template not found: "+config.colour_reset+ name)
+        return ""
 
     with open(template_filename, "r") as file:
         lines = file.readlines()
@@ -280,7 +281,8 @@ def get_template_info(name: str) -> str:
             break
 
     if out_string == "":
-        return "no info for $"+name
+        print("no info for $"+name)
+        return ""
     else:
         return out_string
 

@@ -1,4 +1,5 @@
 import re
+import sys
 import config
 from lib import util, recode, decode
 import argparse
@@ -31,6 +32,9 @@ parser.add_argument("-a", "--audit",  action="store_true", help="ask before reco
 parser.add_argument("-i", "--info",   type=str,            help="ask before recoding each directory in re_out")
 parser.add_argument("-p", "--path",   type=str,            help="recode a file for a given filepath")
 parser.add_argument("-n", "--no-colour", action="store_true", help="disable output colouring")
+parser.add_argument("-s", "--stdin-recode",  type=str,     help="get recode input from stdin")
+parser.add_argument("-S", "--stdin-decode",  type=str,     help="get decode input from stdin")
+parser.add_argument("-t", "--file-type",     type=str,     help="set filetype for block_formats")
 
 args = parser.parse_args()
 
@@ -57,10 +61,13 @@ if args.force:
     config.rift_mode = "recode"
     config.allways_recode = True
 if args.info:
-    print(util.get_info(args.info))
+    info = util.get_info(args.info)
+    if info == "":
+        sys.exit(1)
+    else:
+        print(info)
     quit()
-
-
+exit_code = 0
 decoded_count = 0
 recoded_count = 0
 skipped_count = 0
@@ -74,8 +81,12 @@ if args.path:
         else:
             filepath = "./"+filepath
     config.allways_recode = True
-    with open(filepath, "r") as file:
-        file_content = file.read()
+    try:
+        with open(filepath, "r") as file:
+            file_content = file.read()
+    except FileNotFoundError:
+        print("file not found: "+filepath)
+        sys.exit(1)
     template_regex = r"\$([a-z\.]{3,25})\[([^\]]*)\]"
     while re.search(template_regex, file_content) != None:
         file_content = re.sub(template_regex, util.template, file_content)
@@ -85,6 +96,35 @@ if args.path:
         recoded_count = 1
     else:
         skipped_count = 1
+    config.rift_mode = "pass"
+
+if args.stdin_recode:
+    output = recode.recode([args.stdin_recode, "__stdin__"])
+    if output[0]:
+        recoded_count = 1
+    else:
+        skipped_count = 1
+    if output[2]:
+        exit_code = 1
+    config.rift_mode = "pass"
+
+if args.stdin_decode:
+    with open("./lib/temp/stdin.fr", "wb") as file:
+        decoded = (
+            bytes(args.stdin_decode, "latin1")
+            .decode("unicode_escape")
+        )
+        file.write(bytes(decoded, "latin1"))
+    filepath = "__stdin__"
+    if args.file_type:
+        filepath += args.file_type
+    output = decode.decode(filepath)
+    if output[0]:
+        decoded_count = 1
+    else:
+        skipped_count = 1
+    if output[1]:
+        exit_code = 1
     config.rift_mode = "pass"
 
 if config.rift_mode in  ["recode", "both"]:
@@ -109,17 +149,21 @@ if config.rift_mode in  ["recode", "both"]:
         else:
             util.pop_from_manifest(result[1])
             skipped_count += 1
+        if result[2]:
+            exit_code = 1
 
 if config.rift_mode in ["decode", "user", "both"]:
     if config.rift_mode != "decode": root_path = "./de_in/"+config.user_folder+"/"
     else: root_path = "./de_in/"
     fileslist = util.get_files(root_path)
     outlist = Pool().map(decode.decode, fileslist)
-    for result in outlist:
+    for result, error in outlist:
         if result:
             decoded_count += 1
         else:
             skipped_count += 1
+        if error:
+            exit_code = 1
 
 if config.ask_for_info:
     info_path = input("info path: ")

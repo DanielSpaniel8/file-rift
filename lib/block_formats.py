@@ -266,7 +266,7 @@ block_formats = {
         #     "Type_MIN": 1
         #     "Type_MAX": 5
         #     "Type_ARRAYSIZE": 6
-        "Type": ("08", ""),
+        "Type": ("08", "1:CONSUMABLE 2:WEAPON 3:ARMOR 5:QUEST"),
         "Name": ("12", ""),
         "Title": ("1a", ""),
         "ShortDescription": ("22", ""),
@@ -313,7 +313,7 @@ block_formats = {
         #     "Type_MIN": 0
         #     "Type_MAX": 4
         #     "Type_ARRAYSIZE": 5
-        "Type": ("08", ""),
+        "Type": ("08", "1:QUESTGET 2:QUEST 3:SPELL 4:KEY"),
         "Name": ("12", ""),
         "LevelName": ("1a", ""),
         "ObjectIdentifier": ("22", ""),
@@ -484,7 +484,7 @@ block_formats = {
         "Position": ("unk", ""),
         "LevelName": ("12", ""),
         "Portal": ("1a", "", "MapNode_Portal"),
-        "Type": ("20", ""),
+        "Type": ("20", "0:DEFAULT 1:TOWN 2:WAYPOINT 3:BOSS"),
         "Hidden": ("28", ""),
         "ExperienceLevel": ("30", ""),
         "Music": ("3a", ""),
@@ -513,8 +513,8 @@ block_formats = {
         # "PassDirection_MAX": 2
         # "PassDirection_ARRAYSIZE": 3
         "DestinationName": ("0a", ""),
-        "Direction": ("10", ""),
-        "PassDirection": ("18", ""),
+        "Direction": ("10", "1:E 2:NE 3:N 4:NW 5:W 6:SW 7:S 8:SE"),
+        "PassDirection": ("18", "1:E 2:NE 3:N 4:NW 5:W 6:SW 7:S 8:SE"),
         "IgnoreInNodePositioning": ("20", ""),
     },
 
@@ -820,7 +820,7 @@ block_formats = {
         "SurfaceTextureMappingId": ("20", ""),
         "RandomSeed": ("28", ""),
         "HorizNoise": ("35", ""),
-        "MeshType": ("38", ""),
+        "MeshType": ("38", "0:PLAIN 1:ROUNDED_HAT"),
         "SurfaceWidth": ("45", ""),
         "HatHeight": ("4d", ""),
         "HatWidthOffset1": ("55", ""),
@@ -846,12 +846,12 @@ block_formats = {
     "CollisionShapeComponent": {
         # "SPECIAL_TYPE_NONE": 0
         #     "SPECIAL_TYPE_PICKUP": 1
-        #     "SPECIAL_TYPE_PUSHABLE": 7
-        #     "SPECIAL_TYPE_USE": 4
         #     "SPECIAL_TYPE_PORTAL": 2
         #     "SPECIAL_TYPE_COLLECTABLE": 3
+        #     "SPECIAL_TYPE_USE": 4
         #     "SPECIAL_TYPE_BLOCKS_DAMAGE": 5
         #     "SPECIAL_TYPE_GRABBABLE": 6
+        #     "SPECIAL_TYPE_PUSHABLE": 7
         #     "SpecialType_MIN": 0
         #     "SpecialType_MAX": 7
         #     "SpecialType_ARRAYSIZE": 8
@@ -861,7 +861,7 @@ block_formats = {
         "InflictsDamage": ("28", ""),
         "MinDepth": ("35", ""),
         "MaxDepth": ("3d", ""),
-        "SpecialType": ("40", ""),
+        "SpecialType": ("40", "0:NONE 1:PICKUP 2:PORTAL 3:COLLECTABLE\n4:USE 5:BLOCKS_DAMAGE 6:GRABBABLE 7:PUSHABLE"),
         "OnCollide": ("4a", "", "Program"),
         "OnCollisionEnd": ("52", "", "Program"),
         "Enabled": ("58", ""),
@@ -887,7 +887,7 @@ block_formats = {
         #     "Type_MAX": 1
         #     "Type_ARRAYSIZE": 2
         "MaxHealth": ("08", ""),
-        "HEALTHTYPE": ("10", ""),
+        "HEALTHTYPE": ("10", "0:ENEMY 1:FRIENDLY"),
         "BarOffset": ("1a", "", "Vector3"),
     },
     "BoneControlledCollisionShapeComponent": {
@@ -910,7 +910,7 @@ block_formats = {
         #     "Type_MIN": 0
         #     "Type_MAX": 4
         #     "Type_ARRAYSIZE": 5
-        "Type": ("08", ""),
+        "Type": ("08", "0:UNKNOWN 1:AMBIENT 2:DIRECTIONAL 3:POINT 4:OVERLAY"),
         "Intensity": ("15", ""),
         "Color": ("1a", "", "FloatColor"),
         "LinearAttenuation": ("25", ""),
@@ -980,7 +980,7 @@ block_formats = {
         #     "Mode_MAX": 3
         #     "Mode_ARRAYSIZE": 4
         "ElevationShapeId": ("08", ""),
-        "Mode": ("10", ""),
+        "Mode": ("10", "1:INACTIVE 2:WAIT 3:CONTINUOUS"),
     },
     "PressureTriggerComponent": {
         "MaxHeightOffset": ("0d", ""),
@@ -998,8 +998,6 @@ block_formats = {
     "ProgramComponent": {
         # "TRIGGER_NONE": 0
         #     "TRIGGER_ACTIVATE": 1
-        #     "TRIGGER_DEACTIVATE": 9
-        #     "TRIGGER_LOAD": 10
         #     "TRIGGER_USE": 2
         #     "TRIGGER_POPUP_OK": 3
         #     "TRIGGER_POPUP_CANCEL": 4
@@ -1007,13 +1005,15 @@ block_formats = {
         #     "TRIGGER_RECEIVE_DAMAGE": 6
         #     "TRIGGER_BLOCK_DAMAGE": 7
         #     "TRIGGER_INFLICT_DAMAGE": 8
+        #     "TRIGGER_DEACTIVATE": 9
+        #     "TRIGGER_LOAD": 10
         #     "Trigger_MIN": 0
         #     "Trigger_MAX": 10
         #     "Trigger_ARRAYSIZE": 11
         "ExecuteOnce": ("08", ""),
         "Program": ("12", "", "Program"),
         "Enabled": ("18", ""),
-        "Trigger": ("20", ""),
+        "Trigger": ("20", "0:NONE 1:ACTIVATE 2:USE 3:OK\n4:CANCEL 5:DESTROY 6:RECEIVE_DAMAGE 7:BLOCK_DAMAGE\n8:INFLICT_DAMAGE 9:DEACTIVATE 10:LOAD"),
     },
     "MonsterEntityComponent": {
         "OnKill": ("0a", "", "Program"),
@@ -1052,7 +1052,7 @@ block_formats = {
         "DefaultMoveSpeed": ("2d", ""),
         "DefaultAcceleration": ("35", ""),
         "TargetingDistance": ("3d", ""),
-        "MovementBehavior": ("40", ""),
+        "MovementBehavior": ("40", "1:NONE 2:ROAM 3:FOLLOW 4:FIGHT"),
     },
     "EntityActionComponent": {
         "OnActivate": ("0a", "", "Program"),
@@ -1085,7 +1085,7 @@ block_formats = {
         #     "Type_MIN": 0
         #     "Type_MAX": 5
         #     "Type_ARRAYSIZE": 6
-        "Type": ("08", ""),
+        "Type": ("08", "0:NONE 1:BLAST 2:SPARK 3:TRAIL\n4:WHOOSH 5:FOUNTAIN"),
         "BaseColor": ("12", "", "FloatColor"),
         "Parameter": ("1d", ""),
         "HueVariance": ("25", ""),
@@ -1263,7 +1263,7 @@ block_formats = {
         #     "Type_MIN": 0
         #     "Type_MAX": 5
         #     "Type_ARRAYSIZE": 6
-        "Type": ("08", ""),
+        "Type": ("08", "0:UNKNOWN 1:HEALTH_POTION 2:MANA_POTION 3:MAGIC_POWER\n4:COIN 5:EXPERIENCE"),
         "Value": ("10", ""),
         "OnCollect": ("1a", "", "Program"),
         "Identifier": ("22", ""),
@@ -1354,8 +1354,6 @@ block_formats = {
 }
 
 error_bad_input = ""
-
-cheat_codes = ["@enablecheatpassu", "@showdebugpassu", "@test_consume1337"]
 
 branches = ["Main", "Master", "Debug", "Dev"]
 
