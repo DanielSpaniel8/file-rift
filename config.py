@@ -2,13 +2,16 @@ rift_mode = "recode"  # decode, recode, both, user, pass
 # if True, will recode files even if the content has not changed since the last recode
 allways_recode = False
 
+project_name = "default"
+
 # if True, will prompt to get Tag Info or Template Info
 # if you want to get the prompt without waiting for recoding,
 #   set rift_mode to "pass"
 ask_for_info = False
 
-# should rift compile Bytes chunks only at the @compile keyword, or allways?
-compile_mode = "keyword"  # keyword, all
+# should rift compile Bytes chunks only at the @compile keyword, or allways
+# or should it automatically add a Bytes chunk for you?
+compile_mode = "keyword"  # keyword, all, auto
 
 # the folder for your custom de_in files
 user_folder = "user"  # default : "user"
@@ -29,6 +32,8 @@ style_indent = "    "
 style_show_field_name = True
 # if True, will add a comment at the start of the file with the FileRift version_code
 style_show_version = False
+# if True, will add lua block comments around everything that isn't a lua chunk
+style_lsp_prep = False
 
 # if False, colouring will not be used in output
 colour_enabled = True
@@ -39,4 +44,6 @@ colour_warning = "\033[1;33m"  # default : "\033[1;33m"
 colour_data    = "\033[1;34m"  # default : "\033[1;34m"
 colour_reset   = "\033[0m"  # default : "\033[0m"
 
-version_code = "5.7.7"
+logging = "none"  # none, all
+
+version_code = "5.8.1"

@@ -4,12 +4,21 @@ lib/temp/*
 !lib/temp/.gitkeep
 lib/chunk_cache/*
 !lib/chunk_cache/.gitkeep
+log.txt
 
 source/*
 !source/example.lua
 $fr/*
+$stuff/*
+res.txt
+Swordigo.lua
+.luarc.jsonc
 templates
 !templates/default
+
+projects/*
+!projects/default.frproject
+!projects/.gitkeep
 
 de_in/nathanael/*
 de_out/nathanael/*

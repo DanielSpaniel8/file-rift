@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import struct
 from lib import block_formats, util
@@ -53,10 +54,11 @@ def decode(filepath: str) -> "tuple[bool, bool]":
             .replace("\t", config.style_indent)
         )
 
+    out_lines = []
+    if config.style_lsp_prep:
+        out_lines.append("--[[\n")
     if config.style_show_version:
-        out_lines = ["# rifted with FR v"+config.version_code+"\n\n"]
-    else:
-        out_lines = []
+        out_lines.append("# rifted with FR v"+config.version_code+"\n\n")
 
     offsets = [0] * 10
     pointers = [0] * 10
@@ -76,6 +78,8 @@ def decode(filepath: str) -> "tuple[bool, bool]":
     if filepath[:9] == "__stdin__":
         with open("./lib/temp/stdin.fr", "rb") as file:
             inbytes = file.read()
+        if inbytes[-1] == 10:
+            inbytes = inbytes[:-1]
         if len(filepath) > 9:
             filetype = filepath[9:]
     else:
@@ -84,6 +88,7 @@ def decode(filepath: str) -> "tuple[bool, bool]":
 
     if not filetype in block_formats.file_types:
         print(config.colour_error+"unrecognized file extension: "+config.colour_reset, filetype)
+        util.log_append(filepath+": unrecognized file extension: "+filetype)
         return False, True
     formats[0] = block_formats.block_formats[filetype]
 
@@ -123,6 +128,15 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                 + util.prettify_dict(format)
                 + filepath + ":" + str(sum(offsets))
                 + "\n"
+                + str(inbytes[(sum(offsets)-10):(sum(offsets)+10)])[2:-1]
+            )
+            util.log_append(
+                filepath + ":" + str(sum(offsets)) + ":"
+                + "\n"
+                + "no match for tag "
+                + taghex + "\n"
+                + util.prettify_dict(format)
+                + str(inbytes)[2:-1] + "\n"
             )
             return False, True
 
@@ -166,13 +180,24 @@ def decode(filepath: str) -> "tuple[bool, bool]":
             else:
                 if tagname in block_formats.multiline_strs:
                     content = chunk()
-                    out_lines.append(
-                        indentation
-                        + tagname + config.style_before_chunk
-                        + "\n"
-                        + content
-                        + "\n$end\n"
-                    )
+                    if config.style_lsp_prep:
+                        out_lines.append(
+                            indentation
+                            + tagname + config.style_before_chunk
+                            + "\n"
+                            + "--]]\n"
+                            + content
+                            + "\n--[["
+                            + "\n$end\n"
+                        )
+                    else:
+                        out_lines.append(
+                            indentation
+                            + tagname + config.style_before_chunk
+                            + "\n"
+                            + content
+                            + "\n$end\n"
+                        )
                 else:
                     content = str(inbytes[sum(offsets) : sum(offsets) +  pointer])[1:]
                     out_lines.append(
@@ -208,14 +233,16 @@ def decode(filepath: str) -> "tuple[bool, bool]":
             offsets[metalevel] += offsets[metalevel +1]
             offsets[metalevel +1] = 0
 
+    if config.style_lsp_prep:
+        out_lines.append("--]]")
+        
     output = ""
     for line in out_lines:
         output += line 
 
     if filepath[:9] == "__stdin__":
-        print(config.colour_success+"decoded: "+config.colour_reset+"stdin")
-        print(output)
-        return True, False
+        sys.stdout.write(output)
+        sys.exit(0)
 
     outfilepath = filepath.replace("./de_in", "./de_out")
     os.makedirs(os.path.dirname(outfilepath), exist_ok=True)

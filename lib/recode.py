@@ -1,4 +1,5 @@
 import os
+import sys
 import re
 import math
 import struct
@@ -156,6 +157,18 @@ def recode(args: list) -> list:
             util.skim_dict(formats[metalevel], message_names[metalevel-1])
         )
 
+        if config.logging == "all":
+            log_err_out = err_out
+            for i in [
+                config.colour_data,
+                config.colour_success,
+                config.colour_warning,
+                config.colour_error,
+                config.colour_reset
+            ]:
+                log_err_out = log_err_out.replace(i, "")
+            util.log_append(log_err_out)
+
         print(err_out)
 
         return
@@ -236,7 +249,7 @@ def recode(args: list) -> list:
                 mode = "tag"
                 continue
 
-            ltype = util.get_lexeme_type(lexeme)
+            ltype = util.lexeme_type(lexeme)
             tag, _, tag_reference = util.match_tagname(format, lexeme)
             if tag == "00":
                 if ltype != "tag":
@@ -286,6 +299,7 @@ def recode(args: list) -> list:
                 tagname in block_formats.compile_tags
                 )
             ):
+                if config.compile_mode == "auto": continue
                 chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
                 args = "./lib/luac -s -o "+chunk_cache_path+"%out "+chunk_cache_path
                 luac_out = subprocess.getoutput(args)
@@ -315,7 +329,7 @@ def recode(args: list) -> list:
                 wiretype = 2
             out_bytes[metalevel] += varint(tagnumber)
 
-            ltype = util.get_lexeme_type(lexeme)
+            ltype = util.lexeme_type(lexeme)
             if wiretype == 0:
                 if ltype != "number":
                     show_error("type error", "expected number, got "+ltype)
@@ -379,10 +393,33 @@ def recode(args: list) -> list:
             last_mode = mode
             mode = "tag"
 
+            if config.compile_mode == "auto":
+                chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
+                args = "./lib/luac -s -o "+chunk_cache_path+"%out "+chunk_cache_path
+                luac_out = subprocess.getoutput(args)
+
+                if luac_out != "":
+                    matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
+                    if not matches == None:
+                        chunk_line = int(matches.group(1))
+                        chunk_err = matches.group(2)
+                        show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
+                        mode = "tag"
+                        continue
+
+                with open(chunk_cache_path+"%out", "rb") as file:
+                    chunk_content = file.read()
+                out_bytes[metalevel] += b"\x12"
+                out_bytes[metalevel] += varint(len(chunk_content))
+                out_bytes[metalevel] += chunk_content
+                last_mode = mode
+                mode = "tag"
+                continue
+
 
     if filepath == "__stdin__":
-        print(config.colour_success+"recoded: "+config.colour_reset+"stdin")
-        return [True, "stdin", False]
+        sys.stdout.buffer.write(out_bytes[0])
+        sys.exit(0)
 
     if filepath[0] != "/":
         if filepath[0] != ".":
