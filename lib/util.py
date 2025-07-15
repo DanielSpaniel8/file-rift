@@ -69,6 +69,27 @@ def pop_from_manifest(filepath: str) -> None:
             file.write(line)
 
 
+def log_clear():
+    with open("./log.txt", "w") as file:
+        file.write("")
+
+
+def log_append(message: str):
+    content = ""
+    try:
+        with open("./log.txt", "r") as file:
+            content = file.read()
+    except FileNotFoundError:
+        log_clear()
+        log_append(message)
+    with open("./log.txt", "w") as file:
+        file.write(
+            content
+            + "\n"
+            + message
+        )
+
+
 def template(match: re.Match) -> str:
     name = match.group(1)
     args = match.group(2)
@@ -287,15 +308,28 @@ def get_template_info(name: str) -> str:
         return out_string
 
 
-def get_files (root: str) -> "list[str]":
+def path_repair(path:str, root:str=".") -> str:
+    """ensure paths exists and are absolute
+    will test relative to root if it is supplied"""
+    if os.path.isabs(path) and os.path.exists(path):
+        return path
+    if not os.path.exists(path) and os.path.exists(os.path.join(root, path)):
+        return os.path.abspath(os.path.join(root, path))
+    if os.path.exists(path):
+        return os.path.abspath(path)
+    return ""
+
+
+def get_files (root: str, pattern:str=".*", ignore_type:bool=False) -> "list[str]":
     """recursively search root and return a list of files"""
     file_list = []
     for root, _, files in os.walk(root):
         for file_name in files:
             full_path = os.path.join(root, file_name)
-            if not file_name.split(".")[-1] in block_formats.file_types:
+            if not file_name.split(".")[-1] in block_formats.file_types and not ignore_type:
                 continue
-            file_list.append(full_path)
+            if re.fullmatch(pattern, full_path) != None:
+                file_list.append(full_path)
 
     return file_list
 
@@ -315,7 +349,8 @@ def get_templates() -> "list[list[str]]":
     return template_list
 
 
-def get_lexeme_type(lexeme: str) -> str:
+def lexeme_type(lexeme: str) -> str:
+    """block_start, block_end, chunk_start, tag, string, compile_mark, number"""
 
     regs = {
         "block_start":"{",
@@ -404,7 +439,6 @@ def prettify_dict(block_formats: dict) -> str:
         )
     out_str += "}\n"
     return out_str
-
 
 
 def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":

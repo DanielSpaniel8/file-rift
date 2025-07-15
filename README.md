@@ -25,26 +25,41 @@ python3 FileRift.py
 To change the rift mode, open config.py in an editor and change the value of the string `rift_mode`. Valid options are `"decode"`, `"recode"`, `"both"` and `"user"`. `"user"` mode is the same as decode, but it only searches the `/de_in/user` folder.  
 All files in `/de_in` are used as input files for the decoder. The folders `all`, `scene` and `scl` are intended for the original game files. Any folders you make will be scanned when rifting, and all output files will be placed in `/de_out`.  
 All files in `/re_in` are used as input files for the recoder. Any folders you make will be scanned when rifting, and all output files will be placed in `/re_out`.  
+You can also recode and decode from stdin using the `--recode-stdin` and `--decode-stdin` flags respectively. To select a filetype for use with stdin, use the `-t` flag followed any filetype present in `block_formats.filetypes`.
 
 To get a list of command line flags, use `python3 FileRift.py --help`. Example output:
 
 ```bash
-usage: FileRift [-h] [-r] [-d] [-u] [-b] [-f] [-a] [-i INFO] [-p PATH] [-n]
+usage: FileRift [-h] [-r] [-d] [-u] [--both] [-f] [-a] [-b] [-i INFO] [-p PATH] [-n] [-t FILE_TYPE] [--recode-stdin] [--decode-stdin]
 
 options:
   -h, --help            show this help message and exit
-  -r, --recode          Run in recode mode
-  -d, --decode          Run in decode mode
-  -u, --user            Decode file in /de_in/user, unless otherwise specified
-  -b, --both            Run in decode then recode mode
-  -f, --force           Run in recode mode with allways_recode turned on
-  -a, --audit           Ask before recoding each directory in re_out
-  -i INFO, --info INFO  Ask before recoding each directory in re_out
-  -p PATH, --path PATH  Recode a file for a given filepath
-  -n, --no-colour       Disable output colouring
+  -r, --recode          run in recode mode
+  -d, --decode          run in decode mode
+  -u, --user            decode file in /de_in/user, unless otherwise specified
+  --both                run in decode then recode mode
+  -f, --force           run in recode mode with allways_recode turned on
+  -a, --audit           ask before recoding each directory in re_out
+  -b, --build           build an apk from a project file
+  -i INFO, --info INFO  ask before recoding each directory in re_out
+  -p PATH, --path PATH  recode a file for a given filepath
+  -n, --no-colour       disable output colouring
+  -t FILE_TYPE, --file-type FILE_TYPE
+                        set filetype for block_formats
+  --recode-stdin        recode from stdin
+  --decode-stdin        decode from stdin
 ```
 
 When recoding, Rift will check the contents of every file against a checksum stored in `lib/.manifest`. If the checksum matches, the file will be skipped, saving a lot of time when recoding. To turn off this behaviour, use the `--force` flag, or set `allways_recode` to True in `config.py`.
+
+## Building apks
+
+FileRift can build and sign an apk for you, adding and/or recoding the required files, then optionally install it. Trigger this functionality by setting rift_mode to "build" in `config.py`, or by using the `--build` flag.
+Start by making a `.frproject` file in the `projects` folder. This file defines what apk to use, which files to add and recode and the command to execute after signing. You can look at `projects/example.frproject` to see how the syntax looks. To select a project, change set `project_name` in `config.py` to the name of the project file, without the file extension. So to select `projects/hello.frproject`, set to to "hello". You can also select the project by using the `--build_project` flag followed by the name:
+```
+python3 FileRift.py --build_project hello
+```
+If you trigger building by using the `-b` or `--build` flags, you will by prompted for the project name.
 
 ## Configuration
 
