@@ -3,12 +3,32 @@ import sys
 import re
 import time
 import config
-from lib import util, recode, decode, build
+from lib import util, recode, decode, build, block_formats
 import argparse
 from multiprocessing import Pool, freeze_support
 
 filerift_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(filerift_path)
+
+def build_block_formats(bf:dict, tag:str, docstring:str, classname:str) -> dict:
+    d = {
+        "tag":tag,
+        "docstring":docstring,
+        "classname":classname,
+    }
+    for k, v in bf.items():
+        if len(v) == 2:
+            d[k] = (v[0], v[1])
+        if len(v) == 3:
+            d[k] = build_block_formats(
+                block_formats.block_formats[v[2]],
+                v[0],
+                v[1],
+                v[2],
+            )
+    return d
+
+print(str(build_block_formats(block_formats.block_formats["fnt"], "", "", "Font")))
 
 main = False
 if __name__ == "__main__":

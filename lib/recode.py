@@ -18,11 +18,18 @@ def lex(lines: str) -> "list[str]":
         ";",
         ",",
         "#",
+        "--",
+        "//",
         "{",
         "}",
         '"',
         "'",
         "$",
+    ]
+
+    two_ops = [
+        "--",
+        "//",
     ]
 
     decorators_list = ["=",":",";",","]
@@ -85,7 +92,11 @@ def lex(lines: str) -> "list[str]":
             continue
 
         if offset + 1 < len(lines):
-            if lines[offset + 1] in lexicon or char in lexicon:
+            if (
+                lines[offset + 1] in lexicon
+                or char in lexicon
+                or lexeme in two_ops
+            ):
 
                 if lexeme != "":
                     if not lexeme in decorators_list:
@@ -309,7 +320,8 @@ def recode(args: list) -> list:
                     if not matches == None:
                         chunk_line = int(matches.group(1))
                         chunk_err = matches.group(2)
-                        show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
+                        if re.match(r"unfinished long comment", chunk_err) == None:
+                            show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
                         mode = "tag"
                         continue
 
@@ -381,7 +393,8 @@ def recode(args: list) -> list:
                 if not matches == None:
                     chunk_line = int(matches.group(1))
                     chunk_err = matches.group(2)
-                    show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
+                    if re.match(r"unfinished long comment", chunk_err) == None:
+                        show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
                     mode = "tag"
                     continue
                 else:
