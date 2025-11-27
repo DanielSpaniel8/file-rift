@@ -43,6 +43,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'hiro',
     Identifier : 'hero',
@@ -166,6 +167,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3',
     Component{ # Component
@@ -228,6 +230,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -257,13 +260,16 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'hero',
     ImportedLibrary : 'game_common',
 }
+
 Bounds{ # SceneBounds
     Top : -3500.0,
     Left : -500.0,
     Right : 5500.0,
     Bottom : 2000.0,
 }
+

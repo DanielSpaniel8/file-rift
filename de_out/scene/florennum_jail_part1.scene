@@ -22,6 +22,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'DirectionalLight',
     Component{ # Component
@@ -81,6 +82,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'bar',
     Component{ # Component
@@ -362,6 +364,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'bar2',
     Component{ # Component
@@ -635,6 +638,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'door1',
@@ -653,6 +657,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'door2',
@@ -710,6 +715,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1',
@@ -728,6 +734,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1#2',
@@ -746,6 +753,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1#3',
@@ -764,6 +772,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'focusArea',
@@ -799,6 +808,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'focusArea2',
     Component{ # Component
@@ -833,6 +843,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'jaildoor',
@@ -851,6 +862,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'king',
     Identifier : 'king',
@@ -897,6 +909,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'knight_florennum',
     Identifier : 'knight1',
@@ -1056,6 +1069,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x99\x00\x00\x00local self = ...;\r\n\r\nif Character.IsQuestCompleted("quest05_florennum") then\r\n\tself:setHidden(true);\r\n\tDoorController.Open(Scene.Find("jaildoor"));\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16@\x02\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xc1\x00\x02\x00\x9c\x00\x00\x01\\@\x00\x00\x1e\x00\x80\x00\t\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x11\x00\x00\x00IsQuestCompleted\x00\x04\x12\x00\x00\x00quest05_florennum\x00\x04\n\x00\x00\x00setHidden\x00\x04\x0f\x00\x00\x00DoorController\x00\x04\x05\x00\x00\x00Open\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\t\x00\x00\x00jaildoor\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     Identifier : 'knightDropTrigger',
     Component{ # Component
@@ -1100,6 +1114,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch',
     Identifier : 'obj1#7',
@@ -1140,6 +1155,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj12',
@@ -1158,6 +1174,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj12#2',
@@ -1176,6 +1193,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj12#3',
@@ -1194,6 +1212,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj12#4',
@@ -1212,6 +1231,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'swingplatform2',
     Identifier : 'obj13',
@@ -1230,6 +1250,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj14#2',
     Component{ # Component
@@ -1275,6 +1296,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj14#4',
     Component{ # Component
@@ -1320,6 +1342,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj15',
@@ -1338,6 +1361,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj15#2',
@@ -1356,6 +1380,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj15#3',
@@ -1374,6 +1399,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'obj16',
@@ -1420,6 +1446,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'obj16#2',
@@ -1466,6 +1493,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch',
     Identifier : 'obj18',
@@ -1484,6 +1512,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch',
     Identifier : 'obj18#2',
@@ -1502,6 +1531,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'obj19',
@@ -1557,6 +1587,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch',
     Identifier : 'obj20',
@@ -1575,6 +1606,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch',
     Identifier : 'obj20#2',
@@ -1593,6 +1625,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'node_off',
     Identifier : 'obj22',
@@ -1633,6 +1666,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'node_off',
     Identifier : 'obj22#2',
@@ -1673,6 +1707,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'node_off',
     Identifier : 'obj22#3',
@@ -1713,6 +1748,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj23',
     Component{ # Component
@@ -1854,6 +1890,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\r\x00\x00\x00idle = true;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x03\x00\x00\x00\x02\x00\x80\x00\x07\x00\x00\x00\x1e\x00\x80\x00\x01\x00\x00\x00\x04\x05\x00\x00\x00idle\x00\x00\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     TemplateName : 'node_off',
     Identifier : 'obj24',
@@ -1908,6 +1945,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj25',
@@ -1926,6 +1964,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pressureplate_frame',
     Identifier : 'obj26',
@@ -1944,6 +1983,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28',
@@ -1962,6 +2002,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#2',
@@ -1980,6 +2021,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#3',
@@ -1998,6 +2040,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#4',
@@ -2032,6 +2075,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#5',
@@ -2050,6 +2094,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#6',
@@ -2084,6 +2129,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#7',
@@ -2118,6 +2164,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#8',
@@ -2152,6 +2199,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'pot',
     Identifier : 'obj28#9',
@@ -2186,6 +2234,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj29',
@@ -2204,6 +2253,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj29#2',
@@ -2238,6 +2288,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj29#3',
@@ -2256,6 +2307,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj30',
@@ -2274,6 +2326,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj30#2',
@@ -2308,6 +2361,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'shadowblob_fire_little',
     Identifier : 'obj30#3',
@@ -2326,6 +2380,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher_ballistic',
     Identifier : 'obj31',
@@ -2366,6 +2421,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'bat_strike',
     Identifier : 'obj31#2',
@@ -2428,6 +2484,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher_ballistic',
     Identifier : 'obj31#4',
@@ -2468,6 +2525,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'water',
     Identifier : 'obj6#4',
@@ -2518,6 +2576,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'water',
     Identifier : 'obj6#5',
@@ -2568,6 +2627,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'water',
     Identifier : 'obj6#6',
@@ -2618,6 +2678,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'water',
     Identifier : 'obj6#7',
@@ -2668,6 +2729,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#10',
     Component{ # Component
@@ -3122,6 +3184,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#12',
     Component{ # Component
@@ -3503,6 +3566,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#15',
     Component{ # Component
@@ -3812,6 +3876,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#19',
     Component{ # Component
@@ -4089,6 +4154,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#2',
     Component{ # Component
@@ -4502,6 +4568,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#3',
     Component{ # Component
@@ -5314,6 +5381,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#31',
     Component{ # Component
@@ -5654,6 +5722,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#43',
     Component{ # Component
@@ -6458,6 +6527,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#44',
     Component{ # Component
@@ -6831,6 +6901,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#45',
     Component{ # Component
@@ -7341,6 +7412,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#46',
     Component{ # Component
@@ -7794,6 +7866,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#47',
     Component{ # Component
@@ -8526,6 +8599,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#48',
     Component{ # Component
@@ -8787,6 +8861,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#49',
     Component{ # Component
@@ -9241,6 +9316,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#50',
     Component{ # Component
@@ -9502,6 +9578,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#51',
     Component{ # Component
@@ -9846,6 +9923,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#52',
     Component{ # Component
@@ -10187,6 +10265,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#53',
     Component{ # Component
@@ -10543,6 +10622,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#54',
     Component{ # Component
@@ -10899,6 +10979,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#55',
     Component{ # Component
@@ -11255,6 +11336,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#56',
     Component{ # Component
@@ -11611,6 +11693,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#57',
     Component{ # Component
@@ -11967,6 +12050,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#58',
     Component{ # Component
@@ -12323,6 +12407,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#59',
     Component{ # Component
@@ -12777,6 +12862,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#60',
     Component{ # Component
@@ -13118,6 +13204,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#61',
     Component{ # Component
@@ -13474,6 +13561,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#62',
     Component{ # Component
@@ -13879,6 +13967,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#63',
     Component{ # Component
@@ -14549,6 +14638,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#64',
     Component{ # Component
@@ -14905,6 +14995,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'portal',
     Identifier : 'portal',
@@ -14923,6 +15014,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'golden_knight',
     Identifier : 'prisoner1',
@@ -14941,6 +15033,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'quest',
     Component{ # Component
@@ -15013,6 +15106,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'quest#2',
     Component{ # Component
@@ -15077,6 +15171,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x17\x00\x00\x00bubble1Active = false;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x03\x00\x00\x00\x02\x00\x00\x00\x07\x00\x00\x00\x1e\x00\x80\x00\x01\x00\x00\x00\x04\x0e\x00\x00\x00bubble1Active\x00\x00\x00\x00\x00\x03\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     Identifier : 'quest07_complete',
     Component{ # Component
@@ -15106,6 +15201,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'quest07_script',
     Component{ # Component
@@ -15204,6 +15300,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00m\x00\x00\x00local self = ...;\r\n\r\nif Character.IsQuestInProgress("quest07_go_to_king") then\r\n\tself:setHidden(false);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x04\x0b\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\\x80\x00\x01Z\x00\x00\x00\x16\x80\x00\x80K\xc0@\x00\xc2\x00\x00\x00\\@\x80\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\x12\x00\x00\x00IsQuestInProgress\x00\x04\x13\x00\x00\x00quest07_go_to_king\x00\x04\n\x00\x00\x00setHidden\x00\x00\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     Identifier : 'questMarker',
     Position{ # Vector2
@@ -15221,6 +15318,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'spikes_up',
     Identifier : 's1',
@@ -15256,6 +15354,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'spikes_up',
     Identifier : 's2',
@@ -15291,6 +15390,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'spikes_up',
     Identifier : 's3',
@@ -15326,6 +15426,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'spikes_up',
     Identifier : 's4',
@@ -15361,6 +15462,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 's5',
     Component{ # Component
@@ -15698,6 +15800,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'sign_left',
     Identifier : 'sign_left1',
@@ -15716,6 +15819,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'sign_right',
     Identifier : 'sign_right1',
@@ -15734,6 +15838,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -15763,6 +15868,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_florennum_jail_part2',
     Component{ # Component
@@ -15792,6 +15898,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_florennum_tower2',
     Component{ # Component
@@ -15821,6 +15928,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'teleport_to_grasslands',
     Component{ # Component
@@ -15866,6 +15974,7 @@ Object{ # SceneObject
     }
     Hidden : 1,
 }
+
 Object{ # SceneObject
     Identifier : 'trigger1',
     Component{ # Component
@@ -15924,6 +16033,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'trigger2',
     Component{ # Component
@@ -15972,6 +16082,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'trigger3',
     Component{ # Component
@@ -16018,6 +16129,7 @@ $end
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'florennum_jail_part1',
     Template{ # ObjectTemplate
@@ -17990,13 +18102,16 @@ $end
         Name : 'Pressed',
     }
 }
+
 Bounds{ # SceneBounds
     Top : -5800.0,
     Left : -1000.0,
     Right : 6800.0,
     Bottom : 2000.0,
 }
+
 Group{ # SceneObjectGroup
     Identifier : 'trap',
     ObjectIdentifier : 's5',
 }
+

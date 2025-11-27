@@ -716,7 +716,7 @@ block_formats = {
         "SimpleGlowComponent": ("7f2", "", "SimpleGlowComponent"),
         "ParticleObjectComponent": ("7fa", "", "ParticleObjectComponent"),
         "OrbitControllerComponent": ("802", "", "OrbitControllerComponent"),
-        "ParticleFieldComponent": ("80a", "", "ParticleFieldComponent"),
+        # "ParticleFieldComponent": ("80a", "", "ParticleFieldComponent"),
         "MonsterControllerComponent": ("972", "", "MonsterControllerComponent"),
         "WalkingMonsterControllerComponent": ("97a", "", "WalkingMonsterControllerComponent"),
         "ChargingMonsterControllerComponent": ("982", "", "ChargingMonsterControllerComponent"),
@@ -751,8 +751,8 @@ block_formats = {
         "MagicBombComponent": ("1162", "", "MagicBombComponent"),
         "MagicHookshotComponent": ("116a", "", "MagicHookshotComponent"),
         "SpellComponent": ("1172", "", "SpellComponent"),
-        "DimensionObjectComponent": ("117a", "", "DimensionObjectComponent"),
-        "DimensionSpellComponent": ("1182", "", "DimensionSpellComponent"),
+        # "DimensionObjectComponent": ("117a", "", "DimensionObjectComponent"),
+        # "DimensionSpellComponent": ("1182", "", "DimensionSpellComponent"),
     },
 
     "SpriteComponent": {

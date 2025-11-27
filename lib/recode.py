@@ -4,8 +4,10 @@ import re
 import math
 import struct
 import subprocess
-from lib import block_formats, util
+from pathlib import Path
 import config
+from lib import block_formats, util
+
 
 def lex(lines: str) -> "list[str]":
 
@@ -32,7 +34,7 @@ def lex(lines: str) -> "list[str]":
         "//",
     ]
 
-    decorators_list = ["=",":",";",","]
+    decorators_list = ["=", ":", ";", ","]
 
     whitespace_list = [" ", "\t", "\r"]
 
@@ -44,7 +46,6 @@ def lex(lines: str) -> "list[str]":
     lua_mode = False
 
     for offset, char in enumerate(lines):
-
 
         if (not char in whitespace_list) or d_str_mode or s_str_mode or lua_mode:
             lexeme += char
@@ -74,7 +75,7 @@ def lex(lines: str) -> "list[str]":
         # --- handle chunks ---
 
         if lua_mode:
-            if lines[offset -5:offset]=="$end$" or lines[offset -4:offset]=="$end":
+            if lines[offset - 4 : offset] == "$end":
                 lua_mode = False
                 lex_list.append(lexeme[:-6])
                 lexeme = ""
@@ -92,11 +93,7 @@ def lex(lines: str) -> "list[str]":
             continue
 
         if offset + 1 < len(lines):
-            if (
-                lines[offset + 1] in lexicon
-                or char in lexicon
-                or lexeme in two_ops
-            ):
+            if lines[offset + 1] in lexicon or char in lexicon or lexeme in two_ops:
 
                 if lexeme != "":
                     if not lexeme in decorators_list:
@@ -107,7 +104,8 @@ def lex(lines: str) -> "list[str]":
 
     return lex_list
 
-def recode(args: list) -> list:
+
+def recode(args: list) -> "tuple[bool, str, bool]":
     """takes a list with file content and path
     returns a list with:
     bool for if recode was successful
@@ -130,12 +128,19 @@ def recode(args: list) -> list:
     def show_error(err_type: str, err_message: str) -> None:
         err_out = (
             config.colour_error
-            + "\nerror " + config.colour_reset
+            + "\nrecode error "
+            + config.colour_reset
             + "in "
-            + filepath.replace("./re_in/", "") + ":"
-            + str(line_num) + "\n"
-            + err_type + ": " + config.colour_error
-            + err_message + config.colour_reset + "\n"
+            + filepath.replace(os.path.join(".", "re_in", ""), "")
+            + ":"
+            + str(line_num)
+            + "\n"
+            + config.colour_error
+            + err_type
+            + ": "
+            + err_message
+            + config.colour_reset
+            + "\n"
         )
 
         ctx_line = ""
@@ -144,41 +149,36 @@ def recode(args: list) -> list:
 
         for i in range(-3, 3):
             if lexeme_number + i >= 0 and lexeme_number + i < len(lex_list):
-                lexeme = lex_list[lexeme_number +i]
-                lexeme = lexeme.replace("\n","")
+                lexeme = lex_list[lexeme_number + i]
+                lexeme = lexeme.replace("\n", "")
                 if lexeme == "<newline>":
                     lexeme = "\\n"
                 lexeme = util.truncate(lexeme, 15)
                 if i == 0:
-                    ctx_line += config.colour_warning+lexeme+" "+config.colour_reset
+                    ctx_line += (
+                        config.colour_warning + lexeme + " " + config.colour_reset
+                    )
                 else:
                     ctx_line += lexeme + " "
                 if i < 0 and not lexeme == "\n":
-                    ctx_len += len(lexeme) +1
+                    ctx_len += len(lexeme) + 1
                 if i == 0:
                     pointer_len = len(lexeme)
 
-        err_out += (
-            ctx_line + "\n"
-            + (" "*ctx_len)
-            + "^" + ("-"*(pointer_len-1))
-        )
+        err_out += ctx_line + "\n" + (" " * ctx_len) + "^" + ("-" * (pointer_len - 1))
 
-        err_out += (
-            util.skim_dict(formats[metalevel], message_names[metalevel-1])
-        )
+        err_out += util.skim_dict(formats[metalevel], message_names[metalevel - 1])
 
-        if config.logging == "all":
-            log_err_out = err_out
-            for i in [
-                config.colour_data,
-                config.colour_success,
-                config.colour_warning,
-                config.colour_error,
-                config.colour_reset
-            ]:
-                log_err_out = log_err_out.replace(i, "")
-            util.log_append(log_err_out)
+        log_err_out = err_out
+        for i in [
+            config.colour_data,
+            config.colour_success,
+            config.colour_warning,
+            config.colour_error,
+            config.colour_reset,
+        ]:
+            log_err_out = log_err_out.replace(i, "")
+        util.log_append(log_err_out, 6)
 
         print(err_out)
 
@@ -187,15 +187,20 @@ def recode(args: list) -> list:
     file_content = args[0]
     filepath = args[1]
 
-    if len(file_content) == 0:
-        return [False, filepath, False]
-
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
     if filetype_match:
         filetype = filetype_match.group(1)
     else:
         filetype = "fr"
+
+    if filetype not in block_formats.file_types:
+        print("skipped", filepath, "(unrecognized extension)")
+        return False, filepath, False
+
+    if len(file_content) == 0:
+        print("skipped", filepath, "(empty file)")
+        return False, filepath, False
 
     lex_list = lex(file_content)
 
@@ -217,7 +222,9 @@ def recode(args: list) -> list:
     mode = "tag"
     last_mode = "tag"
 
-    comments_list = ["#","--","//"]
+    comments_list = ["#", "--", "//"]
+
+    print_tag_regex = re.compile(r"^@print\((.*)\)$")  # this is for the @print tag
 
     for lexeme_number, lexeme in enumerate(lex_list):
 
@@ -236,25 +243,49 @@ def recode(args: list) -> list:
             continue
 
         if lexeme == "@line":
-            print("@ line", line_num)
-            return [False, filepath, False]
+            print(
+                config.colour_data
+                + "@ line "
+                + config.colour_success
+                + str(line_num)
+                + config.colour_reset
+            )
+            continue
+
+        if lexeme == "@halt":
+            input("@ halted " + filepath + " > ")
+            continue
+
+        if lexeme == "@stop":
+            print("@ stopped " + filepath)
+            break
+
+        print_trigger_match = re.match(print_tag_regex, lexeme)
+        if print_trigger_match != None:
+            v = print_trigger_match.group(1)
+            if v == "globals":
+                print("\n".join(globals().keys()))
+            elif v == "locals":
+                print("\n".join(locals().keys()))
+            elif v in locals():
+                print(locals()[v])
+            else:
+                print("@ print value not found: " + v)
+            continue
 
         if mode == "tag":
             if lexeme == "}":
                 formats[metalevel] = {}
 
-                out_bytes[metalevel -1] += varint(len(out_bytes[metalevel]))
-                out_bytes[metalevel -1] += out_bytes[metalevel]
+                out_bytes[metalevel - 1] += varint(len(out_bytes[metalevel]))
+                out_bytes[metalevel - 1] += out_bytes[metalevel]
                 out_bytes[metalevel] = b""
 
                 metalevel -= 1
+                if metalevel < 0:
+                    show_error("system error", "negative metalevel")
+                    return False, filepath, True
                 format = formats[metalevel]
-                if metalevel <0:
-                    raise Exception(
-                        "negative metalevel\n"
-                        + str(metalevel) + "\n"
-                        + filepath+":"+str(line_num)
-                        )
 
                 last_mode = mode
                 mode = "tag"
@@ -264,11 +295,14 @@ def recode(args: list) -> list:
             tag, _, tag_reference = util.match_tagname(format, lexeme)
             if tag == "00":
                 if ltype != "tag":
-                    show_error("type error", "expected tag, got "+ltype)
+                    show_error("type error", "expected tag, got " + ltype)
                 else:
-                    show_error("tag not found error", "could not find tag in block_format: "+lexeme)
-                return [False, filepath, True]
-                
+                    show_error(
+                        "tag not found error",
+                        "could not find tag in block_format: " + lexeme,
+                    )
+                return False, filepath, True
+
             tagname = lexeme
             tagnumber = int(tag, base=16)
 
@@ -281,14 +315,13 @@ def recode(args: list) -> list:
             if lexeme == "{":
                 out_bytes[metalevel] += varint(tagnumber)
                 try:
-                    formats[metalevel +1] = block_formats.block_formats[tag_reference]
+                    formats[metalevel + 1] = block_formats.block_formats[tag_reference]
                 except KeyError:
-                    print(
-                        config.colour_error
-                        + "no " + config.colour_reset + tagname
-                        + " in \n" + util.prettify_dict(format)
+                    show_error(
+                        "tag not found error",
+                        "could not find tag in block_format: " + tag_reference,
                     )
-                    return [False, filepath, True]
+                    return False, filepath, True
                 message_names[metalevel] = tagname
                 metalevel += 1
                 format = formats[metalevel]
@@ -301,31 +334,40 @@ def recode(args: list) -> list:
                 mode = "chunk"
                 continue
 
-            if (
-                lexeme in ["@comp", "@compile"]
-            or
-                (
-                config.compile_mode == "all"
-                and
-                tagname in block_formats.compile_tags
-                )
+            if lexeme in ["@comp", "@compile"] or (
+                config.compile_mode == "all" and tagname in block_formats.compile_tags
             ):
-                if config.compile_mode == "auto": continue
-                chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
-                args = "./lib/luac -s -o "+chunk_cache_path+"%out "+chunk_cache_path
-                luac_out = subprocess.getoutput(args)
+                # if we find @comp, but we are in auto mode,
+                # we skip this section and go down to the auto section
+                if config.compile_mode == "auto":
+                    continue
+                chunk_cache_path = os.path.join(
+                    ".",
+                    "lib",
+                    "chunk_cache",
+                    filepath.replace(os.sep, "%"),
+                )
+                luac_args = (
+                    "./lib/luac -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                )
+                luac_out = subprocess.getoutput(luac_args)
 
                 if luac_out != "":
-                    matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
-                    if not matches == None:
+                    matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
+                    if matches != None:
                         chunk_line = int(matches.group(1))
                         chunk_err = matches.group(2)
+                        # this regex is here because the --[[ thing for the lsp_prep will trigger an error
+                        # and i want to swallow that error because it's useless
                         if re.match(r"unfinished long comment", chunk_err) == None:
-                            show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
-                        mode = "tag"
-                        continue
+                            show_error(
+                                "@compile chunk error",
+                                chunk_err + " (line " + str(chunk_line - 3) + ")",
+                            )
+                    else:
+                        show_error("@compile chunk error", luac_out)
 
-                with open(chunk_cache_path+"%out", "rb") as file:
+                with open(chunk_cache_path + "%out", "rb") as file:
                     chunk_content = file.read()
                 out_bytes[metalevel] += varint(tagnumber)
                 out_bytes[metalevel] += varint(len(chunk_content))
@@ -334,44 +376,40 @@ def recode(args: list) -> list:
                 mode = "tag"
                 continue
 
-
-
-            wiretype = tagnumber %8
-            if tagnumber == 7:
-                wiretype = 2
+            wiretype = tagnumber % 8
             out_bytes[metalevel] += varint(tagnumber)
 
             ltype = util.lexeme_type(lexeme)
             if wiretype == 0:
                 if ltype != "number":
-                    show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath, True]
+                    show_error("type error", "expected number, got " + ltype)
+                    return False, filepath, True
                 out_bytes[metalevel] += varint(int(lexeme))
             if wiretype == 1:
                 if ltype != "number":
-                    show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath, True]
+                    show_error("type error", "expected number, got " + ltype)
+                    return False, filepath, True
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
-                    data = float(data)* (math.pi/180)
+                    data = float(data) * (math.pi / 180)
                 else:
                     data = float(lexeme)
                 out_bytes[metalevel] += struct.pack("<d", data)
             if wiretype == 2:
-                if not ltype in ["string", "compile_mark"]:
-                    show_error("type error", "expected string, got "+ltype)
-                    return [False, filepath, True]
+                if not ltype in ["string", "compile_trigger"]:
+                    show_error("type error", "expected string, got " + ltype)
+                    return False, filepath, True
                 data = bytes(lexeme, "latin1").decode("unicode-escape")
                 data = bytes(data, "latin1")[1:-1]
                 out_bytes[metalevel] += varint(len(data))
                 out_bytes[metalevel] += data
             if wiretype == 5:
                 if ltype != "number":
-                    show_error("type error", "expected number, got "+ltype)
-                    return [False, filepath, True]
+                    show_error("type error", "expected number, got " + ltype)
+                    return False, filepath, True
                 if lexeme[-1] == "d":
                     data = lexeme[:-1]
-                    data = float(data)* (math.pi/180)
+                    data = float(data) * (math.pi / 180)
                 else:
                     data = float(lexeme)
                 out_bytes[metalevel] += struct.pack("<f", data)
@@ -380,25 +418,48 @@ def recode(args: list) -> list:
             mode = "tag"
 
         if mode == "chunk":
-            line_num += (len(lexeme) - len(lexeme.replace("\n", "")) +2)
-            chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
-            if lexeme[1:7]in block_formats.branches and lexeme[3]=="s" and len(lexeme)==21 and lexeme[-1]=="?" and lexeme[11:15]=="Real"and re.match(r".+is.?it[a-s]{4}.*ou", lexeme.lower().strip())!=None:
-                print(config.colour_data+block_formats.yak+config.colour_reset)
+            line_num += str.count(lexeme, "\n") + 2
+            chunk_cache_path = "./lib/chunk_cache/" + filepath.replace("/", "%")
+            if lexeme.strip()[-4:] == "--[[":
+                lexeme = lexeme.strip()[:-4]
+            if (
+                lexeme[1:7] in block_formats.branches
+                and lexeme[3] == "s"
+                and len(lexeme) == 21
+                and lexeme[-1] == "?"
+                and lexeme[11:15] == "Real"
+                and re.match(r".+is.?it[a-s]{4}.*ou", lexeme.lower().strip()) != None
+            ):
+                print(config.colour_data + block_formats.yak + config.colour_reset)
+            if (
+                "pydroid" in sys.executable.lower()
+                or "android" in str(sys.platform).lower()
+            ):
+                continue
+            try:
+                import android
+
+                continue
+            except ImportError:
+                pass
             with open(chunk_cache_path, "w") as file:
                 file.write(lexeme)
-            args = "./lib/luac -p "+chunk_cache_path
-            luac_out = subprocess.getoutput(args)
+            luac_args = "./lib/luac -p " + chunk_cache_path
+            luac_out = subprocess.getoutput(luac_args)
             if luac_out != "":
                 matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
-                if not matches == None:
+                if matches != None:
                     chunk_line = int(matches.group(1))
                     chunk_err = matches.group(2)
+                    # this regex is here because the --[[ thing for the lsp_prep will trigger an error
+                    # and i want to swallow that error because it's useless
                     if re.match(r"unfinished long comment", chunk_err) == None:
-                        show_error("chunk error", chunk_err+" (line "+str(chunk_line-3)+")")
-                    mode = "tag"
-                    continue
+                        show_error(
+                            "chunk error",
+                            chunk_err + " (line " + str(chunk_line - 3) + ")",
+                        )
                 else:
-                    print(luac_out)
+                    show_error("chunk error", luac_out)
 
             out_bytes[metalevel] += varint(tagnumber)
             out_bytes[metalevel] += varint(len(lexeme))
@@ -407,20 +468,28 @@ def recode(args: list) -> list:
             mode = "tag"
 
             if config.compile_mode == "auto":
-                chunk_cache_path = "./lib/chunk_cache/"+filepath.replace("/", "%")
-                args = "./lib/luac -s -o "+chunk_cache_path+"%out "+chunk_cache_path
-                luac_out = subprocess.getoutput(args)
+                chunk_cache_path = "./lib/chunk_cache/" + filepath.replace("/", "%")
+                luac_args = (
+                    "./lib/luac -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                )
+                luac_out = subprocess.getoutput(luac_args)
 
                 if luac_out != "":
                     matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
-                    if not matches == None:
+                    if matches != None:
                         chunk_line = int(matches.group(1))
                         chunk_err = matches.group(2)
-                        show_error(config.colour_error+"chunk error"+config.colour_reset, chunk_err+" (line "+str(chunk_line-3)+")")
-                        mode = "tag"
-                        continue
+                        # this regex is here because the --[[ thing for the lsp_prep will trigger an error
+                        # and i want to swallow that error because it's useless
+                        if re.match(r"unfinished long comment", chunk_err) == None:
+                            show_error(
+                                "chunk error",
+                                chunk_err + " (line " + str(chunk_line - 3) + ")",
+                            )
+                    else:
+                        show_error("chunk error", luac_out)
 
-                with open(chunk_cache_path+"%out", "rb") as file:
+                with open(chunk_cache_path + "%out", "rb") as file:
                     chunk_content = file.read()
                 out_bytes[metalevel] += b"\x12"
                 out_bytes[metalevel] += varint(len(chunk_content))
@@ -429,25 +498,38 @@ def recode(args: list) -> list:
                 mode = "tag"
                 continue
 
-
     if filepath == "__stdin__":
         sys.stdout.buffer.write(out_bytes[0])
         sys.exit(0)
 
-    if filepath[0] != "/":
-        if filepath[0] != ".":
-            filepath = "./"+filepath
-        outfilepath = filepath.replace("./re_in/", "./re_out/")
-        filepath = filepath[len("./re_in/"):]
-    else:
-        outfilepath = filepath.replace("/re_in/", "/re_out/")
+    resolved_filepath = Path(filepath).resolve()
+    working_dir = Path(config.working_dir).resolve()
+    try:
+        resolved_filepath.relative_to(working_dir)
+        filepath = filepath.replace("re_in", "re_out")
+        dirpath, filepathleaf = os.path.split(filepath)
+        os.makedirs(dirpath, exist_ok=True)
+        outfilepath = os.path.join(dirpath, filepathleaf)
+    # if filepath is not relative to the working dir, output to re_out/external
+    except ValueError:
+        dirpath, filepathleaf = os.path.split(filepath)
+        parts = dirpath.split(os.sep)
+        parts = [p.replace("%", "%%") for p in parts if p]
+        outdirpath = "%".join(parts)
+        outdirpath = os.path.join(config.working_dir, "re_out", "external", outdirpath)
+        os.makedirs(outdirpath, exist_ok=True)
+        outfilepath = os.path.join(outdirpath, filepathleaf)
 
     if len(out_bytes[0]) != 0:
-        print(config.colour_success+"recoded: "+config.colour_reset+filepath)
+        print(
+            config.colour_success
+            + "recoded: "
+            + config.colour_reset
+            + util.path_tidy(filepath, "re_out")
+        )
         if filepath != "stdin":
             os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
             with open(outfilepath, "wb") as file:
                 file.write(out_bytes[0])
 
-
-    return [True, filepath, False]
+    return True, filepath, False

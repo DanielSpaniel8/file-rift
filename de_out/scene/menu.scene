@@ -22,6 +22,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'DirectionalLight',
     Component{ # Component
@@ -81,6 +82,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'darkhero',
     Component{ # Component
@@ -176,6 +178,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj1',
     Component{ # Component
@@ -221,6 +224,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj1#2',
     Component{ # Component
@@ -266,6 +270,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj1#3',
     Component{ # Component
@@ -311,6 +316,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj2',
     Component{ # Component
@@ -560,6 +566,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3',
     Component{ # Component
@@ -643,6 +650,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#10',
     Component{ # Component
@@ -892,6 +900,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#11',
     Component{ # Component
@@ -2673,6 +2682,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#12',
     Component{ # Component
@@ -3835,6 +3845,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#13',
     Component{ # Component
@@ -4349,6 +4360,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#14',
     Component{ # Component
@@ -5387,6 +5399,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#8',
     Component{ # Component
@@ -5736,6 +5749,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4',
     Component{ # Component
@@ -5794,6 +5808,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#2',
     Component{ # Component
@@ -5852,6 +5867,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#3',
     Component{ # Component
@@ -5910,6 +5926,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5',
     Component{ # Component
@@ -5955,6 +5972,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#2',
     Component{ # Component
@@ -6000,6 +6018,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#3',
     Component{ # Component
@@ -6045,6 +6064,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#4',
     Component{ # Component
@@ -6090,6 +6110,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#7',
     Component{ # Component
@@ -6135,6 +6156,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#8',
     Component{ # Component
@@ -6180,6 +6202,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj6',
     Component{ # Component
@@ -6225,6 +6248,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fountain',
     Identifier : 'obj7',
@@ -6243,6 +6267,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -6272,6 +6297,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'sword',
     Component{ # Component
@@ -6387,6 +6413,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'menu',
     Template{ # ObjectTemplate
@@ -6637,9 +6664,11 @@ ObjectLibrary{ # ObjectLibrary
     }
     ImportedLibrary : 'lights',
 }
+
 Bounds{ # SceneBounds
     Top : -3500.0,
     Left : -500.0,
     Right : 5500.0,
     Bottom : 2000.0,
 }
+

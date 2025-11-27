@@ -5,6 +5,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'house',
     Track{ # MusicTrack
@@ -12,6 +13,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'outdoors_light',
     Track{ # MusicTrack
@@ -19,6 +21,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'forest',
     Track{ # MusicTrack
@@ -26,6 +29,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'cave',
     Track{ # MusicTrack
@@ -33,6 +37,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'dungeon1',
     Track{ # MusicTrack
@@ -40,6 +45,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.5,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'boss',
     Track{ # MusicTrack
@@ -47,6 +53,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.75,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'bosskill',
     Track{ # MusicTrack
@@ -54,6 +61,7 @@ Playlist{ # MusicPlaylist
         Volume : 0.75,
     }
 }
+
 Playlist{ # MusicPlaylist
     Name : 'heartbeat',
     Track{ # MusicTrack
@@ -61,6 +69,7 @@ Playlist{ # MusicPlaylist
         Volume : 1.0,
     }
 }
+
 PhoneControlsLayout{ # GUIViewLayout
     Subview{ # GUIViewLayout
         Identifier : 'left',
@@ -119,6 +128,7 @@ PhoneControlsLayout{ # GUIViewLayout
         }
     }
 }
+
 PadControlsLayout{ # GUIViewLayout
     Subview{ # GUIViewLayout
         Identifier : 'left',
@@ -183,3 +193,4 @@ PadControlsLayout{ # GUIViewLayout
         }
     }
 }
+

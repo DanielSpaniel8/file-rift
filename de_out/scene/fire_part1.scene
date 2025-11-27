@@ -39,6 +39,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher',
     Identifier : '2',
@@ -80,6 +81,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher',
     Identifier : '3',
@@ -121,6 +123,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher',
     Identifier : '4',
@@ -162,6 +165,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fireball_launcher',
     Identifier : '5',
@@ -203,6 +207,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'Background',
@@ -228,6 +233,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'DirectionalLight',
@@ -288,6 +294,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'chest_right',
     Identifier : 'chest_right1',
@@ -321,6 +328,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'grabbable',
     Identifier : 'grabbable1',
@@ -339,6 +347,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'item_key_yellow',
     Identifier : 'key1',
@@ -381,6 +390,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lock',
     Identifier : 'lock1',
@@ -438,6 +448,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xc7\x00\x00\x00local self = ...;\r\n\r\nif Character.HasSceneFlag(self:identifier()) then\r\n\tself:setHidden(true);\r\n\tProgram.Execute(Scene.Find(self:identifier() .. "_door"));\r\n\tScene.Find("key1"):setHidden(true);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\x1d\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x8b\x80@\x00\x9c\x00\x00\x01\\\x80\x00\x00Z\x00\x00\x00\x16\xc0\x04\x80K\xc0@\x00\xc2\x00\x80\x00\\@\x80\x01E\x00\x01\x00F@\xc1\x00\x85\x80\x01\x00\x86\xc0A\x01\xcb\x80@\x00\xdc\x80\x00\x01\x01\x01\x02\x00\xd5\x00\x81\x01\x9c\x00\x00\x01\\@\x00\x00E\x80\x01\x00F\xc0\xc1\x00\x81@\x02\x00\\\x80\x00\x01K\xc0\xc0\x00\xc2\x00\x80\x00\\@\x80\x01\x1e\x00\x80\x00\n\x00\x00\x00\x04\n\x00\x00\x00Character\x00\x04\r\x00\x00\x00HasSceneFlag\x00\x04\x0b\x00\x00\x00identifier\x00\x04\n\x00\x00\x00setHidden\x00\x04\x08\x00\x00\x00Program\x00\x04\x08\x00\x00\x00Execute\x00\x04\x06\x00\x00\x00Scene\x00\x04\x05\x00\x00\x00Find\x00\x04\x06\x00\x00\x00_door\x00\x04\x05\x00\x00\x00key1\x00\x00\x00\x00\x00\x1d\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x07\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'lock1_door',
@@ -456,6 +467,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'stonepillairs4',
     Identifier : 'obj1',
@@ -474,6 +486,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10',
@@ -492,6 +505,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#10',
@@ -510,6 +524,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#11',
@@ -528,6 +543,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#12',
@@ -546,6 +562,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#2',
@@ -564,6 +581,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#3',
@@ -582,6 +600,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#4',
@@ -600,6 +619,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#5',
@@ -618,6 +638,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#6',
@@ -636,6 +657,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#7',
@@ -654,6 +676,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#8',
@@ -672,6 +695,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj10#9',
@@ -690,6 +714,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'obj11',
@@ -708,6 +733,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firesprayer',
     Identifier : 'obj12',
@@ -726,6 +752,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'obj14',
@@ -772,6 +799,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'obj14#2',
@@ -818,6 +846,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'magmamonster',
     Identifier : 'obj2',
@@ -931,6 +960,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'obj3',
@@ -949,6 +979,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#10',
     Component{ # Component
@@ -2083,6 +2114,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#11',
     Component{ # Component
@@ -3041,6 +3073,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#12',
     Component{ # Component
@@ -3579,6 +3612,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tTransformController.RotateBy(self, 360, 10.0);\r\n\tProgram.Wait(10.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\xc0\x00\x00\\@\x00\x01\x16\x00\xfd\x7f\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x03\x00\x00\x00\x00\x00\x80v@\x03\x00\x00\x00\x00\x00\x00$@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#13',
     Component{ # Component
@@ -3983,6 +4017,7 @@ $end
         Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00o\x00\x00\x00local self = ...;\r\n\r\nwhile true do\r\n\tTransformController.RotateBy(self, 360, 10.0);\r\n\tProgram.Wait(10.0);\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x05\r\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x80\x00\x00\x00\xc1\x80\x00\x00\x01\xc1\x00\x00\\@\x00\x02E\x00\x01\x00F@\xc1\x00\x81\xc0\x00\x00\\@\x00\x01\x16\x00\xfd\x7f\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x14\x00\x00\x00TransformController\x00\x04\t\x00\x00\x00RotateBy\x00\x03\x00\x00\x00\x00\x00\x80v@\x03\x00\x00\x00\x00\x00\x00$@\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x00\x00\x00\x00\r\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x00',
     }
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#14',
     Component{ # Component
@@ -5299,6 +5334,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#15',
     Component{ # Component
@@ -6321,6 +6357,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#16',
     Component{ # Component
@@ -7399,6 +7436,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#17',
     Component{ # Component
@@ -7740,6 +7778,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#18',
     Component{ # Component
@@ -9128,6 +9167,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#19',
     Component{ # Component
@@ -9453,6 +9493,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'obj3#2',
@@ -9471,6 +9512,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#20',
     Component{ # Component
@@ -9812,6 +9854,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#21',
     Component{ # Component
@@ -10137,6 +10180,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#22',
     Component{ # Component
@@ -10462,6 +10506,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#23',
     Component{ # Component
@@ -10787,6 +10832,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#3',
     Component{ # Component
@@ -11844,6 +11890,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#4',
     Component{ # Component
@@ -13232,6 +13279,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#5',
     Component{ # Component
@@ -14753,6 +14801,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#6',
     Component{ # Component
@@ -15482,6 +15531,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#7',
     Component{ # Component
@@ -16443,6 +16493,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#8',
     Component{ # Component
@@ -17428,6 +17479,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#9',
     Component{ # Component
@@ -18318,6 +18370,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'stonepillairs',
     Identifier : 'obj4',
@@ -18336,6 +18389,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'stonepillairs3',
     Identifier : 'obj4#3',
@@ -18354,6 +18408,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5',
     Component{ # Component
@@ -18462,6 +18517,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_250_15',
     Identifier : 'obj6',
@@ -18480,6 +18536,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7',
@@ -18498,6 +18555,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#10',
@@ -18516,6 +18574,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#11',
@@ -18534,6 +18593,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#12',
@@ -18552,6 +18612,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#13',
@@ -18570,6 +18631,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#14',
@@ -18588,6 +18650,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#15',
@@ -18606,6 +18669,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#16',
@@ -18624,6 +18688,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#17',
@@ -18642,6 +18707,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#18',
@@ -18660,6 +18726,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#19',
@@ -18678,6 +18745,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#2',
@@ -18696,6 +18764,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#20',
@@ -18714,6 +18783,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#21',
@@ -18732,6 +18802,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#22',
@@ -18750,6 +18821,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#3',
@@ -18768,6 +18840,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#4',
@@ -18786,6 +18859,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#5',
@@ -18804,6 +18878,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#6',
@@ -18822,6 +18897,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#7',
@@ -18840,6 +18916,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#8',
@@ -18858,6 +18935,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_150_13',
     Identifier : 'obj7#9',
@@ -18876,6 +18954,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_300_15',
     Identifier : 'obj8',
@@ -18894,6 +18973,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_300_15',
     Identifier : 'obj8#2',
@@ -18912,6 +18992,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_300_15',
     Identifier : 'obj8#3',
@@ -18930,6 +19011,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_300_15',
     Identifier : 'obj8#4',
@@ -18948,6 +19030,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_300_15',
     Identifier : 'obj8#5',
@@ -18966,6 +19049,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_300_15',
     Identifier : 'obj9',
@@ -18984,6 +19068,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_300_15',
     Identifier : 'obj9#2',
@@ -19002,6 +19087,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_300_15',
     Identifier : 'obj9#3',
@@ -19020,6 +19106,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_300_15',
     Identifier : 'obj9#4',
@@ -19038,6 +19125,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'sign_left',
     Identifier : 'sign_left1',
@@ -19056,6 +19144,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'sign_right',
     Identifier : 'sign_right1',
@@ -19074,6 +19163,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -19103,6 +19193,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_fire_part2',
     Component{ # Component
@@ -19132,6 +19223,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_thecave_part24',
     Component{ # Component
@@ -19161,6 +19253,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'fire_part1',
     Template{ # ObjectTemplate
@@ -19615,9 +19708,11 @@ ObjectLibrary{ # ObjectLibrary
     ImportedLibrary : 'trash',
     ImportedLibrary : 'woodkeep_stuff',
 }
+
 Bounds{ # SceneBounds
     Top : -3500.0,
     Left : -500.0,
     Right : 5500.0,
     Bottom : 2000.0,
 }
+

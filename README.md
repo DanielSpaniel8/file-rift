@@ -30,7 +30,8 @@ You can also recode and decode from stdin using the `--recode-stdin` and `--deco
 To get a list of command line flags, use `python3 FileRift.py --help`. Example output:
 
 ```bash
-usage: FileRift [-h] [-r] [-d] [-u] [--both] [-f] [-a] [-b] [-i INFO] [-p PATH] [-n] [-t FILE_TYPE] [--recode-stdin] [--decode-stdin]
+usage: FileRift [-h] [-r] [-d] [-u] [--both] [-f] [-b] [--build-project BUILD_PROJECT] [-i INFO] [-p PATH] [-n]
+                [-t FILE_TYPE] [--recode-stdin] [--decode-stdin]
 
 options:
   -h, --help            show this help message and exit
@@ -39,8 +40,9 @@ options:
   -u, --user            decode file in /de_in/user, unless otherwise specified
   --both                run in decode then recode mode
   -f, --force           run in recode mode with allways_recode turned on
-  -a, --audit           ask before recoding each directory in re_out
   -b, --build           build an apk from a project file
+  --build-project BUILD_PROJECT
+                        build an apk from a project file
   -i INFO, --info INFO  ask before recoding each directory in re_out
   -p PATH, --path PATH  recode a file for a given filepath
   -n, --no-colour       disable output colouring
@@ -55,9 +57,9 @@ When recoding, Rift will check the contents of every file against a checksum sto
 ## Building apks
 
 FileRift can build and sign an apk for you, adding and/or recoding the required files, then optionally install it. Trigger this functionality by setting rift_mode to "build" in `config.py`, or by using the `--build` flag.
-Start by making a `.frproject` file in the `projects` folder. This file defines what apk to use, which files to add and recode and the command to execute after signing. You can look at `projects/example.frproject` to see how the syntax looks. To select a project, change set `project_name` in `config.py` to the name of the project file, without the file extension. So to select `projects/hello.frproject`, set to to "hello". You can also select the project by using the `--build_project` flag followed by the name:
+Start by making a `.frproject` file in the `projects` folder. This file defines what apk to use, which files to add and recode and the command to execute after signing. You can look at `projects/example.frproject` to see how the syntax looks. To select a project, change set `project_name` in `config.py` to the name of the project file, without the file extension. So to select `projects/hello.frproject`, set it to "hello". You can also select the project by using the `--build-project` flag followed by the name:
 ```
-python3 FileRift.py --build_project hello
+python3 FileRift.py --build-project hello
 ```
 If you trigger building by using the `-b` or `--build` flags, you will by prompted for the project name.
 
@@ -78,13 +80,13 @@ D{ # message
 }
 ```
 
-The files are split up into records, with each record a tag and some data.
+The files are split up into records, with each record consisting of a tag and some data.
 The tag is the key for a record, and specifies what information that record represents. Tags should be surrounded by whitespace, but not quotes.  
 There are four main types of record: integer, float, string and message. The first three work the same as in pretty much any markup language, and messages simply contain other records.
 If you put a `d` after a float, it will be automatically converted from degrees to radians. `90d`
 
-Integers are all decimal digits, no decimal points allowed. `0` `1500`  
-Floats may have decimal points, but they don't have to. `0.0` `20`  
+Integers are all decimal digits, no decimal points allowed. `0` `1500`
+Floats may have decimal points, but they don't have to. `0.0` `.5` `20`
 Strings are surrounded by single quotes `'` or double quotes `"`.  
 Messages begin and end with braces. `{}`
 
@@ -104,17 +106,17 @@ Program{
     Bytes : ''  # 32-bit
 }
 ```
-The Bytes chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods which utilize Lua chunks usually only work on 64-bit devices. File Rift can compile the String chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use `@compile` or `@comp`:
+The Bytes chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods which utilize Lua chunks usually only work on 64-bit devices. File Rift can compile the String chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use the `@compile` or `@comp` trigger:
 ```
 String : $ ... $end
 Bytes : @comp
 ```
-As File Rift runs through your files, it keeps content of the last chunk, and when it finds `@comp`, it compiles the last chunk and adds it to that record. Be careful, if you use `@comp` in the wrong place, it will add the content of a random chunk to your record.  
+As File Rift runs through your files, it keeps the content of the last chunk, and when it finds `@compile`, it compiles the last chunk and adds it to that record. Be careful, if you use `@compile` in the wrong place, it will add the content of a random chunk to your record.  
 > Note: this feature currently only works on Linux.
 
 ## Templates
 
-The purpose of templates is to make writting re_in files easier by abstracting common things.
+The purpose of templates is to make writing re_in files easier by abstracting common things.
 
 Here's how a template looks:
 ```yaml
@@ -175,7 +177,7 @@ Position (message)
 ```
 
 This tells you that the Position Message contains two records, `X` and `Y`, both floats.
-You can also pass a filename and line number like this:
+You can also pass a filename and line number. Rift will find the file, go to the line number and see what tag is present on that line, then show info for that tag.
 
 ```
 python3 FileRift.py -i re_in/testing/beyond_graveyard.scene:4
@@ -203,3 +205,38 @@ python3 FileRift.py -i .obj
 usage: [name;ident;x_pos;y_pos;z_pos;rot;scale]
 add an object instance with the provided details
 ```
+
+You can use `python3 FileRift.py -i .list` to get a list of templates.
+
+## Logging
+
+If `logging` is set to `"all"` in `config.py`, all error messages which Rift outputs will also be added to `log.txt`.
+
+## Exit Codes
+
+When any errors are encountered, Rift will exit with a non-zero exit code. The meaning of the codes is as follow:
+```
+  0 = success
+  1 = general error
+  2 = argument error
+  3 = config error
+  4 = file not found error
+  5 = decode error
+  6 = recode error
+  7 = filerift system error
+```
+
+You can also use `python FileRift.py -i .exitcodes to get a list of exit codes and their meanings.`
+
+## Triggers
+
+Triggers are keywords which you can put in re_in files to trigger special behaviours. The special `@compile` keyword seen [#LuaChunks] is a trigger. They are as follows:
+
+- `@compile:` (a.k.a. `@comp`), compile the previous lua chunk and add it to a string
+- `@line:` print line number
+- `@halt:` pause recoding, wait for input
+- `@stop:` stop recoding, write output to file
+- `@print:` display all globals, all locals or the value of a local variable
+
+The `@print` trigger takes in argument like this: `@print(metalevel)`. You can pass it any `recode.py` or either the word "globals" or the word "locals".
+All triggers except `@compile` are essentially for trouble-shooting re_in files, and FileRift itself. You can see a list of triggers using `python FileRift.py -i .triggers`.

@@ -22,6 +22,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'DirectionalLight',
     Component{ # Component
@@ -81,6 +82,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1',
@@ -99,6 +101,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1#2',
@@ -117,6 +120,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'firebat',
     Identifier : 'firebat1#3',
@@ -135,6 +139,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'focusArea',
@@ -170,6 +175,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'focuswpadding',
     Identifier : 'focusArea#2',
@@ -225,6 +231,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj1',
     Component{ # Component
@@ -553,6 +560,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj14',
     Component{ # Component
@@ -598,6 +606,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj14#2',
     Component{ # Component
@@ -643,6 +652,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'stonepile',
     Identifier : 'obj3',
@@ -661,6 +671,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj4',
@@ -679,6 +690,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj4#2',
@@ -697,6 +709,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj4#3',
@@ -715,6 +728,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj4#4',
@@ -733,6 +747,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'obj4#5',
@@ -751,6 +766,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5',
     Component{ # Component
@@ -1563,6 +1579,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#2',
     Component{ # Component
@@ -2940,6 +2957,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj6',
@@ -2958,6 +2976,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj6#2',
@@ -2976,6 +2995,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj6#3',
@@ -2994,6 +3014,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_150_15',
     Identifier : 'obj6#4',
@@ -3012,6 +3033,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'chest_left',
     Identifier : 'obj7',
@@ -3047,6 +3069,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -3076,6 +3099,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_wasteland_house1',
     Component{ # Component
@@ -3105,6 +3129,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_wasteland_part1',
     Component{ # Component
@@ -3134,6 +3159,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'wasteland_cave1',
     Template{ # ObjectTemplate
@@ -3171,15 +3197,18 @@ ObjectLibrary{ # ObjectLibrary
     ImportedLibrary : 'weapons',
     ImportedLibrary : 'woodkeep_stuff',
 }
+
 Bounds{ # SceneBounds
     Top : -3100.0,
     Left : -2000.0,
     Right : 4600.0,
     Bottom : 3000.0,
 }
+
 OnLoad{ # Program
     String : $
 MusicPlayer.PlayMusic(Game.DefaultMusicName(),false);
 $end
     Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x006\x00\x00\x00MusicPlayer.PlayMusic(Game.DefaultMusicName(),false);\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x08\x00\x00\x00\x05\x00\x00\x00\x06@@\x00E\x80\x00\x00F\xc0\xc0\x00\\\x80\x80\x00\x82\x00\x00\x00\x1c@\x80\x01\x1e\x00\x80\x00\x04\x00\x00\x00\x04\x0c\x00\x00\x00MusicPlayer\x00\x04\n\x00\x00\x00PlayMusic\x00\x04\x05\x00\x00\x00Game\x00\x04\x11\x00\x00\x00DefaultMusicName\x00\x00\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
 }
+

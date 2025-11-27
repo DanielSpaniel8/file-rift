@@ -8,8 +8,8 @@ log.txt
 
 source/*
 !source/example.lua
-$fr/*
-$stuff/*
+,fr/*
+,stuff/*
 res.txt
 Swordigo.lua
 .luarc.jsonc
@@ -20,10 +20,11 @@ projects/*
 !projects/default.frproject
 !projects/.gitkeep
 
-de_in/nathanael/*
-de_out/nathanael/*
+de_in/user/*
+de_out/user/*
 re_in/*
 re_out/*
 
 .ignore
+.filerift_force_local_config
 lib/manifest

@@ -23,6 +23,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'DirectionalLight',
@@ -83,6 +84,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'castle_lockdoor',
     Identifier : 'door',
@@ -101,6 +103,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'focus',
     Component{ # Component
@@ -130,6 +133,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'marker1',
     Position{ # Vector2
@@ -147,6 +151,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'masterghost',
     Identifier : 'master',
@@ -191,6 +196,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch#2',
     Identifier : 'obj1',
@@ -209,6 +215,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch#2',
     Identifier : 'obj1#2',
@@ -227,6 +234,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch#2',
     Identifier : 'obj1#3',
@@ -245,6 +253,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch#2',
     Identifier : 'obj1#4',
@@ -263,6 +272,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj25#3',
     Component{ # Component
@@ -308,6 +318,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj27',
     Component{ # Component
@@ -1797,6 +1808,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj27#9',
     Component{ # Component
@@ -2166,6 +2178,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'woodblock',
     Identifier : 'obj3',
@@ -2232,6 +2245,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4',
     Component{ # Component
@@ -2557,6 +2571,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#2',
     Component{ # Component
@@ -2882,6 +2897,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#3',
     Component{ # Component
@@ -3207,6 +3223,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#4',
     Component{ # Component
@@ -3532,6 +3549,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj4#5',
     Component{ # Component
@@ -3857,6 +3875,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'torch#2',
     Identifier : 'obj7',
@@ -3875,6 +3894,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'platformwood1',
     Identifier : 'obj8',
@@ -3913,6 +3933,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -3942,6 +3963,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_from_plains_woodkeep2',
     Component{ # Component
@@ -3971,6 +3993,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'spellget_script',
     Identifier : 'trigger',
@@ -4059,6 +4082,7 @@ $end
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'plains_woodkeep_cellar',
     Template{ # ObjectTemplate
@@ -4250,9 +4274,11 @@ ObjectLibrary{ # ObjectLibrary
     ImportedLibrary : 'trash',
     ImportedLibrary : 'woodkeep_stuff',
 }
+
 Bounds{ # SceneBounds
     Top : -4100.0,
     Left : 0.0,
     Right : 2600.0,
     Bottom : 1200.0,
 }
+

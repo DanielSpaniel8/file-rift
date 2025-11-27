@@ -23,6 +23,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'Template 1',
     Identifier : 'DirectionalLight_day',
@@ -83,6 +84,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'fire_250_15',
     Identifier : 'fire_250_151#2',
@@ -101,6 +103,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'rock2',
     Identifier : 'obj10#12',
@@ -119,6 +122,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'hugerock1',
     Identifier : 'obj13#5',
@@ -137,6 +141,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj16#2',
     Component{ # Component
@@ -182,6 +187,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'tree2',
     Identifier : 'obj17',
@@ -228,6 +234,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'tree',
     Identifier : 'obj2#14',
@@ -274,6 +281,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'tree',
     Identifier : 'obj2#15',
@@ -320,6 +328,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'tree',
     Identifier : 'obj2#8',
@@ -338,6 +347,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj3#14',
     Component{ # Component
@@ -383,6 +393,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'bush',
     Identifier : 'obj4#43',
@@ -401,6 +412,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'bush',
     Identifier : 'obj4#45',
@@ -419,6 +431,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj5#10',
     Component{ # Component
@@ -464,6 +477,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'statue_holder',
     Identifier : 'obj9#22',
@@ -482,6 +496,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'obj9#41',
     Component{ # Component
@@ -3323,6 +3338,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'point_250_151',
@@ -3341,6 +3357,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'point_250_151#2',
@@ -3359,6 +3376,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'point_250_151#3',
@@ -3377,6 +3395,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'point_250_151#4',
@@ -3395,6 +3414,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     TemplateName : 'point_250_15',
     Identifier : 'point_250_151#5',
@@ -3413,6 +3433,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'shape',
     Component{ # Component
@@ -3469,6 +3490,7 @@ $end
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'spawn_default',
     Component{ # Component
@@ -3498,6 +3520,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 Object{ # SceneObject
     Identifier : 'theend',
     Component{ # Component
@@ -3547,6 +3570,7 @@ Object{ # SceneObject
     }
     Hidden : 0,
 }
+
 ObjectLibrary{ # ObjectLibrary
     Name : 'theend',
     Template{ # ObjectTemplate
@@ -4379,17 +4403,20 @@ $end
         Name : 'End',
     }
 }
+
 Bounds{ # SceneBounds
     Top : -5000.0,
     Left : -700.0,
     Right : 23000.0,
     Bottom : 10700.0,
 }
+
 Group{ # SceneObjectGroup
     Identifier : 'day',
     ObjectIdentifier : 'DirectionalLight_day',
     ObjectIdentifier : 'Background_day',
 }
+
 OnLoad{ # Program
     String : $
 local self = ...;
@@ -4402,3 +4429,4 @@ End();
 $end
     Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\x87\x00\x00\x00local self = ...;\r\n\r\nGame.SetDefaultMusicName("menu");\r\nMusicPlayer.PlayMusic(Game.DefaultMusicName());\r\nProgram.Wait(0.01);\r\nEnd();\r\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x03\x12\x00\x00\x00%\x00\x00\x01E\x00\x00\x00F@\xc0\x00\x81\x80\x00\x00\\@\x00\x01E\xc0\x00\x00F\x00\xc1\x00\x85\x00\x00\x00\x86@A\x01\x9c\x00\x80\x00\\@\x00\x00E\x80\x01\x00F\xc0\xc1\x00\x81\x00\x02\x00\\@\x00\x01E@\x02\x00\\@\x80\x00\x1e\x00\x80\x00\n\x00\x00\x00\x04\x05\x00\x00\x00Game\x00\x04\x14\x00\x00\x00SetDefaultMusicName\x00\x04\x05\x00\x00\x00menu\x00\x04\x0c\x00\x00\x00MusicPlayer\x00\x04\n\x00\x00\x00PlayMusic\x00\x04\x11\x00\x00\x00DefaultMusicName\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03{\x14\xaeG\xe1z\x84?\x04\x04\x00\x00\x00End\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x04\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x05\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x01\x00\x00\x00\x05\x00\x00\x00self\x00\x01\x00\x00\x00\x11\x00\x00\x00\x00\x00\x00\x00',
 }
+

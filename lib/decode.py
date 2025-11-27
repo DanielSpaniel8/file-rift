@@ -2,253 +2,386 @@ import os
 import sys
 import re
 import struct
-from lib import block_formats, util
+from pathlib import Path
+from lib import block_formats, block_formats_decode, util
+from lib.setup import HEX_LOOKUP
 import config
 
+
 def decode(filepath: str) -> "tuple[bool, bool]":
+    # initialize variables
+    offsets = [0] * 10
+    current_offset = 0
+    pointers = [0] * 10
+    formats = [{}] * 10
+    metalevel = 0
+    indentation = ""
+    tagname = ""
 
+    # determine filetype
+    if filepath[:9] == "__stdin__":
+        filetype = filepath[9:] if len(filepath) > 9 else "fr"
+        with open(
+            os.path.join(
+                config.working_dir,
+                "lib",
+                "temp",
+                "stdin.fr",
+            ),
+            "rb",
+        ) as file:
+            inbytes = file.read()
+        if inbytes and inbytes[-1] == 10:
+            inbytes = inbytes[:-1]
+    else:
+        filetype_match = re.match(r"^.*\.(.*)$", filepath)
+        filetype = filetype_match.group(1) if filetype_match else "fr"
+        with open(filepath, "rb") as file:
+            inbytes = file.read()
 
-    def varint() -> int:
+    # validate filetype
+    if filetype not in block_formats.file_types:
+        print("skipped", filepath, "(unrecognized extension)")
+        return False, True
 
-        """decode a varint at the current offset in inbytes"""
+    if len(inbytes) == 0:
+        print("skipped", filepath, "(empty file)")
+        return False, True
 
-        value = 0  # value of the pointer, to be returned
-        offset = 0  # how many bytes were in the varInt, to be advanced later
-
-        b = inbytes[sum(offsets)]
-        value = b
-
-        while b > 127:  # continue until lack of continuation bit
-
-            offset += 1
-            value -= 128**offset  # subtract the value of the last byte's continuation bit
-
-            b = inbytes[sum(offsets) + offset]
-            value += b * (128**offset)
-
-        offsets[metalevel] += offset + 1
-        return value
-
-    def i32() -> float:
-
-        """unpack a float32LE from the first four bytes of inbytes"""
-
-        data = inbytes[sum(offsets) : sum(offsets) + 4]
-        offsets[metalevel] +=4
-        return struct.unpack("<f", data)[0]  # "<" for little endian, "f" for float. it returns a tuple, so we take the first item
-
-    def i64() -> float:
-
-        """unpack a float32LE from the first eight bytes of inbytes"""
-
-        data = inbytes[sum(offsets) : sum(offsets) + 8]
-        offsets[metalevel] +=8
-        return struct.unpack("<d", data)[0]  # "<" for little endian, "f" for float. it returns a tuple, so we take the first item
-
-    def chunk() -> str:
-
-        return (
-            inbytes[sum(offsets) : sum(offsets) + pointer]
-            .decode('latin1')
-            .replace("\r", "")
-            .replace("\t", config.style_indent)
-        )
+    formats[0] = block_formats_decode.block_formats[filetype]
 
     out_lines = []
     if config.style_lsp_prep:
         out_lines.append("--[[\n")
     if config.style_show_version:
-        out_lines.append("# rifted with FR v"+config.version_code+"\n\n")
+        out_lines.append(f"# rifted with FR v{config.version_code}\n\n")
 
-    offsets = [0] * 10
-    pointers = [0] * 10
-    formats = [{"name":"-"}] * 10
+    # cache frequently accessed values
+    inbytes_len = len(inbytes)
+    multiline_strs = block_formats.multiline_strs
+    style_after_tag = config.style_after_tag
+    style_after_record = config.style_after_record
+    style_before_block = config.style_before_block
+    style_after_block = config.style_after_block
+    style_before_chunk = config.style_before_chunk
+    style_indent = config.style_indent
+    style_show_field_name = config.style_show_field_name
+    style_lsp_prep = config.style_lsp_prep
 
-    metalevel = 0 # this keeps track of the nesting level
+    # optimized varint decoder
+    def varint() -> "tuple[int, int]":
+        """Decode a varint at the current offset in inbytes"""
+        nonlocal current_offset
 
-    indentation = ""
+        value = 0
+        offset = 0
+        shift = 0
 
-    filetype = ""
-    filetype_match = re.match(r"^.*\.(.*)$", filepath)
-    if filetype_match:
-        filetype = filetype_match.group(1)
-    else:
-        filetype = "fr"
-    
-    if filepath[:9] == "__stdin__":
-        with open("./lib/temp/stdin.fr", "rb") as file:
-            inbytes = file.read()
-        if inbytes[-1] == 10:
-            inbytes = inbytes[:-1]
-        if len(filepath) > 9:
-            filetype = filepath[9:]
-    else:
-        with open(filepath, "rb") as file:
-            inbytes = file.read()
+        while True:
+            if current_offset + offset >= inbytes_len:
+                break
 
-    if not filetype in block_formats.file_types:
-        print(config.colour_error+"unrecognized file extension: "+config.colour_reset, filetype)
-        util.log_append(filepath+": unrecognized file extension: "+filetype)
-        return False, True
-    formats[0] = block_formats.block_formats[filetype]
+            b = inbytes[current_offset + offset]
+            value |= (b & 0x7F) << shift
+            offset += 1
 
+            if b <= 127:  # no continuation bit
+                break
 
-    while sum(offsets) < len(inbytes):
+            shift += 7
 
-        format = formats[metalevel]
+        offsets[metalevel] += offset
+        return value, offset
 
-        tagbyte = varint()
-        if tagbyte == 7:
-            pointer = varint()
-            pointers[metalevel] = pointer
-            content = str(inbytes[sum(offsets) : sum(offsets) +  pointer])[1:]
-            out_lines.append(
-                indentation
-                + "Comment" + config.style_after_tag
-                +  content + config.style_after_record
-                + "\n"
-            )
-            offsets[metalevel] += pointer
-        taghex = hex(tagbyte)[2:].zfill(2)
+    # optimized struct unpacking with pre-compiled format strings
+    def i32() -> float:
+        """Unpack a float32LE from the current offset"""
+        nonlocal current_offset
+        data = inbytes[current_offset : current_offset + 4]
+        offsets[metalevel] += 4
+        return struct.unpack("<f", data)[0]
 
-        wiretype = ""
-        match tagbyte % 8:
-            case 0: wiretype = "varint"
-            case 1: wiretype = "i64"
-            case 2: wiretype = "len"
-            case 5: wiretype = "i32"
-            case 7: wiretype = "comment"
-        
-        tagname, tag_is_reference, tag_reference = util.match_tag(format, taghex)
-        if tagname == "No Match":
+    def i64() -> float:
+        """Unpack a float64LE from the current offset"""
+        nonlocal current_offset
+        data = inbytes[current_offset : current_offset + 8]
+        offsets[metalevel] += 8
+        return struct.unpack("<d", data)[0]
+
+    def get_chunk_content(pointer: int) -> str:
+        """Extract and process chunk content"""
+        content = inbytes[current_offset : current_offset + pointer].decode("latin1")
+        translation_table = str.maketrans({"\r": "", "\t": style_indent})
+        return content.translate(translation_table)
+
+    # main decoding loop
+    while sum(offsets) < inbytes_len:
+        format_dict = formats[metalevel]
+
+        # decode tag
+        try:
+            tagbyte, advance = varint()
+            current_offset += advance
+        except (IndexError, struct.error):
+            break
+
+        # handle comment tag early
+        if tagbyte == 2050:
+            try:
+                pointer, advance = varint()
+                current_offset += advance
+                pointers[metalevel] = pointer
+
+                if current_offset + pointer <= inbytes_len:
+                    content = str(inbytes[current_offset : current_offset + pointer])[
+                        1:
+                    ]
+                    out_lines.append(
+                        indentation
+                        + "Comment"
+                        + style_after_tag
+                        + content
+                        + style_after_record
+                        + "\n"
+                    )
+                    offsets[metalevel] += pointer
+                    current_offset += pointer
+                continue
+            except (IndexError, struct.error):
+                break
+
+        # determine wire type using bit operations (faster than modulo)
+        wiretype_map = {0: "varint", 1: "i64", 2: "len", 5: "i32"}
+        wiretype = wiretype_map.get(tagbyte & 7, "unknown")
+
+        if wiretype == "unknown":
+            continue
+
+        # convert tag to hex more efficiently
+        taghex = HEX_LOOKUP[tagbyte]
+
+        if taghex not in format_dict:
+            error_context = inbytes[max(0, current_offset - 10) : current_offset + 10]
             print(
                 config.colour_error
-                + "no match for tag "+config.colour_reset
-                + taghex + "\n"
-                + util.prettify_dict(format)
-                + filepath + ":" + str(sum(offsets))
+                + "decode error\n"
+                + config.colour_reset
+                + filepath
+                + ":"
+                + str(current_offset)
+                + ": "
+                + config.colour_error
+                + "no match for tag "
+                + config.colour_data
+                + taghex
+                + config.colour_reset
                 + "\n"
-                + str(inbytes[(sum(offsets)-10):(sum(offsets)+10)])[2:-1]
+                + util.prettify_dict(format_dict)
+                + str(error_context)[2:-1]
             )
             util.log_append(
-                filepath + ":" + str(sum(offsets)) + ":"
+                "decode error\n"
+                + filepath
+                + ":"
+                + str(current_offset)
+                + ": no match for tag "
+                + taghex
                 + "\n"
-                + "no match for tag "
-                + taghex + "\n"
-                + util.prettify_dict(format)
-                + str(inbytes)[2:-1] + "\n"
+                + util.prettify_dict(format_dict)
+                + str(error_context)[2:-1]
             )
             return False, True
 
-        if wiretype == "varint":
-            content = str(varint())
-            out_lines.append(
-                indentation
-                + tagname + config.style_after_tag
-                + content + config.style_after_record
-                + "\n"
+        tagdef = format_dict[taghex]
+        if isinstance(tagdef, str):
+            tagname = tagdef
+            tag_reference = "no"
+            tag_is_reference = False
+        elif isinstance(tagdef, dict):
+            tagname = tagdef["tagname"]
+            tag_is_reference = True
+            tag_reference = tagdef["classname"]
+        else:
+            print(
+                config.colour_error
+                + "block_formats error\n"
+                + config.colour_reset
+                + "invalid tagdef in "
+                + format_dict["classname"]
+                + ":"
+                + config.colour_data
+                + type(tagdef)
             )
-
-        if wiretype == "i64":
-            content = str(i64())
-            out_lines.append(
-                indentation
-                + tagname + config.style_after_tag
-                + content + config.style_after_record
-                + "\n"
+            util.log_append(
+                "block_formats error invalid tagdef in "
+                + format_dict["classname"]
+                + ":"
+                + type(tagdef)
             )
+            sys.exit(7)
 
-
-        if wiretype == "len":
-            pointer = varint()
-            pointers[metalevel] = pointer
-
-            if tag_is_reference:
-                message_string = (
+        # process based on wire type
+        try:
+            if wiretype == "varint":
+                content, advance = varint()
+                current_offset += advance
+                out_lines.append(
                     indentation
-                    + tagname + config.style_before_block
-                    + "{"
+                    + tagname
+                    + style_after_tag
+                    + str(content)
+                    + style_after_record
+                    + "\n"
                 )
-                if config.style_show_field_name: message_string += " # " + tag_reference
-                message_string += "\n"
-                out_lines.append(message_string)
 
-                metalevel += 1
-                formats[metalevel] = block_formats.block_formats[tag_reference]
-                indentation = config.style_indent * metalevel
+            elif wiretype == "i64":
+                content = i64()
+                current_offset += 8
+                out_lines.append(
+                    indentation
+                    + tagname
+                    + style_after_tag
+                    + str(content)
+                    + style_after_record
+                    + "\n"
+                )
 
-            else:
-                if tagname in block_formats.multiline_strs:
-                    content = chunk()
-                    if config.style_lsp_prep:
-                        out_lines.append(
-                            indentation
-                            + tagname + config.style_before_chunk
-                            + "\n"
-                            + "--]]\n"
-                            + content
-                            + "\n--[["
-                            + "\n$end\n"
+            elif wiretype == "i32":
+                content = i32()
+                current_offset += 4
+                out_lines.append(
+                    indentation
+                    + tagname
+                    + style_after_tag
+                    + str(content)
+                    + style_after_record
+                    + "\n"
+                )
+
+            elif wiretype == "len":
+                pointer, advance = varint()
+                current_offset += advance
+                pointers[metalevel] = pointer
+
+                if tag_is_reference:
+                    message_string = indentation + tagname + style_before_block + "{"
+                    if style_show_field_name:
+                        message_string += " # " + tag_reference
+                    message_string += "\n"
+                    out_lines.append(message_string)
+
+                    metalevel += 1
+                    if not isinstance(tagdef, dict):
+                        print(
+                            config.colour_error
+                            + "block_formats error\n"
+                            + config.colour_reset
+                            + "invalid tagdef in "
+                            + format_dict["classname"]
+                            + ":"
+                            + config.colour_data
+                            + type(tagdef)
                         )
-                    else:
-                        out_lines.append(
-                            indentation
-                            + tagname + config.style_before_chunk
-                            + "\n"
-                            + content
-                            + "\n$end\n"
+                        util.log_append(
+                            "block_formats error invalid tagdef in "
+                            + format_dict["classname"]
+                            + ":"
+                            + type(tagdef)
                         )
+                        sys.exit(7)
+                    formats[metalevel] = tagdef
+                    indentation = style_indent * metalevel
                 else:
-                    content = str(inbytes[sum(offsets) : sum(offsets) +  pointer])[1:]
-                    out_lines.append(
-                        indentation
-                        + tagname + config.style_after_tag
-                        + content + config.style_after_record
-                        + "\n"
-                    )
-                offsets[metalevel] += pointer
+                    if tagname in multiline_strs:
+                        content = get_chunk_content(pointer)
+                        if style_lsp_prep:
+                            out_lines.append(
+                                indentation
+                                + tagname
+                                + style_before_chunk
+                                + "\n--]]\n"
+                                + content
+                                + "\n--[[$end\n"
+                            )
+                        else:
+                            out_lines.append(
+                                indentation
+                                + tagname
+                                + style_before_chunk
+                                + "\n"
+                                + content
+                                + "\n$end\n"
+                            )
+                    else:
+                        if current_offset + pointer <= inbytes_len:
+                            content = str(
+                                inbytes[current_offset : current_offset + pointer]
+                            )[1:]
+                            out_lines.append(
+                                indentation
+                                + tagname
+                                + style_after_tag
+                                + content
+                                + style_after_record
+                                + "\n"
+                            )
 
-        if wiretype == "i32":
-            content = str(i32())
-            out_lines.append(
-                indentation
-                + tagname + config.style_after_tag
-                + content + config.style_after_record
-                + "\n"
-            )
+                    offsets[metalevel] += pointer
+                    current_offset += pointer
 
-        while offsets[metalevel] >= pointers[metalevel -1] and metalevel != 0:
+        except (IndexError, struct.error):
+            break
+
+        # handle block closing
+        while metalevel > 0 and offsets[metalevel] >= pointers[metalevel - 1]:
             metalevel -= 1
+            indentation = style_indent * metalevel
+            out_lines.append(indentation + "}" + style_after_block + "\n")
+            if metalevel == 0:
+                out_lines.append("\n")
 
-            indentation = config.style_indent * metalevel
-            out_lines.append(
-                indentation
-                + "}" + config.style_after_block
-                + "\n"
-            )
+            formats[metalevel + 1] = {"name": "-"}
+            pointers[metalevel + 1] = 0
+            offsets[metalevel] += offsets[metalevel + 1]
+            offsets[metalevel + 1] = 0
 
-            formats[metalevel +1] = {"name":"-"}
-
-            pointers[metalevel +1] = 0
-            offsets[metalevel] += offsets[metalevel +1]
-            offsets[metalevel +1] = 0
-
-    if config.style_lsp_prep:
+    # finalize output
+    if style_lsp_prep:
         out_lines.append("--]]")
-        
-    output = ""
-    for line in out_lines:
-        output += line 
 
+    output = "".join(out_lines)
+
+    # handle output
     if filepath[:9] == "__stdin__":
         sys.stdout.write(output)
         sys.exit(0)
 
-    outfilepath = filepath.replace("./de_in", "./de_out")
-    os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
+    resolved_filepath = Path(filepath).resolve()
+    working_dir = Path(config.working_dir).resolve()
+    # if os.path.isabs(filepath):
+    try:
+        resolved_filepath.relative_to(working_dir)
+        filepath = filepath.replace("de_in", "de_out")
+        dirpath, filepathleaf = os.path.split(filepath)
+        os.makedirs(dirpath, exist_ok=True)
+        outfilepath = os.path.join(dirpath, filepathleaf)
+    # else:
+    except:
+        dirpath, filepathleaf = os.path.split(filepath)
+        parts = dirpath.split(os.sep)
+        parts = [p.replace("%", "%%") for p in parts if p]
+        outdirpath = "%".join(parts)
+        outdirpath = os.path.join(config.working_dir, "de_out", "external", outdirpath)
+        os.makedirs(outdirpath, exist_ok=True)
+        outfilepath = os.path.join(outdirpath, filepathleaf)
+
     with open(outfilepath, "w") as file:
         file.write(output)
 
-    print(config.colour_success+"decoded: "+config.colour_reset+filepath[len("./de_in/"):])
-
+        print(
+            config.colour_success
+            + "decoded: "
+            + config.colour_reset
+            + util.path_tidy(filepath, "de_out")
+        )
     return True, False
