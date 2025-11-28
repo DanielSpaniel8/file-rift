@@ -4,6 +4,7 @@ import re
 import math
 import struct
 import subprocess
+import platform
 from pathlib import Path
 import config
 from lib import block_formats, util
@@ -348,7 +349,9 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                     filepath.replace(os.sep, "%"),
                 )
                 luac_args = (
-                    "./lib/luac -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                    os.path.join(
+                        "lib", "luac.exe" if platform.system() == "Windows" else "luac"
+                    ) + " -s -o " + chunk_cache_path + "%out " + chunk_cache_path
                 )
                 luac_out = subprocess.getoutput(luac_args)
 
@@ -419,7 +422,12 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
         if mode == "chunk":
             line_num += str.count(lexeme, "\n") + 2
-            chunk_cache_path = "./lib/chunk_cache/" + filepath.replace("/", "%")
+            chunk_cache_path = os.path.join(
+                ".",
+                "lib",
+                "chunk_cache",
+                filepath.replace(os.sep, "%"),
+            )
             if lexeme.strip()[-4:] == "--[[":
                 lexeme = lexeme.strip()[:-4]
             if (
@@ -444,7 +452,9 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 pass
             with open(chunk_cache_path, "w") as file:
                 file.write(lexeme)
-            luac_args = "./lib/luac -p " + chunk_cache_path
+            luac_args = os.path.join(
+                "lib", "luac.exe" if platform.system() == "Windows" else "luac",
+            ) + " -p " + chunk_cache_path
             luac_out = subprocess.getoutput(luac_args)
             if luac_out != "":
                 matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
@@ -468,9 +478,16 @@ def recode(args: list) -> "tuple[bool, str, bool]":
             mode = "tag"
 
             if config.compile_mode == "auto":
-                chunk_cache_path = "./lib/chunk_cache/" + filepath.replace("/", "%")
+                chunk_cache_path = os.path.join(
+                    ".",
+                    "lib",
+                    "chunk_cache",
+                    filepath.replace(os.sep, "%"),
+                )
                 luac_args = (
-                    "./lib/luac -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                    os.path.join(
+                        "lib", "luac.exe" if platform.system() == "Windows" else "luac"
+                    ) + " -s -o " + chunk_cache_path + "%out " + chunk_cache_path
                 )
                 luac_out = subprocess.getoutput(luac_args)
 
