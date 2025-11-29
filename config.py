@@ -9,7 +9,7 @@ project_name = "default"
 # if True, will prompt to get Tag Info or Template Info
 # if you want to get the prompt without waiting for recoding,
 #   set rift_mode to "pass"
-ask_for_info = False
+ask_for_info = True
 
 # should rift compile Bytes chunks only at the @compile keyword, or allways
 # or should it automatically add a Bytes chunk for you?

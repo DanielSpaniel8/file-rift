@@ -15,10 +15,9 @@ import re
 from lib import util, recode, decode, setup, build
 from multiprocessing import Pool, freeze_support
 
-# this sordid "name is main" rubbish is necessitated by Windows' atrocious multiprocessing failure
+# this sordid "name is main" rubbish is solely necessitated by Windows' atrocious multiprocessing failure
 if __name__ == "__main__":
-    freeze_support()
-
+    freeze_support()  # and this
 
     setup.config_repair()
     setup.build_block_formats()
@@ -75,12 +74,14 @@ if __name__ == "__main__":
         util.set_status("building " + config.project_name)
         build.build_advanced(config.project_name, False)
 
-    if (config.rift_mode in ["recode", "both"] or args.recode):
-        if args.recode:
-            path = args.recode
+    if config.rift_mode in ["recode", "both"] or args.recode:
+        if args.recode != None:
+            paths: "list[str]" = args.recode
+            if len(paths) == 0:
+                paths = [os.path.join(".", "re_in")]
         else:
-            path = os.path.join(".", "re_in")
-        fileslist = util.path(path, "re_in", True, True)
+            paths = [os.path.join(".", "re_in")]
+        fileslist = [item for s in paths for item in util.path(s, "re_in", True, True)]
         tested_fileslist = []
         for path in fileslist:
             try:
@@ -108,15 +109,17 @@ if __name__ == "__main__":
             if error:
                 exit_code = 1
 
-    if (config.rift_mode in ["decode", "user", "both"] or args.decode):
-        if args.decode:
-            path = args.decode
+    if config.rift_mode in ["decode", "user", "both"] or args.decode:
+        if args.decode != None:
+            paths: "list[str]" = args.decode
+            if len(paths) == 0:
+                paths = [os.path.join(".", "de_in")]
         else:
             if config.rift_mode == "decode":
-                path = os.path.join(".", "de_in")
+                paths = [os.path.join(".", "de_in")]
             else:
-                path = os.path.join(".", "de_in", config.user_folder)
-        fileslist = util.path(path, "de_in", True, True)
+                paths = [os.path.join(".", "de_in", config.user_folder)]
+        fileslist = [item for s in paths for item in util.path(s, "de_in", True, True)]
         outlist = Pool().map(decode.decode, fileslist)
         for result, error in outlist:
             if result:

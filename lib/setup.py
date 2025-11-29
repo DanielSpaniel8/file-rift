@@ -13,16 +13,14 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "-r",
         "--recode",
-        nargs="?",
-        const="",
+        nargs="*",
         default=None,
         help="run in recode mode",
     )
     parser.add_argument(
         "-d",
         "--decode",
-        nargs="?",
-        const="",
+        nargs="*",
         default=None,
         help="run in decode mode",
     )
@@ -38,8 +36,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "-f",
         "--force",
-        nargs="?",
-        const="",
+        nargs="*",
         default=None,
         help="run in recode mode with allways_recode turned on",
     )
@@ -203,14 +200,6 @@ def config_repair():
         try:
             globals()[k]
         except KeyError:
-            # print(
-            #     config.colour_error + "config error\n"
-            #     + config.colour_reset + "config option " + k
-            #     + "missing\ndefaulting to "
-            #     + config.colour_data + default
-            #     + config.colour_reset
-            # )
-            # util.log_append("config error config option " + k + "missing, defaulting to " + default)
             setattr(config, k, default)
             continue
         else:
