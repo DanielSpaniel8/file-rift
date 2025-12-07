@@ -1,7 +1,9 @@
+Comment : '1',
 Name : 'font_megalopolis_10',
 Texture{ # Texture
     Name : 'font_megalopolis_10',
     PixelFormat : 7,
+    Comment : '2',
     ImageType : 0,
 }
 
@@ -13,6 +15,7 @@ Glyph{ # Font_Glyph
         Width : 5.0,
         Height : 7.0,
     }
+    Comment : 'Error',
     HorizAdvance : 7,
     TextureBounds{ # Rectangle
         X : 0.0,

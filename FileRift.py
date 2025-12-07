@@ -1,4 +1,5 @@
 import os
+import signal
 
 filerift_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(filerift_path)
@@ -15,15 +16,16 @@ import re
 from lib import util, recode, decode, setup, build
 from multiprocessing import Pool, freeze_support
 
-# this sordid "name is main" rubbish is solely necessitated by Windows' atrocious multiprocessing failure
-if __name__ == "__main__":
-    freeze_support()  # and this
 
-    setup.config_repair()
+def main():
+    freeze_support()
+
+    exit_code = 0
+    if setup.config_repair():
+        exit_code = 3
     setup.build_block_formats()
     args = setup.get_args()
 
-    exit_code = 0
     decoded_count = 0
     recoded_count = 0
     skipped_count = 0
@@ -74,6 +76,10 @@ if __name__ == "__main__":
         util.set_status("building " + config.project_name)
         build.build_advanced(config.project_name, False)
 
+    def init_worker():
+        """initialize a worker to ignore SIGINT"""
+        signal.signal(signal.SIGINT, signal.SIG_IGN)
+
     if config.rift_mode in ["recode", "both"] or args.recode:
         if args.recode != None:
             paths: "list[str]" = args.recode
@@ -81,6 +87,7 @@ if __name__ == "__main__":
                 paths = [os.path.join(".", "re_in")]
         else:
             paths = [os.path.join(".", "re_in")]
+        util.set_status("recoding " + str(paths[0]))
         fileslist = [item for s in paths for item in util.path(s, "re_in", True, True)]
         tested_fileslist = []
         for path in fileslist:
@@ -99,15 +106,26 @@ if __name__ == "__main__":
                 continue
             tested_fileslist.append([file_content, path])
 
-        outlist = Pool().map(recode.recode, tested_fileslist)
-        for result, filepath, error in outlist:
-            if result:
-                recoded_count += 1
-            else:
-                util.pop_from_manifest(filepath)
-                skipped_count += 1
-            if error:
-                exit_code = 1
+        pool = Pool(initializer=init_worker)
+        try:
+            results = pool.map_async(recode.recode_start, tested_fileslist)
+            outlist = results.get(timeout=9999999)
+            for result, filepath, error in outlist:
+                if result:
+                    recoded_count += 1
+                else:
+                    util.pop_from_manifest(filepath)
+                    skipped_count += 1
+                if error:
+                    exit_code = 1
+        except KeyboardInterrupt:
+            pool.terminate()
+            pool.join()
+            util.set_status()
+            sys.exit(8)
+        else:
+            pool.close()
+            pool.join()
 
     if config.rift_mode in ["decode", "user", "both"] or args.decode:
         if args.decode != None:
@@ -119,15 +137,30 @@ if __name__ == "__main__":
                 paths = [os.path.join(".", "de_in")]
             else:
                 paths = [os.path.join(".", "de_in", config.user_folder)]
+        if config.rift_mode == "user":
+            util.set_status("decoding " + config.user_folder)
+        else:
+            util.set_status("decoding " + str(paths[0]))
         fileslist = [item for s in paths for item in util.path(s, "de_in", True, True)]
-        outlist = Pool().map(decode.decode, fileslist)
-        for result, error in outlist:
-            if result:
-                decoded_count += 1
-            else:
-                skipped_count += 1
-            if error:
-                exit_code = 1
+        pool = Pool(initializer=init_worker)
+        try:
+            results = pool.map_async(decode.decode, fileslist)
+            outlist = results.get(timeout=9999999)
+            for result, error in outlist:
+                if result:
+                    decoded_count += 1
+                else:
+                    skipped_count += 1
+                if error:
+                    exit_code = 1
+        except KeyboardInterrupt:
+            pool.terminate()
+            pool.join()
+            util.set_status()
+            sys.exit(8)
+        else:
+            pool.close()
+            pool.join()
 
     if config.ask_for_info:
         info_path = input("info path: ")
@@ -158,3 +191,10 @@ if __name__ == "__main__":
     print("\n" + results + "\n" + "File Rift v" + config.version_code)
     util.set_status()
     sys.exit(exit_code)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        util.set_status()

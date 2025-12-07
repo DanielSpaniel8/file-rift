@@ -1628,29 +1628,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 20,
                     NumFaces : 14,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -1692,29 +1692,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 8,
                     NumFaces : 6,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -1756,23 +1756,23 @@ Template{ # ObjectTemplate
                 FrontMesh{ # Mesh
                     NumVertices : 6,
                     NumFaces : 2,
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2545,29 +2545,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 22,
                     NumFaces : 20,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2609,29 +2609,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 22,
                     NumFaces : 20,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2673,29 +2673,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 22,
                     NumFaces : 20,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2737,29 +2737,29 @@ Template{ # ObjectTemplate
                 SurfaceMesh{ # Mesh
                     NumVertices : 8,
                     NumFaces : 6,
-                    Indices{ # Square
-                        X : 4,
-                        Y : 1,
-                        Width : 2,
-                        Height : 0,
+                    Indices{ # MeshData
+                        ValueType : 4,
+                        ValuesPerVertex : 1,
+                        Stride : 2,
+                        DataOffset : 0,
                     }
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2801,23 +2801,23 @@ Template{ # ObjectTemplate
                 FrontMesh{ # Mesh
                     NumVertices : 60,
                     NumFaces : 20,
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor
@@ -2858,23 +2858,23 @@ Template{ # ObjectTemplate
                 FrontMesh{ # Mesh
                     NumVertices : 33,
                     NumFaces : 11,
-                    Vertices{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 0,
+                    Vertices{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 0,
                     }
-                    Normals{ # Square
-                        X : 7,
-                        Y : 3,
-                        Width : 32,
-                        Height : 12,
+                    Normals{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 3,
+                        Stride : 32,
+                        DataOffset : 12,
                     }
-                    TexCoordSet{ # Square
-                        X : 7,
-                        Y : 2,
-                        Width : 32,
-                        Height : 24,
+                    TexCoordSet{ # MeshData
+                        ValueType : 7,
+                        ValuesPerVertex : 2,
+                        Stride : 32,
+                        DataOffset : 24,
                     }
                     Material{ # MeshMaterial
                         AmbientColor{ # FloatColor

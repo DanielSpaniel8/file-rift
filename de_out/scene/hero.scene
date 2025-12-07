@@ -266,10 +266,10 @@ ObjectLibrary{ # ObjectLibrary
     ImportedLibrary : 'game_common',
 }
 
-Bounds{ # SceneBounds
-    Top : -3500.0,
-    Left : -500.0,
-    Right : 5500.0,
-    Bottom : 2000.0,
+Bounds{ # Rectangle
+    X : -3500.0,
+    Y : -500.0,
+    Width : 5500.0,
+    Height : 2000.0,
 }
 

@@ -7,6 +7,8 @@ import importlib.util
 def load():
     """if config.py is present in the config directory,
     load that in place of the usual relative config.py"""
+    # we'll prevent bytecode from generating for the config file, and restore this setting later
+    dont_write_bytecode = sys.dont_write_bytecode
     if sys.platform == "win32":
         config_dir = os.path.join(Path.home(), "AppData", "Roaming", "filerift")
     else:
@@ -19,9 +21,11 @@ def load():
         if not os.path.exists(config_path):
             with open("config.py", "w") as file:
                 file.write("")
+    sys.dont_write_bytecode = True
     spec = importlib.util.spec_from_file_location("config", config_path)
     if spec != None:
         config = importlib.util.module_from_spec(spec)
         if spec.loader != None:
             spec.loader.exec_module(config)
             sys.modules["config"] = config
+    sys.dont_write_bytecode = dont_write_bytecode

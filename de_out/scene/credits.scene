@@ -129,7 +129,7 @@ Object{ # SceneObject
         Identifier : 3,
         HealthComponent{ # HealthComponent
             MaxHealth : 10,
-            HEALTHTYPE : 0,
+            HEALTH_TYPE : 0,
             BarOffset{ # Vector3
                 X : 0.0,
                 Y : 50.0,
@@ -417,7 +417,7 @@ Object{ # SceneObject
         Identifier : 118,
         HealthComponent{ # HealthComponent
             MaxHealth : 1,
-            HEALTHTYPE : 0,
+            HEALTH_TYPE : 0,
             BarOffset{ # Vector3
                 X : 0.0,
                 Y : 50.0,
@@ -829,7 +829,7 @@ $end
         Identifier : 130,
         HealthComponent{ # HealthComponent
             MaxHealth : 5,
-            HEALTHTYPE : 0,
+            HEALTH_TYPE : 0,
             BarOffset{ # Vector3
                 X : 0.0,
                 Y : 50.0,
@@ -1335,7 +1335,7 @@ $end
         Identifier : 120,
         HealthComponent{ # HealthComponent
             MaxHealth : 10,
-            HEALTHTYPE : 0,
+            HEALTH_TYPE : 0,
             BarOffset{ # Vector3
                 X : 0.0,
                 Y : 50.0,
@@ -2916,29 +2916,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 30,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -2980,29 +2980,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3044,29 +3044,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3108,29 +3108,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 28,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3172,29 +3172,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 20,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3236,29 +3236,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 24,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3300,29 +3300,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 28,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3364,29 +3364,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 27,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3428,29 +3428,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 28,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3492,29 +3492,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 27,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3556,29 +3556,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3620,29 +3620,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 28,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3684,29 +3684,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 24,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3748,29 +3748,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 20,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3812,29 +3812,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 14,
                 NumFaces : 10,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3876,29 +3876,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 22,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -3940,29 +3940,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 30,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4004,29 +4004,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 22,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4068,29 +4068,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 32,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4132,29 +4132,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 22,
                 NumFaces : 20,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4196,29 +4196,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 4,
                 NumFaces : 2,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4260,23 +4260,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4317,23 +4317,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4374,23 +4374,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4431,23 +4431,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -4488,23 +4488,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 12,
                 NumFaces : 4,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -5345,29 +5345,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 20,
                 NumFaces : 14,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -5409,29 +5409,29 @@ Object{ # SceneObject
             SurfaceMesh{ # Mesh
                 NumVertices : 8,
                 NumFaces : 6,
-                Indices{ # Square
-                    X : 4,
-                    Y : 1,
-                    Width : 2,
-                    Height : 0,
+                Indices{ # MeshData
+                    ValueType : 4,
+                    ValuesPerVertex : 1,
+                    Stride : 2,
+                    DataOffset : 0,
                 }
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -5473,23 +5473,23 @@ Object{ # SceneObject
             FrontMesh{ # Mesh
                 NumVertices : 6,
                 NumFaces : 2,
-                Vertices{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 0,
+                Vertices{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 0,
                 }
-                Normals{ # Square
-                    X : 7,
-                    Y : 3,
-                    Width : 32,
-                    Height : 12,
+                Normals{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 3,
+                    Stride : 32,
+                    DataOffset : 12,
                 }
-                TexCoordSet{ # Square
-                    X : 7,
-                    Y : 2,
-                    Width : 32,
-                    Height : 24,
+                TexCoordSet{ # MeshData
+                    ValueType : 7,
+                    ValuesPerVertex : 2,
+                    Stride : 32,
+                    DataOffset : 24,
                 }
                 Material{ # MeshMaterial
                     AmbientColor{ # FloatColor
@@ -6988,11 +6988,11 @@ $end
     }
 }
 
-Bounds{ # SceneBounds
-    Top : -5000.0,
-    Left : -700.0,
-    Right : 23000.0,
-    Bottom : 10700.0,
+Bounds{ # Rectangle
+    X : -5000.0,
+    Y : -700.0,
+    Width : 23000.0,
+    Height : 10700.0,
 }
 
 Group{ # SceneObjectGroup

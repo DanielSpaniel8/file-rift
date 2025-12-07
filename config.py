@@ -9,9 +9,9 @@ project_name = "default"
 # if True, will prompt to get Tag Info or Template Info
 # if you want to get the prompt without waiting for recoding,
 #   set rift_mode to "pass"
-ask_for_info = True
+ask_for_info = False
 
-# should rift compile Bytes chunks only at the @compile keyword, or allways
+# should rift compile Bytes chunks only at the @compile trigger, or allways
 # or should it automatically add a Bytes chunk for you?
 compile_mode = "keyword"  # keyword, all, auto
 
@@ -37,9 +37,17 @@ style_show_version = False
 # if True, will add lua block comments around everything that isn't a lua chunk
 style_lsp_prep = False
 
-# if False, colouring will not be used in output
+# if True, comments will persist after recoding your files
+preserve_comments = True
+# if True, triggers will persist after recoding your files
+preserve_triggers = True
+# if True, degree conversion marks will persist after recoding your files
+preserve_degrees = True
+
+# if False, colouring will not be used in printed output
 colour_enabled = True
 
+# use ansii escape codes to style printed output
 colour_success = "\033[1;32m"  # default : "\033[1;32m"
 colour_error = "\033[1;31m"  # default : "\033[1;31m"
 colour_warning = "\033[1;33m"  # default : "\033[1;33m"
@@ -49,9 +57,10 @@ colour_reset = "\033[0m"  # default : "\033[0m"
 # if logging is not "none", error messages will be appended to /log.txt
 # you can use a string or a list of strings to choose what type(s) of errors to append
 # default : ["decode", "recode"]
-logging = [
-    "decode",
-    "recode",
-]  # ["none", "all", "general", "argument", "config", "file_not_found", "decode", "recode", "system"]
+logging = "all"  # ["none", "all", "general", "argument", "config", "file_not_found", "decode", "recode", "system"]
+
+# if True, output FileRift's status to "./status"
+# if a string is supplied, output the status to that file
+status = True
 
 version_code = "5.8.1"

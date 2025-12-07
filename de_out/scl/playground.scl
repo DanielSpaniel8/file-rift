@@ -190,7 +190,7 @@ $end
             Identifier : 120,
             HealthComponent{ # HealthComponent
                 MaxHealth : 3,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -522,7 +522,7 @@ $end
             Identifier : 130,
             HealthComponent{ # HealthComponent
                 MaxHealth : 2,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -1136,7 +1136,7 @@ $end
             Identifier : 120,
             HealthComponent{ # HealthComponent
                 MaxHealth : 3,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -1615,7 +1615,7 @@ $end
             Identifier : 120,
             HealthComponent{ # HealthComponent
                 MaxHealth : 10,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -2079,7 +2079,7 @@ $end
             Identifier : 120,
             HealthComponent{ # HealthComponent
                 MaxHealth : 10,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -2146,7 +2146,7 @@ $end
             Identifier : 136,
             SkillComponent{ # SkillComponent
                 CastFinishAnimationId : 0,
-                Origin{ # Vector3
+                Origin{ # Vector2
                     X : 80.0,
                     Y : 30.0,
                 }
@@ -2763,7 +2763,7 @@ $end
             Identifier : 120,
             HealthComponent{ # HealthComponent
                 MaxHealth : 10,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -2833,7 +2833,7 @@ $end
             Identifier : 136,
             SkillComponent{ # SkillComponent
                 CastFinishAnimationId : 0,
-                Origin{ # Vector3
+                Origin{ # Vector2
                     X : 80.0,
                     Y : 30.0,
                 }

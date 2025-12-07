@@ -125,8 +125,8 @@ def decode(filepath: str) -> "tuple[bool, bool]":
         except (IndexError, struct.error):
             break
 
-        # handle comment tag early
-        if tagbyte == 2050:
+        # handle persistent comment tag early
+        if tagbyte == 4098:
             try:
                 pointer, advance = varint()
                 current_offset += advance
@@ -168,12 +168,14 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                 + config.colour_reset
                 + filepath
                 + ":"
-                + str(current_offset)
+                + hex(current_offset - 1)
                 + ": "
                 + config.colour_error
                 + "no match for tag "
                 + config.colour_data
                 + taghex
+                + "/"
+                + str(tagbyte)
                 + config.colour_reset
                 + "\n"
                 + util.prettify_dict(format_dict)

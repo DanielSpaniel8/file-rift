@@ -634,7 +634,7 @@ Template{ # ObjectTemplate
             Identifier : 107,
             HealthComponent{ # HealthComponent
                 MaxHealth : 800,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 50.0,
@@ -897,7 +897,7 @@ $end
             Identifier : 137,
             SkillComponent{ # SkillComponent
                 CastFinishAnimationId : 0,
-                Origin{ # Vector3
+                Origin{ # Vector2
                     X : 70.0,
                     Y : 50.0,
                 }

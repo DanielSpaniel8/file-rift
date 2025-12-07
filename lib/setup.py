@@ -126,7 +126,12 @@ def build_block_formats():
     block_formats_built = {}
     for i in block_formats.file_types:
         block_formats_built[i] = recur(
-            block_formats.block_formats[i], "", "", i, "", False
+            block_formats.block_formats[block_formats.file_types[i]],
+            "",
+            "",
+            i,
+            "",
+            False,
         )
     with open("lib/block_formats_decode.py", "w") as file:
         file.write("block_formats = " + str(block_formats_built))
@@ -134,7 +139,8 @@ def build_block_formats():
     block_formats_decode.block_formats = block_formats_built
 
 
-def config_repair():
+def config_repair() -> bool:
+    config_error = False
     expected_states = {
         "rift_mode": ["decode", "recode", "both", "user", "pass", "touch_grass"],
         "allways_recode": bool,
@@ -152,12 +158,16 @@ def config_repair():
         "style_show_field_name": bool,
         "style_show_version": bool,
         "style_lsp_prep": bool,
+        "preserve_comments": bool,
+        "preserve_triggers": bool,
+        "preserve_degrees": bool,
         "colour_enabled": bool,
         "colour_success": str,
         "colour_error": str,
         "colour_warning": str,
         "colour_data": str,
-        "colour_reset": str,
+        "colour_reset": str,  # logging is handle later
+        "status": [True, False, str],
         "version_code": str,
     }
 
@@ -178,6 +188,9 @@ def config_repair():
         "style_show_field_name": True,
         "style_show_version": False,
         "style_lsp_prep": False,
+        "preserve_comments": True,
+        "preserve_triggers": True,
+        "preserve_degrees": True,
         "colour_enabled": True,
         "colour_success": "\033[1;32m",
         "colour_error": "\033[1;31m",
@@ -185,6 +198,7 @@ def config_repair():
         "colour_data": "\033[1;34m",
         "colour_reset": "\033[0m",
         "logging": ["recode", "decode"],
+        "status": False,
         "version_code": "5.8.1",
     }
 
@@ -205,7 +219,7 @@ def config_repair():
         else:
             option = globals()[k]
         if isinstance(v, list):
-            if option not in v:
+            if option not in v and type(option) not in v:
                 print(
                     config.colour_error
                     + "config error\n"
@@ -218,7 +232,7 @@ def config_repair():
                     + str(v)
                     + "\ndefaulting to "
                     + config.colour_data
-                    + default
+                    + str(default)
                     + config.colour_reset
                 )
                 util.log_append(
@@ -229,8 +243,9 @@ def config_repair():
                     + " is not one of "
                     + str(v)
                     + " defaulting to "
-                    + default
+                    + str(default)
                 )
+                config_error = True
                 setattr(config, k, default)
         else:
             if not isinstance(option, v):
@@ -259,6 +274,7 @@ def config_repair():
                     + ", defaulting to "
                     + default
                 )
+                config_error = True
                 setattr(config, k, default)
 
     if style_indent.strip() != "":
@@ -272,9 +288,10 @@ def config_repair():
         util.log_append(
             "config error style_indent must be whitespace, defaulting to 4 spaces"
         )
+        config_error = True
         setattr(config, "style_indent", "    ")
 
-    if len(style_before_chunk.replace("$", "")) == len(style_before_chunk):
+    if len(style_before_chunk.removesuffix("$")) == len(style_before_chunk):
         print(
             config.colour_error
             + "config error\n"
@@ -288,6 +305,7 @@ def config_repair():
             + "defaulting to "
             + defaults["style_before_chunk"]
         )
+        config_error = True
         setattr(config, "style_before_chunk", defaults["style_before_chunk"])
 
     style_translation = str.maketrans("=:;,", "    ")
@@ -320,6 +338,7 @@ def config_repair():
                 + "defaulting to "
                 + defaults["logging"]
             )
+            config_error = True
             setattr(config, "logging", defaults["logging"])
         else:
             setattr(config, "logging", [logging])
@@ -336,6 +355,7 @@ def config_repair():
             "config error logging is not of type str of list, defaulting to "
             + str(defaults["logging"])
         )
+        config_error = True
         setattr(config, "logging", defaults["logging"])
     else:
         corrected_logging = logging
@@ -355,6 +375,7 @@ def config_repair():
                     + str(v)
                     + ") removing it"
                 )
+                config_error = True
                 corrected_logging.pop(k)
         setattr(config, "logging", corrected_logging)
 
@@ -384,3 +405,5 @@ def config_repair():
                 + defaults[i]
                 + '"'
             )
+            config_error = True
+    return config_error

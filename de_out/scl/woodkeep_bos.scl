@@ -703,7 +703,7 @@ $end
             Identifier : 109,
             HealthComponent{ # HealthComponent
                 MaxHealth : 10,
-                HEALTHTYPE : 0,
+                HEALTH_TYPE : 0,
                 BarOffset{ # Vector3
                     X : 0.0,
                     Y : 100.0,
@@ -903,7 +903,7 @@ $end
             Identifier : 132,
             SkillComponent{ # SkillComponent
                 CastFinishAnimationId : 0,
-                Origin{ # Vector3
+                Origin{ # Vector2
                     X : 70.0,
                     Y : 50.0,
                 }

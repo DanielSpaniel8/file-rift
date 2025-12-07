@@ -139,7 +139,12 @@ def log_append(message: str, error_type: "int|str" = "general"):
 
 
 def set_status(status: str = ""):
-    with open("./status", "w") as file:
+    if not config.status:
+        return
+    path = "./status"
+    if isinstance(config.status, str):
+        path = config.status
+    with open(path, "w") as file:
         file.write(status)
 
 
@@ -363,6 +368,8 @@ def get_bf_path(path: str) -> "list[str]":
 
 def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
     base_name = path[0]
+    if base_name in block_formats.file_types:
+        base_name = block_formats.file_types[base_name]
     try:
         format = block_formats.block_formats[base_name]
     except:
@@ -410,6 +417,30 @@ def get_template_info(name: str) -> str:
     template_list = get_templates()
     template_filename = ""
 
+    if name == "help":
+        output = (
+            f"{config.colour_data}FileRift{config.colour_reset} info system\n"
+            + "  `block/Formats/Path` : show information about a section or filetype e.g.\n"
+            + "    `Component/HealthComponent`\n"
+            + "    `MapNode`\n"
+            + "    `scl`\n"
+            + "  `my_project/file_name:line_number` : find the tag at the specified line in the file e.g.\n"
+            + "    `test/hiro.scl:56`\n"
+            + "    `mines_part21:884`\n"
+            + "  `.template_name` : show information about a template e.g.\n"
+            + "    `.source`\n"
+            + "  `.list` : show a list of templates\n"
+            + "  `.triggers` : show a list of @triggers\n"
+            + "  `.exitcodes` : list exit codes and error types\n"
+            + "  `.workingdir` : show the working directory\n"
+            + "  `.filerift` : what is FileRift?\n"
+        )
+        return re.sub(
+            r" `([\w/\.:]+)`",
+            rf" `{config.colour_data}\1{config.colour_reset}`",
+            output,
+        )
+
     if name == "list":
         if config.rift_mode == "touch_grass":
             print("unable to perform the request")
@@ -424,15 +455,23 @@ def get_template_info(name: str) -> str:
         triggers = {
             "compile": "(a.k.a. @comp) compile the previous lua chunk and add it to a string",
             "line": "print line number",
-            "halt": "pause recoding, wait for input",
+            "halt": "pause recoding, wait for input, type `stop` to stop recoding",
             "stop": "stop recoding, write output to file",
             "print": "display all globals, all locals or the value of a local variable",
         }
         output = "filerift recode triggers\n"
         for k, v in triggers.items():
             output += (
-                "  " + config.colour_data + "@" + k + config.colour_reset + ": " + v
+                "  "
+                + config.colour_data
+                + "@"
+                + k
+                + config.colour_reset
+                + ": "
+                + v
+                + "\n"
             )
+        return output
 
     if name == "exitcodes":
         exit_codes = {
@@ -444,6 +483,7 @@ def get_template_info(name: str) -> str:
             5: "decode error",
             6: "recode error",
             7: "filerift system error",
+            8: "keyboard interrupt",
         }
         output = "filerift exit codes\n"
         for k, v in exit_codes.items():
@@ -453,20 +493,20 @@ def get_template_info(name: str) -> str:
                 + str(k)
                 + config.colour_reset
                 + " = "
-                + config.colour_error
+                + (config.colour_success if k == 0 else config.colour_error)
                 + v
                 + "\n"
             )
         return output
 
     if name == "filerift":
-        return f"{config.colour_data}filerift{config.colour_reset} is decoder/recoder for {config.colour_data}Swordigo{config.colour_reset}'s Protocol Buffers files."
+        return f"{config.colour_data}FileRift{config.colour_reset} is decoder/recoder for {config.colour_data}Swordigo{config.colour_reset}'s Protocol Buffers files."
 
-    if name == "working_dir":
+    if name == "workingdir":
         return config.working_dir
 
     if name == "selma":
-        return f'{config.colour_success}"Here lies Selma, the non-human developer."{config.colour_reset}'
+        return f'\n{config.colour_success}"Here lies Selma, the non-human developer."{config.colour_reset}\n'
 
     for entry in template_list:
         if entry[0] == name:
@@ -657,32 +697,10 @@ def skim_dict(block_formats: dict, name) -> str:
     for key, value in items:
         tag = value[0]
         doc_string = value[1]
-        if tag == "unk":
-            continue
-        key_num = int(value[0], base=16)
-        wire_type = "unknown"
-        match key_num % 8:
-            case 0:
-                wire_type = "int"
-            case 2:
-                wire_type = "str"
-            case 5:
-                wire_type = "float"
-
-        if len(value) == 3:
-            out_str += (
-                "  "
-                + config.colour_data
-                + tag.rjust(3)
-                + config.colour_reset
-                + " : "
-                + key
-                + f" ({config.colour_data}message{config.colour_reset})  "
-                + doc_string.replace("\n", "\n        ")
-                + "\n"
-            )
-            continue
-
+        doc_string = doc_string.replace("\n", "\n        ")
+        doc_string = re.sub(
+            r"^\((.*)\)", rf"({config.colour_data}\1{config.colour_reset})", doc_string
+        )
         out_str += (
             "  "
             + config.colour_data
@@ -690,7 +708,6 @@ def skim_dict(block_formats: dict, name) -> str:
             + config.colour_reset
             + " : "
             + key
-            + f" ({config.colour_data+wire_type+config.colour_reset})"
             + "  "
             + doc_string.replace("\n", "\n        ")
             + "\n"
@@ -729,7 +746,7 @@ def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
 
 def match_tagname(block_format: dict, tagname: str) -> "tuple[str, bool, str]":
     if tagname == "Comment":
-        return "802", False, ""
+        return "1002", False, ""
     if not tagname in block_format:
         return "00", False, ""
     value = block_format[tagname]

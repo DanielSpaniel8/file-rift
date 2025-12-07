@@ -106,6 +106,14 @@ def lex(lines: str) -> "list[str]":
     return lex_list
 
 
+def recode_start(args: list) -> "tuple[bool, str, bool]":
+    filepath = args[1]
+    try:
+        return recode(args)
+    except KeyboardInterrupt:
+        return False, filepath, False
+
+
 def recode(args: list) -> "tuple[bool, str, bool]":
     """takes a list with file content and path
     returns a list with:
@@ -206,7 +214,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
     lex_list = lex(file_content)
 
     formats = [{}] * 10
-    formats[0] = block_formats.block_formats[filetype]
+    formats[0] = block_formats.block_formats[block_formats.file_types[filetype]]
     format = formats[0]
     message_names = ["root"] + ([""] * 9)
 
@@ -254,7 +262,8 @@ def recode(args: list) -> "tuple[bool, str, bool]":
             continue
 
         if lexeme == "@halt":
-            input("@ halted " + filepath + " > ")
+            if input("@ halted " + filepath + " > ") == "stop":
+                break
             continue
 
         if lexeme == "@stop":
@@ -351,7 +360,11 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 luac_args = (
                     os.path.join(
                         "lib", "luac.exe" if platform.system() == "Windows" else "luac"
-                    ) + " -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                    )
+                    + " -s -o "
+                    + chunk_cache_path
+                    + "%out "
+                    + chunk_cache_path
                 )
                 luac_out = subprocess.getoutput(luac_args)
 
@@ -452,9 +465,14 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 pass
             with open(chunk_cache_path, "w") as file:
                 file.write(lexeme)
-            luac_args = os.path.join(
-                "lib", "luac.exe" if platform.system() == "Windows" else "luac",
-            ) + " -p " + chunk_cache_path
+            luac_args = (
+                os.path.join(
+                    "lib",
+                    "luac.exe" if platform.system() == "Windows" else "luac",
+                )
+                + " -p "
+                + chunk_cache_path
+            )
             luac_out = subprocess.getoutput(luac_args)
             if luac_out != "":
                 matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
@@ -487,7 +505,11 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 luac_args = (
                     os.path.join(
                         "lib", "luac.exe" if platform.system() == "Windows" else "luac"
-                    ) + " -s -o " + chunk_cache_path + "%out " + chunk_cache_path
+                    )
+                    + " -s -o "
+                    + chunk_cache_path
+                    + "%out "
+                    + chunk_cache_path
                 )
                 luac_out = subprocess.getoutput(luac_args)
 
