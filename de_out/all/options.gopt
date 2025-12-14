@@ -1,196 +1,195 @@
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'menu',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '1-hero2',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'house',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '1-plaintest2',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'outdoors_light',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : 'squire_new2',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'forest',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '2cave2',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'cave',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '2cave2',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'dungeon1',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '1-dung73',
         Volume : 0.5,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'boss',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : '1-boss23',
         Volume : 0.75,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'bosskill',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : 'momentofwonder',
         Volume : 0.75,
     }
 }
 
-Playlist{ # MusicPlaylist
+Playlist{  ## MusicPlaylist
     Name : 'heartbeat',
-    Track{ # MusicTrack
+    Track{  ## MusicTrack
         ResourceName : 'heartbeat',
         Volume : 1.0,
     }
 }
 
-PhoneControlsLayout{ # GUIViewLayout
-    Subview{ # GUIViewLayout
+PhoneControlsLayout{  ## GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'left',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 20.0,
             Bottom : 10.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'right',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 100.0,
             Bottom : 10.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'jump',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 20.0,
             Bottom : 20.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'swing',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 100.0,
             Bottom : 10.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'skill',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 5.0,
             Bottom : 90.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'skillToggle',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 10.0,
             Top : 17.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'menu',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 10.0,
             Top : 8.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'consumables',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 209.0,
             Bottom : 10.0,
         }
     }
 }
 
-PadControlsLayout{ # GUIViewLayout
-    Subview{ # GUIViewLayout
+PadControlsLayout{  ## GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'left',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 10.0,
             Bottom : 30.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'right',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 68.0,
             Bottom : 30.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'jump',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 10.0,
             Bottom : 38.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'swing',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 68.0,
             Bottom : 30.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'skill',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 5.0,
             Bottom : 86.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'skillToggle',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Right : 10.0,
             Top : 17.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'menu',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 10.0,
             Top : 8.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'consumables',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Left : 225.0,
             Bottom : 15.0,
         }
     }
-    Subview{ # GUIViewLayout
+    Subview{  ## GUIViewLayout
         Identifier : 'exp',
-        Margins{ # GUIMargins
+        Margins{  ## GUIMargins
             Bottom : 80.0,
         }
     }
 }
-

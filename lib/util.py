@@ -265,7 +265,7 @@ def get_info(path: str) -> str:
         format, format_name = get_bf_from_path(path.split("/"))
         return skim_dict(format, format_name)
     elif re.fullmatch(template_pattern, path) != None:
-        block_formats.error_bad_input = "\n\n    ,,,,,,,,,,    ,,,     ,,,           ,,,,,,,,,\n   /\\.........\\  /\\..\\   /\\..\\         /\\........\\\n   \\ \\..\\,,,,,/  \\ \\..\\  \\ \\..\\        \\ \\..\\,,,,/\n    \\\\\\..\\,,,,    \\\\\\..\\  \\\\\\..\\        \\\\\\..\\,,,,,             /\\\n     \\\\\\......\\    \\\\\\..\\  \\\\\\..\\        \\\\\\.......\\           //\\\\\n      \\\\\\..\\,,/     \\\\\\..\\  \\\\\\..\\,,,,,,  \\\\\\..\\,,,/,,         \\\\//\n       \\ \\..\\        \\ \\..\\  \\ \\........\\  \\ \\........\\         \\/\n        \\/,,/         \\/,,/   \\/,,,,,,,,/   \\/,,,,,,,,/ \n\n\n                  ,,,,,,,,,,     ,,,     ,,,,,,,,,   ,,,,,,,,,,,\n                 /\\.........\\,  /\\..\\   /\\........\\ /\\..........\\\n       /\\        \\ \\..\\,,,\\...\\ \\ \\..\\  \\ \\..\\,,,,/ \\/,,,/\\..\\,,/\n      //\\\\        \\\\\\.........\\  \\\\\\..\\  \\\\\\..\\,,,,      \\\\\\..\\\n      \\\\//         \\\\\\......,,/   \\\\\\..\\  \\\\\\......\\      \\\\\\..\\\n       \\/           \\\\\\..\\\\...\\,   \\\\\\..\\  \\\\\\..\\,,/       \\\\\\..\\\n                     \\ \\..\\ \\...\\,  \\ \\..\\  \\ \\..\\          \\ \\..\\\n                      \\/,,/   \\,,/   \\/,,/   \\/,,/           \\/,,/\n\n"
+        block_formats.error_bad_input = "\n    ,,,,,,,,,,    ,,,     ,,,           ,,,,,,,,,\n   /\\.........\\  /\\..\\   /\\..\\         /\\........\\\n   \\ \\..\\,,,,,/  \\ \\..\\  \\ \\..\\        \\ \\..\\,,,,/\n    \\\\\\..\\,,,,    \\\\\\..\\  \\\\\\..\\        \\\\\\..\\,,,,,             /\\\n     \\\\\\......\\    \\\\\\..\\  \\\\\\..\\        \\\\\\.......\\           //\\\\\n      \\\\\\..\\,,/     \\\\\\..\\  \\\\\\..\\,,,,,,  \\\\\\..\\,,,/,,         \\\\//\n       \\ \\..\\        \\ \\..\\  \\ \\........\\  \\ \\........\\         \\/\n        \\/,,/         \\/,,/   \\/,,,,,,,,/   \\/,,,,,,,,/ \n\n\n                  ,,,,,,,,,,     ,,,     ,,,,,,,,,   ,,,,,,,,,,,\n                 /\\.........\\,  /\\..\\   /\\........\\ /\\..........\\\n       /\\        \\ \\..\\,,,\\...\\ \\ \\..\\  \\ \\..\\,,,,/ \\/,,,/\\..\\,,/\n      //\\\\        \\\\\\.........\\  \\\\\\..\\  \\\\\\..\\,,,,      \\\\\\..\\\n      \\\\//         \\\\\\......,,/   \\\\\\..\\  \\\\\\......\\      \\\\\\..\\\n       \\/           \\\\\\..\\\\...\\,   \\\\\\..\\  \\\\\\..\\,,/       \\\\\\..\\\n                     \\ \\..\\ \\...\\,  \\ \\..\\  \\ \\..\\          \\ \\..\\\n                      \\/,,/   \\,,/   \\/,,/   \\/,,/           \\/,,/\n\n"
         return get_template_info(path[1:])
     else:
         print(
@@ -429,6 +429,7 @@ def get_template_info(name: str) -> str:
             + "    `mines_part21:884`\n"
             + "  `.template_name` : show information about a template e.g.\n"
             + "    `.source`\n"
+            + "  `.help` : show this help message\n"
             + "  `.list` : show a list of templates\n"
             + "  `.triggers` : show a list of @triggers\n"
             + "  `.exitcodes` : list exit codes and error types\n"
@@ -437,19 +438,28 @@ def get_template_info(name: str) -> str:
         )
         return re.sub(
             r" `([\w/\.:]+)`",
-            rf" `{config.colour_data}\1{config.colour_reset}`",
+            rf" {config.colour_punctuation}`{config.colour_success}\1{config.colour_punctuation}`{config.colour_reset}",
             output,
         )
 
     if name == "list":
         if config.rift_mode == "touch_grass":
-            print("unable to perform the request")
+            print(
+                config.colour_punctuation
+                + "unable to perform the request"
+                + config.colour_reset
+            )
         template_display = ""
         for entry in template_list:
             template_display += (
-                config.colour_data + "$" + entry[0] + config.colour_reset + "\n"
+                config.colour_punctuation
+                + "$"
+                + config.colour_data
+                + entry[0]
+                + config.colour_reset
+                + "\n"
             )
-        return "\n" + template_display + str(len(template_list)) + " templates"
+        return template_display + str(len(template_list)) + " templates"
 
     if name == "triggers":
         triggers = {
@@ -459,15 +469,16 @@ def get_template_info(name: str) -> str:
             "stop": "stop recoding, write output to file",
             "print": "display all globals, all locals or the value of a local variable",
         }
-        output = "filerift recode triggers\n"
+        output = f"{config.colour_data}FileRift{config.colour_reset} recode triggers\n"
         for k, v in triggers.items():
             output += (
                 "  "
                 + config.colour_data
                 + "@"
                 + k
-                + config.colour_reset
+                + config.colour_punctuation
                 + ": "
+                + config.colour_reset
                 + v
                 + "\n"
             )
@@ -485,17 +496,17 @@ def get_template_info(name: str) -> str:
             7: "filerift system error",
             8: "keyboard interrupt",
         }
-        output = "filerift exit codes\n"
+        output = f"{config.colour_data}FileRift{config.colour_reset} exit codes\n"
         for k, v in exit_codes.items():
             output += (
                 "  "
                 + config.colour_data
                 + str(k)
-                + config.colour_reset
+                + config.colour_punctuation
                 + " = "
                 + (config.colour_success if k == 0 else config.colour_error)
                 + v
-                + "\n"
+                + ("\n" if k != len(exit_codes) - 1 else "")
             )
         return output
 
@@ -518,7 +529,11 @@ def get_template_info(name: str) -> str:
         and len(name) < 8
         and name[0:2] in ["vi", "zi", "bi"]
     ):
-        return block_formats.error_bad_input.replace(".", "#").replace(",", "_")
+        return (
+            config.colour_punctuation
+            + block_formats.error_bad_input.replace(".", "#").replace(",", "_")
+            + config.colour_reset
+        )
     if template_filename == "":
         print(
             config.colour_error
@@ -542,7 +557,7 @@ def get_template_info(name: str) -> str:
                 match.group(1)
                 .replace(";", "|")
                 .replace("[", "[" + config.colour_data)
-                .replace("|", config.colour_reset + ";" + config.colour_data)
+                .replace("|", config.colour_punctuation + ";" + config.colour_data)
                 .replace("]", config.colour_reset + "]")
                 + "\n"
             )
@@ -610,6 +625,24 @@ def path_tidy(path: str, filerift_dir: str = "") -> str:
         return path
 
 
+def get_output_paths(paths: "list[str]", out_path: "str") -> "list[str]":
+    if paths == []:
+        return []
+    out_path = os.path.normpath(out_path)
+    if len(paths) == 1:
+        path = paths[0]
+        if os.path.isdir(out_path):
+            leaf = os.path.basename(path)
+            return [os.path.join(out_path, leaf)]
+        return [out_path]
+    if os.path.isfile(out_path):
+        out_path = os.path.dirname(out_path)
+    prefix = common_dir([os.path.dirname(p) for p in paths])
+    prefix = os.path.join(prefix, "")
+    paths = [os.path.join(out_path, path.removeprefix(prefix)) for path in paths]
+    return paths
+
+
 def expand_wildcards(pattern, root="."):
     """Expand wildcards in file patterns"""
     # Handle absolute paths
@@ -617,18 +650,30 @@ def expand_wildcards(pattern, root="."):
         search_pattern = "." + pattern
     else:
         search_pattern = os.path.join(root, pattern)
-
     # Use glob to expand wildcards
     matches = glob.glob(search_pattern, recursive=True)
-
     # If no matches and no wildcards, check if it's a direct file reference
     if not matches and "*" not in pattern and "?" not in pattern:
         # Try to repair the path using the original util function
         repaired = path_repair(pattern, root=root)
         if repaired:
             matches = [repaired]
-
     return sorted(matches) if matches else [pattern]  # Return original if no matches
+
+
+def common_dir(paths: "list[str]") -> str:
+    if len(paths) == 0:
+        return ""
+    common_dir = ""
+    split_common_dir = []
+    split_paths = [path.split(os.sep) for path in paths]
+    split_common_dir = split_paths[0]
+    for split_path in split_paths:
+        for i, component in enumerate(split_path):
+            if len(split_common_dir) - 1 < i or split_common_dir[i] != component:
+                split_common_dir = split_common_dir[:i]
+    common_dir = os.sep.join(split_common_dir)
+    return common_dir
 
 
 def get_files(root: str, pattern: str = ".*", ignore_type: bool = False) -> "list[str]":
@@ -644,7 +689,6 @@ def get_files(root: str, pattern: str = ".*", ignore_type: bool = False) -> "lis
                 continue
             if re.fullmatch(pattern, full_path) != None:
                 file_list.append(full_path)
-
     return file_list
 
 
@@ -692,24 +736,31 @@ def skim_dict(block_formats: dict, name) -> str:
     if block_formats == {}:
         return ""
 
-    out_str = "\n" + name + f" ({config.colour_data}message{config.colour_reset})\n"
+    out_str = (
+        "\n"
+        + name
+        + f" {config.colour_punctuation}({config.colour_data}message{config.colour_punctuation}){config.colour_reset}\n"
+    )
 
     for key, value in items:
         tag = value[0]
         doc_string = value[1]
         doc_string = doc_string.replace("\n", "\n        ")
         doc_string = re.sub(
-            r"^\((.*)\)", rf"({config.colour_data}\1{config.colour_reset})", doc_string
+            r"^\((.*)\)",
+            rf"{config.colour_punctuation}({config.colour_data}\1{config.colour_punctuation}){config.colour_reset}",
+            doc_string,
         )
         out_str += (
             "  "
             + config.colour_data
             + tag.rjust(3)
-            + config.colour_reset
+            + config.colour_punctuation
             + " : "
+            + config.colour_reset
             + key
             + "  "
-            + doc_string.replace("\n", "\n        ")
+            + doc_string
             + "\n"
         )
 
@@ -732,6 +783,7 @@ def prettify_dict(block_formats: dict) -> str:
     return out_str
 
 
+# TODO: unused
 def match_tag(format: dict, tag: str) -> "tuple[str, bool, str]":
     if tag == "07":
         return "Comment", False, ""
@@ -757,6 +809,6 @@ def match_tagname(block_format: dict, tagname: str) -> "tuple[str, bool, str]":
 
 def truncate(string: str, length: int) -> str:
     if len(string) > length:
-        return string[: length - 1] + ".."
+        return string[: length - 1] + config.colour_warning + ".." + config.colour_reset
     else:
         return string

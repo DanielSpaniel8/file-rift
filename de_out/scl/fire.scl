@@ -1,11 +1,11 @@
 Name : 'fire',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'blast',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 1,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 102,
                 ParticleId : 103,
                 ParticleId : 104,
@@ -13,9 +13,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 30,
                 ParentEmitterId : 101,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 1,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
@@ -24,7 +24,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -33,10 +33,10 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 101,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 102,
                 ParticleId : 103,
                 ParticleId : 104,
@@ -44,9 +44,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 100,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 1,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 2,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.9999999403953552,
                         G : 0.7444444298744202,
                         B : 0.45555561780929565,
@@ -59,7 +59,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -68,38 +68,38 @@ Template{ # ObjectTemplate
                 LocalSystem : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 102,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 25.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 15.0,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -10.0,
             Y : -10.0,
             Width : 20.0,
@@ -110,13 +110,13 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireblast',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 2,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 102,
                 ParticleId : 103,
                 ParticleId : 104,
@@ -124,9 +124,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 30,
                 ParentEmitterId : 101,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 2,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 0.6555556058883667,
                         B : 0.0,
@@ -139,7 +139,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -148,10 +148,10 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 101,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 102,
                 ParticleId : 103,
                 ParticleId : 104,
@@ -159,9 +159,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 100,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 1,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 2,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 0.855555534362793,
                         B : 0.0,
@@ -174,7 +174,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -183,38 +183,38 @@ Template{ # ObjectTemplate
                 LocalSystem : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 102,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 25.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 15.0,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 1000.0,
@@ -225,16 +225,16 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'firespray',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 1,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 1.5,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.5614814758300781,
                     B : 0.17777776718139648,
@@ -242,7 +242,7 @@ Template{ # ObjectTemplate
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -250,14 +250,14 @@ Template{ # ObjectTemplate
                 Radius : 300.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TransformController',
             Identifier : 2,
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 102,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 103,
                 ParticleId : 104,
                 ParticleId : 105,
@@ -265,9 +265,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 50,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 0.49037057161331177,
                         B : 0.04444456100463867,
@@ -291,7 +291,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.05000000074505806,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -300,35 +300,35 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 105,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 107,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.47851860523223877,
                     B : 0.022222280502319336,
@@ -339,24 +339,24 @@ Template{ # ObjectTemplate
                 Depth : 0.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 1.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 109,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 110,
                 ModelBindingId : 0,
                 MaxParticles : 30,
                 ParentEmitterId : 102,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.20000000298023224,
                         G : 0.1066666841506958,
                         B : 0.0,
@@ -380,7 +380,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -389,26 +389,26 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 110,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle',
                 Size : 48.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 112,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 114,
                 ModelBindingId : 0,
                 MaxParticles : 50,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.0,
                         G : 0.0,
                         B : 0.0,
@@ -432,50 +432,50 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
                     }
                 }
                 LocalSystem : 0,
-                Gravity{ # Vector3
+                Gravity{  ## Vector3
                     X : 0.0,
                     Y : -200.0,
                     Z : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 114,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 48.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 116,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -25.0,
                     Y : 10.0,
                     Width : 50.0,
                     Height : 150.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 118,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 2,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -486,14 +486,14 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -504,30 +504,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'firesprayer',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fire_firespray',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -535,12 +535,12 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 102,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -571,14 +571,14 @@ $end
                 Trigger : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -589,22 +589,22 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'lava#2',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'WaterMesh',
             Identifier : 101,
-            WaterMeshComponent{ # WaterMeshComponent
+            WaterMeshComponent{  ## WaterMeshComponent
                 BoundsShapeId : 111,
                 TextureMappingId : 106,
-                FrontColor{ # FloatColor
+                FrontColor{  ## FloatColor
                     R : 1.0,
                     G : 0.0,
                     B : 0.0,
                     A : 0.7444444298744202,
                 }
-                SurfaceColor{ # FloatColor
+                SurfaceColor{  ## FloatColor
                     R : 1.0,
                     G : 0.0,
                     B : 0.0,
@@ -612,50 +612,50 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 106,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'water',
                 Scale : 50.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 109,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 111,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -700.0,
                     Y : -200.0,
                     Width : 2100.0,
                     Height : 800.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -670,10 +670,10 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 113,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 4,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -683,14 +683,14 @@ $end
                 CanBeBlocked : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -700.0,
             Y : -200.0,
             Width : 2100.0,
@@ -701,27 +701,27 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'magmapallo',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 1,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 0.0,
                         Y : 0.0,
                     }
                     Radius : 55.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 InflictsDamage : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target, collisionNormal, groundCollision = ...;
 
@@ -735,14 +735,14 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TransformController',
             Identifier : 2,
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 3,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GroundDeceleration : 0.0,
                 AirDeceleration : 0.0,
@@ -751,21 +751,21 @@ $end
                 Elasticity : 0.800000011920929,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ProjectileController',
             Identifier : 4,
-            ProjectileControllerComponent{ # ProjectileControllerComponent
+            ProjectileControllerComponent{  ## ProjectileControllerComponent
                 AlignObjectRotation : 0,
                 BreakOnGroundCollision : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 5,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 1.5,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.7555555701255798,
                     B : 0.5222222208976746,
@@ -773,7 +773,7 @@ $end
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -781,10 +781,10 @@ $end
                 Radius : 200.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 6,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 7,
                 ParticleId : 8,
                 ParticleId : 9,
@@ -792,9 +792,9 @@ $end
                 MaxParticles : 60,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 3,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.8587653636932373,
                         G : 0.3952264189720154,
                         B : 0.16345691680908203,
@@ -810,7 +810,7 @@ $end
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 53.0,
@@ -819,35 +819,35 @@ $end
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 7,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 8,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 23.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 9,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 17.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 11,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.38333335518836975,
                     G : 0.12777778506278992,
                     B : 0.12777787446975708,
@@ -858,16 +858,16 @@ $end
                 Depth : 0.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 12,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 1,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -877,27 +877,27 @@ $end
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'balloffire',
                 YRotation : 0.0,
                 EmissionFactor : 1.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.41960784792900085,
                     G : 0.2235294133424759,
                     B : 0.1764705926179886,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -905,21 +905,21 @@ $end
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -90.0,
             Y : -90.0,
             Width : 180.0,
             Height : 180.0,
         }
         Hidden : 0,
-        OnLoad{ # Program
+        OnLoad{  ## Program
             String : $
 local self = ...;
 
@@ -936,60 +936,60 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'rotating ground',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 1,
             ParentComponentIdentifier : 100,
-            ShapeComponent{ # ShapeComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -9.96514892578125,
                         Y : -154.75289916992188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 21.5281982421875,
                         Y : -150.70254516601562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 38.3050537109375,
                         Y : -29.908004760742188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 62.6353759765625,
                         Y : 12.703506469726562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 62.04803466796875,
                         Y : 58.61082458496094,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 37.72515869140625,
                         Y : 136.3459014892578,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -53.746337890625,
                         Y : 154.75291442871094,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -62.6353759765625,
                         Y : 80.47584533691406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -50.49755859375,
                         Y : 46.18775939941406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -44.12921142578125,
                         Y : 40.49342346191406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -16.7825927734375,
                         Y : -25.4476318359375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -45.80859375,
                         Y : -152.2833251953125,
                     }
@@ -997,63 +997,63 @@ Template{ # ObjectTemplate
                     Closed : 1,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 MinDepth : -85.0,
                 MaxDepth : 85.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundPolygon',
             Identifier : 100,
-            GroundPolygonComponent{ # GroundPolygonComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            GroundPolygonComponent{  ## GroundPolygonComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -9.96514892578125,
                         Y : -154.75289916992188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 21.5281982421875,
                         Y : -150.70254516601562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 38.3050537109375,
                         Y : -29.908004760742188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 62.6353759765625,
                         Y : 12.703506469726562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 62.04803466796875,
                         Y : 58.61082458496094,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 37.72515869140625,
                         Y : 136.3459014892578,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -53.746337890625,
                         Y : 154.75291442871094,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -62.6353759765625,
                         Y : 80.47584533691406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -50.49755859375,
                         Y : 46.18775939941406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -44.12921142578125,
                         Y : 40.49342346191406,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -16.7825927734375,
                         Y : -25.4476318359375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -45.80859375,
                         Y : -152.2833251953125,
                     }
@@ -1063,74 +1063,74 @@ Template{ # ObjectTemplate
                 Collides : 1,
                 MinDepth : -85.0,
                 MaxDepth : 85.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMesh',
             Identifier : 101,
-            GroundMeshComponent{ # GroundMeshComponent
-                LocalAabb{ # Rectangle
+            GroundMeshComponent{  ## GroundMeshComponent
+                LocalAabb{  ## Rectangle
                     X : -72.6353759765625,
                     Y : -164.75289916992188,
                     Width : 145.270751953125,
                     Height : 329.50579833984375,
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 22,
                     NumFaces : 20,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'graveyard_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -62.6353759765625,
                         Y : -154.75289916992188,
                         Z : -110.93256378173828,
@@ -1141,60 +1141,60 @@ Template{ # ObjectTemplate
                     VertexData : "@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\xa1\x1b:?\xc09\xacA\xda\xb3\x16\xc3y\xdd\xdd\xc2&\xc6n?\xcc\xa3\xb8\xbe\x00\x00\x00\x00\xca\x83 ?\x1b{f=`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\xc4\x94\\?`8\x19B\x98C\xef\xc1\x0c\x03\xd2\xc2\xcaCx?\x8c\xd1y\xbe\x00\x00\x00\x00\xa7\xb2\x8e?\x8f\xca\xa3=\xa0\x8azB\x90AKA=\xe8\xc4B\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\x05\xd1d?\xa0\x8azB\x90AKA\x95\xa0\x97\xc2\x8bBw?\x87\xa4\x84\xbe\x00\x00\x00\x00$\xd2\xa7?\xa4wI>01xB|qjB\xb9X\xdeB\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?i\xd7q?01xB|qjB5P\xcc\xc2\x1d\xf5z?\xd2=J>\x00\x00\x00\x00\xccS\xbf?\xf8!\xbb=\x90\xe6\x16B\x8dX\x08CIr\xa2BI\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?.,S?\x90\xe6\x16B\x8dX\x08C\x9e\x85\x95\xc2I\x88#?\xb6\xf5D?\x00\x00\x00\x00\xcf\x07\xe9?q\xc7M>@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xfe\xb4g?@\xfcV\xc2\xbf\xc0\x1aC[n\x88\xc2\xc0\t\xf9\xbe\x16\xad_?\x00\x00\x00\x00\xc1f\x0c@\xd3\x96h>\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@\x86vO?\xa0\x8az\xc2\xa2\xf3\xa0B'\xc0\xd0\xc2\xac\xe2\x7f\xbf\x8e\x08\xf5\xbc\x00\x00\x00\x00O\x8d\x1f@#\xf5\xa8=\x80\xfdI\xc2D\xc08B\x0fN\xdaB$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@\xa9\xc5o?\x80\xfdI\xc2D\xc08B@\x9c\xb4\xc2$Rh\xbf\x1b\x10\xd7\xbe\x00\x00\x00\x00\r\xdd(@)\x1c\x0e>P\x840\xc2D\xf9!B\xe7,\xc8B\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@d}f?P\x840\xc2D\xf9!B\xbf=_\xc2\xdc\xa0g\xbf\xc0\x07\xda\xbe\x00\x00\x00\x00\xec\x0c+@T\xb3\x8d>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>",
                     IndexData : '\x00\x00\x01\x00\x02\x00\x01\x00\x03\x00\x02\x00\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x06\x00\x05\x00\x07\x00\x06\x00\x06\x00\x07\x00\x08\x00\x07\x00\t\x00\x08\x00\x08\x00\t\x00\n\x00\t\x00\x0b\x00\n\x00\n\x00\x0b\x00\x0c\x00\x0b\x00\r\x00\x0c\x00\x0c\x00\r\x00\x0e\x00\r\x00\x0f\x00\x0e\x00\x0e\x00\x0f\x00\x10\x00\x0f\x00\x11\x00\x10\x00\x10\x00\x11\x00\x12\x00\x11\x00\x13\x00\x12\x00\x12\x00\x13\x00\x14\x00\x13\x00\x15\x00\x14\x00',
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 6,
                     NumFaces : 4,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'graveyard_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -45.80859375,
                         Y : -154.75289916992188,
                         Z : -102.4931411743164,
@@ -1205,54 +1205,54 @@ Template{ # ObjectTemplate
                     VertexData : '@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?\xe8q??@q\x1f\xc1\xbe\xc0\x1a\xc3}\xfc\xcc\xc2\x9cB\xc0<\xf4\xed\x7f\xbf\x00\x00\x00\x00\x00\x00\x00?N`\xb8=\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\xa1\xdfS?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xfd\xc8f\xc2\x84\xfd\x7f\xbfv\xb9\x0e<\x00\x00\x00\x00RS=@\x89\xd6\x89>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@.HZ?\x00<7\xc2\x88H\x18\xc35\xb2\x9a\xc2\x1a\xa5\x7f\xbf\x0f\xa8W\xbd\x00\x00\x00\x00\x82\xa2^@\xae.C>',
                     IndexData : '\x02\x00\x03\x00\x04\x00\x03\x00\x05\x00\x04\x00\x04\x00\x05\x00\x00\x00\x05\x00\x01\x00\x00\x00',
                 }
-                FrontMesh{ # Mesh
+                FrontMesh{  ## Mesh
                     NumVertices : 30,
                     NumFaces : 10,
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'graveyard_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -62.6353759765625,
                         Y : -154.75289916992188,
                         Z : 56.74601745605469,
@@ -1262,7 +1262,7 @@ Template{ # ObjectTemplate
                     }
                     VertexData : "\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\xbc\x94\x98>\xd8K/?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>q\xed\x91>\xc6;\x8f?\xa0\x8az\xc2\xa2\xf3\xa0B}3\x9bB\xaa\x1eo\xbf\x81\xfd\x05\xbb\x95\xd6\xb6>\x0cr\x7f>ChR?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?q\xed\x91>\xc6;\x8f?\x80\xfdI\xc2D\xc08B\x0fN\xdaB\xb0\xceU?\xdbT\x84=&\xd1\x0b?\xbc\x94\x98>\xd8K/?P\x840\xc2D\xf9!B\xe7,\xc8B\xb0\xceU?\xdbT\x84=&\xd1\x0b?\x96\x9f\xa5>\x1cw)?@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB~\x14 ?\xc0a6=IsG?q\xed\x91>\xc6;\x8f?P\x840\xc2D\xf9!B\xe7,\xc8B~\x14 ?\xc0a6=IsG?\x96\x9f\xa5>\x1cw)?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B~\x14 ?\xc0a6=IsG?\x17\xa1\xdd>\x1d\xe2\xcb>\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3Bk\x8b7>\xf2&\x10\xbe)Cy?\x17\xa1\xdd>\x1d\xe2\xcb>@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wBk\x8b7>\xf2&\x10\xbe)Cy?d\x97\xeb>Z\xbc\xf3\xbd\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbBk\x8b7>\xf2&\x10\xbe)Cy?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB:\xbc-?\x0b\xf4w=\xb7a;?q\xed\x91>\xc6;\x8f?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B:\xbc-?\x0b\xf4w=\xb7a;?\x17\xa1\xdd>\x1d\xe2\xcb>\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB:\xbc-?\x0b\xf4w=\xb7a;?}\x0b\x16?%\x8e\xd2\xbd@\xfcV\xc2\xbf\xc0\x1aC\x81\x8d\xcaB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?q\xed\x91>\xc6;\x8f?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?}\x0b\x16?%\x8e\xd2\xbd\x90\xe6\x16B\x8dX\x08CIr\xa2B\xaf\xbcG>\xd5\x07\xc1\xbd\xb4\xeby?m\xa1&?!\xcf\x85?\xc0B\x86\xc1\xc0\x94\xcb\xc1\xc6\xd0\xa3B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x17\xa1\xdd>\x1d\xe2\xcb>\x00<7\xc2\x88H\x18\xc3\xf9T\xb0B\x05[\x15?3\xea\xbf\xbd\xed\x86N?\x1b/\xa2>H\x81\xdf\xbd@q\x1f\xc1\xbe\xc0\x1a\xc3\xf4\xd4wB\x05[\x15?3\xea\xbf\xbd\xed\x86N?d\x97\xeb>Z\xbc\xf3\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>q9'?\x98\xbf\xc2>\x90\xe6\x16B\x8dX\x08CIr\xa2B\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>m\xa1&?!\xcf\x85?\xc09\xacA\xda\xb3\x16\xc3\xec\xfbbB\xd4sk\xbf\xa6<\x97<\xaf\xc1\xc8>}\x0b\x16?%\x8e\xd2\xbd`8\x19B\x98C\xef\xc1\x8f\xd2\xb4BE\xa4:\xbf\xf1O\x10=\x01\xfc.?q9'?\x98\xbf\xc2>01xB|qjB\xb9X\xdeBE\xa4:\xbf\xf1O\x10=\x01\xfc.?\x85\x89??z\x04<?\x90\xe6\x16B\x8dX\x08CIr\xa2BE\xa4:\xbf\xf1O\x10=\x01\xfc.?m\xa1&?!\xcf\x85?`8\x19B\x98C\xef\xc1\x8f\xd2\xb4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?q9'?\x98\xbf\xc2>\xa0\x8azB\x90AKA=\xe8\xc4B\xd9\xd5\x13>wf\x86\xbe\xf9=t?}#@?&\x02\r?01xB|qjB\xb9X\xdeB\xd9\xd5\x13>wf\x86\xbe\xf9=t?\x85\x89??z\x04<?",
                 }
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1270,10 +1270,10 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMeshGenerator',
             Identifier : 102,
-            GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+            GroundMeshGeneratorComponent{  ## GroundMeshGeneratorComponent
                 GroundPolygonId : 100,
                 TargetMeshId : 101,
                 FrontTextureMappingId : 103,
@@ -1287,49 +1287,49 @@ Template{ # ObjectTemplate
                 HatWidthOffset2 : 5.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 103,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'graveyard_ground',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 104,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'graveyard_ground',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TransformController',
             Identifier : 107,
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -62.6353759765625,
             Y : -154.75289916992188,
             Width : 125.270751953125,
             Height : 309.50579833984375,
         }
         Hidden : 0,
-        OnLoad{ # Program
+        OnLoad{  ## Program
             String : $
 local self = ...;
 
@@ -1344,30 +1344,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'stonepillairs',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fire_stonepillairs',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1375,14 +1375,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -1393,30 +1393,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'stonepillairs2',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fire_stonepillairs2',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1424,14 +1424,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -1442,30 +1442,30 @@ Template{ # ObjectTemplate
     Scaling : 0.800000011920929,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'stonepillairs3',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fire_stonepillairs3',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1473,14 +1473,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -1491,30 +1491,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'stonepillairs4',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fire_stonepillairs4',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1522,14 +1522,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -1539,4 +1539,3 @@ Template{ # ObjectTemplate
     }
     Scaling : 1.0,
 }
-

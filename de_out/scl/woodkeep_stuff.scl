@@ -1,13 +1,13 @@
 Name : 'woodkeep_stuff',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'castle_lock',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 1,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -23,27 +23,27 @@ $end
                 Trigger : 10,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'lock_yellow',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.5,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -51,30 +51,30 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 103,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -70.0,
                     Y : -40.0,
                     Width : 140.0,
                     Height : 80.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 SpecialType : 4,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 105,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -96,14 +96,14 @@ $end
                 Trigger : 2,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -70.0,
             Y : -40.0,
             Width : 140.0,
@@ -114,39 +114,39 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'castle_lockdoor',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 1,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'door_close',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'castle_lockdoor',
                 YRotation : 4.71238899230957,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -154,10 +154,10 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'DoorController',
             Identifier : 103,
-            DoorControllerComponent{ # DoorControllerComponent
+            DoorControllerComponent{  ## DoorControllerComponent
                 AnimationControllerId : 104,
                 AnimationId : 105,
                 Open : 0,
@@ -165,19 +165,19 @@ Template{ # ObjectTemplate
                 OpenSoundId : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 104,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 105,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'castle_lockdoor',
                 Repeating : 0,
@@ -185,30 +185,30 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 106,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -15.0,
                     Y : 0.0,
                     Width : 25.0,
                     Height : 246.53073120117188,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 109,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -220,14 +220,14 @@ $end
                 Trigger : 0,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -15.0,
             Y : 0.0,
             Width : 25.0,
@@ -238,30 +238,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'deadtree1',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'deadtree1',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -269,14 +269,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -287,30 +287,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'pole1',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'pole1',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -318,14 +318,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -336,30 +336,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'pole2',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'pole2',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -367,14 +367,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -385,32 +385,32 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'polewall',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 1,
             ParentComponentIdentifier : 103,
-            ShapeComponent{ # ShapeComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : 8.294042587280273,
                         Y : -19.394180297851562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 9.372367858886719,
                         Y : 127.60641479492188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 1.3621290922164917,
                         Y : 171.5775146484375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -12.046072006225586,
                         Y : 121.38899993896484,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -8.837845802307129,
                         Y : 16.852190017700195,
                     }
@@ -418,34 +418,34 @@ Template{ # ObjectTemplate
                     Closed : 1,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'polewall',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 1.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -453,28 +453,28 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundPolygon',
             Identifier : 103,
-            GroundPolygonComponent{ # GroundPolygonComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            GroundPolygonComponent{  ## GroundPolygonComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : 8.294042587280273,
                         Y : -19.394180297851562,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 9.372367858886719,
                         Y : 127.60641479492188,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 1.3621290922164917,
                         Y : 171.5775146484375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -12.046072006225586,
                         Y : 121.38899993896484,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -8.837845802307129,
                         Y : 16.852190017700195,
                     }
@@ -484,18 +484,18 @@ Template{ # ObjectTemplate
                 Collides : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -12.046072006225586,
             Y : -19.394180297851562,
             Width : 21.418439865112305,
@@ -506,41 +506,41 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'woodendoor',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BreakableObject',
             Identifier : 1,
-            BreakableObjectComponent{ # BreakableObjectComponent
+            BreakableObjectComponent{  ## BreakableObjectComponent
                 BreaksOnImpact : 0,
                 NumHitsToBreak : 15,
                 RequiredDamageType : 0,
-                OnBreak{ # Program
+                OnBreak{  ## Program
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'woodendoor',
                 YRotation : 4.71238899230957,
                 EmissionFactor : 1.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.43921568989753723,
                     G : 0.1921568661928177,
                     B : 0.0784313753247261,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -548,18 +548,18 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 103,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -25.0,
                     Y : 0.0,
                     Width : 50.0,
                     Height : 170.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 ReceivesDamage : 1,
                 MinDepth : -15.0,
@@ -567,14 +567,14 @@ Template{ # ObjectTemplate
                 Enabled : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -25.0,
             Y : 0.0,
             Width : 50.0,
@@ -585,30 +585,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'woodendoor_frame',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'woodendoor_frame',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -616,14 +616,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -633,4 +633,3 @@ Template{ # ObjectTemplate
     }
     Scaling : 1.0,
 }
-

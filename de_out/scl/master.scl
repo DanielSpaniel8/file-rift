@@ -1,20 +1,20 @@
 Name : 'master',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'masterghost',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Entity',
             Identifier : 1,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 18446744073709551615,
                 PhysicsEnabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityAction',
             Identifier : 2,
-            EntityActionComponent{ # EntityActionComponent
-                OnActivate{ # Program
+            EntityActionComponent{  ## EntityActionComponent
+                OnActivate{  ## Program
                     String : $
 local self = ...;
 
@@ -40,10 +40,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityController',
             Identifier : 3,
-            EntityControllerComponent{ # EntityControllerComponent
+            EntityControllerComponent{  ## EntityControllerComponent
                 EntityId : 1,
                 AnimationControllerId : 109,
                 DefaultMoveAnimationId : 103,
@@ -54,12 +54,12 @@ $end
                 MovementBehavior : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 4,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -80,27 +80,27 @@ $end
                 Trigger : 10,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'oldman_ghost',
                 YRotation : 2.356194496154785,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 1,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 0.45679008960723877,
                     G : 0.916872501373291,
                     B : 0.9876543283462524,
@@ -108,10 +108,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 103,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_oldman_stand',
                 Repeating : 1,
@@ -119,31 +119,31 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 109,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 103,
                 SelfUpdate : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 111,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -32.70899963378906,
                     Y : -34.29396057128906,
                     Width : 64.53463745117188,
                     Height : 62.28142547607422,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 100.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -156,22 +156,22 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Health',
             Identifier : 114,
-            HealthComponent{ # HealthComponent
+            HealthComponent{  ## HealthComponent
                 MaxHealth : 1,
                 HEALTH_TYPE : 0,
-                BarOffset{ # Vector3
+                BarOffset{  ## Vector3
                     X : 0.0,
                     Y : 50.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 117,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 120,
                 ParticleId : 121,
                 ParticleId : 122,
@@ -179,9 +179,9 @@ $end
                 MaxParticles : 30,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.09333334863185883,
                         G : 0.1733333319425583,
                         B : 0.1733333021402359,
@@ -205,49 +205,49 @@ $end
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : -30.0,
                         Z : 0.0,
                     }
                 }
                 LocalSystem : 0,
-                Gravity{ # Vector3
+                Gravity{  ## Vector3
                     X : 0.0,
                     Y : 150.0,
                     Z : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 120,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 10.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 121,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 122,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 30.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 123,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.2172839641571045,
                     G : 0.2716049551963806,
                     B : 0.2716049551963806,
@@ -258,20 +258,20 @@ $end
                 Depth : -20.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : -15.0,
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -282,24 +282,24 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'shardquesttrigger',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -80.0,
                     Y : -150.0,
                     Width : 160.0,
                     Height : 500.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollisionEnd{ # Program
+                OnCollisionEnd{  ## Program
                     String : $
 local self = ...;
 
@@ -351,14 +351,14 @@ $end
                 Enabled : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -80.0,
             Y : -150.0,
             Width : 160.0,
@@ -369,24 +369,24 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'spellget_script',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -50.0,
                     Y : -100.0,
                     Width : 100.0,
                     Height : 200.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -442,14 +442,14 @@ $end
                 Enabled : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -100.0,
             Width : 100.0,
@@ -460,7 +460,7 @@ $end
     Scaling : 1.0,
 }
 
-Program{ # Program
+Program{  ## Program
     String : $
 function AssembleQuestTrigger(master)
     ShowQuestBubbles("quest09_assemble", master:identifier(), master:position() + Vector3.New(0, 40, 0), true, {
@@ -477,4 +477,3 @@ $end
     Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x00\xa8\x01\x00\x00function AssembleQuestTrigger(master)\r\n\tShowQuestBubbles("quest09_assemble", master:identifier(), master:position() + Vector3.New(0, 40, 0), true, {\r\n\t\t"Masterfully done, hero.",\r\n\t\t"Now venture into the Great Caves and find the Chambers of Power",\r\n\t\t"There, the forces of the ancients will combine The Mageblade once again.",\r\n\t});\r\n\r\n\tHideTextBubble(master:identifier());\r\n\r\n\tCharacter.AddQuest("quest09_assemble");\r\nend\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x03\x00\x00\x00$\x00\x00\x00\x07\x00\x00\x00\x1e\x00\x80\x00\x01\x00\x00\x00\x04\x15\x00\x00\x00AssembleQuestTrigger\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\n\x1d\x00\x00\x00E\x00\x00\x00\x81@\x00\x00\xcb\x80@\x00\xdc\x80\x00\x01\x0b\xc1@\x00\x1c\x81\x00\x01E\x01\x01\x00FA\xc1\x02\x81\x81\x01\x00\xc1\xc1\x01\x00\x01\x82\x01\x00\\\x81\x00\x02\x0cA\x01\x02B\x01\x80\x00\x8a\x01\x80\x01\xc1\x01\x02\x00\x01B\x02\x00A\x82\x02\x00\xa2A\x80\x01\\@\x00\x03E\xc0\x02\x00\x8b\x80@\x00\x9c\x00\x00\x01\\@\x00\x00E\x00\x03\x00F@\xc3\x00\x81@\x00\x00\\@\x00\x01\x1e\x00\x80\x00\x0e\x00\x00\x00\x04\x11\x00\x00\x00ShowQuestBubbles\x00\x04\x11\x00\x00\x00quest09_assemble\x00\x04\x0b\x00\x00\x00identifier\x00\x04\t\x00\x00\x00position\x00\x04\x08\x00\x00\x00Vector3\x00\x04\x04\x00\x00\x00New\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00D@\x04\x18\x00\x00\x00Masterfully done, hero.\x00\x04@\x00\x00\x00Now venture into the Great Caves and find the Chambers of Power\x00\x04I\x00\x00\x00There, the forces of the ancients will combine The Mageblade once again.\x00\x04\x0f\x00\x00\x00HideTextBubble\x00\x04\n\x00\x00\x00Character\x00\x04\t\x00\x00\x00AddQuest\x00\x00\x00\x00\x00\x1d\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x03\x00\x00\x00\x04\x00\x00\x00\x06\x00\x00\x00\x06\x00\x00\x00\x02\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\n\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x07\x00\x00\x00master\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x0b\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     Name : 'AssembleQuestTrigger',
 }
-

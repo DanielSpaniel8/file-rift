@@ -41,21 +41,32 @@ def get_args() -> argparse.Namespace:
         help="run in recode mode with allways_recode turned on",
     )
     parser.add_argument(
-        "-b", "--build", action="store_true", help="build an apk from a project file"
+        "-b",
+        "--build",
+        action="store_true",
+        help="build an apk from the default project file",
     )
     parser.add_argument(
-        "--build-project", type=str, help="build an apk from a project file"
+        "--build-project",
+        type=str,
+        help="build an apk from the specified project file",
+    )
+    parser.add_argument(
+        "-o", "--output", type=str, help="output path for (d|r)ecoded files"
     )
     parser.add_argument(
         "-i",
         "--info",
         nargs="?",
-        const=".filerift",
+        const=".help",
         default=None,
-        help="ask before recoding each directory in re_out",
+        help="get info about block_formats, templates and more",
     )
     parser.add_argument(
-        "-n", "--no-colour", action="store_true", help="disable output colouring"
+        "-n",
+        "--no-colour",
+        action="store_true",
+        help="disable ansii colour codes in output",
     )
     parser.add_argument(
         "-t", "--file-type", type=str, help="set filetype for block_formats"
@@ -154,19 +165,23 @@ def config_repair() -> bool:
         "style_before_block": str,
         "style_after_block": str,
         "style_before_chunk": str,
+        "style_comment_start": ["#", "--", "//"],
         "style_indent": str,
         "style_show_field_name": bool,
         "style_show_version": bool,
         "style_lsp_prep": bool,
         "preserve_comments": bool,
-        "preserve_triggers": bool,
+        "preserve_compile": bool,
         "preserve_degrees": bool,
+        "ignore_field_name_comments": bool,
         "colour_enabled": bool,
         "colour_success": str,
         "colour_error": str,
         "colour_warning": str,
         "colour_data": str,
-        "colour_reset": str,  # logging is handle later
+        "colour_reset": str,
+        "colour_punctuation": str,
+        # logging is handle later
         "status": [True, False, str],
         "version_code": str,
     }
@@ -184,18 +199,22 @@ def config_repair() -> bool:
         "style_before_block": "",
         "style_after_block": "",
         "style_before_chunk": ": $",
+        "style_comment_start": "#",
         "style_indent": "    ",
         "style_show_field_name": True,
         "style_show_version": False,
         "style_lsp_prep": False,
         "preserve_comments": True,
-        "preserve_triggers": True,
+        "preserve_compile": True,
         "preserve_degrees": True,
+        "ignore_field_name_comments": True,
         "colour_enabled": True,
-        "colour_success": "\033[1;32m",
-        "colour_error": "\033[1;31m",
-        "colour_warning": "\033[1;33m",
-        "colour_data": "\033[1;34m",
+        "colour_success": "\033[0m\033[2;37m",
+        "colour_error": "\033[0m\033[1;31m",
+        "colour_warning": "\033[0m\033[1;33m",
+        "colour_data": "\033[0m\033[1;34m",
+        "colour_reset": "\033[0m\033[2;37m",
+        "colour_punctuation": "\033[0m\033[2;37m",
         "colour_reset": "\033[0m",
         "logging": ["recode", "decode"],
         "status": False,

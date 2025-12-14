@@ -1,12 +1,12 @@
 Name : 'quest_vase',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'questvase',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Properties',
             Identifier : 1,
-            PropertiesComponent{ # PropertiesComponent
-                OnLoad{ # Program
+            PropertiesComponent{  ## PropertiesComponent
+                OnLoad{  ## Program
                     String : $
 local self = ...;
 
@@ -16,10 +16,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 2,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 3,
                 ParticleId : 6,
                 ParticleId : 7,
@@ -27,9 +27,9 @@ $end
                 MaxParticles : 60,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.5185185670852661,
                         G : 0.47703707218170166,
                         B : 0.4148147702217102,
@@ -53,7 +53,7 @@ $end
                     HueVariance : 0.0,
                     SaturationVariance : 0.20000000298023224,
                     LightnessVariance : 0.20000000298023224,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 27.0,
                         Z : 0.0,
@@ -62,73 +62,73 @@ $end
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 3,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 4,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -22.0,
                     Y : 5.0,
                     Width : 44.0,
                     Height : 15.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 SpecialType : 1,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TransformController',
             Identifier : 5,
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 6,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 7,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'pottery1',
                 YRotation : 0.0,
                 EmissionFactor : 1.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -136,18 +136,18 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 103,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -15.012619972229004,
                     Y : 0.0,
                     Width : 30.122713088989258,
                     Height : 28.714862823486328,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 Collides : 1,
                 MinDepth : -15.0,
@@ -156,11 +156,11 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 106,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -27.0,
                     Y : 0.0,
                     Width : 54.0,
@@ -168,10 +168,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 110,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GroundDeceleration : 1500.0,
                 AirDeceleration : 0.0,
@@ -180,11 +180,11 @@ $end
                 Elasticity : 0.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 115,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.6111111044883728,
                     G : 0.559259295463562,
                     B : 0.45555561780929565,
@@ -195,18 +195,18 @@ $end
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 14.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 120,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -241,14 +241,14 @@ $end
                 Trigger : 5,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -25.0,
             Y : -25.0,
             Width : 50.0,
@@ -258,4 +258,3 @@ $end
     }
     Scaling : 2.25,
 }
-

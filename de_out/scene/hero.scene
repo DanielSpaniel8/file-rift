@@ -1,12 +1,12 @@
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'DirectionalLight',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Light',
         Identifier : 101,
-        LightComponent{ # LightComponent
+        LightComponent{  ## LightComponent
             Type : 2,
             Intensity : 0.6000000238418579,
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -14,13 +14,13 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Light',
         Identifier : 103,
-        LightComponent{ # LightComponent
+        LightComponent{  ## LightComponent
             Type : 1,
             Intensity : 0.10000000149011612,
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -28,14 +28,14 @@ Object{ # SceneObject
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -16.77115249633789,
         Y : 45.38957214355469,
     }
     Depth : 642.3430786132812,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -44,18 +44,18 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'hiro',
     Identifier : 'hero',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'HeroEntity',
         Identifier : 5,
-        EntityComponent{ # EntityComponent
+        EntityComponent{  ## EntityComponent
             FacingDirection : 1,
             PhysicsEnabled : 0,
         }
-        HeroEntityComponent{ # HeroEntityComponent
-            OnItemGet{ # Program
+        HeroEntityComponent{  ## HeroEntityComponent
+            OnItemGet{  ## Program
                 String : $
 local self, item = ...;
 
@@ -124,27 +124,27 @@ $end
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Model',
         Identifier : 101,
-        ModelComponent{ # ModelComponent
+        ModelComponent{  ## ModelComponent
             Name : 'hiro',
             YRotation : 0.6108652353286743,
             EmissionFactor : 0.5,
             XRotation : 0.0,
-            ShatterColor{ # FloatColor
+            ShatterColor{  ## FloatColor
                 R : 0.0,
                 G : 0.0,
                 B : 0.0,
                 A : 1.0,
             }
-            Origin{ # Vector3
+            Origin{  ## Vector3
                 X : 0.0,
                 Y : 0.0,
                 Z : 0.0,
             }
             Transparent : 0,
-            DiffuseColor{ # FloatColor
+            DiffuseColor{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -152,14 +152,14 @@ $end
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -23.788572311401367,
         Y : -11.855987548828125,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -27.095155715942383,
         Y : -35.14237976074219,
         Width : 55.88050842285156,
@@ -168,13 +168,13 @@ $end
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'obj3',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'UtilityShape',
         Identifier : 101,
-        ShapeComponent{ # ShapeComponent
-            Rectangle{ # Rectangle
+        ShapeComponent{  ## ShapeComponent
+            Rectangle{  ## Rectangle
                 X : -35.0,
                 Y : -35.0,
                 Width : 70.0,
@@ -182,12 +182,12 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Program',
         Identifier : 103,
-        ProgramComponent{ # ProgramComponent
+        ProgramComponent{  ## ProgramComponent
             ExecuteOnce : 1,
-            Program{ # Program
+            Program{  ## Program
                 String : $
 local self = ...;
 
@@ -202,10 +202,10 @@ $end
             Trigger : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'PhysicsObject',
         Identifier : 106,
-        PhysicsObjectComponent{ # PhysicsObjectComponent
+        PhysicsObjectComponent{  ## PhysicsObjectComponent
             PhysicsEnabled : 1,
             GravityMagnitude : 0.0,
             GroundDeceleration : 1500.0,
@@ -215,14 +215,14 @@ $end
             Elasticity : 0.0,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -23.207122802734375,
         Y : -15.712238311767578,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -231,28 +231,28 @@ $end
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'spawn_default',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'SpawnPoint',
         Identifier : 101,
-        SpawnPointComponent{ # SpawnPointComponent
+        SpawnPointComponent{  ## SpawnPointComponent
             FacingDirection : 1,
-            SpawnOffset{ # Vector3
+            SpawnOffset{  ## Vector3
                 X : 0.0,
                 Y : 0.0,
                 Z : 0.0,
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 469.58966064453125,
         Y : -44.90233612060547,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -261,15 +261,14 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-ObjectLibrary{ # ObjectLibrary
+ObjectLibrary{  ## ObjectLibrary
     Name : 'hero',
     ImportedLibrary : 'game_common',
 }
 
-Bounds{ # Rectangle
+Bounds{  ## Rectangle
     X : -3500.0,
     Y : -500.0,
     Width : 5500.0,
     Height : 2000.0,
 }
-

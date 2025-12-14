@@ -1,4 +1,5 @@
 import os
+from shutil import ignore_patterns
 import sys
 import re
 import math
@@ -38,6 +39,7 @@ def lex(lines: str) -> "list[str]":
     decorators_list = ["=", ":", ";", ","]
 
     whitespace_list = [" ", "\t", "\r"]
+    comments_list = ["#", "--", "//"]
 
     lex_list = []
     lexeme = ""
@@ -45,8 +47,19 @@ def lex(lines: str) -> "list[str]":
     s_str_mode = False
     d_str_mode = False
     lua_mode = False
+    comment_mode = False
 
     for offset, char in enumerate(lines):
+
+        if comment_mode:
+            if char == "\n":
+                lex_list.append(lexeme)
+                lex_list.append("<newline>")
+                lexeme = ""
+                comment_mode = False
+            else:
+                lexeme += char
+            continue
 
         if (not char in whitespace_list) or d_str_mode or s_str_mode or lua_mode:
             lexeme += char
@@ -97,11 +110,14 @@ def lex(lines: str) -> "list[str]":
             if lines[offset + 1] in lexicon or char in lexicon or lexeme in two_ops:
 
                 if lexeme != "":
+                    if lexeme in comments_list:
+                        comment_mode = True
                     if not lexeme in decorators_list:
                         lex_list.append(lexeme.replace("\n", "<newline>"))
                     lexeme = ""
 
-    lex_list.append(lexeme.replace("\n", "<newline>"))
+    if lexeme != "":
+        lex_list.append(lexeme.replace("\n", "<newline>"))
 
     return lex_list
 
@@ -115,7 +131,7 @@ def recode_start(args: list) -> "tuple[bool, str, bool]":
 
 
 def recode(args: list) -> "tuple[bool, str, bool]":
-    """takes a list with file content and path
+    """takes a list with file content, filepath and output path
     returns a list with:
     bool for if recode was successful
     string for the filepath
@@ -195,6 +211,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
     file_content = args[0]
     filepath = args[1]
+    targetpath = args[2]
 
     filetype = ""
     filetype_match = re.match(r"^.*\.(.*)$", filepath)
@@ -230,6 +247,13 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
     mode = "tag"
     last_mode = "tag"
+    preserved_comment = []
+    # whether a comment has been marked with a double hashtag
+    # to prevent it being preserved
+    unpreserve_comment = False
+    preserve_comments = config.preserve_comments
+    style_comment_start = config.style_comment_start
+    ignore_field_name_comments = config.ignore_field_name_comments
 
     comments_list = ["#", "--", "//"]
 
@@ -240,14 +264,27 @@ def recode(args: list) -> "tuple[bool, str, bool]":
         if mode == "comment":
             if lexeme == "<newline>":
                 line_num += 1
+                if preserve_comments and not unpreserve_comment:
+                    content = style_comment_start + " ".join(preserved_comment[1:])
+                    out_bytes[metalevel] += (
+                        b"\x8a\x20" + varint(len(content)) + bytes(content, "latin1")
+                    )
+                unpreserve_comment = False
                 mode = last_mode
+            if preserve_comments:
+                if lexeme[0] == preserved_comment[0][0]:
+                    unpreserve_comment = True
+                preserved_comment.append(lexeme)
             continue
         if lexeme in comments_list:
             if lexeme in comments_list:
                 last_mode = mode
+                if preserve_comments:
+                    preserved_comment = [lexeme]
                 mode = "comment"
                 continue
         if lexeme == "<newline>":
+            unpreserve_comment = False
             line_num += 1
             continue
 
@@ -261,10 +298,10 @@ def recode(args: list) -> "tuple[bool, str, bool]":
             )
             continue
 
-        if lexeme == "@halt":
-            if input("@ halted " + filepath + " > ") == "stop":
-                break
-            continue
+        # if lexeme == "@halt":
+        #     if input("@ halted " + filepath + " > ") == "stop":
+        #         break
+        #     continue
 
         if lexeme == "@stop":
             print("@ stopped " + filepath)
@@ -305,7 +342,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
             tag, _, tag_reference = util.match_tagname(format, lexeme)
             if tag == "00":
                 if ltype != "tag":
-                    show_error("type error", "expected tag, got " + ltype)
+                    show_error("type error", f"expected tag, got {ltype} ({lexeme})")
                 else:
                     show_error(
                         "tag not found error",
@@ -323,6 +360,8 @@ def recode(args: list) -> "tuple[bool, str, bool]":
         if mode == "data":
 
             if lexeme == "{":
+                if ignore_field_name_comments:
+                    unpreserve_comment = True
                 out_bytes[metalevel] += varint(tagnumber)
                 try:
                     formats[metalevel + 1] = block_formats.block_formats[tag_reference]
@@ -383,6 +422,8 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                     else:
                         show_error("@compile chunk error", luac_out)
 
+                if config.preserve_compile:
+                    out_bytes[metalevel] += b"\x90\x20\x00"
                 with open(chunk_cache_path + "%out", "rb") as file:
                     chunk_content = file.read()
                 out_bytes[metalevel] += varint(tagnumber)
@@ -393,6 +434,10 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 continue
 
             wiretype = tagnumber % 8
+            if wiretype in [1, 5] and lexeme[-1] == "d" and config.preserve_degrees:
+                out_bytes[metalevel] += (
+                    b"\x9a\x20" + varint(len(lexeme) - 1) + bytes(lexeme[:-1], "latin1")
+                )
             out_bytes[metalevel] += varint(tagnumber)
 
             ltype = util.lexeme_type(lexeme)
@@ -537,38 +582,48 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 mode = "tag"
                 continue
 
-    if filepath == "__stdin__":
-        sys.stdout.buffer.write(out_bytes[0])
-        sys.exit(0)
+    if targetpath != "":
+        outfilepath = targetpath
+    else:
+        if filepath == "__stdin__":
+            sys.stdout.buffer.write(out_bytes[0])
+            sys.exit(0)
 
-    resolved_filepath = Path(filepath).resolve()
-    working_dir = Path(config.working_dir).resolve()
-    try:
-        resolved_filepath.relative_to(working_dir)
-        filepath = filepath.replace("re_in", "re_out")
-        dirpath, filepathleaf = os.path.split(filepath)
-        os.makedirs(dirpath, exist_ok=True)
-        outfilepath = os.path.join(dirpath, filepathleaf)
-    # if filepath is not relative to the working dir, output to re_out/external
-    except ValueError:
-        dirpath, filepathleaf = os.path.split(filepath)
-        parts = dirpath.split(os.sep)
-        parts = [p.replace("%", "%%") for p in parts if p]
-        outdirpath = "%".join(parts)
-        outdirpath = os.path.join(config.working_dir, "re_out", "external", outdirpath)
-        os.makedirs(outdirpath, exist_ok=True)
-        outfilepath = os.path.join(outdirpath, filepathleaf)
+        resolved_filepath = Path(filepath).resolve()
+        working_dir = Path(config.working_dir).resolve()
+        try:
+            resolved_filepath.relative_to(working_dir)
+            filepath = filepath.replace("re_in", "re_out")
+            dirpath, filepathleaf = os.path.split(filepath)
+            os.makedirs(dirpath, exist_ok=True)
+            outfilepath = os.path.join(dirpath, filepathleaf)
+        # if filepath is not relative to the working dir, output to re_out/external
+        except ValueError:
+            dirpath, filepathleaf = os.path.split(filepath)
+            parts = dirpath.split(os.sep)
+            parts = [p.replace("%", "%%") for p in parts if p]
+            outdirpath = "%".join(parts)
+            outdirpath = os.path.join(
+                config.working_dir, "re_out", "external", outdirpath
+            )
+            os.makedirs(outdirpath, exist_ok=True)
+            outfilepath = os.path.join(outdirpath, filepathleaf)
 
     if len(out_bytes[0]) != 0:
-        print(
-            config.colour_success
-            + "recoded: "
-            + config.colour_reset
-            + util.path_tidy(filepath, "re_out")
-        )
         if filepath != "stdin":
             os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
             with open(outfilepath, "wb") as file:
                 file.write(out_bytes[0])
 
+    print(
+        config.colour_success
+        + "recoded: "
+        + config.colour_reset
+        + util.path_tidy(filepath, "re_out")
+        + (
+            (config.colour_punctuation + " -> " + config.colour_reset + outfilepath)
+            if targetpath
+            else ""
+        )
+    )
     return True, filepath, False

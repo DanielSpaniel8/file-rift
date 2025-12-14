@@ -1,28 +1,28 @@
 Name : 'npc_new',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'npc_male_stopping_template',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'npc_male1',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -30,19 +30,19 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 103,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 104,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_walk_slow',
                 Repeating : 1,
@@ -50,38 +50,38 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 105,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 18446744073709551615,
                 PhysicsEnabled : 1,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 107,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -8.0,
                     Y : -33.81779098510742,
                     Width : 16.0,
                     Height : 61.80525588989258,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -80.0,
                 MaxDepth : 80.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -97,10 +97,10 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityController',
             Identifier : 111,
-            EntityControllerComponent{ # EntityControllerComponent
+            EntityControllerComponent{  ## EntityControllerComponent
                 EntityId : 105,
                 AnimationControllerId : 103,
                 DefaultMoveAnimationId : 104,
@@ -111,11 +111,11 @@ $end
                 MovementBehavior : 2,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 112,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -200.0,
                     Y : -100.0,
                     Width : 400.0,
@@ -123,11 +123,11 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityAction',
             Identifier : 114,
-            EntityActionComponent{ # EntityActionComponent
-                OnActivate{ # Program
+            EntityActionComponent{  ## EntityActionComponent
+                OnActivate{  ## Program
                     String : $
 local self = ...;
 
@@ -173,10 +173,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 115,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_stand',
                 Repeating : 1,
@@ -184,19 +184,19 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ModelTransformController',
             Identifier : 116,
-            ModelTransformControllerComponent{ # ModelTransformControllerComponent
+            ModelTransformControllerComponent{  ## ModelTransformControllerComponent
                 ModelId : 101,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 117,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -208,14 +208,14 @@ $end
                 Trigger : 10,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -8.0,
             Y : -33.81779098510742,
             Width : 16.0,
@@ -226,30 +226,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'npc_male_walking_template',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'npc_male1',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -257,19 +257,19 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 103,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 104,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_walk_slow',
                 Repeating : 1,
@@ -277,51 +277,51 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 105,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 18446744073709551615,
                 PhysicsEnabled : 1,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'WalkingMonsterController',
             Identifier : 106,
-            MonsterControllerComponent{ # MonsterControllerComponent
+            MonsterControllerComponent{  ## MonsterControllerComponent
                 WalkSpeed : 30.0,
                 AnimationControllerId : 103,
                 EntityId : 105,
                 RoamAreaId : 111,
             }
-            WalkingMonsterControllerComponent{ # WalkingMonsterControllerComponent
+            WalkingMonsterControllerComponent{  ## WalkingMonsterControllerComponent
                 WalkAnimationId : 104,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 107,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -8.0,
                     Y : -33.81779098510742,
                     Width : 16.0,
                     Height : 61.80525588989258,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -80.0,
                 MaxDepth : 80.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -349,11 +349,11 @@ $end
                 UnsafeGround : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 111,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -200.0,
                     Y : -100.0,
                     Width : 400.0,
@@ -361,14 +361,14 @@ $end
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -8.0,
             Y : -33.81779098510742,
             Width : 16.0,
@@ -379,30 +379,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'npc_sitting_template',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'npc_male1',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -410,19 +410,19 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 103,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 104,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_sit',
                 Repeating : 1,
@@ -430,38 +430,38 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 105,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 1,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 107,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -8.0,
                     Y : -40.0,
                     Width : 16.0,
                     Height : 67.98746490478516,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -80.0,
                 MaxDepth : 80.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, target = ...;
 
@@ -477,10 +477,10 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityController',
             Identifier : 111,
-            EntityControllerComponent{ # EntityControllerComponent
+            EntityControllerComponent{  ## EntityControllerComponent
                 EntityId : 105,
                 AnimationControllerId : 103,
                 DefaultMoveAnimationId : 104,
@@ -491,11 +491,11 @@ $end
                 MovementBehavior : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 112,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -200.0,
                     Y : -100.0,
                     Width : 400.0,
@@ -503,11 +503,11 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityAction',
             Identifier : 114,
-            EntityActionComponent{ # EntityActionComponent
-                OnActivate{ # Program
+            EntityActionComponent{  ## EntityActionComponent
+                OnActivate{  ## Program
                     String : $
 local self = ...;
 
@@ -531,10 +531,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 115,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'npc_stand',
                 Repeating : 1,
@@ -542,19 +542,19 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ModelTransformController',
             Identifier : 116,
-            ModelTransformControllerComponent{ # ModelTransformControllerComponent
+            ModelTransformControllerComponent{  ## ModelTransformControllerComponent
                 ModelId : 101,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 117,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -566,14 +566,14 @@ $end
                 Trigger : 10,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -8.0,
             Y : -40.0,
             Width : 16.0,
@@ -583,4 +583,3 @@ $end
     }
     Scaling : 1.0,
 }
-

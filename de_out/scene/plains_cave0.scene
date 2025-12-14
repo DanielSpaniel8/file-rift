@@ -1,20 +1,20 @@
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'Background',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Background',
         Identifier : 101,
-        BackgroundComponent{ # BackgroundComponent
+        BackgroundComponent{  ## BackgroundComponent
             TextureName : 'cavesbackground2',
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -57.437774658203125,
         Y : 727.383544921875,
     }
     Depth : 1.7203826904296875,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -23,15 +23,15 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'DirectionalLight',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Light',
         Identifier : 101,
-        LightComponent{ # LightComponent
+        LightComponent{  ## LightComponent
             Type : 2,
             Intensity : 0.800000011920929,
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -39,13 +39,13 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Light',
         Identifier : 103,
-        LightComponent{ # LightComponent
+        LightComponent{  ## LightComponent
             Type : 1,
             Intensity : 0.30000001192092896,
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -53,13 +53,13 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Light',
         Identifier : 105,
-        LightComponent{ # LightComponent
+        LightComponent{  ## LightComponent
             Type : 4,
             Intensity : 1.0,
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 0.0,
                 G : 0.0,
                 B : 0.0,
@@ -67,14 +67,14 @@ Object{ # SceneObject
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 830.93408203125,
         Y : 1040.65234375,
     }
     Depth : 325.646240234375,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -83,15 +83,15 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'chest_left',
     Identifier : 'chest1',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'ItemDrop',
         Identifier : 112,
-        ItemDropComponent{ # ItemDropComponent
+        ItemDropComponent{  ## ItemDropComponent
             ItemName : 'sshard_yellow',
-            DropEntry{ # ItemDropComponent_ItemDropEntry
+            DropEntry{  ## ItemDropComponent_ItemDropEntry
                 TemplateName : 'xp_sack',
                 ItemIdentifier : 'xpsack',
                 DropChance : 1.0,
@@ -102,14 +102,14 @@ Object{ # SceneObject
             CanDropDefaultItems : 0,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 323.3089904785156,
         Y : -464.0196838378906,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -80.0,
         Y : -25.0,
         Width : 110.0,
@@ -118,17 +118,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'obj1',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -397.3828125,
         Y : -483.1533203125,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -137,44 +137,44 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'obj14',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 101,
-        ShapeComponent{ # ShapeComponent
-            Rectangle{ # Rectangle
+        ShapeComponent{  ## ShapeComponent
+            Rectangle{  ## Rectangle
                 X : -45.0,
                 Y : -200.0,
                 Width : 90.0,
                 Height : 400.0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             MinDepth : -15.0,
             MaxDepth : 15.0,
             SpecialType : 2,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Portal',
         Identifier : 104,
-        PortalComponent{ # PortalComponent
+        PortalComponent{  ## PortalComponent
             DestinationSceneName : 'plains_part3',
             SpawnPointName : '',
             TapToEnter : 0,
             TriggerShapeId : 101,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1452.81982421875,
         Y : -367.05322265625,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -45.0,
         Y : -200.0,
         Width : 90.0,
@@ -183,36 +183,36 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'obj3#2',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'EntityInfo',
         Identifier : 1,
-        EntityInfoComponent{ # EntityInfoComponent
+        EntityInfoComponent{  ## EntityInfoComponent
             EntityClass : 'Szan, The Angry',
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Model',
         Identifier : 101,
-        ModelComponent{ # ModelComponent
+        ModelComponent{  ## ModelComponent
             Name : 'bat',
             YRotation : 1.5707963705062866,
             EmissionFactor : 0.699999988079071,
             XRotation : 0.0,
-            ShatterColor{ # FloatColor
+            ShatterColor{  ## FloatColor
                 R : 0.0,
                 G : 0.0,
                 B : 0.0,
                 A : 1.0,
             }
-            Origin{ # Vector3
+            Origin{  ## Vector3
                 X : 0.0,
                 Y : 0.0,
                 Z : 0.0,
             }
             Transparent : 0,
-            DiffuseColor{ # FloatColor
+            DiffuseColor{  ## FloatColor
                 R : 1.0,
                 G : 0.5111111402511597,
                 B : 0.0,
@@ -220,10 +220,10 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'KeyframeAnimation',
         Identifier : 103,
-        KeyframeAnimationComponent{ # KeyframeAnimationComponent
+        KeyframeAnimationComponent{  ## KeyframeAnimationComponent
             ModelId : 101,
             Name : 'bat_fly',
             Repeating : 1,
@@ -231,35 +231,35 @@ Object{ # SceneObject
             Running : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'AnimationController',
         Identifier : 105,
-        AnimationControllerComponent{ # AnimationControllerComponent
+        AnimationControllerComponent{  ## AnimationControllerComponent
             ModelId : 101,
             DefaultAnimationId : 0,
             SelfUpdate : 0,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'MonsterEntity',
         Identifier : 107,
-        EntityComponent{ # EntityComponent
+        EntityComponent{  ## EntityComponent
             FacingDirection : 18446744073709551615,
             PhysicsEnabled : 0,
         }
-        MonsterEntityComponent{ # MonsterEntityComponent
-            OnKill{ # Program
+        MonsterEntityComponent{  ## MonsterEntityComponent
+            OnKill{  ## Program
             }
-            OnHurt{ # Program
+            OnHurt{  ## Program
             }
             GivesExperience : 1,
             DefaultDeathAnimation : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Damage',
         Identifier : 111,
-        DamageComponent{ # DamageComponent
+        DamageComponent{  ## DamageComponent
             MinDamage : 1,
             DamageType : 0,
             SpecialDamageType : 0,
@@ -269,30 +269,30 @@ Object{ # SceneObject
             CanBeBlocked : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Health',
         Identifier : 113,
-        HealthComponent{ # HealthComponent
+        HealthComponent{  ## HealthComponent
             MaxHealth : 3,
             HEALTH_TYPE : 0,
-            BarOffset{ # Vector3
+            BarOffset{  ## Vector3
                 X : 0.0,
                 Y : 50.0,
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 115,
-        ShapeComponent{ # ShapeComponent
-            Rectangle{ # Rectangle
+        ShapeComponent{  ## ShapeComponent
+            Rectangle{  ## Rectangle
                 X : -20.0,
                 Y : -7.7837300300598145,
                 Width : 40.0,
                 Height : 42.783729553222656,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             Collides : 1,
             ReceivesDamage : 1,
             InflictsDamage : 1,
@@ -301,10 +301,10 @@ Object{ # SceneObject
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'KeyframeAnimation',
         Identifier : 118,
-        KeyframeAnimationComponent{ # KeyframeAnimationComponent
+        KeyframeAnimationComponent{  ## KeyframeAnimationComponent
             ModelId : 101,
             Name : 'bat_attack',
             Repeating : 0,
@@ -312,10 +312,10 @@ Object{ # SceneObject
             Running : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'EntityController',
         Identifier : 119,
-        EntityControllerComponent{ # EntityControllerComponent
+        EntityControllerComponent{  ## EntityControllerComponent
             EntityId : 107,
             AnimationControllerId : 105,
             DefaultMoveAnimationId : 103,
@@ -326,12 +326,12 @@ Object{ # SceneObject
             MovementBehavior : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Program',
         Identifier : 122,
-        ProgramComponent{ # ProgramComponent
+        ProgramComponent{  ## ProgramComponent
             ExecuteOnce : 1,
-            Program{ # Program
+            Program{  ## Program
                 String : $
 local self = ...;
 
@@ -377,10 +377,10 @@ $end
             Trigger : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'PhysicsObject',
         Identifier : 125,
-        PhysicsObjectComponent{ # PhysicsObjectComponent
+        PhysicsObjectComponent{  ## PhysicsObjectComponent
             PhysicsEnabled : 1,
             GroundDeceleration : 1500.0,
             AirDeceleration : 0.0,
@@ -389,12 +389,12 @@ $end
             Elasticity : 0.0,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'EntityAction',
         Identifier : 128,
         Label : 'attack',
-        EntityActionComponent{ # EntityActionComponent
-            OnActivate{ # Program
+        EntityActionComponent{  ## EntityActionComponent
+            OnActivate{  ## Program
                 String : $
 local self = ...;
 
@@ -420,12 +420,12 @@ $end
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Program',
         Identifier : 132,
-        ProgramComponent{ # ProgramComponent
+        ProgramComponent{  ## ProgramComponent
             ExecuteOnce : 1,
-            Program{ # Program
+            Program{  ## Program
                 String : $
 local self = ...;
 
@@ -439,12 +439,12 @@ $end
             Trigger : 10,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'Program',
         Identifier : 133,
-        ProgramComponent{ # ProgramComponent
+        ProgramComponent{  ## ProgramComponent
             ExecuteOnce : 1,
-            Program{ # Program
+            Program{  ## Program
                 String : $
 local self = ...;
 
@@ -457,11 +457,11 @@ $end
             Trigger : 5,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'ItemDrop',
         Identifier : 134,
-        ItemDropComponent{ # ItemDropComponent
-            DropEntry{ # ItemDropComponent_ItemDropEntry
+        ItemDropComponent{  ## ItemDropComponent
+            DropEntry{  ## ItemDropComponent_ItemDropEntry
                 TemplateName : 'sshard_red',
                 ItemIdentifier : 'sharod',
                 DropChance : 1.0,
@@ -472,14 +472,14 @@ $end
             CanDropDefaultItems : 0,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -355.3033447265625,
         Y : -246.99810791015625,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -20.0,
         Y : -10.159324645996094,
         Width : 40.0,
@@ -488,17 +488,17 @@ $end
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1177.590087890625,
         Y : -537.4479370117188,
     }
     Depth : -66.87765502929688,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -507,17 +507,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#13',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1018.319091796875,
         Y : -526.5556030273438,
     }
     Depth : -66.87765502929688,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -526,17 +526,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#14',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1026.4315185546875,
         Y : -332.230224609375,
     }
     Depth : -73.75457763671875,
     Rotation : 1.867140531539917,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -545,17 +545,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#2',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1177.61669921875,
         Y : -375.00823974609375,
     }
     Depth : -66.87765502929688,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -564,17 +564,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#20',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -729.3699340820312,
         Y : -179.4210205078125,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -583,17 +583,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#21',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -730.4668579101562,
         Y : -17.361297607421875,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -602,17 +602,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#22',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -625.4273071289062,
         Y : -18.954559326171875,
     }
     Depth : -88.9729995727539,
     Rotation : 2.435973882675171,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -621,17 +621,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#23',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -485.4842224121094,
         Y : -190.3985595703125,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -640,17 +640,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#28',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -728.0967407226562,
         Y : -342.0370178222656,
     }
     Depth : -76.4122314453125,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -659,17 +659,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#3',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1018.345703125,
         Y : -364.11590576171875,
     }
     Depth : -66.87765502929688,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -678,17 +678,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#32',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -486.5811462402344,
         Y : -28.338836669921875,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -697,17 +697,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#33',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -484.21099853515625,
         Y : -353.01446533203125,
     }
     Depth : -76.4122314453125,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -716,17 +716,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#34',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -214.9507598876953,
         Y : -189.73141479492188,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -735,17 +735,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#35',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -216.0476837158203,
         Y : -27.67169189453125,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -754,17 +754,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#36',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -213.6775360107422,
         Y : -352.3473205566406,
     }
     Depth : -76.4122314453125,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -773,17 +773,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#37',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 336.8072509765625,
         Y : -191.8577423095703,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -792,17 +792,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#38',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 338.0804748535156,
         Y : -354.4735412597656,
     }
     Depth : -76.4122314453125,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -811,17 +811,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#39',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 33.552276611328125,
         Y : -188.51731872558594,
     }
     Depth : -76.1360855102539,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -830,17 +830,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'board',
     Identifier : 'obj4#40',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 34.82550048828125,
         Y : -351.13311767578125,
     }
     Depth : -76.4122314453125,
     Rotation : 3.1495790481567383,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -25.13957405090332,
         Y : 0.0,
         Width : 38.60220718383789,
@@ -849,17 +849,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'fence',
     Identifier : 'obj6#5',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -816.2537841796875,
         Y : -485.4713439941406,
     }
     Depth : 56.762054443359375,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -67.52229309082031,
         Y : -1.8903623819351196,
         Width : 142.2588653564453,
@@ -868,17 +868,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'fence',
     Identifier : 'obj6#6',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -676.1622924804688,
         Y : -485.4587707519531,
     }
     Depth : 56.762054443359375,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -67.52229309082031,
         Y : -1.8903623819351196,
         Width : 142.2588653564453,
@@ -887,17 +887,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj7',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1180.883056640625,
         Y : -427.7873229980469,
     }
     Depth : -41.20533752441406,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -906,17 +906,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#11',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 346.0491638183594,
         Y : -407.5708312988281,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -925,17 +925,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#12',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -194.32281494140625,
         Y : -684.1281127929688,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -944,17 +944,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#5',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 767.022216796875,
         Y : 0.406402587890625,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -963,17 +963,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#6',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -212.97434997558594,
         Y : -380.2159423828125,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -982,17 +982,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#7',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -720.9964599609375,
         Y : -429.70184326171875,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -1001,17 +1001,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'torch',
     Identifier : 'obj8#8',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -947.8790283203125,
         Y : -181.05355834960938,
     }
     Depth : -44.3414306640625,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -50.0,
         Y : -50.0,
         Width : 100.0,
@@ -1020,206 +1020,206 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'obj9#13',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundPolygon',
         Identifier : 100,
-        GroundPolygonComponent{ # GroundPolygonComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        GroundPolygonComponent{  ## GroundPolygonComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -1390.8455810546875,
                     Y : 109.959228515625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1519.1380615234375,
                     Y : -286.8355712890625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1200.2130126953125,
                     Y : -853.4251708984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1491.4622802734375,
                     Y : -784.6488037109375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1519.1380615234375,
                     Y : 743.8792724609375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1364.674560546875,
                     Y : 738.697509765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1210.2110595703125,
                     Y : 733.515625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1055.74755859375,
                     Y : 728.333740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 901.2841796875,
                     Y : 723.1519165039062,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 746.8206787109375,
                     Y : 717.9700927734375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 592.3572998046875,
                     Y : 712.7882080078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 456.5812683105469,
                     Y : 704.5699462890625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 340.0367736816406,
                     Y : 853.4252319335938,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1258.38525390625,
                     Y : 800.440185546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1236.2830810546875,
                     Y : 221.73464965820312,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1132.2225341796875,
                     Y : 235.78350830078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -997.6051025390625,
                     Y : 273.2217102050781,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -832.0858154296875,
                     Y : 283.16986083984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -699.50390625,
                     Y : 267.74249267578125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -616.029541015625,
                     Y : 269.6715393066406,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -592.4444580078125,
                     Y : 371.259765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -544.29541015625,
                     Y : 473.25140380859375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -441.8680114746094,
                     Y : 532.0870971679688,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -252.16323852539062,
                     Y : 561.5376586914062,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -140.36129760742188,
                     Y : 549.842529296875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -4.8086090087890625,
                     Y : 400.32586669921875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 58.70158386230469,
                     Y : 214.704345703125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 136.2620849609375,
                     Y : 213.60330200195312,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 140.06448364257812,
                     Y : 304.4271240234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 292.67181396484375,
                     Y : 382.83612060546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 451.4120178222656,
                     Y : 405.1884460449219,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 531.0325927734375,
                     Y : 381.8306884765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 558.738525390625,
                     Y : 294.6841735839844,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 552.0535888671875,
                     Y : 106.4862060546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 365.7482604980469,
                     Y : 104.66464233398438,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 231.037841796875,
                     Y : 106.86566162109375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 138.04705810546875,
                     Y : 107.708740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 31.58868408203125,
                     Y : 107.55970764160156,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -74.86968994140625,
                     Y : 107.41067504882812,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -181.32806396484375,
                     Y : 107.26164245605469,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -287.78643798828125,
                     Y : 107.11260986328125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -394.24481201171875,
                     Y : 106.96356201171875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -500.70318603515625,
                     Y : 106.81452941894531,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -607.1615600585938,
                     Y : 106.66549682617188,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -713.6199340820312,
                     Y : 106.51646423339844,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -849.0650634765625,
                     Y : 107.20501708984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -984.5101928710938,
                     Y : 107.89356994628906,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1119.955322265625,
                     Y : 108.58212280273438,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1255.4005126953125,
                     Y : 109.27067565917969,
                 }
@@ -1229,74 +1229,74 @@ Object{ # SceneObject
             Collides : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
-            OnCollide{ # Program
+            OnCollide{  ## Program
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundMesh',
         Identifier : 101,
-        GroundMeshComponent{ # GroundMeshComponent
-            LocalAabb{ # Rectangle
+        GroundMeshComponent{  ## GroundMeshComponent
+            LocalAabb{  ## Rectangle
                 X : -1529.1380615234375,
                 Y : -863.4251708984375,
                 Width : 3058.276123046875,
                 Height : 1726.850341796875,
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 21,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : 1055.74755859375,
                     Y : 693.515625,
                     Z : -70.0,
@@ -1307,60 +1307,60 @@ Object{ # SceneObject
                 VertexData : "]D\xbeD\xb6\xfe9D\x00\x00\x82\xc2\xa3T\t\xbd'\xdb\x7f?\x00\x00\x00\x00\x00\x00\x00?\x90\xc2u>]D\xbeD\xb6\xfe9D\x00\x00\x82B\xa3T\t\xbd'\xdb\x7f?\x00\x00\x00\x00\x00\x00\x00?\\\x8fB?]D\xbeD\xb6\xfe5D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?d;\xdf>\x14\xaeG?]D\xbeD\xb6\xfe/D33\x82B\xa3T\t='\xdb\x7f\xbf\x00\x00\x00\x80{\x14\xae>\x93\xa9B?]D\xbeD\xb6\xfe/D\xcd\xcc\x81\xc2\xa3T\t='\xdb\x7f\xbf\x00\x00\x00\x80{\x14\xae>j+v>]D\xbeD\xb6\xfe5D\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?d;\xdf>\xaeGa>]D\xbeD\xb6\xfe9D\x00\x00\x82\xc2\xa3T\t\xbd'\xdb\x7f?\x00\x00\x00\x00\x00\x00\x00?\x90\xc2u>]D\xbeD\xb6\xfe9D\x00\x00\x82B\xa3T\t\xbd'\xdb\x7f?\x00\x00\x00\x00\x00\x00\x00?\\\x8fB?]D\xbeD\xb6\xfe5D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?\xb2\xb9S?]D\xbeD\xb6\xfe/D33\x82B\xa3T\t='\xdb\x7f\xbf\x00\x00\x00\x80\x00\x00\x00?\xf0\xcel?\x96\x95\xaaD\xa4\xac8D\x00\x00\x82\xc2\rU\t\xbd'\xdb\x7f?\x00\x00\x00\x00;!\x8f?\x90\xc2u>\x96\x95\xaaD\xa4\xac8D\x00\x00\x82B\rU\t\xbd'\xdb\x7f?\x00\x00\x00\x00;!\x8f?\\\x8fB?\x96\x95\xaaD\xa4\xac4D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?;!\x8f?\xb2\xb9S?\x96\x95\xaaD\xa4\xac.D33\x82B\rU\t='\xdb\x7f\xbf\x00\x00\x00\x80;!\x8f?\xf0\xcel?\xc1F\x97D\x00a7D\x00\x00\x82\xc2wU\t\xbd'\xdb\x7f?\x00\x00\x00\x00vB\xde?\x90\xc2u>\xc1F\x97D\x00a7D\x00\x00\x82BwU\t\xbd'\xdb\x7f?\x00\x00\x00\x00vB\xde?\\\x8fB?\xc1F\x97D\x00a3D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?vB\xde?\xb2\xb9S?\xc1F\x97D\x00a-D33\x82BwU\t='\xdb\x7f\xbf\x00\x00\x00\x80vB\xde?\xf0\xcel?\xec\xf7\x83D\\\x156D\x00\x00\x82\xc2EU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\xd8\xb1\x16@\x90\xc2u>\xec\xf7\x83D\\\x156D\x00\x00\x82BEU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\xd8\xb1\x16@\\\x8fB?\xec\xf7\x83D\\\x152D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xd8\xb1\x16@\xb2\xb9S?",
                 IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x0e\x00\x12\x00\x13\x00\x0f\x00\x0e\x00\x13\x00\x0f\x00\x13\x00\x14\x00\x10\x00\x0f\x00\x14\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : 592.3572998046875,
                     Y : 672.7882080078125,
                     Z : -65.0,
@@ -1371,60 +1371,60 @@ Object{ # SceneObject
                 VertexData : "\xc1F\x97D\x00a3D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?vB\xde?\xb2\xb9S?\xc1F\x97D\x00a-D33\x82BwU\t='\xdb\x7f\xbf\x00\x00\x00\x80vB\xde?\xf0\xcel?\xec\xf7\x83D\\\x156D\x00\x00\x82\xc2EU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\xd8\xb1\x16@\x90\xc2u>\xec\xf7\x83D\\\x156D\x00\x00\x82BEU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\xd8\xb1\x16@\\\x8fB?\xec\xf7\x83D\\\x152D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xd8\xb1\x16@\xb2\xb9S?\xec\xf7\x83D\\\x15,D33\x82BEU\t=&\xdb\x7f\xbf\x00\x00\x00\x80\xd8\xb1\x16@\xf0\xcel?0RaD\xb9\xc94D\x00\x00\x82\xc2\x10U\t\xbd&\xdb\x7f?\x00\x00\x00\x00tB>@\x90\xc2u>0RaD\xb9\xc94D\x00\x00\x82B\x10U\t\xbd&\xdb\x7f?\x00\x00\x00\x00tB>@\\\x8fB?0RaD\xb9\xc90D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?tB>@\xb2\xb9S?0RaD\xb9\xc9*D33\x82B\x10U\t=&\xdb\x7f\xbf\x00\x00\x00\x80tB>@\xf0\xcel?\x86\xb4:D\x16~3D\x00\x00\x82\xc2EU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\x11\xd3e@\x90\xc2u>\x86\xb4:D\x16~3D\x00\x00\x82BEU\t\xbd&\xdb\x7f?\x00\x00\x00\x00\x11\xd3e@\\\x8fB?\x86\xb4:D\x16~/D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x11\xd3e@\xb2\xb9S?\x86\xb4:D\x16~)D33\x82BEU\t=&\xdb\x7f\xbf\x00\x00\x00\x80\x11\xd3e@\xf0\xcel?\xde\x16\x14Dr22D\x00\x00\x82\xc2~\xe8<\xbdC\xba\x7f?\x00\x00\x00\x00\xd6\xb1\x86@\x90\xc2u>\xde\x16\x14Dr22D\x00\x00\x82B~\xe8<\xbdC\xba\x7f?\x00\x00\x00\x00\xd6\xb1\x86@\\\x8fB?\xde\x16\x14Dr2.D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd6\xb1\x86@\xb2\xb9S?\xde\x16\x14Dr2(D33\x82B~\xe8<=C\xba\x7f\xbf\x00\x00\x00\x80\xd6\xb1\x86@\xf0\xcel?",
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x02\x00\x06\x00\x07\x00\x03\x00\x02\x00\x07\x00\x03\x00\x07\x00\x08\x00\x04\x00\x03\x00\x08\x00\x04\x00\x08\x00\t\x00\x05\x00\x04\x00\t\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 28,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1261.3836669921875,
                     Y : 664.5699462890625,
                     Z : -70.0,
@@ -1435,60 +1435,60 @@ Object{ # SceneObject
                 VertexData : "\xde\x16\x14Dr22D\x00\x00\x82\xc2~\xe8<\xbdC\xba\x7f?\x00\x00\x00\x00\xd6\xb1\x86@\x90\xc2u>\xde\x16\x14Dr22D\x00\x00\x82B~\xe8<\xbdC\xba\x7f?\x00\x00\x00\x00\xd6\xb1\x86@\\\x8fB?\xde\x16\x14Dr2.D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xd6\xb1\x86@\xb2\xb9S?\xde\x16\x14Dr2(D33\x82B~\xe8<=C\xba\x7f\xbf\x00\x00\x00\x80\xd6\xb1\x86@\xf0\xcel?gJ\xe4Cz$0D\x00\x00\x82\xc2Wxw\xbdG\x88\x7f?\x00\x00\x00\x00\x17\x1b\x98@\x90\xc2u>gJ\xe4Cz$0D\x00\x00\x82BWxw\xbdG\x88\x7f?\x00\x00\x00\x00\x17\x1b\x98@\\\x8fB?gJ\xe4Cz$,D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x17\x1b\x98@\xb2\xb9S?gJ\xe4Cz$&D33\x82BWxw=G\x88\x7f\xbf\x00\x00\x00\x80\x17\x1b\x98@\xf0\xcel?gJ\xe4Cz$0D\x00\x00\x82\xc2Wxw\xbdG\x88\x7f?\x00\x00\x00\x00\x17\x1b\x98@\x90\xc2u>gJ\xe4Cz$0D\x00\x00\x82BWxw\xbdG\x88\x7f?\x00\x00\x00\x00\x17\x1b\x98@\\\x8fB?gJ\xe4Cz$,D\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?`'\x9a@\x14\xaeG?gJ\xe4Cz$&D33\x82BWxw=G\x88\x7f\xbf\x00\x00\x00\x80\xcf9\x9d@\x93\xa9B?gJ\xe4Cz$&D\xcd\xcc\x81\xc2Wxw=G\x88\x7f\xbf\x00\x00\x00\x80\xcf9\x9d@j+v>gJ\xe4Cz$,D\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?`'\x9a@\xaeGa>\x7f\x84\xabC\x93aUD\x00\x00\x82\xc2{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00\x17\x1b\x98@\x90\xc2u>\x7f\x84\xabC\x93aUD\x00\x00\x82B{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00\x17\x1b\x98@\\\x8fB?\x7f\x84\xabC\x93aQD\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xcd\x0e\x96@\x14\xaeG?\x7f\x84\xabC\x93aKD33\x82B{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80^\xfc\x92@\x93\xa9B?\x7f\x84\xabC\x93aKD\xcd\xcc\x81\xc2{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80^\xfc\x92@j+v>\x7f\x84\xabC\x93aQD\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xcd\x0e\x96@\xaeGa>\x7f\x84\xabC\x93aUD\x00\x00\x82\xc2{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00\x17\x1b\x98@\x90\xc2u>\x7f\x84\xabC\x93aUD\x00\x00\x82B{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00\x17\x1b\x98@\\\x8fB?\x7f\x84\xabC\x93aQD\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x17\x1b\x98@\xb2\xb9S?\x7f\x84\xabC\x93aKD33\x82B{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80\x17\x1b\x98@\xf0\xcel?G\xac\x9d\xc4\xd0\x15HD\x00\x00\x82\xc2{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00zh2A\x90\xc2u>G\xac\x9d\xc4\xd0\x15HD\x00\x00\x82B{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00zh2A\\\x8fB?G\xac\x9d\xc4\xd0\x15DD\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?zh2A\xb2\xb9S?G\xac\x9d\xc4\xd0\x15>D33\x82B{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80zh2A\xf0\xcel?",
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x01\x00\x05\x00\x06\x00\x02\x00\x01\x00\x06\x00\x02\x00\x06\x00\x07\x00\x03\x00\x02\x00\x07\x00\x08\x00\r\x00\x0c\x00\x08\x00\x0c\x00\x0b\x00\x08\x00\x0b\x00\t\x00\x0b\x00\n\x00\t\x00\x0e\x00\x12\x00\x13\x00\x0e\x00\x11\x00\x12\x00\x0e\x00\x0f\x00\x11\x00\x0f\x00\x10\x00\x11\x00\x14\x00\x18\x00\x19\x00\x15\x00\x14\x00\x19\x00\x15\x00\x19\x00\x1a\x00\x16\x00\x15\x00\x1a\x00\x16\x00\x1a\x00\x1b\x00\x17\x00\x16\x00\x1b\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 24,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1261.3836669921875,
                     Y : 64.66464233398438,
                     Z : -70.0,
@@ -1499,60 +1499,60 @@ Object{ # SceneObject
                 VertexData : 'G\xac\x9d\xc4\xd0\x15HD\x00\x00\x82\xc2{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00zh2A\x90\xc2u>G\xac\x9d\xc4\xd0\x15HD\x00\x00\x82B{\xb3\x07\xbd\x06\xdc\x7f?\x00\x00\x00\x00zh2A\\\x8fB?G\xac\x9d\xc4\xd0\x15DD\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x9fn3A\x14\xaeG?G\xac\x9d\xc4\xd0\x15>D33\x82B{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80\xd6\xf74A\x93\xa9B?G\xac\x9d\xc4\xd0\x15>D\xcd\xcc\x81\xc2{\xb3\x07=\x06\xdc\x7f\xbf\x00\x00\x00\x80\xd6\xf74Aj+v>G\xac\x9d\xc4\xd0\x15DD\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x9fn3A\xaeGa>n\x03\nD\xf0\xf8\xd4B\x00\x00\x82\xc2\x06/ \xbc\xdf\xfc\x7f?\x00\x00\x00\x00zh2A\x90\xc2u>n\x03\nD\xf0\xf8\xd4B\x00\x00\x82B\x06/ \xbc\xdf\xfc\x7f?\x00\x00\x00\x00zh2A\\\x8fB?n\x03\nD\xf0\xf8\xb4B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?Ub1A\x14\xaeG?n\x03\nD\xf0\xf8\x84B33\x82B\x06/ <\xdf\xfc\x7f\xbf\x00\x00\x00\x80\x1e\xd9/A\x93\xa9B?n\x03\nD\xf0\xf8\x84B\xcd\xcc\x81\xc2\x06/ <\xdf\xfc\x7f\xbf\x00\x00\x00\x80\x1e\xd9/Aj+v>n\x03\nD\xf0\xf8\xb4B\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?Ub1A\xaeGa>n\x03\nD\xf0\xf8\xd4B\x00\x00\x82\xc2\x06/ \xbc\xdf\xfc\x7f?\x00\x00\x00\x00zh2A\x90\xc2u>n\x03\nD\xf0\xf8\xd4B\x00\x00\x82B\x06/ \xbc\xdf\xfc\x7f?\x00\x00\x00\x00zh2A\\\x8fB?n\x03\nD\xf0\xf8\xb4B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?zh2A\xb2\xb9S?n\x03\nD\xf0\xf8\x84B33\x82B\x06/ <\xdf\xfc\x7f\xbf\x00\x00\x00\x80zh2A\xf0\xcel?\xc7\xdf\xb6CLT\xd1B\x00\x00\x82\xc2\xe0\xee\x9a:\xf5\xff\x7f?\x00\x00\x00\x00\x0cU>A\x90\xc2u>\xc7\xdf\xb6CLT\xd1B\x00\x00\x82B\xe0\xee\x9a:\xf5\xff\x7f?\x00\x00\x00\x00\x0cU>A\\\x8fB?\xc7\xdf\xb6CLT\xb1B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cU>A\xb2\xb9S?\xc7\xdf\xb6CLT\x81B33\x82B\xe0\xee\x9a\xba\xf5\xff\x7f\xbf\x00\x00\x00\x80\x0cU>A\xf0\xcel?\xb0\tgC8\xbb\xd5B\x00\x00\x82\xc2\xea\x03[<%\xfa\x7f?\x00\x00\x00\x00q\xf4FA\x90\xc2u>\xb0\tgC8\xbb\xd5B\x00\x00\x82B\xea\x03[<%\xfa\x7f?\x00\x00\x00\x00q\xf4FA\\\x8fB?\xb0\tgC8\xbb\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?q\xf4FA\xb2\xb9S?\xb0\tgC8\xbb\x85B33\x82B\xea\x03[\xbc%\xfa\x7f\xbf\x00\x00\x00\x80q\xf4FA\xf0\xcel?',
                 IndexData : '\x00\x00\x05\x00\x04\x00\x00\x00\x04\x00\x03\x00\x00\x00\x03\x00\x01\x00\x03\x00\x02\x00\x01\x00\x06\x00\n\x00\x0b\x00\x06\x00\t\x00\n\x00\x06\x00\x07\x00\t\x00\x07\x00\x08\x00\t\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\r\x00\x11\x00\x12\x00\x0e\x00\r\x00\x12\x00\x0e\x00\x12\x00\x13\x00\x0f\x00\x0e\x00\x13\x00\x10\x00\x14\x00\x15\x00\x11\x00\x10\x00\x15\x00\x11\x00\x15\x00\x16\x00\x12\x00\x11\x00\x16\x00\x12\x00\x16\x00\x17\x00\x13\x00\x12\x00\x17\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -181.32806396484375,
                     Y : 66.86566162109375,
                     Z : -65.0,
@@ -1563,60 +1563,60 @@ Object{ # SceneObject
                 VertexData : '\xb0\tgC8\xbb\xd5B\x00\x00\x82\xc2\xea\x03[<%\xfa\x7f?\x00\x00\x00\x00q\xf4FA\x90\xc2u>\xb0\tgC8\xbb\xd5B\x00\x00\x82B\xea\x03[<%\xfa\x7f?\x00\x00\x00\x00q\xf4FA\\\x8fB?\xb0\tgC8\xbb\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?q\xf4FA\xb2\xb9S?\xb0\tgC8\xbb\x85B33\x82B\xea\x03[\xbc%\xfa\x7f\xbf\x00\x00\x00\x80q\xf4FA\xf0\xcel?\x0c\x0c\nC\xe0j\xd7B\x00\x00\x82\xc2>\rd;\x9b\xff\x7f?\x00\x00\x00\x00\x10\xe8LA\x90\xc2u>\x0c\x0c\nC\xe0j\xd7B\x00\x00\x82B>\rd;\x9b\xff\x7f?\x00\x00\x00\x00\x10\xe8LA\\\x8fB?\x0c\x0c\nC\xe0j\xb7B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x10\xe8LA\xb2\xb9S?\x0c\x0c\nC\xe0j\x87B33\x82B>\rd\xbb\x9b\xff\x7f\xbf\x00\x00\x00\x80\x10\xe8LA\xf0\xcel?\xa0\xb5\xfcA\x92\x1e\xd7B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00H\xb8SA\x90\xc2u>\xa0\xb5\xfcA\x92\x1e\xd7B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00H\xb8SA\\\x8fB?\xa0\xb5\xfcA\x92\x1e\xb7B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?H\xb8SA\xb2\xb9S?\xa0\xb5\xfcA\x92\x1e\x87B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80H\xb8SA\xf0\xcel?H\xbd\x95\xc2D\xd2\xd6B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\x7f\x88ZA\x90\xc2u>H\xbd\x95\xc2D\xd2\xd6B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\x7f\x88ZA\\\x8fB?H\xbd\x95\xc2D\xd2\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x7f\x88ZA\xb2\xb9S?H\xbd\x95\xc2D\xd2\x86B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\x7f\x88ZA\xf0\xcel?\xfcS5\xc3\xf6\x85\xd6B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xb6XaA\x90\xc2u>\xfcS5\xc3\xf6\x85\xd6B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xb6XaA\\\x8fB?',
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x01\x00\x05\x00\x06\x00\x02\x00\x01\x00\x06\x00\x02\x00\x06\x00\x07\x00\x03\x00\x02\x00\x07\x00\x04\x00\x08\x00\t\x00\x05\x00\x04\x00\t\x00\x05\x00\t\x00\n\x00\x06\x00\x05\x00\n\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\t\x00\r\x00\x0e\x00\n\x00\t\x00\x0e\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -500.70318603515625,
                     Y : 66.96356201171875,
                     Z : -65.0,
@@ -1627,60 +1627,60 @@ Object{ # SceneObject
                 VertexData : 'H\xbd\x95\xc2D\xd2\xd6B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\x7f\x88ZA\\\x8fB?H\xbd\x95\xc2D\xd2\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x7f\x88ZA\xb2\xb9S?H\xbd\x95\xc2D\xd2\x86B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\x7f\x88ZA\xf0\xcel?\xfcS5\xc3\xf6\x85\xd6B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xb6XaA\x90\xc2u>\xfcS5\xc3\xf6\x85\xd6B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xb6XaA\\\x8fB?\xfcS5\xc3\xf6\x85\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xb6XaA\xb2\xb9S?\xfcS5\xc3\xf6\x85\x86B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\xb6XaA\xf0\xcel?\xaa\xe4\x8f\xc3\xa89\xd6B\x00\x00\x82\xc2\xaf\x7f\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xee(hA\x90\xc2u>\xaa\xe4\x8f\xc3\xa89\xd6B\x00\x00\x82B\xaf\x7f\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\xee(hA\\\x8fB?\xaa\xe4\x8f\xc3\xa89\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xee(hA\xb2\xb9S?\xaa\xe4\x8f\xc3\xa89\x86B33\x82B\xaf\x7f\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\xee(hA\xf0\xcel?V\x1f\xc5\xc3X\xed\xd5B\x00\x00\x82\xc2\xaf\x7f\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00%\xf9nA\x90\xc2u>V\x1f\xc5\xc3X\xed\xd5B\x00\x00\x82B\xaf\x7f\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00%\xf9nA\\\x8fB?V\x1f\xc5\xc3X\xed\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?%\xf9nA\xb2\xb9S?V\x1f\xc5\xc3X\xed\x85B33\x82B\xaf\x7f\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80%\xf9nA\xf0\xcel?\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\\\xc9uA\x90\xc2u>\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\\\xc9uA\\\x8fB?\x02Z\xfa\xc3\n\xa1\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\\\xc9uA\xb2\xb9S?',
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x01\x00\x05\x00\x06\x00\x02\x00\x01\x00\x06\x00\x03\x00\x07\x00\x08\x00\x04\x00\x03\x00\x08\x00\x04\x00\x08\x00\t\x00\x05\x00\x04\x00\t\x00\x05\x00\t\x00\n\x00\x06\x00\x05\x00\n\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\t\x00\r\x00\x0e\x00\n\x00\t\x00\x0e\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -849.0650634765625,
                     Y : 66.51646423339844,
                     Z : -65.0,
@@ -1691,60 +1691,60 @@ Object{ # SceneObject
                 VertexData : "V\x1f\xc5\xc3X\xed\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?%\xf9nA\xb2\xb9S?V\x1f\xc5\xc3X\xed\x85B33\x82B\xaf\x7f\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80%\xf9nA\xf0\xcel?\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\\\xc9uA\x90\xc2u>\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\\\xc9uA\\\x8fB?\x02Z\xfa\xc3\n\xa1\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\\\xc9uA\xb2\xb9S?\x02Z\xfa\xc3\n\xa1\x85B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\\\xc9uA\xf0\xcel?W\xca\x17\xc4\xbcT\xd5B\x00\x00\x82\xc2H}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\x93\x99|A\x90\xc2u>W\xca\x17\xc4\xbcT\xd5B\x00\x00\x82BH}\xb7\xba\xef\xff\x7f?\x00\x00\x00\x00\x93\x99|A\\\x8fB?W\xca\x17\xc4\xbcT\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x93\x99|A\xb2\xb9S?W\xca\x17\xc4\xbcT\x85B33\x82BH}\xb7:\xef\xff\x7f\xbf\x00\x00\x00\x80\x93\x99|A\xf0\xcel?\xadg2\xc4n\x08\xd5B\x00\x00\x82\xc2U*\x12;\xd6\xff\x7f?\x00\x00\x00\x00\xe6\xb4\x81A\x90\xc2u>\xadg2\xc4n\x08\xd5B\x00\x00\x82BU*\x12;\xd6\xff\x7f?\x00\x00\x00\x00\xe6\xb4\x81A\\\x8fB?\xadg2\xc4n\x08\xb5B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe6\xb4\x81A\xb2\xb9S?\xadg2\xc4n\x08\x85B33\x82BU*\x12\xbb\xd6\xff\x7f\xbf\x00\x00\x00\x80\xe6\xb4\x81A\xf0\xcel?*DT\xc4\xf8h\xd6B\x00\x00\x82\xc2\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00z\n\x86A\x90\xc2u>*DT\xc4\xf8h\xd6B\x00\x00\x82B\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00z\n\x86A\\\x8fB?*DT\xc4\xf8h\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?z\n\x86A\xb2\xb9S?*DT\xc4\xf8h\x86B33\x82B\x06\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80z\n\x86A\xf0\xcel?",
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x02\x00\x06\x00\x07\x00\x03\x00\x02\x00\x07\x00\x03\x00\x07\x00\x08\x00\x04\x00\x03\x00\x08\x00\x04\x00\x08\x00\t\x00\x05\x00\x04\x00\t\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 18,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1393.8455810546875,
                     Y : 67.20501708984375,
                     Z : -65.0,
@@ -1755,60 +1755,60 @@ Object{ # SceneObject
                 VertexData : "*DT\xc4\xf8h\xd6B\x00\x00\x82\xc2\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00z\n\x86A\x90\xc2u>*DT\xc4\xf8h\xd6B\x00\x00\x82B\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00z\n\x86A\\\x8fB?*DT\xc4\xf8h\xb6B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?z\n\x86A\xb2\xb9S?*DT\xc4\xf8h\x86B33\x82B\x06\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80z\n\x86A\xf0\xcel?\xa7 v\xc4\x82\xc9\xd7B\x00\x00\x82\xc2\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\x0e`\x8aA\x90\xc2u>\xa7 v\xc4\x82\xc9\xd7B\x00\x00\x82B\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\x0e`\x8aA\\\x8fB?\xa7 v\xc4\x82\xc9\xb7B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0e`\x8aA\xb2\xb9S?\xa7 v\xc4\x82\xc9\x87B33\x82B\x06\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80\x0e`\x8aA\xf0\xcel?\x92\xfe\x8b\xc4\x0c*\xd9B\x00\x00\x82\xc2\x03\x94\xa6;&\xff\x7f?\x00\x00\x00\x00\xa3\xb5\x8eA\x90\xc2u>\x92\xfe\x8b\xc4\x0c*\xd9B\x00\x00\x82B\x03\x94\xa6;&\xff\x7f?\x00\x00\x00\x00\xa3\xb5\x8eA\\\x8fB?\x92\xfe\x8b\xc4\x0c*\xb9B\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xa3\xb5\x8eA\xb2\xb9S?\x92\xfe\x8b\xc4\x0c*\x89B33\x82B\x03\x94\xa6\xbb&\xff\x7f\xbf\x00\x00\x00\x80\xa3\xb5\x8eA\xf0\xcel?\xd1\xec\x9c\xc4\x96\x8a\xdaB\x00\x00\x82\xc2\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x007\x0b\x93A\x90\xc2u>\xd1\xec\x9c\xc4\x96\x8a\xdaB\x00\x00\x82B\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x007\x0b\x93A\\\x8fB?\xd1\xec\x9c\xc4\x96\x8a\xbaB\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?7\x0b\x93A\xb2\xb9S?\xd1\xec\x9c\xc4\x96\x8a\x8aB33\x82B\x06\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x807\x0b\x93A\xf0\xcel?\x0f;\xae\xc4\xef\xf2\xdbB\x00\x00\x82\xc2\x0b\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\xcc`\x97A\x90\xc2u>\x0f;\xae\xc4\xef\xf2\xdbB\x00\x00\x82B\x0b\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\xcc`\x97A\\\x8fB?",
                 IndexData : '\x00\x00\x04\x00\x05\x00\x01\x00\x00\x00\x05\x00\x01\x00\x05\x00\x06\x00\x02\x00\x01\x00\x06\x00\x02\x00\x06\x00\x07\x00\x03\x00\x02\x00\x07\x00\x04\x00\x08\x00\t\x00\x05\x00\x04\x00\t\x00\x05\x00\t\x00\n\x00\x06\x00\x05\x00\n\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\t\x00\r\x00\x0e\x00\n\x00\t\x00\x0e\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 12,
                 NumFaces : 8,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1393.8455810546875,
                     Y : 69.27067565917969,
                     Z : -70.0,
@@ -1819,60 +1819,60 @@ Object{ # SceneObject
                 VertexData : "\xd1\xec\x9c\xc4\x96\x8a\xdaB\x00\x00\x82B\x06\x94\xa6;'\xff\x7f?\x00\x00\x00\x007\x0b\x93A\\\x8fB?\xd1\xec\x9c\xc4\x96\x8a\xbaB\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?7\x0b\x93A\xb2\xb9S?\xd1\xec\x9c\xc4\x96\x8a\x8aB33\x82B\x06\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x807\x0b\x93A\xf0\xcel?\x0f;\xae\xc4\xef\xf2\xdbB\x00\x00\x82B\x0b\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\xcc`\x97A\\\x8fB?\x0f;\xae\xc4\xef\xf2\xbbB\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xcc`\x97A\xb2\xb9S?\x0f;\xae\xc4\xef\xf2\x8bB33\x82B\x0b\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80\xcc`\x97A\xf0\xcel?\x0f;\xae\xc4\xef\xf2\xdbB\x00\x00\x82\xc2\x0b\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\xcc`\x97A\x90\xc2u>\x0f;\xae\xc4\xef\xf2\xdbB\x00\x00\x82B\x0b\x94\xa6;'\xff\x7f?\x00\x00\x00\x00\xcc`\x97A\\\x8fB?\x0f;\xae\xc4\xef\xf2\xbbB\x00\x00\x8cB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xde\xe3\x97A\x14\xaeG?\x0f;\xae\xc4\xef\xf2\x8bB33\x82B\x0b\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80z\xa8\x98A\x93\xa9B?\x0f;\xae\xc4\xef\xf2\x8bB\xcd\xcc\x81\xc2\x0b\x94\xa6\xbb'\xff\x7f\xbf\x00\x00\x00\x80z\xa8\x98Aj+v>\x0f;\xae\xc4\xef\xf2\xbbB\x00\x00\x8c\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xde\xe3\x97A\xaeGa>",
                 IndexData : '\x00\x00\x03\x00\x04\x00\x01\x00\x00\x00\x04\x00\x01\x00\x04\x00\x05\x00\x02\x00\x01\x00\x05\x00\x06\x00\x0b\x00\n\x00\x06\x00\n\x00\t\x00\x06\x00\t\x00\x07\x00\t\x00\x08\x00\x07\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 26,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1519.1380615234375,
                     Y : -853.4251708984375,
                     Z : -60.0,
@@ -1883,60 +1883,60 @@ Object{ # SceneObject
                 VertexData : "\x0f\xdb\xad\xc4 \xeb\xdbB\x00\x00p\xc2\xa8\x95s\xbf4\x83\x9d>\x00\x00\x00\x00\x00\x00\x00?\xb8\x1e\x85>\x0f\xdb\xad\xc4 \xeb\xdbB\x00\x00pB\xa8\x95s\xbf4\x83\x9d>\x00\x00\x00\x00\x00\x00\x00?\xa4p=?k\xe4\xbd\xc4\xf4j\x8f\xc3\x00\x00p\xc2p!{\xbf\xdc\xc5F\xbe\x00\x00\x00\x00\xc6\xc1\n@\xb8\x1e\x85>k\xe4\xbd\xc4\xf4j\x8f\xc3\x00\x00pBp!{\xbf\xdc\xc5F\xbe\x00\x00\x00\x00\xc6\xc1\n@\xa4p=?\xd1\x06\x96\xc46[U\xc4\x00\x00p\xc2\xb8\r'\xbe\x08\x92|\xbf\x00\x00\x00\x00\x0f\x9a\x98@\xb8\x1e\x85>\xd1\x06\x96\xc46[U\xc4\x00\x00pB\xb8\r'\xbe\x08\x92|\xbf\x00\x00\x00\x00\x0f\x9a\x98@\xa4p=?\xcbn\xbaD\x86)D\xc4\x00\x00p\xc2X\xa8\x01?\xb9\xbc\\\xbf\x00\x00\x00\x00\xd5\x9fxA\xb8\x1e\x85>\xcbn\xbaD\x86)D\xc4\x00\x00pBX\xa8\x01?\xb9\xbc\\\xbf\x00\x00\x00\x00\xd5\x9fxA\xa4p=?k\xe4\xbdDF\xf89D\x00\x00p\xc2C\xf5\x7f?)M\x94\xbc\x00\x00\x00\x00\xac;\xadA\xb8\x1e\x85>k\xe4\xbdDF\xf89D\x00\x00pBC\xf5\x7f?)M\x94\xbc\x00\x00\x00\x00\xac;\xadA\xa4p=?gJ\xe4Cz$0D\x00\x00p\xc2\xad\x91I?\xec\xd0\x1d?\x00\x00\x00\x00\xac;\xadA\xb8\x1e\x85>gJ\xe4Cz$0D\x00\x00pB\xad\x91I?\xec\xd0\x1d?\x00\x00\x00\x00\xac;\xadA\xa4p=?\xb5\x04\xaaC7[UD\x00\x00p\xc2\xad\x91I?\xec\xd0\x1d?\x00\x00\x00\x00bH\xb3A\xb8\x1e\x85>\xb5\x04\xaaC7[UD\x00\x00pB\xad\x91I?\xec\xd0\x1d?\x00\x00\x00\x00bH\xb3A\xa4p=?TL\x9d\xc4,\x1cHD\x00\x00p\xc2B\xd0\x7f\xbf~R\x1c\xbd\x00\x00\x00\x00bH\xb3A\xb8\x1e\x85>TL\x9d\xc4,\x1cHD\x00\x00pBB\xd0\x7f\xbf~R\x1c\xbd\x00\x00\x00\x00bH\xb3A\xa4p=?\x0f\x89\x9a\xc4\x12\xbc]C\x00\x00p\xc2\xf6\xd6y\xbf\x11J_\xbe\x00\x00\x00\x00\x99\xd0\xc5A\xb8\x1e\x85>\x0f\x89\x9a\xc4\x12\xbc]C\x00\x00pB\xf6\xd6y\xbf\x11J_\xbe\x00\x00\x00\x00\x99\xd0\xc5A\xa4p=?\x1f\x87\x8d\xc4\x94\xc8kC\x00\x00p\xc2\x93\xedW>h>z\xbf\x00\x00\x00\x00\xcb,\xc9A\xb8\x1e\x85>\x1f\x87\x8d\xc4\x94\xc8kC\x00\x00pB\x93\xedW>h>z\xbf\x00\x00\x00\x00\xcb,\xc9A\xa4p=?\xbafy\xc4a\x9c\x88C\x00\x00p\xc2\x93\xb1\x1f>'\xde|\xbf\x00\x00\x00\x00o\xa5\xcdA\xb8\x1e\x85>\xbafy\xc4a\x9c\x88C\x00\x00pB\x93\xb1\x1f>'\xde|\xbf\x00\x00\x00\x00o\xa5\xcdA\xa4p=?~\x05P\xc4\xbe\x95\x8dC\x00\x00p\xc2\xf8\x8b\x96\xbc\xef\xf4\x7f\xbf\x00\x00\x00\x00\xd0\xf3\xd2A\xb8\x1e\x85>~\x05P\xc4\xbe\x95\x8dC\x00\x00pB\xf8\x8b\x96\xbc\xef\xf4\x7f\xbf\x00\x00\x00\x00\xd0\xf3\xd2A\xa4p=?@\xe0.\xc4\n\xdf\x85C\x00\x00p\xc2Ng\x7f\xbdy\x80\x7f\xbf\x00\x00\x00\x00A9\xd7A\xb8\x1e\x85>@\xe0.\xc4\n\xdf\x85C\x00\x00pBNg\x7f\xbdy\x80\x7f\xbf\x00\x00\x00\x00A9\xd7A\xa4p=?",
                 IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0e\x00\x10\x00\x11\x00\x0f\x00\x0e\x00\x11\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00\x14\x00\x16\x00\x17\x00\x15\x00\x14\x00\x17\x00\x16\x00\x18\x00\x19\x00\x17\x00\x16\x00\x19\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 22,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -699.50390625,
                     Y : 213.60330200195312,
                     Z : -60.0,
@@ -1947,60 +1947,60 @@ Object{ # SceneObject
                 VertexData : "@\xe0.\xc4\n\xdf\x85C\x00\x00p\xc2Ng\x7f\xbdy\x80\x7f\xbf\x00\x00\x00\x00A9\xd7A\xb8\x1e\x85>@\xe0.\xc4\n\xdf\x85C\x00\x00pBNg\x7f\xbdy\x80\x7f\xbf\x00\x00\x00\x00A9\xd7A\xa4p=?\xe4\x01\x1a\xc4\xf5\xd5\x86C\x00\x00p\xc2\xfd\xf21?\xcd\t8\xbf\x00\x00\x00\x00B\xe5\xd9A\xb8\x1e\x85>\xe4\x01\x1a\xc4\xf5\xd5\x86C\x00\x00pB\xfd\xf21?\xcd\t8\xbf\x00\x00\x00\x00B\xe5\xd9A\xa4p=?r\x1c\x14\xc4@\xa1\xb9C\x00\x00p\xc2\x03sq?\xe6'\xaa\xbe\x00\x00\x00\x00\x9a;\xddA\xb8\x1e\x85>r\x1c\x14\xc4@\xa1\xb9C\x00\x00pB\x03sq?\xe6'\xaa\xbe\x00\x00\x00\x00\x9a;\xddA\xa4p=?\xe8\x12\x08\xc4.\xa0\xecC\x00\x00p\xc2\x80\xe0:?9\xf7.\xbf\x00\x00\x00\x00\x8a\xd7\xe0A\xb8\x1e\x85>\xe8\x12\x08\xc4.\xa0\xecC\x00\x00pB\x80\xe0:?9\xf7.\xbf\x00\x00\x00\x00\x8a\xd7\xe0A\xa4p=?\x1b\xef\xdc\xc3\x93\x05\x05D\x00\x00p\xc2\xf7\x1d\x94>\xc2\ru\xbf\x00\x00\x00\x004\x9f\xe4A\xb8\x1e\x85>\x1b\xef\xdc\xc3\x93\x05\x05D\x00\x00pB\xf7\x1d\x94>\xc2\ru\xbf\x00\x00\x00\x004\x9f\xe4A\xa4p=?\xca)|\xc3ib\x0cD\x00\x00p\xc2\xd0\xcap=\xa9\x8e\x7f\xbf\x00\x00\x00\x00\xe1\xc3\xeaA\xb8\x1e\x85>\xca)|\xc3ib\x0cD\x00\x00pB\xd0\xcap=\xa9\x8e\x7f\xbf\x00\x00\x00\x00\xe1\xc3\xeaA\xa4p=?~\\\x0c\xc3\xecu\tD\x00\x00p\xc2\xa1\xc7\x0b\xbfuxV\xbf\x00\x00\x00\x00\xc3\\\xeeA\xb8\x1e\x85>~\\\x0c\xc3\xecu\tD\x00\x00pB\xa1\xc7\x0b\xbfuxV\xbf\x00\x00\x00\x00\xc3\\\xeeA\xa4p=? \xe0\x99\xc0\xb6)\xc8C\x00\x00p\xc2\xf0\x19\\\xbf\xf0\xbb\x02\xbf\x00\x00\x00\x00\n\xd2\xf4A\xb8\x1e\x85> \xe0\x99\xc0\xb6)\xc8C\x00\x00pB\xf0\x19\\\xbf\xf0\xbb\x02\xbf\x00\x00\x00\x00\n\xd2\xf4A\xa4p=?l\xcejBP\xb4VC\x00\x00p\xc20BL\xbf\xbdQ\x1a\xbf\x00\x00\x00\x002\x19\xfbA\xb8\x1e\x85>l\xcejBP\xb4VC\x00\x00pB0BL\xbf\xbdQ\x1a\xbf\x00\x00\x00\x002\x19\xfbA\xa4p=?\x18C\x08Cr\x9aUC\x00\x00p\xc2j\xa3=?\x08\xf8+\xbf\x00\x00\x00\x00\xa3\x94\xfdA\xb8\x1e\x85>\x18C\x08Cr\x9aUC\x00\x00pBj\xa3=?\x08\xf8+\xbf\x00\x00\x00\x00\xa3\x94\xfdA\xa4p=?\x82\x10\x0cC\xac6\x98C\x00\x00p\xc2t\x00<?\xac\xc1-\xbf\x00\x00\x00\x00\xa8>\x00B\xb8\x1e\x85>\x82\x10\x0cC\xac6\x98C\x00\x00pBt\x00<?\xac\xc1-\xbf\x00\x00\x00\x00\xa8>\x00B\xa4p=?",
                 IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00\n\x00\x0c\x00\r\x00\x0b\x00\n\x00\r\x00\x0c\x00\x0e\x00\x0f\x00\r\x00\x0c\x00\x0f\x00\x0e\x00\x10\x00\x11\x00\x0f\x00\x0e\x00\x11\x00\x10\x00\x12\x00\x13\x00\x11\x00\x10\x00\x13\x00\x12\x00\x14\x00\x15\x00\x13\x00\x12\x00\x15\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 12,
                 NumFaces : 10,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : 140.06448364257812,
                     Y : 106.4862060546875,
                     Z : -60.0,
@@ -2011,54 +2011,54 @@ Object{ # SceneObject
                 VertexData : '\x82\x10\x0cC\xac6\x98C\x00\x00p\xc2t\x00<?\xac\xc1-\xbf\x00\x00\x00\x00\xa8>\x00B\xb8\x1e\x85>\x82\x10\x0cC\xac6\x98C\x00\x00pBt\x00<?\xac\xc1-\xbf\x00\x00\x00\x00\xa8>\x00B\xa4p=?\xfeU\x92C\x06k\xbfC\x00\x00p\xc2\xf3\xa5\x9d>\n\x90s\xbf\x00\x00\x00\x00k\xfd\x02B\xb8\x1e\x85>\xfeU\x92C\x06k\xbfC\x00\x00pB\xf3\xa5\x9d>\n\x90s\xbf\x00\x00\x00\x00k\xfd\x02B\xa4p=?\xbd\xb4\xe1C\x1f\x98\xcaC\x00\x00p\xc2\xc37\x8a\xbbj\xff\x7f\xbf\x00\x00\x00\x00\x08\x8e\x05B\xb8\x1e\x85>\xbd\xb4\xe1C\x1f\x98\xcaC\x00\x00pB\xc37\x8a\xbbj\xff\x7f\xbf\x00\x00\x00\x00\x08\x8e\x05B\xa4p=?\x16\xc2\x04DT\xea\xbeC\x00\x00p\xc2\xfb\xa37\xbf\x0f\\2\xbf\x00\x00\x00\x00\xe6\xe1\x06B\xb8\x1e\x85>\x16\xc2\x04DT\xea\xbeC\x00\x00pB\xfb\xa37\xbf\x0f\\2\xbf\x00\x00\x00\x00\xe6\xe1\x06B\xa4p=?D\xaf\x0bD\x93W\x93C\x00\x00p\xc2\xd7A\x7f\xbfI\xe6\x9b\xbd\x00\x00\x00\x00uX\x08B\xb8\x1e\x85>D\xaf\x0bD\x93W\x93C\x00\x00pB\xd7A\x7f\xbfI\xe6\x9b\xbd\x00\x00\x00\x00uX\x08B\xa4p=?n\x03\nD\xf0\xf8\xd4B\x00\x00p\xc2\xb1\xd6\x7f\xbf\xc0f\x11=\x00\x00\x00\x00\xcd[\x0bB\xb8\x1e\x85>n\x03\nD\xf0\xf8\xd4B\x00\x00pB\xb1\xd6\x7f\xbf\xc0f\x11=\x00\x00\x00\x00\xcd[\x0bB\xa4p=?',
                 IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00\x06\x00\x08\x00\t\x00\x07\x00\x06\x00\t\x00\x08\x00\n\x00\x0b\x00\t\x00\x08\x00\x0b\x00',
             }
-            FrontMesh{ # Mesh
+            FrontMesh{  ## Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -849.0650634765625,
                     Y : -784.6488037109375,
                     Z : 60.0,
@@ -2068,54 +2068,54 @@ Object{ # SceneObject
                 }
                 VertexData : '\x96\x95\xaaD\xa4\xac8D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\xa8\xad\xbe@H\x1b]@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc0k\xe4\xbdDF\xf89D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\xff\xff\x7f?\x1es\xd2@\xdfn^@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\x96\x95\xaaD\xa4\xac8D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xa8\xad\xbe@H\x1b]@\xc1F\x97D\x00a7D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?2\xe8\xaa@\xae\xc7[@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xc1F\x97D\x00a7D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?2\xe8\xaa@\xae\xc7[@\xec\xf7\x83D\\\x156D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xbc"\x97@\x14tZ@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc0\xec\xf7\x83D\\\x156D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xbc"\x97@\x14tZ@0RaD\xb9\xc94D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?H]\x83@| Y@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc00RaD\xb9\xc94D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?H]\x83@| Y@\x86\xb4:D\x16~3D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xa4/_@\xe3\xccW@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc0\x86\xb4:D\x16~3D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xa4/_@\xe3\xccW@\xde\x16\x14Dr22D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xba\xa47@JyV@\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xde\x16\x14Dr22D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xba\xa47@JyV@D\xaf\x0bD\x93W\x93C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?}\t/@\xd8\xe0\xd6?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0D\xaf\x0bD\x93W\x93C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?}\t/@\xd8\xe0\xd6?n\x03\nD\xf0\xf8\xd4B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?bS-@\xb8\nm?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc0n\x03\nD\xf0\xf8\xd4B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?bS-@\xb8\nm?\xc7\xdf\xb6CLT\xd1B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?[C\xfb?5-k?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?<\xe8\xce@\xbe\xde(\xc0\xc7\xdf\xb6CLT\xd1B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?[C\xfb?5-k?\xb0\tgC8\xbb\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\x98J\xb6?1nm?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xb0\tgC8\xbb\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x98J\xb6?1nm?\x0c\x0c\nC\xe0j\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x1a\xae\x86?3Kn?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\x0c\x0c\nC\xe0j\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x1a\xae\x86?3Kn?\xa0\xb5\xfcA\x92\x1e\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc9X ?"$n?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xa0\xb5\xfcA\x92\x1e\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc9X ?"$n?H\xbd\x95\xc2D\xd2\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?pUM>\x10\xfdm?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0H\xbd\x95\xc2D\xd2\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?pUM>\x10\xfdm?\xfcS5\xc3\xf6\x85\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?@\xb8f\xbe\xff\xd5m?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xfcS5\xc3\xf6\x85\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?@\xb8f\xbe\xff\xd5m?\xaa\xe4\x8f\xc3\xa89\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?|\xb1&\xbf\xee\xaem?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xaa\xe4\x8f\xc3\xa89\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?|\xb1&\xbf\xee\xaem?V\x1f\xc5\xc3X\xed\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?u\xda\x89\xbf\xdb\x87m?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0V\x1f\xc5\xc3X\xed\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?u\xda\x89\xbf\xdb\x87m?\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?,\\\xc0\xbf\xca`m?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\x02Z\xfa\xc3\n\xa1\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?,\\\xc0\xbf\xca`m?W\xca\x17\xc4\xbcT\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xe2\xdd\xf6\xbf\xb89m?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0W\xca\x17\xc4\xbcT\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xe2\xdd\xf6\xbf\xb89m?\xadg2\xc4n\x08\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xcc\xaf\x16\xc0\xa7\x12m?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xadg2\xc4n\x08\xd5B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xcc\xaf\x16\xc0\xa7\x12m?*DT\xc4\xf8h\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?T\\9\xc0\'\xc7m?',
             }
-            FrontMesh{ # Mesh
+            FrontMesh{  ## Mesh
                 NumVertices : 60,
                 NumFaces : 20,
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1519.1380615234375,
                     Y : -853.4251708984375,
                     Z : 60.0,
@@ -2125,54 +2125,54 @@ Object{ # SceneObject
                 }
                 VertexData : "\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0*DT\xc4\xf8h\xd6B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?T\\9\xc0'\xc7m?\xa7 v\xc4\x82\xc9\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xdc\x08\\\xc0\xa7{n?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\xa7 v\xc4\x82\xc9\xd7B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xdc\x08\\\xc0\xa7{n?\x92\xfe\x8b\xc4\x0c*\xd9B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?d\xb5~\xc0'0o?\xcbn\xbaD\x86)D\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?<\xe8\xce@\xbe\xde(\xc0\x92\xfe\x8b\xc4\x0c*\xd9B\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?d\xb5~\xc0'0o?\xd1\x06\x96\xc46[U\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x94\xa0\x89\xc0\x12z:\xc0gJ\xe4Cz$0D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x82\xe2\x14@\xb2^T@\x16\xc2\x04DT\xea\xbeC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc1\xf1'@\xa8\xbf\x01@D\xaf\x0bD\x93W\x93C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?}\t/@\xd8\xe0\xd6?gJ\xe4Cz$0D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x82\xe2\x14@\xb2^T@D\xaf\x0bD\x93W\x93C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?}\t/@\xd8\xe0\xd6?\xde\x16\x14Dr22D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xba\xa47@JyV@\xd1\xec\x9c\xc4\x96\x8a\xdaB\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xf7\xb0\x90\xc0\xa7\xe4o?\xd1\x06\x96\xc46[U\xc4\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x94\xa0\x89\xc0\x12z:\xc0\x92\xfe\x8b\xc4\x0c*\xd9B\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?d\xb5~\xc0'0o?\xd1\x06\x96\xc46[U\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x94\xa0\x89\xc0\x12z:\xc0\xd1\xec\x9c\xc4\x96\x8a\xdaB\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xf7\xb0\x90\xc0\xa7\xe4o?\x0f\xdb\xad\xc4 \xeb\xdbB\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?:\x07\xa2\xc0'\x99p?\xd1\x06\x96\xc46[U\xc4\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x94\xa0\x89\xc0\x12z:\xc0\x0f\xdb\xad\xc4 \xeb\xdbB\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?:\x07\xa2\xc0'\x99p?k\xe4\xbd\xc4\xf4j\x8f\xc3\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x1es\xb2\xc0:\xb8%\xbfgJ\xe4Cz$0D\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x82\xe2\x14@\xb2^T@\xbd\xb4\xe1C\x1f\x98\xcaC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xbd\x8f\x13@n\xba\x07@\x16\xc2\x04DT\xea\xbeC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc1\xf1'@\xa8\xbf\x01@\xb5\x04\xaaC7[UD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?M\x19\xee?\x13zz@\xbd\xb4\xe1C\x1f\x98\xcaC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbd\x8f\x13@n\xba\x07@gJ\xe4Cz$0D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x82\xe2\x14@\xb2^T@\xb5\x04\xaaC7[UD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?M\x19\xee?\x13zz@\xfeU\x92C\x06k\xbfC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x14\xd9\xd5?\x8c\x01\x02@\xbd\xb4\xe1C\x1f\x98\xcaC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xbd\x8f\x13@n\xba\x07@TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\x0f\x89\x9a\xc4\x12\xbc]C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x86>\x8e\xc04\x87\xb1?\x1f\x87\x8d\xc4\x94\xc8kC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xab\xec\x80\xc0\x9e\xb8\xb8?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\x1f\x87\x8d\xc4\x94\xc8kC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xab\xec\x80\xc0\x9e\xb8\xb8?\xbafy\xc4a\x9c\x88C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cc_\xc0\xb7\xe3\xcb?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\xbafy\xc4a\x9c\x88C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x0cc_\xc0\xb7\xe3\xcb?~\x05P\xc4\xbe\x95\x8dC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x93\x035\xc0\xa4\xfb\xd0?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@~\x05P\xc4\xbe\x95\x8dC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x93\x035\xc0\xa4\xfb\xd0?@\xe0.\xc4\n\xdf\x85C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xb0\x12\x13\xc0\x8b\x15\xc9?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@@\xe0.\xc4\n\xdf\x85C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xb0\x12\x13\xc0\x8b\x15\xc9?\xe4\x01\x1a\xc4\xf5\xd5\x86C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?:h\xfb\xbfc\x12\xca?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\xe4\x01\x1a\xc4\xf5\xd5\x86C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?:h\xfb\xbfc\x12\xca?r\x1c\x14\xc4@\xa1\xb9C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe2T\xef\xbf\xc3\x15\xfe?TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@r\x1c\x14\xc4@\xa1\xb9C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe2T\xef\xbf\xc3\x15\xfe?\xe8\x12\x08\xc4.\xa0\xecC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xad\xd6\xbf\x01'\x19@TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\xe8\x12\x08\xc4.\xa0\xecC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe4\xad\xd6\xbf\x01'\x19@\x1b\xef\xdc\xc3\x93\x05\x05D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x86<\xa2\xbf\xdc6(@TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@\x1b\xef\xdc\xc3\x93\x05\x05D\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x86<\xa2\xbf\xdc6(@\xca)|\xc3ib\x0cD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x147\x02\xbf\xef\xc0/@",
             }
-            FrontMesh{ # Mesh
+            FrontMesh{  ## Mesh
                 NumVertices : 21,
                 NumFaces : 7,
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -1258.38525390625,
                     Y : 213.60330200195312,
                     Z : 60.0,
@@ -2182,7 +2182,7 @@ Object{ # SceneObject
                 }
                 VertexData : 'TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xc5\x12\x91\xc0\xa6\xe9l@\xca)|\xc3ib\x0cD\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\x147\x02\xbf\xef\xc0/@~\\\x0c\xc3\xecu\tD\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\xf0\xad{\xbd{\xc2,@ \xe0\x99\xc0\xb6)\xc8C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xe7&\xf6>\xc2{\x06@l\xcejBP\xb4VC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?D\x1c<?\xba\xed\xad?\x18C\x08Cr\x9aUC\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?%\xc4\x85?j]\xad? \xe0\x99\xc0\xb6)\xc8C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xe7&\xf6>\xc2{\x06@\x18C\x08Cr\x9aUC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?%\xc4\x85?j]\xad?\x82\x10\x0cC\xac6\x98C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x88\xb6\x87?\xdf\xdd\xdb?~\\\x0c\xc3\xecu\tD\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xf0\xad{\xbd{\xc2,@ \xe0\x99\xc0\xb6)\xc8C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xe7&\xf6>\xc2{\x06@\x82\x10\x0cC\xac6\x98C\x00\x00pB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x88\xb6\x87?\xdf\xdd\xdb?~\\\x0c\xc3\xecu\tD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xf0\xad{\xbd{\xc2,@\x82\x10\x0cC\xac6\x98C\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x88\xb6\x87?\xdf\xdd\xdb?\xfeU\x92C\x06k\xbfC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x14\xd9\xd5?\x8c\x01\x02@~\\\x0c\xc3\xecu\tD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xf0\xad{\xbd{\xc2,@\xfeU\x92C\x06k\xbfC\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x14\xd9\xd5?\x8c\x01\x02@\xb5\x04\xaaC7[UD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?M\x19\xee?\x13zz@TL\x9d\xc4,\x1cHD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc5\x12\x91\xc0\xa6\xe9l@~\\\x0c\xc3\xecu\tD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xf0\xad{\xbd{\xc2,@\xb5\x04\xaaC7[UD\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?M\x19\xee?\x13zz@',
             }
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -2190,10 +2190,10 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundMeshGenerator',
         Identifier : 102,
-        GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+        GroundMeshGeneratorComponent{  ## GroundMeshGeneratorComponent
             GroundPolygonId : 100,
             TargetMeshId : 101,
             FrontTextureMappingId : 107,
@@ -2207,73 +2207,73 @@ Object{ # SceneObject
             HatWidthOffset2 : 5.0,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'TextureMapping',
         Identifier : 106,
-        TextureMappingComponent{ # TextureMappingComponent
+        TextureMappingComponent{  ## TextureMappingComponent
             TextureName : 'brown128',
             Scale : 250.0,
-            Offset{ # Vector2
+            Offset{  ## Vector2
                 X : 0.0,
                 Y : 0.0,
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'TextureMapping',
         Identifier : 107,
-        TextureMappingComponent{ # TextureMappingComponent
+        TextureMappingComponent{  ## TextureMappingComponent
             TextureName : 'cavewalls',
             Scale : 250.0,
-            Offset{ # Vector2
+            Offset{  ## Vector2
                 X : 0.0,
                 Y : 0.0,
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 108,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -1390.8455810546875,
                     Y : 109.959228515625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1519.1380615234375,
                     Y : -286.8355712890625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1200.2130126953125,
                     Y : -853.4251708984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1491.4622802734375,
                     Y : -784.6488037109375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1519.1380615234375,
                     Y : 743.8792724609375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1364.674560546875,
                     Y : 738.697509765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1210.2110595703125,
                     Y : 733.515625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 1055.74755859375,
                     Y : 728.333740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 901.2841796875,
                     Y : 723.1519165039062,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 746.8206787109375,
                     Y : 717.9700927734375,
                 }
@@ -2281,56 +2281,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 109,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : 1055.74755859375,
                     Y : 728.333740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 901.2841796875,
                     Y : 723.1519165039062,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 746.8206787109375,
                     Y : 717.9700927734375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 592.3572998046875,
                     Y : 712.7882080078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 456.5812683105469,
                     Y : 704.5699462890625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 340.0367736816406,
                     Y : 853.4252319335938,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1258.38525390625,
                     Y : 800.440185546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1236.2830810546875,
                     Y : 221.73464965820312,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1132.2225341796875,
                     Y : 235.78350830078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -997.6051025390625,
                     Y : 273.2217102050781,
                 }
@@ -2338,56 +2338,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 110,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -1236.2830810546875,
                     Y : 221.73464965820312,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1132.2225341796875,
                     Y : 235.78350830078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -997.6051025390625,
                     Y : 273.2217102050781,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -832.0858154296875,
                     Y : 283.16986083984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -699.50390625,
                     Y : 267.74249267578125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -616.029541015625,
                     Y : 269.6715393066406,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -592.4444580078125,
                     Y : 371.259765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -544.29541015625,
                     Y : 473.25140380859375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -441.8680114746094,
                     Y : 532.0870971679688,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -252.16323852539062,
                     Y : 561.5376586914062,
                 }
@@ -2395,56 +2395,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 111,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -544.29541015625,
                     Y : 473.25140380859375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -441.8680114746094,
                     Y : 532.0870971679688,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -252.16323852539062,
                     Y : 561.5376586914062,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -140.36129760742188,
                     Y : 549.842529296875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -4.8086090087890625,
                     Y : 400.32586669921875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 58.70158386230469,
                     Y : 214.704345703125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 136.2620849609375,
                     Y : 213.60330200195312,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 140.06448364257812,
                     Y : 304.4271240234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 292.67181396484375,
                     Y : 382.83612060546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 451.4120178222656,
                     Y : 405.1884460449219,
                 }
@@ -2452,56 +2452,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 112,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : 140.06448364257812,
                     Y : 304.4271240234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 292.67181396484375,
                     Y : 382.83612060546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 451.4120178222656,
                     Y : 405.1884460449219,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 531.0325927734375,
                     Y : 381.8306884765625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 558.738525390625,
                     Y : 294.6841735839844,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 552.0535888671875,
                     Y : 106.4862060546875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 365.7482604980469,
                     Y : 104.66464233398438,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 231.037841796875,
                     Y : 106.86566162109375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 138.04705810546875,
                     Y : 107.708740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 31.58868408203125,
                     Y : 107.55970764160156,
                 }
@@ -2509,56 +2509,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 113,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : 231.037841796875,
                     Y : 106.86566162109375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 138.04705810546875,
                     Y : 107.708740234375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 31.58868408203125,
                     Y : 107.55970764160156,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -74.86968994140625,
                     Y : 107.41067504882812,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -181.32806396484375,
                     Y : 107.26164245605469,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -287.78643798828125,
                     Y : 107.11260986328125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -394.24481201171875,
                     Y : 106.96356201171875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -500.70318603515625,
                     Y : 106.81452941894531,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -607.1615600585938,
                     Y : 106.66549682617188,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -713.6199340820312,
                     Y : 106.51646423339844,
                 }
@@ -2566,56 +2566,56 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 114,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -500.70318603515625,
                     Y : 106.81452941894531,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -607.1615600585938,
                     Y : 106.66549682617188,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -713.6199340820312,
                     Y : 106.51646423339844,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -849.0650634765625,
                     Y : 107.20501708984375,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -984.5101928710938,
                     Y : 107.89356994628906,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1119.955322265625,
                     Y : 108.58212280273438,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1255.4005126953125,
                     Y : 109.27067565917969,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1390.8455810546875,
                     Y : 109.959228515625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1519.1380615234375,
                     Y : -286.8355712890625,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -1200.2130126953125,
                     Y : -853.4251708984375,
                 }
@@ -2623,21 +2623,21 @@ Object{ # SceneObject
                 Closed : 0,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -65.0,
             MaxDepth : 65.0,
             Enabled : 1,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -162.44815063476562,
         Y : -591.1138305664062,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -1519.1380615234375,
         Y : -853.4251708984375,
         Width : 3038.276123046875,
@@ -2646,30 +2646,30 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'obj9#15',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundPolygon',
         Identifier : 100,
-        GroundPolygonComponent{ # GroundPolygonComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        GroundPolygonComponent{  ## GroundPolygonComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -52.2926025390625,
                     Y : 44.683135986328125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -52.1546630859375,
                     Y : -46.161590576171875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 52.2926025390625,
                     Y : -36.811553955078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 51.353759765625,
                     Y : 41.03868103027344,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 0.913909912109375,
                     Y : 46.161590576171875,
                 }
@@ -2679,74 +2679,74 @@ Object{ # SceneObject
             Collides : 1,
             MinDepth : -35.0,
             MaxDepth : 35.0,
-            OnCollide{ # Program
+            OnCollide{  ## Program
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundMesh',
         Identifier : 101,
-        GroundMeshComponent{ # GroundMeshComponent
-            LocalAabb{ # Rectangle
+        GroundMeshComponent{  ## GroundMeshComponent
+            LocalAabb{  ## Rectangle
                 X : -62.2926025390625,
                 Y : -56.161590576171875,
                 Width : 124.585205078125,
                 Height : 112.32318115234375,
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 24,
                 NumFaces : 20,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'brown128',
                         PixelFormat : 1,
                         ImageType : 2,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -55.291446685791016,
                     Y : 0.7355461120605469,
                     Z : -40.0,
@@ -2757,60 +2757,60 @@ Object{ # SceneObject
                 VertexData : '\x87ZYB3\xf1"B\x00\x00\x0c\xc2\xa1\xf0\xce=\x93\xb0~?\x00\x00\x00\x00\x00\x00\x00?\xecQ\xb8>\x87ZYB3\xf1"B\x00\x00\x0cB\xa1\xf0\xce=\x93\xb0~?\x00\x00\x00\x00\x00\x00\x00?\n\xd7#?\x87ZYBf\xe2\xc5A\x00\x00 B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?d;\xdf>\xc2\xf5(?\x87ZYB\xc0L<?ff\x0cB\xa1\xf0\xce\xbd\x93\xb0~\xbf\x00\x00\x00\x80{\x14\xae>A\xf1#?\x87ZYB\xc0L<?\x9a\x99\x0b\xc2\xa1\xf0\xce\xbd\x93\xb0~\xbf\x00\x00\x00\x80{\x14\xae>Y\x86\xb8>\x87ZYBf\xe2\xc5A\x00\x00 \xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?d;\xdf>{\x14\xae>\x87ZYB3\xf1"B\x00\x00\x0c\xc2\xa1\xf0\xce=\x93\xb0~?\x00\x00\x00\x00\x00\x00\x00?\xecQ\xb8>\x87ZYB3\xf1"B\x00\x00\x0cB\xa1\xf0\xce=\x93\xb0~?\x00\x00\x00\x00\x00\x00\x00?\n\xd7#?\x87ZYBf\xe2\xc5A\x00\x00 B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?`\x015?\x87ZYB\xc0L<?ff\x0cB\xa1\xf0\xce\xbd\x93\xb0~\xbf\x00\x00\x00\x80\x00\x00\x00?\x9e\x16N?\x00\xf6i?x\xa58B\x00\x00\x0c\xc2\xae\xef\x0f=\x86\xd7\x7f?\x00\x00\x00\x00\x87\xea3?\xecQ\xb8>\x00\xf6i?x\xa58B\x00\x00\x0cB\xae\xef\x0f=\x86\xd7\x7f?\x00\x00\x00\x00\x87\xea3?\n\xd7#?\x00\xf6i?\xf0J\xf1A\x00\x00 B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x87\xea3?`\x015?\x00\xf6i?\xc0+\xc5@ff\x0cB\xae\xef\x0f\xbd\x86\xd7\x7f\xbf\x00\x00\x00\x80\x87\xea3?\x9e\x16N?q*]\xc24f2B\x00\x00\x0c\xc2J\x8b\xe3\xbc\xb8\xe6\x7f?\x00\x00\x00\x00\xaekj?\xecQ\xb8>q*]\xc24f2B\x00\x00\x0cBJ\x8b\xe3\xbc\xb8\xe6\x7f?\x00\x00\x00\x00\xaekj?\n\xd7#?q*]\xc2h\xcc\xe4A\x00\x00 B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xaekj?`\x015?q*]\xc2\xa01\x93@ff\x0cBJ\x8b\xe3<\xb8\xe6\x7f\xbf\x00\x00\x00\x80\xaekj?\x9e\x16N?q*]\xc24f2B\x00\x00\x0c\xc2J\x8b\xe3\xbc\xb8\xe6\x7f?\x00\x00\x00\x00\xaekj?\xecQ\xb8>q*]\xc24f2B\x00\x00\x0cBJ\x8b\xe3\xbc\xb8\xe6\x7f?\x00\x00\x00\x00\xaekj?\n\xd7#?q*]\xc2h\xcc\xe4A\x00\x00 B\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xfc\xcdz?\xc2\xf5(?q*]\xc2\xa01\x93@ff\x0cBJ\x8b\xe3<\xb8\xe6\x7f\xbf\x00\x00\x00\x80\xb8\xb0\x89?A\xf1#?q*]\xc2\xa01\x93@\x9a\x99\x0b\xc2J\x8b\xe3<\xb8\xe6\x7f\xbf\x00\x00\x00\x80\xb8\xb0\x89?Y\x86\xb8>q*]\xc2h\xcc\xe4A\x00\x00 \xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xfc\xcdz?{\x14\xae>',
                 IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\n\x00\x0e\x00\x0f\x00\x0b\x00\n\x00\x0f\x00\x0b\x00\x0f\x00\x10\x00\x0c\x00\x0b\x00\x10\x00\x0c\x00\x10\x00\x11\x00\r\x00\x0c\x00\x11\x00\x12\x00\x17\x00\x16\x00\x12\x00\x16\x00\x15\x00\x12\x00\x15\x00\x13\x00\x15\x00\x14\x00\x13\x00',
             }
-            SurfaceMesh{ # Mesh
+            SurfaceMesh{  ## Mesh
                 NumVertices : 8,
                 NumFaces : 6,
-                Indices{ # MeshData
+                Indices{  ## MeshData
                     ValueType : 4,
                     ValuesPerVertex : 1,
                     Stride : 2,
                     DataOffset : 0,
                 }
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -52.2926025390625,
                     Y : -46.161590576171875,
                     Z : -30.0,
@@ -2821,54 +2821,54 @@ Object{ # SceneObject
                 VertexData : "\xa0+Q\xc2\x88\xbb2B\x00\x00\xf0\xc1\xec\xff\x7f\xbfJ\x05\xc7\xba\x00\x00\x00\x00\x00\x00\x00?\\\x8f\xc2>\xa0+Q\xc2\x88\xbb2B\x00\x00\xf0A\xec\xff\x7f\xbfJ\x05\xc7\xba\x00\x00\x00\x00\x00\x00\x00?R\xb8\x1e?`\x9eP\xc2x\xa58\xc2\x00\x00\xf0\xc1\x98Y\x1d\xbf\xe3\xeeI\xbf\x00\x00\x00\x00n\x06]?\\\x8f\xc2>`\x9eP\xc2x\xa58\xc2\x00\x00\xf0A\x98Y\x1d\xbf\xe3\xeeI\xbf\x00\x00\x00\x00n\x06]?R\xb8\x1e?\xa0+QB\x08?\x13\xc2\x00\x00\xf0\xc1\x13\xf0$?\xcd\xc8C\xbf\x00\x00\x00\x00\x124\xa4?\\\x8f\xc2>\xa0+QB\x08?\x13\xc2\x00\x00\xf0A\x13\xf0$?\xcd\xc8C\xbf\x00\x00\x00\x00\x124\xa4?R\xb8\x1e?@jMB\x9c'$B\x00\x00\xf0\xc1<\xfb\x7f?\xf4\x91E<\x00\x00\x00\x00\xcd\x10\xcc?\\\x8f\xc2>@jMB\x9c'$B\x00\x00\xf0A<\xfb\x7f?\xf4\x91E<\x00\x00\x00\x00\xcd\x10\xcc?R\xb8\x1e?",
                 IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00',
             }
-            FrontMesh{ # Mesh
+            FrontMesh{  ## Mesh
                 NumVertices : 9,
                 NumFaces : 3,
-                Vertices{ # MeshData
+                Vertices{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 0,
                 }
-                Normals{ # MeshData
+                Normals{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 3,
                     Stride : 32,
                     DataOffset : 12,
                 }
-                TexCoordSet{ # MeshData
+                TexCoordSet{  ## MeshData
                     ValueType : 7,
                     ValuesPerVertex : 2,
                     Stride : 32,
                     DataOffset : 24,
                 }
-                Material{ # MeshMaterial
-                    AmbientColor{ # FloatColor
+                Material{  ## MeshMaterial
+                    AmbientColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    DiffuseColor{ # FloatColor
+                    DiffuseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
-                    SpecularColor{ # FloatColor
+                    SpecularColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
                         A : 1.0,
                     }
                     Shininess : 0.0,
-                    Texture{ # Texture
+                    Texture{  ## Texture
                         Name : 'cavewalls',
                         PixelFormat : 1,
                         ImageType : 1,
                     }
                 }
-                BoundingBox{ # Box
+                BoundingBox{  ## Box
                     X : -52.2926025390625,
                     Y : -46.161590576171875,
                     Z : 30.0,
@@ -2878,7 +2878,7 @@ Object{ # SceneObject
                 }
                 VertexData : "\xa0+QB\x08?\x13\xc2\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?1\x8c5?%\x9c\xb4>@jMB\x9c'$B\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\x14\x964?\x0b\x06*?\x00\xf6i?x\xa58B\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x7f?\x93\xef\x00?\xfcD/?\xa0+QB\x08?\x13\xc2\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?1\x8c5?%\x9c\xb4>\x00\xf6i?x\xa58B\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x93\xef\x00?\xfcD/?`\x9eP\xc2x\xa58\xc2\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xf0/\x95>\x08v\xa1>\x00\xf6i?x\xa58B\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x93\xef\x00?\xfcD/?\xa0+Q\xc2\x88\xbb2B\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\x9e\xe7\x94>j\xc1-?`\x9eP\xc2x\xa58\xc2\x00\x00\xf0A\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80?\xf0/\x95>\x08v\xa1>",
             }
-            Color{ # FloatColor
+            Color{  ## FloatColor
                 R : 1.0,
                 G : 1.0,
                 B : 1.0,
@@ -2886,10 +2886,10 @@ Object{ # SceneObject
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'GroundMeshGenerator',
         Identifier : 102,
-        GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+        GroundMeshGeneratorComponent{  ## GroundMeshGeneratorComponent
             GroundPolygonId : 100,
             TargetMeshId : 101,
             FrontTextureMappingId : 107,
@@ -2903,53 +2903,53 @@ Object{ # SceneObject
             HatWidthOffset2 : 5.0,
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'TextureMapping',
         Identifier : 106,
-        TextureMappingComponent{ # TextureMappingComponent
+        TextureMappingComponent{  ## TextureMappingComponent
             TextureName : 'brown128',
             Scale : 250.0,
-            Offset{ # Vector2
+            Offset{  ## Vector2
                 X : 0.0,
                 Y : 0.0,
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'TextureMapping',
         Identifier : 107,
-        TextureMappingComponent{ # TextureMappingComponent
+        TextureMappingComponent{  ## TextureMappingComponent
             TextureName : 'cavewalls',
             Scale : 250.0,
-            Offset{ # Vector2
+            Offset{  ## Vector2
                 X : 0.0,
                 Y : 0.0,
             }
         }
     }
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'CollisionShape',
         Identifier : 108,
         ParentComponentIdentifier : 100,
-        ShapeComponent{ # ShapeComponent
-            Polygon{ # Polygon
-                Vertex{ # Vector2
+        ShapeComponent{  ## ShapeComponent
+            Polygon{  ## Polygon
+                Vertex{  ## Vector2
                     X : -52.2926025390625,
                     Y : 44.683135986328125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : -52.1546630859375,
                     Y : -46.161590576171875,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 52.2926025390625,
                     Y : -36.811553955078125,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 51.353759765625,
                     Y : 41.03868103027344,
                 }
-                Vertex{ # Vector2
+                Vertex{  ## Vector2
                     X : 0.913909912109375,
                     Y : 46.161590576171875,
                 }
@@ -2957,21 +2957,21 @@ Object{ # SceneObject
                 Closed : 1,
             }
         }
-        CollisionShapeComponent{ # CollisionShapeComponent
+        CollisionShapeComponent{  ## CollisionShapeComponent
             IsGround : 1,
             MinDepth : -35.0,
             MaxDepth : 35.0,
             Enabled : 1,
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -585.0508422851562,
         Y : -464.8277587890625,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -52.2926025390625,
         Y : -46.161590576171875,
         Width : 104.585205078125,
@@ -2980,17 +2980,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#2',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -343.3270263671875,
         Y : -485.0825500488281,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -2999,17 +2999,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#3',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -252.08450317382812,
         Y : -482.18109130859375,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -3018,17 +3018,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#4',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -306.08807373046875,
         Y : -465.65576171875,
     }
     Depth : 0.0,
     Rotation : -0.5392669439315796,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -3037,17 +3037,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#5',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -327.3847351074219,
         Y : -441.6654052734375,
     }
     Depth : 0.0,
     Rotation : 0.47505682706832886,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -3056,17 +3056,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#6',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -837.8773193359375,
         Y : -482.5609436035156,
     }
     Depth : 0.0,
     Rotation : -0.5392669439315796,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -3075,17 +3075,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'pot',
     Identifier : 'pot#7',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -773.5311279296875,
         Y : -488.2607727050781,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -40.0,
         Y : -0.04376029968261719,
         Width : 80.0,
@@ -3094,28 +3094,28 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'spawn_default',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'SpawnPoint',
         Identifier : 101,
-        SpawnPointComponent{ # SpawnPointComponent
+        SpawnPointComponent{  ## SpawnPointComponent
             FacingDirection : 1,
-            SpawnOffset{ # Vector3
+            SpawnOffset{  ## Vector3
                 X : 0.0,
                 Y : 0.0,
                 Z : 0.0,
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1300.97119140625,
         Y : -451.5081481933594,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -3124,28 +3124,28 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     Identifier : 'spawn_from_plains_part3',
-    Component{ # Component
+    Component{  ## Component
         ClassName : 'SpawnPoint',
         Identifier : 101,
-        SpawnPointComponent{ # SpawnPointComponent
+        SpawnPointComponent{  ## SpawnPointComponent
             FacingDirection : 1,
-            SpawnOffset{ # Vector3
+            SpawnOffset{  ## Vector3
                 X : 0.0,
                 Y : 0.0,
                 Z : 0.0,
             }
         }
     }
-    Position{ # Vector2
+    Position{  ## Vector2
         X : -1354.1390380859375,
         Y : -453.8453063964844,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -30.0,
         Y : -30.0,
         Width : 60.0,
@@ -3154,17 +3154,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'bat',
     Identifier : 'trapbat1',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 70.32151794433594,
         Y : -331.51129150390625,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -39.71588897705078,
         Y : -10.159324645996094,
         Width : 81.01205444335938,
@@ -3173,17 +3173,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'bat',
     Identifier : 'trapbat2',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 293.14013671875,
         Y : -303.6775207519531,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -39.71588897705078,
         Y : -10.159324645996094,
         Width : 81.01205444335938,
@@ -3192,17 +3192,17 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-Object{ # SceneObject
+Object{  ## SceneObject
     TemplateName : 'brass_sword',
     Identifier : 'weapon',
-    Position{ # Vector2
+    Position{  ## Vector2
         X : 990.8282470703125,
         Y : 1069.0450439453125,
     }
     Depth : 0.0,
     Rotation : 0.0,
     Scaling : 1.0,
-    LocalAabb{ # Rectangle
+    LocalAabb{  ## Rectangle
         X : -6.647440433502197,
         Y : -0.7522553205490112,
         Width : 59.29374694824219,
@@ -3211,19 +3211,19 @@ Object{ # SceneObject
     Hidden : 0,
 }
 
-ObjectLibrary{ # ObjectLibrary
+ObjectLibrary{  ## ObjectLibrary
     Name : 'plains_cave0',
-    Template{ # ObjectTemplate
-        Object{ # SceneObject
+    Template{  ## ObjectTemplate
+        Object{  ## SceneObject
             Identifier : 'Template 1',
-            Position{ # Vector2
+            Position{  ## Vector2
                 X : 0.0,
                 Y : 0.0,
             }
             Depth : 0.0,
             Rotation : 0.0,
             Scaling : 1.0,
-            LocalAabb{ # Rectangle
+            LocalAabb{  ## Rectangle
                 X : -10.0,
                 Y : -10.0,
                 Width : 20.0,
@@ -3247,10 +3247,9 @@ ObjectLibrary{ # ObjectLibrary
     ImportedLibrary : 'woodkeep_stuff',
 }
 
-Bounds{ # Rectangle
+Bounds{  ## Rectangle
     X : -1400.0,
     Y : -1000.0,
     Width : 4400.0,
     Height : 2000.0,
 }
-

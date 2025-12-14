@@ -1,11 +1,11 @@
 Name : 'hiro',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'hiro',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CharController',
             Identifier : 1,
-            CharControllerComponent{ # CharControllerComponent
+            CharControllerComponent{  ## CharControllerComponent
                 DefaultAnimationControllerId : 117,
                 RightWeaponControllerId : 3,
                 NormalRunSpeed : 230.0,
@@ -30,18 +30,18 @@ Template{ # ObjectTemplate
                 JumpLandSoundId : 21,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 2,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -8.0,
                     Y : -34.0,
                     Width : 16.0,
                     Height : 56.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 ReceivesDamage : 1,
                 MinDepth : -15.0,
@@ -49,19 +49,19 @@ Template{ # ObjectTemplate
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SwingableWeaponController',
             Identifier : 3,
-            SwingableWeaponControllerComponent{ # SwingableWeaponControllerComponent
+            SwingableWeaponControllerComponent{  ## SwingableWeaponControllerComponent
                 ControllingModelId : 101,
                 ControllingBoneName : 'BoneRightWeapon',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 4,
             Label : 'swing1',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_swingair',
                 Repeating : 0,
@@ -69,15 +69,15 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'HeroEntity',
             Identifier : 5,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 1,
             }
-            HeroEntityComponent{ # HeroEntityComponent
-                OnItemGet{ # Program
+            HeroEntityComponent{  ## HeroEntityComponent
+                OnItemGet{  ## Program
                     String : $
 local self, item = ...;
 
@@ -147,10 +147,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Swing',
             Identifier : 6,
-            SwingComponent{ # SwingComponent
+            SwingComponent{  ## SwingComponent
                 AnimationId : 4,
                 SwingLeftWeapon : 1,
                 SwingRightWeapon : 1,
@@ -158,11 +158,11 @@ $end
                 EndFrame : 8.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 7,
             Label : 'swing2',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_swing2',
                 Repeating : 0,
@@ -170,10 +170,10 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Swing',
             Identifier : 8,
-            SwingComponent{ # SwingComponent
+            SwingComponent{  ## SwingComponent
                 AnimationId : 7,
                 SwingLeftWeapon : 1,
                 SwingRightWeapon : 1,
@@ -181,11 +181,11 @@ $end
                 EndFrame : 8.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 9,
             Label : 'cast',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_cast',
                 Repeating : 1,
@@ -193,11 +193,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 10,
             Label : 'castfinish',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_castfinish',
                 Repeating : 0,
@@ -205,23 +205,23 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Skill',
             Identifier : 11,
-            SkillComponent{ # SkillComponent
+            SkillComponent{  ## SkillComponent
                 CastFinishAnimationId : 10,
-                Origin{ # Vector2
+                Origin{  ## Vector2
                     X : 20.0,
                     Y : 0.0,
                 }
                 CastObjectTemplateName : 'magic_spell_cast',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 12,
             Label : 'hurt',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_hurt',
                 Repeating : 0,
@@ -229,11 +229,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 13,
             Label : 'die',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_die',
                 Repeating : 0,
@@ -241,11 +241,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 14,
             Label : 'swing3',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_swing5',
                 Repeating : 0,
@@ -253,10 +253,10 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Swing',
             Identifier : 15,
-            SwingComponent{ # SwingComponent
+            SwingComponent{  ## SwingComponent
                 AnimationId : 14,
                 SwingLeftWeapon : 1,
                 SwingRightWeapon : 1,
@@ -264,11 +264,11 @@ $end
                 EndFrame : 9.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 16,
             Label : 'spinjump',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_spinjump',
                 Repeating : 0,
@@ -276,13 +276,13 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 17,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 0.75,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -290,7 +290,7 @@ $end
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -298,11 +298,11 @@ $end
                 Radius : 150.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 18,
             Label : 'push',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_push',
                 Repeating : 1,
@@ -310,52 +310,52 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ModelTransformController',
             Identifier : 19,
-            ModelTransformControllerComponent{ # ModelTransformControllerComponent
+            ModelTransformControllerComponent{  ## ModelTransformControllerComponent
                 ModelId : 101,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 20,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'jump',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 21,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'jump_land',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'hiro',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.4000000059604645,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -363,11 +363,11 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 103,
             Label : 'stand',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_stand',
                 Repeating : 1,
@@ -375,11 +375,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 105,
             Label : 'run',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_run',
                 Repeating : 1,
@@ -387,11 +387,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 109,
             Label : 'jump',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_jump',
                 Repeating : 0,
@@ -399,11 +399,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 111,
             Label : 'fall',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_jumpland',
                 Repeating : 1,
@@ -411,15 +411,15 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CharAnimController',
             Identifier : 117,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
-            CharAnimControllerComponent{ # CharAnimControllerComponent
+            CharAnimControllerComponent{  ## CharAnimControllerComponent
                 StandAnimationId : 103,
                 WalkAnimationId : 105,
                 JumpAnimationId : 109,
@@ -428,16 +428,16 @@ $end
                 AirJumpAnimationId : 16,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CharAnimController',
             Identifier : 120,
             Label : 'lift',
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
-            CharAnimControllerComponent{ # CharAnimControllerComponent
+            CharAnimControllerComponent{  ## CharAnimControllerComponent
                 StandAnimationId : 121,
                 WalkAnimationId : 122,
                 JumpAnimationId : 123,
@@ -446,11 +446,11 @@ $end
                 AirJumpAnimationId : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 121,
             Label : 'liftStand',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_stand',
                 Repeating : 1,
@@ -458,11 +458,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 122,
             Label : 'liftWalk',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_walk',
                 Repeating : 1,
@@ -470,11 +470,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 123,
             Label : 'liftJump',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_jump',
                 Repeating : 0,
@@ -482,11 +482,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 124,
             Label : 'liftFall',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_fall',
                 Repeating : 0,
@@ -494,11 +494,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 127,
             Label : 'lift',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift',
                 Repeating : 0,
@@ -506,11 +506,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 128,
             Label : 'drop',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_drop',
                 Repeating : 0,
@@ -518,11 +518,11 @@ $end
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 129,
             Label : 'throw',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'hiro_lift_throw',
                 Repeating : 0,
@@ -530,14 +530,14 @@ $end
                 Running : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -8.0,
             Y : -34.0,
             Width : 16.0,
@@ -548,30 +548,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'hiro_magicplated',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'hiro_magicplated',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -579,14 +579,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -597,30 +597,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'hiro_plated',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'hiro_plated',
                 YRotation : 0.0,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -628,14 +628,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -646,16 +646,16 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'hiro_xp_whoosh',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 1,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 2.0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -663,7 +663,7 @@ Template{ # ObjectTemplate
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -671,10 +671,10 @@ Template{ # ObjectTemplate
                 Radius : 150.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 2,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 123,
                 ParticleId : 3,
                 ParticleId : 4,
@@ -682,9 +682,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 30,
                 ParentEmitterId : 120,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 1,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 0.8111110925674438,
                         B : 0.0,
@@ -697,7 +697,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -706,26 +706,26 @@ Template{ # ObjectTemplate
                 LocalSystem : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 3,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 4,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 120,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 123,
                 ParticleId : 3,
                 ParticleId : 4,
@@ -733,9 +733,9 @@ Template{ # ObjectTemplate
                 MaxParticles : 100,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 1,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 2,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 1.0,
                         G : 1.0,
                         B : 1.0,
@@ -748,7 +748,7 @@ Template{ # ObjectTemplate
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
@@ -757,26 +757,26 @@ Template{ # ObjectTemplate
                 LocalSystem : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 123,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 30.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TransformController',
             Identifier : 125,
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -10.0,
             Y : -10.0,
             Width : 20.0,

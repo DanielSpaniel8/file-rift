@@ -1,28 +1,28 @@
 Name : 'traps',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'door_bars',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'fencetrap1',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -30,37 +30,37 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 2,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -15.0,
                     Y : 0.0,
                     Width : 23.0,
                     Height : 220.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 3,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'door_close',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 101,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'fencetrap1',
                 Repeating : 0,
@@ -68,19 +68,19 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 105,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'DoorController',
             Identifier : 107,
-            DoorControllerComponent{ # DoorControllerComponent
+            DoorControllerComponent{  ## DoorControllerComponent
                 AnimationControllerId : 105,
                 AnimationId : 101,
                 Open : 1,
@@ -88,14 +88,14 @@ Template{ # ObjectTemplate
                 OpenSoundId : 0,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -15.0,
             Y : 0.0,
             Width : 23.0,
@@ -106,14 +106,14 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 1,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.8333333134651184,
                     G : 0.29147660732269287,
                     B : 0.0,
@@ -124,24 +124,24 @@ Template{ # ObjectTemplate
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 2,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -10.0,
                     Y : -10.0,
                     Width : 20.0,
                     Height : 20.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 InflictsDamage : 1,
                 MinDepth : -15.0,
@@ -149,19 +149,19 @@ Template{ # ObjectTemplate
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 3,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'woosh1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 4,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 2,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -171,13 +171,13 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 6,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 2.0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.610582172870636,
                     B : 0.28888893127441406,
@@ -185,7 +185,7 @@ Template{ # ObjectTemplate
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -193,17 +193,17 @@ Template{ # ObjectTemplate
                 Radius : 250.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityInfo',
             Identifier : 7,
-            EntityInfoComponent{ # EntityInfoComponent
+            EntityInfoComponent{  ## EntityInfoComponent
                 EntityClass : 'bolt',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 102,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 103,
                 ParticleId : 104,
                 ParticleId : 105,
@@ -214,38 +214,38 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 105,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MagicBolt',
             Identifier : 106,
-            MagicBoltComponent{ # MagicBoltComponent
+            MagicBoltComponent{  ## MagicBoltComponent
                 ParticleEmitterId : 102,
                 SwooshSoundId : 3,
                 HitSoundId : 0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.5160372257232666,
                     B : 0.009555578231811523,
@@ -253,17 +253,17 @@ Template{ # ObjectTemplate
                 }
                 Speed : 0.0,
             }
-            SpellComponent{ # SpellComponent
+            SpellComponent{  ## SpellComponent
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -274,14 +274,14 @@ Template{ # ObjectTemplate
     Scaling : 1.5,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball_ballistic',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 1,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.8333333134651184,
                     G : 0.29147660732269287,
                     B : 0.0,
@@ -292,24 +292,24 @@ Template{ # ObjectTemplate
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 2,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -10.0,
                     Y : -10.0,
                     Width : 20.0,
                     Height : 20.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 InflictsDamage : 1,
                 MinDepth : -15.0,
@@ -317,19 +317,19 @@ Template{ # ObjectTemplate
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 3,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'woosh1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 4,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 2,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -339,13 +339,13 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 6,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 2.0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.610582172870636,
                     B : 0.28888893127441406,
@@ -353,7 +353,7 @@ Template{ # ObjectTemplate
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -361,17 +361,17 @@ Template{ # ObjectTemplate
                 Radius : 250.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityInfo',
             Identifier : 7,
-            EntityInfoComponent{ # EntityInfoComponent
+            EntityInfoComponent{  ## EntityInfoComponent
                 EntityClass : 'bolt',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 8,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GravityMagnitude : 0.6000000238418579,
                 GroundDeceleration : 1500.0,
@@ -381,10 +381,10 @@ Template{ # ObjectTemplate
                 Elasticity : 0.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 102,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 103,
                 ParticleId : 104,
                 ParticleId : 105,
@@ -395,38 +395,38 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 105,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MagicBolt',
             Identifier : 106,
-            MagicBoltComponent{ # MagicBoltComponent
+            MagicBoltComponent{  ## MagicBoltComponent
                 ParticleEmitterId : 102,
                 SwooshSoundId : 3,
                 HitSoundId : 0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.5160372257232666,
                     B : 0.009555578231811523,
@@ -434,17 +434,17 @@ Template{ # ObjectTemplate
                 }
                 Speed : 0.0,
             }
-            SpellComponent{ # SpellComponent
+            SpellComponent{  ## SpellComponent
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -455,14 +455,14 @@ Template{ # ObjectTemplate
     Scaling : 1.5,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball_ballistic_purple',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 1,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.5555555820465088,
                     G : 0.29147660732269287,
                     B : 0.5111111402511597,
@@ -473,24 +473,24 @@ Template{ # ObjectTemplate
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 2,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -10.0,
                     Y : -10.0,
                     Width : 20.0,
                     Height : 20.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 InflictsDamage : 1,
                 MinDepth : -15.0,
@@ -498,19 +498,19 @@ Template{ # ObjectTemplate
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 3,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'woosh1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 4,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 2,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -520,13 +520,13 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Light',
             Identifier : 6,
-            LightComponent{ # LightComponent
+            LightComponent{  ## LightComponent
                 Type : 3,
                 Intensity : 2.0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 0.6666666865348816,
                     G : 0.11058218032121658,
                     B : 1.0,
@@ -534,7 +534,7 @@ Template{ # ObjectTemplate
                 }
                 LinearAttenuation : 0.0,
                 QuadraticAttenuation : 0.00019999999494757503,
-                Offset{ # Vector3
+                Offset{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
@@ -542,17 +542,17 @@ Template{ # ObjectTemplate
                 Radius : 250.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityInfo',
             Identifier : 7,
-            EntityInfoComponent{ # EntityInfoComponent
+            EntityInfoComponent{  ## EntityInfoComponent
                 EntityClass : 'bolt',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 8,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GravityMagnitude : 0.6000000238418579,
                 GroundDeceleration : 1500.0,
@@ -562,10 +562,10 @@ Template{ # ObjectTemplate
                 Elasticity : 0.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 102,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 103,
                 ParticleId : 104,
                 ParticleId : 105,
@@ -576,38 +576,38 @@ Template{ # ObjectTemplate
                 LocalSystem : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 103,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 104,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 105,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MagicBolt',
             Identifier : 106,
-            MagicBoltComponent{ # MagicBoltComponent
+            MagicBoltComponent{  ## MagicBoltComponent
                 ParticleEmitterId : 102,
                 SwooshSoundId : 3,
                 HitSoundId : 0,
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 0.5160372257232666,
                     B : 0.009555578231811523,
@@ -615,17 +615,17 @@ Template{ # ObjectTemplate
                 }
                 Speed : 0.0,
             }
-            SpellComponent{ # SpellComponent
+            SpellComponent{  ## SpellComponent
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -636,15 +636,15 @@ Template{ # ObjectTemplate
     Scaling : 1.5,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball_launcher',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 103,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -662,14 +662,14 @@ $end
                 Trigger : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -10.0,
             Y : -10.0,
             Width : 20.0,
@@ -680,15 +680,15 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball_launcher_aimed',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 103,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -717,14 +717,14 @@ $end
                 Trigger : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -10.0,
             Y : -10.0,
             Width : 20.0,
@@ -735,15 +735,15 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'fireball_launcher_ballistic',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 103,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -760,14 +760,14 @@ $end
                 Trigger : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -10.0,
             Y : -10.0,
             Width : 20.0,
@@ -778,30 +778,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'grabbable',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'grabbable',
                 YRotation : 0.0,
                 EmissionFactor : 1.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -809,19 +809,19 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 102,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 101,
                 DefaultAnimationId : 103,
                 SelfUpdate : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 103,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 101,
                 Name : 'grabbable_pulse',
                 Repeating : 1,
@@ -829,33 +829,33 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 104,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 0.0,
                         Y : 0.0,
                     }
                     Radius : 55.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 SpecialType : 6,
                 Enabled : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -55.0,
             Y : -55.0,
             Width : 110.0,
@@ -866,28 +866,28 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'pressureplate',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 1,
             ParentComponentIdentifier : 105,
-            ShapeComponent{ # ShapeComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -29.4775390625,
                         Y : 3.12396240234375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 30.583251953125,
                         Y : 3.68853759765625,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 30.964599609375,
                         Y : 8.4600830078125,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -29.47314453125,
                         Y : 8.01177978515625,
                     }
@@ -895,34 +895,34 @@ Template{ # ObjectTemplate
                     Closed : 1,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'pressureplate',
                 YRotation : 0.0,
                 EmissionFactor : 0.5,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -930,41 +930,41 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PressureTrigger',
             Identifier : 103,
-            PressureTriggerComponent{ # PressureTriggerComponent
+            PressureTriggerComponent{  ## PressureTriggerComponent
                 MaxHeightOffset : 5.0,
-                OnPress{ # Program
+                OnPress{  ## Program
                     String : $
 Program.Wait(0.2);
 SoundLibrary.PlayEffect("unlock");
 $end
                     Bytes : '\x1bLuaQ\x00\x01\x04\x04\x04\x08\x007\x00\x00\x00Program.Wait(0.2);\r\nSoundLibrary.PlayEffect("unlock");\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\t\x00\x00\x00\x05\x00\x00\x00\x06@@\x00A\x80\x00\x00\x1c@\x00\x01\x05\xc0\x00\x00\x06\x00A\x00A@\x01\x00\x1c@\x00\x01\x1e\x00\x80\x00\x06\x00\x00\x00\x04\x08\x00\x00\x00Program\x00\x04\x05\x00\x00\x00Wait\x00\x03\x9a\x99\x99\x99\x99\x99\xc9?\x04\r\x00\x00\x00SoundLibrary\x00\x04\x0b\x00\x00\x00PlayEffect\x00\x04\x07\x00\x00\x00unlock\x00\x00\x00\x00\x00\t\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
                 }
-                OnRelease{ # Program
+                OnRelease{  ## Program
                 }
                 StayPressed : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundPolygon',
             Identifier : 105,
-            GroundPolygonComponent{ # GroundPolygonComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            GroundPolygonComponent{  ## GroundPolygonComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -29.4775390625,
                         Y : 3.12396240234375,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 30.583251953125,
                         Y : 3.68853759765625,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 30.964599609375,
                         Y : 8.4600830078125,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -29.47314453125,
                         Y : 8.01177978515625,
                     }
@@ -974,18 +974,18 @@ $end
                 Collides : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -29.4775390625,
             Y : 0.0,
             Width : 60.442138671875,
@@ -996,30 +996,30 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'pressureplate_frame',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 101,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'pressureplate_frame',
                 YRotation : 0.0,
                 EmissionFactor : 0.5,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1027,14 +1027,14 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : 0.0,
             Y : 0.0,
             Width : 0.0,
@@ -1045,30 +1045,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'spikes',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'spikes',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1076,43 +1076,43 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 2,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'spikes1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -67.26329803466797,
                     Y : 2.0,
                     Width : 130.2633056640625,
                     Height : 2.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SnappingMonsterController',
             Identifier : 104,
-            MonsterControllerComponent{ # MonsterControllerComponent
+            MonsterControllerComponent{  ## MonsterControllerComponent
                 WalkSpeed : 100.0,
                 AnimationControllerId : 110,
                 EntityId : 107,
                 RoamAreaId : 0,
             }
-            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+            SnappingMonsterControllerComponent{  ## SnappingMonsterControllerComponent
                 StandAnimationId : 113,
                 AttackAnimationId : 116,
                 BlendAnimationId : 122,
@@ -1120,36 +1120,36 @@ Template{ # ObjectTemplate
                 AttackSoundId : 2,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 110,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 113,
             Label : 'down',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_down',
                 Repeating : 0,
@@ -1157,11 +1157,11 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 116,
             Label : 'up',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_up',
                 Repeating : 0,
@@ -1169,10 +1169,10 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 119,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 1,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -1182,21 +1182,21 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BlendAnimation',
             Identifier : 122,
-            BlendAnimationComponent{ # BlendAnimationComponent
+            BlendAnimationComponent{  ## BlendAnimationComponent
                 Animation1Id : 113,
                 Animation2Id : 116,
                 BlendTime : 0.10000000149011612,
                 ReverseBlendTime : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 125,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -50.0,
                     Y : 0.0,
                     Width : 100.0,
@@ -1204,37 +1204,37 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BoneControlledCollisionShape',
             Identifier : 129,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 40.0,
                         Y : 0.0,
                     }
                     Radius : 40.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
                 Enabled : 1,
             }
-            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+            BoneControlledCollisionShapeComponent{  ## BoneControlledCollisionShapeComponent
                 ControllingModelId : 1,
                 ControllingBoneName : 'BoneSpikes2',
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -67.26329803466797,
             Y : 0.0,
             Width : 130.2633056640625,
@@ -1245,30 +1245,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'spikes_continuous',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'spikes',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1276,43 +1276,43 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 2,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'spikes1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -67.26329803466797,
                     Y : 2.0,
                     Width : 130.2633056640625,
                     Height : 2.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SnappingMonsterController',
             Identifier : 104,
-            MonsterControllerComponent{ # MonsterControllerComponent
+            MonsterControllerComponent{  ## MonsterControllerComponent
                 WalkSpeed : 100.0,
                 AnimationControllerId : 110,
                 EntityId : 107,
                 RoamAreaId : 0,
             }
-            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+            SnappingMonsterControllerComponent{  ## SnappingMonsterControllerComponent
                 StandAnimationId : 113,
                 AttackAnimationId : 116,
                 BlendAnimationId : 122,
@@ -1320,36 +1320,36 @@ Template{ # ObjectTemplate
                 AttackSoundId : 2,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 110,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 113,
             Label : 'down',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_down',
                 Repeating : 1,
@@ -1357,11 +1357,11 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 116,
             Label : 'up',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_up',
                 Repeating : 1,
@@ -1369,10 +1369,10 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 119,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 1,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -1382,21 +1382,21 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BlendAnimation',
             Identifier : 122,
-            BlendAnimationComponent{ # BlendAnimationComponent
+            BlendAnimationComponent{  ## BlendAnimationComponent
                 Animation1Id : 113,
                 Animation2Id : 116,
                 BlendTime : 0.10000000149011612,
                 ReverseBlendTime : 0.4000000059604645,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'UtilityShape',
             Identifier : 125,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -600.0,
                     Y : 0.0,
                     Width : 1200.0,
@@ -1404,37 +1404,37 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BoneControlledCollisionShape',
             Identifier : 129,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 40.0,
                         Y : 0.0,
                     }
                     Radius : 40.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
                 Enabled : 1,
             }
-            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+            BoneControlledCollisionShapeComponent{  ## BoneControlledCollisionShapeComponent
                 ControllingModelId : 1,
                 ControllingBoneName : 'BoneSpikes2',
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -67.26329803466797,
             Y : 0.0,
             Width : 130.2633056640625,
@@ -1445,30 +1445,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'spikes_manual',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'spikes',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.30000001192092896,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1476,43 +1476,43 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 2,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'spikes1',
                 Delay : 0.0,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -67.26329803466797,
                     Y : 2.0,
                     Width : 130.2633056640625,
                     Height : 2.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SnappingMonsterController',
             Identifier : 104,
-            MonsterControllerComponent{ # MonsterControllerComponent
+            MonsterControllerComponent{  ## MonsterControllerComponent
                 WalkSpeed : 100.0,
                 AnimationControllerId : 110,
                 EntityId : 107,
                 RoamAreaId : 0,
             }
-            SnappingMonsterControllerComponent{ # SnappingMonsterControllerComponent
+            SnappingMonsterControllerComponent{  ## SnappingMonsterControllerComponent
                 StandAnimationId : 113,
                 AttackAnimationId : 116,
                 BlendAnimationId : 122,
@@ -1520,36 +1520,36 @@ Template{ # ObjectTemplate
                 AttackSoundId : 2,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 110,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 113,
             Label : 'down',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_down',
                 Repeating : 0,
@@ -1557,11 +1557,11 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 116,
             Label : 'up',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_up',
                 Repeating : 0,
@@ -1569,10 +1569,10 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 119,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 1,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -1582,47 +1582,47 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BlendAnimation',
             Identifier : 122,
-            BlendAnimationComponent{ # BlendAnimationComponent
+            BlendAnimationComponent{  ## BlendAnimationComponent
                 Animation1Id : 113,
                 Animation2Id : 116,
                 BlendTime : 0.10000000149011612,
                 ReverseBlendTime : 0.4000000059604645,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BoneControlledCollisionShape',
             Identifier : 129,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 40.0,
                         Y : 0.0,
                     }
                     Radius : 40.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -50.0,
                 MaxDepth : 50.0,
                 Enabled : 1,
             }
-            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+            BoneControlledCollisionShapeComponent{  ## BoneControlledCollisionShapeComponent
                 ControllingModelId : 1,
                 ControllingBoneName : 'BoneSpikes2',
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -67.26329803466797,
             Y : 0.0,
             Width : 130.2633056640625,
@@ -1633,30 +1633,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'spikes_up',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'spikes',
                 YRotation : 1.5707963705062866,
                 EmissionFactor : 0.30000001192092896,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1664,54 +1664,54 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 101,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -70.0,
                     Y : 30.0,
                     Width : 140.0,
                     Height : 60.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 110,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 116,
                 SelfUpdate : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 113,
             Label : 'down',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_down',
                 Repeating : 0,
@@ -1719,11 +1719,11 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 116,
             Label : 'up',
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'spikes_up',
                 Repeating : 0,
@@ -1731,10 +1731,10 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 119,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 1,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -1744,14 +1744,14 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -70.0,
             Y : 0.0,
             Width : 140.0,
@@ -1762,30 +1762,30 @@ Template{ # ObjectTemplate
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'swingingaxe',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Model',
             Identifier : 1,
-            ModelComponent{ # ModelComponent
+            ModelComponent{  ## ModelComponent
                 Name : 'swingingaxe',
                 YRotation : 0.7853981852531433,
                 EmissionFactor : 0.0,
                 XRotation : 0.0,
-                ShatterColor{ # FloatColor
+                ShatterColor{  ## FloatColor
                     R : 0.0,
                     G : 0.0,
                     B : 0.0,
                     A : 1.0,
                 }
-                Origin{ # Vector3
+                Origin{  ## Vector3
                     X : 0.0,
                     Y : 0.0,
                     Z : 0.0,
                 }
                 Transparent : 0,
-                DiffuseColor{ # FloatColor
+                DiffuseColor{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -1793,10 +1793,10 @@ Template{ # ObjectTemplate
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Damage',
             Identifier : 2,
-            DamageComponent{ # DamageComponent
+            DamageComponent{  ## DamageComponent
                 MinDamage : 2,
                 DamageType : 0,
                 SpecialDamageType : 0,
@@ -1806,89 +1806,89 @@ Template{ # ObjectTemplate
                 CanBeBlocked : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'StaticMonsterController',
             Identifier : 3,
-            MonsterControllerComponent{ # MonsterControllerComponent
+            MonsterControllerComponent{  ## MonsterControllerComponent
                 WalkSpeed : 0.0,
                 AnimationControllerId : 110,
                 EntityId : 103,
                 RoamAreaId : 0,
             }
-            StaticMonsterControllerComponent{ # StaticMonsterControllerComponent
+            StaticMonsterControllerComponent{  ## StaticMonsterControllerComponent
                 AnimationId : 101,
                 SoundId : 4,
                 SoundId : 5,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 4,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'axeswoosh1',
                 Delay : 0.3499999940395355,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SoundEffect',
             Identifier : 5,
-            SoundEffectComponent{ # SoundEffectComponent
+            SoundEffectComponent{  ## SoundEffectComponent
                 Name : 'axeswoosh1',
                 Delay : 1.600000023841858,
                 Volume : 1.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BoneControlledCollisionShape',
             Identifier : 6,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 435.0,
                         Y : 0.0,
                     }
                     Radius : 30.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -100.0,
                 MaxDepth : 100.0,
                 Enabled : 1,
             }
-            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+            BoneControlledCollisionShapeComponent{  ## BoneControlledCollisionShapeComponent
                 ControllingModelId : 1,
                 ControllingBoneName : 'Bone01',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'BoneControlledCollisionShape',
             Identifier : 9,
-            ShapeComponent{ # ShapeComponent
-                Circle{ # Circle
-                    Center{ # Vector2
+            ShapeComponent{  ## ShapeComponent
+                Circle{  ## Circle
+                    Center{  ## Vector2
                         X : 380.0,
                         Y : 0.0,
                     }
                     Radius : 30.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 InflictsDamage : 1,
                 MinDepth : -100.0,
                 MaxDepth : 100.0,
                 Enabled : 1,
             }
-            BoneControlledCollisionShapeComponent{ # BoneControlledCollisionShapeComponent
+            BoneControlledCollisionShapeComponent{  ## BoneControlledCollisionShapeComponent
                 ControllingModelId : 1,
                 ControllingBoneName : 'Bone01',
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'KeyframeAnimation',
             Identifier : 101,
-            KeyframeAnimationComponent{ # KeyframeAnimationComponent
+            KeyframeAnimationComponent{  ## KeyframeAnimationComponent
                 ModelId : 1,
                 Name : 'swingingaxe_swing',
                 Repeating : 1,
@@ -1896,39 +1896,39 @@ Template{ # ObjectTemplate
                 Running : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 103,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 1,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
                 DefaultDeathAnimation : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'AnimationController',
             Identifier : 110,
-            AnimationControllerComponent{ # AnimationControllerComponent
+            AnimationControllerComponent{  ## AnimationControllerComponent
                 ModelId : 1,
                 DefaultAnimationId : 0,
                 SelfUpdate : 0,
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -24.258808135986328,
             Y : -6.815802097320557,
             Width : 46.25490951538086,
@@ -1938,4 +1938,3 @@ Template{ # ObjectTemplate
     }
     Scaling : 1.0,
 }
-

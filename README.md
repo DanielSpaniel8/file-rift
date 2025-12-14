@@ -56,7 +56,7 @@ When recoding, Rift will check the contents of every file against a checksum sto
 
 ## Building apks
 
-FileRift can build and sign an apk for you, adding and/or recoding the required files, then optionally install it. Trigger this functionality by setting rift_mode to "build" in `config.py`, or by using the `--build` flag.
+FileRift can build and sign an apk for you, adding and/or recoding the required files, then optionally install it. **Important: you need to have java installed and in your PATH**. Trigger this functionality by setting rift_mode to "build" in `config.py`, or by using the `--build` flag.
 Start by making a `.frproject` file in the `projects` folder. This file defines what apk to use, which files to add and recode and the command to execute after signing. You can look at `projects/example.frproject` to see how the syntax looks. To select a project, change set `project_name` in `config.py` to the name of the project file, without the file extension. So to select `projects/hello.frproject`, set it to "hello". You can also select the project by using the `--build-project` flag followed by the name:
 ```
 python3 FileRift.py --build-project hello

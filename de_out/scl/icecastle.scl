@@ -1,39 +1,39 @@
 Name : 'icecastle',
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'flying_platform',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 115,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -50.0,
                     Y : -20.0,
                     Width : 100.0,
                     Height : 40.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -49,10 +49,10 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityController',
             Identifier : 119,
-            EntityControllerComponent{ # EntityControllerComponent
+            EntityControllerComponent{  ## EntityControllerComponent
                 EntityId : 107,
                 AnimationControllerId : 105,
                 DefaultMoveAnimationId : 103,
@@ -63,12 +63,12 @@ $end
                 MovementBehavior : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 122,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -102,10 +102,10 @@ $end
                 Trigger : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 125,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GravityMagnitude : 1.2000000476837158,
                 GroundDeceleration : 1500.0,
@@ -115,11 +115,11 @@ $end
                 Elasticity : 0.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 132,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.5,
                     G : 0.5,
                     B : 0.5,
@@ -130,16 +130,16 @@ $end
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : -17.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 133,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 134,
                 ParticleId : 135,
                 ParticleId : 136,
@@ -147,9 +147,9 @@ $end
                 MaxParticles : 30,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.17777779698371887,
                         G : 0.17777779698371887,
                         B : 0.46666666865348816,
@@ -173,62 +173,62 @@ $end
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
                     }
                 }
                 LocalSystem : 0,
-                Gravity{ # Vector3
+                Gravity{  ## Vector3
                     X : 0.0,
                     Y : 800.0,
                     Z : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 134,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 135,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 30.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 136,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundPolygon',
             Identifier : 140,
-            GroundPolygonComponent{ # GroundPolygonComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            GroundPolygonComponent{  ## GroundPolygonComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -44.8939208984375,
                         Y : -19.21640396118164,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 43.270263671875,
                         Y : -19.20798110961914,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 48.88772201538086,
                         Y : 19.216402053833008,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -48.887725830078125,
                         Y : 19.041810989379883,
                     }
@@ -238,74 +238,74 @@ $end
                 Collides : 0,
                 MinDepth : -55.0,
                 MaxDepth : 55.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMesh',
             Identifier : 142,
-            GroundMeshComponent{ # GroundMeshComponent
-                LocalAabb{ # Rectangle
+            GroundMeshComponent{  ## GroundMeshComponent
+                LocalAabb{  ## Rectangle
                     X : -58.887725830078125,
                     Y : -29.21640396118164,
                     Width : 117.77545166015625,
                     Height : 58.43280792236328,
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 20,
                     NumFaces : 14,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_floor',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -51.88772201538086,
                         Y : -5.9635467529296875,
                         Z : -60.0,
@@ -316,60 +316,60 @@ $end
                     VertexData : '\x06\x8dOB*\xc6\x99A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?)\\\x8f>\x06\x8dOB*\xc6\x99A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?\xecQ8?\x06\x8dOBT\x8c\x13A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\xa4p=?\x06\x8dOBX\xe7\xb8\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xcd\xcc\xcc>"l8?\x06\x8dOBX\xe7\xb8\xc0\x9a\x99[\xc2\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x97\x90\x8f>\x06\x8dOBT\x8c\x13A\x00\x00p\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\xb8\x1e\x85>\x06\x8dOB*\xc6\x99A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?)\\\x8f>\x06\x8dOB*\xc6\x99A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?\xecQ8?\x06\x8dOBT\x8c\x13A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?\xc8\xc4C?\x06\x8dOBX\xe7\xb8\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\x00\x00\x00?m\xedS?\x07\x8dO\xc2\xa8J\x98A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?)\\\x8f>\x07\x8dO\xc2\xa8J\x98A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?\xecQ8?\x07\x8dO\xc2P\x95\x10A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?J\x1fd?\xc8\xc4C?\x07\x8dO\xc2`\xd5\xbe\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80J\x1fd?m\xedS?\x07\x8dO\xc2\xa8J\x98A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?)\\\x8f>\x07\x8dO\xc2\xa8J\x98A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?\xecQ8?\x07\x8dO\xc2P\x95\x10A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xba\\n?\xa4p=?\x07\x8dO\xc2`\xd5\xbe\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xe3\xb8}?"l8?\x07\x8dO\xc2`\xd5\xbe\xc0\x9a\x99[\xc2\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xe3\xb8}?\x97\x90\x8f>\x07\x8dO\xc2P\x95\x10A\x00\x00p\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xba\\n?\xb8\x1e\x85>',
                     IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\x0e\x00\x13\x00\x12\x00\x0e\x00\x12\x00\x11\x00\x0e\x00\x11\x00\x0f\x00\x11\x00\x10\x00\x0f\x00',
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 8,
                     NumFaces : 6,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -48.887725830078125,
                         Y : -19.21640396118164,
                         Z : -50.0,
@@ -380,54 +380,54 @@ $end
                     VertexData : "\x08\x8dC\xc2\xa1U\x98A\x00\x00H\xc2\xce\x9d~\xbf\t\xa3\xd4\xbd\x00\x00\x00\x00\x00\x00\x00?\x9a\x99\x99>\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\xce\x9d~\xbf\t\xa3\xd4\xbd\x00\x00\x00\x00\x00\x00\x00?333?`\x933\xc22\xbb\x99\xc1\x00\x00H\xc2\x14E\xc4\xbe\x8cql\xbf\x00\x00\x00\x00\xa9c'?\x9a\x99\x99>`\x933\xc22\xbb\x99\xc1\x00\x00HB\x14E\xc4\xbe\x8cql\xbf\x00\x00\x00\x00\xa9c'?333?\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00H\xc2\x08'\xc2>Q\xe1l\xbf\x00\x00\x00\x00\xb0\xd5\x80?\x9a\x99\x99>\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x08'\xc2>Q\xe1l\xbf\x00\x00\x00\x00\xb0\xd5\x80?333?\x07\x8dCB1\xbb\x99A\x00\x00H\xc2\xaeN}?\x14!\x14\xbe\x00\x00\x00\x00\x96\xb7\x94?\x9a\x99\x99>\x07\x8dCB1\xbb\x99A\x00\x00HB\xaeN}?\x14!\x14\xbe\x00\x00\x00\x00\x96\xb7\x94?333?",
                     IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00',
                 }
-                FrontMesh{ # Mesh
+                FrontMesh{  ## Mesh
                     NumVertices : 6,
                     NumFaces : 2,
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -48.887725830078125,
                         Y : -19.21640396118164,
                         Z : 50.0,
@@ -437,7 +437,7 @@ $end
                     }
                     VertexData : '\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xe0\x9b>\xb2\x7f\x13?`\x933\xc22\xbb\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xa8\x0e\xa4>\x12\xa5\xd8>\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\nO,?|\xa9\xd8>\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xe0\x9b>\xb2\x7f\x13?\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\nO,?|\xa9\xd8>\x07\x8dCB1\xbb\x99A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x9f\x0f2?w\xad\x13?',
                 }
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -445,10 +445,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMeshGenerator',
             Identifier : 143,
-            GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+            GroundMeshGeneratorComponent{  ## GroundMeshGeneratorComponent
                 GroundPolygonId : 140,
                 TargetMeshId : 142,
                 FrontTextureMappingId : 144,
@@ -462,38 +462,38 @@ $end
                 HatWidthOffset2 : 5.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 144,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'icecastle_ground',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 145,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'icecastle_floor',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -504,41 +504,41 @@ $end
     Scaling : 1.0,
 }
 
-Template{ # ObjectTemplate
-    Object{ # SceneObject
+Template{  ## ObjectTemplate
+    Object{  ## SceneObject
         Identifier : 'following_platform',
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'MonsterEntity',
             Identifier : 107,
-            EntityComponent{ # EntityComponent
+            EntityComponent{  ## EntityComponent
                 FacingDirection : 1,
                 PhysicsEnabled : 0,
             }
-            MonsterEntityComponent{ # MonsterEntityComponent
-                OnKill{ # Program
+            MonsterEntityComponent{  ## MonsterEntityComponent
+                OnKill{  ## Program
                 }
-                OnHurt{ # Program
+                OnHurt{  ## Program
                 }
                 GivesExperience : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'CollisionShape',
             Identifier : 115,
-            ShapeComponent{ # ShapeComponent
-                Rectangle{ # Rectangle
+            ShapeComponent{  ## ShapeComponent
+                Rectangle{  ## Rectangle
                     X : -50.0,
                     Y : -20.0,
                     Width : 100.0,
                     Height : 40.0,
                 }
             }
-            CollisionShapeComponent{ # CollisionShapeComponent
+            CollisionShapeComponent{  ## CollisionShapeComponent
                 IsGround : 1,
                 Collides : 1,
                 MinDepth : -15.0,
                 MaxDepth : 15.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                     String : $
 local self, collidedObject, collisionNormal, groundCollision = ...;
 
@@ -554,10 +554,10 @@ $end
                 Enabled : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'EntityController',
             Identifier : 119,
-            EntityControllerComponent{ # EntityControllerComponent
+            EntityControllerComponent{  ## EntityControllerComponent
                 EntityId : 107,
                 AnimationControllerId : 105,
                 DefaultMoveAnimationId : 103,
@@ -568,12 +568,12 @@ $end
                 MovementBehavior : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Program',
             Identifier : 122,
-            ProgramComponent{ # ProgramComponent
+            ProgramComponent{  ## ProgramComponent
                 ExecuteOnce : 1,
-                Program{ # Program
+                Program{  ## Program
                     String : $
 local self = ...;
 
@@ -604,10 +604,10 @@ $end
                 Trigger : 1,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'PhysicsObject',
             Identifier : 125,
-            PhysicsObjectComponent{ # PhysicsObjectComponent
+            PhysicsObjectComponent{  ## PhysicsObjectComponent
                 PhysicsEnabled : 1,
                 GravityMagnitude : 1.2000000476837158,
                 GroundDeceleration : 1500.0,
@@ -617,11 +617,11 @@ $end
                 Elasticity : 0.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'SimpleGlow',
             Identifier : 132,
-            SimpleGlowComponent{ # SimpleGlowComponent
-                Color{ # FloatColor
+            SimpleGlowComponent{  ## SimpleGlowComponent
+                Color{  ## FloatColor
                     R : 0.5,
                     G : 0.5,
                     B : 0.5,
@@ -632,16 +632,16 @@ $end
                 Depth : 15.0,
                 PulseAmount : 0.15000000596046448,
                 PulseTime : 0.800000011920929,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : -17.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'ParticleEmitter',
             Identifier : 133,
-            ParticleEmitterComponent{ # ParticleEmitterComponent
+            ParticleEmitterComponent{  ## ParticleEmitterComponent
                 ParticleId : 134,
                 ParticleId : 135,
                 ParticleId : 136,
@@ -649,9 +649,9 @@ $end
                 MaxParticles : 30,
                 ParentEmitterId : 0,
                 DestroyWhenFinished : 0,
-                Emitter{ # ParticleEmitter
+                Emitter{  ## ParticleEmitter
                     Type : 5,
-                    BaseColor{ # FloatColor
+                    BaseColor{  ## FloatColor
                         R : 0.17777779698371887,
                         G : 0.17777779698371887,
                         B : 0.46666666865348816,
@@ -675,62 +675,62 @@ $end
                     HueVariance : 0.0,
                     SaturationVariance : 0.0,
                     LightnessVariance : 0.0,
-                    OriginOffset{ # Vector3
+                    OriginOffset{  ## Vector3
                         X : 0.0,
                         Y : 0.0,
                         Z : 0.0,
                     }
                 }
                 LocalSystem : 0,
-                Gravity{ # Vector3
+                Gravity{  ## Vector3
                     X : 0.0,
                     Y : 800.0,
                     Z : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 134,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_1',
                 Size : 40.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 135,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_2',
                 Size : 30.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'Particle',
             Identifier : 136,
-            ParticleComponent{ # ParticleComponent
+            ParticleComponent{  ## ParticleComponent
                 TextureName : 'particle_fure_3',
                 Size : 20.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundPolygon',
             Identifier : 140,
-            GroundPolygonComponent{ # GroundPolygonComponent
-                Polygon{ # Polygon
-                    Vertex{ # Vector2
+            GroundPolygonComponent{  ## GroundPolygonComponent
+                Polygon{  ## Polygon
+                    Vertex{  ## Vector2
                         X : -44.8939208984375,
                         Y : -19.21640396118164,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 43.270263671875,
                         Y : -19.20798110961914,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : 48.88772201538086,
                         Y : 19.216402053833008,
                     }
-                    Vertex{ # Vector2
+                    Vertex{  ## Vector2
                         X : -48.887725830078125,
                         Y : 19.041810989379883,
                     }
@@ -740,74 +740,74 @@ $end
                 Collides : 0,
                 MinDepth : -55.0,
                 MaxDepth : 55.0,
-                OnCollide{ # Program
+                OnCollide{  ## Program
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMesh',
             Identifier : 142,
-            GroundMeshComponent{ # GroundMeshComponent
-                LocalAabb{ # Rectangle
+            GroundMeshComponent{  ## GroundMeshComponent
+                LocalAabb{  ## Rectangle
                     X : -58.887725830078125,
                     Y : -29.21640396118164,
                     Width : 117.77545166015625,
                     Height : 58.43280792236328,
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 20,
                     NumFaces : 14,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_floor',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -51.88772201538086,
                         Y : -5.9635467529296875,
                         Z : -60.0,
@@ -818,60 +818,60 @@ $end
                     VertexData : '\x06\x8dOB*\xc6\x99A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?)\\\x8f>\x06\x8dOB*\xc6\x99A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?\xecQ8?\x06\x8dOBT\x8c\x13A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\xa4p=?\x06\x8dOBX\xe7\xb8\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xcd\xcc\xcc>"l8?\x06\x8dOBX\xe7\xb8\xc0\x9a\x99[\xc2\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xcd\xcc\xcc>\x97\x90\x8f>\x06\x8dOBT\x8c\x13A\x00\x00p\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x1f\x85\xeb>\xb8\x1e\x85>\x06\x8dOB*\xc6\x99A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?)\\\x8f>\x06\x8dOB*\xc6\x99A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00\x00\x00\x00?\xecQ8?\x06\x8dOBT\x8c\x13A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x00\x00\x00?\xc8\xc4C?\x06\x8dOBX\xe7\xb8\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\x00\x00\x00?m\xedS?\x07\x8dO\xc2\xa8J\x98A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?)\\\x8f>\x07\x8dO\xc2\xa8J\x98A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?\xecQ8?\x07\x8dO\xc2P\x95\x10A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?J\x1fd?\xc8\xc4C?\x07\x8dO\xc2`\xd5\xbe\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80J\x1fd?m\xedS?\x07\x8dO\xc2\xa8J\x98A\x00\x00\\\xc2\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?)\\\x8f>\x07\x8dO\xc2\xa8J\x98A\x00\x00\\B\xcf\x0b\xea\xba\xe6\xff\x7f?\x00\x00\x00\x00J\x1fd?\xecQ8?\x07\x8dO\xc2P\x95\x10A\x00\x00pB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xba\\n?\xa4p=?\x07\x8dO\xc2`\xd5\xbe\xc0ff\\B\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xe3\xb8}?"l8?\x07\x8dO\xc2`\xd5\xbe\xc0\x9a\x99[\xc2\xcf\x0b\xea:\xe6\xff\x7f\xbf\x00\x00\x00\x80\xe3\xb8}?\x97\x90\x8f>\x07\x8dO\xc2P\x95\x10A\x00\x00p\xc2\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xba\\n?\xb8\x1e\x85>',
                     IndexData : '\x00\x00\x04\x00\x05\x00\x00\x00\x03\x00\x04\x00\x00\x00\x01\x00\x03\x00\x01\x00\x02\x00\x03\x00\x06\x00\n\x00\x0b\x00\x07\x00\x06\x00\x0b\x00\x07\x00\x0b\x00\x0c\x00\x08\x00\x07\x00\x0c\x00\x08\x00\x0c\x00\r\x00\t\x00\x08\x00\r\x00\x0e\x00\x13\x00\x12\x00\x0e\x00\x12\x00\x11\x00\x0e\x00\x11\x00\x0f\x00\x11\x00\x10\x00\x0f\x00',
                 }
-                SurfaceMesh{ # Mesh
+                SurfaceMesh{  ## Mesh
                     NumVertices : 8,
                     NumFaces : 6,
-                    Indices{ # MeshData
+                    Indices{  ## MeshData
                         ValueType : 4,
                         ValuesPerVertex : 1,
                         Stride : 2,
                         DataOffset : 0,
                     }
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -48.887725830078125,
                         Y : -19.21640396118164,
                         Z : -50.0,
@@ -882,54 +882,54 @@ $end
                     VertexData : "\x08\x8dC\xc2\xa1U\x98A\x00\x00H\xc2\xce\x9d~\xbf\t\xa3\xd4\xbd\x00\x00\x00\x00\x00\x00\x00?\x9a\x99\x99>\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\xce\x9d~\xbf\t\xa3\xd4\xbd\x00\x00\x00\x00\x00\x00\x00?333?`\x933\xc22\xbb\x99\xc1\x00\x00H\xc2\x14E\xc4\xbe\x8cql\xbf\x00\x00\x00\x00\xa9c'?\x9a\x99\x99>`\x933\xc22\xbb\x99\xc1\x00\x00HB\x14E\xc4\xbe\x8cql\xbf\x00\x00\x00\x00\xa9c'?333?\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00H\xc2\x08'\xc2>Q\xe1l\xbf\x00\x00\x00\x00\xb0\xd5\x80?\x9a\x99\x99>\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x08'\xc2>Q\xe1l\xbf\x00\x00\x00\x00\xb0\xd5\x80?333?\x07\x8dCB1\xbb\x99A\x00\x00H\xc2\xaeN}?\x14!\x14\xbe\x00\x00\x00\x00\x96\xb7\x94?\x9a\x99\x99>\x07\x8dCB1\xbb\x99A\x00\x00HB\xaeN}?\x14!\x14\xbe\x00\x00\x00\x00\x96\xb7\x94?333?",
                     IndexData : '\x00\x00\x02\x00\x03\x00\x01\x00\x00\x00\x03\x00\x02\x00\x04\x00\x05\x00\x03\x00\x02\x00\x05\x00\x04\x00\x06\x00\x07\x00\x05\x00\x04\x00\x07\x00',
                 }
-                FrontMesh{ # Mesh
+                FrontMesh{  ## Mesh
                     NumVertices : 6,
                     NumFaces : 2,
-                    Vertices{ # MeshData
+                    Vertices{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 0,
                     }
-                    Normals{ # MeshData
+                    Normals{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 3,
                         Stride : 32,
                         DataOffset : 12,
                     }
-                    TexCoordSet{ # MeshData
+                    TexCoordSet{  ## MeshData
                         ValueType : 7,
                         ValuesPerVertex : 2,
                         Stride : 32,
                         DataOffset : 24,
                     }
-                    Material{ # MeshMaterial
-                        AmbientColor{ # FloatColor
+                    Material{  ## MeshMaterial
+                        AmbientColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        DiffuseColor{ # FloatColor
+                        DiffuseColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
-                        SpecularColor{ # FloatColor
+                        SpecularColor{  ## FloatColor
                             R : 1.0,
                             G : 1.0,
                             B : 1.0,
                             A : 1.0,
                         }
                         Shininess : 0.0,
-                        Texture{ # Texture
+                        Texture{  ## Texture
                             Name : 'icecastle_ground',
                             PixelFormat : 1,
                             ImageType : 1,
                         }
                     }
-                    BoundingBox{ # Box
+                    BoundingBox{  ## Box
                         X : -48.887725830078125,
                         Y : -19.21640396118164,
                         Z : 50.0,
@@ -939,7 +939,7 @@ $end
                     }
                     VertexData : '\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xe0\x9b>\xb2\x7f\x13?`\x933\xc22\xbb\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xa8\x0e\xa4>\x12\xa5\xd8>\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\nO,?|\xa9\xd8>\x08\x8dC\xc2\xa1U\x98A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\xc1\xe0\x9b>\xb2\x7f\x13?\xc0\x14-B\xf2\xa9\x99\xc1\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\nO,?|\xa9\xd8>\x07\x8dCB1\xbb\x99A\x00\x00HB\x00\x00\x00\x80\x00\x00\x00\x00\x00\x00\x80?\x9f\x0f2?w\xad\x13?',
                 }
-                Color{ # FloatColor
+                Color{  ## FloatColor
                     R : 1.0,
                     G : 1.0,
                     B : 1.0,
@@ -947,10 +947,10 @@ $end
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'GroundMeshGenerator',
             Identifier : 143,
-            GroundMeshGeneratorComponent{ # GroundMeshGeneratorComponent
+            GroundMeshGeneratorComponent{  ## GroundMeshGeneratorComponent
                 GroundPolygonId : 140,
                 TargetMeshId : 142,
                 FrontTextureMappingId : 144,
@@ -964,38 +964,38 @@ $end
                 HatWidthOffset2 : 5.0,
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 144,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'icecastle_ground',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Component{ # Component
+        Component{  ## Component
             ClassName : 'TextureMapping',
             Identifier : 145,
-            TextureMappingComponent{ # TextureMappingComponent
+            TextureMappingComponent{  ## TextureMappingComponent
                 TextureName : 'icecastle_floor',
                 Scale : 250.0,
-                Offset{ # Vector2
+                Offset{  ## Vector2
                     X : 0.0,
                     Y : 0.0,
                 }
             }
         }
-        Position{ # Vector2
+        Position{  ## Vector2
             X : 0.0,
             Y : 0.0,
         }
         Depth : 0.0,
         Rotation : 0.0,
         Scaling : 1.0,
-        LocalAabb{ # Rectangle
+        LocalAabb{  ## Rectangle
             X : -50.0,
             Y : -50.0,
             Width : 100.0,
@@ -1005,4 +1005,3 @@ $end
     }
     Scaling : 1.0,
 }
-

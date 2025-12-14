@@ -1,16 +1,17 @@
 import os
-import signal
 
 filerift_path = os.path.dirname(os.path.abspath(__file__))
 os.chdir(filerift_path)
 
-from lib import config_load
-
 # the config has to be set up before everything else
 # to prevent other modules from loading the wrong config
+from lib import config_load
+
 config_load.load()
+
 import config
 
+import signal
 import sys
 import re
 from lib import util, recode, decode, setup, build
@@ -31,7 +32,7 @@ def main():
     skipped_count = 0
 
     if args.recode_stdin:
-        output = recode.recode([sys.stdin.read(), "__stdin__"])
+        output = recode.recode([sys.stdin.read(), "__stdin__", (args.output or "")])
         if output[0]:
             recoded_count = 1
         else:
@@ -55,7 +56,7 @@ def main():
         filepath = "__stdin__"
         if args.file_type:
             filepath += args.file_type
-        output = decode.decode(filepath)
+        output = decode.decode([filepath, (args.output or "")])
         if output[0]:
             decoded_count = 1
         else:
@@ -89,6 +90,7 @@ def main():
             paths = [os.path.join(".", "re_in")]
         util.set_status("recoding " + str(paths[0]))
         fileslist = [item for s in paths for item in util.path(s, "re_in", True, True)]
+        pathlist = []
         tested_fileslist = []
         for path in fileslist:
             try:
@@ -104,11 +106,20 @@ def main():
             if not edited and not config.allways_recode:
                 skipped_count += 1
                 continue
+            pathlist.append(path)
             tested_fileslist.append([file_content, path])
+
+        if args.output:
+            out_fileslist = util.get_output_paths(pathlist, args.output)
+        else:
+            out_fileslist = [""] * len(pathlist)
+        final_fileslist = [
+            [l[0], l[1], out_fileslist[i]] for i, l in enumerate(tested_fileslist)
+        ]
 
         pool = Pool(initializer=init_worker)
         try:
-            results = pool.map_async(recode.recode_start, tested_fileslist)
+            results = pool.map_async(recode.recode_start, final_fileslist)
             outlist = results.get(timeout=9999999)
             for result, filepath, error in outlist:
                 if result:
@@ -142,6 +153,11 @@ def main():
         else:
             util.set_status("decoding " + str(paths[0]))
         fileslist = [item for s in paths for item in util.path(s, "de_in", True, True)]
+        if args.output:
+            out_fileslist = util.get_output_paths(fileslist, args.output)
+        else:
+            out_fileslist = [""] * len(fileslist)
+        fileslist = [[file, out_fileslist[i]] for i, file in enumerate(fileslist)]
         pool = Pool(initializer=init_worker)
         try:
             results = pool.map_async(decode.decode, fileslist)

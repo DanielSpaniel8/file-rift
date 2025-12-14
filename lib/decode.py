@@ -1,6 +1,7 @@
 import os
 import sys
 import re
+import math
 import struct
 from pathlib import Path
 from lib import block_formats, block_formats_decode, util
@@ -8,7 +9,10 @@ from lib.setup import HEX_LOOKUP
 import config
 
 
-def decode(filepath: str) -> "tuple[bool, bool]":
+def decode(args: list) -> "tuple[bool, bool]":
+    filepath = args[0]
+    targetpath = args[1]
+
     # initialize variables
     offsets = [0] * 10
     current_offset = 0
@@ -17,6 +21,9 @@ def decode(filepath: str) -> "tuple[bool, bool]":
     metalevel = 0
     indentation = ""
     tagname = ""
+    preserve_compile = False
+    preserve_degree = False
+    preserved_degree_content = ""
 
     # determine filetype
     if filepath[:9] == "__stdin__":
@@ -64,11 +71,11 @@ def decode(filepath: str) -> "tuple[bool, bool]":
     style_before_block = config.style_before_block
     style_after_block = config.style_after_block
     style_before_chunk = config.style_before_chunk
+    style_comment_start = config.style_comment_start
     style_indent = config.style_indent
     style_show_field_name = config.style_show_field_name
     style_lsp_prep = config.style_lsp_prep
 
-    # optimized varint decoder
     def varint() -> "tuple[int, int]":
         """Decode a varint at the current offset in inbytes"""
         nonlocal current_offset
@@ -93,7 +100,6 @@ def decode(filepath: str) -> "tuple[bool, bool]":
         offsets[metalevel] += offset
         return value, offset
 
-    # optimized struct unpacking with pre-compiled format strings
     def i32() -> float:
         """Unpack a float32LE from the current offset"""
         nonlocal current_offset
@@ -111,11 +117,25 @@ def decode(filepath: str) -> "tuple[bool, bool]":
     def get_chunk_content(pointer: int) -> str:
         """Extract and process chunk content"""
         content = inbytes[current_offset : current_offset + pointer].decode("latin1")
+        content = content.removeprefix("\n")
         translation_table = str.maketrans({"\r": "", "\t": style_indent})
         return content.translate(translation_table)
 
     # main decoding loop
     while sum(offsets) < inbytes_len:
+
+        # handle block closing
+        while metalevel > 0 and offsets[metalevel] >= pointers[metalevel - 1]:
+            metalevel -= 1
+            indentation = style_indent * metalevel
+            out_lines.append(indentation + "}" + style_after_block + "\n")
+            if metalevel == 0:
+                out_lines.append("\n")
+            formats[metalevel + 1] = {"name": "-"}
+            pointers[metalevel + 1] = 0
+            offsets[metalevel] += offsets[metalevel + 1]
+            offsets[metalevel + 1] = 0
+
         format_dict = formats[metalevel]
 
         # decode tag
@@ -125,7 +145,7 @@ def decode(filepath: str) -> "tuple[bool, bool]":
         except (IndexError, struct.error):
             break
 
-        # handle persistent comment tag early
+        # handle persistent comments
         if tagbyte == 4098:
             try:
                 pointer, advance = varint()
@@ -150,14 +170,52 @@ def decode(filepath: str) -> "tuple[bool, bool]":
             except (IndexError, struct.error):
                 break
 
-        # determine wire type using bit operations (faster than modulo)
+        # handle preserved comments
+        if tagbyte == 4106:
+            try:
+                pointer, advance = varint()
+                current_offset += advance
+                pointers[metalevel] = pointer
+                if current_offset + pointer <= inbytes_len:
+                    content = str(inbytes[current_offset : current_offset + pointer])[
+                        2:-1
+                    ]
+                    out_lines.append(indentation + content + "\n")
+                    offsets[metalevel] += pointer
+                    current_offset += pointer
+                continue
+            except (IndexError, struct.error):
+                break
+
+        # handle preserved @compile
+        if tagbyte == 4112:
+            preserve_compile = True
+            offsets[metalevel] += 1
+            current_offset += 1
+            continue
+
+        if tagbyte == 4122:
+            try:
+                pointer, advance = varint()
+                current_offset += advance
+                pointers[metalevel] = pointer
+                if current_offset + pointer <= inbytes_len:
+                    preserved_degree_content = str(
+                        inbytes[current_offset : current_offset + pointer]
+                    )[2:-1]
+                    offsets[metalevel] += pointer
+                    current_offset += pointer
+                    preserve_degree = True
+                continue
+            except (IndexError, struct.error):
+                break
+
         wiretype_map = {0: "varint", 1: "i64", 2: "len", 5: "i32"}
         wiretype = wiretype_map.get(tagbyte & 7, "unknown")
 
         if wiretype == "unknown":
             continue
 
-        # convert tag to hex more efficiently
         taghex = HEX_LOOKUP[tagbyte]
 
         if taghex not in format_dict:
@@ -243,7 +301,12 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                     indentation
                     + tagname
                     + style_after_tag
-                    + str(content)
+                    + (
+                        str(float(preserved_degree_content))
+                        if preserve_degree
+                        else str(content)
+                    )
+                    + ("d" if preserve_degree else "")
                     + style_after_record
                     + "\n"
                 )
@@ -255,7 +318,12 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                     indentation
                     + tagname
                     + style_after_tag
-                    + str(content)
+                    + (
+                        str(float(preserved_degree_content))
+                        if preserve_degree
+                        else str(content)
+                    )
+                    + ("d" if preserve_degree else "")
                     + style_after_record
                     + "\n"
                 )
@@ -268,7 +336,13 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                 if tag_is_reference:
                     message_string = indentation + tagname + style_before_block + "{"
                     if style_show_field_name:
-                        message_string += " # " + tag_reference
+                        message_string += (
+                            "  "
+                            + style_comment_start
+                            + style_comment_start[0]
+                            + " "
+                            + tag_reference
+                        )
                     message_string += "\n"
                     out_lines.append(message_string)
 
@@ -294,7 +368,17 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                     formats[metalevel] = tagdef
                     indentation = style_indent * metalevel
                 else:
-                    if tagname in multiline_strs:
+                    if preserve_compile:
+                        out_lines.append(
+                            indentation
+                            + tagname
+                            + style_after_tag
+                            + "@compile"
+                            + style_after_record
+                            + "\n"
+                        )
+                        preserve_compile = False
+                    elif tagname in multiline_strs:
                         content = get_chunk_content(pointer)
                         if style_lsp_prep:
                             out_lines.append(
@@ -331,59 +415,77 @@ def decode(filepath: str) -> "tuple[bool, bool]":
                     offsets[metalevel] += pointer
                     current_offset += pointer
 
+            preserve_compile = False
+            preserve_degree = False
+
         except (IndexError, struct.error):
             break
 
-        # handle block closing
-        while metalevel > 0 and offsets[metalevel] >= pointers[metalevel - 1]:
-            metalevel -= 1
-            indentation = style_indent * metalevel
-            out_lines.append(indentation + "}" + style_after_block + "\n")
-            if metalevel == 0:
-                out_lines.append("\n")
-
-            formats[metalevel + 1] = {"name": "-"}
-            pointers[metalevel + 1] = 0
-            offsets[metalevel] += offsets[metalevel + 1]
-            offsets[metalevel + 1] = 0
+    # handle block closing for the last time
+    # TODO: this should only happen once
+    # it exists at the start of the loop and here so that the `continue`
+    # in the preservation stuff won't skip it
+    while metalevel > 0 and offsets[metalevel] >= pointers[metalevel - 1]:
+        metalevel -= 1
+        indentation = style_indent * metalevel
+        out_lines.append(indentation + "}" + style_after_block + "\n")
+        if metalevel == 0:
+            out_lines.append("\n")
+        formats[metalevel + 1] = {"name": "-"}
+        pointers[metalevel + 1] = 0
+        offsets[metalevel] += offsets[metalevel + 1]
+        offsets[metalevel + 1] = 0
 
     # finalize output
+    if out_lines[-1] == "\n":  # remove empty final line
+        out_lines = out_lines[:-1]
     if style_lsp_prep:
         out_lines.append("--]]")
 
     output = "".join(out_lines)
 
-    # handle output
-    if filepath[:9] == "__stdin__":
-        sys.stdout.write(output)
-        sys.exit(0)
+    if targetpath != "":
+        outfilepath = targetpath
+    else:
+        # handle output
+        if filepath[:9] == "__stdin__":
+            sys.stdout.write(output)
+            sys.exit(0)
 
-    resolved_filepath = Path(filepath).resolve()
-    working_dir = Path(config.working_dir).resolve()
-    # if os.path.isabs(filepath):
-    try:
-        resolved_filepath.relative_to(working_dir)
-        filepath = filepath.replace("de_in", "de_out")
-        dirpath, filepathleaf = os.path.split(filepath)
-        os.makedirs(dirpath, exist_ok=True)
-        outfilepath = os.path.join(dirpath, filepathleaf)
-    # else:
-    except:
-        dirpath, filepathleaf = os.path.split(filepath)
-        parts = dirpath.split(os.sep)
-        parts = [p.replace("%", "%%") for p in parts if p]
-        outdirpath = "%".join(parts)
-        outdirpath = os.path.join(config.working_dir, "de_out", "external", outdirpath)
-        os.makedirs(outdirpath, exist_ok=True)
-        outfilepath = os.path.join(outdirpath, filepathleaf)
+        resolved_filepath = Path(filepath).resolve()
+        working_dir = Path(config.working_dir).resolve()
+        # if os.path.isabs(filepath):
+        try:
+            resolved_filepath.relative_to(working_dir)
+            filepath = filepath.replace("de_in", "de_out")
+            dirpath, filepathleaf = os.path.split(filepath)
+            os.makedirs(dirpath, exist_ok=True)
+            outfilepath = os.path.join(dirpath, filepathleaf)
+        # else:
+        except:
+            dirpath, filepathleaf = os.path.split(filepath)
+            parts = dirpath.split(os.sep)
+            parts = [p.replace("%", "%%") for p in parts if p]
+            outdirpath = "%".join(parts)
+            outdirpath = os.path.join(
+                config.working_dir, "de_out", "external", outdirpath
+            )
+            os.makedirs(outdirpath, exist_ok=True)
+            outfilepath = os.path.join(outdirpath, filepathleaf)
 
+    os.makedirs(os.path.dirname(outfilepath), exist_ok=True)
     with open(outfilepath, "w") as file:
         file.write(output)
 
-        print(
-            config.colour_success
-            + "decoded: "
-            + config.colour_reset
-            + util.path_tidy(filepath, "de_out")
+    print(
+        config.colour_success
+        + "decoded: "
+        + config.colour_reset
+        + util.path_tidy(filepath, "de_out")
+        + (
+            (config.colour_punctuation + " -> " + config.colour_reset + outfilepath)
+            if targetpath
+            else ""
         )
+    )
     return True, False
