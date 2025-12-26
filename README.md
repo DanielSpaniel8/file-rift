@@ -3,53 +3,62 @@
 </h3>
 
 ## Overview
-File Rift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These files include:
+FileRift is a decoder/recoder for Swordigo's Protocol Buffers (pb) files. These files include:
 - `*.scene`: level data
 - `*.scl`: libraries containing objects that can be used in `.scene` files
-- `*.fnt`: font mapping files
 - `*.gdata`: definitions for collectibles, spells, quests etc.
-- `*.gstate`: default state for newgames
+- `*.gstate`: default state for new games
 - `*.gplayer`: savegames
 - `*.gopt`: names for music tracks, as well as the default touch controls layout
 - `*.sounds`: names for sound effect tracks
 - `*.scmap`: in-game map layout
 - `*.atlas`: texture mapping files
+- `*.fnt`: font mapping files
 
-File Rift has two modes: decode and recode. In decode mode, File Rift will convert Swordigo binary files into a custom plain text format, which looks similar to a markup language. In recode mode, File Rift will convert those plain text files back into binary files which can be added into the game. Normally, File Rift will decode the original game files, however it can decode or recode any Swordigo files you give it.
+FileRift has two modes: decode and recode. In decode mode, FileRift will convert Swordigo binary files into a custom plain text format, which looks similar to a markup language. In recode mode, FileRift will convert those plain text files back into binary files which can be added into the game. Normally, FileRift will decode the original game files, however it can decode or recode any Swordigo files you give it.
 
 ## Usage
 Clone the repo or download a release. Run `FileRift.py` using Python 3.
 ```bash
 python3 FileRift.py
 ```
-To change the rift mode, open config.py in an editor and change the value of the string `rift_mode`. Valid options are `"decode"`, `"recode"`, `"both"` and `"user"`. `"user"` mode is the same as decode, but it only searches the `/de_in/user` folder.  
+To change the rift mode, open config.py in an editor and change the value of the string `rift_mode`. Valid options are `"decode"`, `"recode"`, `"both"`, `"user"` and `pass`. `"user"` mode is the same as decode, but it only searches the `/de_in/<user_folder>` folder, `user_folder` is configured in config.py. In `pass` mode, no decoding or recoding is done. You can also set the rift_mode using command-line flags, see below.
 All files in `/de_in` are used as input files for the decoder. The folders `all`, `scene` and `scl` are intended for the original game files. Any folders you make will be scanned when rifting, and all output files will be placed in `/de_out`.  
 All files in `/re_in` are used as input files for the recoder. Any folders you make will be scanned when rifting, and all output files will be placed in `/re_out`.  
-You can also recode and decode from stdin using the `--recode-stdin` and `--decode-stdin` flags respectively. To select a filetype for use with stdin, use the `-t` flag followed any filetype present in `block_formats.filetypes`.
+More on command-line flags in a later section.
 
-To get a list of command line flags, use `python3 FileRift.py --help`. Example output:
+To get a list of command-line flags, use `python3 FileRift.py --help`. Example output:
 
 ```bash
-usage: FileRift [-h] [-r] [-d] [-u] [--both] [-f] [-b] [--build-project BUILD_PROJECT] [-i INFO] [-p PATH] [-n]
-                [-t FILE_TYPE] [--recode-stdin] [--decode-stdin]
+usage: FileRift [-h] [-r [RECODE ...]] [-d [DECODE ...]] [-u] [--both] [-f [FORCE ...]] [-b]
+                [--build-project BUILD_PROJECT] [-o OUTPUT] [-i [INFO]] [-n] [-t FILE_TYPE]
+                [--working-dir WORKING_DIR] [--recode-stdin] [--decode-stdin]
 
 options:
   -h, --help            show this help message and exit
-  -r, --recode          run in recode mode
-  -d, --decode          run in decode mode
+  -r [RECODE ...], --recode [RECODE ...]
+                        run in recode mode
+  -d [DECODE ...], --decode [DECODE ...]
+                        run in decode mode
   -u, --user            decode file in /de_in/user, unless otherwise specified
-  --both                run in decode then recode mode
-  -f, --force           run in recode mode with allways_recode turned on
-  -b, --build           build an apk from a project file
+  --both                run in recode then decode mode
+  -f [FORCE ...], --force [FORCE ...]
+                        run in recode mode with allways_recode turned on
+  -b, --build           build an apk from the default project file
   --build-project BUILD_PROJECT
-                        build an apk from a project file
-  -i INFO, --info INFO  ask before recoding each directory in re_out
-  -p PATH, --path PATH  recode a file for a given filepath
-  -n, --no-colour       disable output colouring
+                        build an apk from the specified project file
+  -o OUTPUT, --output OUTPUT
+                        output path for (d|r)ecoded files
+  -i [INFO], --info [INFO]
+                        get info about block_formats, templates and more
+  -n, --no-colour       disable ansii colour codes in output
   -t FILE_TYPE, --file-type FILE_TYPE
                         set filetype for block_formats
+  --working-dir WORKING_DIR
+                        set the working directory
   --recode-stdin        recode from stdin
   --decode-stdin        decode from stdin
+
 ```
 
 When recoding, Rift will check the contents of every file against a checksum stored in `lib/.manifest`. If the checksum matches, the file will be skipped, saving a lot of time when recoding. To turn off this behaviour, use the `--force` flag, or set `allways_recode` to True in `config.py`.
@@ -68,7 +77,7 @@ If you trigger building by using the `-b` or `--build` flags, you will by prompt
 Configuring FileRift is done using `config.py`. Most of the settings have comments explaining them.
 
 ## Syntax
-File Rift decodes files into a custom format, which looks similar to a markup language.
+FileRift decodes files into a custom format, which looks similar to a markup language.
 
 ```
 # comment
@@ -106,19 +115,19 @@ Program{
     Bytes : ''  # 32-bit
 }
 ```
-The Bytes chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods which utilize Lua chunks usually only work on 64-bit devices. File Rift can compile the String chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use the `@compile` or `@comp` trigger:
+The Bytes chunk is always pre-compiled, which makes it practically impossible to edit. This means that mods which utilize Lua chunks usually only work on 64-bit devices. FileRift can compile the String chunk for you, and add the output of the compilation to the secondary chunk. To trigger this, use the `@compile` or `@comp` trigger:
 ```
 String : $ ... $end
 Bytes : @comp
 ```
-As File Rift runs through your files, it keeps the content of the last chunk, and when it finds `@compile`, it compiles the last chunk and adds it to that record. Be careful, if you use `@compile` in the wrong place, it will add the content of a random chunk to your record.  
+As FileRift runs through your files, it keeps the content of the last chunk, and when it finds `@compile`, it compiles the last chunk and adds it to that record. Be careful, if you use `@compile` in the wrong place, it will add the content of a random chunk to your record.  
 > Note: this feature currently only works on Linux.
 
 ## Templates
 
-The purpose of templates is to make writing re_in files easier by abstracting common things.
+The purpose of templates is to make writing re_in files easier by abstracting common things. When you reference a template in a `re_in` file, the contents of the template are copied into your file, with some parts replaced.
 
-Here's how a template looks:
+Here's how the contents of a template file might look:
 ```yaml
 # templates/obj.fr
 Object{
@@ -135,12 +144,10 @@ Object{
 }
 ```
 
-
-And this is how you would use that template:
+And this is how you would reference that template in your re_in file:
 ```yaml
 $obj[statue_knight; knight1; -256; 128; 0; 0; 1]
 ```
-
 
 That would be the same as writing:
 ```yaml
@@ -158,27 +165,34 @@ Object{
 }
 ```
 
+Basically, all the $x marks were replaced with the arguments in the templte reference.
 
-Templates are placed in `/templates`. The name of the file defines how it will be referenced, for instance if you name your template file `chunk` or `chunk.fr` it can be referenced as `$chunk[...]`.  
+
+Template files are placed in `/templates`. The name of the file defines how it will be referenced, for instance if you name your template file `chunk` or `chunk.fr` it can be referenced as `$chunk[...]`.  
 The filename must be made up of lower case letters and dots. Note that the extension .fr will be removed automatically, but not any other extension.  
 You can use directories for template files, but the path to the file is not used in the reference, e.g. `/templates/nt/proj/npc` is referenced as `$npc[...]`. This means that `/templates/a` is the same as `/templates/d/a`.  
-The template itself just uses a $ dollar sign and one or two decimal digits to indicate things to replace.
 
 ## Tag Info
 
-Tag info helps you to write Swordigo files quickly, by showing what record tags are allowed in a message. Run rift with the `-i` flag, and pass a block_formats path like so:
+Tag info helps you to write Swordigo files quickly, by showing what record tags are allowed in a message. Run Rift with the `-i` flag, and pass a message name like so:
 
 ```
-python3 FileRift.py -i scene/Object/Position
+python3 FileRift.py -i Position
 
 Position (message)
    0d : X (float)
    15 : Y (float)
 ```
 
-This tells you that the Position Message contains two records, `X` and `Y`, both floats.
-You can also pass a filename and line number. Rift will find the file, go to the line number and see what tag is present on that line, then show info for that tag.
+This tells you that the Position Message contains two records, `X` and `Y`, both floats. Now you know that you can write a Position message like this:
+```
+Position{
+    X 201.5
+    Y 5518.25
+}
+```
 
+You can also pass a filename and line number. Rift will find the file, go to the line number and see what tag is present on that line, then show info for that tag like so:
 ```
 python3 FileRift.py -i re_in/testing/beyond_graveyard.scene:4
 
@@ -194,6 +208,8 @@ Object (message)
    48 : Hidden (int)
    52 : OnLoad (message)
 ```
+
+You can also use some special codes to see helpful lists, we'll see some of these later. Use `python3 FileRift.py -i .help` to see a list.
 
 ## Template Info
 

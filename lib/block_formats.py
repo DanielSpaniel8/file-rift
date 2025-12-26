@@ -1209,7 +1209,7 @@ block_formats = {
     "SpellComponent": {"OnCast": ("0a", "(Program)", "Program")},
 }
 
-error_bad_input = ""
+error_bad_input = "ERROR: Bad Input"
 
 branches = ["Main", "Master", "Debug", "Dev"]
 

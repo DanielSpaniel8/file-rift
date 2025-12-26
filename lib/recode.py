@@ -192,7 +192,9 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
         err_out += ctx_line + "\n" + (" " * ctx_len) + "^" + ("-" * (pointer_len - 1))
 
-        err_out += util.skim_dict(formats[metalevel], message_names[metalevel - 1])
+        err_out += util.pretty_print_message(
+            formats[metalevel], message_names[metalevel - 1]
+        )
 
         log_err_out = err_out
         for i in [

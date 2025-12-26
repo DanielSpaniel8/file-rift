@@ -27,8 +27,8 @@ style_before_block = ""  # default = ""
 style_after_block = ""  # default = ""
 # must use the following chars (=|:|;|,) and must end with "$"
 style_before_chunk = " : $"  # default = " : $"
-# this is used for persistent comments
-style_comment_start = "#"  # default = "#"
+# this is used for preserved comments and field name comments
+style_comment_start = "#"  # #, --, //, default = "#"
 # this changes the indentation for all de_out files, including in lua chunks
 # should be only whitespace
 style_indent = "    "

@@ -7,7 +7,7 @@ import datetime
 import importlib
 from pathlib import Path
 import config
-from lib import block_formats
+from lib import block_formats, block_formats_decode
 
 
 def edit_test(file_content: bytes, filepath: str) -> bool:
@@ -260,10 +260,14 @@ def get_info(path: str) -> str:
     if re.fullmatch(file_line_pattern, path) != None:
         bf_path = get_bf_path(path)
         format, format_name = get_bf_from_path(bf_path)
-        return skim_dict(format, format_name)
+        if isinstance(format, dict):
+            return pretty_print_message(format, format_name)
+        return pretty_print_field(format, format_name)
     elif re.fullmatch(bf_path_pattern, path) != None:
         format, format_name = get_bf_from_path(path.split("/"))
-        return skim_dict(format, format_name)
+        if isinstance(format, dict):
+            return pretty_print_message(format, format_name)
+        return pretty_print_field(format, format_name)
     elif re.fullmatch(template_pattern, path) != None:
         block_formats.error_bad_input = "\n    ,,,,,,,,,,    ,,,     ,,,           ,,,,,,,,,\n   /\\.........\\  /\\..\\   /\\..\\         /\\........\\\n   \\ \\..\\,,,,,/  \\ \\..\\  \\ \\..\\        \\ \\..\\,,,,/\n    \\\\\\..\\,,,,    \\\\\\..\\  \\\\\\..\\        \\\\\\..\\,,,,,             /\\\n     \\\\\\......\\    \\\\\\..\\  \\\\\\..\\        \\\\\\.......\\           //\\\\\n      \\\\\\..\\,,/     \\\\\\..\\  \\\\\\..\\,,,,,,  \\\\\\..\\,,,/,,         \\\\//\n       \\ \\..\\        \\ \\..\\  \\ \\........\\  \\ \\........\\         \\/\n        \\/,,/         \\/,,/   \\/,,,,,,,,/   \\/,,,,,,,,/ \n\n\n                  ,,,,,,,,,,     ,,,     ,,,,,,,,,   ,,,,,,,,,,,\n                 /\\.........\\,  /\\..\\   /\\........\\ /\\..........\\\n       /\\        \\ \\..\\,,,\\...\\ \\ \\..\\  \\ \\..\\,,,,/ \\/,,,/\\..\\,,/\n      //\\\\        \\\\\\.........\\  \\\\\\..\\  \\\\\\..\\,,,,      \\\\\\..\\\n      \\\\//         \\\\\\......,,/   \\\\\\..\\  \\\\\\......\\      \\\\\\..\\\n       \\/           \\\\\\..\\\\...\\,   \\\\\\..\\  \\\\\\..\\,,/       \\\\\\..\\\n                     \\ \\..\\ \\...\\,  \\ \\..\\  \\ \\..\\          \\ \\..\\\n                      \\/,,/   \\,,/   \\/,,/   \\/,,/           \\/,,/\n\n"
         return get_template_info(path[1:])
@@ -366,7 +370,7 @@ def get_bf_path(path: str) -> "list[str]":
     return bf_path
 
 
-def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
+def get_bf_from_path(path: "list[str]") -> "tuple[dict|tuple, str]":
     base_name = path[0]
     if base_name in block_formats.file_types:
         base_name = block_formats.file_types[base_name]
@@ -406,9 +410,9 @@ def get_bf_from_path(path: "list[str]") -> "tuple[dict, str]":
                 return {}, ""
             if tag_is_reference:
                 format_name = point
+                format = block_formats.block_formats[tag_reference]
             else:
-                continue
-            format = block_formats.block_formats[tag_reference]
+                return format[point], point
 
     return format, format_name
 
@@ -728,20 +732,38 @@ def lexeme_type(lexeme: str) -> str:
     return lexeme_type
 
 
-def skim_dict(block_formats: dict, name) -> str:
-    """return the names and types of all dict items
+def pretty_print_field(field: tuple, name: str):
+    doc_string = field[1]
+    doc_string = doc_string.replace("\n", "\n        ")
+    doc_string = re.sub(
+        r"^\((.*)\)",
+        rf"{config.colour_punctuation}({config.colour_data}\1{config.colour_punctuation}){config.colour_reset}",
+        doc_string,
+    )
+    return (
+        "\n"
+        + config.colour_data
+        + field[0]
+        + config.colour_reset
+        + " : "
+        + name
+        + "  "
+        + doc_string
+        + "\n"
+    )
+
+
+def pretty_print_message(block_formats: dict, name: str) -> str:
+    """return the names and types of all message items
     with a depth of 1"""
     items = block_formats.items()
-
     if block_formats == {}:
         return ""
-
     out_str = (
         "\n"
         + name
         + f" {config.colour_punctuation}({config.colour_data}message{config.colour_punctuation}){config.colour_reset}\n"
     )
-
     for key, value in items:
         tag = value[0]
         doc_string = value[1]
@@ -763,7 +785,6 @@ def skim_dict(block_formats: dict, name) -> str:
             + doc_string
             + "\n"
         )
-
     return out_str
 
 
