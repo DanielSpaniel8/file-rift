@@ -12,9 +12,11 @@ project_name = "default"
 #   set rift_mode to "pass"
 ask_for_info = False
 
-# should rift compile Bytes chunks only at the @compile trigger, or allways
+# should rift compile Bytes chunks never, only at the @compile trigger, or allways
 # or should it automatically add a Bytes chunk for you?
-compile_mode = "keyword"  # keyword, all, auto
+compile_mode = "never"  # never, trigger, all, auto
+# should rift check your lua chunks for syntax errors?
+lua_checking = True
 
 # the folder for your custom de_in files
 user_folder = "user"  # default = "user"
@@ -27,14 +29,14 @@ style_before_block = ""  # default = ""
 style_after_block = ""  # default = ""
 # must use the following chars (=|:|;|,) and must end with "$"
 style_before_chunk = " : $"  # default = " : $"
-# this is used for preserved comments and field name comments
+# this is used for preserved comments and message name comments
 style_comment_start = "#"  # #, --, //, default = "#"
 # this changes the indentation for all de_out files, including in lua chunks
 # should be only whitespace
 style_indent = "    "
 
-# if True, will add a comment to every message with the field name
-style_show_field_name = True
+# if True, will add a comment to every message with the message name
+style_show_message_name = True
 # if True, will add a comment at the start of the file with the FileRift version_code
 style_show_version = False
 # if True, will add lua block comments around everything that isn't a lua chunk
@@ -46,8 +48,8 @@ preserve_comments = True
 preserve_compile = True
 # if True, degree conversion marks will persist after recoding your files
 preserve_degrees = True
-# if True, all comments directly following `{` will be skipped because they might be field name comments
-ignore_field_name_comments = True
+# if True, all comments directly following `{` will be skipped because they might be message name comments
+ignore_message_name_comments = True
 
 # if False, colouring will not be used in printed output
 colour_enabled = True
@@ -60,13 +62,18 @@ colour_data = "\033[0m\033[1;34m"  # default = "\033[0m\033[1;34m"
 colour_punctuation = "\033[0m\033[2;37m"  # default = "\033[0m\033[2;37m"
 colour_reset = "\033[0m"  # default = "\033[0m"
 
-# if logging is not "none", error messages will be appended to /log.txt
+# if logging is not "none", error messages will be appended to ./log.txt
 # you can use a string or a list of strings to choose what type(s) of errors to append
 # default = ["decode", "recode"]
 logging = "all"  # ["none", "all", "general", "argument", "config", "file_not_found", "decode", "recode", "system"]
 
 # if True, output FileRift's status to "./status"
 # if a string is supplied, output the status to that file
-status = True
+# status = True
 
-version_code = "5.8.1"
+# if status is not "none", the status of rift's work will be written to ./status
+# you can use a string or a list of strings to choose what type(s) of status messages to append
+# default = ["decode", "recode", "build"]
+status = "all"  # ["none", "all", "decode", "recode", "build", "error"]
+
+version_code = "5.8.3"

@@ -69,6 +69,12 @@ def get_args() -> argparse.Namespace:
         help="disable ansii colour codes in output",
     )
     parser.add_argument(
+        "--no-lua-check", action="store_true", help="override config.lua_checking"
+    )
+    parser.add_argument(
+        "--lua-check", action="store_true", help="override config.lua_checking"
+    )
+    parser.add_argument(
         "-t", "--file-type", type=str, help="set filetype for block_formats"
     )
     parser.add_argument("--working-dir", type=str, help="set the working directory")
@@ -85,6 +91,10 @@ def get_args() -> argparse.Namespace:
         config.colour_warning = ""
         config.colour_reset = ""
         config.colour_data = ""
+    if args.no_lua_check:
+        config.lua_checking = False
+    if args.lua_check:
+        config.lua_checking = True
     if args.working_dir:
         config.working_dir = os.path.normpath(args.working_dir)
     if args.decode != None:
@@ -158,7 +168,8 @@ def config_repair() -> bool:
         "working_dir": str,
         "project_name": str,
         "ask_for_info": bool,
-        "compile_mode": ["keyword", "all", "auto"],
+        "compile_mode": ["never", "trigger", "all", "auto"],
+        "lua_checking": bool,
         "user_folder": str,
         "style_after_tag": str,
         "style_after_record": str,
@@ -167,13 +178,13 @@ def config_repair() -> bool:
         "style_before_chunk": str,
         "style_comment_start": ["#", "--", "//"],
         "style_indent": str,
-        "style_show_field_name": bool,
+        "style_show_message_name": bool,
         "style_show_version": bool,
         "style_lsp_prep": bool,
         "preserve_comments": bool,
         "preserve_compile": bool,
         "preserve_degrees": bool,
-        "ignore_field_name_comments": bool,
+        "ignore_message_name_comments": bool,
         "colour_enabled": bool,
         "colour_success": str,
         "colour_error": str,
@@ -181,8 +192,7 @@ def config_repair() -> bool:
         "colour_data": str,
         "colour_reset": str,
         "colour_punctuation": str,
-        # logging is handle later
-        "status": [True, False, str],
+        # logging and status are handle later
         "version_code": str,
     }
 
@@ -192,7 +202,8 @@ def config_repair() -> bool:
         "working_dir": ".",
         "project_name": "",
         "ask_for_info": False,
-        "compile_mode": "keyword",
+        "compile_mode": "trigger",
+        "lua_checking": True,
         "user_folder": "",
         "style_after_tag": " : ",
         "style_after_record": ",",
@@ -201,13 +212,13 @@ def config_repair() -> bool:
         "style_before_chunk": ": $",
         "style_comment_start": "#",
         "style_indent": "    ",
-        "style_show_field_name": True,
+        "style_show_message_name": True,
         "style_show_version": False,
         "style_lsp_prep": False,
         "preserve_comments": True,
         "preserve_compile": True,
         "preserve_degrees": True,
-        "ignore_field_name_comments": True,
+        "ignore_message_name_comments": True,
         "colour_enabled": True,
         "colour_success": "\033[0m\033[2;37m",
         "colour_error": "\033[0m\033[1;31m",
@@ -216,9 +227,9 @@ def config_repair() -> bool:
         "colour_reset": "\033[0m\033[2;37m",
         "colour_punctuation": "\033[0m\033[2;37m",
         "colour_reset": "\033[0m",
-        "logging": ["recode", "decode"],
-        "status": False,
-        "version_code": "5.8.1",
+        "logging": ["decode", "recode"],
+        "status": ["decode", "recode", "build"],
+        "version_code": "5.8.3",
     }
 
     strict_styles = [
@@ -291,7 +302,7 @@ def config_repair() -> bool:
                     + " is not of type"
                     + str(v)
                     + ", defaulting to "
-                    + default
+                    + str(default)
                 )
                 config_error = True
                 setattr(config, k, default)
@@ -317,12 +328,11 @@ def config_repair() -> bool:
             + config.colour_reset
             + "style_before_chunk does not end with $\n"
             + "defaulting to "
-            + defaults["style_before_chunk"]
+            + str(defaults["style_before_chunk"])
         )
         util.log_append(
-            "config error style_before_chunk does not end with $,"
-            + "defaulting to "
-            + defaults["style_before_chunk"]
+            "config error style_before_chunk does not end with $, defaulting to "
+            + str(defaults["style_before_chunk"])
         )
         config_error = True
         setattr(config, "style_before_chunk", defaults["style_before_chunk"])
@@ -349,13 +359,13 @@ def config_repair() -> bool:
                 + "logging is not in "
                 + str(logging_options)
                 + "defaulting to "
-                + defaults["logging"]
+                + str(defaults["logging"])
             )
             util.log_append(
                 "config error logging is not in "
                 + str(logging_options)
                 + "defaulting to "
-                + defaults["logging"]
+                + str(defaults["logging"])
             )
             config_error = True
             setattr(config, "logging", defaults["logging"])
@@ -398,6 +408,63 @@ def config_repair() -> bool:
                 corrected_logging.pop(k)
         setattr(config, "logging", corrected_logging)
 
+    status_options = ["none", "all", "decode", "recode", "build", "error"]
+    if isinstance(status, str):
+        if status not in status_options:
+            print(
+                config.colour_error
+                + "config error\n"
+                + config.colour_reset
+                + "status is not in "
+                + str(status_options)
+                + "\ndefaulting to "
+                + str(defaults["status"])
+            )
+            util.log_append(
+                "config error status is not in "
+                + str(status_options)
+                + "\ndefaulting to "
+                + str(defaults["status"])
+            )
+            config_error = True
+            setattr(config, "status", defaults["status"])
+        else:
+            setattr(config, "status", [status])
+    elif not isinstance(status, list):
+        print(
+            config.colour_error
+            + "config error\n"
+            + config.colour_reset
+            + "status is not of type str or list\n"
+            + "defaulting to "
+            + str(defaults["status"])
+        )
+        util.log_append(
+            "config error status is not of type str of list, defaulting to "
+            + str(defaults["status"])
+        )
+        config_error = True
+        setattr(config, "status", defaults["status"])
+    else:
+        corrected_status = status
+        for k, v in enumerate(status):
+            if v not in status_options:
+                print(
+                    config.colour_error
+                    + "config error\n"
+                    + config.colour_reset
+                    + "invalid option in status ("
+                    + str(v)
+                    + ")\n"
+                    + "removing it"
+                )
+                util.log_append(
+                    "config error invalid option in status (" + str(v) + ") removing it"
+                )
+                config_error = True
+                corrected_status.pop(k)
+        setattr(config, "status", corrected_status)
+
     for i in strict_styles:
         style = globals()[i]
         if style.translate(style_translation).strip() != "":
@@ -411,7 +478,7 @@ def config_repair() -> bool:
                 + style
                 + ") contains illegal chars\n"
                 + 'defaulting to "'
-                + defaults[i]
+                + str(defaults[i])
                 + '"'
             )
             util.log_append(
@@ -421,7 +488,7 @@ def config_repair() -> bool:
                 + style
                 + ") contains illegal chars, "
                 + 'defaulting to "'
-                + defaults[i]
+                + str(defaults[i])
                 + '"'
             )
             config_error = True

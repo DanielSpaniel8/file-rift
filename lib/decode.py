@@ -1,7 +1,6 @@
 import os
 import sys
 import re
-import math
 import struct
 from pathlib import Path
 from lib import block_formats, block_formats_decode, util
@@ -73,7 +72,7 @@ def decode(args: list) -> "tuple[bool, bool]":
     style_before_chunk = config.style_before_chunk
     style_comment_start = config.style_comment_start
     style_indent = config.style_indent
-    style_show_field_name = config.style_show_field_name
+    style_show_message_name = config.style_show_message_name
     style_lsp_prep = config.style_lsp_prep
 
     def varint() -> "tuple[int, int]":
@@ -335,7 +334,7 @@ def decode(args: list) -> "tuple[bool, bool]":
 
                 if tag_is_reference:
                     message_string = indentation + tagname + style_before_block + "{"
-                    if style_show_field_name:
+                    if style_show_message_name:
                         message_string += (
                             "  "
                             + style_comment_start

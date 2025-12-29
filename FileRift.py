@@ -26,6 +26,8 @@ def main():
         exit_code = 3
     setup.build_block_formats()
     args = setup.get_args()
+    util.set_status("clear")
+    util.set_status()
 
     decoded_count = 0
     recoded_count = 0
@@ -66,15 +68,15 @@ def main():
         config.rift_mode = "pass"
 
     if args.build:
-        util.set_status("building " + config.project_name)
+        util.set_status("building " + config.project_name, "build")
         build.build_advanced(config.project_name, True)
         config.rift_mode = "pass"
     elif args.build_project:
-        util.set_status("building " + args.build_project)
+        util.set_status("building " + args.build_project, "build")
         config.rift_mode = "pass"
         build.build_advanced(args.build_project, False)
     elif config.rift_mode == "build":
-        util.set_status("building " + config.project_name)
+        util.set_status("building " + config.project_name, "build")
         build.build_advanced(config.project_name, False)
 
     def init_worker():
@@ -88,7 +90,7 @@ def main():
                 paths = [os.path.join(".", "re_in")]
         else:
             paths = [os.path.join(".", "re_in")]
-        util.set_status("recoding " + str(paths[0]))
+        util.set_status("recoding " + str(paths[0]), "recode")
         fileslist = [item for s in paths for item in util.path(s, "re_in", True, True)]
         pathlist = []
         tested_fileslist = []
@@ -149,9 +151,9 @@ def main():
             else:
                 paths = [os.path.join(".", "de_in", config.user_folder)]
         if config.rift_mode == "user":
-            util.set_status("decoding " + config.user_folder)
+            util.set_status("decoding " + config.user_folder, "decode")
         else:
-            util.set_status("decoding " + str(paths[0]))
+            util.set_status("decoding " + str(paths[0]), "decode")
         fileslist = [item for s in paths for item in util.path(s, "de_in", True, True)]
         if args.output:
             out_fileslist = util.get_output_paths(fileslist, args.output)

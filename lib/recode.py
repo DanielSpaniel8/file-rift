@@ -1,5 +1,4 @@
 import os
-from shutil import ignore_patterns
 import sys
 import re
 import math
@@ -211,6 +210,99 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
         return
 
+    def check_chunk(chunk: str, output: bool = False, multiline: bool = False) -> bool:
+        """test a lua chunk for syntax errors
+        return True if there was no error"""
+        chunk_cache_path = os.path.join(
+            ".",
+            "lib",
+            "chunk_cache",
+            filepath.replace(os.sep, "%"),
+        )
+        # write original chunk to input file
+        with open(chunk_cache_path, "w") as file:
+            file.write(chunk)
+        # by default, just read the input file
+        luac_args = os.path.join("lib", luac_name) + " -p " + chunk_cache_path
+        # if we need to write the compiled output, write to input+%out
+        if output:
+            luac_args = (
+                os.path.join("lib", luac_name)
+                + " -s -o "
+                + chunk_cache_path
+                + "%out "
+                + chunk_cache_path
+            )
+        luac_out = subprocess.getoutput(luac_args)
+        if luac_out != "":
+            chunk_lines = chunk.split("\n")
+            matches = re.match(r"lib/luac: \./lib/chunk_cache/.*:(\d+): (.+)", luac_out)
+            if matches != None:
+                chunk_line = int(matches.group(1))
+                chunk_err = matches.group(2)
+                print(
+                    config.colour_error
+                    + "\nlua error"
+                    + config.colour_reset
+                    + " in "
+                    + filepath
+                    + ":"
+                    + str((line_num + chunk_line - 1) if multiline else line_num)
+                    + ("" if multiline else " while compiling")
+                    + "\n"
+                    + config.colour_warning
+                    + chunk_err
+                    + config.colour_data
+                    + " (line "
+                    + str(chunk_line - 1)
+                    + "):"
+                    + config.colour_reset
+                    + "\n"
+                    + chunk_lines[chunk_line - 1]
+                    + "\n"
+                )
+                util.log_append(
+                    "lua error"
+                    + " in "
+                    + filepath
+                    + ":"
+                    + str((line_num + chunk_line - 1) if multiline else line_num)
+                    + ("" if multiline else " while compiling")
+                    + "\n"
+                    + chunk_err
+                    + " (line "
+                    + str(chunk_line - 1)
+                    + "):"
+                    + "\n"
+                    + chunk_lines[chunk_line - 1]
+                    + "\n"
+                )
+            else:
+                print("boring error msg")
+                show_error("lua error ", luac_out)
+                util.log_append("lua error " + luac_out)
+            return False
+        return True
+
+    def compile_chunk(chunk: str, preserve_compile: bool = False):
+        if not check_chunk(chunk, True):
+            return
+        if compile_mode == "never":
+            return
+        if preserve_compile:
+            out_bytes[metalevel] += b"\x90\x20\x00"
+        chunk_cache_path = os.path.join(
+            ".",
+            "lib",
+            "chunk_cache",
+            filepath.replace(os.sep, "%"),
+        )
+        with open(chunk_cache_path + "%out", "rb") as file:
+            chunk_content = file.read()
+        out_bytes[metalevel] += b"\x12"
+        out_bytes[metalevel] += varint(len(chunk_content))
+        out_bytes[metalevel] += chunk_content
+
     file_content = args[0]
     filepath = args[1]
     targetpath = args[2]
@@ -249,13 +341,25 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
     mode = "tag"
     last_mode = "tag"
+    last_chunk = ""
     preserved_comment = []
     # whether a comment has been marked with a double hashtag
     # to prevent it being preserved
     unpreserve_comment = False
+    # cache commonly used variables
     preserve_comments = config.preserve_comments
+    preserve_compile = config.preserve_compile
     style_comment_start = config.style_comment_start
-    ignore_field_name_comments = config.ignore_field_name_comments
+    ignore_message_name_comments = config.ignore_message_name_comments
+    compile_mode = config.compile_mode
+    lua_checking = config.lua_checking
+    luac_name = "luac"
+    if platform.system() == "Windows":  # choose lua compiler binary based on the os
+        luac_name = "luac.exe"
+    if os.path.exists('/data/data/com.termux') or os.path.exists(
+        '/data/data/ru.iiec.pydroid3'
+    ):
+        luac_name = "luac_arch"
 
     comments_list = ["#", "--", "//"]
 
@@ -306,7 +410,13 @@ def recode(args: list) -> "tuple[bool, str, bool]":
         #     continue
 
         if lexeme == "@stop":
-            print("@ stopped " + filepath)
+            print(
+                config.colour_data
+                + "@ stopped "
+                + config.colour_success
+                + filepath
+                + config.colour_reset
+            )
             break
 
         print_trigger_match = re.match(print_tag_regex, lexeme)
@@ -362,7 +472,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
         if mode == "data":
 
             if lexeme == "{":
-                if ignore_field_name_comments:
+                if ignore_message_name_comments:
                     unpreserve_comment = True
                 out_bytes[metalevel] += varint(tagnumber)
                 try:
@@ -386,51 +496,16 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 continue
 
             if lexeme in ["@comp", "@compile"] or (
-                config.compile_mode == "all" and tagname in block_formats.compile_tags
+                compile_mode == "all" and tagname == "Bytes"
             ):
-                # if we find @comp, but we are in auto mode,
-                # we skip this section and go down to the auto section
-                if config.compile_mode == "auto":
+                # if we find @compile, but we are in auto mode,
+                # we skip this section because
+                # the chunk should have been compiled automatically
+                if compile_mode == "auto":
+                    last_mode = mode
+                    mode = "tag"
                     continue
-                chunk_cache_path = os.path.join(
-                    ".",
-                    "lib",
-                    "chunk_cache",
-                    filepath.replace(os.sep, "%"),
-                )
-                luac_args = (
-                    os.path.join(
-                        "lib", "luac.exe" if platform.system() == "Windows" else "luac"
-                    )
-                    + " -s -o "
-                    + chunk_cache_path
-                    + "%out "
-                    + chunk_cache_path
-                )
-                luac_out = subprocess.getoutput(luac_args)
-
-                if luac_out != "":
-                    matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
-                    if matches != None:
-                        chunk_line = int(matches.group(1))
-                        chunk_err = matches.group(2)
-                        # this regex is here because the --[[ thing for the lsp_prep will trigger an error
-                        # and i want to swallow that error because it's useless
-                        if re.match(r"unfinished long comment", chunk_err) == None:
-                            show_error(
-                                "@compile chunk error",
-                                chunk_err + " (line " + str(chunk_line - 3) + ")",
-                            )
-                    else:
-                        show_error("@compile chunk error", luac_out)
-
-                if config.preserve_compile:
-                    out_bytes[metalevel] += b"\x90\x20\x00"
-                with open(chunk_cache_path + "%out", "rb") as file:
-                    chunk_content = file.read()
-                out_bytes[metalevel] += varint(tagnumber)
-                out_bytes[metalevel] += varint(len(chunk_content))
-                out_bytes[metalevel] += chunk_content
+                compile_chunk(last_chunk, preserve_compile)
                 last_mode = mode
                 mode = "tag"
                 continue
@@ -481,108 +556,37 @@ def recode(args: list) -> "tuple[bool, str, bool]":
             mode = "tag"
 
         if mode == "chunk":
-            line_num += str.count(lexeme, "\n") + 2
-            chunk_cache_path = os.path.join(
-                ".",
-                "lib",
-                "chunk_cache",
-                filepath.replace(os.sep, "%"),
-            )
             if lexeme.strip()[-4:] == "--[[":
                 lexeme = lexeme.strip()[:-4]
             if (
                 lexeme[1:7] in block_formats.branches
                 and lexeme[3] == "s"
-                and len(lexeme) == 21
+                and len(lexeme) == 26
                 and lexeme[-1] == "?"
-                and lexeme[11:15] == "Real"
-                and re.match(r".+is.?it[a-s]{4}.*ou", lexeme.lower().strip()) != None
+                and lexeme[15:19] == "real"
+                and re.match(r".+is.?it [a-s]{4}.*ou", lexeme.lower().strip()) != None
             ):
                 print(config.colour_data + block_formats.yak + config.colour_reset)
-            if (
-                "pydroid" in sys.executable.lower()
-                or "android" in str(sys.platform).lower()
-            ):
+                last_mode = mode
+                mode = tag
                 continue
-            try:
-                import android
-
-                continue
-            except ImportError:
-                pass
-            with open(chunk_cache_path, "w") as file:
-                file.write(lexeme)
-            luac_args = (
-                os.path.join(
-                    "lib",
-                    "luac.exe" if platform.system() == "Windows" else "luac",
-                )
-                + " -p "
-                + chunk_cache_path
-            )
-            luac_out = subprocess.getoutput(luac_args)
-            if luac_out != "":
-                matches = re.match(r"\./lib/luac: .*:(\d+): (.+)", luac_out)
-                if matches != None:
-                    chunk_line = int(matches.group(1))
-                    chunk_err = matches.group(2)
-                    # this regex is here because the --[[ thing for the lsp_prep will trigger an error
-                    # and i want to swallow that error because it's useless
-                    if re.match(r"unfinished long comment", chunk_err) == None:
-                        show_error(
-                            "chunk error",
-                            chunk_err + " (line " + str(chunk_line - 3) + ")",
-                        )
-                else:
-                    show_error("chunk error", luac_out)
-
+            if lua_checking:
+                check_chunk(lexeme, multiline=True)
+            last_chunk = lexeme
             out_bytes[metalevel] += varint(tagnumber)
             out_bytes[metalevel] += varint(len(lexeme))
             out_bytes[metalevel] += bytes(lexeme, "latin1")
+            line_num += str.count(lexeme, "\n") + 2
             last_mode = mode
             mode = "tag"
 
-            if config.compile_mode == "auto":
-                chunk_cache_path = os.path.join(
-                    ".",
-                    "lib",
-                    "chunk_cache",
-                    filepath.replace(os.sep, "%"),
-                )
-                luac_args = (
-                    os.path.join(
-                        "lib", "luac.exe" if platform.system() == "Windows" else "luac"
-                    )
-                    + " -s -o "
-                    + chunk_cache_path
-                    + "%out "
-                    + chunk_cache_path
-                )
-                luac_out = subprocess.getoutput(luac_args)
-
-                if luac_out != "":
-                    matches = re.match(r"\./lib/luac: .*\.in:(\d+): (.+)", luac_out)
-                    if matches != None:
-                        chunk_line = int(matches.group(1))
-                        chunk_err = matches.group(2)
-                        # this regex is here because the --[[ thing for the lsp_prep will trigger an error
-                        # and i want to swallow that error because it's useless
-                        if re.match(r"unfinished long comment", chunk_err) == None:
-                            show_error(
-                                "chunk error",
-                                chunk_err + " (line " + str(chunk_line - 3) + ")",
-                            )
-                    else:
-                        show_error("chunk error", luac_out)
-
-                with open(chunk_cache_path + "%out", "rb") as file:
-                    chunk_content = file.read()
-                out_bytes[metalevel] += b"\x12"
-                out_bytes[metalevel] += varint(len(chunk_content))
-                out_bytes[metalevel] += chunk_content
+            if compile_mode == "auto":
+                compile_chunk(lexeme)
                 last_mode = mode
                 mode = "tag"
                 continue
+
+    # end of recode loop
 
     if targetpath != "":
         outfilepath = targetpath

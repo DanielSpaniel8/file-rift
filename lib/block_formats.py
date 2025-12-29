@@ -1,5 +1,4 @@
 multiline_strs = ["String"]
-compile_tags = ["Bytes"]
 
 
 file_types = {

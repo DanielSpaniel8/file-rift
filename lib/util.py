@@ -7,7 +7,7 @@ import datetime
 import importlib
 from pathlib import Path
 import config
-from lib import block_formats, block_formats_decode
+from lib import block_formats
 
 
 def edit_test(file_content: bytes, filepath: str) -> bool:
@@ -137,14 +137,30 @@ def log_append(message: str, error_type: "int|str" = "general"):
         else:
             file.write(content + "\n" + date + "  " + message)
 
+    if config.status == "error" or "error" in config.status:
+        set_status(error_type + " error", "error")
 
-def set_status(status: str = ""):
-    if not config.status:
+
+def set_status(status: str = "", status_type: str = ""):
+    # blank status always clears the status file
+    if status == "":
+        with open("./status", "r") as file:
+            if "error" in file.read():
+                return
+        with open("./status", "w") as file:
+            file.write(status)
         return
-    path = "./status"
-    if isinstance(config.status, str):
-        path = config.status
-    with open(path, "w") as file:
+    set_status = config.status
+    if isinstance(set_status, str):
+        set_status = [set_status]
+    status_types = ["", "none", "all", "decode", "recode", "build", "error"]
+    if not status_type in status_types:
+        print("invalid status_type: " + status_type)
+    if "none" in set_status:
+        return
+    if not status_type in set_status and "all" not in set_status:
+        return
+    with open("./status", "w") as file:
         file.write(status)
 
 

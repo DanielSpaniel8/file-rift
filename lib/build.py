@@ -176,6 +176,7 @@ press enter to use the last project
 
     if not project_name in project_file_list:
         print(f'project not found "{project}"')
+        util.set_status("project not found error", "error")
         return
 
     # Parse the project file
@@ -184,10 +185,12 @@ press enter to use the last project
             project_config = parse_project_file(file.read())
     except Exception as e:
         print(f"Error parsing project file: {e}")
+        util.set_status("project file error", "error")
         return
 
     if not project_config.apk:
         print("apk not found error")
+        util.set_status("apk not found error", "error")
         return
 
     # Process file paths
@@ -198,12 +201,14 @@ press enter to use the last project
     for file_pair in add_files + recode_files:
         if not os.path.exists(file_pair[0]):
             print(f"file not found: {file_pair[0]}")
+            util.set_status("file not found error", "error")
             return
 
     # Build the APK
     apk_path = util.path_repair(project_config.apk, root="./projects/apks")
     if not apk_path:
         print(f"APK not found: {project_config.apk}")
+        util.set_status("apk not found error", "error")
         return
 
     build_apk(apk_path, add_files, recode_files)
@@ -269,10 +274,11 @@ def build_apk(apk_path, add_files, recode_files):
                             template_regex, util.template, file_content
                         )
 
-                    output = recode.recode([file_content, source_path])
+                    output = recode.recode([file_content, source_path, ""])
 
                     if not output[0]:
                         print("build failed due to recode error")
+                        util.set_status("recode error", "error")
                         sys.exit(6)
 
                 # Get output file path
