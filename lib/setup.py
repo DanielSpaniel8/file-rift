@@ -168,7 +168,7 @@ def config_repair() -> bool:
         "working_dir": str,
         "project_name": str,
         "ask_for_info": bool,
-        "compile_mode": ["never", "trigger", "all", "auto"],
+        "compile_mode": ["never", "trigger", "all", "auto", "skip"],
         "lua_checking": bool,
         "user_folder": str,
         "style_after_tag": str,

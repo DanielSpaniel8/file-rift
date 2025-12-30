@@ -12,9 +12,9 @@ project_name = "default"
 #   set rift_mode to "pass"
 ask_for_info = False
 
-# should rift compile Bytes chunks never, only at the @compile trigger, or allways
-# or should it automatically add a Bytes chunk for you?
-compile_mode = "trigger"  # never, trigger, all, auto
+# should rift compile Bytes chunks never, only at the @compile trigger, or allways,
+# should it automatically add a Bytes chunk for you or should it skip Bytes chunks?
+compile_mode = "skip"  # never, trigger, all, auto, skip
 # should rift check your lua chunks for syntax errors?
 lua_checking = True
 

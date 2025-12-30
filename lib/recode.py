@@ -346,9 +346,13 @@ def recode(args: list) -> "tuple[bool, str, bool]":
     # whether a comment has been marked with a double hashtag
     # to prevent it being preserved
     unpreserve_comment = False
+    # this will be true if a Bytes was automatically added,
+    # so all Bytes in the current Program should be skipped
+    skip_bytes = False
     # cache commonly used variables
     preserve_comments = config.preserve_comments
     preserve_compile = config.preserve_compile
+    preserve_degrees = config.preserve_degrees
     style_comment_start = config.style_comment_start
     ignore_message_name_comments = config.ignore_message_name_comments
     compile_mode = config.compile_mode
@@ -446,6 +450,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                     return False, filepath, True
                 format = formats[metalevel]
 
+                skip_bytes = False
                 last_mode = mode
                 mode = "tag"
                 continue
@@ -501,7 +506,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 # if we find @compile, but we are in auto mode,
                 # we skip this section because
                 # the chunk should have been compiled automatically
-                if compile_mode == "auto":
+                if compile_mode in ["auto", "skip"]:
                     last_mode = mode
                     mode = "tag"
                     continue
@@ -511,11 +516,12 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 continue
 
             wiretype = tagnumber % 8
-            if wiretype in [1, 5] and lexeme[-1] == "d" and config.preserve_degrees:
+            if preserve_degrees and wiretype in [1, 5] and lexeme[-1] == "d":
                 out_bytes[metalevel] += (
                     b"\x9a\x20" + varint(len(lexeme) - 1) + bytes(lexeme[:-1], "latin1")
                 )
-            out_bytes[metalevel] += varint(tagnumber)
+            if tagname != "Bytes" or (not (skip_bytes or compile_mode == "skip")):
+                out_bytes[metalevel] += varint(tagnumber)
 
             ltype = util.lexeme_type(lexeme)
             if wiretype == 0:
@@ -534,6 +540,10 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                     data = float(lexeme)
                 out_bytes[metalevel] += struct.pack("<d", data)
             if wiretype == 2:
+                if tagname == "Bytes" and (skip_bytes or compile_mode == "skip"):
+                    last_mode = mode
+                    mode = "tag"
+                    continue
                 if not ltype in ["string", "compile_trigger"]:
                     show_error("type error", "expected string, got " + ltype)
                     return False, filepath, True
@@ -582,6 +592,7 @@ def recode(args: list) -> "tuple[bool, str, bool]":
 
             if compile_mode == "auto":
                 compile_chunk(lexeme)
+                skip_bytes = True
                 last_mode = mode
                 mode = "tag"
                 continue
