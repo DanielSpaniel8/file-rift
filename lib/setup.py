@@ -231,7 +231,7 @@ def config_repair() -> bool:
         "colour_reset": "\033[0m",
         "logging": ["decode", "recode"],
         "status": ["decode", "recode", "build"],
-        "version_code": "5.8.3",
+        "version_code": "5.8.4",
     }
 
     strict_styles = [
