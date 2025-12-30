@@ -19,7 +19,10 @@ from multiprocessing import Pool, freeze_support
 
 
 def main():
+    # this fixes windows multiprocessing problems
     freeze_support()
+    # this fixes pydroid multiprocessing problems
+    sys.stderr = open(os.devnull, 'w')
 
     exit_code = 0
     if setup.config_repair():
@@ -119,26 +122,27 @@ def main():
             [l[0], l[1], out_fileslist[i]] for i, l in enumerate(tested_fileslist)
         ]
 
-        pool = Pool(initializer=init_worker)
-        try:
-            results = pool.map_async(recode.recode_start, final_fileslist)
-            outlist = results.get(timeout=9999999)
-            for result, filepath, error in outlist:
-                if result:
-                    recoded_count += 1
-                else:
-                    util.pop_from_manifest(filepath)
-                    skipped_count += 1
-                if error:
-                    exit_code = 1
-        except KeyboardInterrupt:
-            pool.terminate()
-            pool.join()
-            util.set_status()
-            sys.exit(8)
-        else:
-            pool.close()
-            pool.join()
+        if final_fileslist:
+            pool = Pool(initializer=init_worker)
+            try:
+                results = pool.map_async(recode.recode_start, final_fileslist)
+                outlist = results.get(timeout=9999999)
+                for result, filepath, error in outlist:
+                    if result:
+                        recoded_count += 1
+                    else:
+                        util.pop_from_manifest(filepath)
+                        skipped_count += 1
+                    if error:
+                        exit_code = 1
+            except KeyboardInterrupt:
+                pool.terminate()
+                pool.join()
+                util.set_status()
+                sys.exit(8)
+            else:
+                pool.close()
+                pool.join()
 
     if config.rift_mode in ["decode", "user", "both"] or args.decode:
         if args.decode != None:
@@ -160,25 +164,26 @@ def main():
         else:
             out_fileslist = [""] * len(fileslist)
         fileslist = [[file, out_fileslist[i]] for i, file in enumerate(fileslist)]
-        pool = Pool(initializer=init_worker)
-        try:
-            results = pool.map_async(decode.decode, fileslist)
-            outlist = results.get(timeout=9999999)
-            for result, error in outlist:
-                if result:
-                    decoded_count += 1
-                else:
-                    skipped_count += 1
-                if error:
-                    exit_code = 1
-        except KeyboardInterrupt:
-            pool.terminate()
-            pool.join()
-            util.set_status()
-            sys.exit(8)
-        else:
-            pool.close()
-            pool.join()
+        if fileslist:
+            pool = Pool(initializer=init_worker)
+            try:
+                results = pool.map_async(decode.decode, fileslist)
+                outlist = results.get(timeout=9999999)
+                for result, error in outlist:
+                    if result:
+                        decoded_count += 1
+                    else:
+                        skipped_count += 1
+                    if error:
+                        exit_code = 1
+            except KeyboardInterrupt:
+                pool.terminate()
+                pool.join()
+                util.set_status()
+                sys.exit(8)
+            else:
+                pool.close()
+                pool.join()
 
     if config.ask_for_info:
         info_path = input("info path: ")

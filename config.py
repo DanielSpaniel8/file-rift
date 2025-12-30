@@ -14,7 +14,7 @@ ask_for_info = False
 
 # should rift compile Bytes chunks never, only at the @compile trigger, or allways
 # or should it automatically add a Bytes chunk for you?
-compile_mode = "never"  # never, trigger, all, auto
+compile_mode = "trigger"  # never, trigger, all, auto
 # should rift check your lua chunks for syntax errors?
 lua_checking = True
 
@@ -65,7 +65,10 @@ colour_reset = "\033[0m"  # default = "\033[0m"
 # if logging is not "none", error messages will be appended to ./log.txt
 # you can use a string or a list of strings to choose what type(s) of errors to append
 # default = ["decode", "recode"]
-logging = "all"  # ["none", "all", "general", "argument", "config", "file_not_found", "decode", "recode", "system"]
+logging = [
+    "decode",
+    "recode",
+]  # ["none", "all", "general", "argument", "config", "file_not_found", "decode", "recode", "system"]
 
 # if True, output FileRift's status to "./status"
 # if a string is supplied, output the status to that file
@@ -74,6 +77,10 @@ logging = "all"  # ["none", "all", "general", "argument", "config", "file_not_fo
 # if status is not "none", the status of rift's work will be written to ./status
 # you can use a string or a list of strings to choose what type(s) of status messages to append
 # default = ["decode", "recode", "build"]
-status = "all"  # ["none", "all", "decode", "recode", "build", "error"]
+status = [
+    "decode",
+    "recode",
+    "build",
+]  # ["none", "all", "decode", "recode", "build", "error"]
 
 version_code = "5.8.3"
