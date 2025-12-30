@@ -14,7 +14,7 @@ ask_for_info = False
 
 # should rift compile Bytes chunks never, only at the @compile trigger, or allways,
 # should it automatically add a Bytes chunk for you or should it skip Bytes chunks?
-compile_mode = "skip"  # never, trigger, all, auto, skip
+compile_mode = "trigger"  # never, trigger, all, auto, skip
 # should rift check your lua chunks for syntax errors?
 lua_checking = True
 
@@ -37,6 +37,8 @@ style_indent = "    "
 
 # if True, will add a comment to every message with the message name
 style_show_message_name = True
+# if True, tags will be in snake_case rather than PascalCase
+style_snake_case = False
 # if True, will add a comment at the start of the file with the FileRift version_code
 style_show_version = False
 # if True, will add lua block comments around everything that isn't a lua chunk

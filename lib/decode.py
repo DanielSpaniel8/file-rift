@@ -73,6 +73,7 @@ def decode(args: list) -> "tuple[bool, bool]":
     style_comment_start = config.style_comment_start
     style_indent = config.style_indent
     style_show_message_name = config.style_show_message_name
+    style_snake_case = config.style_snake_case
     style_lsp_prep = config.style_lsp_prep
 
     def varint() -> "tuple[int, int]":
@@ -278,6 +279,10 @@ def decode(args: list) -> "tuple[bool, bool]":
                 + type(tagdef)
             )
             sys.exit(7)
+
+        if style_snake_case:
+            if tagname.upper() != tagname:  # filter out SCREAMING_SNAKE_CASE
+                tagname = re.sub(r'(?<!^)(?=[A-Z])', '_', tagname).lower()
 
         # process based on wire type
         try:

@@ -732,6 +732,7 @@ def lexeme_type(lexeme: str) -> str:
         "block_end": "}",
         "chunk_start": "\\$",
         "tag": r"[A-Za-z0-9_\?]+",
+        "snaketag": r"[a-z0-9_\?]+",
         "string": r"('.*'|\".*\")",
         "compile_trigger": r"(@comp|@compile)",
         "number": r"(-?\d*\.?\d+(e[\+-]\d+)?d?|nan)",

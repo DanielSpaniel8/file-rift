@@ -456,6 +456,10 @@ def recode(args: list) -> "tuple[bool, str, bool]":
                 continue
 
             ltype = util.lexeme_type(lexeme)
+            # handle snake_case tags
+            if ltype == "snaketag":
+                lexeme = "".join([word.capitalize() for word in lexeme.split("_")])
+                ltype = "tag"
             tag, _, tag_reference = util.match_tagname(format, lexeme)
             if tag == "00":
                 if ltype != "tag":
